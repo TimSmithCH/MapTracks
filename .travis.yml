@@ -16,7 +16,7 @@ jobs:
     - stage: Test
       script: echo "Running unit tests (1)"
       script: echo "Running unit tests (2)"
-    - stage: GitHub Release
+    - stage: GitHub Pages Release
       script: skip
       deploy:
         provider: pages
