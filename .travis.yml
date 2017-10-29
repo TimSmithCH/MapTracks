@@ -6,25 +6,21 @@ notifications:
     on_success: never
     on_failure: always
 
-#before_install:
-#  - chmod +x test/deploy_prep.sh
+before_install:
+  - chmod +x test/deploy_prep.sh
 
-#before_script:
-#  - npm install dotenv --save
-#  - npm install tape --save
-#  - npm install @mapbox/togeojson --save
+before_script:
+  - npm install tape --save
+  - npm install @mapbox/togeojson --save
 
 jobs:
   include:
     - stage: Test
       script: echo "Running unit tests (1)"
-      script: echo "Running unit tests (2)"
+    - script: echo "Running unit tests (2)"
     - stage: Convert
-      script: npm install tape --save
-      script: npm install @mapbox/togeojson --save
       script: node test/gpx_to_geojson.js
     - stage: GitHub Pages Release
-      script: chmod +x test/deploy_prep.sh
       script: test/deploy_prep.sh
       deploy:
         provider: pages
