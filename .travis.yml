@@ -10,11 +10,11 @@ notifications:
 before_script:
   - npm install dotenv --save
   - npm install tape --save
-  - npm install --save @mapbox/togeojson
+  - npm install @mapbox/togeojson --save
 
-#deploy:
-#  provider: pages
-#  skip_cleanup: true
-#  github_token: $PUB_REP_TOKEN
-#  on:
-#    branch: gh_pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $PUB_REP_TOKEN
+  on:
+    branch: gh-pages
