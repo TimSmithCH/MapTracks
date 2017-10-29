@@ -1,6 +1,4 @@
-var test = require('tape').test,
-    de = require('dotenv').config(),
-    assert = require('assert'),
+var assert = require('assert'),
     glob = require('glob'),
     fs = require('fs'),
     tj = require('@mapbox/togeojson');
