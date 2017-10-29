@@ -15,12 +15,11 @@ jobs:
   include:
     - stage: Test
       script: echo "Running unit tests (1)"
-      script: echo "Running unit tests (2)"
     - stage: GitHub Pages Release
       script: skip
       deploy:
         provider: pages
-        github_token: $PUB_REP_TOKEN
         skip_cleanup: true
+        github_token: $PUB_REP_TOKEN
         on:
           branch: master
