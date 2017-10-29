@@ -6,6 +6,9 @@ notifications:
     on_success: never
     on_failure: always
 
+before_install:
+  - chmod +x test/deploy_prep.sh
+
 #before_script:
 #  - npm install dotenv --save
 #  - npm install tape --save
