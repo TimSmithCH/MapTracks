@@ -1,20 +1,26 @@
-language: node_js
-node_js:
-  - "node"
+sudo: false
+dist: trusty
 
-notifications:
-  email:
-    on_success: never
-    on_failure: always
+#notifications:
+#  email:
+#    on_success: never
+#    on_failure: always
 
-before_script:
-  - npm install dotenv --save
-  - npm install tape --save
-  - npm install @mapbox/togeojson --save
+#before_script:
+#  - npm install dotenv --save
+#  - npm install tape --save
+#  - npm install @mapbox/togeojson --save
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $PUB_REP_TOKEN
-  on:
-    branch: gh-pages
+jobs:
+  include:
+    - stage: Test
+      script: echo "Running unit tests (1)"
+      script: echo "Running unit tests (2)"
+    - stage: GitHub Release
+      script: skip
+      deploy:
+        provider: pages
+        github_token: $PUB_REP_TOKEN
+        skip_cleanup: true
+        on:
+          branch: gh-pages
