@@ -23,4 +23,4 @@ jobs:
         github_token: $PUB_REP_TOKEN
         skip_cleanup: true
         on:
-          branch: gh-pages
+          branch: master
