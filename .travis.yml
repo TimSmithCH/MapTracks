@@ -19,7 +19,7 @@ jobs:
       script: skip
       deploy:
         provider: pages
-        skip_cleanup: true
         github_token: $PUB_REP_TOKEN
+        skip_cleanup: true
         on:
           branch: master
