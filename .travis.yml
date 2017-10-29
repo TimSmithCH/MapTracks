@@ -18,6 +18,8 @@ jobs:
   include:
     - stage: Test
       script: echo "Running unit tests (1)"
+    - stage: Convert
+      script: node gpx_to_geojson.js
     - stage: GitHub Pages Release
       script: test/deploy_prep.sh
       deploy:
