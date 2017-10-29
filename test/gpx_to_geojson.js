@@ -1,4 +1,5 @@
-var assert = require('assert'),
+var test = require('tape').test,
+    assert = require('assert'),
     glob = require('glob'),
     fs = require('fs'),
     tj = require('@mapbox/togeojson');
@@ -8,25 +9,29 @@ if (!process.browser) {
 }
 
 function kmlFixtureEqual(t, file) {
+    var outfile = file.substr(0, file.lastIndexOf(".")) + ".geojson";
+    outfile = outfile.replace(/\/kml\//, '/geojson/')
     if (process.env.UPDATE) {
         var output = tj.kml(toDOM(fs.readFileSync(file)));
-        fs.writeFileSync(file + '.geojson', JSON.stringify(output, null, 4));
+        fs.writeFileSync(outfile, JSON.stringify(output, null, 4));
     }
     t.equal(
         JSON.stringify(tj.kml(toDOM(fs.readFileSync(file))), null, 4),
-        fs.readFileSync(file + '.geojson', 'utf8'),
+        fs.readFileSync(outfile, 'utf8'),
         file);
 }
 
 function gpxFixtureEqual(t, file) {
+    var outfile = file.substr(0, file.lastIndexOf(".")) + ".geojson";
+    outfile = outfile.replace(/\/gpx\//, '/geojson/')
     if (process.env.UPDATE) {
         var output = tj.gpx(toDOM(fs.readFileSync(file)));
-        fs.writeFileSync(file + '.geojson', JSON.stringify(output, null, 4));
+        fs.writeFileSync(outfile, JSON.stringify(output, null, 4));
     }
 
     t.deepEqual(
         tj.gpx(toDOM(fs.readFileSync(file, 'utf8'))),
-        JSON.parse(fs.readFileSync(file + '.geojson', 'utf8')),
+        JSON.parse(fs.readFileSync(outfile, 'utf8')),
         file);
 }
 
