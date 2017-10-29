@@ -20,11 +20,11 @@ jobs:
       script: echo "Running unit tests (1)"
       script: echo "Running unit tests (2)"
     - stage: Convert
-      npm install tape --save
-      npm install @mapbox/togeojson --save
+      script: npm install tape --save
+      script: npm install @mapbox/togeojson --save
       script: node test/gpx_to_geojson.js
     - stage: GitHub Pages Release
-      chmod +x test/deploy_prep.sh
+      script: chmod +x test/deploy_prep.sh
       script: test/deploy_prep.sh
       deploy:
         provider: pages
