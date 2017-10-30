@@ -5,3 +5,5 @@ set -x
 pwd
 ls -l
 rm -r test
+which node
+ls -l /usr/lib/node_modules
