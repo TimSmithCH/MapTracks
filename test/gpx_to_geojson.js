@@ -24,9 +24,11 @@ function kmlFixtureEqual(t, file) {
 function gpxFixtureEqual(t, file) {
     var outfile = file.substr(0, file.lastIndexOf(".")) + ".geojson";
     outfile = outfile.replace(/\/gpx\//, '/geojson/')
+    console.log('read: ',file);
     if (process.env.UPDATE) {
         var output = tj.gpx(toDOM(fs.readFileSync(file)));
         fs.writeFileSync(outfile, JSON.stringify(output, null, 4));
+        console.log('update: ',outfile);
     }
 
     t.deepEqual(
