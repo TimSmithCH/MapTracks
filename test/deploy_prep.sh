@@ -3,6 +3,7 @@ set -e   # Exit with nonzero exit code if anything fails
 set -x   # Debug mode to echo commands
 
 pwd
+env
 ls -l
 which node
 npm config list
