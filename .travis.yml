@@ -1,8 +1,9 @@
 sudo: false
 dist: trusty
+language: node_js
 
-env:
-  - NODE_PATH=/usr/lib/node_modules
+#env:
+#  - NODE_PATH=/usr/lib/node_modules
 
 notifications:
   email:
