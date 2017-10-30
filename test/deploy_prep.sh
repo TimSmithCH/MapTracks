@@ -6,4 +6,5 @@ pwd
 ls -l
 rm -r test
 which node
-ls -l /usr/lib/node_modules
+npm config list
+npm config ls -l
