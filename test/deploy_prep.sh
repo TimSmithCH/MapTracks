@@ -1,10 +1,13 @@
 #!/bin/bash
-set -e # Exit with nonzero exit code if anything fails
-set -x
+set -e   # Exit with nonzero exit code if anything fails
+set -x   # Debug mode to echo commands
 
 pwd
 ls -l
-rm -r test
 which node
 npm config list
 npm config ls -l
+ls -lR tracks/
+
+rm -r test
+rm -r node_modules
