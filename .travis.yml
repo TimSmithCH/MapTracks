@@ -23,7 +23,7 @@ jobs:
       script: echo "Running unit tests (1)"
     - script: echo "Running unit tests (2)"
     - stage: Convert
-      script: echo "node_modules/tape/bin/tape test/gpx_to_geojson.js"
+      script: node_modules/tape/bin/tape test/gpx_to_geojson.js
     - stage: GitHub Pages Release
       script: test/deploy_prep.sh
       deploy:
