@@ -4,33 +4,23 @@ language: node_js
 node_js:
   - "node"
 
-#env:
-#  - NODE_PATH=/usr/lib/node_modules
-
 notifications:
   email:
     on_success: never
     on_failure: always
 
-before_install:
-  - chmod +x test/deploy_prep.sh
-
-before_script:
+install:
   - npm install tape --save
   - npm install @mapbox/togeojson --save
 
-jobs:
-  include:
-    - stage: Test
-      script: echo "Running unit tests (1)"
-    - script: echo "Running unit tests (2)"
-    - stage: Convert
-      script: node_modules/tape/bin/tape test/gpx_to_geojson.js
-    - stage: GitHub Pages Release
-      script: test/deploy_prep.sh
-      deploy:
-        provider: pages
-        github_token: $PUB_REP_TOKEN
-        skip_cleanup: true
-        on:
-          branch: master
+script:
+  - node_modules/tape/bin/tape test/gpx_to_geojson.js
+  - chmod +x test/deploy_prep.sh
+  - test/deploy_prep.sh
+
+deploy:
+  provider: pages
+  github_token: $PUB_REP_TOKEN
+  skip_cleanup: true
+  on:
+    branch: master
