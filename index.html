@@ -1,11 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
-
   <head>
+    <style>
+      .map {
+        height: 1000px;
+        width: 100%;
+      }
+    </style>
     <title>Maps and Tracks</title>
     <meta name="description" content="Maps and Tracks">
   </head>
   <body>
-  Just a test page for now
+    <h2>A test GeoAdmin map</h2>
+    <script src="http://api3.geo.admin.ch/loader.js?lang=en" type="text/javascript"></script>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var layer = ga.layer.create('ch.swisstopo.pixelkarte-farbe');
+      var map = new ga.Map({
+        target: 'map',
+        layers: [layer],
+        view: new ol.View({
+          resolution: 500,
+          center: [670000, 160000]
+        })
+      });
+    </script>
   </body>
 </html>
