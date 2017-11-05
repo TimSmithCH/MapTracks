@@ -5,7 +5,7 @@ set -x   # Debug mode to echo commands
 ls -lR tracks/
 git status
 git add tracks/geojson
-git commit
+git commit -m "Converted more GeoJson files"
 
 rm -r test
 rm -r node_modules
