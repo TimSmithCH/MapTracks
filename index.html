@@ -1,29 +1,232 @@
-<!doctype html>
-<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tracks</title>
+    <meta name="description" content="Mapping Tracks">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+
+  <body>
+
+    <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
+    <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
     <style>
-      .map {
-        height: 400px;
-        width: 100%;
+      #menu {
+        background: #fff;
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 10px;
+        border-radius: 3px;
+        width: 100px;
+        border: 1px solid rgba(0,0,0,0.4);
+        font-family: 'Open Sans', sans-serif;
+      }
+      #menu a {
+        font-size: 13px;
+        color: #404040;
+        display: block;
+        margin: 0;
+        padding: 5px;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.25);
+        text-align: center;
+      }
+      #menu a:last-child {
+        border: none;
+      }
+      #menu a:hover {
+        background-color: #f8f8f8;
+        color: #404040;
+      }
+      #menu a.active {
+        background-color: #3887be;
+        color: #ffffff;
+      }
+      #menu a.active:hover {
+        background: #3074a4;
+      }
+      .mapboxgl-popup {
+        max-width: 300px;
       }
     </style>
-    <title>Maps and Tracks</title>
-    <meta name="description" content="Maps and Tracks">
-  </head>
-  <body>
-    <h2>A test GeoAdmin map</h2>
-    <script src="http://api3.geo.admin.ch/loader.js?lang=en" type="text/javascript"></script>
-    <div id="map" class="map"></div>
-    <script type="text/javascript">
-      var layer = ga.layer.create('ch.swisstopo.pixelkarte-farbe-pk1000.noscale');
-      var map = new ga.Map({
-        target: 'map',
-        layers: [layer],
-        view: new ol.View({
-          resolution: 500,
-          center: [670000, 160000]
-        })
-      });
-    </script>
+
+    <div class="page-content">
+      <div class="home">
+        <div class="wrapper">
+          <h1>Tracks on a Map</h1>
+          <div id='map' style='width: 100%; height: 1024px;'>
+            <nav id="menu"></nav>
+          </div>
+
+          <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              center: [7.2989238, 46.032874], // starting position
+              zoom: 11 // starting zoom
+            });
+            
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.NavigationControl());
+
+            map.on('load', function () {
+              
+              // The hike route options
+              map.addSource("hike_routes", {
+                "type": "geojson",
+                //"data": "geojson/Pigne_d_Arolla.geojson"
+                "data": "geojson/Overview_hike.geojson"
+              });
+              map.addLayer({
+                "id": "hike_routes",
+                "type": "line",
+                "source": "hike_routes",
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "red",
+                  "line-width": 4
+                }
+              });
+              
+              // The ski route options
+              map.addSource("ski_routes", {
+                "type": "geojson",
+                "data": "geojson/Overview_ski.geojson"
+              });
+              map.addLayer({
+                "id": "ski_routes",
+                "type": "line",
+                "source": "ski_routes",
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "blue",
+                  "line-width": 4
+                }
+              });
+              
+              // The bike route options
+              map.addSource("bike_routes", {
+                "type": "geojson",
+                "data": "geojson/Overview_bike.geojson"
+              });
+              map.addLayer({
+                "id": "bike_routes",
+                "type": "line",
+                "source": "bike_routes",
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "green",
+                  "line-width": 4
+                }
+              });
+              
+            });
+
+            // Create a popup, but don't add it to the map yet.
+            var popup = new mapboxgl.Popup({
+              closeButton: false,
+              closeOnClick: false
+            });
+
+            map.on('mouseenter', 'hike_routes', function(e) {
+              // Change the cursor style as a UI indicator.
+              map.getCanvas().style.cursor = 'pointer';
+
+              // Populate the popup and set its coordinates based on the feature found.
+              var date = e.features[0].properties.time.split('T',1)
+              popup.setLngLat(e.lngLat)
+                  .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                  .addTo(map);
+            });
+            map.on('mouseenter', 'ski_routes', function(e) {
+              // Change the cursor style as a UI indicator.
+              map.getCanvas().style.cursor = 'pointer';
+
+              // Populate the popup and set its coordinates based on the feature found.
+              var date = e.features[0].properties.time.split('T',1)
+              popup.setLngLat(e.lngLat)
+                  .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                  .addTo(map);
+            });
+            map.on('mouseenter', 'bike_routes', function(e) {
+              // Change the cursor style as a UI indicator.
+              map.getCanvas().style.cursor = 'pointer';
+
+              // Populate the popup and set its coordinates based on the feature found.
+              var date = e.features[0].properties.time.split('T',1)
+              popup.setLngLat(e.lngLat)
+                  .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                  .addTo(map);
+            });
+
+            map.on('mouseleave', 'hike_routes', function() {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+            });
+            map.on('mouseleave', 'ski_routes', function() {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+            });
+            map.on('mouseleave', 'bike_routes', function() {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+            });
+
+            toggleLayer("Hike Routes", "hike_routes");
+            toggleLayer("Ski Routes", "ski_routes");
+            toggleLayer("Bike Routes", "bike_routes");
+            function toggleLayer(name, id) {
+              var link = document.createElement('a');
+              link.href = '#';
+              link.className = 'active';
+              link.textContent = name;
+              link.onclick = function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var visibility = map.getLayoutProperty(id, 'visibility');
+                if (visibility === 'visible') {
+                  map.setLayoutProperty(id, 'visibility', 'none');
+                  this.className = '';
+                } else {
+                  this.className = 'active';
+                  map.setLayoutProperty(id, 'visibility', 'visible');
+                }
+              };
+              var layers = document.getElementById('menu');
+              layers.appendChild(link);
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <h3 class="footer-heading">Footer</h3>
+      </div>
+    </footer>
   </body>
 </html>

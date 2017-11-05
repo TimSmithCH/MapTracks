@@ -7,6 +7,7 @@ var test = require('tape').test,
 if (!process.browser) {
     var xmldom = require('xmldom');
 }
+var simplify = require('simplify-geojson')
 
 function kmlFixtureEqual(t, file) {
     var outfile = file.substr(0, file.lastIndexOf(".")) + ".geojson";
@@ -23,29 +24,36 @@ function kmlFixtureEqual(t, file) {
 
 function gpxFixtureEqual(t, file) {
     var outfile = file.substr(0, file.lastIndexOf(".")) + ".geojson";
+    var simplefile = file.substr(0, file.lastIndexOf(".")) + "_simple.geojson";
     outfile = outfile.replace(/\/gpx\//, '/geojson/')
+    simplefile = simplefile.replace(/\/gpx\//, '/geojson/')
     console.log('read: ',file);
     if (process.env.UPDATE) {
         var output = tj.gpx(toDOM(fs.readFileSync(file)));
+        // Drop all time information for privacy reasons, and unnecessary for route finding!
+        delete output.features[0].properties.coordTimes;
+        // Write out human readable GeoJson
         fs.writeFileSync(outfile, JSON.stringify(output, null, 4));
         console.log('update: ',outfile);
+        // Apply Ramer–Douglas–Peucker line simplification to smooth line and shrink file
+        var simplified = simplify(output,0.0005);   // Epsilon equivalent to 56m separation
+        fs.writeFileSync(simplefile, JSON.stringify(simplified, null, 4));
     }
 
-    t.deepEqual(
-        tj.gpx(toDOM(fs.readFileSync(file, 'utf8'))),
-        JSON.parse(fs.readFileSync(outfile, 'utf8')),
-        file);
+    tcomp = tj.gpx(toDOM(fs.readFileSync(file, 'utf8'))),
+    delete tcomp.features[0].properties.coordTimes;
+    t.deepEqual(tcomp, JSON.parse(fs.readFileSync(outfile, 'utf8')), file);
 }
 
 test('KML', function(t) {
-    glob.sync('tracks/kml/*.kml').forEach(function(file) {
+    glob.sync('tracks/kml/*/*.kml').forEach(function(file) {
         kmlFixtureEqual(t, file);
     });
     t.end();
 });
 
 test('GPX', function(t) {
-    glob.sync('tracks/gpx/*.gpx').forEach(function(file) {
+    glob.sync('tracks/gpx/*/*.gpx').forEach(function(file) {
         gpxFixtureEqual(t, file);
     });
     t.end();
