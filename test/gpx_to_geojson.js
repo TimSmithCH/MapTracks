@@ -28,10 +28,24 @@ function gpxFixtureEqual(t, file) {
     outfile = outfile.replace(/\/gpx\//, '/geojson/')
     simplefile = simplefile.replace(/\/gpx\//, '/geojson/')
     console.log('read: ',file);
+    //
+    var output = tj.gpx(toDOM(fs.readFileSync(file, 'utf8')));
+    // Drop all time information for privacy reasons, and unnecessary for route finding!
+    delete output.features[0].properties.coordTimes;
+    //
+    if(fs.existsSync(outfile)) {
+        de_res = de(output, JSON.parse(fs.readFileSync(outfile, 'utf8')), file);
+        if (de_res) {
+            t.ok(de_res, "Contents good " + outfile);
+            return;
+        } else {
+          t.notOk(de_res, "Contents differ, need to update " + outfile);
+        }
+    } else {
+        t.ok(true, "No file, need to create " + outfile);
+    }
+    //
     if (process.env.UPDATE) {
-        var output = tj.gpx(toDOM(fs.readFileSync(file)));
-        // Drop all time information for privacy reasons, and unnecessary for route finding!
-        delete output.features[0].properties.coordTimes;
         // Write out human readable GeoJson
         fs.writeFileSync(outfile, JSON.stringify(output, null, 4));
         console.log('update: ',outfile);
@@ -39,10 +53,6 @@ function gpxFixtureEqual(t, file) {
         var simplified = simplify(output,0.0005);   // Epsilon equivalent to 56m separation
         fs.writeFileSync(simplefile, JSON.stringify(simplified, null, 4));
     }
-
-    tcomp = tj.gpx(toDOM(fs.readFileSync(file, 'utf8'))),
-    delete tcomp.features[0].properties.coordTimes;
-    t.deepEqual(tcomp, JSON.parse(fs.readFileSync(outfile, 'utf8')), file);
 }
 
 test('KML', function(t) {
