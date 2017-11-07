@@ -20,7 +20,9 @@
     <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
     <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
     <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
+    <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
     <style>
+      // Override my CSS general content width
       .page-content {
         max-width: 100% !important;
       }
@@ -86,6 +88,8 @@
             
             // Add zoom and rotation controls to the map.
             map.addControl(new mapboxgl.NavigationControl());
+            // And add full screen control
+            map.addControl(new mapboxgl.FullscreenControl());
 
             map.on('load', function () {
               
@@ -178,6 +182,38 @@
                   .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
                   .addTo(map);
             });
+            map.on('click', 'ski_routes', function(e) {
+              // Zoom to fit clicked track in screen
+              var coordinates = e.features[0].geometry.coordinates;
+              var bounds = coordinates.reduce(function(bounds, coord) {
+                return bounds.extend(coord);
+              }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
+              map.fitBounds(bounds, {
+                padding: 20
+              });
+              // Load detailed coordinates of clicked track
+              var trackname = e.features[0].properties.name +'.geojson';
+              map.addSource(trackname, {
+                "type": "geojson",
+                "data": "tracks/geojson/ski/" + trackname
+              });
+              map.addLayer({
+                "id": trackname,
+                "type": "line",
+                "source": trackname,
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "orange",
+                  "line-width": 4
+                }
+              });
+              // Toggle the routes layer by simulating a mouse click
+              document.getElementById('Ski Routes').click();
+            });
             map.on('mouseenter', 'bike_routes', function(e) {
               // Change the cursor style as a UI indicator.
               map.getCanvas().style.cursor = 'pointer';
@@ -210,7 +246,8 @@
               link.href = '#';
               link.className = 'active';
               link.textContent = name;
-              link.onclick = function (e) {
+              link.id = name;
+              link.onclick = function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 var visibility = map.getLayoutProperty(id, 'visibility');
