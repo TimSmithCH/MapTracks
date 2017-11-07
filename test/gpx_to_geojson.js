@@ -2,6 +2,7 @@ var test = require('tape').test,
     assert = require('assert'),
     glob = require('glob'),
     fs = require('fs'),
+    de = require('deep-equal'),
     tj = require('@mapbox/togeojson');
 
 if (!process.browser) {
