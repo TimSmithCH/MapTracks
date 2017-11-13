@@ -73,7 +73,7 @@
       <div class="home">
         <div class="wrapper">
           <h1>Tracks on a Map</h1>
-          <div id='map' style='width: 100%; height: 1024px;'>
+          <div id='map' style='width: 100%; height: 768px;'>
             <nav id="menu"></nav>
           </div>
 
@@ -86,105 +86,70 @@
               zoom: 11 // starting zoom
             });
             
-            // Add zoom and rotation controls to the map.
+            // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
-            // And add full screen control
             map.addControl(new mapboxgl.FullscreenControl());
 
+            // Prepare layer properties object
+            var layer_props = { hike_routes: { datafile: "Overview_hike.geojson", colour: "red" },
+                                bike_routes: { datafile: "Overview_bike.geojson", colour: "green" },
+                                 ski_routes: { datafile: "Overview_ski.geojson",  colour: "blue" } };
+
             map.on('load', function () {
-              
-              // The hike route options
-              map.addSource("hike_routes", {
-                "type": "geojson",
-                //"data": "tracks/geojson/Pigne_d_Arolla.geojson"
-                "data": "tracks/geojson/Overview_hike.geojson"
-              });
-              map.addLayer({
-                "id": "hike_routes",
-                "type": "line",
-                "source": "hike_routes",
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "red",
-                  "line-width": 4
-                }
-              });
-              
-              // The ski route options
-              map.addSource("ski_routes", {
-                "type": "geojson",
-                "data": "tracks/geojson/Overview_ski.geojson"
-              });
-              map.addLayer({
-                "id": "ski_routes",
-                "type": "line",
-                "source": "ski_routes",
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "blue",
-                  "line-width": 4
-                }
-              });
-              
-              // The bike route options
-              map.addSource("bike_routes", {
-                "type": "geojson",
-                "data": "tracks/geojson/Overview_bike.geojson"
-              });
-              map.addLayer({
-                "id": "bike_routes",
-                "type": "line",
-                "source": "bike_routes",
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "green",
-                  "line-width": 4
-                }
-              });
-              
+              // Loop creating a layer of routes of each type from geojson file
+              for (let layer of Object.keys(layer_props)) {
+                map.addSource(layer, {
+                  "type": "geojson",
+                  "data": "tracks/geojson/" + layer_props[layer]["datafile"]
+                });
+                map.addLayer({
+                  "id": layer,
+                  "type": "line",
+                  "source": layer,
+                  "layout": {
+                    "visibility": "visible",
+                    "line-join": "round",
+                    "line-cap": "round"
+                  },
+                  "paint": {
+                    "line-color": layer_props[layer]["colour"],
+                    "line-width": 4
+                  }
+                });
+              }
             });
 
-            // Create a popup, but don't add it to the map yet.
+            // Create a popup, but don't add it to the map yet
             var popup = new mapboxgl.Popup({
               closeButton: false,
               closeOnClick: false
             });
 
-            map.on('mouseenter', 'hike_routes', function(e) {
-              // Change the cursor style as a UI indicator.
-              map.getCanvas().style.cursor = 'pointer';
+            // Loop creating popup on hover for each layer
+            for (let layer of Object.keys(layer_props)) {
+              map.on('mouseenter', layer, function(e) {
+                // Change the cursor style as a UI indicator.
+                map.getCanvas().style.cursor = 'pointer';
+                // Populate the popup and set its coordinates based on the feature found.
+                var date = e.features[0].properties.time.split('T',1)
+                popup.setLngLat(e.lngLat)
+                    .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                    .addTo(map);
+              });
+              map.on('mouseleave', layer, function() {
+                map.getCanvas().style.cursor = '';
+                popup.remove();
+              });
+            }
 
-              // Populate the popup and set its coordinates based on the feature found.
-              var date = e.features[0].properties.time.split('T',1)
-              popup.setLngLat(e.lngLat)
-                  .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
-                  .addTo(map);
-            });
-            map.on('mouseenter', 'ski_routes', function(e) {
-              // Change the cursor style as a UI indicator.
-              map.getCanvas().style.cursor = 'pointer';
-
-              // Populate the popup and set its coordinates based on the feature found.
-              var date = e.features[0].properties.time.split('T',1)
-              popup.setLngLat(e.lngLat)
-                  .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
-                  .addTo(map);
-            });
-            map.on('click', 'ski_routes', function(e) {
+            // Create the handler to display detailed route when clicked
+            map.on('click', function(e) {
+              var features = map.queryRenderedFeatures(e.point, { layers: Object.keys(layer_props),
+                                                                  filter: ["==", "$type", "LineString"] });
+              // If didnt click on a LineString then feature list will be empty
+              if (features.length == 0) return;
               // Zoom to fit clicked track in screen
-              var coordinates = e.features[0].geometry.coordinates;
+              var coordinates = features[0].geometry.coordinates;
               var bounds = coordinates.reduce(function(bounds, coord) {
                 return bounds.extend(coord);
               }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
@@ -192,10 +157,14 @@
                 padding: 20
               });
               // Load detailed coordinates of clicked track
-              var trackname = e.features[0].properties.name +'.geojson';
+              var trackname = features[0].properties.name +'.geojson';
+              // Eliminate spaces and apostrophes from filenames
+              trackname = trackname.replace(/ |\u2019/g, "_");
+              var layerid = features[0].layer.id;
+              layerid = layerid.replace(/_routes/g, "");
               map.addSource(trackname, {
                 "type": "geojson",
-                "data": "tracks/geojson/ski/" + trackname
+                "data": "tracks/geojson/" + layerid + "/" + trackname
               });
               map.addLayer({
                 "id": trackname,
@@ -212,35 +181,18 @@
                 }
               });
               // Toggle the routes layer by simulating a mouse click
-              document.getElementById('Ski Routes').click();
-            });
-            map.on('mouseenter', 'bike_routes', function(e) {
-              // Change the cursor style as a UI indicator.
-              map.getCanvas().style.cursor = 'pointer';
-
-              // Populate the popup and set its coordinates based on the feature found.
-              var date = e.features[0].properties.time.split('T',1)
-              popup.setLngLat(e.lngLat)
-                  .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
-                  .addTo(map);
-            });
-
-            map.on('mouseleave', 'hike_routes', function() {
-              map.getCanvas().style.cursor = '';
-              popup.remove();
-            });
-            map.on('mouseleave', 'ski_routes', function() {
-              map.getCanvas().style.cursor = '';
-              popup.remove();
-            });
-            map.on('mouseleave', 'bike_routes', function() {
-              map.getCanvas().style.cursor = '';
-              popup.remove();
+              if (layerid == 'hike') {
+                document.getElementById('Hike Routes').click();
+              } else if (layerid == 'bikes') {
+                document.getElementById('Bike Routes').click();
+              } else if (layerid == 'ski') {
+                document.getElementById('Ski Routes').click();
+              }
             });
 
             toggleLayer("Hike Routes", "hike_routes");
-            toggleLayer("Ski Routes", "ski_routes");
             toggleLayer("Bike Routes", "bike_routes");
+            toggleLayer("Ski Routes", "ski_routes");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';

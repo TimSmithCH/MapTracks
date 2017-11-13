@@ -1,14 +1,13 @@
-var test = require('tape').test,
-    assert = require('assert'),
-    glob = require('glob'),
-    fs = require('fs'),
-    de = require('deep-equal'),
-    tj = require('@mapbox/togeojson');
-
+var test = require('tape').test;
+var assert = require('assert');
+var glob = require('glob');
+var fs = require('fs');
+var de = require('deep-equal');
+var tj = require('@mapbox/togeojson');
+var simplify = require('simplify-geojson');
 if (!process.browser) {
     var xmldom = require('xmldom');
 }
-var simplify = require('simplify-geojson')
 
 function kmlFixtureEqual(t, file) {
     var outfile = file.substr(0, file.lastIndexOf(".")) + ".geojson";
