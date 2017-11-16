@@ -27,7 +27,7 @@ function gpxFixtureEqual(t, file) {
     var simplefile = file.substr(0, file.lastIndexOf(".")) + "_simple.geojson";
     outfile = outfile.replace(/\/gpx\//, '/geojson/')
     simplefile = simplefile.replace(/\/gpx\//, '/geojson/')
-    console.log('read: ',file);
+    //console.log('read: ',file);
     //
     var output = tj.gpx(toDOM(fs.readFileSync(file, 'utf8')));
     // Drop all time information for privacy reasons, and unnecessary for route finding!
