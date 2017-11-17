@@ -4,80 +4,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tracks</title>
-    <meta name="description" content="Mapping Tracks">
+    <title>TrackMap</title>
+    <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Site styles -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/trackmap.css">
   </head>
 
-  <body>
+  <body class="wrapper">
 
     <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
     <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
     <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
     <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
-    <style>
-      // Override my CSS general content width
-      .page-content {
-        max-width: 100% !important;
-      }
-      .page-content .wrapper {
-        max-width: 95% !important;
-      }
-      #menu {
-        background: #fff;
-        position: absolute;
-        z-index: 1;
-        top: 10px;
-        left: 10px;
-        border-radius: 3px;
-        width: 100px;
-        border: 1px solid rgba(0,0,0,0.4);
-        font-family: 'Open Sans', sans-serif;
-      }
-      #menu a {
-        font-size: 13px;
-        color: #404040;
-        display: block;
-        margin: 0;
-        padding: 5px;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(0,0,0,0.25);
-        text-align: center;
-      }
-      #menu a:last-child {
-        border: none;
-      }
-      #menu a:hover {
-        background-color: #f8f8f8;
-        color: #404040;
-      }
-      #menu a.active {
-        background-color: #3887be;
-        color: #ffffff;
-      }
-      #menu a.active:hover {
-        background: #3074a4;
-      }
-      .mapboxgl-popup {
-        max-width: 300px;
-      }
-    </style>
+    <header class="header">
+      A Track Collection Mapped
+    </header>
+    <main class="main">
+      <div id='map' class="main-content">
+        <nav id="menu"></nav>
+      </div>
 
-    <div class="page-content">
-      <div class="home">
-        <div class="wrapper">
-          <h1>Tracks on a Map</h1>
-          <div id='map' style='width: 100%; height: 768px;'>
-            <nav id="menu"></nav>
-          </div>
-
-          <script>
+      <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var map = new mapboxgl.Map({
               container: 'map', // container id
@@ -162,14 +114,19 @@
               trackname = trackname.replace(/ |\u2019/g, "_");
               var layerid = features[0].layer.id;
               layerid = layerid.replace(/_routes/g, "");
-              map.addSource(trackname, {
+              // Remove any previous detail layer
+              if (map.getLayer("detail_layer")) {
+                map.removeSource("detail_layer");
+                map.removeLayer("detail_layer");
+              }
+              map.addSource("detail_layer", {
                 "type": "geojson",
                 "data": "tracks/geojson/" + layerid + "/" + trackname
               });
               map.addLayer({
-                "id": trackname,
+                "id": "detail_layer",
                 "type": "line",
-                "source": trackname,
+                "source": "detail_layer",
                 "layout": {
                   "visibility": "visible",
                   "line-join": "round",
@@ -214,15 +171,11 @@
               var layers = document.getElementById('menu');
               layers.appendChild(link);
             }
-          </script>
-        </div>
-      </div>
-    </div>
+      </script>
+    </main>
 
-    <footer class="site-footer">
-      <div class="wrapper">
-        <h3 class="footer-heading">MapTracks: &copy; Tim Smith CC-BY-4.0</h3>
-      </div>
+    <footer class="footer">
+        MapTracks: &copy; Tim Smith CC-BY-4.0
     </footer>
   </body>
 </html>
