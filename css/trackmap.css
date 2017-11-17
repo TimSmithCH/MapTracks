@@ -37,6 +37,9 @@ body
     padding: 24px 24px 6px;
     font-size: 32px;
     font-weight: bold;
+    @media only screen and (max-width: 768px) {
+      font-size: 20px;
+    }
 }
 .footer
 {
@@ -45,6 +48,9 @@ body
     font-weight: bold;
     background: #6fa9d0;
     color: #fff;
+    @media only screen and (max-width: 768px) {
+      font-size: 16px;
+    }
 }
 
 .main
