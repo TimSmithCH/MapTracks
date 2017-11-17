@@ -8,8 +8,8 @@ rm -r node_modules
 #rm tracks/geojson/hike/*simple*
 #rm tracks/geojson/bike/*simple*
 #rm tracks/geojson/ski/*simple*
-touch tracks/geojson/ski/Rosablanche.geojson
 
 git status
 git add tracks/geojson
+git rm -r test
 git commit -m "Converted more GeoJson files"
