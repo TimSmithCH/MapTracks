@@ -46,6 +46,7 @@
             var layer_props = { hike_routes: { datafile: "Overview_hike.geojson", colour: "red" },
                                 bike_routes: { datafile: "Overview_bike.geojson", colour: "green" },
                                  ski_routes: { datafile: "Overview_ski.geojson",  colour: "blue" } };
+                                 run_routes: { datafile: "Overview_run.geojson",  colour: "purple" } };
 
             map.on('load', function () {
               // Loop creating a layer of routes of each type from geojson file
@@ -139,17 +140,20 @@
               });
               // Toggle the routes layer by simulating a mouse click
               if (layerid == 'hike') {
-                document.getElementById('Hike Routes').click();
+                document.getElementById('Hike').click();
               } else if (layerid == 'bikes') {
-                document.getElementById('Bike Routes').click();
+                document.getElementById('Bike').click();
               } else if (layerid == 'ski') {
-                document.getElementById('Ski Routes').click();
+                document.getElementById('Ski').click();
+              } else if (layerid == 'run') {
+                document.getElementById('Run').click();
               }
             });
 
-            toggleLayer("Hike Routes", "hike_routes");
-            toggleLayer("Bike Routes", "bike_routes");
-            toggleLayer("Ski Routes", "ski_routes");
+            toggleLayer("Hike", "hike_routes");
+            toggleLayer("Bike", "bike_routes");
+            toggleLayer("Ski", "ski_routes");
+            toggleLayer("Run", "ski_routes");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';

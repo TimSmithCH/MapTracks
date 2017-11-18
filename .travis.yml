@@ -18,8 +18,9 @@ install:
 script:
   - node_modules/tape/bin/tape test/gpx_to_geojson.js
   - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/hike/*simple.geojson >tracks/geojson/Overview_hike.geojson
-  - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/ski/*simple.geojson >tracks/geojson/Overview_ski.geojson
   - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/bike/*simple.geojson >tracks/geojson/Overview_bike.geojson
+  - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/ski/*simple.geojson >tracks/geojson/Overview_ski.geojson
+  - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/run/*simple.geojson >tracks/geojson/Overview_run.geojson
   - chmod +x test/deploy_prep.sh
   - test/deploy_prep.sh
 
