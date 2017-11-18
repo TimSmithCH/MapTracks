@@ -45,7 +45,7 @@
             // Prepare layer properties object
             var layer_props = { hike_routes: { datafile: "Overview_hike.geojson", colour: "red" },
                                 bike_routes: { datafile: "Overview_bike.geojson", colour: "green" },
-                                 ski_routes: { datafile: "Overview_ski.geojson",  colour: "blue" } };
+                                 ski_routes: { datafile: "Overview_ski.geojson",  colour: "blue" },
                                  run_routes: { datafile: "Overview_run.geojson",  colour: "purple" } };
 
             map.on('load', function () {
@@ -153,7 +153,7 @@
             toggleLayer("Hike", "hike_routes");
             toggleLayer("Bike", "bike_routes");
             toggleLayer("Ski", "ski_routes");
-            toggleLayer("Run", "ski_routes");
+            toggleLayer("Run", "run_routes");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
