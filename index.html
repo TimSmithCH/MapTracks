@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrackMap</title>
+    <meta name="description" content="TrackMap">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Site styles -->
+    <link rel="stylesheet" href="css/trackmap.css">
+  </head>
+
+  <body class="wrapper">
+
+    <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
+    <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
+    <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
+    <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
+    <header class="header">
+      Track Collections Mapped
+    </header>
+    <main class="main">
+      <div id='map' class="main-content">
+        <nav id="menu"></nav>
+      </div>
+
+      <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              center: [7.2989238, 46.032874], // starting position
+              zoom: 11 // starting zoom
+            });
+            
+            // Add zoom, rotation and full_screen controls to the map
+            map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.FullscreenControl());
+
+            // Prepare layer properties object
+            var layer_props = { hike_routes: { datafile: "Overview_hike.geojson", colour: "red" },
+                                bike_routes: { datafile: "Overview_bike.geojson", colour: "green" },
+                                 ski_routes: { datafile: "Overview_ski.geojson",  colour: "blue" },
+                                 run_routes: { datafile: "Overview_run.geojson",  colour: "purple" } };
+
+            map.on('load', function () {
+              // Loop creating a layer of routes of each type from geojson file
+              for (let layer of Object.keys(layer_props)) {
+                map.addSource(layer, {
+                  "type": "geojson",
+                  "data": "tracks/geojson/" + layer_props[layer]["datafile"]
+                });
+                map.addLayer({
+                  "id": layer,
+                  "type": "line",
+                  "source": layer,
+                  "layout": {
+                    "visibility": "visible",
+                    "line-join": "round",
+                    "line-cap": "round"
+                  },
+                  "paint": {
+                    "line-color": layer_props[layer]["colour"],
+                    "line-width": 4
+                  }
+                });
+              }
+            });
+
+            // Create a popup, but don't add it to the map yet
+            var popup = new mapboxgl.Popup({
+              closeButton: false,
+              closeOnClick: false
+            });
+
+            // Loop creating popup on hover for each layer
+            for (let layer of Object.keys(layer_props)) {
+              map.on('mouseenter', layer, function(e) {
+                // Change the cursor style as a UI indicator.
+                map.getCanvas().style.cursor = 'pointer';
+                // Populate the popup and set its coordinates based on the feature found.
+                var date = e.features[0].properties.time.split('T',1)
+                popup.setLngLat(e.lngLat)
+                    .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                    .addTo(map);
+              });
+              map.on('mouseleave', layer, function() {
+                map.getCanvas().style.cursor = '';
+                popup.remove();
+              });
+            }
+
+            // Create the handler to display detailed route when clicked
+            map.on('click', function(e) {
+              var features = map.queryRenderedFeatures(e.point, { layers: Object.keys(layer_props),
+                                                                  filter: ["==", "$type", "LineString"] });
+              // If didnt click on a LineString then feature list will be empty
+              if (features.length == 0) return;
+              // Zoom to fit clicked track in screen
+              var coordinates = features[0].geometry.coordinates;
+              var bounds = coordinates.reduce(function(bounds, coord) {
+                return bounds.extend(coord);
+              }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
+              map.fitBounds(bounds, {
+                padding: 20
+              });
+              // Load detailed coordinates of clicked track
+              var trackname = features[0].properties.name +'.geojson';
+              // Eliminate spaces and apostrophes from filenames
+              trackname = trackname.replace(/ |\u2019/g, "_");
+              var layerid = features[0].layer.id;
+              layerid = layerid.replace(/_routes/g, "");
+              // Remove any previous detail layer
+              if (map.getLayer("detail_layer")) {
+                map.removeSource("detail_layer");
+                map.removeLayer("detail_layer");
+              }
+              map.addSource("detail_layer", {
+                "type": "geojson",
+                "data": "tracks/geojson/" + layerid + "/" + trackname
+              });
+              map.addLayer({
+                "id": "detail_layer",
+                "type": "line",
+                "source": "detail_layer",
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": "orange",
+                  "line-width": 4
+                }
+              });
+              // Toggle the routes layer by simulating a mouse click
+              if (layerid == 'hike') {
+                document.getElementById('Hike').click();
+              } else if (layerid == 'bikes') {
+                document.getElementById('Bike').click();
+              } else if (layerid == 'ski') {
+                document.getElementById('Ski').click();
+              } else if (layerid == 'run') {
+                document.getElementById('Run').click();
+              }
+            });
+
+            toggleLayer("Hike", "hike_routes");
+            toggleLayer("Bike", "bike_routes");
+            toggleLayer("Ski", "ski_routes");
+            toggleLayer("Run", "run_routes");
+            function toggleLayer(name, id) {
+              var link = document.createElement('a');
+              link.href = '#';
+              link.className = 'active';
+              link.textContent = name;
+              link.id = name;
+              link.onclick = function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var visibility = map.getLayoutProperty(id, 'visibility');
+                if (visibility === 'visible') {
+                  map.setLayoutProperty(id, 'visibility', 'none');
+                  this.className = '';
+                } else {
+                  this.className = 'active';
+                  map.setLayoutProperty(id, 'visibility', 'visible');
+                }
+              };
+              var layers = document.getElementById('menu');
+              layers.appendChild(link);
+            }
+      </script>
+    </main>
+
+    <footer class="footer">
+        TrackMap: &copy; Tim Smith CC-BY-4.0
+    </footer>
+  </body>
+</html>
