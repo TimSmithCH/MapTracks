@@ -117,19 +117,20 @@
               trackname = trackname.replace(/ |\u2019/g, "_");
               var layerid = features[0].layer.id;
               layerid = layerid.replace(/_routes/g, "");
-              // Remove any previous detail layer
-              if (map.getLayer("detail_layer")) {
-                map.removeSource("detail_layer");
-                map.removeLayer("detail_layer");
+              var layername = "detail_layer_" + layerid;
+              // Remove any previous detail layer of same name
+              if (map.getLayer(layername)) {
+                map.removeSource(layername);
+                map.removeLayer(layername);
               }
-              map.addSource("detail_layer", {
+              map.addSource(layername, {
                 "type": "geojson",
                 "data": "tracks/geojson/" + layerid + "/" + trackname
               });
               map.addLayer({
-                "id": "detail_layer",
+                "id": layername,
                 "type": "line",
-                "source": "detail_layer",
+                "source": layername,
                 "layout": {
                   "visibility": "visible",
                   "line-join": "round",
