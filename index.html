@@ -111,7 +111,9 @@
               });
               // Load detailed coordinates of clicked track
               var trackname = features[0].properties.name +'.geojson';
-              // Eliminate spaces and apostrophes from filenames
+              // Replace space dash space with underscore in filenames
+              trackname = trackname.replace(/ - /g, "_");
+              // Replace spaces and apostrophes with underscore in filenames
               trackname = trackname.replace(/ |\u2019/g, "_");
               var layerid = features[0].layer.id;
               layerid = layerid.replace(/_routes/g, "");
