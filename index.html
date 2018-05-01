@@ -117,7 +117,7 @@
               trackname = trackname.replace(/ |\u2019/g, "_");
               var layerid = features[0].layer.id;
               layerid = layerid.replace(/_routes/g, "");
-              var layername = "detail_layer_" + layerid;
+              var layername = "detail_" + trackname;
               // Remove any previous detail layer of same name
               if (map.getLayer(layername)) {
                 map.removeSource(layername);
