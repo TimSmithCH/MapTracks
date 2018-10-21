@@ -79,15 +79,15 @@
                     var point_data = turf.explode(data.features[0]);
 
                     // add points to the map
-//                    map.addSource('points', { type: 'geojson', data: point_data });
-//                    map.addLayer({
-//                        "id": "points",
-//                        "type": "symbol",
-//                        "source": "points",
-//                        "layout": {
-//                          "icon-image": "rocket-15",
-//                        }
-//                    });
+                    map.addSource('points', { type: 'geojson', data: point_data });
+                    map.addLayer({
+                        "id": "points",
+                        "type": "symbol",
+                        "source": "points",
+                        "layout": {
+                          "icon-image": "rocket-15",
+                        }
+                    });
 
                     // Zoom to fit track in screen
                     var bounds = coordinates.reduce(function(bounds, coord) {
