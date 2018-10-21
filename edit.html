@@ -99,17 +99,13 @@
 
                     // Create the handler to delete point when clicked
                     map.on('click', function(e) {
-                        var features = map.queryRenderedFeatures(e.point, { layers: points,
-                                                                  filter: ["==", "$type", "LineString"] });
-                        // If didnt click on a LineString then feature list will be empty
-                        if (features.length == 0) return;
-                        // Zoom to fit clicked track in screen
-                        var remove_coordinates = features[0].geometry.coordinates;
+                        // 
+                        var remove_coordinates = e.features[0].geometry.coordinates;
 
                         // Remove clicked point
-                        data.features[0].geometry.coordinates.push(coordinates[i]);
+                        data.features[0].geometry.coordinates.pop(remove_coordinates);
                         map.getSource('trace').setData(data);
-                        map.panTo(coordinates[i]);
+                        map.panTo(remove_coordinates);
                     });
                 });
             });
