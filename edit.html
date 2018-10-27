@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <!-- script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css'/>
     <!-- Site styles -->
     <link rel="stylesheet" href="css/trackmap.css">
   </head>
@@ -43,6 +46,16 @@
             // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
+
+            //
+            var draw = new MapboxDraw({
+                displayControlsDefault: false,
+                controls: {
+                    polygon: true,
+                    trash: true
+                }
+            });
+            map.addControl(draw);
 
             // Hardcode for now, read input later
             var tracktype = "ski";
