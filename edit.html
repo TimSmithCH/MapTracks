@@ -51,6 +51,7 @@
             var draw = new MapboxDraw({
                 displayControlsDefault: false,
                 controls: {
+                    line_string: true,
                     polygon: true,
                     trash: true
                 }
@@ -91,7 +92,8 @@
                     // Use Turf to convert all the LineString points into individual points
 //                    var point_data = turf.explode(data.features[0]);
 //                    var polygon = turf.polygon(coordinates);
-                    var polygon = turf.lineToPolygon(data.features[0]);
+//                    var polygon = turf.lineToPolygon(data.features[0]);
+                    var polygon = turf.lineString(data.features[0].geometry);
                     var id = draw.add(polygon);
                     draw.select(id);
 
