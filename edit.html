@@ -98,7 +98,7 @@
                     });
 
                     // Create the handler to delete point when clicked
-                    index_removed.push = [];
+                    var index_removed.push = [];
                     map.on('click', 'points', function(e) {
                         // Coordinates of clicked point
                         var remove_coordinates = e.features[0].geometry.coordinates;
