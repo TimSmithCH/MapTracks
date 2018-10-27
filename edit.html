@@ -98,12 +98,18 @@
                     });
 
                     // Create the handler to delete point when clicked
+                    index_removed.push = [];
                     map.on('click', 'points', function(e) {
                         // Coordinates of clicked point
                         var remove_coordinates = e.features[0].geometry.coordinates;
 
                         // Remove clicked point
-                        data.features[0].geometry.coordinates.pop(remove_coordinates);
+                        for(var i = 0; i < data.features[0].geometry.coordinates.length-1; i++){ 
+                          if ( data.features[0].geometry.coordinates[i] === remove_coordinates) {
+                            data.features[0].geometry.coordinates.splice(i, 1); 
+                            index_removed.push[i];
+                          }
+                        }
                         map.getSource('trace').setData(data);
                         map.panTo(remove_coordinates);
                     });
