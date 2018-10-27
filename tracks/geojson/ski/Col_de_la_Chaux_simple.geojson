@@ -1,0 +1,38 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Col de la Chaux",
+                "type": "3",
+                "time": "2014-12-21T09:57:03Z"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        7.303286,
+                        46.076038,
+                        2815.5
+                    ],
+                    [
+                        7.306095,
+                        46.074182,
+                        2925.6
+                    ],
+                    [
+                        7.306098,
+                        46.074154,
+                        2927.2
+                    ],
+                    [
+                        7.307547,
+                        46.07474,
+                        2932.2
+                    ]
+                ]
+            }
+        }
+    ]
+}
