@@ -105,10 +105,12 @@
 
                         // Remove clicked point
                         for(var i = 0; i < data.features[0].geometry.coordinates.length-1; i++){ 
+                          console.log("Checking " + i);
                           if ( data.features[0].geometry.coordinates[i] === remove_coordinates) {
                             data.features[0].geometry.coordinates.splice(i, 1); 
                             console.log("Deleting " + i);
                             index_removed.push[i];
+                            break;
                           }
                         }
                         map.getSource('trace').setData(data);
