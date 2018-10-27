@@ -102,6 +102,7 @@
                     map.on('click', 'points', function(e) {
                         // Coordinates of clicked point
                         var remove_coordinates = e.features[0].geometry.coordinates;
+                        console.log("To remove " + remove_coordinates);
 
                         // Remove clicked point
                         for(var i = 0; i < data.features[0].geometry.coordinates.length-1; i++){ 
