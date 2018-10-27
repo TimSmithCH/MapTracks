@@ -95,7 +95,8 @@
 //                    var polygon = turf.lineToPolygon(data.features[0]);
                     var line = turf.lineString(data.features[0].geometry.coordinates);
                     var id = draw.add(line);
-                    draw.select(id);
+                    // draw.select(id);
+                    draw.changeMode('direct_select',{featureId:id});
 
                     // add points to the map
 //                    map.addSource('points', { type: 'geojson', data: point_data });
