@@ -90,9 +90,13 @@
 
                     // Use Turf to convert all the LineString points into individual points
 //                    var point_data = turf.explode(data.features[0]);
-                    var polygon = turf.polygon(coordinates);
+//                    var polygon = turf.polygon(coordinates);
+                    var polygon = turf.lineToPolygon(data.features[0]);
                     var id = draw.add(polygon);
                     draw.select(id);
+
+                    //
+                    map.on('draw.update', updateArea);
 
                     // add points to the map
 //                    map.addSource('points', { type: 'geojson', data: point_data });
