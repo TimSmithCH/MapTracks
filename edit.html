@@ -119,7 +119,14 @@
 
                     //
                     map.on('draw.update', e => {
-                      console.log(e.features[0]);
+                      console.log("Updated: " + e.features[0]);
+                      e.features[0].geometry.coordinates);
+                    });
+
+                    //
+                    map.on('draw.trash', e => {
+                      console.log("Trashed: " + e.features[0]);
+                      e.features[0].geometry.coordinates);
                     });
 
 //                    // Create the handler to delete point when clicked
