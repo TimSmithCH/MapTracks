@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx creator="StravaGPX iPhone" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd">
+<gpx creator="StravaGPX iPhone" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" xmlns="http://www.topografix.com/GPX/1/1">
  <metadata>
   <time>2018-04-22T05:10:19Z</time>
  </metadata>
  <trk>
-  <name>Fenêtre d’Arpette</name>
+  <name>Col des Ecandies</name>
+  <type>3</type>
   <trkseg>
    <trkpt lat="46.0308670" lon="7.1045550">
     <ele>1538.1</ele>
