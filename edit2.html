@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrackMap</title>
+    <meta name="description" content="TrackMap">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src='https://d3js.org/d3.v3.min.js' charset='utf-8'></script>
+    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    <!-- script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js'></script -->
+    <!-- Site styles -->
+    <link rel="stylesheet" href="css/trackmap.css">
+  </head>
+
+  <body class="wrapper">
+
+    <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
+    <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
+    <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
+    <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
+    <header class="header">
+      Track Editor
+    </header>
+    <main class="main">
+      <div id='map' class="main-content">
+        <nav id="menu"></nav>
+      </div>
+
+      <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              center: [7.2989238, 46.032874], // starting position
+              zoom: 11 // starting zoom
+            });
+            
+            // Add zoom, rotation and full_screen controls to the map
+            map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.FullscreenControl());
+
+            // Hardcode for now, read input later
+            var tracktype = "ski";
+            var trackname = "AAZ.geojson";
+            var datafile = "tracks/geojson/" + tracktype + "/" + trackname
+
+            map.on('load', function () {
+            // Fetch JSON using D3 so can parse and use separately from GL JS
+                d3.json(datafile, function(err, data) {
+                    if (err) throw err;
+
+                    // save full coordinate list for later
+                    var coordinates = data.features[0].geometry.coordinates;
+                    var good_coordinates = coordinates;
+
+                    // add track to the map
+                    map.addSource('trace', { type: 'geojson', data: data });
+                    map.addLayer({
+                        "id": "trace",
+                        "type": "line",
+                        "source": "trace",
+                        "layout": {
+                          "visibility": "visible",
+                          "line-join": "round",
+                          "line-cap": "round"
+                        },
+                        "paint": {
+                          "line-color": "orange",
+                          "line-width": 4
+                        }
+                    });
+
+                    // Use Turf to convert all the LineString points into individual points
+                    var temp_data = turf.explode(data.features[0]);
+                    // But the exploded object has lots of pointers/prototypes, so cant set any values in it. Clone to make a editable copy
+                    var point_data = JSON.parse(JSON.stringify(temp_data));
+                    // Name each point by its position in array
+                    for(var i = 0; i < point_data.features.length-1; i++){ 
+                      point_data.features[i]["properties"]["name"] = i.toString();
+                    }
+                    console.log(point_data);
+
+                    // add points to the map
+                    map.addSource('points', { type: 'geojson', data: point_data });
+                    map.addLayer({
+                        "id": "points",
+                        "type": "symbol",
+                        "source": "points",
+                        "layout": {
+                          "icon-image": "rocket-15",
+                        }
+                    });
+
+                    // Zoom to fit track in screen
+                    var bounds = coordinates.reduce(function(bounds, coord) {
+                        return bounds.extend(coord);
+                    }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
+                    map.fitBounds(bounds, {
+                        padding: 20
+                    });
+
+                    // Create the handler to delete point when clicked
+                    var index_removed = [];
+                    map.on('click', 'points', function(e) {
+                        // ID of clicked point
+                        var remove_point = parseInt(e.features[0].properties.name);
+                        var remove_coordinates = e.features[0].geometry.coordinates;
+                        console.log("To remove " + remove_point);
+                        index_removed.push(remove_point);
+
+                        // Remove clicked point
+                        data.features[0].geometry.coordinates.splice(remove_point, 1);
+                        point_data.features.splice(remove_point, 1);
+                        // Rename points to match new positions
+                        for(var i = remove_point; i < point_data.features.length-1; i++){ 
+                            point_data.features[i]["properties"]["name"] = i.toString();
+                        }
+
+                        // Update displayed data
+                        map.getSource('points').setData(point_data);
+                        map.getSource('trace').setData(data);
+                        map.panTo(remove_coordinates);
+                    });
+
+                    // Setup save button
+                    var link = document.createElement('a');
+                    link.href = '#';
+                    link.className = 'active';
+                    link.textContent = "Save";
+                    link.id = "Save";
+                    link.onclick = function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        console.log(index_removed);
+                    };
+                    var layers = document.getElementById('menu');
+                    layers.appendChild(link);
+                });
+            });
+      </script>
+    </main>
+
+    <footer class="footer">
+        TrackMap: &copy; Tim Smith CC-BY-4.0
+    </footer>
+  </body>
+</html>
