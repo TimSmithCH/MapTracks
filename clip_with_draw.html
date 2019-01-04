@@ -52,8 +52,11 @@
                 displayControlsDefault: false,
                 controls: {
                     line_string: true,
-                    polygon: true,
-                    trash: true
+                    //polygon: true,
+                    trash: true,
+                    //point: true,
+                    combine_features: true
+                    //uncombine_features: true
                 }
             });
             map.addControl(draw, 'top-left');
@@ -72,23 +75,6 @@
                     var coordinates = data.features[0].geometry.coordinates;
                     var good_coordinates = coordinates;
 
-                    // add track to the map
-//                    map.addSource('trace', { type: 'geojson', data: data });
-//                    map.addLayer({
-//                        "id": "trace",
-//                        "type": "line",
-//                        "source": "trace",
-//                        "layout": {
-//                          "visibility": "visible",
-//                          "line-join": "round",
-//                          "line-cap": "round"
-//                        },
-//                        "paint": {
-//                          "line-color": "orange",
-//                          "line-width": 4
-//                        }
-//                    });
-
                     // Use Turf to convert all the LineString points into individual points
 //                    var point_data = turf.explode(data.features[0]);
 //                    var polygon = turf.polygon(coordinates);
@@ -97,17 +83,6 @@
                     var id = draw.add(line);
                     // draw.select(id);
                     draw.changeMode('direct_select',{featureId:id});
-
-                    // add points to the map
-//                    map.addSource('points', { type: 'geojson', data: point_data });
-//                    map.addLayer({
-//                        "id": "points",
-//                        "type": "symbol",
-//                        "source": "points",
-//                        "layout": {
-//                          "icon-image": "rocket-15",
-//                        }
-//                    });
 
                     // Zoom to fit track in screen
                     var bounds = coordinates.reduce(function(bounds, coord) {
@@ -119,37 +94,30 @@
 
                     //
                     map.on('draw.update', e => {
-                      console.log("Updated: " + e.features[0]);
-                      //e.features[0].geometry.coordinates);
+                      console.log("Updated: " + e.features[0].geometry.coordinates);
                     });
 
                     //
-                    map.on('draw.trash', e => {
-                      console.log("Trashed: " + e.features[0]);
-                      //e.features[0].geometry.coordinates);
+                    map.on('draw.combine', e => {
+                      console.log("Combined: " + e.features[0].geometry.coordinates);
                     });
 
-//                    // Create the handler to delete point when clicked
-//                    var index_removed = [];
-//                    map.on('click', 'points', function(e) {
-//                        // Coordinates of clicked point
-//                        var remove_coordinates = e.features[0].geometry.coordinates;
-//                        console.log(e.features[0]);
-//                        console.log("To remove " + remove_coordinates);
-//
-//                        // Remove clicked point
-//                        for(var i = 0; i < data.features[0].geometry.coordinates.length-1; i++){ 
-//                          console.log("Checking " + i + " ", data.features[0].geometry.coordinates[i]);
-//                          if ( data.features[0].geometry.coordinates[i] === remove_coordinates) {
-//                            data.features[0].geometry.coordinates.splice(i, 1); 
-//                            console.log("Deleting " + i);
-//                            index_removed.push[i];
-//                            break;
-//                          }
-//                        }
-//                        map.getSource('trace').setData(data);
-//                        map.panTo(remove_coordinates);
-//                    });
+                    //
+                    map.on('draw.delete', e => {
+                      console.log("Trashed: " + e.features[0].geometry.coordinates);
+                    });
+
+//        if (data.features.length > 0) {
+//            // Stringify the GeoJson
+//            var convertedData = 'text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data));
+//            // Create export
+//            document.getElementById('export').setAttribute('href', 'data:' + convertedData);
+//            document.getElementById('export').setAttribute('download','data.geojson');    
+//        } else {
+//            alert("Wouldn't you like to draw some data?");
+//        }
+
+
                 });
             });
       </script>

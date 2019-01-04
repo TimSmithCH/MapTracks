@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrackClip</title>
+    <meta name="description" content="TrackCliper">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- External libraries -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src='libs/d3.v3.min.js'></script>
+    <script src='libs/turf.min.js'></script>
+    <script src='libs/togeojson.min.js'></script>
+    <script src="libs/Blob.min.js"></script>
+    <script src="libs/FileSaver.min.js"></script>
+    <!-- Site styles -->
+    <link rel="stylesheet" href="css/trackmap.css">
+  </head>
+
+  <body class="wrapper">
+
+    <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
+    <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
+    <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
+    <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
+    <header class="header">
+      Track Cliper
+    </header>
+    <main class="main">
+      <div id='map' class="main-content">
+        <nav id="menu"></nav>
+      </div>
+
+      <script>
+            // Declare a function to find where to insert an element into a sorted array
+            function sortedIndex(array, value) {
+                var low = 0,
+                    high = array.length;
+
+                while (low < high) {
+                    var mid = (low + high) >>> 1;
+                    if (array[mid] < value) low = mid + 1;
+                    else high = mid;
+                }
+                return low;
+            }
+            function processArg() {
+                var parameters = location.search.substring(1).split("&");
+                var temp = parameters[0].split("=");
+                var filename = "";
+                if (temp[0] == "file") {
+                    filename = unescape(temp[1]);
+                }
+                return filename;
+            }
+
+            // Read file name from URl arguement or set default
+            var datafile = processArg();
+            if (!datafile) {
+                datafile = "tracks/gpx/ski/Col_de_la_Chaux.gpx";
+            }
+            var basename = datafile.substr(datafile.lastIndexOf("/") + 1);
+            var basename_no_ext = basename.substr(0, basename.lastIndexOf('.')) || basename;
+            var outfile = basename_no_ext + "_trimmed.gpx";
+            console.log(datafile,outfile);
+
+            //console.log("Initialising map");
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              center: [7.2989238, 46.032874], // starting position
+              zoom: 11 // starting zoom
+            });
+            
+            // Add zoom, rotation and full_screen controls to the map
+            map.addControl(new mapboxgl.NavigationControl());
+            map.addControl(new mapboxgl.FullscreenControl());
+
+            map.on('load', function () {
+                // Fetch JSON using D3 so can parse and use separately from GL JS
+                // Since this an asynchronous call, need all code that depends on the data to be in the loop
+                //d3.json(datafile, function(err, data) {
+                //console.log("Reading GPX file");
+                d3.xml(datafile, function(err,xdata) {
+                    if (err) throw err;
+                    data = toGeoJSON.gpx(xdata);
+                    //console.log(xdata);
+
+                    // add track to the map
+                    map.addSource('trace', { type: 'geojson', data: data });
+                    map.addLayer({
+                        "id": "trace",
+                        "type": "line",
+                        "source": "trace",
+                        "layout": {
+                          "visibility": "visible",
+                          "line-join": "round",
+                          "line-cap": "round"
+                        },
+                        "paint": {
+                          "line-color": "orange",
+                          "line-width": 4
+                        }
+                    });
+
+                    //console.log(data.features[0]);
+                    // Use Turf to convert all the LineString points into individual points
+                    var temp_data = turf.explode(data.features[0]);
+                    // But the exploded object has lots of pointers/prototypes, so cant set any values in it. Clone to make a editable copy
+                    var point_data = JSON.parse(JSON.stringify(temp_data));
+                    // Name each point by its position in array
+                    for(var i = 0; i < point_data.features.length; i++){ 
+                      point_data.features[i]["properties"]["name"] = i.toString();
+                      point_data.features[i]["properties"]["time"] = point_data.features[i].properties.coordTimes[i];
+                      delete point_data.features[i].properties.coordTimes;
+                    }
+                    //console.log(point_data);
+
+                    // add points to the map
+                    map.addSource('points', { type: 'geojson', data: point_data });
+                    map.addLayer({
+                        "id": "points",
+                        "type": "symbol",
+                        "source": "points",
+                        "layout": {
+                          "icon-image": "mountain-15"
+                        }
+                    });
+                    var bad_point_data = { "type": "FeatureCollection", "features": [] };
+                    map.addSource('bad_points', { type: 'geojson', data: bad_point_data });
+                    map.addLayer({
+                        "id": "bad_points",
+                        "type": "symbol",
+                        "source": "bad_points",
+                        "layout": {
+                          "icon-image": "star-15"
+                        }
+                    });
+
+                    // Zoom to fit track in screen
+                    var coordinates = data.features[0].geometry.coordinates;
+                    var bounds = coordinates.reduce(function(bounds, coord) {
+                        return bounds.extend(coord);
+                    }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
+                    map.fitBounds(bounds, {
+                        padding: 20
+                    });
+
+                    // Create the handler to delete point when clicked
+                    var index_removed = [];
+                    map.on('click', 'points', function(e) {
+                        // ID of clicked point
+                        var remove_point = parseInt(e.features[0].properties.name);
+                        var remove_coordinates = e.features[0].geometry.coordinates;
+                        //console.log("To remove " + remove_point);
+                        // Insert into the correct place of the sorted array of removed points
+                        index_removed.splice(sortedIndex(index_removed,remove_point),0,remove_point);
+
+                        // work on data clones
+                        var good_data = JSON.parse(JSON.stringify(data));
+                        var good_point_data = JSON.parse(JSON.stringify(point_data));
+                        bad_point_data = { "type": "FeatureCollection", "features": [] };
+
+                        // Remove clicked points, in reverse order so that splice index remains valid
+                        for(var i = index_removed.length-1; i >= 0; i--){ 
+                            good_data.features[0].geometry.coordinates.splice(index_removed[i], 1);
+                            bad_point_data.features.push(good_point_data.features[index_removed[i]]);
+                            good_point_data.features.splice(index_removed[i], 1);
+                            //console.log("Removing " + index_removed[i]);
+                        }
+
+                        // Update displayed data
+                        map.getSource('points').setData(good_point_data);
+                        map.getSource('bad_points').setData(bad_point_data);
+                        map.getSource('trace').setData(good_data);
+                        map.panTo(remove_coordinates);
+                    });
+
+                    // Create the handler to un-delete point when clicked
+                    map.on('click', 'bad_points', function(e) {
+                        // ID of clicked point
+                        var remove_point = parseInt(e.features[0].properties.name);
+                        var remove_coordinates = e.features[0].geometry.coordinates;
+                        //console.log("To put back " + remove_point);
+                        // Remove from the sorted array of removed points
+                        index_removed.splice(index_removed.indexOf(remove_point), 1);
+
+                        // work on data clones
+                        var good_data = JSON.parse(JSON.stringify(data));
+                        var good_point_data = JSON.parse(JSON.stringify(point_data));
+                        bad_point_data = { "type": "FeatureCollection", "features": [] };
+
+                        // Remove clicked points, in reverse order so that splice index remains valid
+                        for(var i = index_removed.length-1; i >= 0; i--){ 
+                            good_data.features[0].geometry.coordinates.splice(index_removed[i], 1);
+                            bad_point_data.features.push(good_point_data.features[index_removed[i]]);
+                            good_point_data.features.splice(index_removed[i], 1);
+                            //console.log("Removing " + index_removed[i]);
+                        }
+
+                        // Update displayed data
+                        map.getSource('points').setData(good_point_data);
+                        map.getSource('bad_points').setData(bad_point_data);
+                        map.getSource('trace').setData(good_data);
+                        map.panTo(remove_coordinates);
+                    });
+
+                    // Create popup on hover for points layer
+                    var popup = new mapboxgl.Popup({
+                      closeButton: false,
+                      closeOnClick: false
+                    });
+                    map.on('mouseenter', 'points', function(e) {
+                      // Change the cursor style as a UI indicator.
+                      map.getCanvas().style.cursor = 'pointer';
+                      // Populate the popup and set its coordinates based on the feature found.
+                      var time = e.features[0].properties.time.split(/(T|Z)/)[2];
+                      popup.setLngLat(e.lngLat)
+                          //.setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                          .setHTML('<strong>' + time +'</strong><br>')
+                          .addTo(map);
+                    });
+                    map.on('mouseleave', 'points', function() {
+                      map.getCanvas().style.cursor = '';
+                      popup.remove();
+                    });
+                    map.on('mouseenter', 'bad_points', function(e) {
+                      // Change the cursor style as a UI indicator.
+                      map.getCanvas().style.cursor = 'pointer';
+                    });
+                    map.on('mouseleave', 'bad_points', function() {
+                      map.getCanvas().style.cursor = '';
+                      popup.remove();
+                    });
+
+                    // Setup save button
+                    var link = document.createElement('a');
+                    link.href = '#';
+                    link.className = 'active';
+                    link.textContent = "Save";
+                    link.id = "Save";
+                    link.onclick = function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        //console.log(index_removed);
+                        for(var i = index_removed.length-1; i >= 0; i--){ 
+                            x = xdata.getElementsByTagName("trkpt")[index_removed[i]];
+                            x.parentNode.removeChild(x);
+                            //console.log("Removing " + index_removed[i]);
+                        }
+                        var blob = new Blob([(new XMLSerializer).serializeToString(xdata)], {type: 'application/xml;charset=utf-8'});
+                        saveAs(blob, outfile);
+                    };
+                    var layers = document.getElementById('menu');
+                    layers.appendChild(link);
+                });
+            });
+      </script>
+    </main>
+
+    <footer class="footer">
+        TrackCliper: &copy; Tim Smith CC-BY-4.0
+    </footer>
+  </body>
+</html>
