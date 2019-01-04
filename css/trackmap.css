@@ -29,6 +29,12 @@ body {
     align-content: stretch; /* Extra space in Cross Axis */
     text-align: center;
 }
+.simple_text {
+    max-width: 56em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em; }
+}
 
 /* Defaults all set for mobile screen format */
 .header {
