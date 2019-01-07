@@ -21,6 +21,29 @@
   </head>
 
   <body class="wrapper">
+<style>
+.map-overlay {
+    font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    position: absolute;
+    width: 95%;
+    bottom: 0;
+    left: 20;
+    padding: 5px;
+    background-color: #6fd0a9;
+    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
+    border-radius: 3px;
+    margin-bottom: 45px;
+}
+
+.map-overlay input {
+    background-color: transparent;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    cursor: ew-resize;
+}
+</style>
 
     <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
     <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
@@ -31,7 +54,11 @@
     </header>
     <main class="main">
       <div id='map' class="main-content">
-        <nav id="menu"></nav>
+          <nav id="menu"></nav>
+      </div>
+
+      <div class='map-overlay' center>
+          <input id='slider' type='range' min='0' max='59' step='1' value='0' />
       </div>
 
       <script>
@@ -116,6 +143,7 @@
                     for(var i = 0; i < point_data.features.length; i++){ 
                       point_data.features[i]["properties"]["name"] = i.toString();
                       point_data.features[i]["properties"]["time"] = point_data.features[i].properties.coordTimes[i];
+                      point_data.features[i]["properties"]["Minute"] = parseInt(point_data.features[i].properties.coordTimes[i].split(':')[1]);
                       delete point_data.features[i].properties.coordTimes;
                     }
                     //console.log(point_data);
@@ -139,6 +167,11 @@
                         "layout": {
                           "icon-image": "star-15"
                         }
+                    });
+                    document.getElementById('slider').addEventListener('input', function(e) {
+                      var minute = parseInt(e.target.value);
+                      // update the map
+                      map.setFilter('points', ['==', ['number', ['get', 'Minute']], minute]);
                     });
 
                     // Zoom to fit track in screen
