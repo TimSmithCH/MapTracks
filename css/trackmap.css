@@ -68,15 +68,15 @@ body {
 /* (Should use switches in original clauses but doesn't seem to work) */
 @media only screen and (min-width: 768px) {
   .header {
-    padding: 24px 24px 6px;
-    font-size: 32px;
+    padding: 12px 12px 6px;
+    font-size: 24px;
   }
   .footer {
-    padding: 12px;
+    padding: 6px;
     font-size: 24px;
   }
   .main {
-      padding: 24px;
+      padding: 12px;
   }
 }
 
