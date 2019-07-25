@@ -51,7 +51,7 @@ function gpxFixtureEqual(t, file) {
         console.log('update: ',outfile);
         // Apply Ramer–Douglas–Peucker line simplification to smooth line and shrink file
         //var simplified = simplify(output,0.0005);   // Epsilon equivalent to 56m separation
-        var simplified = simplify(output,0.0001);   // Epsilon equivalent to 11m separation
+        var simplified = simplify(output,0.0004);   // Epsilon equivalent to 45m separation
         fs.writeFileSync(simplefile, JSON.stringify(simplified, null, 4));
     }
 }
