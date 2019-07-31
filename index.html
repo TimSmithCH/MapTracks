@@ -49,6 +49,29 @@
                                  run_routes: { datafile: "Overview_run.geojson",  colour: "purple" } };
 
             map.on('load', function () {
+              // Add Swiss cantons
+              map.addSource(cantons, {
+                "type": "geojson",
+                "data": "tracks/geojson/ch-cantons.json"
+              });
+              map.addLayer({
+                "id": cantons,
+                "type": "fill",
+                "source": cantons,
+                "layout": {
+                  "visibility": "visible"
+                },
+                "paint": {
+                  'fill-opacity': 0.8,
+                  'fill-color': [ 'match', ['get', 'abbr'],
+                    'ZH', '#fbb03b',
+                    'BE', '#223b53',
+                    'GE', '#e55e5e',
+                    'VD', '#3bb2d0',
+                    /* other */ '#ccc'
+                  ]
+                }
+              });
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {
                 map.addSource(layer, {
@@ -157,6 +180,7 @@
             toggleLayer("Bike", "bike_routes");
             toggleLayer("Ski", "ski_routes");
             toggleLayer("Run", "run_routes");
+            toggleLayer("Cantons", "cantons");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
