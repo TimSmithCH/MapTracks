@@ -50,14 +50,14 @@
 
             map.on('load', function () {
               // Add Swiss cantons
-              map.addSource(cantons, {
+              map.addSource("cantons", {
                 "type": "geojson",
                 "data": "tracks/geojson/ch-cantons.json"
               });
               map.addLayer({
-                "id": cantons,
+                "id": "cantons",
                 "type": "fill",
-                "source": cantons,
+                "source": "cantons",
                 "layout": {
                   "visibility": "visible"
                 },
