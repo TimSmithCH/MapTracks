@@ -1,0 +1,95 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.597293,
+                    46.633642,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Andermatt",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.427896,
+                    46.731029,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Susten Pass",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.070841,
+                    46.632255,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Grindelwald",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.727881,
+                    46.662475,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Krattigen",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.558438,
+                    46.492325,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Adelboden",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.443100,
+                    46.457792,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Lenk",
+                "icon": "castle"
+            }
+        }
+    ]
+}

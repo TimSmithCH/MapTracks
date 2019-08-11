@@ -94,6 +94,25 @@
                   ]
                 }
               });
+              // Add Markers for important waypoints on trips
+              map.addSource("markers", {
+                "type": "geojson",
+                "data": "tracks/geojson/track_markers.json"
+              });
+              map.addLayer({
+                "id": "markers",
+                "type": "symbol",
+                "source": "markers",
+                "layout": {
+                  "visibility": "none"
+                  "icon-image": "{icon}-15",   // Data-driven styling //
+                  "text-field": "{name}",   // Data-driven styling //
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-offset": [0, 0.6],
+                  "text-anchor": "top"
+                },
+                "filter": ["==", ["geometry-type"], "Point"]
+              });
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {
                 map.addSource(layer, {
@@ -203,6 +222,7 @@
             toggleLayer("Ski", "ski_routes");
             toggleLayer("Run", "run_routes");
             toggleLayer("Canton", "cantons");
+            toggleLayer("Marker", "markers");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
