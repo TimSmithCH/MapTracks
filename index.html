@@ -113,6 +113,25 @@
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
               });
+              // Add Swiss mountains above 3000m
+              map.addSource("mountains", {
+                "type": "geojson",
+                "data": "tracks/geojson/CH_Mountains.json"
+              });
+              map.addLayer({
+                "id": "mountains",
+                "type": "symbol",
+                "source": "mountains",
+                "layout": {
+                  "visibility": "none",
+                  "icon-image": "{icon}-15",   // Data-driven styling //
+                  "text-field": "{name}",   // Data-driven styling //
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-offset": [0, 0.6],
+                  "text-anchor": "top"
+                },
+                "filter": ["==", ["geometry-type"], "Point"]
+              });
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {
                 map.addSource(layer, {
@@ -223,6 +242,7 @@
             toggleLayer("Run", "run_routes");
             toggleLayer("Canton", "cantons");
             toggleLayer("Marker", "markers");
+            toggleLayer("Mont", "mountains");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';

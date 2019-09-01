@@ -1,0 +1,7269 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "Longitude", 
+		"Latitude"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "Height", 
+		"prominence": "Prominence", 
+		"name": "Name", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.86694444444444", 
+		"45.9369444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4634", 
+		"prominence": "2165", 
+		"name": "Monte Rosa (Dufourspitze)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.85888888888889", 
+		"46.0938888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4545", 
+		"prominence": "1046", 
+		"name": "Dom", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.83555555555556", 
+		"45.9222222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4527", 
+		"prominence": "376", 
+		"name": "Lyskamm", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.71583333333333", 
+		"46.1013888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4506", 
+		"prominence": "1235", 
+		"name": "Weisshorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.65861111111111", 
+		"45.9763888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4478", 
+		"prominence": "1042", 
+		"name": "Matterhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.61194444444444", 
+		"46.0341666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4357", 
+		"prominence": "915", 
+		"name": "Dent Blanche", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.29916666666667", 
+		"45.9375"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4314", 
+		"prominence": "1517", 
+		"name": "Grand Combin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.12611111111111", 
+		"46.5372222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4274", 
+		"prominence": "2280", 
+		"name": "Finsteraarhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.69027777777778", 
+		"46.065"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4221", 
+		"prominence": "490", 
+		"name": "Zinalrothorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.86388888888889", 
+		"46.0630555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4206", 
+		"prominence": "359", 
+		"name": "Alphubel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.88416666666667", 
+		"46.0233333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4199", 
+		"prominence": "642", 
+		"name": "Rimpfischhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.99388888888889", 
+		"46.465"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4193", 
+		"prominence": "1029", 
+		"name": "Aletschhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.90166666666667", 
+		"46.0133333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4190", 
+		"prominence": "401", 
+		"name": "Strahlhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.60527777777778", 
+		"45.97"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4174", 
+		"prominence": "701", 
+		"name": "Dent d'H\u00e9rens", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.74888888888889", 
+		"45.9411111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4164", 
+		"prominence": "439", 
+		"name": "Breithorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.9625", 
+		"46.5366666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4158", 
+		"prominence": "687", 
+		"name": "Jungfrau", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.99722222222222", 
+		"46.5583333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4107", 
+		"prominence": "584", 
+		"name": "M\u00f6nch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.11805555555556", 
+		"46.59"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4078", 
+		"prominence": "792", 
+		"name": "Schreckhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.66805555555556", 
+		"46.0386111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4063", 
+		"prominence": "536", 
+		"name": "Ober Gabelhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.90805555555556", 
+		"46.3822222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4049", 
+		"prominence": "2234", 
+		"name": "Piz Bernina", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.06138888888889", 
+		"46.5513888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4049", 
+		"prominence": "398", 
+		"name": "Gross Fiescherhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.07777777777778", 
+		"46.5319444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4044", 
+		"prominence": "305", 
+		"name": "Gross Gr\u00fcnhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.01222222222222", 
+		"46.1277777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4017", 
+		"prominence": "1186", 
+		"name": "Weissmies", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.00305555555556", 
+		"46.1572222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "4010", 
+		"prominence": "511", 
+		"name": "Lagginhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.93138888888889", 
+		"46.3683333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3996", 
+		"prominence": "405", 
+		"name": "Piz Zup\u00f2", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.96777777777778", 
+		"46.5127777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3983", 
+		"prominence": "346", 
+		"name": "Gletscherhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.00527777777778", 
+		"46.5775"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3967", 
+		"prominence": "362", 
+		"name": "Eiger", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.61138888888889", 
+		"46.0519444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3962", 
+		"prominence": "431", 
+		"name": "Grand Cornier", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.88305555555556", 
+		"46.3736111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3937", 
+		"prominence": "415", 
+		"name": "Piz Roseg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.85083333333333", 
+		"46.3916666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3934", 
+		"prominence": "806", 
+		"name": "Bietschhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.01527777777778", 
+		"46.5466666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3933", 
+		"prominence": "306", 
+		"name": "Trugberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.09694444444444", 
+		"46.4938888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3906", 
+		"prominence": "626", 
+		"name": "Gross Wannenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.02", 
+		"45.96"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3901", 
+		"prominence": "473", 
+		"name": "Aiguille d'Argenti\u00e8re", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.40027777777778", 
+		"45.9791666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3875", 
+		"prominence": "851", 
+		"name": "Ruinette", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.54527777777778", 
+		"45.9822222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3838", 
+		"prominence": "490", 
+		"name": "Bouquetins", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.0375", 
+		"45.9488888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3837", 
+		"prominence": "302", 
+		"name": "Tour Noir", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.92611111111111", 
+		"46.4133333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3821", 
+		"prominence": "636", 
+		"name": "Nesthorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.04611111111111", 
+		"45.9225"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3820", 
+		"prominence": "330", 
+		"name": "Mont Dolent", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.94666666666667", 
+		"46.4516666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3797", 
+		"prominence": "422", 
+		"name": "Schinhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.63055555555556", 
+		"46.0269444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3789", 
+		"prominence": "301", 
+		"name": "Pointe de Zinal", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.87666666666667", 
+		"46.4786111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3780", 
+		"prominence": "443", 
+		"name": "Breithorn (Lauterbrunnen)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.90166666666667", 
+		"46.4027777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3751", 
+		"prominence": "324", 
+		"name": "Piz Morteratsch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.25166666666667", 
+		"45.8916666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3726", 
+		"prominence": "620", 
+		"name": "Mont V\u00e9lan", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.50277777777778", 
+		"45.9644444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3716", 
+		"prominence": "647", 
+		"name": "Ev\u00eaque", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.28055555555556", 
+		"45.9780555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3716", 
+		"prominence": "312", 
+		"name": "Combin de Corbassi\u00e8re", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.47194444444444", 
+		"45.9458333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3714", 
+		"prominence": "452", 
+		"name": "La Singla", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.12472222222222", 
+		"46.6352777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3704", 
+		"prominence": "579", 
+		"name": "Wetterh\u00f6rner (Mittelhorn)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.36916666666667", 
+		"46.0163888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3704", 
+		"prominence": "467", 
+		"name": "Le Pleureur", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.69361111111111", 
+		"46.425"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3698", 
+		"prominence": "1022", 
+		"name": "Balmhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.52305555555556", 
+		"46.0394444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3676", 
+		"prominence": "408", 
+		"name": "Dent de Perroc", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.7725", 
+		"46.4888888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3661", 
+		"prominence": "874", 
+		"name": "Bl\u00fcemlisalp(horn)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.03472222222222", 
+		"46.1008333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3654", 
+		"prominence": "411", 
+		"name": "Portjengrat (Pizzo d'Andolla)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.43361111111111", 
+		"46.0552777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3644", 
+		"prominence": "789", 
+		"name": "Aiguilles Rouges d'Arolla", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.73472222222222", 
+		"46.4688888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3638", 
+		"prominence": "654", 
+		"name": "Doldenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.42111111111111", 
+		"46.6433333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3630", 
+		"prominence": "1466", 
+		"name": "Dammastock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.91472222222222", 
+		"46.8111111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3614", 
+		"prominence": "1570", 
+		"name": "T\u00f6di (Piz Russein)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.67111111111111", 
+		"46.1425"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3609", 
+		"prominence": "379", 
+		"name": "Les Diablons", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.84", 
+		"46.3625"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3594", 
+		"prominence": "341", 
+		"name": "Piz Gl\u00fcschaint", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.53833333333333", 
+		"45.955"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3578", 
+		"prominence": "365", 
+		"name": "Mont Brul\u00e9", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.84861111111111", 
+		"46.4786111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3562", 
+		"prominence": "388", 
+		"name": "Tschingelhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.44305555555556", 
+		"45.9302777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3554", 
+		"prominence": "345", 
+		"name": "Aouille Tseuque", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.11", 
+		"46.2494444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3553", 
+		"prominence": "1144", 
+		"name": "Monte Leone", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.36611111111111", 
+		"45.9041666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3518", 
+		"prominence": "619", 
+		"name": "Mont Gel\u00e9", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.45527777777778", 
+		"46.6988888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3503", 
+		"prominence": "414", 
+		"name": "Sustenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.02222222222222", 
+		"46.0741666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3487", 
+		"prominence": "340", 
+		"name": "Sonnighorn/Pizzo Bottarello", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.81611111111111", 
+		"46.4083333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3451", 
+		"prominence": "383", 
+		"name": "Piz Corvatsch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.65416666666667", 
+		"46.4136111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3448", 
+		"prominence": "412", 
+		"name": "Rinderhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.16583333333333", 
+		"46.4980555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3447", 
+		"prominence": "303", 
+		"name": "Wasenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.82194444444444", 
+		"46.3519444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3441", 
+		"prominence": "349", 
+		"name": "Piz Tremoggia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.8275", 
+		"46.5116666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3436", 
+		"prominence": "599", 
+		"name": "Gspaltenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.00083333333333", 
+		"46.0363888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3436", 
+		"prominence": "598", 
+		"name": "Stellihorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.9575", 
+		"46.8044444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3419", 
+		"prominence": "383", 
+		"name": "Bifertenstock/Piz Durschin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.87277777777778", 
+		"46.6213888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3418", 
+		"prominence": "1503", 
+		"name": "Piz Kesch/Piz d'Es-Cha", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.4975", 
+		"46.7075"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3416", 
+		"prominence": "760", 
+		"name": "Fleckistock/Rot Stock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0716666666667", 
+		"46.7988888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3411", 
+		"prominence": "1028", 
+		"name": "Piz Linard", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.04027777777778", 
+		"46.4936111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3402", 
+		"prominence": "1337", 
+		"name": "Rheinwaldhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2275", 
+		"46.8908333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3399", 
+		"prominence": "647", 
+		"name": "Fluchthorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.69583333333333", 
+		"46.5363888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3397", 
+		"prominence": "1085", 
+		"name": "Piz Calderas", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.56166666666667", 
+		"46.4872222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3392", 
+		"prominence": "1108", 
+		"name": "Piz Platta", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.36055555555556", 
+		"46.6486111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3389", 
+		"prominence": "308", 
+		"name": "Diechterhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.75972222222222", 
+		"46.4911111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3380", 
+		"prominence": "489", 
+		"name": "Piz Julier/Piz G\u00fcglia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.06305555555556", 
+		"46.5125"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3379", 
+		"prominence": "400", 
+		"name": "G\u00fcferhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.67694444444444", 
+		"46.3030555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3379", 
+		"prominence": "388", 
+		"name": "Cima di Castello", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.30777777777778", 
+		"46.4258333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3374", 
+		"prominence": "945", 
+		"name": "Blinnenhorn/Corno Cieco", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.60194444444444", 
+		"46.295"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3369", 
+		"prominence": "620", 
+		"name": "Pizzo Cengalo", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.93", 
+		"46.0752777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3367", 
+		"prominence": "378", 
+		"name": "Egginer", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.78472222222222", 
+		"46.3408333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3363", 
+		"prominence": "432", 
+		"name": "Piz Fora", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.7075", 
+		"46.6019444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3339", 
+		"prominence": "515", 
+		"name": "Piz Ela", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.31861111111111", 
+		"46.0811111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3329", 
+		"prominence": "408", 
+		"name": "Mont Fort", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.76944444444444", 
+		"46.7427777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3328", 
+		"prominence": "703", 
+		"name": "Oberalpstock/Piz Tgietschen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1186111111111", 
+		"46.8441666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3312", 
+		"prominence": "544", 
+		"name": "Piz Buin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1172222222222", 
+		"46.4261111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3302", 
+		"prominence": "875", 
+		"name": "Piz Paradisin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0725", 
+		"46.835"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3298", 
+		"prominence": "375", 
+		"name": "Verstanclahorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.82916666666667", 
+		"46.8272222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3294", 
+		"prominence": "513", 
+		"name": "Gross Sch\u00e4rhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.3786111111111", 
+		"46.9005555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3293", 
+		"prominence": "703", 
+		"name": "Muttler", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.74416666666667", 
+		"46.4283333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3293", 
+		"prominence": "348", 
+		"name": "Hockenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.25888888888889", 
+		"46.6322222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3282", 
+		"prominence": "330", 
+		"name": "Ritzlihorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1086111111111", 
+		"46.8272222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3281", 
+		"prominence": "406", 
+		"name": "Piz Fliana", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.28333333333333", 
+		"46.4969444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3279", 
+		"prominence": "1164", 
+		"name": "Pizzo Tambo/Tambohorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.46861111111111", 
+		"46.4113888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3272", 
+		"prominence": "959", 
+		"name": "Bas\u00f2dino", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.19166666666667", 
+		"46.3047222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3272", 
+		"prominence": "586", 
+		"name": "Helsenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.87138888888889", 
+		"46.8419444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3267", 
+		"prominence": "413", 
+		"name": "Clariden", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.83638888888889", 
+		"46.5963888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3267", 
+		"prominence": "396", 
+		"name": "Piz \u00dcertsch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1580555555556", 
+		"46.3855555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3264", 
+		"prominence": "440", 
+		"name": "Scima da Saoseo", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.95638888888889", 
+		"46.4883333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3262", 
+		"prominence": "947", 
+		"name": "Piz Languard", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.55916666666667", 
+		"46.5202777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3262", 
+		"prominence": "601", 
+		"name": "Piz Forbesch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.92333333333333", 
+		"46.1611111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3257", 
+		"prominence": "1796", 
+		"name": "Dents du Midi (Haute Cime)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.8275", 
+		"46.7916666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3256", 
+		"prominence": "429", 
+		"name": "Gross D\u00fcssi/Piz Git", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.3430555555556", 
+		"46.9036111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3254", 
+		"prominence": "406", 
+		"name": "Piz Tsch\u00fctta/Stammerspitz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.52527777777778", 
+		"46.1386111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3254", 
+		"prominence": "386", 
+		"name": "Sasseneire", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.97388888888889", 
+		"46.7844444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3252", 
+		"prominence": "448", 
+		"name": "Cavistrau/Brigelser H\u00f6rner", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.36222222222222", 
+		"46.3558333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3248", 
+		"prominence": "978", 
+		"name": "Wildhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.34305555555556", 
+		"46.8983333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3247", 
+		"prominence": "843", 
+		"name": "Ringelspitz/Piz Barghis", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.81027777777778", 
+		"46.5433333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3246", 
+		"prominence": "631", 
+		"name": "Piz Ot", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.08555555555556", 
+		"46.2663888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3246", 
+		"prominence": "476", 
+		"name": "Wasenhorn / Punta Terrarossa", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.86111111111111", 
+		"46.1663888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3246", 
+		"prominence": "361", 
+		"name": "Platthorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.68222222222222", 
+		"46.3422222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3244", 
+		"prominence": "306", 
+		"name": "Piz Bacun", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.52861111111111", 
+		"46.4002777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3243", 
+		"prominence": "815", 
+		"name": "Wildstrubel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.43777777777778", 
+		"46.7719444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3238", 
+		"prominence": "978", 
+		"name": "Titlis", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.10166666666667", 
+		"45.8591666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3238", 
+		"prominence": "313", 
+		"name": "Grand Golliat", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.31861111111111", 
+		"46.3866666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3235", 
+		"prominence": "334", 
+		"name": "Ofenhorn / Punta d'Arbola", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2038888888889", 
+		"46.8644444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3230", 
+		"prominence": "432", 
+		"name": "Augstenberg/Piz Blaisch Lunga", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.96277777777778", 
+		"46.6869444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3229", 
+		"prominence": "660", 
+		"name": "Piz Vadret", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.92472222222222", 
+		"46.1269444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3220", 
+		"prominence": "726", 
+		"name": "Tour Salli\u00e8re", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0330555555556", 
+		"46.81"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3220", 
+		"prominence": "300", 
+		"name": "Vorderes Plattenhorn (Ostgipfel)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.06527777777778", 
+		"46.4783333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3218", 
+		"prominence": "303", 
+		"name": "Vogelberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.72472222222222", 
+		"46.3383333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3214", 
+		"prominence": "446", 
+		"name": "Monte del Forno", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.36027777777778", 
+		"46.1038888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3213", 
+		"prominence": "302", 
+		"name": "Le M\u00e9tailler", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.91111111111111", 
+		"46.6183333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3211", 
+		"prominence": "952", 
+		"name": "Piz Medel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.22305555555556", 
+		"46.3241666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3211", 
+		"prominence": "716", 
+		"name": "Scherbadung / Pizzo Cervandone", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.18888888888889", 
+		"46.3038888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3210", 
+		"prominence": "968", 
+		"name": "Diablerets", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.40944444444444", 
+		"46.4669444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3209", 
+		"prominence": "823", 
+		"name": "Piz Timun /Pizzo d'Emet", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.85194444444444", 
+		"46.7894444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3208", 
+		"prominence": "364", 
+		"name": "Piz Cambrialas", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.4027777777778", 
+		"46.7058333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3204", 
+		"prominence": "1055", 
+		"name": "Piz Sesvenna", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.75666666666667", 
+		"46.2166666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3201", 
+		"prominence": "308", 
+		"name": "Schwarzhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.95083333333333", 
+		"46.5088888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3199", 
+		"prominence": "308", 
+		"name": "Piz Vadret", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.52444444444444", 
+		"46.7866666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3198", 
+		"prominence": "616", 
+		"name": "Gross Spannort", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1447222222222", 
+		"46.8508333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3197", 
+		"prominence": "306", 
+		"name": "Dreil\u00e4nderspitze", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.12527777777778", 
+		"46.2947222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3194", 
+		"prominence": "430", 
+		"name": "Bortelhorn/ Punta del Rebbio", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.46611111111111", 
+		"46.5175"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3192", 
+		"prominence": "752", 
+		"name": "Pizzo Rotondo", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.05527777777778", 
+		"46.2369444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3192", 
+		"prominence": "325", 
+		"name": "H\u00fcbschhorn I", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.83", 
+		"46.5716666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3190", 
+		"prominence": "792", 
+		"name": "Scopi", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.00111111111111", 
+		"46.0122222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3189", 
+		"prominence": "355", 
+		"name": "Spechhorn / Pizzo d'Antigine", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.84305555555556", 
+		"46.4533333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3188", 
+		"prominence": "433", 
+		"name": "Piz Surlej", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.73222222222222", 
+		"46.8072222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3187", 
+		"prominence": "552", 
+		"name": "Gross Windg\u00e4llen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2875", 
+		"46.5702777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3180", 
+		"prominence": "679", 
+		"name": "Piz Murtar\u00f6l", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2522222222222", 
+		"46.8591666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3179", 
+		"prominence": "371", 
+		"name": "Piz Tasna", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2794444444444", 
+		"46.7444444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3173", 
+		"prominence": "922", 
+		"name": "Piz Pisoc", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.67111111111111", 
+		"46.6116666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3173", 
+		"prominence": "474", 
+		"name": "Corn da Tinizong /Tinzenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2961111111111", 
+		"46.6791666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3168", 
+		"prominence": "851", 
+		"name": "Piz Tavr\u00fc", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.96916666666667", 
+		"46.6319444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3168", 
+		"prominence": "465", 
+		"name": "Piz Vial", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2236111111111", 
+		"46.7086111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3167", 
+		"prominence": "490", 
+		"name": "Piz Plavna Dadaint", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.96333333333333", 
+		"46.4641666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3166", 
+		"prominence": "318", 
+		"name": "Piz Albris", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.72277777777778", 
+		"46.4458333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3165", 
+		"prominence": "855", 
+		"name": "Piz Lagrev", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.095", 
+		"46.6272222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3165", 
+		"prominence": "471", 
+		"name": "Piz Quattervals", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.64666666666667", 
+		"46.6141666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3159", 
+		"prominence": "445", 
+		"name": "Piz Mitgel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.06555555555556", 
+		"46.8744444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3158", 
+		"prominence": "655", 
+		"name": "Hausstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.98722222222222", 
+		"46.4872222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3153", 
+		"prominence": "317", 
+		"name": "Piz Pr\u00fcna", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.03416666666667", 
+		"46.6"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3149", 
+		"prominence": "390", 
+		"name": "Piz Terri", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.51805555555556", 
+		"46.1677777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3149", 
+		"prominence": "362", 
+		"name": "Becs de Bosson", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.94166666666667", 
+		"46.7358333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3146", 
+		"prominence": "609", 
+		"name": "Fl\u00fcela Schwarzhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.4308333333333", 
+		"46.9252777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3146", 
+		"prominence": "342", 
+		"name": "Piz Mundin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.3080555555556", 
+		"46.5494444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3144", 
+		"prominence": "319", 
+		"name": "Piz Tea Fondada/Monte Cornaccia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.77472222222222", 
+		"46.8102777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3138", 
+		"prominence": "397", 
+		"name": "Gross Ruchen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.52694444444444", 
+		"46.8025"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3133", 
+		"prominence": "506", 
+		"name": "Hinter Schloss", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.58333333333333", 
+		"46.3752777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3131", 
+		"prominence": "482", 
+		"name": "Piz Duan", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.3383333333333", 
+		"46.5427777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3125", 
+		"prominence": "315", 
+		"name": "Piz Schumbraida", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.13055555555556", 
+		"46.5477777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3124", 
+		"prominence": "301", 
+		"name": "Fanellhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1544444444444", 
+		"46.7233333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3123", 
+		"prominence": "535", 
+		"name": "Piz Nuna", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0325", 
+		"46.8877777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3122", 
+		"prominence": "434", 
+		"name": "Gross Seehorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.125", 
+		"46.6227777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3121", 
+		"prominence": "395", 
+		"name": "Piz Aul", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1388888888889", 
+		"46.6111111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3118", 
+		"prominence": "310", 
+		"name": "Piz da l'Acqua", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.56944444444444", 
+		"46.7822222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3108", 
+		"prominence": "330", 
+		"name": "Kr\u00f6nten", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.56055555555556", 
+		"46.3875"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3107", 
+		"prominence": "413", 
+		"name": "Gletscherhorn[Note 3]", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.48777777777778", 
+		"46.3669444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3107", 
+		"prominence": "413", 
+		"name": "Pizz Gallagiun/Galleggione[Note 3]", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0447222222222", 
+		"46.4766666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3104", 
+		"prominence": "314", 
+		"name": "Piz la Stretta / Monte Breva", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.23972222222222", 
+		"46.9077777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3099", 
+		"prominence": "607", 
+		"name": "Piz Segnas", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.6925", 
+		"46.7019444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3096", 
+		"prominence": "749", 
+		"name": "Piz Giuv / Schattig Wichel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.96666666666667", 
+		"46.7622222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3085", 
+		"prominence": "632", 
+		"name": "Fl\u00fcela Wisshorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.46111111111111", 
+		"46.3763888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3083", 
+		"prominence": "422", 
+		"name": "Cima da L\u00e4gh /Cima di Lago", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.90527777777778", 
+		"46.6852777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3078", 
+		"prominence": "472", 
+		"name": "Ch\u00fcealphorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.3925", 
+		"46.6627777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3075", 
+		"prominence": "779", 
+		"name": "Piz Starlex", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.11", 
+		"46.3530555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3075", 
+		"prominence": "344", 
+		"name": "Piz Sena", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.68111111111111", 
+		"46.7369444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3073", 
+		"prominence": "567", 
+		"name": "Bristen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.72611111111111", 
+		"46.4297222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3072", 
+		"prominence": "754", 
+		"name": "Pizzo Campo Tencia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.45305555555556", 
+		"46.5080555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3070", 
+		"prominence": "316", 
+		"name": "Ch\u00fcebodenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.33444444444444", 
+		"46.3463888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3065", 
+		"prominence": "312", 
+		"name": "Geltenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.85138888888889", 
+		"46.6894444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3063", 
+		"prominence": "324", 
+		"name": "Hoch Ducan", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.39194444444444", 
+		"46.4947222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3061", 
+		"prominence": "378", 
+		"name": "Pizzo Gallina", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.47277777777778", 
+		"46.5311111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3060", 
+		"prominence": "544", 
+		"name": "Piz Grisch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.30666666666667", 
+		"46.6311111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3056", 
+		"prominence": "577", 
+		"name": "Bruschghorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.865", 
+		"46.6552777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3052", 
+		"prominence": "458", 
+		"name": "Piz Forun", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.12611111111111", 
+		"46.2372222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3051", 
+		"prominence": "1013", 
+		"name": "Grand Muveran", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0283333333333", 
+		"46.4511111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3049", 
+		"prominence": "584", 
+		"name": "Piz Minor", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.6", 
+		"46.4619444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3049", 
+		"prominence": "560", 
+		"name": "Gross Lohner", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0405555555556", 
+		"46.7752777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3044", 
+		"prominence": "449", 
+		"name": "Piz Murtera", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.38027777777778", 
+		"46.7616666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3042", 
+		"prominence": "346", 
+		"name": "Gross Wendenstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.78666666666667", 
+		"46.6119444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3040", 
+		"prominence": "934", 
+		"name": "Piz Gannaretsch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.30638888888889", 
+		"46.5866666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3039", 
+		"prominence": "425", 
+		"name": "Alpersch\u00e4llihorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.4133333333333", 
+		"46.8008333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3031", 
+		"prominence": "722", 
+		"name": "Piz S-chalembert", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.38416666666667", 
+		"46.5094444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3028", 
+		"prominence": "733", 
+		"name": "Piz Por", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.15666666666667", 
+		"46.8738888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3028", 
+		"prominence": "408", 
+		"name": "B\u00fcndner Vorab", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.28027777777778", 
+		"46.3797222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3025", 
+		"prominence": "672", 
+		"name": "Piz Corbet", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.44361111111111", 
+		"46.7538888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3023", 
+		"prominence": "311", 
+		"name": "Wendenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.72805555555556", 
+		"46.5772222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3019", 
+		"prominence": "312", 
+		"name": "Piz Blas", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2419444444444", 
+		"46.9316666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3015", 
+		"prominence": "328", 
+		"name": "Gamspleisspitze", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.82583333333333", 
+		"46.7108333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3006", 
+		"prominence": "426", 
+		"name": "\u00c4lplihorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.31583333333333", 
+		"46.5988888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "3002", 
+		"prominence": "366", 
+		"name": "Pizzas d'Anarosa / Grauh\u00f6rner", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.615", 
+		"46.5780555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2999", 
+		"prominence": "451", 
+		"name": "Pizzo Centrale", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.35777777777778", 
+		"46.6525"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2998", 
+		"prominence": "396", 
+		"name": "Piz Beverin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.22527777777778", 
+		"46.4811111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2983", 
+		"prominence": "564", 
+		"name": "Piz de la Lumbreida", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.61388888888889", 
+		"46.7377777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2980", 
+		"prominence": "1349", 
+		"name": "Aroser Rothorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.12944444444444", 
+		"45.9155555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2978", 
+		"prominence": "305", 
+		"name": "La Tsavre", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.49722222222222", 
+		"46.6033333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2972", 
+		"prominence": "456", 
+		"name": "Piz Curv\u00e9r", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.83472222222222", 
+		"46.5575"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2970", 
+		"prominence": "358", 
+		"name": "Schilthorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.195", 
+		"46.2402777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2969", 
+		"prominence": "525", 
+		"name": "Haut de Cry", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.39305555555556", 
+		"46.4513888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2969", 
+		"prominence": "509", 
+		"name": "Grieshorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.07555555555556", 
+		"46.1991666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2969", 
+		"prominence": "465", 
+		"name": "Dent de Morcles", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2908333333333", 
+		"46.6186111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2968", 
+		"prominence": "734", 
+		"name": "Piz Daint", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.7075", 
+		"47.0536111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2965", 
+		"prominence": "828", 
+		"name": "Schesaplana", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.3347222222222", 
+		"46.5869444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2963", 
+		"prominence": "400", 
+		"name": "Piz Turettas", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.51944444444444", 
+		"46.5388888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2963", 
+		"prominence": "350", 
+		"name": "Pizzo Lucendro", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.635", 
+		"46.6830555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2962", 
+		"prominence": "479", 
+		"name": "Rienzenstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.4625", 
+		"46.4486111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2962", 
+		"prominence": "327", 
+		"name": "Marchhorn/Pta del Termine", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0236111111111", 
+		"46.4316666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2959", 
+		"prominence": "524", 
+		"name": "Piz Lagalb", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.91666666666667", 
+		"46.6547222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2956", 
+		"prominence": "445", 
+		"name": "Piz Miez", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.07111111111111", 
+		"46.3436111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2952", 
+		"prominence": "835", 
+		"name": "Torent / Torrone Alto", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.55", 
+		"46.8477777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2952", 
+		"prominence": "661", 
+		"name": "Brunnistock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.86805555555556", 
+		"46.5713888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2952", 
+		"prominence": "486", 
+		"name": "Crasta Mora", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.09388888888889", 
+		"46.3325"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2951", 
+		"prominence": "388", 
+		"name": "B\u00e4ttlihorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.22833333333333", 
+		"46.6233333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2946", 
+		"prominence": "534", 
+		"name": "Piz Tom\u00fcl / Wissensteinhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.01972222222222", 
+		"46.6558333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2946", 
+		"prominence": "518", 
+		"name": "Piz Cavel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.23027777777778", 
+		"46.5161111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2944", 
+		"prominence": "571", 
+		"name": "Einshorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.26083333333333", 
+		"46.3611111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2939", 
+		"prominence": "465", 
+		"name": "Gross Schinhorn/Punta di Valdeserta", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.09277777777778", 
+		"46.3966666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2939", 
+		"prominence": "324", 
+		"name": "Pizzo del Ramulazz S", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.23194444444444", 
+		"46.5755555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2929", 
+		"prominence": "449", 
+		"name": "B\u00e4renhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.99361111111111", 
+		"46.7891666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2929", 
+		"prominence": "368", 
+		"name": "Rosst\u00e4llispitz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.07555555555556", 
+		"46.6861111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2928", 
+		"prominence": "966", 
+		"name": "Schwarzhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.66361111111111", 
+		"46.6225"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2928", 
+		"prominence": "529", 
+		"name": "Badus / Six Madun", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.09416666666667", 
+		"46.4313888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2927", 
+		"prominence": "563", 
+		"name": "Eggishorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.31083333333333", 
+		"46.6916666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2923", 
+		"prominence": "355", 
+		"name": "M\u00e4hrenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.10388888888889", 
+		"46.2102777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2917", 
+		"prominence": "315", 
+		"name": "Dent Favre", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.99527777777778", 
+		"46.995"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2915", 
+		"prominence": "967", 
+		"name": "Gl\u00e4rnisch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.53694444444444", 
+		"46.4647222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2912", 
+		"prominence": "344", 
+		"name": "Cristallina", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.0438888888889", 
+		"46.2297222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2901", 
+		"prominence": "313", 
+		"name": "Piz Combul", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.11305555555556", 
+		"46.1786111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2899", 
+		"prominence": "446", 
+		"name": "Grand Chavalard", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.02277777777778", 
+		"46.6775"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2890", 
+		"prominence": "355", 
+		"name": "Schwarzhorn / Piz Gren", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.95638888888889", 
+		"46.8805555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2887", 
+		"prominence": "333", 
+		"name": "Schildflue", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.50666666666667", 
+		"46.8455555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2887", 
+		"prominence": "329", 
+		"name": "Wissigstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.27138888888889", 
+		"46.5238888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2886", 
+		"prominence": "377", 
+		"name": "Guggern\u00fcll", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.28861111111111", 
+		"46.7275"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2880", 
+		"prominence": "501", 
+		"name": "Piz Fess", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.9625", 
+		"46.9133333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2875", 
+		"prominence": "386", 
+		"name": "Eisent\u00e4lispitze", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.38833333333333", 
+		"46.4669444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2866", 
+		"prominence": "381", 
+		"name": "Nufenenstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.54277777777778", 
+		"46.4341666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2864", 
+		"prominence": "301", 
+		"name": "Poncione di Braga", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.46416666666667", 
+		"46.3447222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2863", 
+		"prominence": "452", 
+		"name": "Wandfluhhorn / Pizzo Biela", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.26361111111111", 
+		"46.4205555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2862", 
+		"prominence": "314", 
+		"name": "Cima de Barna", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.94777777777778", 
+		"46.7688888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2859", 
+		"prominence": "89", 
+		"name": "Piz Ner", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.17472222222222", 
+		"46.6622222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2855", 
+		"prominence": "366", 
+		"name": "Gstellihorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.1125", 
+		"46.3227777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2855", 
+		"prominence": "313", 
+		"name": "Piz di Sassiglion", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.38666666666667", 
+		"46.9591666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2844", 
+		"prominence": "457", 
+		"name": "Pizol", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.79527777777778", 
+		"46.835"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2843", 
+		"prominence": "497", 
+		"name": "Weissfluh", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.99222222222222", 
+		"46.4713888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2842", 
+		"prominence": "410", 
+		"name": "Cima di Gana Bianca", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.87222222222222", 
+		"46.9311111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2826", 
+		"prominence": "600", 
+		"name": "Madrisahorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.83972222222222", 
+		"47.0125"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2818", 
+		"prominence": "475", 
+		"name": "Sulzfluh", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.56527777777778", 
+		"46.4155555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2808", 
+		"prominence": "385", 
+		"name": "Pizzo Castello", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.4675", 
+		"46.9"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2805", 
+		"prominence": "1460", 
+		"name": "Haldensteiner Calanda", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.17472222222222", 
+		"46.3841666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2805", 
+		"prominence": "723", 
+		"name": "Cima de Gagela", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.73222222222222", 
+		"46.3755555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2804", 
+		"prominence": "481", 
+		"name": "Corona di Redorta", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.94583333333333", 
+		"46.9672222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2802", 
+		"prominence": "367", 
+		"name": "B\u00f6s Fulen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.09333333333333", 
+		"46.9166666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2794", 
+		"prominence": "533", 
+		"name": "K\u00e4rpf", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.82388888888889", 
+		"46.5822222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2794", 
+		"prominence": "340", 
+		"name": "Dr\u00e4ttehorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.41805555555556", 
+		"46.2986111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2793", 
+		"prominence": "470", 
+		"name": "Pizzo Quadro", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.95944444444444", 
+		"46.5983333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2790", 
+		"prominence": "435", 
+		"name": "Pizzo Marumo", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.97", 
+		"46.1208333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2786", 
+		"prominence": "324", 
+		"name": "Le Luisin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.73444444444444", 
+		"46.7808333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2781", 
+		"prominence": "345", 
+		"name": "Tiejer Flue", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.76777777777778", 
+		"46.525"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2773", 
+		"prominence": "555", 
+		"name": "Pizzo del Sole", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.56694444444444", 
+		"46.4919444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2768", 
+		"prominence": "330", 
+		"name": "Il Madone[Note 4]", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.79166666666667", 
+		"46.8880555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2764", 
+		"prominence": "691", 
+		"name": "Sch\u00e4chentaler Windg\u00e4llen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.67777777777778", 
+		"46.6094444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2764", 
+		"prominence": "343", 
+		"name": "Schwarzberg / Piz Nair", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.48777777777778", 
+		"46.4980555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2763", 
+		"prominence": "823", 
+		"name": "Albristhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.68333333333333", 
+		"46.4758333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2760", 
+		"prominence": "424", 
+		"name": "Pizzo Massari", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.84194444444444", 
+		"46.1319444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2759", 
+		"prominence": "364", 
+		"name": "Dent de Barme", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.01166666666667", 
+		"46.665"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2757", 
+		"prominence": "341", 
+		"name": "Reeti / R\u00f6tihorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.71361111111111", 
+		"46.5416666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2742", 
+		"prominence": "332", 
+		"name": "\u00c4rmighorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.83111111111111", 
+		"46.3666666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2741", 
+		"prominence": "630", 
+		"name": "Madom Gr\u00f6ss", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.74861111111111", 
+		"46.5525"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2738", 
+		"prominence": "375", 
+		"name": "Schenad\u00fci", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.98055555555556", 
+		"46.2644444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2737", 
+		"prominence": "320", 
+		"name": "Spitzhorli", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.71416666666667", 
+		"46.3541666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2735", 
+		"prominence": "554", 
+		"name": "Monte Zucchero", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.05555555555556", 
+		"46.2958333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2727", 
+		"prominence": "361", 
+		"name": "Pizzo di Claro", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.94805555555556", 
+		"46.9252777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2716", 
+		"prominence": "538", 
+		"name": "Ortstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.12083333333333", 
+		"46.1322222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2713", 
+		"prominence": "335", 
+		"name": "Pizzo Straciugo", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.26361111111111", 
+		"46.2855555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2710", 
+		"prominence": "395", 
+		"name": "Mont Gond", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.51972222222222", 
+		"46.5108333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2708", 
+		"prominence": "372", 
+		"name": "Gs\u00fcr", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.34388888888889", 
+		"46.8005555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2700", 
+		"prominence": "493", 
+		"name": "Rotsandnollen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.15916666666667", 
+		"46.3183333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2694", 
+		"prominence": "433", 
+		"name": "Piz de Groven", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.15555555555556", 
+		"46.4175"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2689", 
+		"prominence": "528", 
+		"name": "Piz Pian Grand", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.2422222222222", 
+		"46.5927777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2685", 
+		"prominence": "350", 
+		"name": "Cima del Serraglio", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.29333333333333", 
+		"46.3163888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2675", 
+		"prominence": "449", 
+		"name": "Piz della Forcola", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.525", 
+		"46.6186111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2657", 
+		"prominence": "310", 
+		"name": "Piz Toissa", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.54638888888889", 
+		"46.5513888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2652", 
+		"prominence": "374", 
+		"name": "M\u00e4nnliflue", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "10.25", 
+		"46.6269444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2630", 
+		"prominence": "351", 
+		"name": "Munt Buffalora", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.69555555555556", 
+		"46.6325"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2614", 
+		"prominence": "351", 
+		"name": "Piz Cavradi", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.44416666666667", 
+		"46.2497222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2613", 
+		"prominence": "357", 
+		"name": "Pizzo dell'Alpe Gelato", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.8125", 
+		"46.3877777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2612", 
+		"prominence": "309", 
+		"name": "Cima Bianca", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.24472222222222", 
+		"46.9566666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2611", 
+		"prominence": "388", 
+		"name": "Foostock / Ruchen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.58111111111111", 
+		"47.0527777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2599", 
+		"prominence": "353", 
+		"name": "Vorder Grauspitz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.11083333333333", 
+		"46.0541666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2598", 
+		"prominence": "1100", 
+		"name": "Le Catogne", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.21916666666667", 
+		"46.2316666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2593", 
+		"prominence": "498", 
+		"name": "Pizzo Paglia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.51222222222222", 
+		"46.7558333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2575", 
+		"prominence": "1028", 
+		"name": "St\u00e4tzerhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.91138888888889", 
+		"46.9616666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2573", 
+		"prominence": "373", 
+		"name": "Pfannenstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.76944444444444", 
+		"47.0388888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2552", 
+		"prominence": "313", 
+		"name": "Kirchlispitzen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.1475", 
+		"46.3822222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2548", 
+		"prominence": "1002", 
+		"name": "Le Tarent", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.52972222222222", 
+		"46.2611111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2547", 
+		"prominence": "569", 
+		"name": "Rosso di Ribia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.35333333333333", 
+		"46.4511111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2542", 
+		"prominence": "556", 
+		"name": "Giferspitz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.2625", 
+		"46.7605555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2534", 
+		"prominence": "554", 
+		"name": "Gloggh\u00fcs", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.63305555555556", 
+		"46.8741666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2534", 
+		"prominence": "417", 
+		"name": "Hochwang", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.22", 
+		"47.0330555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2524", 
+		"prominence": "357", 
+		"name": "Magerrain", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.94972222222222", 
+		"46.6002777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2521", 
+		"prominence": "460", 
+		"name": "Tschuggen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.75972222222222", 
+		"46.5927777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2520", 
+		"prominence": "523", 
+		"name": "Dreispitz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.88416666666667", 
+		"46.3052777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2520", 
+		"prominence": "313", 
+		"name": "Cima di Bri", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.8425", 
+		"46.5475"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2516", 
+		"prominence": "115", 
+		"name": "Pizzo di Cadr\u00e8igh", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.72861111111111", 
+		"46.9283333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2515", 
+		"prominence": "470", 
+		"name": "Chaiserstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.34333333333333", 
+		"47.2494444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2502", 
+		"prominence": "2015", 
+		"name": "S\u00e4ntis", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.71472222222222", 
+		"46.9186111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2491", 
+		"prominence": "311", 
+		"name": "Fulen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.97694444444444", 
+		"46.5133333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2486", 
+		"prominence": "455", 
+		"name": "Cima di Pinadee", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.44666666666667", 
+		"46.5366666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2476", 
+		"prominence": "453", 
+		"name": "Spillgerte", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.20027777777778", 
+		"46.1180555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2473", 
+		"prominence": "300", 
+		"name": "Pierre Avoi", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.195", 
+		"46.4405555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2458", 
+		"prominence": "574", 
+		"name": "Gummfluh", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.58333333333333", 
+		"46.5772222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2454", 
+		"prominence": "371", 
+		"name": "Hohniesen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.14472222222222", 
+		"47.0694444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2441", 
+		"prominence": "601", 
+		"name": "M\u00fcrtschenstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.14666666666667", 
+		"47.025"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2436", 
+		"prominence": "423", 
+		"name": "Gufelstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.37166666666667", 
+		"47.2394444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2435", 
+		"prominence": "313", 
+		"name": "Altmann", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.11555555555556", 
+		"46.1825"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2434", 
+		"prominence": "567", 
+		"name": "Seehorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.78444444444444", 
+		"46.3325"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2432", 
+		"prominence": "1063", 
+		"name": "Cornettes de Bise", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.13083333333333", 
+		"46.2733333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2422", 
+		"prominence": "393", 
+		"name": "L'Argentine (Haute Pointe)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.89083333333333", 
+		"46.4411111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2416", 
+		"prominence": "300", 
+		"name": "Pizzo Erra", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.46583333333333", 
+		"46.8975"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2413", 
+		"prominence": "489", 
+		"name": "Hoh Brisen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.14833333333333", 
+		"46.5286111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2389", 
+		"prominence": "1110", 
+		"name": "Vanil Noir", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.37444444444444", 
+		"47.1352777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2385", 
+		"prominence": "1358", 
+		"name": "Gamsberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.60305555555556", 
+		"47.0127777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2376", 
+		"prominence": "416", 
+		"name": "Vilan", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.26166666666667", 
+		"46.3319444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2376", 
+		"prominence": "332", 
+		"name": "Pizzo di Campel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.6525", 
+		"46.6461111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2362", 
+		"prominence": "407", 
+		"name": "Niesen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.38638888888889", 
+		"46.4541666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2362", 
+		"prominence": "370", 
+		"name": "Wist\u00e4tthorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.73277777777778", 
+		"46.2991666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2360", 
+		"prominence": "325", 
+		"name": "Poncione Piancascia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.04694444444444", 
+		"46.7869444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2350", 
+		"prominence": "1342", 
+		"name": "Brienzer Rothorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.21", 
+		"46.4161111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2350", 
+		"prominence": "465", 
+		"name": "Wittenberghorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.78916666666667", 
+		"46.9394444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2341", 
+		"prominence": "325", 
+		"name": "Wasserbergfirst", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.00055555555556", 
+		"46.3722222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2331", 
+		"prominence": "886", 
+		"name": "Tour d'A\u00ef", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.17027777777778", 
+		"46.1719444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2316", 
+		"prominence": "343", 
+		"name": "Marmontana", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.30472222222222", 
+		"47.1536111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2306", 
+		"prominence": "470", 
+		"name": "Hinterrugg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.94305555555556", 
+		"47.0483333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2295", 
+		"prominence": "745", 
+		"name": "Mutteristock (Redertenstock)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.01166666666667", 
+		"47.0711111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2283", 
+		"prominence": "465", 
+		"name": "Rautispitz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.83333333333333", 
+		"46.0041666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2282", 
+		"prominence": "722", 
+		"name": "Druesberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.27666666666667", 
+		"47.1533333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2279", 
+		"prominence": "325", 
+		"name": "Brisi", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.22666666666667", 
+		"46.5497222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2252", 
+		"prominence": "848", 
+		"name": "Dent de Savigny", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.79361111111111", 
+		"46.6222222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2249", 
+		"prominence": "370", 
+		"name": "Morgenberghorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.31694444444444", 
+		"46.6369444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2239", 
+		"prominence": "735", 
+		"name": "Schafberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.95194444444444", 
+		"46.5483333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2221", 
+		"prominence": "524", 
+		"name": "Sosto", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.81361111111111", 
+		"46.3522222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2215", 
+		"prominence": "365", 
+		"name": "Les Jumelles", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.90194444444444", 
+		"46.7880555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2197", 
+		"prominence": "638", 
+		"name": "Hohgant", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.775", 
+		"46.955"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2196", 
+		"prominence": "589", 
+		"name": "Chr\u00fcz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.5375", 
+		"46.6938888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2190", 
+		"prominence": "399", 
+		"name": "Stockhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.06916666666667", 
+		"46.3963888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2189", 
+		"prominence": "528", 
+		"name": "Gros Van", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.64805555555556", 
+		"46.1233333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2188", 
+		"prominence": "1218", 
+		"name": "Gridone/Monte Limidario", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.41861111111111", 
+		"46.6988888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2188", 
+		"prominence": "384", 
+		"name": "Ochsen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.22", 
+		"46.5758333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2152", 
+		"prominence": "428", 
+		"name": "Hochmatt", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.24111111111111", 
+		"46.9738888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2128", 
+		"prominence": "585", 
+		"name": "Pilatus (Tomlishorn)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.06138888888889", 
+		"46.3266666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2112", 
+		"prominence": "377", 
+		"name": "Le Chamossaire", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.33388888888889", 
+		"46.8666666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2106", 
+		"prominence": "364", 
+		"name": "Schluchberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.25055555555556", 
+		"46.6225"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2104", 
+		"prominence": "537", 
+		"name": "Schopfenspitz/Gros Brun", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.95777777777778", 
+		"46.8344444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2092", 
+		"prominence": "776", 
+		"name": "Schrattenfluh (Hengst)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.00666666666667", 
+		"46.0772222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2085", 
+		"prominence": "557", 
+		"name": "Mont de l'Arpille", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.35694444444444", 
+		"46.5052777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2079", 
+		"prominence": "371", 
+		"name": "Rinderberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.4925", 
+		"46.6277777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2079", 
+		"prominence": "343", 
+		"name": "Turnen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.79472222222222", 
+		"46.7222222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2063", 
+		"prominence": "508", 
+		"name": "Burgfeldstand", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.77055555555556", 
+		"46.7305555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2051", 
+		"prominence": "372", 
+		"name": "Sigriswiler Rothorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.30527777777778", 
+		"46.5566666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2047", 
+		"prominence": "414", 
+		"name": "Hundsr\u00fcgg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.19527777777778", 
+		"46.7961111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2043", 
+		"prominence": "381", 
+		"name": "G\u00fcpfi", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.97611111111111", 
+		"46.4319444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2042", 
+		"prominence": "590", 
+		"name": "Rochers de Naye", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.8875", 
+		"46.2575"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2042", 
+		"prominence": "355", 
+		"name": "Pointe de Bellevue", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.06972222222222", 
+		"46.8955555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2040", 
+		"prominence": "481", 
+		"name": "F\u00fcrstein", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.00472222222222", 
+		"46.4172222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2026", 
+		"prominence": "405", 
+		"name": "Pointe d'Aveneyre", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.00305555555556", 
+		"46.5077777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2014", 
+		"prominence": "505", 
+		"name": "Dent de Lys", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.3275", 
+		"46.6133333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2009", 
+		"prominence": "404", 
+		"name": "B\u00e4derhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.59277777777778", 
+		"46.1775"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2004", 
+		"prominence": "330", 
+		"name": "Pizzo Ruscada", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.01722222222222", 
+		"46.5488888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "2002", 
+		"prominence": "512", 
+		"name": "Mol\u00e9son", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.03583333333333", 
+		"46.45"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1967", 
+		"prominence": "579", 
+		"name": "Dent de Corjon", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.86611111111111", 
+		"46.1038888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1961", 
+		"prominence": "1408", 
+		"name": "Monte Tamaro", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.12277777777778", 
+		"47.1855555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1951", 
+		"prominence": "535", 
+		"name": "Speer", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.44027777777778", 
+		"47.2566666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1951", 
+		"prominence": "302", 
+		"name": "Furgglenfirst", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.25055555555556", 
+		"46.6225"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1949", 
+		"prominence": "365", 
+		"name": "Hagleren", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.13583333333333", 
+		"47.1697222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1936", 
+		"prominence": "358", 
+		"name": "Mattstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.67472222222222", 
+		"46.9572222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1935", 
+		"prominence": "448", 
+		"name": "Chlingenstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.55666666666667", 
+		"46.9475"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1923", 
+		"prominence": "327", 
+		"name": "Niderbauen-Chulm", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.34027777777778", 
+		"46.9297222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1898", 
+		"prominence": "500", 
+		"name": "Stanserhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.68888888888889", 
+		"47.0297222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1898", 
+		"prominence": "493", 
+		"name": "Grosser Mythen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.96861111111111", 
+		"47.1186111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1896", 
+		"prominence": "465", 
+		"name": "Ch\u00f6pfenberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.11388888888889", 
+		"46.9397222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1815", 
+		"prominence": "346", 
+		"name": "Schimbrig", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.68416666666667", 
+		"47.0408333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1811", 
+		"prominence": "373", 
+		"name": "Kleiner Mythen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.07277777777778", 
+		"46.0627777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1810", 
+		"prominence": "305", 
+		"name": "Cima di Fojorina", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.48555555555556", 
+		"47.0566666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1798", 
+		"prominence": "1290", 
+		"name": "Rigi (Kulm)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.24277777777778", 
+		"47.2288888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1782", 
+		"prominence": "302", 
+		"name": "Stockberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.97305555555556", 
+		"46.8975"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1770", 
+		"prominence": "480", 
+		"name": "Beichle", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.83027777777778", 
+		"46.1122222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1734", 
+		"prominence": "339", 
+		"name": "Monte Gambarogno", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.18416666666667", 
+		"46.6761111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1719", 
+		"prominence": "308", 
+		"name": "La Berra", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.02", 
+		"45.9313888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1701", 
+		"prominence": "1321", 
+		"name": "Monte Generoso", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.56", 
+		"47.01"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1698", 
+		"prominence": "508", 
+		"name": "Rigi Hochflue", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.8825", 
+		"47.1113888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1695", 
+		"prominence": "327", 
+		"name": "Gross Aubrig", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.31", 
+		"46.5947222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1679", 
+		"prominence": "451", 
+		"name": "Mont Tendre", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.09944444444444", 
+		"46.425"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1677", 
+		"prominence": "355", 
+		"name": "La D\u00f4le", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.32944444444444", 
+		"47.2913888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1663", 
+		"prominence": "351", 
+		"name": "Kronberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.05944444444444", 
+		"47.1663888888889"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1607", 
+		"prominence": "667", 
+		"name": "Chasseral", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.53861111111111", 
+		"46.8516666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1607", 
+		"prominence": "590", 
+		"name": "Chasseron", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.46611111111111", 
+		"46.7725"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1588", 
+		"prominence": "435", 
+		"name": "Le Suchet", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.57777777777778", 
+		"47.0841666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1580", 
+		"prominence": "780", 
+		"name": "Rossberg (Wildspitz)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.04138888888889", 
+		"46.9341666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1572", 
+		"prominence": "312", 
+		"name": "Farneren", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.70722222222222", 
+		"46.2094444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1560", 
+		"prominence": "484", 
+		"name": "Monte Salmone", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.80388888888889", 
+		"46.8036111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1546", 
+		"prominence": "312", 
+		"name": "Honegg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.0075", 
+		"46.0297222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1516", 
+		"prominence": "342", 
+		"name": "Monte Boglia", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.35", 
+		"46.6847222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1483", 
+		"prominence": "339", 
+		"name": "Dent de Vaulion", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.45055555555556", 
+		"47.2419444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1445", 
+		"prominence": "618", 
+		"name": "Hasenmatt", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.81611111111111", 
+		"47.0219444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1439", 
+		"prominence": "319", 
+		"name": "Mont Racine", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.87", 
+		"46.8472222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1415", 
+		"prominence": "443", 
+		"name": "Wachthubel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.94", 
+		"47.0041666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1408", 
+		"prominence": "552", 
+		"name": "Napf", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.71111111111111", 
+		"46.7469444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1396", 
+		"prominence": "320", 
+		"name": "Schw\u00e4ndiblueme", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.26361111111111", 
+		"47.2625"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1337", 
+		"prominence": "393", 
+		"name": "Moron", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.02611111111111", 
+		"47.2908333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1332", 
+		"prominence": "542", 
+		"name": "Tweralpspitz", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.97805555555556", 
+		"47.2977777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1314", 
+		"prominence": "311", 
+		"name": "H\u00f6chhand", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.33333333333333", 
+		"47.3408333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1306", 
+		"prominence": "406", 
+		"name": "Hundwiler H\u00f6hi", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.42916666666667", 
+		"47.3083333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1302", 
+		"prominence": "533", 
+		"name": "Mont Raimeux", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.46777777777778", 
+		"47.3816666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1251", 
+		"prominence": "367", 
+		"name": "G\u00e4bris", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.65527777777778", 
+		"47.0997222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1244", 
+		"prominence": "312", 
+		"name": "Morgartenberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.48527777777778", 
+		"47.2841666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1240", 
+		"prominence": "445", 
+		"name": "Walenmattweid", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.68222222222222", 
+		"47.3683333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1204", 
+		"prominence": "301", 
+		"name": "Vogelberg (Passwang)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.04055555555556", 
+		"46.6841666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1204", 
+		"prominence": "374", 
+		"name": "Le Gibloux", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.175", 
+		"47.3383333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1172", 
+		"prominence": "310", 
+		"name": "Wilketh\u00f6chi", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "9.50638888888889", 
+		"47.0375"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1135", 
+		"prominence": "422", 
+		"name": "Fl\u00e4scherberg (Regitzer Spitz)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.39861111111111", 
+		"47.0002777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1128", 
+		"prominence": "683", 
+		"name": "B\u00fcrgenstock", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.80638888888889", 
+		"47.3622222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1123", 
+		"prominence": "392", 
+		"name": "Ruchen", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.69583333333333", 
+		"46.9322222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1118", 
+		"prominence": "413", 
+		"name": "Blasenflue", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.88638888888889", 
+		"47.2947222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1115", 
+		"prominence": "358", 
+		"name": "Bachtel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.94972222222222", 
+		"45.9136111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1097", 
+		"prominence": "758", 
+		"name": "Monte San Giorgio", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "6.81916666666667", 
+		"46.4969444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1080", 
+		"prominence": "327", 
+		"name": "Mont P\u00e8lerin", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.92416666666667", 
+		"45.8922222222222"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1015", 
+		"prominence": "345", 
+		"name": "Poncione d'Arzo", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.88166666666667", 
+		"47.4025"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "1002", 
+		"prominence": "311", 
+		"name": "Wisenberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.5275", 
+		"46.9780555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "947", 
+		"prominence": "320", 
+		"name": "Bantiger", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.53722222222222", 
+		"47.2577777777778"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "915", 
+		"prominence": "375", 
+		"name": "B\u00fcrglen (Albis)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.94722222222222", 
+		"45.9769444444444"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "912", 
+		"prominence": "602", 
+		"name": "Monte San Salvatore", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.29305555555556", 
+		"47.2536111111111"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "878", 
+		"prominence": "358", 
+		"name": "Lindenberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.15888888888889", 
+		"47.2383333333333"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "872", 
+		"prominence": "332", 
+		"name": "Stierenberg", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.39472222222222", 
+		"47.4816666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "866", 
+		"prominence": "425", 
+		"name": "L\u00e4gern", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.67138888888889", 
+		"47.2916666666667"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "853", 
+		"prominence": "333", 
+		"name": "Pfannenstiel", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.39388888888889", 
+		"47.0980555555556"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": "840", 
+		"prominence": "380", 
+		"name": "Rooterberg", 
+		"icon": "mountain"
+	    }
+	}
+    ]
+}
