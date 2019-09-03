@@ -113,18 +113,34 @@
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
               });
+              //
               // Add Swiss mountains above 3000m
-              map.addSource("mountains", {
+              map.addSource("mountainsH", {
                 "type": "geojson",
-                "data": "tracks/geojson/CH_Mountains.json"
+                "data": "tracks/geojson/CH_Mountains_H3000.json"
               });
               map.addLayer({
-                "id": "mountains",
-                "type": "symbol",
-                "source": "mountains",
-                "layout": {
+                "id": "mountainsH",
+                "type": "circle",
+                "source": "mountainsH",
+                "paint": {
                   "visibility": "none",
-                  "icon-image": "{icon}-15",   // Data-driven styling //
+                  // make circles larger as the user zooms from z12 to z22
+                  'circle-radius': {
+                    'base': 1.75,
+                    'stops': [[12, 2], [22, 180]]
+                  },
+                  // color circles by height
+                  'circle-color': [
+                    'step',
+                    ['get', 'height'],
+                      "#51bbd6",
+                      3000,
+                      "#f1f075",
+                      4000,
+                      "#f28cb1"
+                    ]
+                  }
                   "text-field": "{name}",   // Data-driven styling //
                   "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
                   "text-offset": [0, 0.6],
@@ -132,6 +148,42 @@
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
               });
+              //
+              // Add Swiss mountains with 300m prominence and above
+              map.addSource("mountainsP", {
+                "type": "geojson",
+                "data": "tracks/geojson/CH_Mountains_P300.json"
+              });
+              map.addLayer({
+                "id": "mountainsP",
+                "type": "circle",
+                "source": "mountainsP",
+                "paint": {
+                  "visibility": "none",
+                  // make circles larger as the user zooms from z12 to z22
+                  'circle-radius': {
+                    'base': 1.75,
+                    'stops': [[12, 2], [22, 180]]
+                  },
+                  // color circles by height
+                  'circle-color': [
+                    'step',
+                    ['get', 'height'],
+                      "#51bbd6",
+                      3000,
+                      "#f1f075",
+                      4000,
+                      "#f28cb1"
+                    ]
+                  }
+                  "text-field": "{name}",   // Data-driven styling //
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-offset": [0, 0.6],
+                  "text-anchor": "top"
+                },
+                "filter": ["==", ["geometry-type"], "Point"]
+              });
+              //
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {
                 map.addSource(layer, {
@@ -242,7 +294,8 @@
             toggleLayer("Run", "run_routes");
             toggleLayer("Canton", "cantons");
             toggleLayer("Marker", "markers");
-            toggleLayer("Mont", "mountains");
+            toggleLayer("H3000", "mountainsH");
+            toggleLayer("P300", "mountainsP");
             function toggleLayer(name, id) {
               var link = document.createElement('a');
               link.href = '#';
