@@ -123,8 +123,14 @@
                 "id": "mountainsH",
                 "type": "circle",
                 "source": "mountainsH",
-                "paint": {
+                "layout": {
                   "visibility": "none",
+                  "text-field": "{name}",   // Data-driven styling //
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-offset": [0, 0.6],
+                  "text-anchor": "top"
+                },
+                "paint": {
                   // make circles larger as the user zooms from z12 to z22
                   'circle-radius': {
                     'base': 1.75,
@@ -139,11 +145,7 @@
                       "#f1f075",
                       4000,
                       "#f28cb1"
-                  ],
-                  "text-field": "{name}",   // Data-driven styling //
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-offset": [0, 0.6],
-                  "text-anchor": "top"
+                  ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
               });
@@ -157,8 +159,14 @@
                 "id": "mountainsP",
                 "type": "circle",
                 "source": "mountainsP",
-                "paint": {
+                "layout": {
                   "visibility": "none",
+                  "text-field": "{name}",   // Data-driven styling //
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-offset": [0, 0.6],
+                  "text-anchor": "top"
+                },
+                "paint": {
                   // make circles larger as the user zooms from z12 to z22
                   'circle-radius': {
                     'base': 1.75,
@@ -173,11 +181,7 @@
                       "#f1f075",
                       4000,
                       "#f28cb1"
-                  ],
-                  "text-field": "{name}",   // Data-driven styling //
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-offset": [0, 0.6],
-                  "text-anchor": "top"
+                  ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
               });
