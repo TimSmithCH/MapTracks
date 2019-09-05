@@ -130,13 +130,13 @@
                   // make circles larger as the user zooms from z12 to z22
                   "circle-radius": {
                     "base": 1.75,
-                    "stops": [[12, 2], [22, 180]]
+                    "stops": [[12, 4], [22, 360]]
                   },
                   // color circles by height
                   "circle-color": [ "step", ["get", "height"],
-                      "#51bbd6",
-                      3000, "#f1f075",
-                      4000, "#f28cb1"
+                      '#00ff00',
+                      3000, '#800080',
+                      4000,'#ffff00'
                   ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
