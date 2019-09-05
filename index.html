@@ -125,21 +125,17 @@
                 "source": "mountainsH",
                 "layout": {
                   "visibility": "none",
-                  "text-field": "{name}",   // Data-driven styling //
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-offset": [0, 0.6],
-                  "text-anchor": "top"
                 },
                 "paint": {
                   // make circles larger as the user zooms from z12 to z22
-                  'circle-radius': {
-                    'base': 1.75,
-                    'stops': [[12, 2], [22, 180]]
+                  "circle-radius": {
+                    "base": 1.75,
+                    "stops": [[12, 2], [22, 180]]
                   },
                   // color circles by height
-                  'circle-color': [
-                    'step',
-                    ['get', 'height'],
+                  "circle-color": [
+                    "step",
+                    ["get", "height"],
                       "#51bbd6",
                       3000,
                       "#f1f075",
@@ -161,10 +157,6 @@
                 "source": "mountainsP",
                 "layout": {
                   "visibility": "none",
-                  "text-field": "{name}",   // Data-driven styling //
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-offset": [0, 0.6],
-                  "text-anchor": "top"
                 },
                 "paint": {
                   // make circles larger as the user zooms from z12 to z22
