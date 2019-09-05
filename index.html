@@ -129,14 +129,14 @@
                 "paint": {
                   // make circles larger as the user zooms from z12 to z22
                   "circle-radius": {
-                    "base": 1.75,
+                    "base": 3.00,
                     "stops": [[12, 4], [22, 360]]
                   },
                   // color circles by height
                   "circle-color": [ "step", ["get", "height"],
-                      '#00ff00',
-                      3000, '#800080',
-                      4000,'#ffff00'
+                      "#df80ff",
+                      3000, "#bf00ff",
+                      4000, "#600080"
                   ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
@@ -157,18 +157,14 @@
                 "paint": {
                   // color circles by height
                   "circle-color": [ "step", ["get", "height"],
-                      "#51bbd6",
-                      3000, "#f1f075",
-                      4000, "#f28cb1"
+                      "#df80ff",
+                      3000, "#bf00ff",
+                      4000, "#600080"
                   ],
                   "circle-radius": [
-                    "step",
-                    ["get", "height"],
-                    20,
-                    3000,
-                    30,
-                    4000,
-                    40
+                    'interpolate', ['linear'], ['zoom'],
+                    12, 8,
+                    22, 720
                   ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
