@@ -278,18 +278,18 @@
               }
             });
 
-            toggleLayer("Hike", "hike_routes");
-            toggleLayer("Bike", "bike_routes");
-            toggleLayer("Ski", "ski_routes");
-            toggleLayer("Run", "run_routes");
-            toggleLayer("Canton", "cantons");
-            toggleLayer("Marker", "markers");
-            toggleLayer("H3000", "mountainsH");
-            toggleLayer("P300", "mountainsP");
-            function toggleLayer(name, id) {
+            toggleLayer("Hike", "hike_routes", "active");
+            toggleLayer("Bike", "bike_routes", "active");
+            toggleLayer("Ski", "ski_routes", "active");
+            toggleLayer("Run", "run_routes", "active");
+            toggleLayer("Canton", "cantons", "");
+            toggleLayer("Marker", "markers", "");
+            toggleLayer("H3000", "mountainsH", "");
+            toggleLayer("P300", "mountainsP", "");
+            function toggleLayer(name, id, state) {
               var link = document.createElement('a');
               link.href = '#';
-              link.className = 'active';
+              link.className = state;
               link.textContent = name;
               link.id = name;
               link.onclick = function(e) {

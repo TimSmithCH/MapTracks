@@ -1,6 +1,6 @@
 {
     "type": "FeatureCollection",
-    "features": [
+	"features": [
 	{
 	    "geometry": {
 		"type": "Point", 
@@ -12,8 +12,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4634", 
-		"prominence": "2165", 
+		"height": 4634, 
+		"prominence": 2165, 
 		"name": "Monte Rosa (Dufourspitze)", 
 		"icon": "mountain"
 	    }
@@ -29,8 +29,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4545", 
-		"prominence": "1046", 
+		"height": 4545, 
+		"prominence": 1046, 
 		"name": "Dom", 
 		"icon": "mountain"
 	    }
@@ -46,8 +46,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4527", 
-		"prominence": "376", 
+		"height": 4527, 
+		"prominence": 376, 
 		"name": "Lyskamm", 
 		"icon": "mountain"
 	    }
@@ -63,8 +63,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4506", 
-		"prominence": "1235", 
+		"height": 4506, 
+		"prominence": 1235, 
 		"name": "Weisshorn", 
 		"icon": "mountain"
 	    }
@@ -80,8 +80,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4491", 
-		"prominence": "210", 
+		"height": 4491, 
+		"prominence": 210, 
 		"name": "T\u00e4schhorn", 
 		"icon": "mountain"
 	    }
@@ -97,8 +97,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4478", 
-		"prominence": "1042", 
+		"height": 4478, 
+		"prominence": 1042, 
 		"name": "Matterhorn", 
 		"icon": "mountain"
 	    }
@@ -114,8 +114,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4357", 
-		"prominence": "915", 
+		"height": 4357, 
+		"prominence": 915, 
 		"name": "Dent Blanche", 
 		"icon": "mountain"
 	    }
@@ -131,8 +131,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4327", 
-		"prominence": "206", 
+		"height": 4327, 
+		"prominence": 206, 
 		"name": "Nadelhorn", 
 		"icon": "mountain"
 	    }
@@ -148,8 +148,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4314", 
-		"prominence": "1517", 
+		"height": 4314, 
+		"prominence": 1517, 
 		"name": "Grand Combin (de Grafeneire)", 
 		"icon": "mountain"
 	    }
@@ -165,8 +165,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4274", 
-		"prominence": "2280", 
+		"height": 4274, 
+		"prominence": 2280, 
 		"name": "Finsteraarhorn", 
 		"icon": "mountain"
 	    }
@@ -182,8 +182,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4228", 
-		"prominence": "165", 
+		"height": 4228, 
+		"prominence": 165, 
 		"name": "Castor", 
 		"icon": "mountain"
 	    }
@@ -199,8 +199,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4221", 
-		"prominence": "490", 
+		"height": 4221, 
+		"prominence": 490, 
 		"name": "Zinalrothorn", 
 		"icon": "mountain"
 	    }
@@ -216,8 +216,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4206", 
-		"prominence": "359", 
+		"height": 4206, 
+		"prominence": 359, 
 		"name": "Alphubel", 
 		"icon": "mountain"
 	    }
@@ -233,8 +233,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4199", 
-		"prominence": "642", 
+		"height": 4199, 
+		"prominence": 642, 
 		"name": "Rimpfischhorn", 
 		"icon": "mountain"
 	    }
@@ -250,8 +250,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4193", 
-		"prominence": "1029", 
+		"height": 4193, 
+		"prominence": 1029, 
 		"name": "Aletschhorn", 
 		"icon": "mountain"
 	    }
@@ -267,8 +267,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4190", 
-		"prominence": "401", 
+		"height": 4190, 
+		"prominence": 401, 
 		"name": "Strahlhorn", 
 		"icon": "mountain"
 	    }
@@ -284,8 +284,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4174", 
-		"prominence": "701", 
+		"height": 4174, 
+		"prominence": 701, 
 		"name": "Dent d'H\u00e9rens", 
 		"icon": "mountain"
 	    }
@@ -301,8 +301,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4164", 
-		"prominence": "439", 
+		"height": 4164, 
+		"prominence": 439, 
 		"name": "Breithorn", 
 		"icon": "mountain"
 	    }
@@ -318,8 +318,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4158", 
-		"prominence": "687", 
+		"height": 4158, 
+		"prominence": 687, 
 		"name": "Jungfrau", 
 		"icon": "mountain"
 	    }
@@ -335,8 +335,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4107", 
-		"prominence": "584", 
+		"height": 4107, 
+		"prominence": 584, 
 		"name": "M\u00f6nch", 
 		"icon": "mountain"
 	    }
@@ -352,8 +352,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4092", 
-		"prominence": "247", 
+		"height": 4092, 
+		"prominence": 247, 
 		"name": "Pollux", 
 		"icon": "mountain"
 	    }
@@ -369,8 +369,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4078", 
-		"prominence": "792", 
+		"height": 4078, 
+		"prominence": 792, 
 		"name": "Schreckhorn", 
 		"icon": "mountain"
 	    }
@@ -386,8 +386,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4063", 
-		"prominence": "536", 
+		"height": 4063, 
+		"prominence": 536, 
 		"name": "Ober Gabelhorn", 
 		"icon": "mountain"
 	    }
@@ -403,8 +403,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4049", 
-		"prominence": "2234", 
+		"height": 4049, 
+		"prominence": 2234, 
 		"name": "Piz Bernina", 
 		"icon": "mountain"
 	    }
@@ -420,8 +420,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4049", 
-		"prominence": "398", 
+		"height": 4049, 
+		"prominence": 398, 
 		"name": "Gross Fiescherhorn", 
 		"icon": "mountain"
 	    }
@@ -437,8 +437,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4044", 
-		"prominence": "305", 
+		"height": 4044, 
+		"prominence": 305, 
 		"name": "Gross Gr\u00fcnhorn", 
 		"icon": "mountain"
 	    }
@@ -454,8 +454,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4027", 
-		"prominence": "255", 
+		"height": 4027, 
+		"prominence": 255, 
 		"name": "Allalinhorn", 
 		"icon": "mountain"
 	    }
@@ -471,8 +471,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4017", 
-		"prominence": "1186", 
+		"height": 4017, 
+		"prominence": 1186, 
 		"name": "Weissmies", 
 		"icon": "mountain"
 	    }
@@ -488,8 +488,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "4010", 
-		"prominence": "511", 
+		"height": 4010, 
+		"prominence": 511, 
 		"name": "Lagginhorn", 
 		"icon": "mountain"
 	    }
@@ -505,8 +505,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3996", 
-		"prominence": "405", 
+		"height": 3996, 
+		"prominence": 405, 
 		"name": "Piz Zup\u00f2", 
 		"icon": "mountain"
 	    }
@@ -522,8 +522,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3985", 
-		"prominence": "297", 
+		"height": 3985, 
+		"prominence": 297, 
 		"name": "Fletschhorn", 
 		"icon": "mountain"
 	    }
@@ -539,8 +539,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3983", 
-		"prominence": "346", 
+		"height": 3983, 
+		"prominence": 346, 
 		"name": "Gletscherhorn", 
 		"icon": "mountain"
 	    }
@@ -556,8 +556,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3975", 
-		"prominence": "225", 
+		"height": 3975, 
+		"prominence": 225, 
 		"name": "Schalihorn", 
 		"icon": "mountain"
 	    }
@@ -573,8 +573,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3967", 
-		"prominence": "362", 
+		"height": 3967, 
+		"prominence": 362, 
 		"name": "Eiger", 
 		"icon": "mountain"
 	    }
@@ -590,8 +590,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3962", 
-		"prominence": "431", 
+		"height": 3962, 
+		"prominence": 431, 
 		"name": "Grand Cornier", 
 		"icon": "mountain"
 	    }
@@ -607,8 +607,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3962", 
-		"prominence": "196", 
+		"height": 3962, 
+		"prominence": 196, 
 		"name": "Ebnefluh", 
 		"icon": "mountain"
 	    }
@@ -624,8 +624,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3946", 
-		"prominence": "197", 
+		"height": 3946, 
+		"prominence": 197, 
 		"name": "Agassizhorn", 
 		"icon": "mountain"
 	    }
@@ -641,8 +641,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3937", 
-		"prominence": "415", 
+		"height": 3937, 
+		"prominence": 415, 
 		"name": "Piz Roseg", 
 		"icon": "mountain"
 	    }
@@ -658,8 +658,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3934", 
-		"prominence": "806", 
+		"height": 3934, 
+		"prominence": 806, 
 		"name": "Bietschhorn", 
 		"icon": "mountain"
 	    }
@@ -675,8 +675,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3933", 
-		"prominence": "306", 
+		"height": 3933, 
+		"prominence": 306, 
 		"name": "Trugberg", 
 		"icon": "mountain"
 	    }
@@ -692,8 +692,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3906", 
-		"prominence": "626", 
+		"height": 3906, 
+		"prominence": 626, 
 		"name": "Gross Wannenhorn", 
 		"icon": "mountain"
 	    }
@@ -709,8 +709,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3901", 
-		"prominence": "473", 
+		"height": 3901, 
+		"prominence": 473, 
 		"name": "Aiguille d'Argenti\u00e8re", 
 		"icon": "mountain"
 	    }
@@ -726,8 +726,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3901", 
-		"prominence": "213", 
+		"height": 3901, 
+		"prominence": 213, 
 		"name": "Piz Pal\u00fc", 
 		"icon": "mountain"
 	    }
@@ -743,8 +743,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3892", 
-		"prominence": "193", 
+		"height": 3892, 
+		"prominence": 193, 
 		"name": "Mittaghorn", 
 		"icon": "mountain"
 	    }
@@ -760,8 +760,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3876", 
-		"prominence": "152", 
+		"height": 3876, 
+		"prominence": 152, 
 		"name": "Fiescher Gabelhorn", 
 		"icon": "mountain"
 	    }
@@ -777,8 +777,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3875", 
-		"prominence": "851", 
+		"height": 3875, 
+		"prominence": 851, 
 		"name": "Ruinette", 
 		"icon": "mountain"
 	    }
@@ -794,8 +794,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3870", 
-		"prominence": "174", 
+		"height": 3870, 
+		"prominence": 174, 
 		"name": "Mont Blanc de Cheilon", 
 		"icon": "mountain"
 	    }
@@ -811,8 +811,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3838", 
-		"prominence": "490", 
+		"height": 3838, 
+		"prominence": 490, 
 		"name": "Bouquetins", 
 		"icon": "mountain"
 	    }
@@ -828,8 +828,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3837", 
-		"prominence": "302", 
+		"height": 3837, 
+		"prominence": 302, 
 		"name": "Tour Noir", 
 		"icon": "mountain"
 	    }
@@ -845,8 +845,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3833", 
-		"prominence": "293", 
+		"height": 3833, 
+		"prominence": 293, 
 		"name": "Brunegghorn", 
 		"icon": "mountain"
 	    }
@@ -862,8 +862,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3821", 
-		"prominence": "636", 
+		"height": 3821, 
+		"prominence": 636, 
 		"name": "Nesthorn", 
 		"icon": "mountain"
 	    }
@@ -879,8 +879,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3820", 
-		"prominence": "330", 
+		"height": 3820, 
+		"prominence": 330, 
 		"name": "Mont Dolent", 
 		"icon": "mountain"
 	    }
@@ -896,8 +896,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3811", 
-		"prominence": "188", 
+		"height": 3811, 
+		"prominence": 188, 
 		"name": "Dreieckhorn", 
 		"icon": "mountain"
 	    }
@@ -913,8 +913,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3803", 
-		"prominence": "243", 
+		"height": 3803, 
+		"prominence": 243, 
 		"name": "Cima di Jazzi", 
 		"icon": "mountain"
 	    }
@@ -930,8 +930,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3799", 
-		"prominence": "234", 
+		"height": 3799, 
+		"prominence": 234, 
 		"name": "T\u00eate de Valpelline", 
 		"icon": "mountain"
 	    }
@@ -947,8 +947,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3797", 
-		"prominence": "422", 
+		"height": 3797, 
+		"prominence": 422, 
 		"name": "Schinhorn", 
 		"icon": "mountain"
 	    }
@@ -964,8 +964,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3796", 
-		"prominence": "249", 
+		"height": 3796, 
+		"prominence": 249, 
 		"name": "Pigne d'Arolla", 
 		"icon": "mountain"
 	    }
@@ -981,8 +981,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3796", 
-		"prominence": "235", 
+		"height": 3796, 
+		"prominence": 235, 
 		"name": "Balfrin", 
 		"icon": "mountain"
 	    }
@@ -998,8 +998,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3789", 
-		"prominence": "301", 
+		"height": 3789, 
+		"prominence": 301, 
 		"name": "Pointe de Zinal", 
 		"icon": "mountain"
 	    }
@@ -1015,8 +1015,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3789", 
-		"prominence": "154", 
+		"height": 3789, 
+		"prominence": 154, 
 		"name": "La Serpentine", 
 		"icon": "mountain"
 	    }
@@ -1032,8 +1032,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3785", 
-		"prominence": "251", 
+		"height": 3785, 
+		"prominence": 251, 
 		"name": "Breithorn (Blatten)", 
 		"icon": "mountain"
 	    }
@@ -1049,8 +1049,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3780", 
-		"prominence": "443", 
+		"height": 3780, 
+		"prominence": 443, 
 		"name": "Breithorn (Lauterbrunnen)", 
 		"icon": "mountain"
 	    }
@@ -1066,8 +1066,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3754", 
-		"prominence": "190", 
+		"height": 3754, 
+		"prominence": 190, 
 		"name": "Grosshorn", 
 		"icon": "mountain"
 	    }
@@ -1083,8 +1083,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3751", 
-		"prominence": "324", 
+		"height": 3751, 
+		"prominence": 324, 
 		"name": "Piz Morteratsch", 
 		"icon": "mountain"
 	    }
@@ -1100,8 +1100,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3740", 
-		"prominence": "157", 
+		"height": 3740, 
+		"prominence": 157, 
 		"name": "Geisshorn", 
 		"icon": "mountain"
 	    }
@@ -1117,8 +1117,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3726", 
-		"prominence": "620", 
+		"height": 3726, 
+		"prominence": 620, 
 		"name": "Mont V\u00e9lan", 
 		"icon": "mountain"
 	    }
@@ -1134,8 +1134,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3716", 
-		"prominence": "647", 
+		"height": 3716, 
+		"prominence": 647, 
 		"name": "Ev\u00eaque", 
 		"icon": "mountain"
 	    }
@@ -1151,8 +1151,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3716", 
-		"prominence": "312", 
+		"height": 3716, 
+		"prominence": 312, 
 		"name": "Combin de Corbassi\u00e8re", 
 		"icon": "mountain"
 	    }
@@ -1168,8 +1168,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3714", 
-		"prominence": "452", 
+		"height": 3714, 
+		"prominence": 452, 
 		"name": "La Singla", 
 		"icon": "mountain"
 	    }
@@ -1185,8 +1185,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3713", 
-		"prominence": "169", 
+		"height": 3713, 
+		"prominence": 169, 
 		"name": "Mont Durand", 
 		"icon": "mountain"
 	    }
@@ -1202,8 +1202,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3710", 
-		"prominence": "153", 
+		"height": 3710, 
+		"prominence": 153, 
 		"name": "T\u00eate Blanche", 
 		"icon": "mountain"
 	    }
@@ -1219,8 +1219,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3704", 
-		"prominence": "579", 
+		"height": 3704, 
+		"prominence": 579, 
 		"name": "Wetterh\u00f6rner (Mittelhorn)", 
 		"icon": "mountain"
 	    }
@@ -1236,8 +1236,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3704", 
-		"prominence": "467", 
+		"height": 3704, 
+		"prominence": 467, 
 		"name": "Le Pleureur", 
 		"icon": "mountain"
 	    }
@@ -1253,8 +1253,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3700", 
-		"prominence": "159", 
+		"height": 3700, 
+		"prominence": 159, 
 		"name": "Tournelon Blanc", 
 		"icon": "mountain"
 	    }
@@ -1270,8 +1270,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3698", 
-		"prominence": "1022", 
+		"height": 3698, 
+		"prominence": 1022, 
 		"name": "Balmhorn", 
 		"icon": "mountain"
 	    }
@@ -1287,8 +1287,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3692", 
-		"prominence": "202", 
+		"height": 3692, 
+		"prominence": 202, 
 		"name": "Wetterhorn", 
 		"icon": "mountain"
 	    }
@@ -1304,8 +1304,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3689", 
-		"prominence": "193", 
+		"height": 3689, 
+		"prominence": 193, 
 		"name": "Rosenhorn", 
 		"icon": "mountain"
 	    }
@@ -1321,8 +1321,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3682", 
-		"prominence": "223", 
+		"height": 3682, 
+		"prominence": 223, 
 		"name": "Grande Aiguille", 
 		"icon": "mountain"
 	    }
@@ -1338,8 +1338,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3676", 
-		"prominence": "174", 
+		"height": 3676, 
+		"prominence": 174, 
 		"name": "Pointe Kurz", 
 		"icon": "mountain"
 	    }
@@ -1355,8 +1355,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3676", 
-		"prominence": "408", 
+		"height": 3676, 
+		"prominence": 408, 
 		"name": "Dent de Perroc", 
 		"icon": "mountain"
 	    }
@@ -1372,8 +1372,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3668", 
-		"prominence": "251", 
+		"height": 3668, 
+		"prominence": 251, 
 		"name": "Aiguille de la Tsa", 
 		"icon": "mountain"
 	    }
@@ -1389,8 +1389,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3663", 
-		"prominence": "173", 
+		"height": 3663, 
+		"prominence": 173, 
 		"name": "Combin de Boveire", 
 		"icon": "mountain"
 	    }
@@ -1406,8 +1406,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3661", 
-		"prominence": "874", 
+		"height": 3661, 
+		"prominence": 874, 
 		"name": "Bl\u00fcemlisalp(horn)", 
 		"icon": "mountain"
 	    }
@@ -1423,8 +1423,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3656", 
-		"prominence": "220", 
+		"height": 3656, 
+		"prominence": 220, 
 		"name": "B\u00e4rglistock", 
 		"icon": "mountain"
 	    }
@@ -1440,8 +1440,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3654", 
-		"prominence": "411", 
+		"height": 3654, 
+		"prominence": 411, 
 		"name": "Portjengrat (Pizzo d'Andolla)", 
 		"icon": "mountain"
 	    }
@@ -1457,8 +1457,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3644", 
-		"prominence": "789", 
+		"height": 3644, 
+		"prominence": 789, 
 		"name": "Aiguilles Rouges d'Arolla", 
 		"icon": "mountain"
 	    }
@@ -1474,8 +1474,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3638", 
-		"prominence": "654", 
+		"height": 3638, 
+		"prominence": 654, 
 		"name": "Doldenhorn", 
 		"icon": "mountain"
 	    }
@@ -1491,8 +1491,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3637", 
-		"prominence": "208", 
+		"height": 3637, 
+		"prominence": 208, 
 		"name": "Mont Collon", 
 		"icon": "mountain"
 	    }
@@ -1508,8 +1508,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3634", 
-		"prominence": "226", 
+		"height": 3634, 
+		"prominence": 226, 
 		"name": "Studerhorn", 
 		"icon": "mountain"
 	    }
@@ -1525,8 +1525,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3630", 
-		"prominence": "1466", 
+		"height": 3630, 
+		"prominence": 1466, 
 		"name": "Dammastock", 
 		"icon": "mountain"
 	    }
@@ -1542,8 +1542,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3629", 
-		"prominence": "244", 
+		"height": 3629, 
+		"prominence": 244, 
 		"name": "Oberaarhorn", 
 		"icon": "mountain"
 	    }
@@ -1559,8 +1559,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3614", 
-		"prominence": "1570", 
+		"height": 3614, 
+		"prominence": 1570, 
 		"name": "T\u00f6di (Piz Russein)", 
 		"icon": "mountain"
 	    }
@@ -1576,8 +1576,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3610", 
-		"prominence": "275", 
+		"height": 3610, 
+		"prominence": 275, 
 		"name": "Grande Fourche", 
 		"icon": "mountain"
 	    }
@@ -1593,8 +1593,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3610", 
-		"prominence": "267", 
+		"height": 3610, 
+		"prominence": 267, 
 		"name": "Barrhorn", 
 		"icon": "mountain"
 	    }
@@ -1610,8 +1610,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3609", 
-		"prominence": "379", 
+		"height": 3609, 
+		"prominence": 379, 
 		"name": "Les Diablons", 
 		"icon": "mountain"
 	    }
@@ -1627,8 +1627,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3606", 
-		"prominence": "161", 
+		"height": 3606, 
+		"prominence": 161, 
 		"name": "Piz Cambrena", 
 		"icon": "mountain"
 	    }
@@ -1644,8 +1644,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3594", 
-		"prominence": "341", 
+		"height": 3594, 
+		"prominence": 341, 
 		"name": "Piz Gl\u00fcschaint", 
 		"icon": "mountain"
 	    }
@@ -1661,8 +1661,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3586", 
-		"prominence": "252", 
+		"height": 3586, 
+		"prominence": 252, 
 		"name": "Galenstock", 
 		"icon": "mountain"
 	    }
@@ -1678,8 +1678,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3578", 
-		"prominence": "365", 
+		"height": 3578, 
+		"prominence": 365, 
 		"name": "Mont Brul\u00e9", 
 		"icon": "mountain"
 	    }
@@ -1695,8 +1695,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3562", 
-		"prominence": "388", 
+		"height": 3562, 
+		"prominence": 388, 
 		"name": "Tschingelhorn", 
 		"icon": "mountain"
 	    }
@@ -1712,8 +1712,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3556", 
-		"prominence": "264", 
+		"height": 3556, 
+		"prominence": 264, 
 		"name": "Petit Mont Collon", 
 		"icon": "mountain"
 	    }
@@ -1729,8 +1729,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3554", 
-		"prominence": "345", 
+		"height": 3554, 
+		"prominence": 345, 
 		"name": "Aouille Tseuque", 
 		"icon": "mountain"
 	    }
@@ -1746,8 +1746,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3553", 
-		"prominence": "1144", 
+		"height": 3553, 
+		"prominence": 1144, 
 		"name": "Monte Leone", 
 		"icon": "mountain"
 	    }
@@ -1763,8 +1763,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3548", 
-		"prominence": "179", 
+		"height": 3548, 
+		"prominence": 179, 
 		"name": "La Luette", 
 		"icon": "mountain"
 	    }
@@ -1780,8 +1780,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3546", 
-		"prominence": "210", 
+		"height": 3546, 
+		"prominence": 210, 
 		"name": "Piz Tschierva", 
 		"icon": "mountain"
 	    }
@@ -1797,8 +1797,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3540", 
-		"prominence": "259", 
+		"height": 3540, 
+		"prominence": 259, 
 		"name": "Aiguille du Tour", 
 		"icon": "mountain"
 	    }
@@ -1814,8 +1814,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3531", 
-		"prominence": "298", 
+		"height": 3531, 
+		"prominence": 298, 
 		"name": "Bec d'Epicoune", 
 		"icon": "mountain"
 	    }
@@ -1831,8 +1831,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3530", 
-		"prominence": "195", 
+		"height": 3530, 
+		"prominence": 195, 
 		"name": "Finsteraarrothorn", 
 		"icon": "mountain"
 	    }
@@ -1848,8 +1848,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3519", 
-		"prominence": "258", 
+		"height": 3519, 
+		"prominence": 258, 
 		"name": "Aiguilles Dor\u00e9es", 
 		"icon": "mountain"
 	    }
@@ -1865,8 +1865,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3518", 
-		"prominence": "619", 
+		"height": 3518, 
+		"prominence": 619, 
 		"name": "Mont Gel\u00e9", 
 		"icon": "mountain"
 	    }
@@ -1882,8 +1882,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3505", 
-		"prominence": "293", 
+		"height": 3505, 
+		"prominence": 293, 
 		"name": "Galmihorn", 
 		"icon": "mountain"
 	    }
@@ -1899,8 +1899,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3503", 
-		"prominence": "414", 
+		"height": 3503, 
+		"prominence": 414, 
 		"name": "Sustenhorn", 
 		"icon": "mountain"
 	    }
@@ -1916,8 +1916,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3499", 
-		"prominence": "190", 
+		"height": 3499, 
+		"prominence": 190, 
 		"name": "Pointe de Bertol", 
 		"icon": "mountain"
 	    }
@@ -1933,8 +1933,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3492", 
-		"prominence": "197", 
+		"height": 3492, 
+		"prominence": 197, 
 		"name": "Furgggrat", 
 		"icon": "mountain"
 	    }
@@ -1950,8 +1950,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3490", 
-		"prominence": "154", 
+		"height": 3490, 
+		"prominence": 154, 
 		"name": "Pointe de Vouasson", 
 		"icon": "mountain"
 	    }
@@ -1967,8 +1967,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3487", 
-		"prominence": "340", 
+		"height": 3487, 
+		"prominence": 340, 
 		"name": "Sonnighorn/Pizzo Bottarello", 
 		"icon": "mountain"
 	    }
@@ -1984,8 +1984,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3485", 
-		"prominence": "170", 
+		"height": 3485, 
+		"prominence": 170, 
 		"name": "Nasse Strahlegg", 
 		"icon": "mountain"
 	    }
@@ -2001,8 +2001,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3477", 
-		"prominence": "184", 
+		"height": 3477, 
+		"prominence": 184, 
 		"name": "Oberaarrothorn", 
 		"icon": "mountain"
 	    }
@@ -2018,8 +2018,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3453", 
-		"prominence": "222", 
+		"height": 3453, 
+		"prominence": 222, 
 		"name": "Piz Varuna", 
 		"icon": "mountain"
 	    }
@@ -2035,8 +2035,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3451", 
-		"prominence": "383", 
+		"height": 3451, 
+		"prominence": 383, 
 		"name": "Piz Corvatsch", 
 		"icon": "mountain"
 	    }
@@ -2052,8 +2052,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3448", 
-		"prominence": "412", 
+		"height": 3448, 
+		"prominence": 412, 
 		"name": "Rinderhorn", 
 		"icon": "mountain"
 	    }
@@ -2069,8 +2069,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3477", 
-		"prominence": "187", 
+		"height": 3477, 
+		"prominence": 187, 
 		"name": "Hinter Tierberg", 
 		"icon": "mountain"
 	    }
@@ -2086,8 +2086,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3447", 
-		"prominence": "303", 
+		"height": 3447, 
+		"prominence": 303, 
 		"name": "Wasenhorn", 
 		"icon": "mountain"
 	    }
@@ -2103,8 +2103,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3441", 
-		"prominence": "349", 
+		"height": 3441, 
+		"prominence": 349, 
 		"name": "Piz Tremoggia", 
 		"icon": "mountain"
 	    }
@@ -2120,8 +2120,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3436", 
-		"prominence": "599", 
+		"height": 3436, 
+		"prominence": 599, 
 		"name": "Gspaltenhorn", 
 		"icon": "mountain"
 	    }
@@ -2137,8 +2137,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3436", 
-		"prominence": "598", 
+		"height": 3436, 
+		"prominence": 598, 
 		"name": "Stellihorn", 
 		"icon": "mountain"
 	    }
@@ -2154,8 +2154,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3420", 
-		"prominence": "218", 
+		"height": 3420, 
+		"prominence": 218, 
 		"name": "Gw\u00e4chtenhorn", 
 		"icon": "mountain"
 	    }
@@ -2171,8 +2171,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3419", 
-		"prominence": "383", 
+		"height": 3419, 
+		"prominence": 383, 
 		"name": "Bifertenstock/Piz Durschin", 
 		"icon": "mountain"
 	    }
@@ -2188,8 +2188,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3418", 
-		"prominence": "1503", 
+		"height": 3418, 
+		"prominence": 1503, 
 		"name": "Piz Kesch/Piz d'Es-Cha", 
 		"icon": "mountain"
 	    }
@@ -2205,8 +2205,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3416", 
-		"prominence": "760", 
+		"height": 3416, 
+		"prominence": 760, 
 		"name": "Fleckistock/Rot Stock", 
 		"icon": "mountain"
 	    }
@@ -2222,8 +2222,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3414", 
-		"prominence": "259", 
+		"height": 3414, 
+		"prominence": 259, 
 		"name": "Oberrothorn", 
 		"icon": "mountain"
 	    }
@@ -2239,8 +2239,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3411", 
-		"prominence": "1028", 
+		"height": 3411, 
+		"prominence": 1028, 
 		"name": "Piz Linard", 
 		"icon": "mountain"
 	    }
@@ -2256,8 +2256,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3410", 
-		"prominence": "175", 
+		"height": 3410, 
+		"prominence": 175, 
 		"name": "(Inners) Stellihorn", 
 		"icon": "mountain"
 	    }
@@ -2273,8 +2273,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3406", 
-		"prominence": "240", 
+		"height": 3406, 
+		"prominence": 240, 
 		"name": "Mettelhorn", 
 		"icon": "mountain"
 	    }
@@ -2290,8 +2290,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3403", 
-		"prominence": "224", 
+		"height": 3403, 
+		"prominence": 224, 
 		"name": "Pointe d'Otemma", 
 		"icon": "mountain"
 	    }
@@ -2307,8 +2307,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3402", 
-		"prominence": "1337", 
+		"height": 3402, 
+		"prominence": 1337, 
 		"name": "Rheinwaldhorn", 
 		"icon": "mountain"
 	    }
@@ -2324,8 +2324,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3399", 
-		"prominence": "647", 
+		"height": 3399, 
+		"prominence": 647, 
 		"name": "Fluchthorn", 
 		"icon": "mountain"
 	    }
@@ -2341,8 +2341,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3397", 
-		"prominence": "1085", 
+		"height": 3397, 
+		"prominence": 1085, 
 		"name": "Piz Calderas", 
 		"icon": "mountain"
 	    }
@@ -2358,8 +2358,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3392", 
-		"prominence": "1108", 
+		"height": 3392, 
+		"prominence": 1108, 
 		"name": "Piz Platta", 
 		"icon": "mountain"
 	    }
@@ -2375,8 +2375,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3389", 
-		"prominence": "308", 
+		"height": 3389, 
+		"prominence": 308, 
 		"name": "Diechterhorn", 
 		"icon": "mountain"
 	    }
@@ -2392,8 +2392,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3388", 
-		"prominence": "173", 
+		"height": 3388, 
+		"prominence": 173, 
 		"name": "Tieralplistock[Note 1]", 
 		"icon": "mountain"
 	    }
@@ -2409,8 +2409,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3386", 
-		"prominence": "165", 
+		"height": 3386, 
+		"prominence": 165, 
 		"name": "Il Chap\u00fctschin", 
 		"icon": "mountain"
 	    }
@@ -2426,8 +2426,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3380", 
-		"prominence": "489", 
+		"height": 3380, 
+		"prominence": 489, 
 		"name": "Piz Julier/Piz G\u00fcglia", 
 		"icon": "mountain"
 	    }
@@ -2443,8 +2443,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3379", 
-		"prominence": "400", 
+		"height": 3379, 
+		"prominence": 400, 
 		"name": "G\u00fcferhorn", 
 		"icon": "mountain"
 	    }
@@ -2460,8 +2460,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3379", 
-		"prominence": "388", 
+		"height": 3379, 
+		"prominence": 388, 
 		"name": "Cima di Castello", 
 		"icon": "mountain"
 	    }
@@ -2477,8 +2477,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3378", 
-		"prominence": "153", 
+		"height": 3378, 
+		"prominence": 153, 
 		"name": "Piz d'Err", 
 		"icon": "mountain"
 	    }
@@ -2494,8 +2494,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3374", 
-		"prominence": "945", 
+		"height": 3374, 
+		"prominence": 945, 
 		"name": "Blinnenhorn/Corno Cieco", 
 		"icon": "mountain"
 	    }
@@ -2511,8 +2511,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3369", 
-		"prominence": "620", 
+		"height": 3369, 
+		"prominence": 620, 
 		"name": "Pizzo Cengalo", 
 		"icon": "mountain"
 	    }
@@ -2528,8 +2528,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3369", 
-		"prominence": "198", 
+		"height": 3369, 
+		"prominence": 198, 
 		"name": "Fr\u00fcndenhorn", 
 		"icon": "mountain"
 	    }
@@ -2545,8 +2545,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3367", 
-		"prominence": "378", 
+		"height": 3367, 
+		"prominence": 378, 
 		"name": "Egginer", 
 		"icon": "mountain"
 	    }
@@ -2562,8 +2562,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3366", 
-		"prominence": "266", 
+		"height": 3366, 
+		"prominence": 266, 
 		"name": "Cima di Rosso", 
 		"icon": "mountain"
 	    }
@@ -2579,8 +2579,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3363", 
-		"prominence": "432", 
+		"height": 3363, 
+		"prominence": 432, 
 		"name": "Piz Fora", 
 		"icon": "mountain"
 	    }
@@ -2596,8 +2596,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3347", 
-		"prominence": "158", 
+		"height": 3347, 
+		"prominence": 158, 
 		"name": "Mont Avril", 
 		"icon": "mountain"
 	    }
@@ -2613,8 +2613,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3344", 
-		"prominence": "177", 
+		"height": 3344, 
+		"prominence": 177, 
 		"name": "Le Portalet", 
 		"icon": "mountain"
 	    }
@@ -2630,8 +2630,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3339", 
-		"prominence": "515", 
+		"height": 3339, 
+		"prominence": 515, 
 		"name": "Piz Ela", 
 		"icon": "mountain"
 	    }
@@ -2647,8 +2647,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3336", 
-		"prominence": "227", 
+		"height": 3336, 
+		"prominence": 227, 
 		"name": "Rosablanche", 
 		"icon": "mountain"
 	    }
@@ -2664,8 +2664,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3333", 
-		"prominence": "239", 
+		"height": 3333, 
+		"prominence": 239, 
 		"name": "Piz Picuogl", 
 		"icon": "mountain"
 	    }
@@ -2681,8 +2681,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3329", 
-		"prominence": "408", 
+		"height": 3329, 
+		"prominence": 408, 
 		"name": "Mont Fort", 
 		"icon": "mountain"
 	    }
@@ -2698,8 +2698,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3328", 
-		"prominence": "703", 
+		"height": 3328, 
+		"prominence": 703, 
 		"name": "Oberalpstock/Piz Tgietschen", 
 		"icon": "mountain"
 	    }
@@ -2715,8 +2715,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3312", 
-		"prominence": "544", 
+		"height": 3312, 
+		"prominence": 544, 
 		"name": "Piz Buin", 
 		"icon": "mountain"
 	    }
@@ -2732,8 +2732,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3310", 
-		"prominence": "249", 
+		"height": 3310, 
+		"prominence": 249, 
 		"name": "Garde de Bordon", 
 		"icon": "mountain"
 	    }
@@ -2749,8 +2749,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3308", 
-		"prominence": "262", 
+		"height": 3308, 
+		"prominence": 262, 
 		"name": "Piz Badile", 
 		"icon": "mountain"
 	    }
@@ -2766,8 +2766,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3307", 
-		"prominence": "238", 
+		"height": 3307, 
+		"prominence": 238, 
 		"name": "Wilerhorn", 
 		"icon": "mountain"
 	    }
@@ -2783,8 +2783,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3307", 
-		"prominence": "207", 
+		"height": 3307, 
+		"prominence": 207, 
 		"name": "Hienderstock", 
 		"icon": "mountain"
 	    }
@@ -2800,8 +2800,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3304", 
-		"prominence": "168", 
+		"height": 3304, 
+		"prominence": 168, 
 		"name": "Tschingelspitz", 
 		"icon": "mountain"
 	    }
@@ -2817,8 +2817,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3302", 
-		"prominence": "875", 
+		"height": 3302, 
+		"prominence": 875, 
 		"name": "Piz Paradisin", 
 		"icon": "mountain"
 	    }
@@ -2834,8 +2834,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3298", 
-		"prominence": "375", 
+		"height": 3298, 
+		"prominence": 375, 
 		"name": "Verstanclahorn", 
 		"icon": "mountain"
 	    }
@@ -2851,8 +2851,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3294", 
-		"prominence": "513", 
+		"height": 3294, 
+		"prominence": 513, 
 		"name": "Gross Sch\u00e4rhorn", 
 		"icon": "mountain"
 	    }
@@ -2868,8 +2868,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3293", 
-		"prominence": "703", 
+		"height": 3293, 
+		"prominence": 703, 
 		"name": "Muttler", 
 		"icon": "mountain"
 	    }
@@ -2885,8 +2885,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3293", 
-		"prominence": "348", 
+		"height": 3293, 
+		"prominence": 348, 
 		"name": "Hockenhorn", 
 		"icon": "mountain"
 	    }
@@ -2902,8 +2902,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3292", 
-		"prominence": "248", 
+		"height": 3292, 
+		"prominence": 248, 
 		"name": "F\u00e4richhorn", 
 		"icon": "mountain"
 	    }
@@ -2919,8 +2919,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3292", 
-		"prominence": "237", 
+		"height": 3292, 
+		"prominence": 237, 
 		"name": "Hangendgletscherhorn", 
 		"icon": "mountain"
 	    }
@@ -2936,8 +2936,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3289", 
-		"prominence": "187", 
+		"height": 3289, 
+		"prominence": 187, 
 		"name": "Cima della Bondasca", 
 		"icon": "mountain"
 	    }
@@ -2953,8 +2953,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3282", 
-		"prominence": "330", 
+		"height": 3282, 
+		"prominence": 330, 
 		"name": "Ritzlihorn", 
 		"icon": "mountain"
 	    }
@@ -2970,8 +2970,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3281", 
-		"prominence": "406", 
+		"height": 3281, 
+		"prominence": 406, 
 		"name": "Piz Fliana", 
 		"icon": "mountain"
 	    }
@@ -2987,8 +2987,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3279", 
-		"prominence": "1164", 
+		"height": 3279, 
+		"prominence": 1164, 
 		"name": "Pizzo Tambo/Tambohorn", 
 		"icon": "mountain"
 	    }
@@ -3004,8 +3004,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3278", 
-		"prominence": "151", 
+		"height": 3278, 
+		"prominence": 151, 
 		"name": "Hogleifa", 
 		"icon": "mountain"
 	    }
@@ -3021,8 +3021,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3272", 
-		"prominence": "959", 
+		"height": 3272, 
+		"prominence": 959, 
 		"name": "Bas\u00f2dino", 
 		"icon": "mountain"
 	    }
@@ -3038,8 +3038,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3272", 
-		"prominence": "586", 
+		"height": 3272, 
+		"prominence": 586, 
 		"name": "Helsenhorn", 
 		"icon": "mountain"
 	    }
@@ -3055,8 +3055,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3271", 
-		"prominence": "183", 
+		"height": 3271, 
+		"prominence": 183, 
 		"name": "Pointe d'Orny", 
 		"icon": "mountain"
 	    }
@@ -3072,8 +3072,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3267", 
-		"prominence": "413", 
+		"height": 3267, 
+		"prominence": 413, 
 		"name": "Clariden", 
 		"icon": "mountain"
 	    }
@@ -3089,8 +3089,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3267", 
-		"prominence": "396", 
+		"height": 3267, 
+		"prominence": 396, 
 		"name": "Piz \u00dcertsch", 
 		"icon": "mountain"
 	    }
@@ -3106,8 +3106,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3264", 
-		"prominence": "440", 
+		"height": 3264, 
+		"prominence": 440, 
 		"name": "Scima da Saoseo", 
 		"icon": "mountain"
 	    }
@@ -3123,8 +3123,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3262", 
-		"prominence": "947", 
+		"height": 3262, 
+		"prominence": 947, 
 		"name": "Piz Languard", 
 		"icon": "mountain"
 	    }
@@ -3140,8 +3140,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3262", 
-		"prominence": "601", 
+		"height": 3262, 
+		"prominence": 601, 
 		"name": "Piz Forbesch", 
 		"icon": "mountain"
 	    }
@@ -3157,8 +3157,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3257", 
-		"prominence": "1796", 
+		"height": 3257, 
+		"prominence": 1796, 
 		"name": "Dents du Midi (Haute Cime)", 
 		"icon": "mountain"
 	    }
@@ -3174,8 +3174,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3256", 
-		"prominence": "429", 
+		"height": 3256, 
+		"prominence": 429, 
 		"name": "Gross D\u00fcssi/Piz Git", 
 		"icon": "mountain"
 	    }
@@ -3191,8 +3191,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3256", 
-		"prominence": "205", 
+		"height": 3256, 
+		"prominence": 205, 
 		"name": "Piz Buin Pitschen", 
 		"icon": "mountain"
 	    }
@@ -3208,8 +3208,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3254", 
-		"prominence": "406", 
+		"height": 3254, 
+		"prominence": 406, 
 		"name": "Piz Tsch\u00fctta/Stammerspitz", 
 		"icon": "mountain"
 	    }
@@ -3225,8 +3225,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3254", 
-		"prominence": "386", 
+		"height": 3254, 
+		"prominence": 386, 
 		"name": "Sasseneire", 
 		"icon": "mountain"
 	    }
@@ -3242,8 +3242,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3252", 
-		"prominence": "448", 
+		"height": 3252, 
+		"prominence": 448, 
 		"name": "Cavistrau/Brigelser H\u00f6rner", 
 		"icon": "mountain"
 	    }
@@ -3259,8 +3259,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3248", 
-		"prominence": "978", 
+		"height": 3248, 
+		"prominence": 978, 
 		"name": "Wildhorn", 
 		"icon": "mountain"
 	    }
@@ -3276,8 +3276,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3247", 
-		"prominence": "843", 
+		"height": 3247, 
+		"prominence": 843, 
 		"name": "Ringelspitz/Piz Barghis", 
 		"icon": "mountain"
 	    }
@@ -3293,8 +3293,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3247", 
-		"prominence": "232", 
+		"height": 3247, 
+		"prominence": 232, 
 		"name": "B\u00e4chlistock", 
 		"icon": "mountain"
 	    }
@@ -3310,8 +3310,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3246", 
-		"prominence": "631", 
+		"height": 3246, 
+		"prominence": 631, 
 		"name": "Piz Ot", 
 		"icon": "mountain"
 	    }
@@ -3327,8 +3327,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3246", 
-		"prominence": "476", 
+		"height": 3246, 
+		"prominence": 476, 
 		"name": "Wasenhorn / Punta Terrarossa", 
 		"icon": "mountain"
 	    }
@@ -3344,8 +3344,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3246", 
-		"prominence": "361", 
+		"height": 3246, 
+		"prominence": 361, 
 		"name": "Platthorn", 
 		"icon": "mountain"
 	    }
@@ -3361,8 +3361,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3246", 
-		"prominence": "228", 
+		"height": 3246, 
+		"prominence": 228, 
 		"name": "Turbhorn", 
 		"icon": "mountain"
 	    }
@@ -3378,8 +3378,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3246", 
-		"prominence": "223", 
+		"height": 3246, 
+		"prominence": 223, 
 		"name": "Mattwaldhorn", 
 		"icon": "mountain"
 	    }
@@ -3395,8 +3395,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3244", 
-		"prominence": "306", 
+		"height": 3244, 
+		"prominence": 306, 
 		"name": "Piz Bacun", 
 		"icon": "mountain"
 	    }
@@ -3412,8 +3412,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3244", 
-		"prominence": "205", 
+		"height": 3244, 
+		"prominence": 205, 
 		"name": "Silvrettahorn", 
 		"icon": "mountain"
 	    }
@@ -3429,8 +3429,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3244", 
-		"prominence": "815", 
+		"height": 3244, 
+		"prominence": 815, 
 		"name": "Wildstrubel", 
 		"icon": "mountain"
 	    }
@@ -3446,8 +3446,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3243", 
-		"prominence": "151", 
+		"height": 3243, 
+		"prominence": 151, 
 		"name": "Grossstrubel", 
 		"icon": "mountain"
 	    }
@@ -3463,8 +3463,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3238", 
-		"prominence": "978", 
+		"height": 3238, 
+		"prominence": 978, 
 		"name": "Titlis", 
 		"icon": "mountain"
 	    }
@@ -3480,8 +3480,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3238", 
-		"prominence": "313", 
+		"height": 3238, 
+		"prominence": 313, 
 		"name": "Grand Golliat", 
 		"icon": "mountain"
 	    }
@@ -3497,8 +3497,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3235", 
-		"prominence": "334", 
+		"height": 3235, 
+		"prominence": 334, 
 		"name": "Ofenhorn / Punta d'Arbola", 
 		"icon": "mountain"
 	    }
@@ -3514,8 +3514,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3232", 
-		"prominence": "201", 
+		"height": 3232, 
+		"prominence": 201, 
 		"name": "Corn da Camp", 
 		"icon": "mountain"
 	    }
@@ -3531,8 +3531,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3230", 
-		"prominence": "432", 
+		"height": 3230, 
+		"prominence": 432, 
 		"name": "Augstenberg/Piz Blaisch Lunga", 
 		"icon": "mountain"
 	    }
@@ -3548,8 +3548,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3230", 
-		"prominence": "283", 
+		"height": 3230, 
+		"prominence": 283, 
 		"name": "Piz Bever", 
 		"icon": "mountain"
 	    }
@@ -3565,8 +3565,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3229", 
-		"prominence": "660", 
+		"height": 3229, 
+		"prominence": 660, 
 		"name": "Piz Vadret", 
 		"icon": "mountain"
 	    }
@@ -3582,8 +3582,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3223", 
-		"prominence": "283", 
+		"height": 3223, 
+		"prominence": 283, 
 		"name": "Bec des Rosses", 
 		"icon": "mountain"
 	    }
@@ -3599,8 +3599,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3220", 
-		"prominence": "726", 
+		"height": 3220, 
+		"prominence": 726, 
 		"name": "Tour Salli\u00e8re", 
 		"icon": "mountain"
 	    }
@@ -3616,8 +3616,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3220", 
-		"prominence": "300", 
+		"height": 3220, 
+		"prominence": 300, 
 		"name": "Vorderes Plattenhorn (Ostgipfel)", 
 		"icon": "mountain"
 	    }
@@ -3633,8 +3633,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3220", 
-		"prominence": "255", 
+		"height": 3220, 
+		"prominence": 255, 
 		"name": "Rorspitzli", 
 		"icon": "mountain"
 	    }
@@ -3650,8 +3650,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3218", 
-		"prominence": "303", 
+		"height": 3218, 
+		"prominence": 303, 
 		"name": "Vogelberg", 
 		"icon": "mountain"
 	    }
@@ -3667,8 +3667,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3215", 
-		"prominence": "194", 
+		"height": 3215, 
+		"prominence": 194, 
 		"name": "Chammliberg", 
 		"icon": "mountain"
 	    }
@@ -3684,8 +3684,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3214", 
-		"prominence": "446", 
+		"height": 3214, 
+		"prominence": 446, 
 		"name": "Monte del Forno", 
 		"icon": "mountain"
 	    }
@@ -3701,8 +3701,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3213", 
-		"prominence": "302", 
+		"height": 3213, 
+		"prominence": 302, 
 		"name": "Le M\u00e9tailler", 
 		"icon": "mountain"
 	    }
@@ -3718,8 +3718,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3212", 
-		"prominence": "178", 
+		"height": 3212, 
+		"prominence": 178, 
 		"name": "Pointe de Boveire", 
 		"icon": "mountain"
 	    }
@@ -3735,8 +3735,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3211", 
-		"prominence": "952", 
+		"height": 3211, 
+		"prominence": 952, 
 		"name": "Piz Medel", 
 		"icon": "mountain"
 	    }
@@ -3752,8 +3752,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3211", 
-		"prominence": "716", 
+		"height": 3211, 
+		"prominence": 716, 
 		"name": "Scherbadung/Pizzo Cervandone", 
 		"icon": "mountain"
 	    }
@@ -3769,8 +3769,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3210", 
-		"prominence": "968", 
+		"height": 3210, 
+		"prominence": 968, 
 		"name": "Diablerets", 
 		"icon": "mountain"
 	    }
@@ -3786,8 +3786,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3209", 
-		"prominence": "823", 
+		"height": 3209, 
+		"prominence": 823, 
 		"name": "Piz Timun /Pizzo d'Emet", 
 		"icon": "mountain"
 	    }
@@ -3803,8 +3803,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3208", 
-		"prominence": "364", 
+		"height": 3208, 
+		"prominence": 364, 
 		"name": "Piz Cambrialas", 
 		"icon": "mountain"
 	    }
@@ -3820,8 +3820,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3207", 
-		"prominence": "242", 
+		"height": 3207, 
+		"prominence": 242, 
 		"name": "Munt Pers", 
 		"icon": "mountain"
 	    }
@@ -3837,8 +3837,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3207", 
-		"prominence": "162", 
+		"height": 3207, 
+		"prominence": 162, 
 		"name": "Signalhorn", 
 		"icon": "mountain"
 	    }
@@ -3854,8 +3854,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3204", 
-		"prominence": "1055", 
+		"height": 3204, 
+		"prominence": 1055, 
 		"name": "Piz Sesvenna", 
 		"icon": "mountain"
 	    }
@@ -3871,8 +3871,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3203", 
-		"prominence": "235", 
+		"height": 3203, 
+		"prominence": 235, 
 		"name": "Piz Arblatsch", 
 		"icon": "mountain"
 	    }
@@ -3888,8 +3888,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3202", 
-		"prominence": "157", 
+		"height": 3202, 
+		"prominence": 157, 
 		"name": "Puntone dei Fraci\u00f2n", 
 		"icon": "mountain"
 	    }
@@ -3905,8 +3905,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3201", 
-		"prominence": "308", 
+		"height": 3201, 
+		"prominence": 308, 
 		"name": "Schwarzhorn", 
 		"icon": "mountain"
 	    }
@@ -3922,8 +3922,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3200", 
-		"prominence": "235", 
+		"height": 3200, 
+		"prominence": 235, 
 		"name": "Piz Blaisun", 
 		"icon": "mountain"
 	    }
@@ -3939,8 +3939,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3200", 
-		"prominence": "211", 
+		"height": 3200, 
+		"prominence": 211, 
 		"name": "Strahlhorn", 
 		"icon": "mountain"
 	    }
@@ -3956,8 +3956,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3200", 
-		"prominence": "155", 
+		"height": 3200, 
+		"prominence": 155, 
 		"name": "Hinteres Plattenhorn", 
 		"icon": "mountain"
 	    }
@@ -3973,8 +3973,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3199", 
-		"prominence": "308", 
+		"height": 3199, 
+		"prominence": 308, 
 		"name": "Piz Vadret", 
 		"icon": "mountain"
 	    }
@@ -3990,8 +3990,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3198", 
-		"prominence": "616", 
+		"height": 3198, 
+		"prominence": 616, 
 		"name": "Gross Spannort", 
 		"icon": "mountain"
 	    }
@@ -4007,8 +4007,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3197", 
-		"prominence": "306", 
+		"height": 3197, 
+		"prominence": 306, 
 		"name": "Dreil\u00e4nderspitze", 
 		"icon": "mountain"
 	    }
@@ -4024,8 +4024,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3196", 
-		"prominence": "210", 
+		"height": 3196, 
+		"prominence": 210, 
 		"name": "Piz Surgonda", 
 		"icon": "mountain"
 	    }
@@ -4041,8 +4041,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3194", 
-		"prominence": "430", 
+		"height": 3194, 
+		"prominence": 430, 
 		"name": "Bortelhorn/ Punta del Rebbio", 
 		"icon": "mountain"
 	    }
@@ -4058,8 +4058,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3193", 
-		"prominence": "173", 
+		"height": 3193, 
+		"prominence": 173, 
 		"name": "B\u00fctlasse", 
 		"icon": "mountain"
 	    }
@@ -4075,8 +4075,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3192", 
-		"prominence": "752", 
+		"height": 3192, 
+		"prominence": 752, 
 		"name": "Pizzo Rotondo", 
 		"icon": "mountain"
 	    }
@@ -4092,8 +4092,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3192", 
-		"prominence": "325", 
+		"height": 3192, 
+		"prominence": 325, 
 		"name": "H\u00fcbschhorn I", 
 		"icon": "mountain"
 	    }
@@ -4109,8 +4109,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3191", 
-		"prominence": "224", 
+		"height": 3191, 
+		"prominence": 224, 
 		"name": "Wellhorn", 
 		"icon": "mountain"
 	    }
@@ -4126,8 +4126,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3190", 
-		"prominence": "792", 
+		"height": 3190, 
+		"prominence": 792, 
 		"name": "Scopi", 
 		"icon": "mountain"
 	    }
@@ -4143,8 +4143,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3190", 
-		"prominence": "207", 
+		"height": 3190, 
+		"prominence": 207, 
 		"name": "Piz Fedoz", 
 		"icon": "mountain"
 	    }
@@ -4160,8 +4160,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3189", 
-		"prominence": "355", 
+		"height": 3189, 
+		"prominence": 355, 
 		"name": "Spechhorn / Pizzo d'Antigine", 
 		"icon": "mountain"
 	    }
@@ -4177,8 +4177,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3189", 
-		"prominence": "200", 
+		"height": 3189, 
+		"prominence": 200, 
 		"name": "G\u00e4rstenh\u00f6rner", 
 		"icon": "mountain"
 	    }
@@ -4194,8 +4194,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3188", 
-		"prominence": "433", 
+		"height": 3188, 
+		"prominence": 433, 
 		"name": "Piz Surlej", 
 		"icon": "mountain"
 	    }
@@ -4211,8 +4211,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3187", 
-		"prominence": "552", 
+		"height": 3187, 
+		"prominence": 552, 
 		"name": "Gross Windg\u00e4llen", 
 		"icon": "mountain"
 	    }
@@ -4228,8 +4228,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3187", 
-		"prominence": "243", 
+		"height": 3187, 
+		"prominence": 243, 
 		"name": "Krone", 
 		"icon": "mountain"
 	    }
@@ -4245,8 +4245,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3186", 
-		"prominence": "184", 
+		"height": 3186, 
+		"prominence": 184, 
 		"name": "Dent Jaune", 
 		"icon": "mountain"
 	    }
@@ -4262,8 +4262,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3181", 
-		"prominence": "257", 
+		"height": 3181, 
+		"prominence": 257, 
 		"name": "Hillehorn", 
 		"icon": "mountain"
 	    }
@@ -4279,8 +4279,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3180", 
-		"prominence": "679", 
+		"height": 3180, 
+		"prominence": 679, 
 		"name": "Piz Murtar\u00f6l", 
 		"icon": "mountain"
 	    }
@@ -4296,8 +4296,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3180", 
-		"prominence": "268", 
+		"height": 3180, 
+		"prominence": 268, 
 		"name": "Ferdenrothorn", 
 		"icon": "mountain"
 	    }
@@ -4313,8 +4313,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3179", 
-		"prominence": "371", 
+		"height": 3179, 
+		"prominence": 371, 
 		"name": "Piz Tasna", 
 		"icon": "mountain"
 	    }
@@ -4330,8 +4330,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3178", 
-		"prominence": "169", 
+		"height": 3178, 
+		"prominence": 169, 
 		"name": "Cime de l'Est", 
 		"icon": "mountain"
 	    }
@@ -4347,8 +4347,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3178", 
-		"prominence": "164", 
+		"height": 3178, 
+		"prominence": 164, 
 		"name": "Piz Sarsura", 
 		"icon": "mountain"
 	    }
@@ -4364,8 +4364,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3175", 
-		"prominence": "154", 
+		"height": 3175, 
+		"prominence": 154, 
 		"name": "Hoch Horefellistock", 
 		"icon": "mountain"
 	    }
@@ -4381,8 +4381,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3174", 
-		"prominence": "170", 
+		"height": 3174, 
+		"prominence": 170, 
 		"name": "Pizzo di Zocca", 
 		"icon": "mountain"
 	    }
@@ -4398,8 +4398,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3173", 
-		"prominence": "922", 
+		"height": 3173, 
+		"prominence": 922, 
 		"name": "Piz Pisoc", 
 		"icon": "mountain"
 	    }
@@ -4415,8 +4415,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3173", 
-		"prominence": "474", 
+		"height": 3173, 
+		"prominence": 474, 
 		"name": "Corn da Tinizong /Tinzenhorn", 
 		"icon": "mountain"
 	    }
@@ -4432,8 +4432,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3173", 
-		"prominence": "182", 
+		"height": 3173, 
+		"prominence": 182, 
 		"name": "Gletscherkamm", 
 		"icon": "mountain"
 	    }
@@ -4449,8 +4449,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3168", 
-		"prominence": "851", 
+		"height": 3168, 
+		"prominence": 851, 
 		"name": "Piz Tavr\u00fc", 
 		"icon": "mountain"
 	    }
@@ -4466,8 +4466,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3168", 
-		"prominence": "465", 
+		"height": 3168, 
+		"prominence": 465, 
 		"name": "Piz Vial", 
 		"icon": "mountain"
 	    }
@@ -4483,8 +4483,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3168", 
-		"prominence": "178", 
+		"height": 3168, 
+		"prominence": 178, 
 		"name": "Wyssegga", 
 		"icon": "mountain"
 	    }
@@ -4500,8 +4500,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3167", 
-		"prominence": "490", 
+		"height": 3167, 
+		"prominence": 490, 
 		"name": "Piz Plavna Dadaint", 
 		"icon": "mountain"
 	    }
@@ -4517,8 +4517,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3166", 
-		"prominence": "318", 
+		"height": 3166, 
+		"prominence": 318, 
 		"name": "Piz Albris", 
 		"icon": "mountain"
 	    }
@@ -4534,8 +4534,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3165", 
-		"prominence": "855", 
+		"height": 3165, 
+		"prominence": 855, 
 		"name": "Piz Lagrev", 
 		"icon": "mountain"
 	    }
@@ -4551,8 +4551,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3165", 
-		"prominence": "471", 
+		"height": 3165, 
+		"prominence": 471, 
 		"name": "Piz Quattervals", 
 		"icon": "mountain"
 	    }
@@ -4568,8 +4568,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3164", 
-		"prominence": "247", 
+		"height": 3164, 
+		"prominence": 247, 
 		"name": "Mazzaspitz", 
 		"icon": "mountain"
 	    }
@@ -4585,8 +4585,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3164", 
-		"prominence": "172", 
+		"height": 3164, 
+		"prominence": 172, 
 		"name": "Steitalhorn", 
 		"icon": "mountain"
 	    }
@@ -4602,8 +4602,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3162", 
-		"prominence": "154", 
+		"height": 3162, 
+		"prominence": 154, 
 		"name": "Piz Val M\u00fcra", 
 		"icon": "mountain"
 	    }
@@ -4619,8 +4619,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3161", 
-		"prominence": "236", 
+		"height": 3161, 
+		"prominence": 236, 
 		"name": "Cima Rossa", 
 		"icon": "mountain"
 	    }
@@ -4636,8 +4636,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3161", 
-		"prominence": "226", 
+		"height": 3161, 
+		"prominence": 226, 
 		"name": "Piz Saluver", 
 		"icon": "mountain"
 	    }
@@ -4653,8 +4653,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3159", 
-		"prominence": "445", 
+		"height": 3159, 
+		"prominence": 445, 
 		"name": "Piz Mitgel", 
 		"icon": "mountain"
 	    }
@@ -4670,8 +4670,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3159", 
-		"prominence": "273", 
+		"height": 3159, 
+		"prominence": 273, 
 		"name": "Piz da la Margna", 
 		"icon": "mountain"
 	    }
@@ -4687,8 +4687,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3159", 
-		"prominence": "172", 
+		"height": 3159, 
+		"prominence": 172, 
 		"name": "Couronne de Br\u00e9ona", 
 		"icon": "mountain"
 	    }
@@ -4704,8 +4704,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3158", 
-		"prominence": "655", 
+		"height": 3158, 
+		"prominence": 655, 
 		"name": "Hausstock", 
 		"icon": "mountain"
 	    }
@@ -4721,8 +4721,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3158", 
-		"prominence": "237", 
+		"height": 3158, 
+		"prominence": 237, 
 		"name": "Piz di Pian", 
 		"icon": "mountain"
 	    }
@@ -4738,8 +4738,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3157", 
-		"prominence": "162", 
+		"height": 3157, 
+		"prominence": 162, 
 		"name": "Piz Muragl", 
 		"icon": "mountain"
 	    }
@@ -4755,8 +4755,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3154", 
-		"prominence": "192", 
+		"height": 3154, 
+		"prominence": 192, 
 		"name": "Piz Chalchagn", 
 		"icon": "mountain"
 	    }
@@ -4772,8 +4772,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3153", 
-		"prominence": "317", 
+		"height": 3153, 
+		"prominence": 317, 
 		"name": "Piz Pr\u00fcna", 
 		"icon": "mountain"
 	    }
@@ -4789,8 +4789,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3152", 
-		"prominence": "152", 
+		"height": 3152, 
+		"prominence": 152, 
 		"name": "Zapporthorn", 
 		"icon": "mountain"
 	    }
@@ -4806,8 +4806,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3149", 
-		"prominence": "390", 
+		"height": 3149, 
+		"prominence": 390, 
 		"name": "Piz Terri", 
 		"icon": "mountain"
 	    }
@@ -4823,8 +4823,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3149", 
-		"prominence": "362", 
+		"height": 3149, 
+		"prominence": 362, 
 		"name": "Becs de Bosson", 
 		"icon": "mountain"
 	    }
@@ -4840,8 +4840,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3146", 
-		"prominence": "609", 
+		"height": 3146, 
+		"prominence": 609, 
 		"name": "Fl\u00fcela Schwarzhorn", 
 		"icon": "mountain"
 	    }
@@ -4857,8 +4857,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3146", 
-		"prominence": "342", 
+		"height": 3146, 
+		"prominence": 342, 
 		"name": "Piz Mundin", 
 		"icon": "mountain"
 	    }
@@ -4874,8 +4874,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3146", 
-		"prominence": "266", 
+		"height": 3146, 
+		"prominence": 266, 
 		"name": "Steghorn", 
 		"icon": "mountain"
 	    }
@@ -4891,8 +4891,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3144", 
-		"prominence": "319", 
+		"height": 3144, 
+		"prominence": 319, 
 		"name": "Piz Tea Fondada/Monte Cornaccia", 
 		"icon": "mountain"
 	    }
@@ -4908,8 +4908,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3144", 
-		"prominence": "263", 
+		"height": 3144, 
+		"prominence": 263, 
 		"name": "Alpjuhorn", 
 		"icon": "mountain"
 	    }
@@ -4925,8 +4925,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3144", 
-		"prominence": "168", 
+		"height": 3144, 
+		"prominence": 168, 
 		"name": "Piz Suvretta", 
 		"icon": "mountain"
 	    }
@@ -4942,8 +4942,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3140", 
-		"prominence": "230", 
+		"height": 3140, 
+		"prominence": 230, 
 		"name": "Chli Spannort", 
 		"icon": "mountain"
 	    }
@@ -4959,8 +4959,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3138", 
-		"prominence": "397", 
+		"height": 3138, 
+		"prominence": 397, 
 		"name": "Gross Ruchen", 
 		"icon": "mountain"
 	    }
@@ -4976,8 +4976,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3134", 
-		"prominence": "211", 
+		"height": 3134, 
+		"prominence": 211, 
 		"name": "Piz Sarsura Pitschen", 
 		"icon": "mountain"
 	    }
@@ -4993,8 +4993,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3134", 
-		"prominence": "159", 
+		"height": 3134, 
+		"prominence": 159, 
 		"name": "Crasta Burdun", 
 		"icon": "mountain"
 	    }
@@ -5010,8 +5010,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3133", 
-		"prominence": "506", 
+		"height": 3133, 
+		"prominence": 506, 
 		"name": "Hinter Schloss", 
 		"icon": "mountain"
 	    }
@@ -5027,8 +5027,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3131", 
-		"prominence": "482", 
+		"height": 3131, 
+		"prominence": 482, 
 		"name": "Piz Duan", 
 		"icon": "mountain"
 	    }
@@ -5044,8 +5044,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3131", 
-		"prominence": "164", 
+		"height": 3131, 
+		"prominence": 164, 
 		"name": "Piz Grialetsch", 
 		"icon": "mountain"
 	    }
@@ -5061,8 +5061,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3129", 
-		"prominence": "242", 
+		"height": 3129, 
+		"prominence": 242, 
 		"name": "Pizzo di Cassimoi", 
 		"icon": "mountain"
 	    }
@@ -5078,8 +5078,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3128", 
-		"prominence": "258", 
+		"height": 3128, 
+		"prominence": 258, 
 		"name": "Piz Bleis Marscha", 
 		"icon": "mountain"
 	    }
@@ -5095,8 +5095,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3127", 
-		"prominence": "235", 
+		"height": 3127, 
+		"prominence": 235, 
 		"name": "Piz d'Esan", 
 		"icon": "mountain"
 	    }
@@ -5112,8 +5112,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3125", 
-		"prominence": "315", 
+		"height": 3125, 
+		"prominence": 315, 
 		"name": "Piz Schumbraida", 
 		"icon": "mountain"
 	    }
@@ -5129,8 +5129,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3124", 
-		"prominence": "301", 
+		"height": 3124, 
+		"prominence": 301, 
 		"name": "Fanellhorn", 
 		"icon": "mountain"
 	    }
@@ -5146,8 +5146,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3123", 
-		"prominence": "535", 
+		"height": 3123, 
+		"prominence": 535, 
 		"name": "Piz Nuna", 
 		"icon": "mountain"
 	    }
@@ -5163,8 +5163,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3123", 
-		"prominence": "295", 
+		"height": 3123, 
+		"prominence": 295, 
 		"name": "Oldenhorn", 
 		"icon": "mountain"
 	    }
@@ -5180,8 +5180,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3122", 
-		"prominence": "434", 
+		"height": 3122, 
+		"prominence": 434, 
 		"name": "Gross Seehorn", 
 		"icon": "mountain"
 	    }
@@ -5197,8 +5197,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3122", 
-		"prominence": "250", 
+		"height": 3122, 
+		"prominence": 250, 
 		"name": "Piz da la Crappa", 
 		"icon": "mountain"
 	    }
@@ -5214,8 +5214,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3122", 
-		"prominence": "238", 
+		"height": 3122, 
+		"prominence": 238, 
 		"name": "Piz Scharboda", 
 		"icon": "mountain"
 	    }
@@ -5231,8 +5231,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3122", 
-		"prominence": "157", 
+		"height": 3122, 
+		"prominence": 157, 
 		"name": "Schilthorn", 
 		"icon": "mountain"
 	    }
@@ -5248,8 +5248,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3121", 
-		"prominence": "395", 
+		"height": 3121, 
+		"prominence": 395, 
 		"name": "Piz Aul", 
 		"icon": "mountain"
 	    }
@@ -5265,8 +5265,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3121", 
-		"prominence": "182", 
+		"height": 3121, 
+		"prominence": 182, 
 		"name": "Steinh\u00fcshorn", 
 		"icon": "mountain"
 	    }
@@ -5282,8 +5282,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3121", 
-		"prominence": "166", 
+		"height": 3121, 
+		"prominence": 166, 
 		"name": "Piz Gaglianera", 
 		"icon": "mountain"
 	    }
@@ -5299,8 +5299,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3118", 
-		"prominence": "310", 
+		"height": 3118, 
+		"prominence": 310, 
 		"name": "Piz da l'Acqua", 
 		"icon": "mountain"
 	    }
@@ -5316,8 +5316,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3111", 
-		"prominence": "220", 
+		"height": 3111, 
+		"prominence": 220, 
 		"name": "Piz Salteras", 
 		"icon": "mountain"
 	    }
@@ -5333,8 +5333,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3108", 
-		"prominence": "330", 
+		"height": 3108, 
+		"prominence": 330, 
 		"name": "Kr\u00f6nten", 
 		"icon": "mountain"
 	    }
@@ -5350,8 +5350,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3107", 
-		"prominence": "413", 
+		"height": 3107, 
+		"prominence": 413, 
 		"name": "Gletscherhorn[Note 2]", 
 		"icon": "mountain"
 	    }
@@ -5367,8 +5367,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3107", 
-		"prominence": "413", 
+		"height": 3107, 
+		"prominence": 413, 
 		"name": "Pizz Gallagiun/Galleggione[Note 2]", 
 		"icon": "mountain"
 	    }
@@ -5384,8 +5384,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3107", 
-		"prominence": "170", 
+		"height": 3107, 
+		"prominence": 170, 
 		"name": "Ruchi", 
 		"icon": "mountain"
 	    }
@@ -5401,8 +5401,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3106", 
-		"prominence": "167", 
+		"height": 3106, 
+		"prominence": 167, 
 		"name": "Vordere Helse", 
 		"icon": "mountain"
 	    }
@@ -5418,8 +5418,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3105", 
-		"prominence": "286", 
+		"height": 3105, 
+		"prominence": 286, 
 		"name": "Piz Lischana", 
 		"icon": "mountain"
 	    }
@@ -5435,8 +5435,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3104", 
-		"prominence": "314", 
+		"height": 3104, 
+		"prominence": 314, 
 		"name": "Piz la Stretta / Monte Breva", 
 		"icon": "mountain"
 	    }
@@ -5452,8 +5452,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3104", 
-		"prominence": "164", 
+		"height": 3104, 
+		"prominence": 164, 
 		"name": "Piz Zadrell", 
 		"icon": "mountain"
 	    }
@@ -5469,8 +5469,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3102", 
-		"prominence": "180", 
+		"height": 3102, 
+		"prominence": 180, 
 		"name": "Heimstock", 
 		"icon": "mountain"
 	    }
@@ -5486,8 +5486,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3100", 
-		"prominence": "230", 
+		"height": 3100, 
+		"prominence": 230, 
 		"name": "Piz Albana", 
 		"icon": "mountain"
 	    }
@@ -5503,8 +5503,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3099", 
-		"prominence": "607", 
+		"height": 3099, 
+		"prominence": 607, 
 		"name": "Piz Segnas", 
 		"icon": "mountain"
 	    }
@@ -5520,8 +5520,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3099", 
-		"prominence": "292", 
+		"height": 3099, 
+		"prominence": 292, 
 		"name": "Gross Muttenhorn", 
 		"icon": "mountain"
 	    }
@@ -5537,8 +5537,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3099", 
-		"prominence": "159", 
+		"height": 3099, 
+		"prominence": 159, 
 		"name": "Piz Madlain", 
 		"icon": "mountain"
 	    }
@@ -5554,8 +5554,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3098", 
-		"prominence": "171", 
+		"height": 3098, 
+		"prominence": 171, 
 		"name": "Piz Grisch", 
 		"icon": "mountain"
 	    }
@@ -5571,8 +5571,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3097", 
-		"prominence": "279", 
+		"height": 3097, 
+		"prominence": 279, 
 		"name": "Piz Rots", 
 		"icon": "mountain"
 	    }
@@ -5588,8 +5588,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3096", 
-		"prominence": "749", 
+		"height": 3096, 
+		"prominence": 749, 
 		"name": "Piz Giuv / Schattig Wichel", 
 		"icon": "mountain"
 	    }
@@ -5605,8 +5605,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3095", 
-		"prominence": "238", 
+		"height": 3095, 
+		"prominence": 238, 
 		"name": "Piz Serra", 
 		"icon": "mountain"
 	    }
@@ -5622,8 +5622,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3095", 
-		"prominence": "166", 
+		"height": 3095, 
+		"prominence": 166, 
 		"name": "L\u00f6ffelhorn", 
 		"icon": "mountain"
 	    }
@@ -5639,8 +5639,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3092", 
-		"prominence": "239", 
+		"height": 3092, 
+		"prominence": 239, 
 		"name": "Piz Cristanas", 
 		"icon": "mountain"
 	    }
@@ -5656,8 +5656,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3092", 
-		"prominence": "238", 
+		"height": 3092, 
+		"prominence": 238, 
 		"name": "Piz Foraz", 
 		"icon": "mountain"
 	    }
@@ -5673,8 +5673,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3085", 
-		"prominence": "632", 
+		"height": 3085, 
+		"prominence": 632, 
 		"name": "Fl\u00fcela Wisshorn", 
 		"icon": "mountain"
 	    }
@@ -5690,8 +5690,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3083", 
-		"prominence": "422", 
+		"height": 3083, 
+		"prominence": 422, 
 		"name": "Cima da L\u00e4gh /Cima di Lago", 
 		"icon": "mountain"
 	    }
@@ -5707,8 +5707,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3083", 
-		"prominence": "160", 
+		"height": 3083, 
+		"prominence": 160, 
 		"name": "Gischihorn", 
 		"icon": "mountain"
 	    }
@@ -5724,8 +5724,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3082", 
-		"prominence": "182", 
+		"height": 3082, 
+		"prominence": 182, 
 		"name": "Tellispitza", 
 		"icon": "mountain"
 	    }
@@ -5741,8 +5741,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3080", 
-		"prominence": "206", 
+		"height": 3080, 
+		"prominence": 206, 
 		"name": "Pointe de Tourtemagne", 
 		"icon": "mountain"
 	    }
@@ -5758,8 +5758,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3079", 
-		"prominence": "225", 
+		"height": 3079, 
+		"prominence": 225, 
 		"name": "Lochberg", 
 		"icon": "mountain"
 	    }
@@ -5775,8 +5775,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3079", 
-		"prominence": "179", 
+		"height": 3079, 
+		"prominence": 179, 
 		"name": "Bocktschingel", 
 		"icon": "mountain"
 	    }
@@ -5792,8 +5792,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3078", 
-		"prominence": "472", 
+		"height": 3078, 
+		"prominence": 472, 
 		"name": "Ch\u00fcealphorn", 
 		"icon": "mountain"
 	    }
@@ -5809,8 +5809,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3078", 
-		"prominence": "241", 
+		"height": 3078, 
+		"prominence": 241, 
 		"name": "Piz Surpar\u00e9", 
 		"icon": "mountain"
 	    }
@@ -5826,8 +5826,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3078", 
-		"prominence": "162", 
+		"height": 3078, 
+		"prominence": 162, 
 		"name": "Pointe du Tsat\u00e9", 
 		"icon": "mountain"
 	    }
@@ -5843,8 +5843,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3076", 
-		"prominence": "162", 
+		"height": 3076, 
+		"prominence": 162, 
 		"name": "Hirsihorn", 
 		"icon": "mountain"
 	    }
@@ -5860,8 +5860,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3075", 
-		"prominence": "779", 
+		"height": 3075, 
+		"prominence": 779, 
 		"name": "Piz Starlex", 
 		"icon": "mountain"
 	    }
@@ -5877,8 +5877,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3075", 
-		"prominence": "344", 
+		"height": 3075, 
+		"prominence": 344, 
 		"name": "Piz Sena", 
 		"icon": "mountain"
 	    }
@@ -5894,8 +5894,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3074", 
-		"prominence": "260", 
+		"height": 3074, 
+		"prominence": 260, 
 		"name": "Piz Posta Biala", 
 		"icon": "mountain"
 	    }
@@ -5911,8 +5911,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3073", 
-		"prominence": "567", 
+		"height": 3073, 
+		"prominence": 567, 
 		"name": "Bristen", 
 		"icon": "mountain"
 	    }
@@ -5928,8 +5928,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3072", 
-		"prominence": "754", 
+		"height": 3072, 
+		"prominence": 754, 
 		"name": "Pizzo Campo Tencia", 
 		"icon": "mountain"
 	    }
@@ -5945,8 +5945,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3071", 
-		"prominence": "289", 
+		"height": 3071, 
+		"prominence": 289, 
 		"name": "Piz Chaschauna", 
 		"icon": "mountain"
 	    }
@@ -5962,8 +5962,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3070", 
-		"prominence": "316", 
+		"height": 3070, 
+		"prominence": 316, 
 		"name": "Ch\u00fcebodenhorn", 
 		"icon": "mountain"
 	    }
@@ -5979,8 +5979,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3068", 
-		"prominence": "269", 
+		"height": 3068, 
+		"prominence": 269, 
 		"name": "Piz Minschun", 
 		"icon": "mountain"
 	    }
@@ -5996,8 +5996,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3068", 
-		"prominence": "222", 
+		"height": 3068, 
+		"prominence": 222, 
 		"name": "Gross Leckihorn", 
 		"icon": "mountain"
 	    }
@@ -6013,8 +6013,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3066", 
-		"prominence": "285", 
+		"height": 3066, 
+		"prominence": 285, 
 		"name": "M\u00fceterlishorn", 
 		"icon": "mountain"
 	    }
@@ -6030,8 +6030,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3065", 
-		"prominence": "312", 
+		"height": 3065, 
+		"prominence": 312, 
 		"name": "Geltenhorn", 
 		"icon": "mountain"
 	    }
@@ -6047,8 +6047,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3065", 
-		"prominence": "185", 
+		"height": 3065, 
+		"prominence": 185, 
 		"name": "Piz Rad\u00f6nt", 
 		"icon": "mountain"
 	    }
@@ -6064,8 +6064,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3063", 
-		"prominence": "324", 
+		"height": 3063, 
+		"prominence": 324, 
 		"name": "Hoch Ducan", 
 		"icon": "mountain"
 	    }
@@ -6081,8 +6081,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3063", 
-		"prominence": "177", 
+		"height": 3063, 
+		"prominence": 177, 
 		"name": "Cima dei Cogn", 
 		"icon": "mountain"
 	    }
@@ -6098,8 +6098,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3062", 
-		"prominence": "229", 
+		"height": 3062, 
+		"prominence": 229, 
 		"name": "Stotzig Muttenhorn", 
 		"icon": "mountain"
 	    }
@@ -6115,8 +6115,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3062", 
-		"prominence": "176", 
+		"height": 3062, 
+		"prominence": 176, 
 		"name": "Piz dal Diavel", 
 		"icon": "mountain"
 	    }
@@ -6132,8 +6132,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3061", 
-		"prominence": "378", 
+		"height": 3061, 
+		"prominence": 378, 
 		"name": "Pizzo Gallina", 
 		"icon": "mountain"
 	    }
@@ -6149,8 +6149,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3060", 
-		"prominence": "544", 
+		"height": 3060, 
+		"prominence": 544, 
 		"name": "Piz Grisch", 
 		"icon": "mountain"
 	    }
@@ -6166,8 +6166,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3059", 
-		"prominence": "229", 
+		"height": 3059, 
+		"prominence": 229, 
 		"name": "Piz Nair", 
 		"icon": "mountain"
 	    }
@@ -6183,8 +6183,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3059", 
-		"prominence": "153", 
+		"height": 3059, 
+		"prominence": 153, 
 		"name": "Piz Fier", 
 		"icon": "mountain"
 	    }
@@ -6200,8 +6200,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3058", 
-		"prominence": "216", 
+		"height": 3058, 
+		"prominence": 216, 
 		"name": "Piz Lavirun", 
 		"icon": "mountain"
 	    }
@@ -6217,8 +6217,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3057", 
-		"prominence": "227", 
+		"height": 3057, 
+		"prominence": 227, 
 		"name": "Mont Ruan", 
 		"icon": "mountain"
 	    }
@@ -6234,8 +6234,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3057", 
-		"prominence": "184", 
+		"height": 3057, 
+		"prominence": 184, 
 		"name": "Piz Nair", 
 		"icon": "mountain"
 	    }
@@ -6251,8 +6251,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3056", 
-		"prominence": "577", 
+		"height": 3056, 
+		"prominence": 577, 
 		"name": "Bruschghorn", 
 		"icon": "mountain"
 	    }
@@ -6268,8 +6268,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3056", 
-		"prominence": "236", 
+		"height": 3056, 
+		"prominence": 236, 
 		"name": "Usser Wissberg", 
 		"icon": "mountain"
 	    }
@@ -6285,8 +6285,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3054", 
-		"prominence": "230", 
+		"height": 3054, 
+		"prominence": 230, 
 		"name": "Majinghorn", 
 		"icon": "mountain"
 	    }
@@ -6302,8 +6302,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3053", 
-		"prominence": "154", 
+		"height": 3053, 
+		"prominence": 154, 
 		"name": "Diablon", 
 		"icon": "mountain"
 	    }
@@ -6319,8 +6319,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3052", 
-		"prominence": "458", 
+		"height": 3052, 
+		"prominence": 458, 
 		"name": "Piz Forun", 
 		"icon": "mountain"
 	    }
@@ -6336,8 +6336,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3051", 
-		"prominence": "1013", 
+		"height": 3051, 
+		"prominence": 1013, 
 		"name": "Grand Muveran", 
 		"icon": "mountain"
 	    }
@@ -6353,8 +6353,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3049", 
-		"prominence": "584", 
+		"height": 3049, 
+		"prominence": 584, 
 		"name": "Piz Minor", 
 		"icon": "mountain"
 	    }
@@ -6370,8 +6370,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3049", 
-		"prominence": "560", 
+		"height": 3049, 
+		"prominence": 560, 
 		"name": "Gross Lohner", 
 		"icon": "mountain"
 	    }
@@ -6387,8 +6387,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3049", 
-		"prominence": "223", 
+		"height": 3049, 
+		"prominence": 223, 
 		"name": "Piz dal Teo", 
 		"icon": "mountain"
 	    }
@@ -6404,8 +6404,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3048", 
-		"prominence": "179", 
+		"height": 3048, 
+		"prominence": 179, 
 		"name": "Lorenzhorn", 
 		"icon": "mountain"
 	    }
@@ -6421,8 +6421,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3046", 
-		"prominence": "206", 
+		"height": 3046, 
+		"prominence": 206, 
 		"name": "Piz Laschadurella", 
 		"icon": "mountain"
 	    }
@@ -6438,8 +6438,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3045", 
-		"prominence": "190", 
+		"height": 3045, 
+		"prominence": 190, 
 		"name": "Piz Bles", 
 		"icon": "mountain"
 	    }
@@ -6455,8 +6455,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3044", 
-		"prominence": "449", 
+		"height": 3044, 
+		"prominence": 449, 
 		"name": "Piz Murtera", 
 		"icon": "mountain"
 	    }
@@ -6472,8 +6472,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3044", 
-		"prominence": "196", 
+		"height": 3044, 
+		"prominence": 196, 
 		"name": "Bocktenhorn", 
 		"icon": "mountain"
 	    }
@@ -6489,8 +6489,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3043", 
-		"prominence": "247", 
+		"height": 3043, 
+		"prominence": 247, 
 		"name": "Vernokh\u00f6rner", 
 		"icon": "mountain"
 	    }
@@ -6506,8 +6506,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3043", 
-		"prominence": "180", 
+		"height": 3043, 
+		"prominence": 180, 
 		"name": "Furggeltihorn", 
 		"icon": "mountain"
 	    }
@@ -6523,8 +6523,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3042", 
-		"prominence": "346", 
+		"height": 3042, 
+		"prominence": 346, 
 		"name": "Gross Wendenstock", 
 		"icon": "mountain"
 	    }
@@ -6540,8 +6540,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3040", 
-		"prominence": "934", 
+		"height": 3040, 
+		"prominence": 934, 
 		"name": "Piz Gannaretsch", 
 		"icon": "mountain"
 	    }
@@ -6557,8 +6557,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3040", 
-		"prominence": "192", 
+		"height": 3040, 
+		"prominence": 192, 
 		"name": "Chilchalphorn", 
 		"icon": "mountain"
 	    }
@@ -6574,8 +6574,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3039", 
-		"prominence": "425", 
+		"height": 3039, 
+		"prominence": 425, 
 		"name": "Alpersch\u00e4llihorn", 
 		"icon": "mountain"
 	    }
@@ -6591,8 +6591,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3038", 
-		"prominence": "229", 
+		"height": 3038, 
+		"prominence": 229, 
 		"name": "Piz Malmurainza", 
 		"icon": "mountain"
 	    }
@@ -6608,8 +6608,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3036", 
-		"prominence": "190", 
+		"height": 3036, 
+		"prominence": 190, 
 		"name": "Joderhorn", 
 		"icon": "mountain"
 	    }
@@ -6625,8 +6625,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3033", 
-		"prominence": "294", 
+		"height": 3033, 
+		"prominence": 294, 
 		"name": "Piz Umbrail", 
 		"icon": "mountain"
 	    }
@@ -6642,8 +6642,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3033", 
-		"prominence": "229", 
+		"height": 3033, 
+		"prominence": 229, 
 		"name": "B\u00fcrkelkopf", 
 		"icon": "mountain"
 	    }
@@ -6659,8 +6659,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3033", 
-		"prominence": "168", 
+		"height": 3033, 
+		"prominence": 168, 
 		"name": "Piz d'Immez", 
 		"icon": "mountain"
 	    }
@@ -6676,8 +6676,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3032", 
-		"prominence": "203", 
+		"height": 3032, 
+		"prominence": 203, 
 		"name": "Sassal Mason", 
 		"icon": "mountain"
 	    }
@@ -6693,8 +6693,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3032", 
-		"prominence": "172", 
+		"height": 3032, 
+		"prominence": 172, 
 		"name": "Chlein Seehorn", 
 		"icon": "mountain"
 	    }
@@ -6710,8 +6710,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3031", 
-		"prominence": "722", 
+		"height": 3031, 
+		"prominence": 722, 
 		"name": "Piz S-chalembert", 
 		"icon": "mountain"
 	    }
@@ -6727,8 +6727,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3031", 
-		"prominence": "296", 
+		"height": 3031, 
+		"prominence": 296, 
 		"name": "Piz Cotschen", 
 		"icon": "mountain"
 	    }
@@ -6744,8 +6744,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3030", 
-		"prominence": "291", 
+		"height": 3030, 
+		"prominence": 291, 
 		"name": "Frunthorn", 
 		"icon": "mountain"
 	    }
@@ -6761,8 +6761,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3029", 
-		"prominence": "180", 
+		"height": 3029, 
+		"prominence": 180, 
 		"name": "Selbsanft", 
 		"icon": "mountain"
 	    }
@@ -6778,8 +6778,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3028", 
-		"prominence": "733", 
+		"height": 3028, 
+		"prominence": 733, 
 		"name": "Piz Por", 
 		"icon": "mountain"
 	    }
@@ -6795,8 +6795,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3028", 
-		"prominence": "408", 
+		"height": 3028, 
+		"prominence": 408, 
 		"name": "B\u00fcndner Vorab", 
 		"icon": "mountain"
 	    }
@@ -6812,8 +6812,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3028", 
-		"prominence": "255", 
+		"height": 3028, 
+		"prominence": 255, 
 		"name": "Piz dal Ras", 
 		"icon": "mountain"
 	    }
@@ -6829,8 +6829,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3028", 
-		"prominence": "250", 
+		"height": 3028, 
+		"prominence": 250, 
 		"name": "Piz Dolf", 
 		"icon": "mountain"
 	    }
@@ -6846,8 +6846,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3027", 
-		"prominence": "220", 
+		"height": 3027, 
+		"prominence": 220, 
 		"name": "Piz Davo Lais", 
 		"icon": "mountain"
 	    }
@@ -6863,8 +6863,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3027", 
-		"prominence": "195", 
+		"height": 3027, 
+		"prominence": 195, 
 		"name": "Piz Ault", 
 		"icon": "mountain"
 	    }
@@ -6880,8 +6880,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3027", 
-		"prominence": "188", 
+		"height": 3027, 
+		"prominence": 188, 
 		"name": "Piz d'Arpiglias", 
 		"icon": "mountain"
 	    }
@@ -6897,8 +6897,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3027", 
-		"prominence": "187", 
+		"height": 3027, 
+		"prominence": 187, 
 		"name": "Ginalshorn", 
 		"icon": "mountain"
 	    }
@@ -6914,8 +6914,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3027", 
-		"prominence": "162", 
+		"height": 3027, 
+		"prominence": 162, 
 		"name": "Augstenh\u00fcreli", 
 		"icon": "mountain"
 	    }
@@ -6931,8 +6931,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3027", 
-		"prominence": "156", 
+		"height": 3027, 
+		"prominence": 156, 
 		"name": "Surettahorn", 
 		"icon": "mountain"
 	    }
@@ -6948,8 +6948,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3026", 
-		"prominence": "269", 
+		"height": 3026, 
+		"prominence": 269, 
 		"name": "Piz Cotschen", 
 		"icon": "mountain"
 	    }
@@ -6965,8 +6965,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3025", 
-		"prominence": "672", 
+		"height": 3025, 
+		"prominence": 672, 
 		"name": "Piz Corbet", 
 		"icon": "mountain"
 	    }
@@ -6982,8 +6982,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3025", 
-		"prominence": "235", 
+		"height": 3025, 
+		"prominence": 235, 
 		"name": "Bella Tola", 
 		"icon": "mountain"
 	    }
@@ -6999,8 +6999,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3024", 
-		"prominence": "188", 
+		"height": 3024, 
+		"prominence": 188, 
 		"name": "Ducangrat", 
 		"icon": "mountain"
 	    }
@@ -7016,8 +7016,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3023", 
-		"prominence": "311", 
+		"height": 3023, 
+		"prominence": 311, 
 		"name": "Wendenhorn", 
 		"icon": "mountain"
 	    }
@@ -7033,8 +7033,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3023", 
-		"prominence": "219", 
+		"height": 3023, 
+		"prominence": 219, 
 		"name": "Mont Gel\u00e9", 
 		"icon": "mountain"
 	    }
@@ -7050,8 +7050,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3022", 
-		"prominence": "249", 
+		"height": 3022, 
+		"prominence": 249, 
 		"name": "Faltschonhorn", 
 		"icon": "mountain"
 	    }
@@ -7067,8 +7067,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3021", 
-		"prominence": "175", 
+		"height": 3021, 
+		"prominence": 175, 
 		"name": "Piz Vallatscha", 
 		"icon": "mountain"
 	    }
@@ -7084,8 +7084,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3019", 
-		"prominence": "312", 
+		"height": 3019, 
+		"prominence": 312, 
 		"name": "Piz Blas", 
 		"icon": "mountain"
 	    }
@@ -7101,8 +7101,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3019", 
-		"prominence": "246", 
+		"height": 3019, 
+		"prominence": 246, 
 		"name": "Tscheischhorn", 
 		"icon": "mountain"
 	    }
@@ -7118,8 +7118,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3019", 
-		"prominence": "188", 
+		"height": 3019, 
+		"prominence": 188, 
 		"name": "Piz Murtelet", 
 		"icon": "mountain"
 	    }
@@ -7135,8 +7135,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3018", 
-		"prominence": "253", 
+		"height": 3018, 
+		"prominence": 253, 
 		"name": "Piz Turba", 
 		"icon": "mountain"
 	    }
@@ -7152,8 +7152,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3016", 
-		"prominence": "266", 
+		"height": 3016, 
+		"prominence": 266, 
 		"name": "Piz Rondadura", 
 		"icon": "mountain"
 	    }
@@ -7169,8 +7169,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3016", 
-		"prominence": "266", 
+		"height": 3016, 
+		"prominence": 266, 
 		"name": "Witenalpstock", 
 		"icon": "mountain"
 	    }
@@ -7186,8 +7186,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3015", 
-		"prominence": "328", 
+		"height": 3015, 
+		"prominence": 328, 
 		"name": "Paraid Naira", 
 		"icon": "mountain"
 	    }
@@ -7203,8 +7203,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3013", 
-		"prominence": "215", 
+		"height": 3013, 
+		"prominence": 215, 
 		"name": "Piz Polaschin", 
 		"icon": "mountain"
 	    }
@@ -7220,8 +7220,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3013", 
-		"prominence": "196", 
+		"height": 3013, 
+		"prominence": 196, 
 		"name": "Piz Uffiern", 
 		"icon": "mountain"
 	    }
@@ -7237,8 +7237,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3013", 
-		"prominence": "158", 
+		"height": 3013, 
+		"prominence": 158, 
 		"name": "Tennbachhorn", 
 		"icon": "mountain"
 	    }
@@ -7254,8 +7254,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3012", 
-		"prominence": "192", 
+		"height": 3012, 
+		"prominence": 192, 
 		"name": "Jufer Horen", 
 		"icon": "mountain"
 	    }
@@ -7271,8 +7271,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3010", 
-		"prominence": "238", 
+		"height": 3010, 
+		"prominence": 238, 
 		"name": "Piz Nair", 
 		"icon": "mountain"
 	    }
@@ -7288,8 +7288,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3009", 
-		"prominence": "157", 
+		"height": 3009, 
+		"prominence": 157, 
 		"name": "Piz Larain", 
 		"icon": "mountain"
 	    }
@@ -7305,8 +7305,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3007", 
-		"prominence": "292", 
+		"height": 3007, 
+		"prominence": 292, 
 		"name": "Piz Ravetsch", 
 		"icon": "mountain"
 	    }
@@ -7322,8 +7322,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3006", 
-		"prominence": "426", 
+		"height": 3006, 
+		"prominence": 426, 
 		"name": "\u00c4lplihorn", 
 		"icon": "mountain"
 	    }
@@ -7339,8 +7339,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3005", 
-		"prominence": "166", 
+		"height": 3005, 
+		"prominence": 166, 
 		"name": "H\u00f6hberghorn", 
 		"icon": "mountain"
 	    }
@@ -7356,8 +7356,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3004", 
-		"prominence": "199", 
+		"height": 3004, 
+		"prominence": 199, 
 		"name": "Piz Costainas", 
 		"icon": "mountain"
 	    }
@@ -7373,8 +7373,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3003", 
-		"prominence": "229", 
+		"height": 3003, 
+		"prominence": 229, 
 		"name": "Reissend Nollen", 
 		"icon": "mountain"
 	    }
@@ -7390,8 +7390,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3002", 
-		"prominence": "366", 
+		"height": 3002, 
+		"prominence": 366, 
 		"name": "Pizzas d'Anarosa / Grauh\u00f6rner", 
 		"icon": "mountain"
 	    }
@@ -7407,8 +7407,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3002", 
-		"prominence": "154", 
+		"height": 3002, 
+		"prominence": 154, 
 		"name": "Mittlere Lohner", 
 		"icon": "mountain"
 	    }
@@ -7424,8 +7424,8 @@
 	    }, 
 	    "type": "Feature", 
 	    "properties": {
-		"height": "3000", 
-		"prominence": "216", 
+		"height": 3000, 
+		"prominence": 216, 
 		"name": "Piz Mezzaun", 
 		"icon": "mountain"
 	    }
