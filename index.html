@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' 
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Site styles -->
@@ -133,14 +133,10 @@
                     "stops": [[12, 2], [22, 180]]
                   },
                   // color circles by height
-                  "circle-color": [
-                    "step",
-                    ["get", "height"],
+                  "circle-color": [ "step", ["get", "height"],
                       "#51bbd6",
-                      3000,
-                      "#f1f075",
-                      4000,
-                      "#f28cb1"
+                      3000, "#f1f075",
+                      4000, "#f28cb1"
                   ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
@@ -160,14 +156,10 @@
                 },
                 "paint": {
                   // color circles by height
-                  "circle-color": [
-                    "step",
-                    ["get", "height"],
+                  "circle-color": [ "step", ["get", "height"],
                       "#51bbd6",
-                      3000,
-                      "#f1f075",
-                      4000,
-                      "#f28cb1"
+                      3000, "#f1f075",
+                      4000, "#f28cb1"
                   ],
                   "circle-radius": [
                     "step",
