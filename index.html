@@ -159,20 +159,24 @@
                   "visibility": "none",
                 },
                 "paint": {
-                  // make circles larger as the user zooms from z12 to z22
-                  'circle-radius': {
-                    'base': 1.75,
-                    'stops': [[12, 2], [22, 180]]
-                  },
                   // color circles by height
-                  'circle-color': [
-                    'step',
-                    ['get', 'height'],
+                  "circle-color": [
+                    "step",
+                    ["get", "height"],
                       "#51bbd6",
                       3000,
                       "#f1f075",
                       4000,
                       "#f28cb1"
+                  ],
+                  "circle-radius": [
+                    "step",
+                    ["get", "height"],
+                    20,
+                    3000,
+                    30,
+                    4000,
+                    40
                   ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
