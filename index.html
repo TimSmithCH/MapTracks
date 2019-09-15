@@ -20,22 +20,44 @@
 .map-overlay {
     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
     position: absolute;
-    width: 25%;
-    bottom: 40;
-    left: 40;
+    width: 40px;
+    height: 150px;
+    top: 300px;
+    left: 25px;
     padding: 5px;
     background-color: #6fd0a9;
     box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
     border-radius: 3px;
     margin-bottom: 45px;
 }
-.map-overlay input {
+.mmmap-overlay input {
     background-color: transparent;
     display: inline-block;
     width: 100%;
     position: relative;
     margin: 0;
     cursor: ew-resize;
+}
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 20px;
+    height: 100%;
+    padding: 0 5px;
+}
+.slider-wrapper {
+  display: inline-block;
+  width: 20px;
+  height: 150px;
+  padding: 0;
+}
+.mmmap-overlay input {
+  width: 150px;
+  height: 20px;
+  margin: 0;
+  transform-origin: 75px 75px;
+  transform: rotate(-90deg);
 }
 </style>
 
@@ -51,8 +73,23 @@
         <nav id="menu"></nav>
       </div>
 
-      <div class='map-overlay' center>
-          <input id='slider' type='range' min='3000' max='4700' step='100' value='3000' />
+      <div class='map-overlay'>
+          <!-- input id='slider' type='range' min='3000' max='4700' step='100' value='3000' list="tickmarks" orient="vertical" -->
+          <input id='slider' type='range' min='3000' max='4000' step='100' value='3100' list="tickmarks" orient="vertical">
+
+<datalist id="tickmarks">
+  <option value="3000" label="0%"></option>
+  <option value="3100"></option>
+  <option value="3200"></option>
+  <option value="3300"></option>
+  <option value="3400"></option>
+  <option value="3500" label="50%"></option>
+  <option value="3600"></option>
+  <option value="3700"></option>
+  <option value="3800"></option>
+  <option value="3900"></option>
+  <option value="4000" label="100%"></option>
+</datalist>
       </div>
 
       <script>
