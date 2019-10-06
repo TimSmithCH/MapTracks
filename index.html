@@ -16,13 +16,6 @@
   </head>
 
   <body class="wrapper">
-<style>
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-}
-</style>
     <!-- Menu usage based on: https://www.mapbox.com/mapbox-gl-js/example/toggle-layers/ -->
     <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
     <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
@@ -315,26 +308,32 @@ input[type=range] {
             //----------------------------------------------
             // Create the slider and add change actions
             var slider = document.createElement('input');
-            slider.className = 'active';
             slider.setAttribute('type', 'range');
             slider.setAttribute('min', '3000');
             slider.setAttribute('max', '4000');
             slider.setAttribute('step', '100');
-            slider.setAttribute('value', '3100');
-            slider.setAttribute('list', 'tickmarks');
+            slider.setAttribute('value', '3000');
+            //slider.setAttribute('list', 'tickmarks');
             slider.setAttribute('orient', 'vertical');
-            var layers = document.getElementById('menu');
-            layers.appendChild(slider);
-            //var output = document.getElementById("demo");
-            //output.innerHTML = slider.value;
-            //slider.oninput = function() {
-            //  output.innerHTML = this.value;
-            //}
+            var menus = document.getElementById('menu');
+            menus.appendChild(slider);
             slider.addEventListener('input', function(e) {
               var height = parseInt(e.target.value);
               // update the map
               map.setFilter('mountainsH', ['>=', ['number', ['get', 'height']], height]);
             });
+
+            //----------------------------------------------
+            // Create the slider output display
+            var slideout = document.createElement('output');
+            slideout.setAttribute('for', 'value');
+            slideout.setAttribute('id', 'output');
+            slideout.innerHTML = 0;
+            var menus = document.getElementById('menu');
+            menus.appendChild(slideout);
+            slider.oninput = function() {
+              slideout.innerHTML = this.value;
+            }
 
       </script>
     </main>

@@ -121,22 +121,38 @@ body {
     -webkit-appearance: slider-vertical; /* WebKit */
     width: 100%;
     height: 150px;
-    padding: 5px;
-    background-color: #3887be;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+    background: #ffffff;
     box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
     border-radius: 3px;
 }
-#menu input.active {
-    background-color: #3887be;
-    color: #ffffff;
+#menu input::-webkit-slider-container{
+    background: #3887be;
+}
+#menu input::-webkit-slider-runnable-track{
+    background: #87CEFA;
 }
 #menu input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #4CAF50; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    outline: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+#menu output {
+    font-size: 12px;
+    display: block;
+    margin: 0;
+    padding: 3px;
+    color: #404040;
+    background: #87CEFA;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
 }
 .mapboxgl-popup {
     max-width: 300px;
