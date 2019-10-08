@@ -113,10 +113,10 @@
                 "filter": ["==", ["geometry-type"], "Point"]
               });
               //
-              // Add Swiss mountains above 3000m
+              // Add Swiss mountains above 3000m or with 300m prominence and above
               map.addSource("mountainsH", {
                 "type": "geojson",
-                "data": "tracks/geojson/CH_Mountains_H3000.json"
+                "data": "tracks/geojson/CH_Mountains_H3000_P300.json"
               });
               map.addLayer({
                 "id": "mountainsH",
@@ -132,38 +132,11 @@
                     "stops": [[12, 8], [22, 720]]
                   },
                   // color circles by height
+                      //"#df80ff",
                   "circle-color": [ "step", ["get", "height"],
                       "#cc00ff",
                       3000, "#cc00cc",
                       4000, "#600080"
-                  ]
-                },
-                "filter": ["==", ["geometry-type"], "Point"]
-              });
-              //
-              // Add Swiss mountains with 300m prominence and above
-              map.addSource("mountainsP", {
-                "type": "geojson",
-                "data": "tracks/geojson/CH_Mountains_P300.json"
-              });
-              map.addLayer({
-                "id": "mountainsP",
-                "type": "circle",
-                "source": "mountainsP",
-                "layout": {
-                  "visibility": "none",
-                },
-                "paint": {
-                  // color circles by height
-                  "circle-color": [ "step", ["get", "height"],
-                      "#df80ff",
-                      3000, "#bf00ff",
-                      4000, "#600080"
-                  ],
-                  "circle-radius": [
-                    'interpolate', ['linear'], ['zoom'],
-                    12, 8,
-                    22, 720
                   ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
@@ -281,8 +254,7 @@
             toggleLayer("Run", "run_routes", "active");
             toggleLayer("Canton", "cantons", "");
             toggleLayer("Marker", "markers", "");
-            toggleLayer("H3000", "mountainsH", "");
-            toggleLayer("P300", "mountainsP", "");
+            toggleLayer("Peaks", "mountainsH", "");
             function toggleLayer(name, id, state) {
               var link = document.createElement('a');
               link.href = '#';
@@ -307,22 +279,35 @@
 
             //----------------------------------------------
             // Create the slider and add change actions
-            var slider = document.createElement('input');
-            slider.setAttribute('type', 'range');
-            slider.setAttribute('min', '3000');
-            slider.setAttribute('max', '4000');
-            slider.setAttribute('step', '100');
-            slider.setAttribute('value', '3000');
-            //slider.setAttribute('list', 'tickmarks');
-            slider.setAttribute('orient', 'vertical');
+            var sliderH = document.createElement('input');
+            sliderH.setAttribute('type', 'range');
+            sliderH.setAttribute('min', '0');
+            sliderH.setAttribute('max', '4000');
+            sliderH.setAttribute('step', '250');
+            sliderH.setAttribute('value', '0');
+            sliderH.setAttribute('orient', 'vertical');
+            var sliderP = document.createElement('input');
+            sliderP.setAttribute('type', 'range');
+            sliderP.setAttribute('min', '0');
+            sliderP.setAttribute('max', '500');
+            sliderP.setAttribute('step', '50');
+            sliderP.setAttribute('value', '0');
+            sliderP.setAttribute('orient', 'vertical');
             var menus = document.getElementById('menu');
-            menus.appendChild(slider);
+            menus.appendChild(sliderH);
+            menus.appendChild(sliderP);
             // Listen for change of slider event and update the map
-            slider.addEventListener('input', function(e) {
+            sliderH.addEventListener('input', function(e) {
               var height_value = parseInt(e.target.value);
-              //var slider_promience = document.getElementById('sliderP');
-              //var promience_value = slider_prominence.value;
-              var prominence_value = 100;
+              var prominence_value = Number(sliderP.value);
+              var mountFilter = ["all",
+                ['>=', ['number', ['get', 'height']], height_value],
+                ['>=', ['number', ['get', 'prominence']], prominence_value]];
+              map.setFilter('mountainsH', mountFilter);
+            });
+            sliderP.addEventListener('input', function(e) {
+              var prominence_value = parseInt(e.target.value);
+              var height_value = Number(sliderH.value);
               var mountFilter = ["all",
                 ['>=', ['number', ['get', 'height']], height_value],
                 ['>=', ['number', ['get', 'prominence']], prominence_value]];
@@ -331,14 +316,20 @@
 
             //----------------------------------------------
             // Create the slider output display
-            var slideout = document.createElement('output');
-            slideout.setAttribute('for', 'value');
-            slideout.setAttribute('id', 'output');
-            slideout.innerHTML = 0;
+            var slideoutH = document.createElement('output');
+            slideoutH.setAttribute('for', 'value');
+            slideoutH.innerHTML = 0;
+            var slideoutP = document.createElement('output');
+            slideoutP.setAttribute('for', 'value');
+            slideoutP.innerHTML = 0;
             var menus = document.getElementById('menu');
-            menus.appendChild(slideout);
-            slider.oninput = function() {
-              slideout.innerHTML = this.value;
+            menus.appendChild(slideoutH);
+            sliderH.oninput = function() {
+              slideoutH.innerHTML = this.value;
+            }
+            menus.appendChild(slideoutP);
+            sliderP.oninput = function() {
+              slideoutP.innerHTML = this.value;
             }
 
       </script>
