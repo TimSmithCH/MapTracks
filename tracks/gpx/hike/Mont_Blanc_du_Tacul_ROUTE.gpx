@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
-  <name>Mont Blanc du Tacul</name>
+ <metadata>
+  <time>2014-09-28T00:00:01Z</time>
+ </metadata>
   <trk>
+    <name>Mont Blanc du Tacul</name>
     <trkseg>
       <trkpt lat="45.879151873795735" lon="6.887188965896208"/>
       <trkpt lat="45.87999376806311" lon="6.890529273396804"/>

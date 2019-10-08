@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
+ <metadata>
+  <time>2014-09-28T00:00:01Z</time>
+ </metadata>
+  <trk>
+    <name>Aiguilles du Tour</name>
+    <trkseg>
+      <trkpt lat="45.996433790487984" lon="6.986652306679711">
+        <ele>2680.8</ele>
+      </trkpt>
+      <trkpt lat="45.995614133155286" lon="6.9899535021566495">
+        <ele>2755</ele>
+      </trkpt>
+      <trkpt lat="45.9956689387854" lon="6.992407704696855">
+        <ele>2795.5</ele>
+      </trkpt>
+      <trkpt lat="45.99465389816058" lon="6.997583606134524">
+        <ele>2908</ele>
+      </trkpt>
+      <trkpt lat="45.994570697566076" lon="6.999328339128733">
+        <ele>2953.9</ele>
+      </trkpt>
+      <trkpt lat="45.99306769349097" lon="7.000664606267472">
+        <ele>2959.7</ele>
+      </trkpt>
+      <trkpt lat="45.990981544962935" lon="7.002554489296737">
+        <ele>3032.8</ele>
+      </trkpt>
+      <trkpt lat="45.98757051289724" lon="7.0052944021885635">
+        <ele>3109.1</ele>
+      </trkpt>
+      <trkpt lat="45.98658815315604" lon="7.007401232680667">
+        <ele>3112.9</ele>
+      </trkpt>
+      <trkpt lat="45.98742647942216" lon="7.008815501739538">
+        <ele>3163.3</ele>
+      </trkpt>
+      <trkpt lat="45.98826528104842" lon="7.010358984926262">
+        <ele>3208.9</ele>
+      </trkpt>
+      <trkpt lat="45.988518552213804" lon="7.011842510363636">
+        <ele>3288.6</ele>
+      </trkpt>
+      <trkpt lat="45.98975636447848" lon="7.011768232042722">
+        <ele>3351</ele>
+      </trkpt>
+      <trkpt lat="45.9909963869345" lon="7.012275247779512">
+        <ele>3410.7</ele>
+      </trkpt>
+      <trkpt lat="45.99180785628482" lon="7.012559563680492">
+        <ele>3416.6</ele>
+      </trkpt>
+      <trkpt lat="45.99304235490448" lon="7.0116133183131355">
+        <ele>3460.6</ele>
+      </trkpt>
+      <trkpt lat="45.99370200282453" lon="7.011255038482506">
+        <ele>3470.7</ele>
+      </trkpt>
+      <trkpt lat="45.99428775306396" lon="7.0104924992705735">
+        <ele>3524</ele>
+      </trkpt>
+      <trkpt lat="45.99444139273323" lon="7.010296706964726">
+        <ele>3511.8</ele>
+      </trkpt>
+      <trkpt lat="45.99526769138108" lon="7.011260144561016">
+        <ele>3526.7</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
-  <name>Mont Blanc</name>
+ <metadata>
+  <time>2014-09-28T00:00:01Z</time>
+ </metadata>
   <trk>
+    <name>Mont Blanc</name>
     <trkseg>
       <trkpt lat="45.879152520027915" lon="6.887320282929013"/>
       <trkpt lat="45.879947908986026" lon="6.89052973328076"/>

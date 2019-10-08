@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
-  <name>Wetterhorn</name>
+ <metadata>
+  <time>2014-09-28T00:00:01Z</time>
+ </metadata>
   <trk>
+    <name>Wetterhorn</name>
     <trkseg>
       <trkpt lat="46.62513599869702" lon="8.09673862673647">
         <ele>2314.6</ele>
