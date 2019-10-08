@@ -317,10 +317,16 @@
             slider.setAttribute('orient', 'vertical');
             var menus = document.getElementById('menu');
             menus.appendChild(slider);
+            // Listen for change of slider event and update the map
             slider.addEventListener('input', function(e) {
-              var height = parseInt(e.target.value);
-              // update the map
-              map.setFilter('mountainsH', ['>=', ['number', ['get', 'height']], height]);
+              var height_value = parseInt(e.target.value);
+              //var slider_promience = document.getElementById('sliderP');
+              //var promience_value = slider_prominence.value;
+              var promience_value = 100;
+              var mountFilter = ["all",
+                ['>=', ['number', ['get', 'height']], height_value],
+                ['>=', ['number', ['get', 'prominence']], prominence_value]];
+              map.setFilter('mountainsH', mountFilter);
             });
 
             //----------------------------------------------
