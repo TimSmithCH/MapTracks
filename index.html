@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.0/mapbox-gl.css' rel='stylesheet' 
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' 
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Site styles -->
@@ -32,7 +32,7 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var map = new mapboxgl.Map({
               container: 'map', // container id
-              style: 'mapbox://styles/mapbox/outdoors-v10', //stylesheet location
+              style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
               center: [7.2989238, 46.032874], // starting position
               zoom: 11 // starting zoom
             });
@@ -279,6 +279,7 @@
 
             //----------------------------------------------
             // Create the slider and add change actions
+var div = document.createElement("div");
             var sliderH = document.createElement('input');
             sliderH.setAttribute('type', 'range');
             sliderH.setAttribute('min', '0');
@@ -293,9 +294,12 @@
             sliderP.setAttribute('step', '50');
             sliderP.setAttribute('value', '0');
             sliderP.setAttribute('orient', 'vertical');
+        div.appendChild(sliderH);
+        div.appendChild(sliderP);
             var menus = document.getElementById('menu');
-            menus.appendChild(sliderH);
-            menus.appendChild(sliderP);
+            //menus.appendChild(sliderH);
+            //menus.appendChild(sliderP);
+            menus.appendChild(div);
             // Listen for change of slider event and update the map
             sliderH.addEventListener('input', function(e) {
               var height_value = parseInt(e.target.value);

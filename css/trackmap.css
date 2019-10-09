@@ -116,6 +116,15 @@ body {
 #menu a.active:hover {
     background: #3074a4;
 }
+.ranges-container {
+  display: flex;
+}
+.ranges-container .range {
+  width: 50%;
+}
+.ranges-container .range input[type="range"] {
+  width: 100%;
+}
 #menu input {
     -webkit-appearance: none;  /* Override default CSS styles */
     -webkit-appearance: slider-vertical; /* WebKit */
