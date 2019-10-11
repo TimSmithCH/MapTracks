@@ -116,19 +116,10 @@ body {
 #menu a.active:hover {
     background: #3074a4;
 }
-.ranges-container {
-  display: flex;
-}
-.ranges-container .range {
-  width: 50%;
-}
-.ranges-container .range input[type="range"] {
-  width: 100%;
-}
 #menu input {
     -webkit-appearance: none;  /* Override default CSS styles */
     -webkit-appearance: slider-vertical; /* WebKit */
-    width: 100%;
+    width: 50%;
     height: 150px;
     padding: 0px;
     margin: 0px;
@@ -141,15 +132,20 @@ body {
     background: #3887be;
 }
 #menu input::-webkit-slider-runnable-track{
+    height: 15px; /* Slider handle height */
     background: #87CEFA;
+}
+#menu input.right::-webkit-slider-runnable-track{
+    height: 15px; /* Slider handle height */
+    background: #CCFF99;
 }
 #menu input::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
     outline: none;
-    width: 25px; /* Set a specific slider handle width */
+    width: 25px; /* Slider handle width */
     height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
+    color: #404040;
     cursor: pointer; /* Cursor on hover */
 }
 #menu output {
@@ -159,6 +155,17 @@ body {
     padding: 3px;
     color: #404040;
     background: #87CEFA;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+}
+#menu output.right {
+    font-size: 12px;
+    display: block;
+    margin: 0;
+    padding: 3px;
+    color: #404040;
+    background: #CCFF99;
     text-decoration: none;
     border-bottom: 1px solid rgba(0,0,0,0.25);
     text-align: center;
