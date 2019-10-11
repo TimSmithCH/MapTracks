@@ -22,6 +22,57 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
+		    "7.87", 
+		"45.942222",
+		"4609"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4609, 
+		"prominence": 94, 
+		"name": "Monte Rosa (Nordend)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.871389", 
+		"45.931944",
+		"4563"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4563, 
+		"prominence": 110, 
+		"name": "Zumsteinspitze", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.876944", 
+		"45.927222",
+		"4554"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4554, 
+		"prominence": 102, 
+		"name": "Signalkuppe", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
 		    "7.85888888888889", 
 		"46.0938888888889", 
 		"4545"
@@ -90,6 +141,23 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
+		    "7.821944", 
+		"45.9275", 
+		"4479"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4479, 
+		"prominence": 62, 
+		"name": "Lyskam (Western Summit)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
 		    "7.65861111111111", 
 		"45.9763888888889", 
 		"4478"
@@ -107,6 +175,23 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
+		    "7.871389", 
+		"45.919722", 
+		"4432"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4432, 
+		"prominence": 136, 
+		"name": "Parrotspitze", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
 		    "7.61194444444444", 
 		"46.0341666666667", 
 		"4357"
@@ -117,6 +202,23 @@
 		"height": 4357, 
 		"prominence": 915, 
 		"name": "Dent Blanche", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.862222", 
+		"45.917222", 
+		"4341"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4341, 
+		"prominence": 58, 
+		"name": "Ludwigshöhe", 
 		"icon": "mountain"
 	    }
 	},
@@ -158,6 +260,23 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
+		    "7.868444", 
+		"46.104639", 
+		"4294"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4294, 
+		"prominence": 86, 
+		"name": "Lenzspitze", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
 		    "8.12611111111111", 
 		"46.5372222222222", 
 		"4274"
@@ -168,6 +287,23 @@
 		"height": 4274, 
 		"prominence": 2280, 
 		"name": "Finsteraarhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.859667", 
+		"46.111528", 
+		"4241"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4241, 
+		"prominence": 30, 
+		"name": "Stecknadelhorn", 
 		"icon": "mountain"
 	    }
 	},
@@ -202,6 +338,23 @@
 		"height": 4221, 
 		"prominence": 490, 
 		"name": "Zinalrothorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.853861", 
+		"46.112694", 
+		"4219"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4219, 
+		"prominence": 75, 
+		"name": "Hohberghorn", 
 		"icon": "mountain"
 	    }
 	},
@@ -277,6 +430,23 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
+		    "7.290556", 
+		"45.938056", 
+		"4183"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4183, 
+		"prominence": 57, 
+		"name": "Combin de Valsoray", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
 		    "7.60527777777778", 
 		"45.97", 
 		"4174"
@@ -294,8 +464,8 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
-		    "7.74888888888889", 
-		"45.9411111111111", 
+		    "7.747222", 
+		"45.941111", 
 		"4164"
 		]
 	    }, 
@@ -303,7 +473,24 @@
 	    "properties": {
 		"height": 4164, 
 		"prominence": 439, 
-		"name": "Breithorn", 
+		"name": "Breithorn (Western Summit)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.756389", 
+		"45.938889", 
+		"4159"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4159, 
+		"prominence": 433, 
+		"name": "Breithorn (Central Summit)", 
 		"icon": "mountain"
 	    }
 	},
@@ -328,6 +515,57 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
+		    "7.714722", 
+		"46.117778", 
+		"4153"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4153, 
+		"prominence": 95, 
+		"name": "Bishorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.767222", 
+		"45.937222", 
+		"4139"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4139, 
+		"prominence": 117, 
+		"name": "Breithorn (Eastern Summit/ western Twin Peak)", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.310833", 
+		"45.942778", 
+		"4134"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4134, 
+		"prominence": 52, 
+		"name": "Combin de la Tsessette", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
 		    "7.99722222222222", 
 		"46.5583333333333", 
 		"4107"
@@ -338,6 +576,23 @@
 		"height": 4107, 
 		"prominence": 584, 
 		"name": "M\u00f6nch", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.770556", 
+		"45.935833", 
+		"4106"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4106, 
+		"prominence": 36, 
+		"name": "Breithorn (Gendarm/ eastern Twin Peak)", 
 		"icon": "mountain"
 	    }
 	},
@@ -372,6 +627,23 @@
 		"height": 4078, 
 		"prominence": 792, 
 		"name": "Schreckhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.775278", 
+		"45.9325", 
+		"4075"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4075, 
+		"prominence": 30, 
+		"name": "Breithorn (Roccia Nera)", 
 		"icon": "mountain"
 	    }
 	},
@@ -447,6 +719,40 @@
 	    "geometry": {
 		"type": "Point", 
 		"coordinates": [
+		    "8.128417", 
+		"46.583389", 
+		"4042"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4042, 
+		"prominence": 128, 
+		"name": "Lauteraarhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "7.848056", 
+		"46.119722", 
+		"4035"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4035, 
+		"prominence": 123, 
+		"name": "Dürrenhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
 		    "7.89472222222222", 
 		"46.0461111111111", 
 		"4027"
@@ -457,6 +763,23 @@
 		"height": 4027, 
 		"prominence": 255, 
 		"name": "Allalinhorn", 
+		"icon": "mountain"
+	    }
+	},
+	{
+	    "geometry": {
+		"type": "Point", 
+		"coordinates": [
+		    "8.067778", 
+		"46.546389", 
+		"4025"
+		]
+	    }, 
+	    "type": "Feature", 
+	    "properties": {
+		"height": 4025, 
+		"prominence": 102, 
+		"name": "Hinter Fiescherhorn", 
 		"icon": "mountain"
 	    }
 	},

@@ -113,7 +113,10 @@
                 "filter": ["==", ["geometry-type"], "Point"]
               });
               //
-              // Add Swiss mountains above 3000m or with 300m prominence and above
+              // Add Swiss mountains:
+              //  0-3000m with prominence >300m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland
+              //  3000-4000m with prominence >150m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland_above_3000_m
+              //  4000-5000m with prominence >30m https://en.wikipedia.org/wiki/List_of_Alpine_four-thousanders
               map.addSource("mountainsH", {
                 "type": "geojson",
                 "data": "tracks/geojson/CH_Mountains_H3000_P300.json"
@@ -132,9 +135,8 @@
                     "stops": [[12, 8], [22, 720]]
                   },
                   // color circles by height
-                      //"#df80ff",
                   "circle-color": [ "step", ["get", "height"],
-                      "#cc00ff",
+                      "#df80ff",
                       3000, "#cc00cc",
                       4000, "#600080"
                   ]
