@@ -143,7 +143,7 @@
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
               });
-              //
+
               // Loop creating a layer of routes of each type from geojson file
               for (let layer of Object.keys(layer_props)) {
                 map.addSource(layer, {
@@ -189,6 +189,20 @@
                 popup.remove();
               });
             }
+
+            // Create popup on hover for mountains
+            map.on('mouseenter', mountainsH, function(e) {
+              // Change the cursor style as a UI indicator.
+              map.getCanvas().style.cursor = 'pointer';
+              // Populate the popup and set its coordinates based on the feature found.
+              popup.setLngLat(e.lngLat)
+                  .setHTML('<strong>' + e.features[0].properties.name +'</strong>')
+                  .addTo(map);
+            });
+            map.on('mouseleave', mountainsH, function() {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+            });
 
             // Create the handler to display detailed route when clicked
             map.on('click', function(e) {
