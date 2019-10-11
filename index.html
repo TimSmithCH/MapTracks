@@ -191,7 +191,7 @@
             }
 
             // Create popup on hover for mountains
-            map.on('mouseenter', mountainsH, function(e) {
+            map.on('mouseenter', "mountainsH", function(e) {
               // Change the cursor style as a UI indicator.
               map.getCanvas().style.cursor = 'pointer';
               // Populate the popup and set its coordinates based on the feature found.
@@ -199,7 +199,7 @@
                   .setHTML('<strong>' + e.features[0].properties.name +'</strong>')
                   .addTo(map);
             });
-            map.on('mouseleave', mountainsH, function() {
+            map.on('mouseleave', "mountainsH", function() {
               map.getCanvas().style.cursor = '';
               popup.remove();
             });
