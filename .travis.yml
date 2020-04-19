@@ -11,6 +11,7 @@ notifications:
 
 install:
   - npm install @mapbox/geojson-merge --save
+  - pip install mapbox-tilesets
 
 script:
   - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/hike/*.geojson >tracks/geojson/Overview_hike.geojson
