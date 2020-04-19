@@ -1,0 +1,28 @@
+sudo: false
+dist: trusty
+language: node_js
+node_js:
+  - "node"
+
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+
+install:
+  - npm install @mapbox/geojson-merge --save
+
+script:
+  - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/hike/*.geojson >tracks/geojson/Overview_hike.geojson
+  - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/bike/*.geojson >tracks/geojson/Overview_bike.geojson
+  - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/ski/*.geojson >tracks/geojson/Overview_ski.geojson
+  - node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/run/*.geojson >tracks/geojson/Overview_run.geojson
+  - chmod +x travis_deploy_prep.sh
+  - ./travis_deploy_prep.sh
+
+deploy:
+  provider: pages
+  github_token: $PUB_REP_TOKEN
+  skip_cleanup: true
+  on:
+    branch: master
