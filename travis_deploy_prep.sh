@@ -2,7 +2,7 @@
 set -e   # Exit with nonzero exit code if anything fails
 set -x   # Debug mode to echo commands
 
-ls -lR
+#ls -lR
 rm -r node_modules
 
 git status
