@@ -9,7 +9,7 @@ notifications:
 
 script:
   - chmod +x travis_deploy_prep.sh
-  - travis_deploy_prep.sh
+  - ./travis_deploy_prep.sh
 
 deploy:
   provider: pages
