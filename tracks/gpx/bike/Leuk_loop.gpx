@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx version="1.1" creator="Endomondo.com" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <metadata>
-    <author>
-      <name>Tim Smith</name>
-      <email id="tim.smith" domain="cern.ch"/>
-    </author>
-    <link href="http://www.endomondo.com">
-      <text>Endomondo</text>
-    </link>
     <time>2017-11-19T07:56:35Z</time>
   </metadata>
   <trk>
-    <src>http://www.endomondo.com/</src>
-    <link href="https://www.endomondo.com/users/3965527/workouts/349641411">
-      <text>endomondo</text>
-    </link>
     <type>CYCLING_SPORT</type>
     <trkseg>
       <trkpt lat="46.3185294" lon="7.6048268">
@@ -5690,11 +5679,6 @@
       </trkpt>
       <trkpt lat="46.339387" lon="7.5571747">
         <time>2014-06-01T10:17:45Z</time>
-      </trkpt>
-    </trkseg>
-    <trkseg>
-      <trkpt lat="46.339387" lon="7.5571747">
-        <time>2014-06-01T10:17:46Z</time>
       </trkpt>
     </trkseg>
   </trk>
