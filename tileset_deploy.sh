@@ -22,7 +22,7 @@ do
   done
   fileSUMM=tracks/geojson/${type}_tracks.geojson
   printf "\n Generating $fileSUMM \n"
-  geojson-merge tracks/geojson/$type/*.geojson >$fileSUMM
+  node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/$type/*.geojson >$fileSUMM
 done
 
 tilesets list-sources --token `cat tileset_api` timsmithch
