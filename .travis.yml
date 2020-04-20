@@ -17,6 +17,7 @@ before_install:
 
 install:
   - npm install @mapbox/geojson-merge --save
+  - pip install GDAL
   - pip install mapbox-tilesets
 
 script:
