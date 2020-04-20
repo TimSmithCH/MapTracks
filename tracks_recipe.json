@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "layers": {
+    "bike_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/bike_tracks",
+      "minzoom": 0,
+      "maxzoom": 12
+    },
+    "hike_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/hike_tracks",
+      "minzoom": 0,
+      "maxzoom": 12
+    },
+    "run_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/run_tracks",
+      "minzoom": 0,
+      "maxzoom": 12
+    },
+    "ski_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/ski_tracks",
+      "minzoom": 0,
+      "maxzoom": 12
+    }
+  }
+}
