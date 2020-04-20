@@ -3,11 +3,17 @@ dist: trusty
 language: python
 python:
   - "3.6"
+env:
+  global:
+    secure: "JZDSfJLn+RvQahWAZ4bZl5cpOY7DEb7zcl2eD0IyKgIbkqCuJf1mIO5oR6IVmJW2V5v21FAUhQ6IetPFl2UOgGi3aLwFjxxbPtc0mn6DXBr4+0wGMhMWUthFj5b6xVhI/ZfStjhM4ncympmfqPfswLnP0kLG3ct6TlhKxYiZqEPwah+26q67v4AZsLD65Erp/tVHJgKWt1ciH+UQuiE3zSxL2landFcryLpODkrHm/txPNi5TySHsiaI9Lx6r4L4myFG6AogF0CQzvAsE/qi2+ZxSx4/0NHs0V1bhR3fpxKZSavFxz4BsrOlSj8E3tVpw1308lNlnmbNV793pU0NvCz1xryPBvRbVkopD0lcea7lv9UHBLfbN1sCeIc/ZW4tCPVG+QsLjCRGhUcHmo7Kue2NV5C2+bQkeeFJWzEEbr4DFfOKBkpfkARTfp10OBcm1KN14JlFYW6XUs4XuOcXIsQKaRZ8CXk/gNqbzM+UTjlXZuLUR0lSiyqkAOfcga2SBsvn0Cmn6qbWfu5u/2GyZ9ssL/pQMBXwgdrwTH1nbl6hXc/ZVMrHiKWn6JcUFeMNo+Izk/T50K0S/JDc9DSBv77frZ5LYSVW1D3POfGrjgwVIh9I9ZRq39n6oFxVhwnyOFgNVLlIjIIxkQXiHGvrUrEKr+TqzG5bfIGyfLzl3ZQ="
 
 notifications:
   email:
     on_success: never
     on_failure: always
+
+before_install:
+  - openssl aes-256-cbc -k "$tileset_api_password" -in tileset_api.enc -out tileset_api -d
 
 install:
   - npm install @mapbox/geojson-merge --save

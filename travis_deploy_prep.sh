@@ -2,7 +2,7 @@
 set -e   # Exit with nonzero exit code if anything fails
 set -x   # Debug mode to echo commands
 
-tilesets list-sources --token 's' timsmithch
+tilesets list-sources --token `cat tileset_api` timsmithch
 #ls -lR
 rm -r node_modules
 
