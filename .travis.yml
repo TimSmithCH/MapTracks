@@ -14,10 +14,13 @@ notifications:
 
 before_install:
   - openssl aes-256-cbc -k "$tileset_api_password" -in tileset_api.enc -out tileset_api -d
+  - sudo add-apt-repository --yes ppa:ubuntugis/ppa
+  - sudo apt-get --quiet update
+  - sudo apt-get install --yes libgdal-dev gdal-bin
 
 install:
   - npm install @mapbox/geojson-merge --save
-  - pip install GDAL
+  - pip install gdal==`gdal-config --version`
   - pip install mapbox-tilesets
 
 script:
