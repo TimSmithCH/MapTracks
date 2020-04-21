@@ -3,6 +3,7 @@ set -e   # Exit with nonzero exit code if anything fails
 set -x   # Debug mode to echo commands
 
 #ls -lR tracks/
+
 mkdir -pv tracks/geojson/bike
 mkdir -pv tracks/geojson/hike
 mkdir -pv tracks/geojson/run
