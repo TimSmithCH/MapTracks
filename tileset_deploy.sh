@@ -3,7 +3,11 @@ set -e   # Exit with nonzero exit code if anything fails
 set -x   # Debug mode to echo commands
 
 pwd
-ls -lR tracks/
+#ls -lR tracks/
+mkdir -v tracks/geojson/bike
+mkdir -v tracks/geojson/hike
+mkdir -v tracks/geojson/run
+mkdir -v tracks/geojson/ski
 
 TYPES="bike hike run ski"
 for type in $TYPES
