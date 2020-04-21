@@ -27,9 +27,7 @@ install:
 
 script:
   - ./generate_geojson.sh
-  - chmod +x tileset_deploy.sh
   - ./tileset_deploy.sh
-  - chmod +x travis_deploy_prep.sh
   - ./travis_deploy_prep.sh
 
 deploy:
