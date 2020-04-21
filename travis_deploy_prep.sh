@@ -10,4 +10,4 @@ git commit -q -m "Dropped raw GPX files"
 
 git status
 git add tracks/geojson
-git commit -mq "Uploaded more GeoJSON files"
+git commit -m "Uploaded more GeoJSON files"
