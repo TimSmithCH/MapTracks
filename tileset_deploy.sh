@@ -3,7 +3,7 @@ set -e   # Exit with nonzero exit code if anything fails
 set -x   # Debug mode to echo commands
 
 pwd
-ls -lR
+ls -lR tracks/
 
 TYPES="bike hike run ski"
 for type in $TYPES
