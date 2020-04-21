@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' 
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' 
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Site styles -->
@@ -41,22 +41,18 @@
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
 
-            // Prepare layer properties object
-            var layer_props = { hike_routes: { datafile: "Overview_hike.geojson", colour: "red" },
-                                bike_routes: { datafile: "Overview_bike.geojson", colour: "green" },
-                                 ski_routes: { datafile: "Overview_ski.geojson",  colour: "blue" },
-                                 run_routes: { datafile: "Overview_run.geojson",  colour: "purple" } };
-
             map.on('load', function () {
+              //----------------------------------------------
               // Add Swiss cantons
               map.addSource("cantons", {
-                "type": "geojson",
-                "data": "tracks/geojson/ch-cantons.json"
+                type: 'vector',
+                url: 'mapbox://timsmithch.swiss_cantons'
               });
               map.addLayer({
                 "id": "cantons",
                 "type": "fill",
                 "source": "cantons",
+                'source-layer': 'swiss_cantons',
                 "layout": {
                   "visibility": "none"
                 },
@@ -93,6 +89,8 @@
                   ]
                 }
               });
+
+              //----------------------------------------------
               // Add Markers for important waypoints on trips
               map.addSource("markers", {
                 "type": "geojson",
@@ -112,7 +110,8 @@
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
               });
-              //
+
+              //----------------------------------------------
               // Add Swiss mountains:
               //  0-3000m with prominence >300m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland
               //  3000-4000m with prominence >150m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland_above_3000_m
@@ -144,51 +143,79 @@
                 "filter": ["==", ["geometry-type"], "Point"]
               });
 
-              // Loop creating a layer of routes of each type from geojson file
-              for (let layer of Object.keys(layer_props)) {
-                map.addSource(layer, {
-                  "type": "geojson",
-                  "data": "tracks/geojson/" + layer_props[layer]["datafile"]
-                });
-                map.addLayer({
-                  "id": layer,
-                  "type": "line",
-                  "source": layer,
-                  "layout": {
-                    "visibility": "visible",
-                    "line-join": "round",
-                    "line-cap": "round"
-                  },
-                  "paint": {
-                    "line-color": layer_props[layer]["colour"],
-                    "line-width": 4
-                  }
-                });
-              }
+              //----------------------------------------------
+              map.addSource('tracks-all', {
+                type: 'vector',
+                url: 'mapbox://timsmithch.all_tracks'
+              });
+              map.addLayer({
+                'id': 'tracks-bike',
+                'type': 'line',
+                'source': 'tracks-all',
+                'source-layer': 'bike_tracks',
+                'layout': {
+                  "visibility": "visible",
+                  'line-join': 'round',
+                  'line-cap': 'round'
+                },
+                'paint': {
+                  'line-color': 'green',
+                  'line-width': 3
+                }
+              })
+              map.addLayer({
+                'id': 'tracks-hike',
+                'type': 'line',
+                'source': 'tracks-all',
+                'source-layer': 'hike_tracks',
+                'layout': {
+                  "visibility": "visible",
+                  'line-join': 'round',
+                  'line-cap': 'round'
+                },
+                'paint': {
+                  'line-color': 'red',
+                  'line-width': 3
+                }
+              })
+              map.addLayer({
+                'id': 'tracks-run',
+                'type': 'line',
+                'source': 'tracks-all',
+                'source-layer': 'run_tracks',
+                'layout': {
+                  "visibility": "visible",
+                  'line-join': 'round',
+                  'line-cap': 'round'
+                },
+                'paint': {
+                  'line-color': 'purple',
+                  'line-width': 3
+                }
+              })
+              map.addLayer({
+                'id': 'tracks-ski',
+                'type': 'line',
+                'source': 'tracks-all',
+                'source-layer': 'ski_tracks',
+                'layout': {
+                  "visibility": "visible",
+                  'line-join': 'round',
+                  'line-cap': 'round'
+                },
+                'paint': {
+                  'line-color': 'blue',
+                  'line-width': 3
+                }
+              })
             });
 
+            //----------------------------------------------
             // Create a popup, but don't add it to the map yet
             var popup = new mapboxgl.Popup({
               closeButton: false,
               closeOnClick: false
             });
-
-            // Loop creating popup on hover for each layer
-            for (let layer of Object.keys(layer_props)) {
-              map.on('mouseenter', layer, function(e) {
-                // Change the cursor style as a UI indicator.
-                map.getCanvas().style.cursor = 'pointer';
-                // Populate the popup and set its coordinates based on the feature found.
-                var date = e.features[0].properties.time.split('T',1)
-                popup.setLngLat(e.lngLat)
-                    .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
-                    .addTo(map);
-              });
-              map.on('mouseleave', layer, function() {
-                map.getCanvas().style.cursor = '';
-                popup.remove();
-              });
-            }
 
             // Create popup on hover for mountains
             map.on('mouseenter', "mountainsH", function(e) {
@@ -205,70 +232,12 @@
               popup.remove();
             });
 
-            // Create the handler to display detailed route when clicked
-            map.on('click', function(e) {
-              var features = map.queryRenderedFeatures(e.point, { layers: Object.keys(layer_props),
-                                                                  filter: ["==", "$type", "LineString"] });
-              // If didnt click on a LineString then feature list will be empty
-              if (features.length == 0) return;
-              // Zoom to fit clicked track in screen
-              var coordinates = features[0].geometry.coordinates;
-              var bounds = coordinates.reduce(function(bounds, coord) {
-                return bounds.extend(coord);
-              }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
-              map.fitBounds(bounds, {
-                padding: 20
-              });
-              // Load detailed coordinates of clicked track
-              var trackname = features[0].properties.name +'.geojson';
-              // Replace space dash space with underscore in filenames
-              trackname = trackname.replace(/ - /g, "_");
-              // Replace spaces and apostrophes with underscore in filenames
-              trackname = trackname.replace(/ |\u2019/g, "_");
-              var layerid = features[0].layer.id;
-              layerid = layerid.replace(/_routes/g, "");
-              var layername = "detail_" + trackname;
-              // Remove any previous detail layer of same name
-              if (map.getLayer(layername)) {
-                map.removeSource(layername);
-                map.removeLayer(layername);
-              }
-              map.addSource(layername, {
-                "type": "geojson",
-                "data": "tracks/geojson/" + layerid + "/" + trackname
-              });
-              map.addLayer({
-                "id": layername,
-                "type": "line",
-                "source": layername,
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                "paint": {
-                  "line-color": "orange",
-                  "line-width": 4
-                }
-              });
-              // Toggle the routes layer by simulating a mouse click
-              if (layerid == 'hike') {
-                document.getElementById('Hike').click();
-              } else if (layerid == 'bikes') {
-                document.getElementById('Bike').click();
-              } else if (layerid == 'ski') {
-                document.getElementById('Ski').click();
-              } else if (layerid == 'run') {
-                document.getElementById('Run').click();
-              }
-            });
-
             //----------------------------------------------
             // Create the menu buttons and add click actions
-            toggleLayer("Hike", "hike_routes", "active");
-            toggleLayer("Bike", "bike_routes", "active");
-            toggleLayer("Ski", "ski_routes", "active");
-            toggleLayer("Run", "run_routes", "active");
+            toggleLayer("Hike", "tracks-hike", "active");
+            toggleLayer("Bike", "tracks-bike", "active");
+            toggleLayer("Ski", "tracks-ski", "active");
+            toggleLayer("Run", "tracks-run", "active");
             toggleLayer("Canton", "cantons", "");
             toggleLayer("Marker", "markers", "");
             toggleLayer("Peaks", "mountainsH", "");
