@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-set -x   # Debug mode to echo commands
+#set -x   # Debug mode to echo commands
 
 #ls -lR tracks/
 
@@ -22,8 +22,6 @@ do
     fileOUT=tracks/geojson/$type/$base.geojson
     timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
-    #ls -l $fileIN $fileOUT
-    #if [[ $fileIN -nt $fileOUT ]]; then
     if [[ $timeIN -ge $timeOUT ]]; then
       printf "\n  Generating $fileOUT \n"
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.0001 $fileOUT $fileIN tracks

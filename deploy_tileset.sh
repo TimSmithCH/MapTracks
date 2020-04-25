@@ -5,7 +5,7 @@ set -x   # Debug mode to echo commands
 TOKEN=$(<tileset_api)
 
 tilesets list-sources --token $TOKEN timsmithch
-tilesets update-recipe --token $TOKEN timsmithch.all_tracks ./tracks_recipe.json
+tilesets update-recipe --token $TOKEN timsmithch.all_tracks ./all_tracks_recipe.json
 tilesets publish --token $TOKEN timsmithch.all_tracks
 
 rm tileset_ap*

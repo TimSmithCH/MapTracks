@@ -27,8 +27,8 @@ install:
 
 script:
   - ./generate_geojson.sh
-  - ./tileset_deploy.sh
-  - ./travis_deploy_prep.sh
+  - ./deploy_tileset.sh
+  - ./deploy_travis_prep.sh
 
 deploy:
   provider: pages
