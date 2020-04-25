@@ -20,8 +20,11 @@ do
     base=${file%.gpx}
     fileIN=tracks/gpx/$type/$base.gpx
     fileOUT=tracks/geojson/$type/$base.geojson
-    ls -l $fileIN $fileOUT
-    if [[ $fileIN -nt $fileOUT ]]; then
+    timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
+    timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
+    #ls -l $fileIN $fileOUT
+    #if [[ $fileIN -nt $fileOUT ]]; then
+    if [[ $timeIN -ge $timeOUT ]]; then
       printf "\n  Generating $fileOUT \n"
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.0001 $fileOUT $fileIN tracks
     else
