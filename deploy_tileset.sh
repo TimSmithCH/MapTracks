@@ -16,7 +16,7 @@ tilesets add-source --token $TOKEN timsmithch ski_tracks tracks/geojson/ski_trac
 
 # Launch the tilset generation and wait for completion
 #tilesets list-sources --token $TOKEN timsmithch
-#tilesets update-recipe --token $TOKEN timsmithch.all_tracks ./all_tracks_recipe.json
+tilesets update-recipe --token $TOKEN timsmithch.all_tracks ./all_tracks_recipe.json
 tilesets publish --token $TOKEN timsmithch.all_tracks
 JOBRUN=true
 n=1

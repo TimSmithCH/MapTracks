@@ -30,6 +30,7 @@ do
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
     if [[ $timeIN -ge $timeOUT ]]; then
       printf "\n  Generating $fileOUT \n"
+      # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.000025 $fileOUT $fileIN tracks
     else
       printf "."
