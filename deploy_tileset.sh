@@ -20,7 +20,7 @@ tilesets add-source --token $TOKEN timsmithch ski_tracks tracks/geojson/ski_trac
 tilesets publish --token $TOKEN timsmithch.all_tracks
 JOBRUN=true
 n=1
-while [[ $JOBRUN && $n -lt 21 ]]; do
+while $JOBRUN && [ $n -lt 21 ]; do
   sleep 7
   JOBRUN=$(tilesets status --token $TOKEN timsmithch.all_tracks | jq '.status == "processing"')
   n=$(( n+1 ))

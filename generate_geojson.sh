@@ -10,6 +10,8 @@ mkdir -pv tracks/geojson/run
 mkdir -pv tracks/geojson/ski
 
 TYPES="bike hike run ski"
+FORCE=true
+
 for type in $TYPES
 do
   echo "Processing $type"
@@ -20,11 +22,15 @@ do
     base=${file%.gpx}
     fileIN=tracks/gpx/$type/$base.gpx
     fileOUT=tracks/geojson/$type/$base.geojson
-    timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
+    if $FORCE ; then
+      timeIN="$(date +%s)"
+    else
+      timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
+    fi
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
     if [[ $timeIN -ge $timeOUT ]]; then
       printf "\n  Generating $fileOUT \n"
-      ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.0001 $fileOUT $fileIN tracks
+      ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.000025 $fileOUT $fileIN tracks
     else
       printf "."
     fi
