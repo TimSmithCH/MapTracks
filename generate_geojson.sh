@@ -10,7 +10,7 @@ mkdir -pv tracks/geojson/run
 mkdir -pv tracks/geojson/ski
 
 TYPES="bike hike run ski"
-FORCE=false
+FORCE=true
 
 for type in $TYPES
 do
@@ -31,7 +31,7 @@ do
     if [[ $timeIN -ge $timeOUT ]]; then
       printf "\n  Generating $fileOUT \n"
       # 0.000025 tolerance = resolution of 2m
-      ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.000025 $fileOUT $fileIN tracks
+      ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 $fileOUT $fileIN tracks
     else
       printf "."
     fi
