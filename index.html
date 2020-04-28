@@ -41,6 +41,14 @@
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
 
+            // Add GeoLocation control to the map
+            map.addControl(new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                trackUserLocation: false
+            }));
+
             map.on('load', function () {
               //----------------------------------------------
               // Add Swiss cantons
