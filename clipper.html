@@ -7,8 +7,8 @@
     <title>TrackClip</title>
     <meta name="description" content="TrackClipper">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' />
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src='libs/d3.v3.min.js'></script>
@@ -83,6 +83,17 @@
                 }
                 return filename;
             }
+            function deepCopy(o) {
+                var copy = o,
+                  k;
+                if (o && typeof o === 'object') {
+                    copy = Object.prototype.toString.call(o) === '[object Array]' ? [] : {};
+                    for (k in o) {
+                        copy[k] = deepCopy(o[k]);
+                    }
+                }
+                return copy;
+            }
 
             // Read file name from URl arguement or set default
             var datafile = processArg();
@@ -137,8 +148,9 @@
                     //console.log(data.features[0]);
                     // Use Turf to convert all the LineString points into individual points
                     var temp_data = turf.explode(data.features[0]);
+                    //console.log(data.features[0].geometry.coordinates.length);
                     // But the exploded object has lots of pointers/prototypes, so cant set any values in it. Clone to make a editable copy
-                    var point_data = JSON.parse(JSON.stringify(temp_data));
+                    var point_data = deepCopy(temp_data);
                     // Name each point by its position in array
                     for(var i = 0; i < point_data.features.length; i++){ 
                       point_data.features[i]["properties"]["name"] = i.toString();
@@ -146,7 +158,6 @@
                       point_data.features[i]["properties"]["Minute"] = parseInt(point_data.features[i].properties.coordTimes[i].split(':')[1]);
                       delete point_data.features[i].properties.coordTimes;
                     }
-                    //console.log(point_data);
 
                     // add points to the map
                     map.addSource('points', { type: 'geojson', data: point_data });
