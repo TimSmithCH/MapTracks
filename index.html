@@ -152,70 +152,34 @@
               });
 
               //----------------------------------------------
-              map.addSource('tracks-all', {
-                type: 'vector',
-                url: 'mapbox://timsmithch.all_tracks'
-              });
-              map.addLayer({
-                'id': 'tracks-bike',
-                'type': 'line',
-                'source': 'tracks-all',
-                'source-layer': 'bike_tracks',
-                'layout': {
-                  "visibility": "visible",
-                  'line-join': 'round',
-                  'line-cap': 'round'
-                },
-                'paint': {
-                  'line-color': 'green',
-                  'line-width': 3
-                }
-              })
-              map.addLayer({
-                'id': 'tracks-hike',
-                'type': 'line',
-                'source': 'tracks-all',
-                'source-layer': 'hike_tracks',
-                'layout': {
-                  "visibility": "visible",
-                  'line-join': 'round',
-                  'line-cap': 'round'
-                },
-                'paint': {
-                  'line-color': 'red',
-                  'line-width': 3
-                }
-              })
-              map.addLayer({
-                'id': 'tracks-run',
-                'type': 'line',
-                'source': 'tracks-all',
-                'source-layer': 'run_tracks',
-                'layout': {
-                  "visibility": "visible",
-                  'line-join': 'round',
-                  'line-cap': 'round'
-                },
-                'paint': {
-                  'line-color': 'purple',
-                  'line-width': 3
-                }
-              })
-              map.addLayer({
-                'id': 'tracks-ski',
-                'type': 'line',
-                'source': 'tracks-all',
-                'source-layer': 'ski_tracks',
-                'layout': {
-                  "visibility": "visible",
-                  'line-join': 'round',
-                  'line-cap': 'round'
-                },
-                'paint': {
-                  'line-color': 'blue',
-                  'line-width': 3
-                }
-              })
+              // Create a layer of routes of each type from layers in MapBox tileset
+              // Prepare layer properties object
+              var layer_props = { tracks_hike: { source_layer: "hike_tracks", colour: "red" },
+                                  tracks_bike: { source_layer: "bike_tracks", colour: "green" },
+                                  tracks_ski: { source_layer: "ski_tracks",  colour: "blue" },
+                                  tracks_run: { source_layer: "run_tracks",  colour: "purple" } };
+
+              for (let layer of Object.keys(layer_props)) {
+                map.addSource('tracks-all', {
+                  type: 'vector',
+                  url: 'mapbox://timsmithch.all_tracks'
+                });
+                map.addLayer({
+                  'id': layer,
+                  'type': 'line',
+                  'source': 'tracks-all',
+                  "source-layer": layer_props[layer]["source_layer"],
+                  "layout": {
+                    "visibility": "visible",
+                    "line-join": "round",
+                    "line-cap": "round"
+                  },
+                  "paint": {
+                    "line-color": layer_props[layer]["colour"],
+                    "line-width": 3
+                  }
+                });
+              }
             });
 
             //----------------------------------------------
@@ -225,11 +189,28 @@
               closeOnClick: false
             });
 
+            // Loop creating popup on hover for each layer
+            for (let layer of Object.keys(layer_props)) {
+              map.on('mouseenter', layer, function(e) {
+                // Change the cursor style as a UI indicator.
+                map.getCanvas().style.cursor = 'pointer';
+                // Populate the popup and set its coordinates based on the feature found.
+                var date = e.features[0].properties.time.split('T',1)
+                popup.setLngLat(e.lngLat)
+                    .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+                    .addTo(map);
+              });
+              map.on('mouseleave', layer, function() {
+                map.getCanvas().style.cursor = '';
+                popup.remove();
+              });
+            }
+
             // Create popup on hover for mountains
             map.on('mouseenter', "mountainsH", function(e) {
-              // Change the cursor style as a UI indicator.
+              // Change the cursor style as a UI indicator
               map.getCanvas().style.cursor = 'pointer';
-              // Populate the popup and set its coordinates based on the feature found.
+              // Populate the popup and set its coordinates based on the feature found
               var height = e.features[0].properties.height
               popup.setLngLat(e.lngLat)
                 .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
