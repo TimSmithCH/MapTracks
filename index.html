@@ -160,11 +160,11 @@
 
               //----------------------------------------------
               // Create a layer of routes of each type from layers in MapBox tileset
+              map.addSource('tracks-all', {
+                type: 'vector',
+                url: 'mapbox://timsmithch.all_tracks'
+              });
               for (let layer of Object.keys(layer_props)) {
-                map.addSource('tracks-all', {
-                  type: 'vector',
-                  url: 'mapbox://timsmithch.all_tracks'
-                });
                 map.addLayer({
                   'id': layer,
                   'type': 'line',
