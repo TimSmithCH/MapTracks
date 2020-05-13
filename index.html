@@ -36,6 +36,13 @@
               center: [7.2989238, 46.032874], // starting position
               zoom: 11 // starting zoom
             });
+
+            // Prepare layer properties object
+            var layer_props = { tracks_hike: { source_layer: "hike_tracks", colour: "red" },
+                                tracks_bike: { source_layer: "bike_tracks", colour: "green" },
+                                tracks_ski: { source_layer: "ski_tracks",  colour: "blue" },
+                                tracks_run: { source_layer: "run_tracks",  colour: "purple" } };
+
             
             // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
@@ -153,12 +160,6 @@
 
               //----------------------------------------------
               // Create a layer of routes of each type from layers in MapBox tileset
-              // Prepare layer properties object
-              var layer_props = { tracks_hike: { source_layer: "hike_tracks", colour: "red" },
-                                  tracks_bike: { source_layer: "bike_tracks", colour: "green" },
-                                  tracks_ski: { source_layer: "ski_tracks",  colour: "blue" },
-                                  tracks_run: { source_layer: "run_tracks",  colour: "purple" } };
-
               for (let layer of Object.keys(layer_props)) {
                 map.addSource('tracks-all', {
                   type: 'vector',
