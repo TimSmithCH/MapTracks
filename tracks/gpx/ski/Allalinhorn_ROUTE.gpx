@@ -1,68 +1,68 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
  <metadata>
   <time>2014-09-28T00:00:01Z</time>
  </metadata>
-  <trk>
-    <name>Allalinhorn</name>
-    <trkseg>
-      <trkpt lat="46.0574966293206" lon="7.904815668341917">
-        <ele>3451.4</ele>
-      </trkpt>
-      <trkpt lat="46.0571465326136" lon="7.90411203845199">
-        <ele>3445.7</ele>
-      </trkpt>
-      <trkpt lat="46.05636665417038" lon="7.90334945169184">
-        <ele>3454.2</ele>
-      </trkpt>
-      <trkpt lat="46.05538234246118" lon="7.902354684458364">
-        <ele>3462.8</ele>
-      </trkpt>
-      <trkpt lat="46.05461880275541" lon="7.900734957041697">
-        <ele>3445.8</ele>
-      </trkpt>
-      <trkpt lat="46.0532209985965" lon="7.896464268110124">
-        <ele>3483.7</ele>
-      </trkpt>
-      <trkpt lat="46.051784499779686" lon="7.891400721436135">
-        <ele>3537.3</ele>
-      </trkpt>
-      <trkpt lat="46.05097757156692" lon="7.889356871002481">
-        <ele>3554.3</ele>
-      </trkpt>
-      <trkpt lat="46.04996819953666" lon="7.8881778933859055">
-        <ele>3601</ele>
-      </trkpt>
-      <trkpt lat="46.04900051474394" lon="7.887810452722848">
-        <ele>3669.1</ele>
-      </trkpt>
-      <trkpt lat="46.04788954180547" lon="7.887967243709232">
-        <ele>3739.3</ele>
-      </trkpt>
-      <trkpt lat="46.04668838638841" lon="7.888206242426466">
-        <ele>3822.8</ele>
-      </trkpt>
-      <trkpt lat="46.046197498978316" lon="7.890589452188212">
-        <ele>3849.6</ele>
-      </trkpt>
-      <trkpt lat="46.04601940671104" lon="7.891786207671856">
-        <ele>3895.9</ele>
-      </trkpt>
-      <trkpt lat="46.04606236933842" lon="7.892275071910886">
-        <ele>3914.8</ele>
-      </trkpt>
-      <trkpt lat="46.04579607883145" lon="7.893056316470268">
-        <ele>3937.4</ele>
-      </trkpt>
-      <trkpt lat="46.04566826163431" lon="7.894511552140642">
-        <ele>3993.2</ele>
-      </trkpt>
-      <trkpt lat="46.04578292850609" lon="7.89472450092897">
-        <ele>4005.6</ele>
-      </trkpt>
-      <trkpt lat="46.046136923541226" lon="7.894478589466811">
-        <ele>4006.7</ele>
-      </trkpt>
-    </trkseg>
-  </trk>
+ <trk>
+  <name>Allalinhorn_ROUTE</name>
+  <trkseg>
+   <trkpt lat="46.0574966293206" lon="7.904815668341917">
+    <ele>3451.4</ele>
+   </trkpt>
+   <trkpt lat="46.0571465326136" lon="7.90411203845199">
+    <ele>3445.7</ele>
+   </trkpt>
+   <trkpt lat="46.05636665417038" lon="7.90334945169184">
+    <ele>3454.2</ele>
+   </trkpt>
+   <trkpt lat="46.05538234246118" lon="7.902354684458364">
+    <ele>3462.8</ele>
+   </trkpt>
+   <trkpt lat="46.05461880275541" lon="7.900734957041697">
+    <ele>3445.8</ele>
+   </trkpt>
+   <trkpt lat="46.0532209985965" lon="7.896464268110124">
+    <ele>3483.7</ele>
+   </trkpt>
+   <trkpt lat="46.051784499779686" lon="7.891400721436135">
+    <ele>3537.3</ele>
+   </trkpt>
+   <trkpt lat="46.05097757156692" lon="7.889356871002481">
+    <ele>3554.3</ele>
+   </trkpt>
+   <trkpt lat="46.04996819953666" lon="7.8881778933859055">
+    <ele>3601.0</ele>
+   </trkpt>
+   <trkpt lat="46.04900051474394" lon="7.887810452722848">
+    <ele>3669.1</ele>
+   </trkpt>
+   <trkpt lat="46.04788954180547" lon="7.887967243709232">
+    <ele>3739.3</ele>
+   </trkpt>
+   <trkpt lat="46.04668838638841" lon="7.888206242426466">
+    <ele>3822.8</ele>
+   </trkpt>
+   <trkpt lat="46.046197498978316" lon="7.890589452188212">
+    <ele>3849.6</ele>
+   </trkpt>
+   <trkpt lat="46.04601940671104" lon="7.891786207671856">
+    <ele>3895.9</ele>
+   </trkpt>
+   <trkpt lat="46.04606236933842" lon="7.892275071910886">
+    <ele>3914.8</ele>
+   </trkpt>
+   <trkpt lat="46.04579607883145" lon="7.893056316470268">
+    <ele>3937.4</ele>
+   </trkpt>
+   <trkpt lat="46.04566826163431" lon="7.894511552140642">
+    <ele>3993.2</ele>
+   </trkpt>
+   <trkpt lat="46.04578292850609" lon="7.89472450092897">
+    <ele>4005.6</ele>
+   </trkpt>
+   <trkpt lat="46.046136923541226" lon="7.894478589466811">
+    <ele>4006.7</ele>
+   </trkpt>
+  </trkseg>
+ </trk>
 </gpx>

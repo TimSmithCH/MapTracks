@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gpx creator="StravaGPX" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd" version="1.1" creator="StravaGPX">
  <metadata>
   <time>2019-11-04T20:45:20Z</time>
  </metadata>
  <trk>
-  <name>Park 21, 22 &amp; 23</name>
+  <name>Park_21_22_23</name>
   <type>9</type>
   <trkseg>
-   <trkpt lat="-34.9292350" lon="138.5997710">
+   <trkpt lat="-34.929235" lon="138.599771">
     <ele>98.8</ele>
     <time>2019-11-04T20:45:20Z</time>
     <extensions>
@@ -18,7 +18,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292580" lon="138.5997730">
+   <trkpt lat="-34.929258" lon="138.599773">
     <ele>100.0</ele>
     <time>2019-11-04T20:45:22Z</time>
     <extensions>
@@ -29,7 +29,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292710" lon="138.5997710">
+   <trkpt lat="-34.929271" lon="138.599771">
     <ele>98.8</ele>
     <time>2019-11-04T20:45:23Z</time>
     <extensions>
@@ -40,7 +40,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293080" lon="138.5997770">
+   <trkpt lat="-34.929308" lon="138.599777">
     <ele>99.4</ele>
     <time>2019-11-04T20:45:25Z</time>
     <extensions>
@@ -51,7 +51,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293690" lon="138.5997970">
+   <trkpt lat="-34.929369" lon="138.599797">
     <ele>99.2</ele>
     <time>2019-11-04T20:45:27Z</time>
     <extensions>
@@ -62,7 +62,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294060" lon="138.5998130">
+   <trkpt lat="-34.929406" lon="138.599813">
     <ele>99.2</ele>
     <time>2019-11-04T20:45:28Z</time>
     <extensions>
@@ -73,7 +73,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294350" lon="138.5998280">
+   <trkpt lat="-34.929435" lon="138.599828">
     <ele>99.2</ele>
     <time>2019-11-04T20:45:29Z</time>
     <extensions>
@@ -84,7 +84,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294650" lon="138.5998410">
+   <trkpt lat="-34.929465" lon="138.599841">
     <ele>99.2</ele>
     <time>2019-11-04T20:45:30Z</time>
     <extensions>
@@ -95,7 +95,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294990" lon="138.5998370">
+   <trkpt lat="-34.929499" lon="138.599837">
     <ele>99.4</ele>
     <time>2019-11-04T20:45:31Z</time>
     <extensions>
@@ -106,7 +106,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9295250" lon="138.5998410">
+   <trkpt lat="-34.929525" lon="138.599841">
     <ele>99.4</ele>
     <time>2019-11-04T20:45:32Z</time>
     <extensions>
@@ -117,7 +117,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9295550" lon="138.5998460">
+   <trkpt lat="-34.929555" lon="138.599846">
     <ele>99.2</ele>
     <time>2019-11-04T20:45:33Z</time>
     <extensions>
@@ -128,7 +128,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9296200" lon="138.5998610">
+   <trkpt lat="-34.92962" lon="138.599861">
     <ele>99.4</ele>
     <time>2019-11-04T20:45:35Z</time>
     <extensions>
@@ -139,7 +139,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9296510" lon="138.5998690">
+   <trkpt lat="-34.929651" lon="138.599869">
     <ele>99.4</ele>
     <time>2019-11-04T20:45:36Z</time>
     <extensions>
@@ -150,7 +150,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9297670" lon="138.5998850">
+   <trkpt lat="-34.929767" lon="138.599885">
     <ele>99.8</ele>
     <time>2019-11-04T20:45:40Z</time>
     <extensions>
@@ -161,7 +161,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9298180" lon="138.5999000">
+   <trkpt lat="-34.929818" lon="138.5999">
     <ele>100.0</ele>
     <time>2019-11-04T20:45:42Z</time>
     <extensions>
@@ -172,7 +172,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9298720" lon="138.5999390">
+   <trkpt lat="-34.929872" lon="138.599939">
     <ele>100.0</ele>
     <time>2019-11-04T20:45:44Z</time>
     <extensions>
@@ -183,7 +183,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299750" lon="138.6000190">
+   <trkpt lat="-34.929975" lon="138.600019">
     <ele>100.0</ele>
     <time>2019-11-04T20:45:48Z</time>
     <extensions>
@@ -194,7 +194,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300220" lon="138.6000500">
+   <trkpt lat="-34.930022" lon="138.60005">
     <ele>99.8</ele>
     <time>2019-11-04T20:45:50Z</time>
     <extensions>
@@ -205,7 +205,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300590" lon="138.6000500">
+   <trkpt lat="-34.930059" lon="138.60005">
     <ele>100.0</ele>
     <time>2019-11-04T20:45:52Z</time>
     <extensions>
@@ -216,7 +216,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300660" lon="138.6000420">
+   <trkpt lat="-34.930066" lon="138.600042">
     <ele>100.0</ele>
     <time>2019-11-04T20:45:53Z</time>
     <extensions>
@@ -227,7 +227,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300900" lon="138.6000530">
+   <trkpt lat="-34.93009" lon="138.600053">
     <ele>100.8</ele>
     <time>2019-11-04T20:45:58Z</time>
     <extensions>
@@ -238,7 +238,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9301900" lon="138.6001110">
+   <trkpt lat="-34.93019" lon="138.600111">
     <ele>100.4</ele>
     <time>2019-11-04T20:46:02Z</time>
     <extensions>
@@ -249,7 +249,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9302190" lon="138.6001300">
+   <trkpt lat="-34.930219" lon="138.60013">
     <ele>100.2</ele>
     <time>2019-11-04T20:46:03Z</time>
     <extensions>
@@ -260,7 +260,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9303440" lon="138.6001630">
+   <trkpt lat="-34.930344" lon="138.600163">
     <ele>99.6</ele>
     <time>2019-11-04T20:46:07Z</time>
     <extensions>
@@ -271,7 +271,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9305230" lon="138.6001960">
+   <trkpt lat="-34.930523" lon="138.600196">
     <ele>100.0</ele>
     <time>2019-11-04T20:46:13Z</time>
     <extensions>
@@ -282,7 +282,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9306570" lon="138.6002200">
+   <trkpt lat="-34.930657" lon="138.60022">
     <ele>100.8</ele>
     <time>2019-11-04T20:46:17Z</time>
     <extensions>
@@ -293,7 +293,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9307260" lon="138.6002120">
+   <trkpt lat="-34.930726" lon="138.600212">
     <ele>101.0</ele>
     <time>2019-11-04T20:46:19Z</time>
     <extensions>
@@ -304,7 +304,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9309240" lon="138.6002230">
+   <trkpt lat="-34.930924" lon="138.600223">
     <ele>101.2</ele>
     <time>2019-11-04T20:46:25Z</time>
     <extensions>
@@ -315,7 +315,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9309910" lon="138.6002290">
+   <trkpt lat="-34.930991" lon="138.600229">
     <ele>101.2</ele>
     <time>2019-11-04T20:46:27Z</time>
     <extensions>
@@ -326,7 +326,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9311170" lon="138.6002180">
+   <trkpt lat="-34.931117" lon="138.600218">
     <ele>101.4</ele>
     <time>2019-11-04T20:46:31Z</time>
     <extensions>
@@ -337,7 +337,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9313260" lon="138.6001900">
+   <trkpt lat="-34.931326" lon="138.60019">
     <ele>101.2</ele>
     <time>2019-11-04T20:46:37Z</time>
     <extensions>
@@ -348,7 +348,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9313610" lon="138.6001830">
+   <trkpt lat="-34.931361" lon="138.600183">
     <ele>101.2</ele>
     <time>2019-11-04T20:46:38Z</time>
     <extensions>
@@ -359,7 +359,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9315610" lon="138.6001470">
+   <trkpt lat="-34.931561" lon="138.600147">
     <ele>101.0</ele>
     <time>2019-11-04T20:46:44Z</time>
     <extensions>
@@ -370,7 +370,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9317450" lon="138.6001030">
+   <trkpt lat="-34.931745" lon="138.600103">
     <ele>100.8</ele>
     <time>2019-11-04T20:46:50Z</time>
     <extensions>
@@ -381,7 +381,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9318690" lon="138.6000680">
+   <trkpt lat="-34.931869" lon="138.600068">
     <ele>101.0</ele>
     <time>2019-11-04T20:46:54Z</time>
     <extensions>
@@ -392,7 +392,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9319010" lon="138.6000630">
+   <trkpt lat="-34.931901" lon="138.600063">
     <ele>101.0</ele>
     <time>2019-11-04T20:46:55Z</time>
     <extensions>
@@ -403,7 +403,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9320590" lon="138.6000600">
+   <trkpt lat="-34.932059" lon="138.60006">
     <ele>101.4</ele>
     <time>2019-11-04T20:47:00Z</time>
     <extensions>
@@ -414,7 +414,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9322070" lon="138.6000610">
+   <trkpt lat="-34.932207" lon="138.600061">
     <ele>101.0</ele>
     <time>2019-11-04T20:47:05Z</time>
     <extensions>
@@ -425,7 +425,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9323980" lon="138.6000530">
+   <trkpt lat="-34.932398" lon="138.600053">
     <ele>101.4</ele>
     <time>2019-11-04T20:47:11Z</time>
     <extensions>
@@ -436,7 +436,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9324910" lon="138.6000490">
+   <trkpt lat="-34.932491" lon="138.600049">
     <ele>101.6</ele>
     <time>2019-11-04T20:47:14Z</time>
     <extensions>
@@ -447,7 +447,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9325620" lon="138.6000440">
+   <trkpt lat="-34.932562" lon="138.600044">
     <ele>101.6</ele>
     <time>2019-11-04T20:47:17Z</time>
     <extensions>
@@ -458,7 +458,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326530" lon="138.6000170">
+   <trkpt lat="-34.932653" lon="138.600017">
     <ele>101.2</ele>
     <time>2019-11-04T20:47:22Z</time>
     <extensions>
@@ -469,7 +469,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326580" lon="138.6000170">
+   <trkpt lat="-34.932658" lon="138.600017">
     <ele>101.2</ele>
     <time>2019-11-04T20:47:23Z</time>
     <extensions>
@@ -480,7 +480,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326610" lon="138.6000250">
+   <trkpt lat="-34.932661" lon="138.600025">
     <ele>101.6</ele>
     <time>2019-11-04T20:47:27Z</time>
     <extensions>
@@ -491,7 +491,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327240" lon="138.6000290">
+   <trkpt lat="-34.932724" lon="138.600029">
     <ele>101.6</ele>
     <time>2019-11-04T20:47:31Z</time>
     <extensions>
@@ -502,7 +502,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327530" lon="138.6000260">
+   <trkpt lat="-34.932753" lon="138.600026">
     <ele>101.4</ele>
     <time>2019-11-04T20:47:32Z</time>
     <extensions>
@@ -513,7 +513,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328280" lon="138.6000150">
+   <trkpt lat="-34.932828" lon="138.600015">
     <ele>100.8</ele>
     <time>2019-11-04T20:47:35Z</time>
     <extensions>
@@ -524,7 +524,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328590" lon="138.6000150">
+   <trkpt lat="-34.932859" lon="138.600015">
     <ele>100.8</ele>
     <time>2019-11-04T20:47:36Z</time>
     <extensions>
@@ -535,7 +535,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9329240" lon="138.6000140">
+   <trkpt lat="-34.932924" lon="138.600014">
     <ele>100.6</ele>
     <time>2019-11-04T20:47:38Z</time>
     <extensions>
@@ -546,7 +546,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9330360" lon="138.6000090">
+   <trkpt lat="-34.933036" lon="138.600009">
     <ele>100.6</ele>
     <time>2019-11-04T20:47:42Z</time>
     <extensions>
@@ -557,7 +557,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9330940" lon="138.6000120">
+   <trkpt lat="-34.933094" lon="138.600012">
     <ele>100.6</ele>
     <time>2019-11-04T20:47:44Z</time>
     <extensions>
@@ -568,7 +568,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9331640" lon="138.6000170">
+   <trkpt lat="-34.933164" lon="138.600017">
     <ele>100.6</ele>
     <time>2019-11-04T20:47:47Z</time>
     <extensions>
@@ -579,7 +579,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9333770" lon="138.6001630">
+   <trkpt lat="-34.933377" lon="138.600163">
     <ele>100.6</ele>
     <time>2019-11-04T20:47:52Z</time>
     <extensions>
@@ -590,7 +590,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9335320" lon="138.6002680">
+   <trkpt lat="-34.933532" lon="138.600268">
     <ele>100.6</ele>
     <time>2019-11-04T20:47:56Z</time>
     <extensions>
@@ -601,7 +601,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9336040" lon="138.6003220">
+   <trkpt lat="-34.933604" lon="138.600322">
     <ele>100.6</ele>
     <time>2019-11-04T20:47:58Z</time>
     <extensions>
@@ -612,7 +612,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9337820" lon="138.6004260">
+   <trkpt lat="-34.933782" lon="138.600426">
     <ele>100.2</ele>
     <time>2019-11-04T20:48:03Z</time>
     <extensions>
@@ -623,7 +623,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9338020" lon="138.6004350">
+   <trkpt lat="-34.933802" lon="138.600435">
     <ele>100.2</ele>
     <time>2019-11-04T20:48:04Z</time>
     <extensions>
@@ -634,7 +634,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9339570" lon="138.6005100">
+   <trkpt lat="-34.933957" lon="138.60051">
     <ele>100.0</ele>
     <time>2019-11-04T20:48:10Z</time>
     <extensions>
@@ -645,7 +645,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9339720" lon="138.6005170">
+   <trkpt lat="-34.933972" lon="138.600517">
     <ele>99.8</ele>
     <time>2019-11-04T20:48:11Z</time>
     <extensions>
@@ -656,7 +656,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9340180" lon="138.6005200">
+   <trkpt lat="-34.934018" lon="138.60052">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:13Z</time>
     <extensions>
@@ -667,7 +667,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9340390" lon="138.6005060">
+   <trkpt lat="-34.934039" lon="138.600506">
     <ele>99.4</ele>
     <time>2019-11-04T20:48:14Z</time>
     <extensions>
@@ -678,7 +678,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9341800" lon="138.6004460">
+   <trkpt lat="-34.93418" lon="138.600446">
     <ele>100.0</ele>
     <time>2019-11-04T20:48:19Z</time>
     <extensions>
@@ -689,7 +689,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9343930" lon="138.6004160">
+   <trkpt lat="-34.934393" lon="138.600416">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:24Z</time>
     <extensions>
@@ -700,7 +700,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9344390" lon="138.6004190">
+   <trkpt lat="-34.934439" lon="138.600419">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:25Z</time>
     <extensions>
@@ -711,7 +711,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9345420" lon="138.6003880">
+   <trkpt lat="-34.934542" lon="138.600388">
     <ele>99.4</ele>
     <time>2019-11-04T20:48:28Z</time>
     <extensions>
@@ -722,7 +722,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9346320" lon="138.6003470">
+   <trkpt lat="-34.934632" lon="138.600347">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:31Z</time>
     <extensions>
@@ -733,7 +733,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9346940" lon="138.6003390">
+   <trkpt lat="-34.934694" lon="138.600339">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:34Z</time>
     <extensions>
@@ -744,7 +744,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9347240" lon="138.6003470">
+   <trkpt lat="-34.934724" lon="138.600347">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:35Z</time>
     <extensions>
@@ -755,7 +755,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9347610" lon="138.6003490">
+   <trkpt lat="-34.934761" lon="138.600349">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:36Z</time>
     <extensions>
@@ -766,7 +766,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9349100" lon="138.6003510">
+   <trkpt lat="-34.93491" lon="138.600351">
     <ele>99.0</ele>
     <time>2019-11-04T20:48:41Z</time>
     <extensions>
@@ -777,7 +777,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9350950" lon="138.6003170">
+   <trkpt lat="-34.935095" lon="138.600317">
     <ele>98.8</ele>
     <time>2019-11-04T20:48:47Z</time>
     <extensions>
@@ -788,7 +788,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9351330" lon="138.6003020">
+   <trkpt lat="-34.935133" lon="138.600302">
     <ele>99.2</ele>
     <time>2019-11-04T20:48:49Z</time>
     <extensions>
@@ -799,7 +799,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9351970" lon="138.6002720">
+   <trkpt lat="-34.935197" lon="138.600272">
     <ele>99.4</ele>
     <time>2019-11-04T20:48:52Z</time>
     <extensions>
@@ -810,7 +810,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9351990" lon="138.6002680">
+   <trkpt lat="-34.935199" lon="138.600268">
     <ele>99.4</ele>
     <time>2019-11-04T20:48:53Z</time>
     <extensions>
@@ -821,7 +821,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9352140" lon="138.6002710">
+   <trkpt lat="-34.935214" lon="138.600271">
     <ele>99.6</ele>
     <time>2019-11-04T20:48:55Z</time>
     <extensions>
@@ -832,7 +832,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9352540" lon="138.6002670">
+   <trkpt lat="-34.935254" lon="138.600267">
     <ele>99.4</ele>
     <time>2019-11-04T20:48:57Z</time>
     <extensions>
@@ -843,7 +843,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9353920" lon="138.6002080">
+   <trkpt lat="-34.935392" lon="138.600208">
     <ele>98.8</ele>
     <time>2019-11-04T20:49:01Z</time>
     <extensions>
@@ -854,7 +854,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9354330" lon="138.6001820">
+   <trkpt lat="-34.935433" lon="138.600182">
     <ele>98.8</ele>
     <time>2019-11-04T20:49:02Z</time>
     <extensions>
@@ -865,7 +865,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9355970" lon="138.6000890">
+   <trkpt lat="-34.935597" lon="138.600089">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:06Z</time>
     <extensions>
@@ -876,7 +876,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9356620" lon="138.6000380">
+   <trkpt lat="-34.935662" lon="138.600038">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:08Z</time>
     <extensions>
@@ -887,7 +887,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9357040" lon="138.5999960">
+   <trkpt lat="-34.935704" lon="138.599996">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:10Z</time>
     <extensions>
@@ -898,7 +898,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9357410" lon="138.5999620">
+   <trkpt lat="-34.935741" lon="138.599962">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:12Z</time>
     <extensions>
@@ -909,7 +909,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9358650" lon="138.5998550">
+   <trkpt lat="-34.935865" lon="138.599855">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:17Z</time>
     <extensions>
@@ -920,7 +920,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9359400" lon="138.5997820">
+   <trkpt lat="-34.93594" lon="138.599782">
     <ele>98.4</ele>
     <time>2019-11-04T20:49:20Z</time>
     <extensions>
@@ -931,7 +931,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9359440" lon="138.5997210">
+   <trkpt lat="-34.935944" lon="138.599721">
     <ele>98.4</ele>
     <time>2019-11-04T20:49:22Z</time>
     <extensions>
@@ -942,7 +942,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9358920" lon="138.5995950">
+   <trkpt lat="-34.935892" lon="138.599595">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:27Z</time>
     <extensions>
@@ -953,7 +953,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9358870" lon="138.5995620">
+   <trkpt lat="-34.935887" lon="138.599562">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:29Z</time>
     <extensions>
@@ -964,7 +964,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9359140" lon="138.5994940">
+   <trkpt lat="-34.935914" lon="138.599494">
     <ele>98.2</ele>
     <time>2019-11-04T20:49:32Z</time>
     <extensions>
@@ -975,7 +975,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9360270" lon="138.5994250">
+   <trkpt lat="-34.936027" lon="138.599425">
     <ele>98.4</ele>
     <time>2019-11-04T20:49:35Z</time>
     <extensions>
@@ -986,7 +986,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9360880" lon="138.5993680">
+   <trkpt lat="-34.936088" lon="138.599368">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:37Z</time>
     <extensions>
@@ -997,7 +997,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361690" lon="138.5993240">
+   <trkpt lat="-34.936169" lon="138.599324">
     <ele>99.0</ele>
     <time>2019-11-04T20:49:39Z</time>
     <extensions>
@@ -1008,7 +1008,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361910" lon="138.5992840">
+   <trkpt lat="-34.936191" lon="138.599284">
     <ele>99.0</ele>
     <time>2019-11-04T20:49:41Z</time>
     <extensions>
@@ -1019,7 +1019,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361920" lon="138.5991240">
+   <trkpt lat="-34.936192" lon="138.599124">
     <ele>99.0</ele>
     <time>2019-11-04T20:49:46Z</time>
     <extensions>
@@ -1030,7 +1030,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9362150" lon="138.5989470">
+   <trkpt lat="-34.936215" lon="138.598947">
     <ele>99.0</ele>
     <time>2019-11-04T20:49:50Z</time>
     <extensions>
@@ -1041,7 +1041,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9362150" lon="138.5987740">
+   <trkpt lat="-34.936215" lon="138.598774">
     <ele>98.6</ele>
     <time>2019-11-04T20:49:55Z</time>
     <extensions>
@@ -1052,7 +1052,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9363180" lon="138.5986630">
+   <trkpt lat="-34.936318" lon="138.598663">
     <ele>98.2</ele>
     <time>2019-11-04T20:49:59Z</time>
     <extensions>
@@ -1063,7 +1063,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9363660" lon="138.5985870">
+   <trkpt lat="-34.936366" lon="138.598587">
     <ele>98.6</ele>
     <time>2019-11-04T20:50:02Z</time>
     <extensions>
@@ -1074,7 +1074,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9363820" lon="138.5985450">
+   <trkpt lat="-34.936382" lon="138.598545">
     <ele>98.4</ele>
     <time>2019-11-04T20:50:04Z</time>
     <extensions>
@@ -1085,7 +1085,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364130" lon="138.5984530">
+   <trkpt lat="-34.936413" lon="138.598453">
     <ele>98.6</ele>
     <time>2019-11-04T20:50:08Z</time>
     <extensions>
@@ -1096,7 +1096,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364200" lon="138.5984230">
+   <trkpt lat="-34.93642" lon="138.598423">
     <ele>98.4</ele>
     <time>2019-11-04T20:50:09Z</time>
     <extensions>
@@ -1107,7 +1107,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364270" lon="138.5983520">
+   <trkpt lat="-34.936427" lon="138.598352">
     <ele>98.4</ele>
     <time>2019-11-04T20:50:11Z</time>
     <extensions>
@@ -1118,7 +1118,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364280" lon="138.5982790">
+   <trkpt lat="-34.936428" lon="138.598279">
     <ele>98.2</ele>
     <time>2019-11-04T20:50:13Z</time>
     <extensions>
@@ -1129,7 +1129,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364430" lon="138.5981160">
+   <trkpt lat="-34.936443" lon="138.598116">
     <ele>98.0</ele>
     <time>2019-11-04T20:50:17Z</time>
     <extensions>
@@ -1140,7 +1140,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365130" lon="138.5978770">
+   <trkpt lat="-34.936513" lon="138.597877">
     <ele>97.8</ele>
     <time>2019-11-04T20:50:23Z</time>
     <extensions>
@@ -1151,7 +1151,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365410" lon="138.5977370">
+   <trkpt lat="-34.936541" lon="138.597737">
     <ele>97.8</ele>
     <time>2019-11-04T20:50:27Z</time>
     <extensions>
@@ -1162,7 +1162,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365470" lon="138.5976990">
+   <trkpt lat="-34.936547" lon="138.597699">
     <ele>97.6</ele>
     <time>2019-11-04T20:50:28Z</time>
     <extensions>
@@ -1173,7 +1173,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365650" lon="138.5976220">
+   <trkpt lat="-34.936565" lon="138.597622">
     <ele>97.6</ele>
     <time>2019-11-04T20:50:30Z</time>
     <extensions>
@@ -1184,7 +1184,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365500" lon="138.5974900">
+   <trkpt lat="-34.93655" lon="138.59749">
     <ele>97.6</ele>
     <time>2019-11-04T20:50:33Z</time>
     <extensions>
@@ -1195,7 +1195,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365420" lon="138.5974120">
+   <trkpt lat="-34.936542" lon="138.597412">
     <ele>98.0</ele>
     <time>2019-11-04T20:50:35Z</time>
     <extensions>
@@ -1206,7 +1206,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365190" lon="138.5973740">
+   <trkpt lat="-34.936519" lon="138.597374">
     <ele>98.0</ele>
     <time>2019-11-04T20:50:37Z</time>
     <extensions>
@@ -1217,7 +1217,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364960" lon="138.5973310">
+   <trkpt lat="-34.936496" lon="138.597331">
     <ele>97.8</ele>
     <time>2019-11-04T20:50:40Z</time>
     <extensions>
@@ -1228,7 +1228,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365130" lon="138.5973080">
+   <trkpt lat="-34.936513" lon="138.597308">
     <ele>97.6</ele>
     <time>2019-11-04T20:50:42Z</time>
     <extensions>
@@ -1239,7 +1239,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365400" lon="138.5972730">
+   <trkpt lat="-34.93654" lon="138.597273">
     <ele>97.6</ele>
     <time>2019-11-04T20:50:52Z</time>
     <extensions>
@@ -1250,7 +1250,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365370" lon="138.5972730">
+   <trkpt lat="-34.936537" lon="138.597273">
     <ele>97.2</ele>
     <time>2019-11-04T20:50:58Z</time>
     <extensions>
@@ -1261,7 +1261,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365310" lon="138.5972650">
+   <trkpt lat="-34.936531" lon="138.597265">
     <ele>97.0</ele>
     <time>2019-11-04T20:51:03Z</time>
     <extensions>
@@ -1272,7 +1272,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365920" lon="138.5972300">
+   <trkpt lat="-34.936592" lon="138.59723">
     <ele>97.2</ele>
     <time>2019-11-04T20:51:08Z</time>
     <extensions>
@@ -1283,7 +1283,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366110" lon="138.5972020">
+   <trkpt lat="-34.936611" lon="138.597202">
     <ele>97.2</ele>
     <time>2019-11-04T20:51:09Z</time>
     <extensions>
@@ -1294,7 +1294,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366160" lon="138.5971180">
+   <trkpt lat="-34.936616" lon="138.597118">
     <ele>97.4</ele>
     <time>2019-11-04T20:51:11Z</time>
     <extensions>
@@ -1305,7 +1305,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366080" lon="138.5970280">
+   <trkpt lat="-34.936608" lon="138.597028">
     <ele>97.2</ele>
     <time>2019-11-04T20:51:13Z</time>
     <extensions>
@@ -1316,7 +1316,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366110" lon="138.5969440">
+   <trkpt lat="-34.936611" lon="138.596944">
     <ele>97.2</ele>
     <time>2019-11-04T20:51:15Z</time>
     <extensions>
@@ -1327,7 +1327,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366110" lon="138.5969020">
+   <trkpt lat="-34.936611" lon="138.596902">
     <ele>97.2</ele>
     <time>2019-11-04T20:51:16Z</time>
     <extensions>
@@ -1338,7 +1338,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365870" lon="138.5967490">
+   <trkpt lat="-34.936587" lon="138.596749">
     <ele>97.8</ele>
     <time>2019-11-04T20:51:20Z</time>
     <extensions>
@@ -1349,7 +1349,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365760" lon="138.5967230">
+   <trkpt lat="-34.936576" lon="138.596723">
     <ele>98.0</ele>
     <time>2019-11-04T20:51:21Z</time>
     <extensions>
@@ -1360,7 +1360,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365540" lon="138.5966720">
+   <trkpt lat="-34.936554" lon="138.596672">
     <ele>98.2</ele>
     <time>2019-11-04T20:51:23Z</time>
     <extensions>
@@ -1371,7 +1371,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365540" lon="138.5966170">
+   <trkpt lat="-34.936554" lon="138.596617">
     <ele>98.2</ele>
     <time>2019-11-04T20:51:25Z</time>
     <extensions>
@@ -1382,7 +1382,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365830" lon="138.5965420">
+   <trkpt lat="-34.936583" lon="138.596542">
     <ele>98.0</ele>
     <time>2019-11-04T20:51:28Z</time>
     <extensions>
@@ -1393,7 +1393,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365650" lon="138.5964870">
+   <trkpt lat="-34.936565" lon="138.596487">
     <ele>97.8</ele>
     <time>2019-11-04T20:51:30Z</time>
     <extensions>
@@ -1404,7 +1404,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365490" lon="138.5963510">
+   <trkpt lat="-34.936549" lon="138.596351">
     <ele>97.6</ele>
     <time>2019-11-04T20:51:34Z</time>
     <extensions>
@@ -1415,7 +1415,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365090" lon="138.5962030">
+   <trkpt lat="-34.936509" lon="138.596203">
     <ele>98.0</ele>
     <time>2019-11-04T20:51:38Z</time>
     <extensions>
@@ -1426,7 +1426,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364960" lon="138.5961630">
+   <trkpt lat="-34.936496" lon="138.596163">
     <ele>98.0</ele>
     <time>2019-11-04T20:51:39Z</time>
     <extensions>
@@ -1437,7 +1437,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364940" lon="138.5960720">
+   <trkpt lat="-34.936494" lon="138.596072">
     <ele>98.0</ele>
     <time>2019-11-04T20:51:41Z</time>
     <extensions>
@@ -1448,7 +1448,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365060" lon="138.5960310">
+   <trkpt lat="-34.936506" lon="138.596031">
     <ele>98.0</ele>
     <time>2019-11-04T20:51:42Z</time>
     <extensions>
@@ -1459,7 +1459,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366270" lon="138.5959110">
+   <trkpt lat="-34.936627" lon="138.595911">
     <ele>98.0</ele>
     <time>2019-11-04T20:51:46Z</time>
     <extensions>
@@ -1470,7 +1470,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366560" lon="138.5957660">
+   <trkpt lat="-34.936656" lon="138.595766">
     <ele>98.2</ele>
     <time>2019-11-04T20:51:50Z</time>
     <extensions>
@@ -1481,7 +1481,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365810" lon="138.5955730">
+   <trkpt lat="-34.936581" lon="138.595573">
     <ele>98.2</ele>
     <time>2019-11-04T20:51:56Z</time>
     <extensions>
@@ -1492,7 +1492,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365380" lon="138.5955010">
+   <trkpt lat="-34.936538" lon="138.595501">
     <ele>98.4</ele>
     <time>2019-11-04T20:52:00Z</time>
     <extensions>
@@ -1503,7 +1503,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365130" lon="138.5954380">
+   <trkpt lat="-34.936513" lon="138.595438">
     <ele>98.4</ele>
     <time>2019-11-04T20:52:02Z</time>
     <extensions>
@@ -1514,7 +1514,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365270" lon="138.5953780">
+   <trkpt lat="-34.936527" lon="138.595378">
     <ele>98.2</ele>
     <time>2019-11-04T20:52:04Z</time>
     <extensions>
@@ -1525,7 +1525,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366780" lon="138.5952660">
+   <trkpt lat="-34.936678" lon="138.595266">
     <ele>98.6</ele>
     <time>2019-11-04T20:52:10Z</time>
     <extensions>
@@ -1536,7 +1536,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366960" lon="138.5952460">
+   <trkpt lat="-34.936696" lon="138.595246">
     <ele>98.8</ele>
     <time>2019-11-04T20:52:11Z</time>
     <extensions>
@@ -1547,7 +1547,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9367800" lon="138.5950980">
+   <trkpt lat="-34.93678" lon="138.595098">
     <ele>99.8</ele>
     <time>2019-11-04T20:52:16Z</time>
     <extensions>
@@ -1558,7 +1558,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9367830" lon="138.5950650">
+   <trkpt lat="-34.936783" lon="138.595065">
     <ele>99.8</ele>
     <time>2019-11-04T20:52:17Z</time>
     <extensions>
@@ -1569,7 +1569,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9367880" lon="138.5949900">
+   <trkpt lat="-34.936788" lon="138.59499">
     <ele>99.6</ele>
     <time>2019-11-04T20:52:20Z</time>
     <extensions>
@@ -1580,7 +1580,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9367090" lon="138.5949470">
+   <trkpt lat="-34.936709" lon="138.594947">
     <ele>98.8</ele>
     <time>2019-11-04T20:52:24Z</time>
     <extensions>
@@ -1591,7 +1591,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365180" lon="138.5949450">
+   <trkpt lat="-34.936518" lon="138.594945">
     <ele>98.2</ele>
     <time>2019-11-04T20:52:30Z</time>
     <extensions>
@@ -1602,7 +1602,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364880" lon="138.5949340">
+   <trkpt lat="-34.936488" lon="138.594934">
     <ele>98.2</ele>
     <time>2019-11-04T20:52:31Z</time>
     <extensions>
@@ -1613,7 +1613,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9363390" lon="138.5948820">
+   <trkpt lat="-34.936339" lon="138.594882">
     <ele>98.2</ele>
     <time>2019-11-04T20:52:36Z</time>
     <extensions>
@@ -1624,7 +1624,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9363130" lon="138.5948670">
+   <trkpt lat="-34.936313" lon="138.594867">
     <ele>98.0</ele>
     <time>2019-11-04T20:52:37Z</time>
     <extensions>
@@ -1635,7 +1635,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9362660" lon="138.5948410">
+   <trkpt lat="-34.936266" lon="138.594841">
     <ele>98.0</ele>
     <time>2019-11-04T20:52:39Z</time>
     <extensions>
@@ -1646,7 +1646,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361580" lon="138.5947840">
+   <trkpt lat="-34.936158" lon="138.594784">
     <ele>98.2</ele>
     <time>2019-11-04T20:52:44Z</time>
     <extensions>
@@ -1657,7 +1657,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9360970" lon="138.5946610">
+   <trkpt lat="-34.936097" lon="138.594661">
     <ele>98.2</ele>
     <time>2019-11-04T20:52:50Z</time>
     <extensions>
@@ -1668,7 +1668,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9360980" lon="138.5944810">
+   <trkpt lat="-34.936098" lon="138.594481">
     <ele>97.8</ele>
     <time>2019-11-04T20:52:55Z</time>
     <extensions>
@@ -1679,7 +1679,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361120" lon="138.5944420">
+   <trkpt lat="-34.936112" lon="138.594442">
     <ele>97.6</ele>
     <time>2019-11-04T20:52:56Z</time>
     <extensions>
@@ -1690,7 +1690,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361270" lon="138.5944120">
+   <trkpt lat="-34.936127" lon="138.594412">
     <ele>97.6</ele>
     <time>2019-11-04T20:52:57Z</time>
     <extensions>
@@ -1701,7 +1701,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361800" lon="138.5943530">
+   <trkpt lat="-34.93618" lon="138.594353">
     <ele>97.6</ele>
     <time>2019-11-04T20:52:59Z</time>
     <extensions>
@@ -1712,7 +1712,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9363520" lon="138.5942130">
+   <trkpt lat="-34.936352" lon="138.594213">
     <ele>97.6</ele>
     <time>2019-11-04T20:53:05Z</time>
     <extensions>
@@ -1723,7 +1723,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9364590" lon="138.5940710">
+   <trkpt lat="-34.936459" lon="138.594071">
     <ele>97.2</ele>
     <time>2019-11-04T20:53:10Z</time>
     <extensions>
@@ -1734,7 +1734,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365740" lon="138.5939300">
+   <trkpt lat="-34.936574" lon="138.59393">
     <ele>97.2</ele>
     <time>2019-11-04T20:53:15Z</time>
     <extensions>
@@ -1745,7 +1745,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9366970" lon="138.5937890">
+   <trkpt lat="-34.936697" lon="138.593789">
     <ele>97.0</ele>
     <time>2019-11-04T20:53:20Z</time>
     <extensions>
@@ -1756,7 +1756,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9368050" lon="138.5936710">
+   <trkpt lat="-34.936805" lon="138.593671">
     <ele>97.2</ele>
     <time>2019-11-04T20:53:24Z</time>
     <extensions>
@@ -1767,7 +1767,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9369050" lon="138.5935700">
+   <trkpt lat="-34.936905" lon="138.59357">
     <ele>97.0</ele>
     <time>2019-11-04T20:53:28Z</time>
     <extensions>
@@ -1778,7 +1778,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9370100" lon="138.5934410">
+   <trkpt lat="-34.93701" lon="138.593441">
     <ele>96.8</ele>
     <time>2019-11-04T20:53:33Z</time>
     <extensions>
@@ -1789,7 +1789,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9371540" lon="138.5932890">
+   <trkpt lat="-34.937154" lon="138.593289">
     <ele>97.4</ele>
     <time>2019-11-04T20:53:39Z</time>
     <extensions>
@@ -1800,7 +1800,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9373070" lon="138.5931100">
+   <trkpt lat="-34.937307" lon="138.59311">
     <ele>96.8</ele>
     <time>2019-11-04T20:53:46Z</time>
     <extensions>
@@ -1811,7 +1811,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9373330" lon="138.5930840">
+   <trkpt lat="-34.937333" lon="138.593084">
     <ele>96.6</ele>
     <time>2019-11-04T20:53:47Z</time>
     <extensions>
@@ -1822,7 +1822,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9374720" lon="138.5929590">
+   <trkpt lat="-34.937472" lon="138.592959">
     <ele>96.6</ele>
     <time>2019-11-04T20:53:52Z</time>
     <extensions>
@@ -1833,7 +1833,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9376210" lon="138.5928290">
+   <trkpt lat="-34.937621" lon="138.592829">
     <ele>96.6</ele>
     <time>2019-11-04T20:53:57Z</time>
     <extensions>
@@ -1844,7 +1844,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9376840" lon="138.5927800">
+   <trkpt lat="-34.937684" lon="138.59278">
     <ele>96.4</ele>
     <time>2019-11-04T20:53:59Z</time>
     <extensions>
@@ -1855,7 +1855,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378440" lon="138.5926610">
+   <trkpt lat="-34.937844" lon="138.592661">
     <ele>95.8</ele>
     <time>2019-11-04T20:54:04Z</time>
     <extensions>
@@ -1866,7 +1866,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9380070" lon="138.5925010">
+   <trkpt lat="-34.938007" lon="138.592501">
     <ele>96.0</ele>
     <time>2019-11-04T20:54:10Z</time>
     <extensions>
@@ -1877,7 +1877,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381760" lon="138.5923420">
+   <trkpt lat="-34.938176" lon="138.592342">
     <ele>96.0</ele>
     <time>2019-11-04T20:54:16Z</time>
     <extensions>
@@ -1888,7 +1888,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9383210" lon="138.5922200">
+   <trkpt lat="-34.938321" lon="138.59222">
     <ele>96.0</ele>
     <time>2019-11-04T20:54:21Z</time>
     <extensions>
@@ -1899,7 +1899,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9384700" lon="138.5920890">
+   <trkpt lat="-34.93847" lon="138.592089">
     <ele>95.6</ele>
     <time>2019-11-04T20:54:26Z</time>
     <extensions>
@@ -1910,7 +1910,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9385300" lon="138.5920410">
+   <trkpt lat="-34.93853" lon="138.592041">
     <ele>95.6</ele>
     <time>2019-11-04T20:54:28Z</time>
     <extensions>
@@ -1921,7 +1921,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9386830" lon="138.5919210">
+   <trkpt lat="-34.938683" lon="138.591921">
     <ele>95.2</ele>
     <time>2019-11-04T20:54:33Z</time>
     <extensions>
@@ -1932,7 +1932,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9387110" lon="138.5918970">
+   <trkpt lat="-34.938711" lon="138.591897">
     <ele>95.2</ele>
     <time>2019-11-04T20:54:34Z</time>
     <extensions>
@@ -1943,7 +1943,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9388790" lon="138.5917480">
+   <trkpt lat="-34.938879" lon="138.591748">
     <ele>95.4</ele>
     <time>2019-11-04T20:54:40Z</time>
     <extensions>
@@ -1954,7 +1954,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9390070" lon="138.5916330">
+   <trkpt lat="-34.939007" lon="138.591633">
     <ele>95.2</ele>
     <time>2019-11-04T20:54:45Z</time>
     <extensions>
@@ -1965,7 +1965,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9391600" lon="138.5915090">
+   <trkpt lat="-34.93916" lon="138.591509">
     <ele>95.2</ele>
     <time>2019-11-04T20:54:50Z</time>
     <extensions>
@@ -1976,7 +1976,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9392810" lon="138.5914160">
+   <trkpt lat="-34.939281" lon="138.591416">
     <ele>94.4</ele>
     <time>2019-11-04T20:54:54Z</time>
     <extensions>
@@ -1987,7 +1987,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9394110" lon="138.5913240">
+   <trkpt lat="-34.939411" lon="138.591324">
     <ele>94.6</ele>
     <time>2019-11-04T20:54:58Z</time>
     <extensions>
@@ -1998,7 +1998,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9395610" lon="138.5911860">
+   <trkpt lat="-34.939561" lon="138.591186">
     <ele>94.6</ele>
     <time>2019-11-04T20:55:03Z</time>
     <extensions>
@@ -2009,7 +2009,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9396760" lon="138.5910860">
+   <trkpt lat="-34.939676" lon="138.591086">
     <ele>94.4</ele>
     <time>2019-11-04T20:55:07Z</time>
     <extensions>
@@ -2020,7 +2020,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9398430" lon="138.5909770">
+   <trkpt lat="-34.939843" lon="138.590977">
     <ele>94.2</ele>
     <time>2019-11-04T20:55:12Z</time>
     <extensions>
@@ -2031,7 +2031,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9398750" lon="138.5909560">
+   <trkpt lat="-34.939875" lon="138.590956">
     <ele>94.2</ele>
     <time>2019-11-04T20:55:13Z</time>
     <extensions>
@@ -2042,7 +2042,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9400410" lon="138.5908390">
+   <trkpt lat="-34.940041" lon="138.590839">
     <ele>93.2</ele>
     <time>2019-11-04T20:55:18Z</time>
     <extensions>
@@ -2053,7 +2053,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9400730" lon="138.5908100">
+   <trkpt lat="-34.940073" lon="138.59081">
     <ele>93.2</ele>
     <time>2019-11-04T20:55:19Z</time>
     <extensions>
@@ -2064,7 +2064,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9402150" lon="138.5906730">
+   <trkpt lat="-34.940215" lon="138.590673">
     <ele>93.2</ele>
     <time>2019-11-04T20:55:24Z</time>
     <extensions>
@@ -2075,7 +2075,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9403130" lon="138.5905520">
+   <trkpt lat="-34.940313" lon="138.590552">
     <ele>93.0</ele>
     <time>2019-11-04T20:55:28Z</time>
     <extensions>
@@ -2086,7 +2086,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9404630" lon="138.5903940">
+   <trkpt lat="-34.940463" lon="138.590394">
     <ele>92.8</ele>
     <time>2019-11-04T20:55:33Z</time>
     <extensions>
@@ -2097,7 +2097,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9404900" lon="138.5903640">
+   <trkpt lat="-34.94049" lon="138.590364">
     <ele>92.6</ele>
     <time>2019-11-04T20:55:34Z</time>
     <extensions>
@@ -2108,7 +2108,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9405400" lon="138.5903060">
+   <trkpt lat="-34.94054" lon="138.590306">
     <ele>92.4</ele>
     <time>2019-11-04T20:55:36Z</time>
     <extensions>
@@ -2119,7 +2119,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9405670" lon="138.5902800">
+   <trkpt lat="-34.940567" lon="138.59028">
     <ele>92.4</ele>
     <time>2019-11-04T20:55:37Z</time>
     <extensions>
@@ -2130,7 +2130,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9406380" lon="138.5901960">
+   <trkpt lat="-34.940638" lon="138.590196">
     <ele>92.4</ele>
     <time>2019-11-04T20:55:40Z</time>
     <extensions>
@@ -2141,7 +2141,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9407490" lon="138.5900820">
+   <trkpt lat="-34.940749" lon="138.590082">
     <ele>92.4</ele>
     <time>2019-11-04T20:55:44Z</time>
     <extensions>
@@ -2152,7 +2152,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9408120" lon="138.5900300">
+   <trkpt lat="-34.940812" lon="138.59003">
     <ele>92.2</ele>
     <time>2019-11-04T20:55:46Z</time>
     <extensions>
@@ -2163,7 +2163,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9409340" lon="138.5898960">
+   <trkpt lat="-34.940934" lon="138.589896">
     <ele>92.0</ele>
     <time>2019-11-04T20:55:51Z</time>
     <extensions>
@@ -2174,7 +2174,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9410860" lon="138.5897200">
+   <trkpt lat="-34.941086" lon="138.58972">
     <ele>92.2</ele>
     <time>2019-11-04T20:55:57Z</time>
     <extensions>
@@ -2185,7 +2185,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9412420" lon="138.5895530">
+   <trkpt lat="-34.941242" lon="138.589553">
     <ele>91.8</ele>
     <time>2019-11-04T20:56:03Z</time>
     <extensions>
@@ -2196,7 +2196,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9414170" lon="138.5893950">
+   <trkpt lat="-34.941417" lon="138.589395">
     <ele>91.8</ele>
     <time>2019-11-04T20:56:09Z</time>
     <extensions>
@@ -2207,7 +2207,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9414430" lon="138.5893690">
+   <trkpt lat="-34.941443" lon="138.589369">
     <ele>91.8</ele>
     <time>2019-11-04T20:56:10Z</time>
     <extensions>
@@ -2218,7 +2218,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9415160" lon="138.5892130">
+   <trkpt lat="-34.941516" lon="138.589213">
     <ele>91.6</ele>
     <time>2019-11-04T20:56:15Z</time>
     <extensions>
@@ -2229,7 +2229,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9415860" lon="138.5891070">
+   <trkpt lat="-34.941586" lon="138.589107">
     <ele>91.2</ele>
     <time>2019-11-04T20:56:20Z</time>
     <extensions>
@@ -2240,7 +2240,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9415980" lon="138.5890880">
+   <trkpt lat="-34.941598" lon="138.589088">
     <ele>91.4</ele>
     <time>2019-11-04T20:56:22Z</time>
     <extensions>
@@ -2251,7 +2251,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9416010" lon="138.5890830">
+   <trkpt lat="-34.941601" lon="138.589083">
     <ele>91.6</ele>
     <time>2019-11-04T20:56:24Z</time>
     <extensions>
@@ -2262,7 +2262,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9416050" lon="138.5890820">
+   <trkpt lat="-34.941605" lon="138.589082">
     <ele>91.6</ele>
     <time>2019-11-04T20:56:25Z</time>
     <extensions>
@@ -2273,7 +2273,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9416220" lon="138.5890650">
+   <trkpt lat="-34.941622" lon="138.589065">
     <ele>91.6</ele>
     <time>2019-11-04T20:56:34Z</time>
     <extensions>
@@ -2284,7 +2284,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9416150" lon="138.5889650">
+   <trkpt lat="-34.941615" lon="138.588965">
     <ele>91.4</ele>
     <time>2019-11-04T20:56:37Z</time>
     <extensions>
@@ -2295,7 +2295,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9416080" lon="138.5889240">
+   <trkpt lat="-34.941608" lon="138.588924">
     <ele>91.6</ele>
     <time>2019-11-04T20:56:38Z</time>
     <extensions>
@@ -2306,7 +2306,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9415740" lon="138.5888010">
+   <trkpt lat="-34.941574" lon="138.588801">
     <ele>91.2</ele>
     <time>2019-11-04T20:56:41Z</time>
     <extensions>
@@ -2317,7 +2317,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9415050" lon="138.5887130">
+   <trkpt lat="-34.941505" lon="138.588713">
     <ele>91.2</ele>
     <time>2019-11-04T20:56:44Z</time>
     <extensions>
@@ -2328,7 +2328,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9413030" lon="138.5886610">
+   <trkpt lat="-34.941303" lon="138.588661">
     <ele>90.6</ele>
     <time>2019-11-04T20:56:50Z</time>
     <extensions>
@@ -2339,7 +2339,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9412700" lon="138.5886520">
+   <trkpt lat="-34.94127" lon="138.588652">
     <ele>90.6</ele>
     <time>2019-11-04T20:56:51Z</time>
     <extensions>
@@ -2350,7 +2350,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9410840" lon="138.5885660">
+   <trkpt lat="-34.941084" lon="138.588566">
     <ele>90.4</ele>
     <time>2019-11-04T20:56:57Z</time>
     <extensions>
@@ -2361,7 +2361,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9410550" lon="138.5885480">
+   <trkpt lat="-34.941055" lon="138.588548">
     <ele>90.4</ele>
     <time>2019-11-04T20:56:58Z</time>
     <extensions>
@@ -2372,7 +2372,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9408680" lon="138.5884590">
+   <trkpt lat="-34.940868" lon="138.588459">
     <ele>90.2</ele>
     <time>2019-11-04T20:57:04Z</time>
     <extensions>
@@ -2383,7 +2383,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9408520" lon="138.5884530">
+   <trkpt lat="-34.940852" lon="138.588453">
     <ele>90.4</ele>
     <time>2019-11-04T20:57:05Z</time>
     <extensions>
@@ -2394,7 +2394,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9407330" lon="138.5884050">
+   <trkpt lat="-34.940733" lon="138.588405">
     <ele>90.6</ele>
     <time>2019-11-04T20:57:12Z</time>
     <extensions>
@@ -2405,7 +2405,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9405600" lon="138.5883570">
+   <trkpt lat="-34.94056" lon="138.588357">
     <ele>90.4</ele>
     <time>2019-11-04T20:57:18Z</time>
     <extensions>
@@ -2416,7 +2416,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9403880" lon="138.5883200">
+   <trkpt lat="-34.940388" lon="138.58832">
     <ele>90.4</ele>
     <time>2019-11-04T20:57:24Z</time>
     <extensions>
@@ -2427,7 +2427,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9401880" lon="138.5882730">
+   <trkpt lat="-34.940188" lon="138.588273">
     <ele>90.8</ele>
     <time>2019-11-04T20:57:29Z</time>
     <extensions>
@@ -2438,7 +2438,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9401470" lon="138.5882640">
+   <trkpt lat="-34.940147" lon="138.588264">
     <ele>90.6</ele>
     <time>2019-11-04T20:57:30Z</time>
     <extensions>
@@ -2449,7 +2449,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399800" lon="138.5881760">
+   <trkpt lat="-34.93998" lon="138.588176">
     <ele>90.8</ele>
     <time>2019-11-04T20:57:35Z</time>
     <extensions>
@@ -2460,7 +2460,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399530" lon="138.5881470">
+   <trkpt lat="-34.939953" lon="138.588147">
     <ele>90.8</ele>
     <time>2019-11-04T20:57:36Z</time>
     <extensions>
@@ -2471,7 +2471,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399120" lon="138.5879840">
+   <trkpt lat="-34.939912" lon="138.587984">
     <ele>90.6</ele>
     <time>2019-11-04T20:57:41Z</time>
     <extensions>
@@ -2482,7 +2482,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399310" lon="138.5877940">
+   <trkpt lat="-34.939931" lon="138.587794">
     <ele>90.4</ele>
     <time>2019-11-04T20:57:46Z</time>
     <extensions>
@@ -2493,7 +2493,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399340" lon="138.5877520">
+   <trkpt lat="-34.939934" lon="138.587752">
     <ele>90.4</ele>
     <time>2019-11-04T20:57:47Z</time>
     <extensions>
@@ -2504,7 +2504,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399250" lon="138.5875640">
+   <trkpt lat="-34.939925" lon="138.587564">
     <ele>90.4</ele>
     <time>2019-11-04T20:57:52Z</time>
     <extensions>
@@ -2515,7 +2515,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399080" lon="138.5875360">
+   <trkpt lat="-34.939908" lon="138.587536">
     <ele>90.4</ele>
     <time>2019-11-04T20:57:53Z</time>
     <extensions>
@@ -2526,7 +2526,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9398820" lon="138.5874710">
+   <trkpt lat="-34.939882" lon="138.587471">
     <ele>90.6</ele>
     <time>2019-11-04T20:57:55Z</time>
     <extensions>
@@ -2537,7 +2537,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9398840" lon="138.5873780">
+   <trkpt lat="-34.939884" lon="138.587378">
     <ele>90.6</ele>
     <time>2019-11-04T20:57:57Z</time>
     <extensions>
@@ -2548,7 +2548,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399040" lon="138.5871160">
+   <trkpt lat="-34.939904" lon="138.587116">
     <ele>90.2</ele>
     <time>2019-11-04T20:58:03Z</time>
     <extensions>
@@ -2559,7 +2559,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399090" lon="138.5870700">
+   <trkpt lat="-34.939909" lon="138.58707">
     <ele>90.2</ele>
     <time>2019-11-04T20:58:04Z</time>
     <extensions>
@@ -2570,7 +2570,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399290" lon="138.5868430">
+   <trkpt lat="-34.939929" lon="138.586843">
     <ele>90.2</ele>
     <time>2019-11-04T20:58:09Z</time>
     <extensions>
@@ -2581,7 +2581,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9399330" lon="138.5867570">
+   <trkpt lat="-34.939933" lon="138.586757">
     <ele>90.0</ele>
     <time>2019-11-04T20:58:11Z</time>
     <extensions>
@@ -2592,7 +2592,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9398880" lon="138.5865510">
+   <trkpt lat="-34.939888" lon="138.586551">
     <ele>90.0</ele>
     <time>2019-11-04T20:58:17Z</time>
     <extensions>
@@ -2603,7 +2603,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9398810" lon="138.5864620">
+   <trkpt lat="-34.939881" lon="138.586462">
     <ele>90.0</ele>
     <time>2019-11-04T20:58:20Z</time>
     <extensions>
@@ -2614,7 +2614,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9398260" lon="138.5864590">
+   <trkpt lat="-34.939826" lon="138.586459">
     <ele>89.8</ele>
     <time>2019-11-04T20:58:22Z</time>
     <extensions>
@@ -2625,7 +2625,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9397130" lon="138.5865140">
+   <trkpt lat="-34.939713" lon="138.586514">
     <ele>89.6</ele>
     <time>2019-11-04T20:58:26Z</time>
     <extensions>
@@ -2636,7 +2636,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9396770" lon="138.5865270">
+   <trkpt lat="-34.939677" lon="138.586527">
     <ele>89.6</ele>
     <time>2019-11-04T20:58:27Z</time>
     <extensions>
@@ -2647,7 +2647,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9396420" lon="138.5865430">
+   <trkpt lat="-34.939642" lon="138.586543">
     <ele>89.6</ele>
     <time>2019-11-04T20:58:28Z</time>
     <extensions>
@@ -2658,7 +2658,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9394820" lon="138.5866530">
+   <trkpt lat="-34.939482" lon="138.586653">
     <ele>89.8</ele>
     <time>2019-11-04T20:58:34Z</time>
     <extensions>
@@ -2669,7 +2669,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9394580" lon="138.5866710">
+   <trkpt lat="-34.939458" lon="138.586671">
     <ele>90.0</ele>
     <time>2019-11-04T20:58:35Z</time>
     <extensions>
@@ -2680,7 +2680,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9392840" lon="138.5867590">
+   <trkpt lat="-34.939284" lon="138.586759">
     <ele>90.2</ele>
     <time>2019-11-04T20:58:41Z</time>
     <extensions>
@@ -2691,7 +2691,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9391010" lon="138.5868520">
+   <trkpt lat="-34.939101" lon="138.586852">
     <ele>89.8</ele>
     <time>2019-11-04T20:58:47Z</time>
     <extensions>
@@ -2702,7 +2702,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9390730" lon="138.5868670">
+   <trkpt lat="-34.939073" lon="138.586867">
     <ele>90.0</ele>
     <time>2019-11-04T20:58:48Z</time>
     <extensions>
@@ -2713,7 +2713,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9389060" lon="138.5869790">
+   <trkpt lat="-34.938906" lon="138.586979">
     <ele>90.4</ele>
     <time>2019-11-04T20:58:54Z</time>
     <extensions>
@@ -2724,7 +2724,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9388770" lon="138.5869900">
+   <trkpt lat="-34.938877" lon="138.58699">
     <ele>90.4</ele>
     <time>2019-11-04T20:58:55Z</time>
     <extensions>
@@ -2735,7 +2735,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9387380" lon="138.5870310">
+   <trkpt lat="-34.938738" lon="138.587031">
     <ele>90.6</ele>
     <time>2019-11-04T20:59:00Z</time>
     <extensions>
@@ -2746,7 +2746,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9385780" lon="138.5871020">
+   <trkpt lat="-34.938578" lon="138.587102">
     <ele>90.6</ele>
     <time>2019-11-04T20:59:05Z</time>
     <extensions>
@@ -2757,7 +2757,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9385540" lon="138.5871220">
+   <trkpt lat="-34.938554" lon="138.587122">
     <ele>90.8</ele>
     <time>2019-11-04T20:59:06Z</time>
     <extensions>
@@ -2768,7 +2768,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9385150" lon="138.5871610">
+   <trkpt lat="-34.938515" lon="138.587161">
     <ele>91.2</ele>
     <time>2019-11-04T20:59:08Z</time>
     <extensions>
@@ -2779,7 +2779,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9384750" lon="138.5871870">
+   <trkpt lat="-34.938475" lon="138.587187">
     <ele>91.4</ele>
     <time>2019-11-04T20:59:10Z</time>
     <extensions>
@@ -2790,7 +2790,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9383310" lon="138.5872530">
+   <trkpt lat="-34.938331" lon="138.587253">
     <ele>91.6</ele>
     <time>2019-11-04T20:59:15Z</time>
     <extensions>
@@ -2801,7 +2801,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9382350" lon="138.5873980">
+   <trkpt lat="-34.938235" lon="138.587398">
     <ele>91.4</ele>
     <time>2019-11-04T20:59:20Z</time>
     <extensions>
@@ -2812,7 +2812,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381790" lon="138.5874230">
+   <trkpt lat="-34.938179" lon="138.587423">
     <ele>91.8</ele>
     <time>2019-11-04T20:59:25Z</time>
     <extensions>
@@ -2823,7 +2823,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381480" lon="138.5873640">
+   <trkpt lat="-34.938148" lon="138.587364">
     <ele>91.8</ele>
     <time>2019-11-04T20:59:31Z</time>
     <extensions>
@@ -2834,7 +2834,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381340" lon="138.5872140">
+   <trkpt lat="-34.938134" lon="138.587214">
     <ele>90.8</ele>
     <time>2019-11-04T20:59:35Z</time>
     <extensions>
@@ -2845,7 +2845,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381430" lon="138.5870240">
+   <trkpt lat="-34.938143" lon="138.587024">
     <ele>91.2</ele>
     <time>2019-11-04T20:59:40Z</time>
     <extensions>
@@ -2856,7 +2856,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381260" lon="138.5870000">
+   <trkpt lat="-34.938126" lon="138.587">
     <ele>91.0</ele>
     <time>2019-11-04T20:59:41Z</time>
     <extensions>
@@ -2867,7 +2867,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9380370" lon="138.5869210">
+   <trkpt lat="-34.938037" lon="138.586921">
     <ele>91.0</ele>
     <time>2019-11-04T20:59:45Z</time>
     <extensions>
@@ -2878,7 +2878,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9380180" lon="138.5868930">
+   <trkpt lat="-34.938018" lon="138.586893">
     <ele>91.0</ele>
     <time>2019-11-04T20:59:46Z</time>
     <extensions>
@@ -2889,7 +2889,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9379500" lon="138.5867820">
+   <trkpt lat="-34.93795" lon="138.586782">
     <ele>91.2</ele>
     <time>2019-11-04T20:59:50Z</time>
     <extensions>
@@ -2900,7 +2900,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9379290" lon="138.5867490">
+   <trkpt lat="-34.937929" lon="138.586749">
     <ele>91.2</ele>
     <time>2019-11-04T20:59:51Z</time>
     <extensions>
@@ -2911,7 +2911,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9379070" lon="138.5867150">
+   <trkpt lat="-34.937907" lon="138.586715">
     <ele>91.2</ele>
     <time>2019-11-04T20:59:52Z</time>
     <extensions>
@@ -2922,7 +2922,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378670" lon="138.5866540">
+   <trkpt lat="-34.937867" lon="138.586654">
     <ele>91.4</ele>
     <time>2019-11-04T20:59:54Z</time>
     <extensions>
@@ -2933,7 +2933,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378160" lon="138.5865450">
+   <trkpt lat="-34.937816" lon="138.586545">
     <ele>90.6</ele>
     <time>2019-11-04T20:59:57Z</time>
     <extensions>
@@ -2944,7 +2944,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378050" lon="138.5865060">
+   <trkpt lat="-34.937805" lon="138.586506">
     <ele>90.6</ele>
     <time>2019-11-04T20:59:58Z</time>
     <extensions>
@@ -2955,7 +2955,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378000" lon="138.5864050">
+   <trkpt lat="-34.9378" lon="138.586405">
     <ele>90.4</ele>
     <time>2019-11-04T21:00:02Z</time>
     <extensions>
@@ -2966,7 +2966,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378050" lon="138.5864040">
+   <trkpt lat="-34.937805" lon="138.586404">
     <ele>90.4</ele>
     <time>2019-11-04T21:00:03Z</time>
     <extensions>
@@ -2977,7 +2977,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378250" lon="138.5863950">
+   <trkpt lat="-34.937825" lon="138.586395">
     <ele>90.6</ele>
     <time>2019-11-04T21:00:07Z</time>
     <extensions>
@@ -2988,7 +2988,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378300" lon="138.5863750">
+   <trkpt lat="-34.93783" lon="138.586375">
     <ele>90.6</ele>
     <time>2019-11-04T21:00:09Z</time>
     <extensions>
@@ -2999,7 +2999,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9378590" lon="138.5863370">
+   <trkpt lat="-34.937859" lon="138.586337">
     <ele>90.6</ele>
     <time>2019-11-04T21:00:12Z</time>
     <extensions>
@@ -3010,7 +3010,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9379220" lon="138.5862870">
+   <trkpt lat="-34.937922" lon="138.586287">
     <ele>90.4</ele>
     <time>2019-11-04T21:00:16Z</time>
     <extensions>
@@ -3021,7 +3021,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9379580" lon="138.5862750">
+   <trkpt lat="-34.937958" lon="138.586275">
     <ele>90.2</ele>
     <time>2019-11-04T21:00:17Z</time>
     <extensions>
@@ -3032,7 +3032,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9380580" lon="138.5862340">
+   <trkpt lat="-34.938058" lon="138.586234">
     <ele>90.0</ele>
     <time>2019-11-04T21:00:20Z</time>
     <extensions>
@@ -3043,7 +3043,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9382030" lon="138.5861400">
+   <trkpt lat="-34.938203" lon="138.58614">
     <ele>89.6</ele>
     <time>2019-11-04T21:00:25Z</time>
     <extensions>
@@ -3054,7 +3054,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9382550" lon="138.5860750">
+   <trkpt lat="-34.938255" lon="138.586075">
     <ele>89.2</ele>
     <time>2019-11-04T21:00:28Z</time>
     <extensions>
@@ -3065,7 +3065,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9383160" lon="138.5860080">
+   <trkpt lat="-34.938316" lon="138.586008">
     <ele>89.2</ele>
     <time>2019-11-04T21:00:31Z</time>
     <extensions>
@@ -3076,7 +3076,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9384360" lon="138.5859130">
+   <trkpt lat="-34.938436" lon="138.585913">
     <ele>89.4</ele>
     <time>2019-11-04T21:00:35Z</time>
     <extensions>
@@ -3087,7 +3087,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9385000" lon="138.5858590">
+   <trkpt lat="-34.9385" lon="138.585859">
     <ele>89.0</ele>
     <time>2019-11-04T21:00:37Z</time>
     <extensions>
@@ -3098,7 +3098,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9386710" lon="138.5857360">
+   <trkpt lat="-34.938671" lon="138.585736">
     <ele>88.8</ele>
     <time>2019-11-04T21:00:42Z</time>
     <extensions>
@@ -3109,7 +3109,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9387070" lon="138.5857140">
+   <trkpt lat="-34.938707" lon="138.585714">
     <ele>88.6</ele>
     <time>2019-11-04T21:00:43Z</time>
     <extensions>
@@ -3120,7 +3120,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9388800" lon="138.5855520">
+   <trkpt lat="-34.93888" lon="138.585552">
     <ele>88.6</ele>
     <time>2019-11-04T21:00:48Z</time>
     <extensions>
@@ -3131,7 +3131,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9389060" lon="138.5855160">
+   <trkpt lat="-34.938906" lon="138.585516">
     <ele>88.4</ele>
     <time>2019-11-04T21:00:49Z</time>
     <extensions>
@@ -3142,7 +3142,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9390470" lon="138.5853450">
+   <trkpt lat="-34.939047" lon="138.585345">
     <ele>88.2</ele>
     <time>2019-11-04T21:00:55Z</time>
     <extensions>
@@ -3153,7 +3153,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9391150" lon="138.5852680">
+   <trkpt lat="-34.939115" lon="138.585268">
     <ele>88.2</ele>
     <time>2019-11-04T21:00:58Z</time>
     <extensions>
@@ -3164,7 +3164,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9391680" lon="138.5852230">
+   <trkpt lat="-34.939168" lon="138.585223">
     <ele>88.0</ele>
     <time>2019-11-04T21:01:00Z</time>
     <extensions>
@@ -3175,7 +3175,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9393160" lon="138.5850840">
+   <trkpt lat="-34.939316" lon="138.585084">
     <ele>88.0</ele>
     <time>2019-11-04T21:01:06Z</time>
     <extensions>
@@ -3186,7 +3186,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9394560" lon="138.5849300">
+   <trkpt lat="-34.939456" lon="138.58493">
     <ele>87.8</ele>
     <time>2019-11-04T21:01:12Z</time>
     <extensions>
@@ -3197,7 +3197,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9394810" lon="138.5849020">
+   <trkpt lat="-34.939481" lon="138.584902">
     <ele>87.8</ele>
     <time>2019-11-04T21:01:13Z</time>
     <extensions>
@@ -3208,7 +3208,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9396010" lon="138.5847290">
+   <trkpt lat="-34.939601" lon="138.584729">
     <ele>87.6</ele>
     <time>2019-11-04T21:01:18Z</time>
     <extensions>
@@ -3219,7 +3219,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9396090" lon="138.5846930">
+   <trkpt lat="-34.939609" lon="138.584693">
     <ele>87.6</ele>
     <time>2019-11-04T21:01:19Z</time>
     <extensions>
@@ -3230,7 +3230,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9395790" lon="138.5845500">
+   <trkpt lat="-34.939579" lon="138.58455">
     <ele>88.0</ele>
     <time>2019-11-04T21:01:23Z</time>
     <extensions>
@@ -3241,7 +3241,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9394480" lon="138.5844130">
+   <trkpt lat="-34.939448" lon="138.584413">
     <ele>88.2</ele>
     <time>2019-11-04T21:01:28Z</time>
     <extensions>
@@ -3252,7 +3252,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9393370" lon="138.5842790">
+   <trkpt lat="-34.939337" lon="138.584279">
     <ele>87.6</ele>
     <time>2019-11-04T21:01:34Z</time>
     <extensions>
@@ -3263,7 +3263,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9392510" lon="138.5842160">
+   <trkpt lat="-34.939251" lon="138.584216">
     <ele>87.8</ele>
     <time>2019-11-04T21:01:37Z</time>
     <extensions>
@@ -3274,7 +3274,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9392150" lon="138.5841980">
+   <trkpt lat="-34.939215" lon="138.584198">
     <ele>87.8</ele>
     <time>2019-11-04T21:01:38Z</time>
     <extensions>
@@ -3285,7 +3285,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9390570" lon="138.5841000">
+   <trkpt lat="-34.939057" lon="138.5841">
     <ele>87.6</ele>
     <time>2019-11-04T21:01:43Z</time>
     <extensions>
@@ -3296,7 +3296,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9389170" lon="138.5839590">
+   <trkpt lat="-34.938917" lon="138.583959">
     <ele>87.4</ele>
     <time>2019-11-04T21:01:49Z</time>
     <extensions>
@@ -3307,7 +3307,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9388990" lon="138.5839390">
+   <trkpt lat="-34.938899" lon="138.583939">
     <ele>87.4</ele>
     <time>2019-11-04T21:01:50Z</time>
     <extensions>
@@ -3318,7 +3318,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9388340" lon="138.5838590">
+   <trkpt lat="-34.938834" lon="138.583859">
     <ele>87.4</ele>
     <time>2019-11-04T21:01:53Z</time>
     <extensions>
@@ -3329,7 +3329,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9387270" lon="138.5837490">
+   <trkpt lat="-34.938727" lon="138.583749">
     <ele>87.4</ele>
     <time>2019-11-04T21:01:57Z</time>
     <extensions>
@@ -3340,7 +3340,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9385800" lon="138.5836180">
+   <trkpt lat="-34.93858" lon="138.583618">
     <ele>87.4</ele>
     <time>2019-11-04T21:02:02Z</time>
     <extensions>
@@ -3351,7 +3351,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9385200" lon="138.5835750">
+   <trkpt lat="-34.93852" lon="138.583575">
     <ele>87.2</ele>
     <time>2019-11-04T21:02:04Z</time>
     <extensions>
@@ -3362,7 +3362,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9384340" lon="138.5835180">
+   <trkpt lat="-34.938434" lon="138.583518">
     <ele>87.0</ele>
     <time>2019-11-04T21:02:07Z</time>
     <extensions>
@@ -3373,7 +3373,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9383450" lon="138.5834780">
+   <trkpt lat="-34.938345" lon="138.583478">
     <ele>87.0</ele>
     <time>2019-11-04T21:02:10Z</time>
     <extensions>
@@ -3384,7 +3384,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9383160" lon="138.5834720">
+   <trkpt lat="-34.938316" lon="138.583472">
     <ele>86.8</ele>
     <time>2019-11-04T21:02:11Z</time>
     <extensions>
@@ -3395,7 +3395,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381370" lon="138.5834250">
+   <trkpt lat="-34.938137" lon="138.583425">
     <ele>87.0</ele>
     <time>2019-11-04T21:02:17Z</time>
     <extensions>
@@ -3406,7 +3406,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9381100" lon="138.5834250">
+   <trkpt lat="-34.93811" lon="138.583425">
     <ele>87.0</ele>
     <time>2019-11-04T21:02:18Z</time>
     <extensions>
@@ -3417,7 +3417,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9379790" lon="138.5834280">
+   <trkpt lat="-34.937979" lon="138.583428">
     <ele>87.0</ele>
     <time>2019-11-04T21:02:23Z</time>
     <extensions>
@@ -3428,7 +3428,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9379500" lon="138.5834340">
+   <trkpt lat="-34.93795" lon="138.583434">
     <ele>87.2</ele>
     <time>2019-11-04T21:02:24Z</time>
     <extensions>
@@ -3439,7 +3439,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9377420" lon="138.5834190">
+   <trkpt lat="-34.937742" lon="138.583419">
     <ele>87.2</ele>
     <time>2019-11-04T21:02:30Z</time>
     <extensions>
@@ -3450,7 +3450,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9376810" lon="138.5834430">
+   <trkpt lat="-34.937681" lon="138.583443">
     <ele>87.0</ele>
     <time>2019-11-04T21:02:32Z</time>
     <extensions>
@@ -3461,7 +3461,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9375230" lon="138.5835010">
+   <trkpt lat="-34.937523" lon="138.583501">
     <ele>86.8</ele>
     <time>2019-11-04T21:02:38Z</time>
     <extensions>
@@ -3472,7 +3472,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9373270" lon="138.5835510">
+   <trkpt lat="-34.937327" lon="138.583551">
     <ele>86.8</ele>
     <time>2019-11-04T21:02:44Z</time>
     <extensions>
@@ -3483,7 +3483,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9371920" lon="138.5835640">
+   <trkpt lat="-34.937192" lon="138.583564">
     <ele>86.6</ele>
     <time>2019-11-04T21:02:49Z</time>
     <extensions>
@@ -3494,7 +3494,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9370940" lon="138.5836620">
+   <trkpt lat="-34.937094" lon="138.583662">
     <ele>87.0</ele>
     <time>2019-11-04T21:02:53Z</time>
     <extensions>
@@ -3505,7 +3505,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9369580" lon="138.5836160">
+   <trkpt lat="-34.936958" lon="138.583616">
     <ele>87.4</ele>
     <time>2019-11-04T21:02:57Z</time>
     <extensions>
@@ -3516,7 +3516,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9367730" lon="138.5835070">
+   <trkpt lat="-34.936773" lon="138.583507">
     <ele>87.4</ele>
     <time>2019-11-04T21:03:03Z</time>
     <extensions>
@@ -3527,7 +3527,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9365660" lon="138.5834640">
+   <trkpt lat="-34.936566" lon="138.583464">
     <ele>87.0</ele>
     <time>2019-11-04T21:03:09Z</time>
     <extensions>
@@ -3538,7 +3538,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9363560" lon="138.5834600">
+   <trkpt lat="-34.936356" lon="138.58346">
     <ele>87.2</ele>
     <time>2019-11-04T21:03:15Z</time>
     <extensions>
@@ -3549,7 +3549,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361800" lon="138.5835560">
+   <trkpt lat="-34.93618" lon="138.583556">
     <ele>87.2</ele>
     <time>2019-11-04T21:03:21Z</time>
     <extensions>
@@ -3560,7 +3560,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9360980" lon="138.5837060">
+   <trkpt lat="-34.936098" lon="138.583706">
     <ele>87.4</ele>
     <time>2019-11-04T21:03:26Z</time>
     <extensions>
@@ -3571,7 +3571,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9361020" lon="138.5839270">
+   <trkpt lat="-34.936102" lon="138.583927">
     <ele>87.8</ele>
     <time>2019-11-04T21:03:32Z</time>
     <extensions>
@@ -3582,7 +3582,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9360960" lon="138.5839770">
+   <trkpt lat="-34.936096" lon="138.583977">
     <ele>88.0</ele>
     <time>2019-11-04T21:03:34Z</time>
     <extensions>
@@ -3593,7 +3593,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9360700" lon="138.5840260">
+   <trkpt lat="-34.93607" lon="138.584026">
     <ele>88.2</ele>
     <time>2019-11-04T21:03:36Z</time>
     <extensions>
@@ -3604,7 +3604,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9359640" lon="138.5840370">
+   <trkpt lat="-34.935964" lon="138.584037">
     <ele>88.4</ele>
     <time>2019-11-04T21:03:40Z</time>
     <extensions>
@@ -3615,7 +3615,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9358360" lon="138.5840110">
+   <trkpt lat="-34.935836" lon="138.584011">
     <ele>88.0</ele>
     <time>2019-11-04T21:03:44Z</time>
     <extensions>
@@ -3626,7 +3626,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9356610" lon="138.5839740">
+   <trkpt lat="-34.935661" lon="138.583974">
     <ele>87.2</ele>
     <time>2019-11-04T21:03:49Z</time>
     <extensions>
@@ -3637,7 +3637,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9356220" lon="138.5839690">
+   <trkpt lat="-34.935622" lon="138.583969">
     <ele>87.4</ele>
     <time>2019-11-04T21:03:50Z</time>
     <extensions>
@@ -3648,7 +3648,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9354810" lon="138.5838990">
+   <trkpt lat="-34.935481" lon="138.583899">
     <ele>87.0</ele>
     <time>2019-11-04T21:03:54Z</time>
     <extensions>
@@ -3659,7 +3659,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9353410" lon="138.5838450">
+   <trkpt lat="-34.935341" lon="138.583845">
     <ele>87.0</ele>
     <time>2019-11-04T21:03:58Z</time>
     <extensions>
@@ -3670,7 +3670,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9353070" lon="138.5838390">
+   <trkpt lat="-34.935307" lon="138.583839">
     <ele>87.0</ele>
     <time>2019-11-04T21:03:59Z</time>
     <extensions>
@@ -3681,7 +3681,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9351070" lon="138.5838220">
+   <trkpt lat="-34.935107" lon="138.583822">
     <ele>86.6</ele>
     <time>2019-11-04T21:04:05Z</time>
     <extensions>
@@ -3692,7 +3692,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9350890" lon="138.5838240">
+   <trkpt lat="-34.935089" lon="138.583824">
     <ele>86.8</ele>
     <time>2019-11-04T21:04:06Z</time>
     <extensions>
@@ -3703,7 +3703,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9350540" lon="138.5838790">
+   <trkpt lat="-34.935054" lon="138.583879">
     <ele>86.8</ele>
     <time>2019-11-04T21:04:09Z</time>
     <extensions>
@@ -3714,7 +3714,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9349440" lon="138.5840060">
+   <trkpt lat="-34.934944" lon="138.584006">
     <ele>87.0</ele>
     <time>2019-11-04T21:04:14Z</time>
     <extensions>
@@ -3725,7 +3725,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9347860" lon="138.5840370">
+   <trkpt lat="-34.934786" lon="138.584037">
     <ele>87.2</ele>
     <time>2019-11-04T21:04:19Z</time>
     <extensions>
@@ -3736,7 +3736,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9346050" lon="138.5840300">
+   <trkpt lat="-34.934605" lon="138.58403">
     <ele>87.2</ele>
     <time>2019-11-04T21:04:24Z</time>
     <extensions>
@@ -3747,7 +3747,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9345750" lon="138.5840290">
+   <trkpt lat="-34.934575" lon="138.584029">
     <ele>87.0</ele>
     <time>2019-11-04T21:04:25Z</time>
     <extensions>
@@ -3758,7 +3758,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9343880" lon="138.5840660">
+   <trkpt lat="-34.934388" lon="138.584066">
     <ele>87.0</ele>
     <time>2019-11-04T21:04:31Z</time>
     <extensions>
@@ -3769,7 +3769,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9342240" lon="138.5841030">
+   <trkpt lat="-34.934224" lon="138.584103">
     <ele>86.8</ele>
     <time>2019-11-04T21:04:37Z</time>
     <extensions>
@@ -3780,7 +3780,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9341640" lon="138.5841280">
+   <trkpt lat="-34.934164" lon="138.584128">
     <ele>86.4</ele>
     <time>2019-11-04T21:04:39Z</time>
     <extensions>
@@ -3791,7 +3791,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9340340" lon="138.5841950">
+   <trkpt lat="-34.934034" lon="138.584195">
     <ele>87.0</ele>
     <time>2019-11-04T21:04:43Z</time>
     <extensions>
@@ -3802,7 +3802,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9339110" lon="138.5842300">
+   <trkpt lat="-34.933911" lon="138.58423">
     <ele>87.2</ele>
     <time>2019-11-04T21:04:47Z</time>
     <extensions>
@@ -3813,7 +3813,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9337340" lon="138.5842290">
+   <trkpt lat="-34.933734" lon="138.584229">
     <ele>86.8</ele>
     <time>2019-11-04T21:04:52Z</time>
     <extensions>
@@ -3824,7 +3824,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9336060" lon="138.5842120">
+   <trkpt lat="-34.933606" lon="138.584212">
     <ele>86.6</ele>
     <time>2019-11-04T21:04:56Z</time>
     <extensions>
@@ -3835,7 +3835,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9335040" lon="138.5841790">
+   <trkpt lat="-34.933504" lon="138.584179">
     <ele>86.6</ele>
     <time>2019-11-04T21:04:59Z</time>
     <extensions>
@@ -3846,7 +3846,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9333710" lon="138.5841290">
+   <trkpt lat="-34.933371" lon="138.584129">
     <ele>86.0</ele>
     <time>2019-11-04T21:05:03Z</time>
     <extensions>
@@ -3857,7 +3857,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9332690" lon="138.5841260">
+   <trkpt lat="-34.933269" lon="138.584126">
     <ele>86.0</ele>
     <time>2019-11-04T21:05:06Z</time>
     <extensions>
@@ -3868,7 +3868,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9330690" lon="138.5841120">
+   <trkpt lat="-34.933069" lon="138.584112">
     <ele>85.8</ele>
     <time>2019-11-04T21:05:12Z</time>
     <extensions>
@@ -3879,7 +3879,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328890" lon="138.5840710">
+   <trkpt lat="-34.932889" lon="138.584071">
     <ele>85.6</ele>
     <time>2019-11-04T21:05:18Z</time>
     <extensions>
@@ -3890,7 +3890,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328400" lon="138.5840560">
+   <trkpt lat="-34.93284" lon="138.584056">
     <ele>85.6</ele>
     <time>2019-11-04T21:05:20Z</time>
     <extensions>
@@ -3901,7 +3901,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328220" lon="138.5840900">
+   <trkpt lat="-34.932822" lon="138.58409">
     <ele>85.6</ele>
     <time>2019-11-04T21:05:22Z</time>
     <extensions>
@@ -3912,7 +3912,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327970" lon="138.5842350">
+   <trkpt lat="-34.932797" lon="138.584235">
     <ele>85.8</ele>
     <time>2019-11-04T21:05:28Z</time>
     <extensions>
@@ -3923,7 +3923,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327710" lon="138.5843210">
+   <trkpt lat="-34.932771" lon="138.584321">
     <ele>85.8</ele>
     <time>2019-11-04T21:05:32Z</time>
     <extensions>
@@ -3934,7 +3934,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327620" lon="138.5843440">
+   <trkpt lat="-34.932762" lon="138.584344">
     <ele>85.8</ele>
     <time>2019-11-04T21:05:33Z</time>
     <extensions>
@@ -3945,7 +3945,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327520" lon="138.5843750">
+   <trkpt lat="-34.932752" lon="138.584375">
     <ele>86.0</ele>
     <time>2019-11-04T21:05:34Z</time>
     <extensions>
@@ -3956,7 +3956,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327330" lon="138.5844370">
+   <trkpt lat="-34.932733" lon="138.584437">
     <ele>86.2</ele>
     <time>2019-11-04T21:05:36Z</time>
     <extensions>
@@ -3967,7 +3967,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327130" lon="138.5845460">
+   <trkpt lat="-34.932713" lon="138.584546">
     <ele>86.4</ele>
     <time>2019-11-04T21:05:40Z</time>
     <extensions>
@@ -3978,7 +3978,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326810" lon="138.5847050">
+   <trkpt lat="-34.932681" lon="138.584705">
     <ele>87.2</ele>
     <time>2019-11-04T21:05:46Z</time>
     <extensions>
@@ -3989,7 +3989,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326700" lon="138.5847620">
+   <trkpt lat="-34.93267" lon="138.584762">
     <ele>87.4</ele>
     <time>2019-11-04T21:05:48Z</time>
     <extensions>
@@ -4000,7 +4000,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326520" lon="138.5849220">
+   <trkpt lat="-34.932652" lon="138.584922">
     <ele>88.0</ele>
     <time>2019-11-04T21:05:54Z</time>
     <extensions>
@@ -4011,7 +4011,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326330" lon="138.5849660">
+   <trkpt lat="-34.932633" lon="138.584966">
     <ele>88.2</ele>
     <time>2019-11-04T21:05:56Z</time>
     <extensions>
@@ -4022,7 +4022,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326130" lon="138.5850010">
+   <trkpt lat="-34.932613" lon="138.585001">
     <ele>88.2</ele>
     <time>2019-11-04T21:05:58Z</time>
     <extensions>
@@ -4033,7 +4033,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326070" lon="138.5850120">
+   <trkpt lat="-34.932607" lon="138.585012">
     <ele>88.2</ele>
     <time>2019-11-04T21:05:59Z</time>
     <extensions>
@@ -4044,7 +4044,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9325980" lon="138.5850230">
+   <trkpt lat="-34.932598" lon="138.585023">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:09Z</time>
     <extensions>
@@ -4055,7 +4055,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9325970" lon="138.5850250">
+   <trkpt lat="-34.932597" lon="138.585025">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:21Z</time>
     <extensions>
@@ -4066,7 +4066,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9325990" lon="138.5850310">
+   <trkpt lat="-34.932599" lon="138.585031">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:26Z</time>
     <extensions>
@@ -4077,7 +4077,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326010" lon="138.5850300">
+   <trkpt lat="-34.932601" lon="138.58503">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:32Z</time>
     <extensions>
@@ -4088,7 +4088,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326030" lon="138.5850310">
+   <trkpt lat="-34.932603" lon="138.585031">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:33Z</time>
     <extensions>
@@ -4099,7 +4099,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326120" lon="138.5850320">
+   <trkpt lat="-34.932612" lon="138.585032">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:37Z</time>
     <extensions>
@@ -4110,7 +4110,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326150" lon="138.5850310">
+   <trkpt lat="-34.932615" lon="138.585031">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:40Z</time>
     <extensions>
@@ -4121,7 +4121,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326160" lon="138.5850300">
+   <trkpt lat="-34.932616" lon="138.58503">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:43Z</time>
     <extensions>
@@ -4132,7 +4132,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326170" lon="138.5850310">
+   <trkpt lat="-34.932617" lon="138.585031">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:46Z</time>
     <extensions>
@@ -4143,7 +4143,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326230" lon="138.5850380">
+   <trkpt lat="-34.932623" lon="138.585038">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:51Z</time>
     <extensions>
@@ -4154,7 +4154,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326470" lon="138.5849460">
+   <trkpt lat="-34.932647" lon="138.584946">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:55Z</time>
     <extensions>
@@ -4165,7 +4165,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326520" lon="138.5848980">
+   <trkpt lat="-34.932652" lon="138.584898">
     <ele>88.2</ele>
     <time>2019-11-04T21:06:56Z</time>
     <extensions>
@@ -4176,7 +4176,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326840" lon="138.5847070">
+   <trkpt lat="-34.932684" lon="138.584707">
     <ele>88.2</ele>
     <time>2019-11-04T21:07:00Z</time>
     <extensions>
@@ -4187,7 +4187,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326920" lon="138.5846620">
+   <trkpt lat="-34.932692" lon="138.584662">
     <ele>88.0</ele>
     <time>2019-11-04T21:07:01Z</time>
     <extensions>
@@ -4198,7 +4198,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327020" lon="138.5846200">
+   <trkpt lat="-34.932702" lon="138.58462">
     <ele>87.6</ele>
     <time>2019-11-04T21:07:02Z</time>
     <extensions>
@@ -4209,7 +4209,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327160" lon="138.5845770">
+   <trkpt lat="-34.932716" lon="138.584577">
     <ele>87.0</ele>
     <time>2019-11-04T21:07:03Z</time>
     <extensions>
@@ -4220,7 +4220,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327260" lon="138.5845290">
+   <trkpt lat="-34.932726" lon="138.584529">
     <ele>86.6</ele>
     <time>2019-11-04T21:07:04Z</time>
     <extensions>
@@ -4231,7 +4231,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327450" lon="138.5844430">
+   <trkpt lat="-34.932745" lon="138.584443">
     <ele>86.2</ele>
     <time>2019-11-04T21:07:06Z</time>
     <extensions>
@@ -4242,7 +4242,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327500" lon="138.5843990">
+   <trkpt lat="-34.93275" lon="138.584399">
     <ele>86.0</ele>
     <time>2019-11-04T21:07:07Z</time>
     <extensions>
@@ -4253,7 +4253,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327640" lon="138.5843090">
+   <trkpt lat="-34.932764" lon="138.584309">
     <ele>85.6</ele>
     <time>2019-11-04T21:07:09Z</time>
     <extensions>
@@ -4264,7 +4264,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9327910" lon="138.5840990">
+   <trkpt lat="-34.932791" lon="138.584099">
     <ele>85.0</ele>
     <time>2019-11-04T21:07:14Z</time>
     <extensions>
@@ -4275,7 +4275,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328010" lon="138.5840150">
+   <trkpt lat="-34.932801" lon="138.584015">
     <ele>85.2</ele>
     <time>2019-11-04T21:07:16Z</time>
     <extensions>
@@ -4286,7 +4286,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328290" lon="138.5838010">
+   <trkpt lat="-34.932829" lon="138.583801">
     <ele>85.0</ele>
     <time>2019-11-04T21:07:21Z</time>
     <extensions>
@@ -4297,7 +4297,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328310" lon="138.5837590">
+   <trkpt lat="-34.932831" lon="138.583759">
     <ele>85.0</ele>
     <time>2019-11-04T21:07:22Z</time>
     <extensions>
@@ -4308,7 +4308,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328500" lon="138.5835310">
+   <trkpt lat="-34.93285" lon="138.583531">
     <ele>84.6</ele>
     <time>2019-11-04T21:07:27Z</time>
     <extensions>
@@ -4319,7 +4319,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328590" lon="138.5834440">
+   <trkpt lat="-34.932859" lon="138.583444">
     <ele>84.6</ele>
     <time>2019-11-04T21:07:29Z</time>
     <extensions>
@@ -4330,7 +4330,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328510" lon="138.5833730">
+   <trkpt lat="-34.932851" lon="138.583373">
     <ele>84.6</ele>
     <time>2019-11-04T21:07:31Z</time>
     <extensions>
@@ -4341,7 +4341,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9328250" lon="138.5833610">
+   <trkpt lat="-34.932825" lon="138.583361">
     <ele>84.4</ele>
     <time>2019-11-04T21:07:32Z</time>
     <extensions>
@@ -4352,7 +4352,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9326830" lon="138.5833710">
+   <trkpt lat="-34.932683" lon="138.583371">
     <ele>84.2</ele>
     <time>2019-11-04T21:07:36Z</time>
     <extensions>
@@ -4363,7 +4363,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9325340" lon="138.5833840">
+   <trkpt lat="-34.932534" lon="138.583384">
     <ele>84.4</ele>
     <time>2019-11-04T21:07:40Z</time>
     <extensions>
@@ -4374,7 +4374,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9324600" lon="138.5833780">
+   <trkpt lat="-34.93246" lon="138.583378">
     <ele>84.4</ele>
     <time>2019-11-04T21:07:42Z</time>
     <extensions>
@@ -4385,7 +4385,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9322790" lon="138.5833530">
+   <trkpt lat="-34.932279" lon="138.583353">
     <ele>84.4</ele>
     <time>2019-11-04T21:07:47Z</time>
     <extensions>
@@ -4396,7 +4396,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9322490" lon="138.5833530">
+   <trkpt lat="-34.932249" lon="138.583353">
     <ele>84.4</ele>
     <time>2019-11-04T21:07:48Z</time>
     <extensions>
@@ -4407,7 +4407,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9320540" lon="138.5833590">
+   <trkpt lat="-34.932054" lon="138.583359">
     <ele>84.6</ele>
     <time>2019-11-04T21:07:54Z</time>
     <extensions>
@@ -4418,7 +4418,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9320180" lon="138.5833540">
+   <trkpt lat="-34.932018" lon="138.583354">
     <ele>84.6</ele>
     <time>2019-11-04T21:07:55Z</time>
     <extensions>
@@ -4429,7 +4429,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9318540" lon="138.5833590">
+   <trkpt lat="-34.931854" lon="138.583359">
     <ele>84.4</ele>
     <time>2019-11-04T21:08:01Z</time>
     <extensions>
@@ -4440,7 +4440,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9316600" lon="138.5833570">
+   <trkpt lat="-34.93166" lon="138.583357">
     <ele>84.8</ele>
     <time>2019-11-04T21:08:08Z</time>
     <extensions>
@@ -4451,7 +4451,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9314910" lon="138.5833500">
+   <trkpt lat="-34.931491" lon="138.58335">
     <ele>84.6</ele>
     <time>2019-11-04T21:08:13Z</time>
     <extensions>
@@ -4462,7 +4462,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9312950" lon="138.5833480">
+   <trkpt lat="-34.931295" lon="138.583348">
     <ele>84.8</ele>
     <time>2019-11-04T21:08:19Z</time>
     <extensions>
@@ -4473,7 +4473,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9311320" lon="138.5833450">
+   <trkpt lat="-34.931132" lon="138.583345">
     <ele>85.0</ele>
     <time>2019-11-04T21:08:24Z</time>
     <extensions>
@@ -4484,7 +4484,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9309710" lon="138.5833400">
+   <trkpt lat="-34.930971" lon="138.58334">
     <ele>85.0</ele>
     <time>2019-11-04T21:08:29Z</time>
     <extensions>
@@ -4495,7 +4495,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9309420" lon="138.5833420">
+   <trkpt lat="-34.930942" lon="138.583342">
     <ele>85.0</ele>
     <time>2019-11-04T21:08:30Z</time>
     <extensions>
@@ -4506,7 +4506,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9308750" lon="138.5833390">
+   <trkpt lat="-34.930875" lon="138.583339">
     <ele>84.8</ele>
     <time>2019-11-04T21:08:32Z</time>
     <extensions>
@@ -4517,7 +4517,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9308040" lon="138.5833320">
+   <trkpt lat="-34.930804" lon="138.583332">
     <ele>84.6</ele>
     <time>2019-11-04T21:08:34Z</time>
     <extensions>
@@ -4528,7 +4528,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9307340" lon="138.5833350">
+   <trkpt lat="-34.930734" lon="138.583335">
     <ele>84.8</ele>
     <time>2019-11-04T21:08:36Z</time>
     <extensions>
@@ -4539,7 +4539,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9307130" lon="138.5833450">
+   <trkpt lat="-34.930713" lon="138.583345">
     <ele>84.8</ele>
     <time>2019-11-04T21:08:37Z</time>
     <extensions>
@@ -4550,7 +4550,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9307110" lon="138.5833720">
+   <trkpt lat="-34.930711" lon="138.583372">
     <ele>84.8</ele>
     <time>2019-11-04T21:08:39Z</time>
     <extensions>
@@ -4561,7 +4561,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9307380" lon="138.5834670">
+   <trkpt lat="-34.930738" lon="138.583467">
     <ele>85.0</ele>
     <time>2019-11-04T21:08:43Z</time>
     <extensions>
@@ -4572,7 +4572,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9307310" lon="138.5834950">
+   <trkpt lat="-34.930731" lon="138.583495">
     <ele>85.2</ele>
     <time>2019-11-04T21:08:44Z</time>
     <extensions>
@@ -4583,7 +4583,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9306770" lon="138.5836410">
+   <trkpt lat="-34.930677" lon="138.583641">
     <ele>85.2</ele>
     <time>2019-11-04T21:08:49Z</time>
     <extensions>
@@ -4594,7 +4594,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9306710" lon="138.5836700">
+   <trkpt lat="-34.930671" lon="138.58367">
     <ele>85.2</ele>
     <time>2019-11-04T21:08:50Z</time>
     <extensions>
@@ -4605,7 +4605,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9306150" lon="138.5838880">
+   <trkpt lat="-34.930615" lon="138.583888">
     <ele>85.0</ele>
     <time>2019-11-04T21:08:56Z</time>
     <extensions>
@@ -4616,7 +4616,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9305470" lon="138.5840820">
+   <trkpt lat="-34.930547" lon="138.584082">
     <ele>85.4</ele>
     <time>2019-11-04T21:09:01Z</time>
     <extensions>
@@ -4627,7 +4627,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9304820" lon="138.5842780">
+   <trkpt lat="-34.930482" lon="138.584278">
     <ele>85.8</ele>
     <time>2019-11-04T21:09:06Z</time>
     <extensions>
@@ -4638,7 +4638,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9304530" lon="138.5843530">
+   <trkpt lat="-34.930453" lon="138.584353">
     <ele>86.0</ele>
     <time>2019-11-04T21:09:08Z</time>
     <extensions>
@@ -4649,7 +4649,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9303980" lon="138.5844980">
+   <trkpt lat="-34.930398" lon="138.584498">
     <ele>86.4</ele>
     <time>2019-11-04T21:09:12Z</time>
     <extensions>
@@ -4660,7 +4660,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9303140" lon="138.5847090">
+   <trkpt lat="-34.930314" lon="138.584709">
     <ele>86.4</ele>
     <time>2019-11-04T21:09:18Z</time>
     <extensions>
@@ -4671,7 +4671,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9302380" lon="138.5848760">
+   <trkpt lat="-34.930238" lon="138.584876">
     <ele>86.8</ele>
     <time>2019-11-04T21:09:23Z</time>
     <extensions>
@@ -4682,7 +4682,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9301750" lon="138.5849870">
+   <trkpt lat="-34.930175" lon="138.584987">
     <ele>87.0</ele>
     <time>2019-11-04T21:09:26Z</time>
     <extensions>
@@ -4693,7 +4693,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300960" lon="138.5851260">
+   <trkpt lat="-34.930096" lon="138.585126">
     <ele>87.4</ele>
     <time>2019-11-04T21:09:30Z</time>
     <extensions>
@@ -4704,7 +4704,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300560" lon="138.5852310">
+   <trkpt lat="-34.930056" lon="138.585231">
     <ele>87.6</ele>
     <time>2019-11-04T21:09:33Z</time>
     <extensions>
@@ -4715,7 +4715,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300410" lon="138.5853090">
+   <trkpt lat="-34.930041" lon="138.585309">
     <ele>87.8</ele>
     <time>2019-11-04T21:09:36Z</time>
     <extensions>
@@ -4726,7 +4726,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9300280" lon="138.5853730">
+   <trkpt lat="-34.930028" lon="138.585373">
     <ele>88.2</ele>
     <time>2019-11-04T21:09:38Z</time>
     <extensions>
@@ -4737,7 +4737,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299810" lon="138.5855610">
+   <trkpt lat="-34.929981" lon="138.585561">
     <ele>89.0</ele>
     <time>2019-11-04T21:09:43Z</time>
     <extensions>
@@ -4748,7 +4748,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299430" lon="138.5856610">
+   <trkpt lat="-34.929943" lon="138.585661">
     <ele>89.2</ele>
     <time>2019-11-04T21:09:46Z</time>
     <extensions>
@@ -4759,7 +4759,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299060" lon="138.5857950">
+   <trkpt lat="-34.929906" lon="138.585795">
     <ele>89.6</ele>
     <time>2019-11-04T21:09:50Z</time>
     <extensions>
@@ -4770,7 +4770,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9298810" lon="138.5859540">
+   <trkpt lat="-34.929881" lon="138.585954">
     <ele>89.6</ele>
     <time>2019-11-04T21:09:55Z</time>
     <extensions>
@@ -4781,7 +4781,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299050" lon="138.5861190">
+   <trkpt lat="-34.929905" lon="138.586119">
     <ele>89.8</ele>
     <time>2019-11-04T21:10:01Z</time>
     <extensions>
@@ -4792,7 +4792,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299170" lon="138.5862290">
+   <trkpt lat="-34.929917" lon="138.586229">
     <ele>90.2</ele>
     <time>2019-11-04T21:10:04Z</time>
     <extensions>
@@ -4803,7 +4803,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299080" lon="138.5862980">
+   <trkpt lat="-34.929908" lon="138.586298">
     <ele>90.4</ele>
     <time>2019-11-04T21:10:06Z</time>
     <extensions>
@@ -4814,7 +4814,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9299030" lon="138.5865050">
+   <trkpt lat="-34.929903" lon="138.586505">
     <ele>90.8</ele>
     <time>2019-11-04T21:10:11Z</time>
     <extensions>
@@ -4825,7 +4825,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9298760" lon="138.5865680">
+   <trkpt lat="-34.929876" lon="138.586568">
     <ele>90.8</ele>
     <time>2019-11-04T21:10:13Z</time>
     <extensions>
@@ -4836,7 +4836,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9298240" lon="138.5866110">
+   <trkpt lat="-34.929824" lon="138.586611">
     <ele>90.8</ele>
     <time>2019-11-04T21:10:15Z</time>
     <extensions>
@@ -4847,7 +4847,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9296540" lon="138.5866380">
+   <trkpt lat="-34.929654" lon="138.586638">
     <ele>90.8</ele>
     <time>2019-11-04T21:10:20Z</time>
     <extensions>
@@ -4858,7 +4858,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9295620" lon="138.5866840">
+   <trkpt lat="-34.929562" lon="138.586684">
     <ele>91.2</ele>
     <time>2019-11-04T21:10:24Z</time>
     <extensions>
@@ -4869,7 +4869,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294440" lon="138.5867960">
+   <trkpt lat="-34.929444" lon="138.586796">
     <ele>91.4</ele>
     <time>2019-11-04T21:10:29Z</time>
     <extensions>
@@ -4880,7 +4880,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294180" lon="138.5870180">
+   <trkpt lat="-34.929418" lon="138.587018">
     <ele>91.8</ele>
     <time>2019-11-04T21:10:34Z</time>
     <extensions>
@@ -4891,7 +4891,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294160" lon="138.5871000">
+   <trkpt lat="-34.929416" lon="138.5871">
     <ele>91.8</ele>
     <time>2019-11-04T21:10:36Z</time>
     <extensions>
@@ -4902,7 +4902,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294090" lon="138.5873180">
+   <trkpt lat="-34.929409" lon="138.587318">
     <ele>91.8</ele>
     <time>2019-11-04T21:10:42Z</time>
     <extensions>
@@ -4913,7 +4913,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293960" lon="138.5874260">
+   <trkpt lat="-34.929396" lon="138.587426">
     <ele>92.0</ele>
     <time>2019-11-04T21:10:45Z</time>
     <extensions>
@@ -4924,7 +4924,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293910" lon="138.5874920">
+   <trkpt lat="-34.929391" lon="138.587492">
     <ele>92.6</ele>
     <time>2019-11-04T21:10:47Z</time>
     <extensions>
@@ -4935,7 +4935,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294020" lon="138.5875460">
+   <trkpt lat="-34.929402" lon="138.587546">
     <ele>92.8</ele>
     <time>2019-11-04T21:10:49Z</time>
     <extensions>
@@ -4946,7 +4946,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294110" lon="138.5876060">
+   <trkpt lat="-34.929411" lon="138.587606">
     <ele>93.2</ele>
     <time>2019-11-04T21:10:52Z</time>
     <extensions>
@@ -4957,7 +4957,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294140" lon="138.5876140">
+   <trkpt lat="-34.929414" lon="138.587614">
     <ele>93.2</ele>
     <time>2019-11-04T21:10:53Z</time>
     <extensions>
@@ -4968,7 +4968,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294360" lon="138.5876130">
+   <trkpt lat="-34.929436" lon="138.587613">
     <ele>93.2</ele>
     <time>2019-11-04T21:10:55Z</time>
     <extensions>
@@ -4979,7 +4979,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294380" lon="138.5876310">
+   <trkpt lat="-34.929438" lon="138.587631">
     <ele>93.2</ele>
     <time>2019-11-04T21:10:57Z</time>
     <extensions>
@@ -4990,7 +4990,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294370" lon="138.5876320">
+   <trkpt lat="-34.929437" lon="138.587632">
     <ele>93.2</ele>
     <time>2019-11-04T21:10:59Z</time>
     <extensions>
@@ -5001,7 +5001,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294360" lon="138.5876320">
+   <trkpt lat="-34.929436" lon="138.587632">
     <ele>93.2</ele>
     <time>2019-11-04T21:11:00Z</time>
     <extensions>
@@ -5012,7 +5012,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294120" lon="138.5876950">
+   <trkpt lat="-34.929412" lon="138.587695">
     <ele>93.2</ele>
     <time>2019-11-04T21:11:04Z</time>
     <extensions>
@@ -5023,7 +5023,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293870" lon="138.5879130">
+   <trkpt lat="-34.929387" lon="138.587913">
     <ele>93.2</ele>
     <time>2019-11-04T21:11:09Z</time>
     <extensions>
@@ -5034,7 +5034,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293810" lon="138.5879550">
+   <trkpt lat="-34.929381" lon="138.587955">
     <ele>93.2</ele>
     <time>2019-11-04T21:11:10Z</time>
     <extensions>
@@ -5045,7 +5045,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293940" lon="138.5882030">
+   <trkpt lat="-34.929394" lon="138.588203">
     <ele>92.8</ele>
     <time>2019-11-04T21:11:16Z</time>
     <extensions>
@@ -5056,7 +5056,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294190" lon="138.5883720">
+   <trkpt lat="-34.929419" lon="138.588372">
     <ele>93.2</ele>
     <time>2019-11-04T21:11:21Z</time>
     <extensions>
@@ -5067,7 +5067,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294170" lon="138.5886200">
+   <trkpt lat="-34.929417" lon="138.58862">
     <ele>93.0</ele>
     <time>2019-11-04T21:11:27Z</time>
     <extensions>
@@ -5078,7 +5078,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9294170" lon="138.5886630">
+   <trkpt lat="-34.929417" lon="138.588663">
     <ele>93.0</ele>
     <time>2019-11-04T21:11:28Z</time>
     <extensions>
@@ -5089,7 +5089,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293660" lon="138.5888780">
+   <trkpt lat="-34.929366" lon="138.588878">
     <ele>93.2</ele>
     <time>2019-11-04T21:11:33Z</time>
     <extensions>
@@ -5100,7 +5100,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9293320" lon="138.5889650">
+   <trkpt lat="-34.929332" lon="138.588965">
     <ele>93.6</ele>
     <time>2019-11-04T21:11:35Z</time>
     <extensions>
@@ -5111,7 +5111,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292840" lon="138.5891490">
+   <trkpt lat="-34.929284" lon="138.589149">
     <ele>93.6</ele>
     <time>2019-11-04T21:11:39Z</time>
     <extensions>
@@ -5122,7 +5122,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292280" lon="138.5893760">
+   <trkpt lat="-34.929228" lon="138.589376">
     <ele>93.6</ele>
     <time>2019-11-04T21:11:44Z</time>
     <extensions>
@@ -5133,7 +5133,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292330" lon="138.5894950">
+   <trkpt lat="-34.929233" lon="138.589495">
     <ele>93.6</ele>
     <time>2019-11-04T21:11:47Z</time>
     <extensions>
@@ -5144,7 +5144,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292450" lon="138.5897430">
+   <trkpt lat="-34.929245" lon="138.589743">
     <ele>93.6</ele>
     <time>2019-11-04T21:11:53Z</time>
     <extensions>
@@ -5155,7 +5155,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292490" lon="138.5898250">
+   <trkpt lat="-34.929249" lon="138.589825">
     <ele>93.6</ele>
     <time>2019-11-04T21:11:55Z</time>
     <extensions>
@@ -5166,7 +5166,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292490" lon="138.5900640">
+   <trkpt lat="-34.929249" lon="138.590064">
     <ele>93.6</ele>
     <time>2019-11-04T21:12:01Z</time>
     <extensions>
@@ -5177,7 +5177,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292480" lon="138.5901420">
+   <trkpt lat="-34.929248" lon="138.590142">
     <ele>93.6</ele>
     <time>2019-11-04T21:12:03Z</time>
     <extensions>
@@ -5188,7 +5188,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9292320" lon="138.5903750">
+   <trkpt lat="-34.929232" lon="138.590375">
     <ele>93.6</ele>
     <time>2019-11-04T21:12:09Z</time>
     <extensions>
@@ -5199,7 +5199,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9291600" lon="138.5906120">
+   <trkpt lat="-34.92916" lon="138.590612">
     <ele>93.8</ele>
     <time>2019-11-04T21:12:14Z</time>
     <extensions>
@@ -5210,7 +5210,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9291500" lon="138.5906570">
+   <trkpt lat="-34.92915" lon="138.590657">
     <ele>93.8</ele>
     <time>2019-11-04T21:12:15Z</time>
     <extensions>
@@ -5221,7 +5221,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290910" lon="138.5909020">
+   <trkpt lat="-34.929091" lon="138.590902">
     <ele>94.0</ele>
     <time>2019-11-04T21:12:21Z</time>
     <extensions>
@@ -5232,7 +5232,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290990" lon="138.5911180">
+   <trkpt lat="-34.929099" lon="138.591118">
     <ele>94.0</ele>
     <time>2019-11-04T21:12:27Z</time>
     <extensions>
@@ -5243,7 +5243,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290770" lon="138.5912840">
+   <trkpt lat="-34.929077" lon="138.591284">
     <ele>94.0</ele>
     <time>2019-11-04T21:12:32Z</time>
     <extensions>
@@ -5254,7 +5254,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290340" lon="138.5913810">
+   <trkpt lat="-34.929034" lon="138.591381">
     <ele>94.0</ele>
     <time>2019-11-04T21:12:37Z</time>
     <extensions>
@@ -5265,7 +5265,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9291010" lon="138.5916010">
+   <trkpt lat="-34.929101" lon="138.591601">
     <ele>93.8</ele>
     <time>2019-11-04T21:12:41Z</time>
     <extensions>
@@ -5276,7 +5276,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9291110" lon="138.5916580">
+   <trkpt lat="-34.929111" lon="138.591658">
     <ele>93.8</ele>
     <time>2019-11-04T21:12:42Z</time>
     <extensions>
@@ -5287,7 +5287,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9291240" lon="138.5919140">
+   <trkpt lat="-34.929124" lon="138.591914">
     <ele>94.2</ele>
     <time>2019-11-04T21:12:48Z</time>
     <extensions>
@@ -5298,7 +5298,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9291160" lon="138.5920540">
+   <trkpt lat="-34.929116" lon="138.592054">
     <ele>94.2</ele>
     <time>2019-11-04T21:12:52Z</time>
     <extensions>
@@ -5309,7 +5309,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290810" lon="138.5922750">
+   <trkpt lat="-34.929081" lon="138.592275">
     <ele>94.4</ele>
     <time>2019-11-04T21:12:57Z</time>
     <extensions>
@@ -5320,7 +5320,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290560" lon="138.5923580">
+   <trkpt lat="-34.929056" lon="138.592358">
     <ele>94.4</ele>
     <time>2019-11-04T21:12:59Z</time>
     <extensions>
@@ -5331,7 +5331,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290560" lon="138.5923970">
+   <trkpt lat="-34.929056" lon="138.592397">
     <ele>94.6</ele>
     <time>2019-11-04T21:13:00Z</time>
     <extensions>
@@ -5342,7 +5342,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289710" lon="138.5926350">
+   <trkpt lat="-34.928971" lon="138.592635">
     <ele>95.0</ele>
     <time>2019-11-04T21:13:05Z</time>
     <extensions>
@@ -5353,7 +5353,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289900" lon="138.5928570">
+   <trkpt lat="-34.92899" lon="138.592857">
     <ele>94.6</ele>
     <time>2019-11-04T21:13:11Z</time>
     <extensions>
@@ -5364,7 +5364,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289800" lon="138.5930890">
+   <trkpt lat="-34.92898" lon="138.593089">
     <ele>94.8</ele>
     <time>2019-11-04T21:13:17Z</time>
     <extensions>
@@ -5375,7 +5375,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289760" lon="138.5931570">
+   <trkpt lat="-34.928976" lon="138.593157">
     <ele>95.0</ele>
     <time>2019-11-04T21:13:19Z</time>
     <extensions>
@@ -5386,7 +5386,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289510" lon="138.5933050">
+   <trkpt lat="-34.928951" lon="138.593305">
     <ele>95.0</ele>
     <time>2019-11-04T21:13:23Z</time>
     <extensions>
@@ -5397,7 +5397,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289860" lon="138.5933660">
+   <trkpt lat="-34.928986" lon="138.593366">
     <ele>94.6</ele>
     <time>2019-11-04T21:13:27Z</time>
     <extensions>
@@ -5408,7 +5408,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289840" lon="138.5933550">
+   <trkpt lat="-34.928984" lon="138.593355">
     <ele>94.8</ele>
     <time>2019-11-04T21:13:29Z</time>
     <extensions>
@@ -5419,7 +5419,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289780" lon="138.5933660">
+   <trkpt lat="-34.928978" lon="138.593366">
     <ele>94.8</ele>
     <time>2019-11-04T21:13:30Z</time>
     <extensions>
@@ -5430,7 +5430,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289730" lon="138.5933880">
+   <trkpt lat="-34.928973" lon="138.593388">
     <ele>94.6</ele>
     <time>2019-11-04T21:13:31Z</time>
     <extensions>
@@ -5441,7 +5441,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289690" lon="138.5934190">
+   <trkpt lat="-34.928969" lon="138.593419">
     <ele>94.8</ele>
     <time>2019-11-04T21:13:32Z</time>
     <extensions>
@@ -5452,7 +5452,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289790" lon="138.5935680">
+   <trkpt lat="-34.928979" lon="138.593568">
     <ele>95.4</ele>
     <time>2019-11-04T21:13:36Z</time>
     <extensions>
@@ -5463,7 +5463,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290410" lon="138.5936820">
+   <trkpt lat="-34.929041" lon="138.593682">
     <ele>95.6</ele>
     <time>2019-11-04T21:13:38Z</time>
     <extensions>
@@ -5474,7 +5474,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290340" lon="138.5937320">
+   <trkpt lat="-34.929034" lon="138.593732">
     <ele>95.4</ele>
     <time>2019-11-04T21:13:42Z</time>
     <extensions>
@@ -5485,7 +5485,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290240" lon="138.5937580">
+   <trkpt lat="-34.929024" lon="138.593758">
     <ele>95.4</ele>
     <time>2019-11-04T21:13:44Z</time>
     <extensions>
@@ -5496,7 +5496,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289930" lon="138.5937900">
+   <trkpt lat="-34.928993" lon="138.59379">
     <ele>95.4</ele>
     <time>2019-11-04T21:13:48Z</time>
     <extensions>
@@ -5507,7 +5507,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289770" lon="138.5938100">
+   <trkpt lat="-34.928977" lon="138.59381">
     <ele>95.4</ele>
     <time>2019-11-04T21:13:53Z</time>
     <extensions>
@@ -5518,7 +5518,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289800" lon="138.5938300">
+   <trkpt lat="-34.92898" lon="138.59383">
     <ele>95.4</ele>
     <time>2019-11-04T21:13:56Z</time>
     <extensions>
@@ -5529,7 +5529,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289950" lon="138.5938430">
+   <trkpt lat="-34.928995" lon="138.593843">
     <ele>95.0</ele>
     <time>2019-11-04T21:14:04Z</time>
     <extensions>
@@ -5540,7 +5540,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290100" lon="138.5939630">
+   <trkpt lat="-34.92901" lon="138.593963">
     <ele>94.8</ele>
     <time>2019-11-04T21:14:08Z</time>
     <extensions>
@@ -5551,7 +5551,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290140" lon="138.5940090">
+   <trkpt lat="-34.929014" lon="138.594009">
     <ele>94.8</ele>
     <time>2019-11-04T21:14:09Z</time>
     <extensions>
@@ -5562,7 +5562,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290170" lon="138.5941410">
+   <trkpt lat="-34.929017" lon="138.594141">
     <ele>94.6</ele>
     <time>2019-11-04T21:14:12Z</time>
     <extensions>
@@ -5573,7 +5573,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290240" lon="138.5941780">
+   <trkpt lat="-34.929024" lon="138.594178">
     <ele>94.6</ele>
     <time>2019-11-04T21:14:13Z</time>
     <extensions>
@@ -5584,7 +5584,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290310" lon="138.5942130">
+   <trkpt lat="-34.929031" lon="138.594213">
     <ele>94.6</ele>
     <time>2019-11-04T21:14:14Z</time>
     <extensions>
@@ -5595,7 +5595,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290390" lon="138.5943210">
+   <trkpt lat="-34.929039" lon="138.594321">
     <ele>94.6</ele>
     <time>2019-11-04T21:14:17Z</time>
     <extensions>
@@ -5606,7 +5606,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290540" lon="138.5943940">
+   <trkpt lat="-34.929054" lon="138.594394">
     <ele>94.4</ele>
     <time>2019-11-04T21:14:19Z</time>
     <extensions>
@@ -5617,7 +5617,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290650" lon="138.5945600">
+   <trkpt lat="-34.929065" lon="138.59456">
     <ele>94.4</ele>
     <time>2019-11-04T21:14:23Z</time>
     <extensions>
@@ -5628,7 +5628,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290800" lon="138.5946930">
+   <trkpt lat="-34.92908" lon="138.594693">
     <ele>94.8</ele>
     <time>2019-11-04T21:14:26Z</time>
     <extensions>
@@ -5639,7 +5639,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290630" lon="138.5948760">
+   <trkpt lat="-34.929063" lon="138.594876">
     <ele>94.8</ele>
     <time>2019-11-04T21:14:30Z</time>
     <extensions>
@@ -5650,7 +5650,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9290640" lon="138.5950830">
+   <trkpt lat="-34.929064" lon="138.595083">
     <ele>94.8</ele>
     <time>2019-11-04T21:14:35Z</time>
     <extensions>
@@ -5661,7 +5661,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289940" lon="138.5953540">
+   <trkpt lat="-34.928994" lon="138.595354">
     <ele>94.8</ele>
     <time>2019-11-04T21:14:41Z</time>
     <extensions>
@@ -5672,7 +5672,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289690" lon="138.5955710">
+   <trkpt lat="-34.928969" lon="138.595571">
     <ele>95.0</ele>
     <time>2019-11-04T21:14:46Z</time>
     <extensions>
@@ -5683,7 +5683,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289580" lon="138.5956110">
+   <trkpt lat="-34.928958" lon="138.595611">
     <ele>95.2</ele>
     <time>2019-11-04T21:14:47Z</time>
     <extensions>
@@ -5694,7 +5694,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288680" lon="138.5958240">
+   <trkpt lat="-34.928868" lon="138.595824">
     <ele>95.6</ele>
     <time>2019-11-04T21:14:51Z</time>
     <extensions>
@@ -5705,7 +5705,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288210" lon="138.5958780">
+   <trkpt lat="-34.928821" lon="138.595878">
     <ele>95.6</ele>
     <time>2019-11-04T21:14:52Z</time>
     <extensions>
@@ -5716,7 +5716,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287570" lon="138.5960580">
+   <trkpt lat="-34.928757" lon="138.596058">
     <ele>95.6</ele>
     <time>2019-11-04T21:14:56Z</time>
     <extensions>
@@ -5727,7 +5727,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286850" lon="138.5962770">
+   <trkpt lat="-34.928685" lon="138.596277">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:02Z</time>
     <extensions>
@@ -5738,7 +5738,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287540" lon="138.5964270">
+   <trkpt lat="-34.928754" lon="138.596427">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:07Z</time>
     <extensions>
@@ -5749,7 +5749,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287590" lon="138.5965490">
+   <trkpt lat="-34.928759" lon="138.596549">
     <ele>95.8</ele>
     <time>2019-11-04T21:15:11Z</time>
     <extensions>
@@ -5760,7 +5760,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287730" lon="138.5966010">
+   <trkpt lat="-34.928773" lon="138.596601">
     <ele>95.8</ele>
     <time>2019-11-04T21:15:12Z</time>
     <extensions>
@@ -5771,7 +5771,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287670" lon="138.5968050">
+   <trkpt lat="-34.928767" lon="138.596805">
     <ele>95.8</ele>
     <time>2019-11-04T21:15:17Z</time>
     <extensions>
@@ -5782,7 +5782,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287780" lon="138.5969950">
+   <trkpt lat="-34.928778" lon="138.596995">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:22Z</time>
     <extensions>
@@ -5793,7 +5793,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287640" lon="138.5970200">
+   <trkpt lat="-34.928764" lon="138.59702">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:23Z</time>
     <extensions>
@@ -5804,7 +5804,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286950" lon="138.5970850">
+   <trkpt lat="-34.928695" lon="138.597085">
     <ele>95.8</ele>
     <time>2019-11-04T21:15:27Z</time>
     <extensions>
@@ -5815,7 +5815,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287490" lon="138.5972850">
+   <trkpt lat="-34.928749" lon="138.597285">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:31Z</time>
     <extensions>
@@ -5826,7 +5826,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287610" lon="138.5973930">
+   <trkpt lat="-34.928761" lon="138.597393">
     <ele>96.2</ele>
     <time>2019-11-04T21:15:33Z</time>
     <extensions>
@@ -5837,7 +5837,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288050" lon="138.5974810">
+   <trkpt lat="-34.928805" lon="138.597481">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:34Z</time>
     <extensions>
@@ -5848,7 +5848,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288240" lon="138.5975360">
+   <trkpt lat="-34.928824" lon="138.597536">
     <ele>95.8</ele>
     <time>2019-11-04T21:15:35Z</time>
     <extensions>
@@ -5859,7 +5859,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288180" lon="138.5975670">
+   <trkpt lat="-34.928818" lon="138.597567">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:36Z</time>
     <extensions>
@@ -5870,7 +5870,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288190" lon="138.5976110">
+   <trkpt lat="-34.928819" lon="138.597611">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:37Z</time>
     <extensions>
@@ -5881,7 +5881,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288490" lon="138.5978660">
+   <trkpt lat="-34.928849" lon="138.597866">
     <ele>96.0</ele>
     <time>2019-11-04T21:15:42Z</time>
     <extensions>
@@ -5892,7 +5892,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288460" lon="138.5979540">
+   <trkpt lat="-34.928846" lon="138.597954">
     <ele>95.6</ele>
     <time>2019-11-04T21:15:46Z</time>
     <extensions>
@@ -5903,7 +5903,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286340" lon="138.5980040">
+   <trkpt lat="-34.928634" lon="138.598004">
     <ele>95.4</ele>
     <time>2019-11-04T21:15:50Z</time>
     <extensions>
@@ -5914,7 +5914,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286630" lon="138.5982350">
+   <trkpt lat="-34.928663" lon="138.598235">
     <ele>95.4</ele>
     <time>2019-11-04T21:15:53Z</time>
     <extensions>
@@ -5925,7 +5925,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286770" lon="138.5984740">
+   <trkpt lat="-34.928677" lon="138.598474">
     <ele>95.8</ele>
     <time>2019-11-04T21:15:57Z</time>
     <extensions>
@@ -5936,7 +5936,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286800" lon="138.5985230">
+   <trkpt lat="-34.92868" lon="138.598523">
     <ele>95.8</ele>
     <time>2019-11-04T21:15:58Z</time>
     <extensions>
@@ -5947,7 +5947,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9287010" lon="138.5986930">
+   <trkpt lat="-34.928701" lon="138.598693">
     <ele>96.4</ele>
     <time>2019-11-04T21:16:03Z</time>
     <extensions>
@@ -5958,7 +5958,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286880" lon="138.5989090">
+   <trkpt lat="-34.928688" lon="138.598909">
     <ele>96.2</ele>
     <time>2019-11-04T21:16:08Z</time>
     <extensions>
@@ -5969,7 +5969,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286840" lon="138.5989480">
+   <trkpt lat="-34.928684" lon="138.598948">
     <ele>96.2</ele>
     <time>2019-11-04T21:16:09Z</time>
     <extensions>
@@ -5980,7 +5980,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286600" lon="138.5990220">
+   <trkpt lat="-34.92866" lon="138.599022">
     <ele>96.2</ele>
     <time>2019-11-04T21:16:11Z</time>
     <extensions>
@@ -5991,7 +5991,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286570" lon="138.5990550">
+   <trkpt lat="-34.928657" lon="138.599055">
     <ele>96.2</ele>
     <time>2019-11-04T21:16:12Z</time>
     <extensions>
@@ -6002,7 +6002,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9286790" lon="138.5990630">
+   <trkpt lat="-34.928679" lon="138.599063">
     <ele>96.2</ele>
     <time>2019-11-04T21:16:13Z</time>
     <extensions>
@@ -6013,7 +6013,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288260" lon="138.5990110">
+   <trkpt lat="-34.928826" lon="138.599011">
     <ele>96.6</ele>
     <time>2019-11-04T21:16:16Z</time>
     <extensions>
@@ -6024,7 +6024,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288590" lon="138.5990040">
+   <trkpt lat="-34.928859" lon="138.599004">
     <ele>96.8</ele>
     <time>2019-11-04T21:16:17Z</time>
     <extensions>
@@ -6035,7 +6035,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9289030" lon="138.5989420">
+   <trkpt lat="-34.928903" lon="138.598942">
     <ele>97.2</ele>
     <time>2019-11-04T21:16:21Z</time>
     <extensions>
@@ -6046,7 +6046,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="-34.9288940" lon="138.5989320">
+   <trkpt lat="-34.928894" lon="138.598932">
     <ele>97.4</ele>
     <time>2019-11-04T21:16:22Z</time>
     <extensions>

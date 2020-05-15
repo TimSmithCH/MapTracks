@@ -1,24 +1,37 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
  <metadata>
   <time>2014-09-28T00:00:01Z</time>
  </metadata>
-  <trk>
-    <name>Dent du Géant</name>
-    <trkseg>
-      <trkpt lat="45.8451137713921" lon="6.933632276261986"/>
-      <trkpt lat="45.84788855552492" lon="6.9342355080737015"/>
-      <trkpt lat="45.85009236197764" lon="6.935666448677807"/>
-      <trkpt lat="45.85250265743015" lon="6.937918032858041"/>
-      <trkpt lat="45.85416748996832" lon="6.939789577264751"/>
-      <trkpt lat="45.85516627372043" lon="6.9439411562640725"/>
-      <trkpt lat="45.85649572925415" lon="6.9464449540628515"/>
-      <trkpt lat="45.85802350763456" lon="6.947931060936325"/>
-      <trkpt lat="45.85927787043917" lon="6.948742324972213"/>
-      <trkpt lat="45.86015953404361" lon="6.949363422544902"/>
-      <trkpt lat="45.860637441060554" lon="6.95042361381685"/>
-      <trkpt lat="45.86118189418994" lon="6.951241303352668"/>
-      <trkpt lat="45.86189304951024" lon="6.951525278688763"/>
-    </trkseg>
-  </trk>
+ <trk>
+  <name>Dent_du_Géant_ROUTE</name>
+  <trkseg>
+   <trkpt lat="45.8451137713921" lon="6.933632276261986">
+   </trkpt>
+   <trkpt lat="45.84788855552492" lon="6.9342355080737015">
+   </trkpt>
+   <trkpt lat="45.85009236197764" lon="6.935666448677807">
+   </trkpt>
+   <trkpt lat="45.85250265743015" lon="6.937918032858041">
+   </trkpt>
+   <trkpt lat="45.85416748996832" lon="6.939789577264751">
+   </trkpt>
+   <trkpt lat="45.85516627372043" lon="6.9439411562640725">
+   </trkpt>
+   <trkpt lat="45.85649572925415" lon="6.9464449540628515">
+   </trkpt>
+   <trkpt lat="45.85802350763456" lon="6.947931060936325">
+   </trkpt>
+   <trkpt lat="45.85927787043917" lon="6.948742324972213">
+   </trkpt>
+   <trkpt lat="45.86015953404361" lon="6.949363422544902">
+   </trkpt>
+   <trkpt lat="45.860637441060554" lon="6.95042361381685">
+   </trkpt>
+   <trkpt lat="45.86118189418994" lon="6.951241303352668">
+   </trkpt>
+   <trkpt lat="45.86189304951024" lon="6.951525278688763">
+   </trkpt>
+  </trkseg>
+ </trk>
 </gpx>
