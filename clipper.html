@@ -41,7 +41,7 @@
     width: 100%;
     position: relative;
     margin: 0;
-    cursor: ew-resize;
+    cursor: default;
 }
 </style>
 
@@ -148,7 +148,7 @@
                     //console.log(data.features[0]);
                     // Use Turf to convert all the LineString points into individual points
                     var temp_data = turf.explode(data.features[0]);
-                    //console.log(data.features[0].geometry.coordinates.length);
+                    console.log(data.features[0].geometry.coordinates.length);
                     // But the exploded object has lots of pointers/prototypes, so cant set any values in it. Clone to make a editable copy
                     var point_data = deepCopy(temp_data);
                     // Name each point by its position in array
@@ -260,6 +260,7 @@
                     });
                     map.on('mouseenter', 'points', function(e) {
                       // Change the cursor style as a UI indicator.
+                      console.log("MouseEnter");
                       map.getCanvas().style.cursor = 'pointer';
                       // Populate the popup and set its coordinates based on the feature found.
                       var time = e.features[0].properties.time.split(/(T|Z)/)[2];
