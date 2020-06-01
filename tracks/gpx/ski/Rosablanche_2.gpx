@@ -4,7 +4,7 @@
   <time>2020-01-01T08:07:07Z</time>
  </metadata>
  <trk>
-  <name>Rosablanche_2 trimmed</name>
+  <name>Rosablanche_2</name>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.099533" lon="7.268358">
@@ -3582,8 +3582,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
-
    <trkpt lat="46.079984" lon="7.270348">
     <ele>2278.0</ele>
     <time>2020-01-01T08:16:58Z</time>
@@ -3595,8 +3593,7 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
-   <trkpt lat="46.084670" lon="7.301066">
+   <trkpt lat="46.08467" lon="7.301066">
     <ele>2902.8</ele>
     <time>2020-01-01T08:34:57Z</time>
     <extensions>
