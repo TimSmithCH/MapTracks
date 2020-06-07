@@ -5,9 +5,9 @@ set -x   # Debug mode to echo commands
 #ls -lR
 rm -r node_modules
 
-git rm -rq tracks/gpx
+git rm -rq tracks/3_gpx
 git commit -q -m "Dropped raw GPX files"
 
 git status
-git add tracks/geojson
+git add tracks/2_geojson
 git commit -m "Uploaded more GeoJSON files"
