@@ -15,12 +15,12 @@ FORCE=true
 for type in $TYPES
 do
   echo "Processing $type"
-  FILES=tracks/gpx/$type/*.gpx
+  FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
   do
     file=${f##*/}
     base=${file%.gpx}
-    fileIN=tracks/gpx/$type/$base.gpx
+    fileIN=tracks/3_gpx/$type/$base.gpx
     fileOUT=tracks/2_geojson/$type/$base.geojson
     if $FORCE ; then
       timeIN="$(date +%s)"
