@@ -116,6 +116,13 @@ body {
 #menu a.active:hover {
     background: #3074a4;
 }
+#menu button {
+    font-size: 12px;
+    display: block;
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+}
 #menu input {
     -webkit-appearance: none;  /* Override default CSS styles */
     -webkit-appearance: slider-vertical; /* WebKit */
