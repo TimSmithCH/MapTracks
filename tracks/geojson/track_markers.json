@@ -1,0 +1,230 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.287839,
+                    46.793473,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Scuol",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.426731,
+                    46.603501,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Santa Maria",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    10.139297,
+                    46.547537,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Livigno",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.797664,
+                    46.459855,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Silvaplana",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.649834,
+                    46.468971,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Bivio",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.338542,
+                    46.791467,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Versam",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.388463,
+                    46.687713,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Tschappina",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.134041,
+                    46.683479,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Lumbrein",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.854044,
+                    46.705634,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Disentis",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.597293,
+                    46.633642,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Andermatt",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.427896,
+                    46.731029,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Susten Pass",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.070841,
+                    46.632255,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Grindelwald",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.727881,
+                    46.662475,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Krattigen",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.558438,
+                    46.492325,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Adelboden",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.443100,
+                    46.457792,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Lenk",
+                "icon": "castle"
+            }
+        }
+    ]
+}
