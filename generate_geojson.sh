@@ -4,10 +4,10 @@ set -e   # Exit with nonzero exit code if anything fails
 
 #ls -lR tracks/
 
-mkdir -pv tracks/geojson/bike
-mkdir -pv tracks/geojson/hike
-mkdir -pv tracks/geojson/run
-mkdir -pv tracks/geojson/ski
+mkdir -pv tracks/2_geojson/bike
+mkdir -pv tracks/2_geojson/hike
+mkdir -pv tracks/2_geojson/run
+mkdir -pv tracks/2_geojson/ski
 
 TYPES="bike hike run ski"
 FORCE=false
@@ -21,7 +21,7 @@ do
     file=${f##*/}
     base=${file%.gpx}
     fileIN=tracks/gpx/$type/$base.gpx
-    fileOUT=tracks/geojson/$type/$base.geojson
+    fileOUT=tracks/2_geojson/$type/$base.geojson
     if $FORCE ; then
       timeIN="$(date +%s)"
     else
@@ -36,7 +36,7 @@ do
       printf "."
     fi
   done
-  fileSUMM=tracks/geojson/${type}_tracks.geojson
+  fileSUMM=tracks/1_display/${type}_tracks.geojson
   printf "\n Generating $fileSUMM \n"
-  node_modules/\@mapbox/geojson-merge/geojson-merge tracks/geojson/$type/*.geojson >$fileSUMM
+  node_modules/\@mapbox/geojson-merge/geojson-merge tracks/2_geojson/$type/*.geojson >$fileSUMM
 done

@@ -9,10 +9,10 @@ tilesets delete-source --token $TOKEN --force timsmithch bike_tracks
 tilesets delete-source --token $TOKEN --force timsmithch hike_tracks
 tilesets delete-source --token $TOKEN --force timsmithch run_tracks
 tilesets delete-source --token $TOKEN --force timsmithch ski_tracks
-tilesets add-source --token $TOKEN timsmithch bike_tracks tracks/geojson/bike_tracks.geojson
-tilesets add-source --token $TOKEN timsmithch hike_tracks tracks/geojson/hike_tracks.geojson
-tilesets add-source --token $TOKEN timsmithch run_tracks tracks/geojson/run_tracks.geojson
-tilesets add-source --token $TOKEN timsmithch ski_tracks tracks/geojson/ski_tracks.geojson
+tilesets add-source --token $TOKEN timsmithch bike_tracks tracks/1_display/bike_tracks.geojson
+tilesets add-source --token $TOKEN timsmithch hike_tracks tracks/1_display/hike_tracks.geojson
+tilesets add-source --token $TOKEN timsmithch run_tracks tracks/1_display/run_tracks.geojson
+tilesets add-source --token $TOKEN timsmithch ski_tracks tracks/1_display/ski_tracks.geojson
 
 # Launch the tilset generation and wait for completion
 #tilesets list-sources --token $TOKEN timsmithch

@@ -111,7 +111,7 @@
               // Add Markers for important waypoints on trips
               map.addSource("markers", {
                 "type": "geojson",
-                "data": "tracks/geojson/track_markers.json"
+                "data": "features/track_markers.json"
               });
               map.addLayer({
                 "id": "markers",
@@ -135,7 +135,7 @@
               //  4000-5000m with prominence >30m https://en.wikipedia.org/wiki/List_of_Alpine_four-thousanders
               map.addSource("mountainsH", {
                 "type": "geojson",
-                "data": "tracks/geojson/CH_Mountains_H3000_P300.json"
+                "data": "features/CH_Mountains_H3000_P300.json"
               });
               map.addLayer({
                 "id": "mountainsH",
@@ -245,9 +245,25 @@
                 if (visibility === 'visible') {
                   map.setLayoutProperty(id, 'visibility', 'none');
                   this.className = '';
+                  if (name === 'Peaks') {
+                    var s1 = document.getElementById('sliders');
+                    s1.style.display = "none";
+                    var o1 = document.getElementById('outH');
+                    o1.style.display = "none";
+                    var o2 = document.getElementById('outP');
+                    o2.style.display = "none";
+                  }
                 } else {
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
+                  if (name === 'Peaks') {
+                    var s1 = document.getElementById('sliders');
+                    s1.style.display = "block";
+                    var o1 = document.getElementById('outH');
+                    o1.style.display = "block";
+                    var o2 = document.getElementById('outP');
+                    o2.style.display = "block";
+                  }
                 }
               };
               var layers = document.getElementById('menu');
@@ -257,6 +273,8 @@
             //----------------------------------------------
             // Create the slider and add change actions
             var div = document.createElement("div");
+            div.id = "sliders";
+            div.style.display = "none";
             var sliderH = document.createElement('input');
             sliderH.setAttribute('type', 'range');
             sliderH.setAttribute('min', '0');
@@ -297,9 +315,13 @@
             //----------------------------------------------
             // Create the slider output display
             var slideoutH = document.createElement('output');
+            slideoutH.id = "outH";
+            slideoutH.style.display = "none";
             slideoutH.setAttribute('for', 'value');
             slideoutH.innerHTML = 0;
             var slideoutP = document.createElement('output');
+            slideoutP.id = "outP";
+            slideoutP.style.display = "none";
             slideoutP.setAttribute('for', 'value');
             slideoutP.setAttribute('class', 'right');
             slideoutP.innerHTML = 0;
@@ -312,6 +334,30 @@
             sliderP.oninput = function() {
               slideoutP.innerHTML = this.value;
             }
+            //--
+            var closer = document.createElement('button');
+            closer.textContent = 'Close';
+            closer.style.backgroundColor ='red';
+            closer.style.color ='white';
+            closer.style.outline ='none';
+            closer.onclick = function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var m = document.querySelectorAll('a');
+              for (var i = 0; i < m.length; i++) {
+                var mChild = m[i];
+                if (mChild.style.display === "none") {
+                  mChild.style.display = "block";
+                  closer.style.backgroundColor ='red';
+                  closer.textContent = 'Close';
+                } else {
+                  mChild.style.display = "none";
+                  closer.style.backgroundColor ='green';
+                  closer.textContent = 'Open';
+                }
+              }
+            };
+            menus.appendChild(closer);
 
       </script>
     </main>
