@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-set -x   # Debug mode to echo commands
+#set -x   # Debug mode to echo commands
 
 #ls -lR tracks/
 
@@ -28,7 +28,7 @@ do
       timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
     fi
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
-    if [[ $timeIN -ge $timeOUT ]]; then
+    if [[ $timeIN -gt $timeOUT ]]; then
       printf "\n  Generating $fileOUT \n"
       # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 $fileOUT $fileIN tracks
