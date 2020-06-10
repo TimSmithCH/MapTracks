@@ -25,6 +25,9 @@ Layout tracks of outings on a map
   - Using MapBox Studio tileset commands in [TimSmithCH/MapTracks/deploy_tileset.sh](https://github.com/TimSmithCH/MapTracks/tree/master/deploy_tileset.sh)
 
 
+View resultant [map](https://timsmithch.github.io/MapTracks/)
+
+
 ## Acknowledgements
 - Mapping thanks to https://www.mapbox.com/mapbox-gl-js/api/ 
 - Geojson conversion thanks to https://github.com/mapbox/togeojson 
