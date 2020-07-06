@@ -32,11 +32,12 @@
 
       <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var zoomlvl = 11;
             var map = new mapboxgl.Map({
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
               center: [7.2989238, 46.032874], // starting position
-              zoom: 11 // starting zoom
+              zoom: zoomlvl // starting zoom
             });
 
             // Prepare layer properties object
@@ -59,6 +60,12 @@
             }));
 
             map.on('load', function () {
+              map.setLayoutProperty('contour-label', 'text-size', [
+                "interpolate", ["linear"], ["zoom"],
+                1, 0,
+                15, 16,
+                20, 24,
+              ]);
               //----------------------------------------------
               // Add Swiss cantons
               map.addSource("cantons", {
@@ -334,7 +341,21 @@
             sliderP.oninput = function() {
               slideoutP.innerHTML = this.value;
             }
-            //--
+
+            //----------------------------------------------
+            // Create a zoom level indcator
+            var zoomout = document.createElement('output');
+            zoomout.id = "zoomO";
+            zoomout.style.display = "block";
+            zoomout.setAttribute('for', 'value');
+            zoomout.innerHTML = zoomlvl;
+            menus.appendChild(zoomout);
+            map.on('zoom', function() {
+              zoomout.innerHTML = parseFloat(map.getZoom()).toFixed(2);
+            });
+
+            //----------------------------------------------
+            // Create the close/open toggle button for menus
             var closer = document.createElement('button');
             closer.textContent = 'Close';
             closer.style.backgroundColor ='red';
