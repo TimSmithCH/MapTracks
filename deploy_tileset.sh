@@ -16,7 +16,7 @@ tilesets add-source --token $TOKEN timsmithch ski_tracks tracks/1_display/ski_tr
 #tilesets list-sources --token $TOKEN timsmithch
 
 # Create the initial tileset, only necessary first time, afterwards update is all
-tilesets create timsmithch.all_tracks --recipe ./tracks_recipe.json --name "All track types"
+tilesets create timsmithch.all_tracks --recipe ./all_tracks_recipe.json --name "All track types"
 
 # Update the recipe to generate the tilesets, only if it changes
 #tilesets update-recipe --token $TOKEN timsmithch.all_tracks ./all_tracks_recipe.json
