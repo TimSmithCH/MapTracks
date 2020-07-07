@@ -13,10 +13,15 @@ tilesets add-source --token $TOKEN timsmithch bike_tracks tracks/1_display/bike_
 tilesets add-source --token $TOKEN timsmithch hike_tracks tracks/1_display/hike_tracks.geojson
 tilesets add-source --token $TOKEN timsmithch run_tracks tracks/1_display/run_tracks.geojson
 tilesets add-source --token $TOKEN timsmithch ski_tracks tracks/1_display/ski_tracks.geojson
+#tilesets list-sources --token $TOKEN timsmithch
+
+# Create the initial tileset, only necessary first time, afterwards update is all
+tilesets create timsmithch.all_tracks --recipe ./tracks_recipe.json --name "All track types"
+
+# Update the recipe to generate the tilesets, only if it changes
+#tilesets update-recipe --token $TOKEN timsmithch.all_tracks ./all_tracks_recipe.json
 
 # Launch the tilset generation and wait for completion
-#tilesets list-sources --token $TOKEN timsmithch
-#tilesets update-recipe --token $TOKEN timsmithch.all_tracks ./all_tracks_recipe.json
 tilesets publish --token $TOKEN timsmithch.all_tracks
 JOBRUN=true
 n=1
