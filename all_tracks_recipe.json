@@ -4,22 +4,22 @@
     "bike_tracks": {
       "source": "mapbox://tileset-source/timsmithch/bike_tracks",
       "minzoom": 0,
-      "maxzoom": 15
+      "maxzoom": 13
     },
     "hike_tracks": {
       "source": "mapbox://tileset-source/timsmithch/hike_tracks",
       "minzoom": 0,
-      "maxzoom": 15
+      "maxzoom": 13
     },
     "run_tracks": {
       "source": "mapbox://tileset-source/timsmithch/run_tracks",
       "minzoom": 0,
-      "maxzoom": 15
+      "maxzoom": 13
     },
     "ski_tracks": {
       "source": "mapbox://tileset-source/timsmithch/ski_tracks",
       "minzoom": 0,
-      "maxzoom": 15
+      "maxzoom": 13
     }
   }
 }
