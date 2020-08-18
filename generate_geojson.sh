@@ -8,6 +8,7 @@ mkdir -pv tracks/2_geojson/bike
 mkdir -pv tracks/2_geojson/hike
 mkdir -pv tracks/2_geojson/run
 mkdir -pv tracks/2_geojson/ski
+mkdir -pv tracks/2_geojson/wip
 
 TYPES="bike hike run ski"
 FORCE=false
@@ -15,6 +16,7 @@ FORCE=false
 for type in $TYPES
 do
   echo "Processing $type"
+  MODIFIED=false
   FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
   do
@@ -30,13 +32,16 @@ do
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
     if [[ $timeIN -gt $timeOUT ]]; then
       printf "\n  Generating $fileOUT \n"
+      MODIFIED=true
       # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 $fileOUT $fileIN tracks
     else
       printf "."
     fi
   done
-  fileSUMM=tracks/1_display/${type}_tracks.geojson
-  printf "\n Generating $fileSUMM \n"
-  node_modules/\@mapbox/geojson-merge/geojson-merge tracks/2_geojson/$type/*.geojson >$fileSUMM
+  if $MODIFIED ; then
+    fileSUMM=tracks/1_display/${type}_tracks.geojson
+    printf "\n Generating $fileSUMM \n"
+    node_modules/\@mapbox/geojson-merge/geojson-merge tracks/2_geojson/$type/*.geojson >$fileSUMM
+  fi
 done
