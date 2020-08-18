@@ -6,7 +6,7 @@ TOKEN=$(<tileset_api)
 
 TYPES="bike hike run ski"
 FORCE=false
-WINDOW=300
+FRESHNESS=300
 
 for type in $TYPES
 do
@@ -14,18 +14,18 @@ do
   fileSUMM=tracks/1_display/${type}_tracks.geojson
   echo "Processing $fileSUMM"
   if $FORCE ; then
-    timeIN="$(date +%s)"-$WINDOW
+    timeIN="$(date +%s)"-$FRESHNESS
   else
     timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
   fi
   timeOUT="$(date +%s)"
   timeEL=$timeOUT-$timeIN
-  if [[ $timeEL -gt $WINDOW ]]; then
+  if [[ $timeEL -lt $FRESHNESS ]]; then
     printf "\n  Generating $type tileset\n"
     MODIFIED=true
-    tilesets delete-source --token $TOKEN --force timsmithch ${type}_tracks
-    tilesets add-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
-    #tilesets update-source --refresh --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
+    #tilesets delete-source --token $TOKEN --force timsmithch ${type}_tracks
+    #tilesets add-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
+    tilesets upload-source --refresh --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
   else
     printf "."
   fi

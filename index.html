@@ -190,6 +190,27 @@
                   }
                 });
               }
+
+              //----------------------------------------------
+              // Create a layer of WIP tracks
+              map.addSource('wip-tracks', {
+                type: 'geojson',
+                "data": "tracks/1_display/wip_tracks.geojson"
+              });
+              map.addLayer({
+                'id': 'wip',
+                'type': 'line',
+                'source': 'wip-tracks',
+                "layout": {
+                  "visibility": "visible",
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                  "paint": {
+                  "line-color": "orange",
+                  "line-width": 3
+                }
+              });
             });
 
             //----------------------------------------------

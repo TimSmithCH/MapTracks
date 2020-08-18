@@ -15,7 +15,7 @@ FORCE=false
 
 for type in $TYPES
 do
-  echo "Processing $type"
+  echo "Processing $type files"
   MODIFIED=false
   FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
@@ -31,7 +31,7 @@ do
     fi
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
     if [[ $timeIN -gt $timeOUT ]]; then
-      printf "\n  Generating $fileOUT \n"
+      printf "\n  Generating GEOJSON: $fileOUT \n"
       MODIFIED=true
       # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 $fileOUT $fileIN tracks
@@ -41,7 +41,7 @@ do
   done
   if $MODIFIED ; then
     fileSUMM=tracks/1_display/${type}_tracks.geojson
-    printf "\n Generating $fileSUMM \n"
+    printf "\n Generating aggregate: $fileSUMM \n"
     node_modules/\@mapbox/geojson-merge/geojson-merge tracks/2_geojson/$type/*.geojson >$fileSUMM
   fi
 done
