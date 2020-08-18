@@ -10,7 +10,7 @@ mkdir -pv tracks/2_geojson/run
 mkdir -pv tracks/2_geojson/ski
 mkdir -pv tracks/2_geojson/wip
 
-TYPES="bike hike run ski"
+TYPES="bike hike run ski wip"
 FORCE=false
 
 for type in $TYPES
