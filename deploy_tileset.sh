@@ -19,7 +19,7 @@ do
     timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
   fi
   timeOUT="$(date +%s)"
-  timeEL=$timeOUT-$timeIN
+  timeEL=$(($timeOUT-$timeIN))
   if [[ $timeEL -lt $FRESHNESS ]]; then
     printf "\n  Generating $type tileset\n"
     MODIFIED=true
