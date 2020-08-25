@@ -2,7 +2,7 @@ name: Generate Aggregate Deploy
 on: [push]
 
 jobs:
-  build:
+  greet:
     name: Greeting
     runs-on: macos-latest
     steps:
@@ -15,7 +15,7 @@ jobs:
       # This step prints an output (time) from the previous step's action.
       - name: Echo the greeting's time
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
-  my_first_job:
+  build:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
