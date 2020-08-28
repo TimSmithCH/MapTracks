@@ -1,4 +1,4 @@
-name: MapTrack Build
+name: MapTracks Build
 on: [push]
 
 jobs:
@@ -6,6 +6,13 @@ jobs:
     name: Generate Aggregate Deploy
     runs-on: macos-latest
     steps:
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+        python-version: '3.x'
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"
+
       - name: Install GDAL for gpx transformations
         run: brew install gdal
 

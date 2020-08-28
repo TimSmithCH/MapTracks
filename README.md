@@ -1,5 +1,6 @@
 # MapTracks
 [![Build Status](https://travis-ci.org/TimSmithCH/MapTracks.svg?branch=master)](https://travis-ci.org/TimSmithCH/MapTracks)
+![MapTracks Build](https://github.com/TimSmithCH/MapTracks/workflows/MapTracks%20Build/badge.svg)
 
 Layout tracks of outings on a map
 
