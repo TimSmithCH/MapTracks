@@ -1,24 +1,28 @@
-name: Generate Aggregate Deploy
+name: MapTrack Build
 on: [push]
 
 jobs:
-  greet:
-    name: Greeting
-    runs-on: macos-latest
-    steps:
-      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
-      - name: Hello world
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: 'Tim'
-        id: hello
-      # This step prints an output (time) from the previous step's action.
-      - name: Echo the greeting's time
-        run: echo 'The time was ${{ steps.hello.outputs.time }}.'
   build:
+    name: Generate Aggregate Deploy
     runs-on: macos-latest
     steps:
+      - name: Install GDAL for gpx transformations
+        run: brew install gdal
+
+      - name: Install MapBox tileset commands
+        run: pip install mapbox-tilesets
+
       - name: Check out repository
         uses: actions/checkout@v2
-      #- name: Use local my-action
-      #  uses: ./.github/actions/my-action
+
+      - name: Generate new GeoJson files from GPX files
+        run: ./scripts/generate_geojson.sh
+
+      - name: Check
+        run: ls -l tracks/1_display/
+
+        #- name: Build MapBox tileset
+        #run: ./scripts/deploy_tileset.sh
+
+        #- name: Deploy on GitHub Pages
+        #run: ./scripts/deploy_travis_prep.sh

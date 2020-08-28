@@ -16,7 +16,8 @@ FORCE=false
 for type in $TYPES
 do
   echo "Processing $type files"
-  MODIFIED=false
+  MODIFIED=true
+  #MODIFIED=false
   FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
   do
@@ -40,8 +41,8 @@ do
     fi
   done
   if $MODIFIED ; then
-    fileSUMM=tracks/1_display/${type}_tracks.geojson
+    fileSUMM=tracks/1_display/${type}_tracks.geojson2
     printf "\n Generating aggregate: $fileSUMM \n"
-    node_modules/\@mapbox/geojson-merge/geojson-merge tracks/2_geojson/$type/*.geojson >$fileSUMM
+    python geojsons_merge.py -i tracks/2_geojson/$type -o $fileSUMM
   fi
 done
