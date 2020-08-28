@@ -31,5 +31,12 @@ jobs:
         #- name: Build MapBox tileset
         #run: ./scripts/deploy_tileset.sh
 
-        #- name: Deploy on GitHub Pages
-        #run: ./scripts/deploy_travis_prep.sh
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          exclude_assets: '.github,tracks/3_gpx'
+          allow_empty_commit: true
+          commit_message: ${{ github.event.head_commit.message }}
+          enable_jekyll: true
