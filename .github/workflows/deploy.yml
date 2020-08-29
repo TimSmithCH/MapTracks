@@ -5,58 +5,61 @@ jobs:
   GeoJsonBuild:
     name: Generate Aggregate Deploy
     runs-on: macos-latest
+    outputs:
+      signal: ${{ steps.chain.outputs.status }}
     steps:
       - name: Set up Python 3.x
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-
+        #--- Next Step
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
-
+        #--- Next Step
       - name: Install GDAL for gpx transformations
         run: brew install gdal
-
+        #--- Next Step
       - name: Check out repository
         uses: actions/checkout@v2
-
+        #--- Next Step
       - name: Generate new GeoJson files from GPX files
         run: ./scripts/generate_geojson.sh
+      - id: chain
+        run: echo "::set-output name=status::stop"
 
+        #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
           publish_branch: gh-pages
-          exclude_assets: '.github,tracks/3_gpx'
+          exclude_assets: '.github,scripts,tracks/3_gpx'
           allow_empty_commit: true
           commit_message: ${{ github.event.head_commit.message }}
           enable_jekyll: true
 
-    outputs:
-      output1: "Communicate"
-
   RenewTileset:
     name: Recreate the MapBox tileset
+    if: contains(needs.GeoJsonBuild.outputs.signal, 'generate'}
     needs: GeoJsonBuild
     runs-on: macos-latest
     steps:
-      - run: echo ${{needs.job1.outputs.output1}}
-
+      - run: echo ${{needs.GeoJsonBuild.outputs.signal}}
+        #--- Next Step
       - name: Set up Python 3.x
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-
+        #--- Next Step
       - name: Check out repository
         uses: actions/checkout@v2
-
+        #--- Next Step
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
-
+        #--- Next Step
       - name: Install MapBox tileset commands
         run: pip install mapbox-tilesets
-
+        #--- Next Step
         #- name: Build MapBox tileset
         #run: ./scripts/deploy_tileset.sh
