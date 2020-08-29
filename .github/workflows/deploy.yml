@@ -28,11 +28,10 @@ jobs:
       - name: Check
         run: ls -l tracks/1_display/
 
-      - name: Ensure GPX files arent loaded to Pages
-        run: |
-          git rm -rq tracks/1_display/*.geojson2
-          git rm -rq tracks/3_gpx
-          git commit -q -m "Dropped raw GPX files"
+        #- name: Ensure GPX files arent loaded to Pages
+        #run: |
+        #  git rm -rq tracks/3_gpx
+        #  git commit -q -m "Dropped raw GPX files"
 
         #- name: Build MapBox tileset
         #run: ./scripts/deploy_tileset.sh
