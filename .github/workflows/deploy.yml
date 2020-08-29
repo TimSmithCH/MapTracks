@@ -16,9 +16,6 @@ jobs:
         with:
           python-version: '3.x'
         #--- Next Step
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
-        #--- Next Step
       - name: Install GDAL for gpx transformations
         run: brew install gdal
         #--- Next Step
@@ -30,8 +27,8 @@ jobs:
         #--- Next Step
       - name: Send signal to tileset job
         id: chain
-        run: echo "::set-output name=status::generate"
-        #run: echo "::set-output name=status::stop"
+        run: echo "::set-output name=status::stop"
+        #run: echo "::set-output name=status::generate"
         #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
@@ -66,5 +63,8 @@ jobs:
       - name: Install MapBox tileset commands
         run: pip install mapbox-tilesets
         #--- Next Step
-        #- name: Build MapBox tileset
-        #run: ./scripts/deploy_tileset.sh
+        env:
+          tileset_api: ${{ secrets.TILESET_CREATOR }}
+        #--- Next Step
+        - name: Build MapBox tileset
+          run: ./scripts/deploy_tileset.sh
