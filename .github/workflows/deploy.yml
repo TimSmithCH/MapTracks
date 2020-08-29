@@ -63,9 +63,7 @@ jobs:
       - name: Install MapBox tileset commands
         run: pip install mapbox-tilesets
         #--- Next Step
-      - name: Set Tileset API Key
+      - name: Build MapBox tileset
         env:
           tileset_api: ${{ secrets.TILESET_CREATOR }}
-        #--- Next Step
-        - name: Build MapBox tileset
-          run: ./scripts/deploy_tileset.sh
+        run: ./scripts/deploy_tileset.sh
