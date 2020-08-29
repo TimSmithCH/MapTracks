@@ -41,7 +41,7 @@ do
     fi
   done
   if $MODIFIED ; then
-    fileSUMM=tracks/1_display/${type}_tracks.geojson2
+    fileSUMM=tracks/1_display/${type}_tracks.geojson
     printf "\n Generating aggregate: $fileSUMM \n"
     python scripts/geojsons_merge.py -i tracks/2_geojson/$type -o $fileSUMM
   fi
