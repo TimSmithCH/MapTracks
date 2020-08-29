@@ -28,14 +28,21 @@ jobs:
       - name: Check
         run: ls -l tracks/1_display/
 
+      - name: Ensure GPX files arent loaded to Pages
+        run: |
+          git rm -rq tracks/1_display/*.geojson2
+          git rm -rq tracks/3_gpx
+          git commit -q -m "Dropped raw GPX files"
+
         #- name: Build MapBox tileset
         #run: ./scripts/deploy_tileset.sh
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v3.7.0-8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./
+          publish_branch: gh-pages
           exclude_assets: '.github,tracks/3_gpx'
           allow_empty_commit: true
           commit_message: ${{ github.event.head_commit.message }}
