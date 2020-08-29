@@ -1,5 +1,8 @@
 name: MapTracks Build
-on: [push]
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   GeoJsonBuild:
@@ -24,9 +27,11 @@ jobs:
         #--- Next Step
       - name: Generate new GeoJson files from GPX files
         run: ./scripts/generate_geojson.sh
-      - id: chain
-        run: echo "::set-output name=status::stop"
-
+        #--- Next Step
+      - name: Send signal to tileset job
+        id: chain
+        run: echo "::set-output name=status::generate"
+        #run: echo "::set-output name=status::stop"
         #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
@@ -41,8 +46,8 @@ jobs:
 
   RenewTileset:
     name: Recreate the MapBox tileset
-    if: contains(needs.GeoJsonBuild.outputs.signal, 'generate')
     needs: GeoJsonBuild
+    if: contains(needs.GeoJsonBuild.outputs.signal, 'generate')
     runs-on: macos-latest
     steps:
       - run: echo ${{needs.GeoJsonBuild.outputs.signal}}
