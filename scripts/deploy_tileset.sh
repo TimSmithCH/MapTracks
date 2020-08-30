@@ -20,9 +20,7 @@ do
     timeLAST="$(date +%s)"-$FRESHNESS
   else
     timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
-    git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM
-    git log --pretty=format:%cd -n 1 -- $fileSUMM
-    date +%s
+    date +%Z
   fi
   timeNOW="$(date +%s)"
   timeEL=$(($timeNOW-$timeLAST))

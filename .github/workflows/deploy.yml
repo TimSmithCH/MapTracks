@@ -24,6 +24,8 @@ jobs:
         #--- Next Step
       - name: Generate new GeoJson files from GPX files
         run: ./scripts/generate_geojson.sh
+      - name: Check what was done
+        run: git status
         #--- Next Step
       - name: Send signal to tileset job
         id: chain
