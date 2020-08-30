@@ -9,7 +9,6 @@ FORCE=false
 FRESHNESS=300
 
 git remote -v
-
 git branch -a
 
 for type in $TYPES
@@ -21,7 +20,9 @@ do
     timeLAST="$(date +%s)"-$FRESHNESS
   else
     timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
+    git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM
     git log --pretty=format:%cd -n 1 -- $fileSUMM
+    date +%s
   fi
   timeNOW="$(date +%s)"
   timeEL=$(($timeNOW-$timeLAST))
