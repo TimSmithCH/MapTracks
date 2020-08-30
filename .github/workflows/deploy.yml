@@ -59,6 +59,8 @@ jobs:
         #--- Next Step
       - name: Check out repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
         #--- Next Step
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"

@@ -6,7 +6,7 @@ TOKEN=$tileset_api
 
 TYPES="bike hike run ski"
 FORCE=false
-FRESHNESS=600
+FRESHNESS=720
 
 for type in $TYPES
 do
