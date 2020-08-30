@@ -26,8 +26,11 @@ jobs:
         #--- Next Step
       - name: Generate new GeoJson files from GPX files
         run: ./scripts/generate_geojson.sh
-      - name: Check what was done
-        run: git status
+        #--- Next Step
+      - name: Commit and push to Master
+        env:
+          commit_mess: ${{ github.event.head_commit.message }}
+        run: ./scripts/push_geojsons.sh
         #--- Next Step
       - name: Send signal to tileset job
         id: chain

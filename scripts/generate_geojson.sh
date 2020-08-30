@@ -2,8 +2,6 @@
 set -e   # Exit with nonzero exit code if anything fails
 #set -x   # Debug mode to echo commands
 
-#ls -lR tracks/
-
 #mkdir -pv tracks/2_geojson/bike
 #mkdir -pv tracks/2_geojson/hike
 #mkdir -pv tracks/2_geojson/run
@@ -45,10 +43,3 @@ do
     python scripts/geojsons_merge.py -i tracks/2_geojson/$type -o $fileSUMM
   fi
 done
-
-git status
-git add tracks/2_geojson
-git add tracks/1_display
-git status
-#git commit -m "Uploaded more GeoJSON files"
-#git push
