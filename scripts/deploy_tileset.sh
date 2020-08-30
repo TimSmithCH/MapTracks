@@ -8,18 +8,22 @@ TYPES="bike hike run ski"
 FORCE=false
 FRESHNESS=300
 
+git remote -v
+git branch -a
+
 for type in $TYPES
 do
   MODIFIED=false
   fileSUMM=tracks/1_display/${type}_tracks.geojson
   echo "Processing $fileSUMM"
   if $FORCE ; then
-    timeIN="$(date +%s)"-$FRESHNESS
+    timeLAST="$(date +%s)"-$FRESHNESS
   else
-    timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
+    timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
+    git log --pretty=format:%cd -n 1 -- $fileSUMM
   fi
-  timeOUT="$(date +%s)"
-  timeEL=$(($timeOUT-$timeIN))
+  timeNOW="$(date +%s)"
+  timeEL=$(($timeNOW-$timeLAST))
   if [[ $timeEL -lt $FRESHNESS ]]; then
     printf "\n  Generating $type tileset\n"
     MODIFIED=true
