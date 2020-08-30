@@ -10,7 +10,8 @@ set -e   # Exit with nonzero exit code if anything fails
 #mkdir -pv tracks/2_geojson/ski
 #mkdir -pv tracks/2_geojson/wip
 
-TYPES="bike hike run ski wip"
+#TYPES="bike hike run ski wip"
+TYPES="run wip"
 FORCE=false
 
 for type in $TYPES
@@ -28,8 +29,10 @@ do
       timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
     else
       timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
+      git log -n 1 -- $fileIN
     fi
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
+    git log -n 1 -- $fileOUT
     printf "\n  Times: $timeIN $timeOUT \n"
     if [[ $timeIN -gt $timeOUT ]]; then
       printf "\n  Generating GEOJSON: $fileOUT \n"
