@@ -21,6 +21,8 @@ jobs:
         #--- Next Step
       - name: Check out repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
         #--- Next Step
       - name: Generate new GeoJson files from GPX files
         run: ./scripts/generate_geojson.sh
