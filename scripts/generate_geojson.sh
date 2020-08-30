@@ -4,11 +4,11 @@ set -e   # Exit with nonzero exit code if anything fails
 
 #ls -lR tracks/
 
-mkdir -pv tracks/2_geojson/bike
-mkdir -pv tracks/2_geojson/hike
-mkdir -pv tracks/2_geojson/run
-mkdir -pv tracks/2_geojson/ski
-mkdir -pv tracks/2_geojson/wip
+#mkdir -pv tracks/2_geojson/bike
+#mkdir -pv tracks/2_geojson/hike
+#mkdir -pv tracks/2_geojson/run
+#mkdir -pv tracks/2_geojson/ski
+#mkdir -pv tracks/2_geojson/wip
 
 TYPES="bike hike run ski wip"
 FORCE=false
@@ -16,8 +16,7 @@ FORCE=false
 for type in $TYPES
 do
   echo "Processing $type files"
-  MODIFIED=true
-  #MODIFIED=false
+  MODIFIED=false
   FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
   do
@@ -32,7 +31,7 @@ do
     fi
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
     printf "\n  Times: $timeIN $timeOUT \n"
-    if [[ $timeIN -ge $timeOUT ]]; then
+    if [[ $timeIN -gt $timeOUT ]]; then
       printf "\n  Generating GEOJSON: $fileOUT \n"
       MODIFIED=true
       # 0.000025 tolerance = resolution of 2m
