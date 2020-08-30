@@ -27,8 +27,8 @@ jobs:
         #--- Next Step
       - name: Send signal to tileset job
         id: chain
-        run: echo "::set-output name=status::stop"
-        #run: echo "::set-output name=status::generate"
+        #run: echo "::set-output name=status::stop"
+        run: echo "::set-output name=status::generate"
         #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
@@ -47,7 +47,6 @@ jobs:
     if: contains(needs.GeoJsonBuild.outputs.signal, 'generate')
     runs-on: macos-latest
     steps:
-      - run: echo ${{needs.GeoJsonBuild.outputs.signal}}
         #--- Next Step
       - name: Set up Python 3.x
         uses: actions/setup-python@v2
