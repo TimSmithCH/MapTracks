@@ -1,4 +1,5 @@
 # MapTracks
+[![licence](https://img.shields.io/github/license/TimSmithCH/MapTracks)](https://github.com/TimSmithCH/MapTracks/blob/master/LICENSE.md)
 ![MapTracks Build](https://github.com/TimSmithCH/MapTracks/workflows/MapTracks%20Build/badge.svg)
 
 Layout tracks of outings on a map
