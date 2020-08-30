@@ -9,6 +9,7 @@ FORCE=false
 FRESHNESS=300
 
 git remote -v
+
 git branch -a
 
 for type in $TYPES

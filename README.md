@@ -29,6 +29,8 @@ View resultant [map](https://timsmithch.github.io/MapTracks/)
 
 ## Acknowledgements
 - Mapping thanks to https://www.mapbox.com/mapbox-gl-js/api/ 
+- Conversions and simplification thanks to GDAL: https://gdal.org/
+- Old versions:
 - Geojson conversion thanks to https://github.com/mapbox/togeojson 
 - Applying RDP algorithm to tracks thanks to https://github.com/maxogden/simplify-geojson 
 - Merging geojson features thanks to https://github.com/mapbox/geojson-merge 
