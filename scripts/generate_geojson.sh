@@ -26,12 +26,13 @@ do
     fileIN=tracks/3_gpx/$type/$base.gpx
     fileOUT=tracks/2_geojson/$type/$base.geojson
     if $FORCE ; then
-      timeIN="$(date +%s)"
+      timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
     else
       timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
     fi
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
-    if [[ $timeIN -gt $timeOUT ]]; then
+    printf "\n  Times: $timeIN $timeOUT \n"
+    if [[ $timeIN -ge $timeOUT ]]; then
       printf "\n  Generating GEOJSON: $fileOUT \n"
       MODIFIED=true
       # 0.000025 tolerance = resolution of 2m

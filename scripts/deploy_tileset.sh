@@ -6,10 +6,7 @@ TOKEN=$tileset_api
 
 TYPES="bike hike run ski"
 FORCE=false
-FRESHNESS=300
-
-git remote -v
-git branch -a
+FRESHNESS=600
 
 for type in $TYPES
 do
@@ -17,12 +14,11 @@ do
   fileSUMM=tracks/1_display/${type}_tracks.geojson
   echo "Processing $fileSUMM"
   if $FORCE ; then
-    timeLAST="$(date +%s)"-$FRESHNESS
+    timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s)"-$FRESHNESS
   else
     timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
-    date +%Z
   fi
-  timeNOW="$(date +%s)"
+  timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   timeEL=$(($timeNOW-$timeLAST))
   if [[ $timeEL -lt $FRESHNESS ]]; then
     printf "\n  Generating $type tileset\n"
