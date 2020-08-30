@@ -20,7 +20,7 @@ do
   fi
   timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   timeEL=$(($timeNOW-$timeLAST))
-  if [[ $timeEL -lt $FRESHNESS ]]; then
+  if [[ $timeEL -ge $FRESHNESS ]]; then
     printf "\n  Generating $type tileset\n"
     MODIFIED=true
     #tilesets delete-source --token $TOKEN --force timsmithch ${type}_tracks
