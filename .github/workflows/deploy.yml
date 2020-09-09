@@ -30,6 +30,7 @@ jobs:
       - name: Commit and push to Master
         env:
           commit_mess: ${{ github.event.head_commit.message }}
+          tile_run: 0
         run: ./scripts/push_geojsons.sh
         #--- Next Step
       - name: Send signal to tileset job

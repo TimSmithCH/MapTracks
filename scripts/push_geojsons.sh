@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-#set -x   # Debug mode to echo commands
+set -x   # Debug mode to echo commands
 
-git status
+echo $tile_run
 git add tracks/1_display
 TILE=$(git status -s | grep -c -e "[ARC]  tracks/1_display")
 if [ $TILE ]; then
