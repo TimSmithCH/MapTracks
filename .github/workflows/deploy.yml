@@ -35,8 +35,9 @@ jobs:
         #--- Next Step
       - name: Send signal to tileset job
         id: chain
-        #run: echo "::set-output name=status::stop"
-        run: echo "::set-output name=status::generate"
+        run: |
+          echo "::set-output name=status::stop"
+          if [[ $tile_run ]]; then echo "::set-output name=status::generate" ; fi
         #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
