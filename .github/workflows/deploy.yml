@@ -33,11 +33,11 @@ jobs:
           tile_run: 0
         run: ./scripts/push_geojsons.sh
         #--- Next Step
+      - run: echo "::set-output name=status::stop"
       - name: Send signal to tileset job
         id: chain
-        run: |
-          echo "::set-output name=status::stop"
-          if [[ ${{ env.tile_run }} ]]; then echo "::set-output name=status::generate" ; fi
+        if: env.tile_run == 1
+        run: echo "::set-output name=status::generate"
         #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
