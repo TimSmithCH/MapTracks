@@ -37,7 +37,7 @@ jobs:
         id: chain
         run: |
           echo "::set-output name=status::stop"
-          if [[ $tile_run ]]; then echo "::set-output name=status::generate" ; fi
+          if [[ ${{ tile_run }} ]]; then echo "::set-output name=status::generate" ; fi
         #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
