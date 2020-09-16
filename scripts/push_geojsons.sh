@@ -5,10 +5,10 @@ set -x   # Debug mode to echo commands
 git status -s
 if ! git diff --quiet --exit-code tracks/1_display; then
   echo "Must update MapBox tileset"
-  tile_run=1
+  tile_run="Yes"
 else
   echo "Tiles are good"
-  tile_run=0
+  tile_run="No"
 fi
 
 git add tracks/1_display

@@ -30,13 +30,14 @@ jobs:
       - name: Commit and push to Master
         env:
           commit_mess: ${{ github.event.head_commit.message }}
-          tile_run: 0
+          tile_run: 'No'
         run: ./scripts/push_geojsons.sh
         #--- Next Step
-      - run: echo "::set-output name=status::stop"
+      - name: Reset tileset signal
+        run: echo "::set-output name=status::stop"
       - name: Send signal to tileset job
         id: chain
-        if: env.tile_run == 1
+        if: env.tile_run == 'Yes'
         run: echo "::set-output name=status::generate"
         #--- Next Step
       - name: Deploy to GitHub Pages
