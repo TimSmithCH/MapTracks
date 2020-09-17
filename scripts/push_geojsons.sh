@@ -19,4 +19,4 @@ MESS="${commit_mess} (GeoJSONs)"
 
 #########################
 #if [[ -z $(git status --untracked-files=no --porcelain tracks/1_display) ]]; then
-exit tupdate
+exit $tupdate
