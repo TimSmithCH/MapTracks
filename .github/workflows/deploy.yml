@@ -28,17 +28,12 @@ jobs:
         run: ./scripts/generate_geojson.sh
         #--- Next Step
       - name: Commit and push to Master
+        id: chain
         env:
           commit_mess: ${{ github.event.head_commit.message }}
-          tile_run: 'No'
-        run: ./scripts/push_geojsons.sh
-        #--- Next Step
-      - name: Reset tileset signal
-        run: echo "::set-output name=status::stop"
-      - name: Send signal to tileset job
-        id: chain
-        if: env.tile_run == 'Yes'
-        run: echo "::set-output name=status::generate"
+        run: |
+          tile_run=$(scripts/push_geojsons.sh)
+          echo "::set-output name=status::$tile_run"
         #--- Next Step
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3.7.0-8
@@ -54,7 +49,7 @@ jobs:
   RenewTileset:
     name: Recreate the MapBox tileset
     needs: GeoJsonBuild
-    if: contains(needs.GeoJsonBuild.outputs.signal, 'generate')
+    if: contains(needs.GeoJsonBuild.outputs.signal, '1')
     runs-on: macos-latest
     steps:
         #--- Next Step
