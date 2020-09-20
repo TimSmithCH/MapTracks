@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-set -x   # Debug mode to echo commands
+#set -x   # Debug mode to echo commands
 
 TOKEN=$tileset_api
 
@@ -20,12 +20,12 @@ do
   fi
   timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   timeEL=$(($timeNOW-$timeLAST))
-  if [[ $timeEL -ge $FRESHNESS ]]; then
+  if [[ $timeEL -le $FRESHNESS ]]; then
     printf "\n  Generating $type tileset\n"
     MODIFIED=true
     #tilesets delete-source --token $TOKEN --force timsmithch ${type}_tracks
     #tilesets add-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
-##    tilesets upload-source --refresh --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
+    tilesets upload-source --refresh --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
   else
     printf "."
   fi
