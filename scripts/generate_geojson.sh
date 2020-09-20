@@ -13,7 +13,7 @@ FORCE=false
 
 for type in $TYPES
 do
-  echo "Processing $type files"
+  echo "\n=== Processing $type files ==="
   MODIFIED=false
   FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
@@ -39,7 +39,7 @@ do
   done
   if $MODIFIED ; then
     fileSUMM=tracks/1_display/${type}_tracks.geojson
-    printf "\n Generating aggregate: $fileSUMM \n"
+    printf "\n +++ Generating aggregate: $fileSUMM +++\n"
     python scripts/geojsons_merge.py -i tracks/2_geojson/$type -o $fileSUMM
   fi
 done

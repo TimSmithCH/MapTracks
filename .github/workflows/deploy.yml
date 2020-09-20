@@ -49,7 +49,7 @@ jobs:
   RenewTileset:
     name: Recreate the MapBox tileset
     needs: GeoJsonBuild
-    if: contains(needs.GeoJsonBuild.outputs.signal, '1')
+    if: contains(needs.GeoJsonBuild.outputs.signal, 'generate')
     runs-on: macos-latest
     steps:
         #--- Next Step
