@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-#set -x   # Debug mode to echo commands
+set -x   # Debug mode to echo commands
 
 TOKEN=$tileset_api
 
@@ -12,22 +12,22 @@ for type in "${TYPES[@]}"
 do
   MODIFIED=false
   fileSUMM=tracks/1_display/${type}_tracks.geojson
+  timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   echo "Processing $fileSUMM"
   if $FORCE ; then
-    timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s)"-$FRESHNESS
+    timeLAST=$timeNOW
   else
     timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
   fi
-  timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   timeEL=$(($timeNOW-$timeLAST))
-  if [[ $timeEL -le $FRESHNESS ]]; then
+  if [[ "$timeEL" -le "$FRESHNESS" ]]; then
     printf "\n  Generating $type tileset\n"
     MODIFIED=true
     #tilesets delete-source --token $TOKEN --force timsmithch ${type}_tracks
     #tilesets add-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
     tilesets upload-source --refresh --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
   else
-    printf "."
+    printf "\n  ."
   fi
 done
 
