@@ -8,6 +8,8 @@ TYPES=( bike hike run ski )
 FORCE=false
 FRESHNESS=720
 
+git pull
+
 for type in "${TYPES[@]}"
 do
   MODIFIED=false
