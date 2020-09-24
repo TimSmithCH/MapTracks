@@ -18,7 +18,7 @@ do
   fileSUMM=tracks/1_display/${type}_tracks.geojson
   timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   echo "Processing $fileSUMM"
-  if [ $FORCE -eq "true" ] ; then
+  if [[ "$FORCE" == "true" ]] ; then
     timeLAST=$timeNOW
   else
     timeLAST="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileSUMM)"
@@ -38,7 +38,7 @@ printf "\n+++ Sources +++\n"
 tilesets list-sources --token $TOKEN timsmithch
 
 # Generate the new tileset
-if [ $MODIFIED -eq "true" ; then
+if [[ "$MODIFIED" == "true" ]] ; then
   # Create the initial tileset, only necessary first time, afterwards update is all
   #tilesets create timsmithch.all_tracks --token $TOKEN --recipe scripts/all_tracks_recipe.json --name "All track types"
   # Update the recipe to generate the tilesets, only if it changes
