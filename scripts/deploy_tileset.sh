@@ -27,7 +27,7 @@ do
     MODIFIED=true
     #tilesets delete-source --token $TOKEN --force timsmithch ${type}_tracks
     #tilesets add-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
-    tilesets upload-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson --refresh
+    tilesets upload-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson --replace
   else
     printf "\n  ."
   fi

@@ -2,13 +2,9 @@
 set -e   # Exit with nonzero exit code if anything fails
 #set -x   # Debug mode to echo commands
 
-#mkdir -pv tracks/2_geojson/bike
-#mkdir -pv tracks/2_geojson/hike
-#mkdir -pv tracks/2_geojson/run
-#mkdir -pv tracks/2_geojson/ski
 #mkdir -pv tracks/2_geojson/wip
 
-TYPES="bike hike run ski wip"
+TYPES="bike hike run ski wip commute"
 FORCE=false
 
 for type in $TYPES
