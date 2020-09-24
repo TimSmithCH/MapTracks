@@ -44,7 +44,8 @@
             var layer_props = { tracks_hike: { source_layer: "hike_tracks", colour: "#FF4136" },
                                 tracks_bike: { source_layer: "bike_tracks", colour: "#12B812" },
                                 tracks_ski: { source_layer: "ski_tracks",  colour: "#0048FF" },
-                                tracks_run: { source_layer: "run_tracks",  colour: "#B10DC9" } };
+                                tracks_run: { source_layer: "run_tracks",  colour: "#B10DC9" },
+                                tracks_commute: { source_layer: "bike_tracks",  colour: "#006400" } };
 
             
             // Add zoom, rotation and full_screen controls to the map
@@ -257,6 +258,7 @@
             toggleLayer("Bike", "tracks_bike", "active");
             toggleLayer("Ski", "tracks_ski", "active");
             toggleLayer("Run", "tracks_run", "active");
+            toggleLayer("Commut", "tracks_commute", "");
             toggleLayer("Canton", "cantons", "");
             toggleLayer("Marker", "markers", "");
             toggleLayer("Peaks", "mountainsH", "");
@@ -385,7 +387,7 @@
             closer.onclick = function(e) {
               e.preventDefault();
               e.stopPropagation();
-              var m = document.querySelectorAll('a');
+              var m = document.querySelectorAll('a','input','output');
               for (var i = 0; i < m.length; i++) {
                 var mChild = m[i];
                 if (mChild.style.display === "none") {
