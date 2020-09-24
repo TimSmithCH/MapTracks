@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-set -x   # Debug mode to echo commands
+#set -x   # Debug mode to echo commands
 
 TOKEN=$tileset_api
 
@@ -8,8 +8,10 @@ TYPES=( bike hike run ski )
 FORCE=false
 FRESHNESS=720
 
-git pull
+# Catch-up with latest changes from first job
+git pull --rebase=false
 
+# Update tileset sources when the summary GEOJsons have changed
 for type in "${TYPES[@]}"
 do
   MODIFIED=false
@@ -32,9 +34,9 @@ do
     printf "\n  ."
   fi
 done
-
 tilesets list-sources --token $TOKEN timsmithch
 
+# Generate the new tileset
 if $MODIFIED ; then
   # Create the initial tileset, only necessary first time, afterwards update is all
   #tilesets create timsmithch.all_tracks --token $TOKEN --recipe ./all_tracks_recipe.json --name "All track types"
