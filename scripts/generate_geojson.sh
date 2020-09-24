@@ -6,12 +6,12 @@ mkdir -pv tracks/2_geojson/commute
 #mkdir -pv tracks/2_geojson/wip
 
 TYPES="bike hike run ski wip commute"
-FORCE=false
+FORCE="false"
 
 for type in $TYPES
 do
   printf "\n=== Processing $type files ===\n  "
-  MODIFIED=false
+  MODIFIED="false"
   FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
   do
@@ -19,7 +19,7 @@ do
     base=${file%.gpx}
     fileIN=tracks/3_gpx/$type/$base.gpx
     fileOUT=tracks/2_geojson/$type/$base.geojson
-    if $FORCE ; then
+    if [[ "$FORCE" == "true" ]] ; then
       timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
     else
       timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
@@ -27,14 +27,14 @@ do
     timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
     if [[ $timeIN -gt $timeOUT ]]; then
       printf "\n  Generating GEOJSON: $fileOUT \n  "
-      MODIFIED=true
+      MODIFIED="true"
       # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 $fileOUT $fileIN tracks
     else
       printf "."
     fi
   done
-  if $MODIFIED ; then
+  if [[ "$MODIFIED" == "true" ]] ; then
     fileSUMM=tracks/1_display/${type}_tracks.geojson
     printf "\n+++ Generating aggregate: $fileSUMM +++\n"
     python scripts/geojsons_merge.py -i tracks/2_geojson/$type -o $fileSUMM

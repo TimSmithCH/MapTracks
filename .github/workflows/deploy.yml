@@ -58,6 +58,9 @@ jobs:
         with:
           python-version: '3.x'
         #--- Next Step
+      - name: Install JQ for status parsing
+        run: brew install jq
+        #--- Next Step
       - name: Check out repository
         uses: actions/checkout@v2
         with:
