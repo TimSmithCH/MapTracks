@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-#set -x   # Debug mode to echo commands
+set -x   # Debug mode to echo commands
 
 TOKEN=$tileset_api
 
@@ -42,10 +42,10 @@ if [[ "$MODIFIED" == "true" ]] ; then
   # Create the initial tileset, only necessary first time, afterwards update is all
   #tilesets create timsmithch.all_tracks --token $TOKEN --recipe scripts/all_tracks_recipe.json --name "All track types"
   # Update the recipe to generate the tilesets, only if it changes
-  tilesets update-recipe --token $TOKEN timsmithch.all_tracks scripts/all_tracks_recipe.json
+  #tilesets update-recipe --token $TOKEN timsmithch.all_tracks scripts/all_tracks_recipe.json
   # Launch the tilset generation and wait for completion
   tilesets publish --token $TOKEN timsmithch.all_tracks
-  JOBRUN=true
+  JOBRUN=1
   n=1
   while $JOBRUN && [ $n -lt 21 ]; do
     sleep 7
