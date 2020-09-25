@@ -28,10 +28,8 @@ do
     if [[ $timeIN -gt $timeOUT ]]; then
       printf "\n  Generating GEOJSON: $fileOUT \n  "
       MODIFIED="true"
-      ls -l $fileOUT $fileIN
       # 0.000025 tolerance = resolution of 2m
-      ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 $fileOUT $fileIN tracks
-      ls -l $fileOUT $fileIN
+      ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 -lco COORDINATE_PRECISION=7 $fileOUT $fileIN tracks
     else
       printf "."
     fi
