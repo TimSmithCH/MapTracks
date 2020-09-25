@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-set -x   # Debug mode to echo commands
+#set -x   # Debug mode to echo commands
 
-mkdir -pv tracks/2_geojson/commute
 #mkdir -pv tracks/2_geojson/wip
 
 TYPES="bike hike run ski wip commute"

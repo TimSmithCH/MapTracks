@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-set -x   # Debug mode to echo commands
+#set -x   # Debug mode to echo commands
 
 TOKEN=$tileset_api
 
@@ -12,9 +12,9 @@ FRESHNESS=720
 git pull --rebase=false
 
 # Update tileset sources when the summary GEOJsons have changed
+MODIFIED="false"
 for type in "${TYPES[@]}"
 do
-  MODIFIED="false"
   fileSUMM=tracks/1_display/${type}_tracks.geojson
   timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   echo "Processing $fileSUMM"
