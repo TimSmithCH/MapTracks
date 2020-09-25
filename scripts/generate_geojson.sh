@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-#set -x   # Debug mode to echo commands
+set -x   # Debug mode to echo commands
 
 mkdir -pv tracks/2_geojson/commute
 #mkdir -pv tracks/2_geojson/wip
@@ -28,8 +28,10 @@ do
     if [[ $timeIN -gt $timeOUT ]]; then
       printf "\n  Generating GEOJSON: $fileOUT \n  "
       MODIFIED="true"
+      ls -l $fileOUT $fileIN
       # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 $fileOUT $fileIN tracks
+      ls -l $fileOUT $fileIN
     else
       printf "."
     fi

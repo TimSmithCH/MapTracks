@@ -387,7 +387,7 @@
             closer.onclick = function(e) {
               e.preventDefault();
               e.stopPropagation();
-              var m = document.querySelectorAll('a','input','output');
+              var m = document.querySelectorAll('a,input,output');
               for (var i = 0; i < m.length; i++) {
                 var mChild = m[i];
                 if (mChild.style.display === "none") {
