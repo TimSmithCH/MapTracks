@@ -12,6 +12,7 @@ FRESHNESS=720
 git pull --rebase=false
 
 # Update tileset sources when the summary GEOJsons have changed
+printf "\n+++ Upload New Sources +++\n"
 MODIFIED="false"
 for type in "${TYPES[@]}"
 do
@@ -25,16 +26,16 @@ do
   fi
   timeEL=$(($timeNOW-$timeLAST))
   if [[ "$timeEL" -le "$FRESHNESS" ]]; then
-    printf "\n  Generating $type tileset\n"
+    printf "  Generating $type tileset\n"
     MODIFIED="true"
     #tilesets delete-source --token $TOKEN --force timsmithch ${type}_tracks
     #tilesets add-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson
     tilesets upload-source --token $TOKEN timsmithch ${type}_tracks tracks/1_display/${type}_tracks.geojson --replace
   else
-    printf "\n  ."
+    printf "  .\n"
   fi
 done
-printf "\n+++ Sources +++\n"
+printf "\n+++ Full Source List +++\n"
 tilesets list-sources --token $TOKEN timsmithch
 
 # Generate the new tileset
@@ -44,13 +45,15 @@ if [[ "$MODIFIED" == "true" ]] ; then
   # Update the recipe to generate the tilesets, only if it changes
   #tilesets update-recipe --token $TOKEN timsmithch.all_tracks scripts/all_tracks_recipe.json
   # Launch the tilset generation and wait for completion
+  printf "\n+++ Publish +++\n"
   tilesets publish --token $TOKEN timsmithch.all_tracks
   JOBRUN=1
   n=1
   while [[ $JOBRUN -eq 1 ]] && [[ $n -lt 21 ]]; do
     sleep 7
-    JOBRUN=$(tilesets status --token $TOKEN timsmithch.all_tracks | jq '.status == "processing"')
+    JOBRUN=$(tilesets status --token $TOKEN timsmithch.all_tracks | jq --exit-status '.status == "processing"' >/dev/null)
     n=$((n+1))
   done
+  printf "\n+++ Finished +++\n"
   tilesets status --token $TOKEN --indent 2 timsmithch.all_tracks
 fi
