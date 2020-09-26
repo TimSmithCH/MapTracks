@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e   # Exit with nonzero exit code if anything fails
+#set -e   # Exit with nonzero exit code if anything fails
 #set -x   # Debug mode to echo commands
 
 # Update MapBox tileset?
