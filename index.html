@@ -7,10 +7,10 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css' rel='stylesheet' 
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' 
     <!-- External libraries -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/5.14.0/css/font-awesome.min.css">
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -387,7 +387,7 @@
             closer.onclick = function(e) {
               e.preventDefault();
               e.stopPropagation();
-              var m = document.querySelectorAll('a,input,output');
+              var m = document.querySelectorAll('a,#sliders,#outH,#outP,#zoomO');
               for (var i = 0; i < m.length; i++) {
                 var mChild = m[i];
                 if (mChild.style.display === "none") {

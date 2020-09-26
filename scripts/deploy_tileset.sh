@@ -49,7 +49,7 @@ if [[ "$MODIFIED" == "true" ]] ; then
   tilesets publish --token $TOKEN timsmithch.all_tracks
   JOBRUN=1
   n=1
-  while [[ $JOBRUN -eq 1 ]] && [[ $n -lt 21 ]]; do
+  while [[ $JOBRUN -eq 1 && $n -lt 21 ]]; do
     sleep 7
     JOBRUN=$(tilesets status --token $TOKEN timsmithch.all_tracks | jq --exit-status '.status == "processing"' >/dev/null)
     n=$((n+1))
