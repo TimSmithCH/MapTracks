@@ -26,7 +26,10 @@ if __name__ == '__main__':
     for infile in infiles:
         jfile = os.path.join(args.files, infile)
         with open(jfile) as f:
-            injson = load(f)
+            try:
+                injson = load(f)
+            except:
+                print("Failed to load {}".format(f))
 
         if injson.get('type', None) != 'FeatureCollection':
             raise Exception('Sorry, "%s" does not look like GeoJSON' % infile)
