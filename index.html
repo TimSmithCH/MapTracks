@@ -387,17 +387,33 @@
             closer.onclick = function(e) {
               e.preventDefault();
               e.stopPropagation();
-              var m = document.querySelectorAll('a,#sliders,#outH,#outP,#zoomO');
+              var m = document.querySelectorAll('a,#zoomO');
               for (var i = 0; i < m.length; i++) {
                 var mChild = m[i];
                 if (mChild.style.display === "none") {
                   mChild.style.display = "block";
                   closer.style.backgroundColor ='red';
                   closer.textContent = 'Close';
+                  if (mChild.id === 'Peaks' && mChild.className === 'active') {
+                    var s1 = document.getElementById('sliders');
+                    s1.style.display = "block";
+                    var o1 = document.getElementById('outH');
+                    o1.style.display = "block";
+                    var o2 = document.getElementById('outP');
+                    o2.style.display = "block";
+                  }
                 } else {
                   mChild.style.display = "none";
                   closer.style.backgroundColor ='green';
                   closer.textContent = 'Menu';
+                  if (mChild.id === 'Peaks' && mChild.className === 'active') {
+                    var s1 = document.getElementById('sliders');
+                    s1.style.display = "none";
+                    var o1 = document.getElementById('outH');
+                    o1.style.display = "none";
+                    var o2 = document.getElementById('outP');
+                    o2.style.display = "none";
+                  }
                 }
               }
             };
