@@ -3,6 +3,7 @@ set -e   # Exit with nonzero exit code if anything fails
 #set -x   # Debug mode to echo commands
 
 #mkdir -pv tracks/2_geojson/wip
+mkdir -pv tracks/2_geojson/commute
 
 TYPES="bike hike run ski wip commute"
 FORCE="false"
