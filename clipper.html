@@ -94,6 +94,12 @@
                 }
                 return copy;
             }
+            function concatGeoJSON(g1, g2){
+                return {
+                    "type" : "FeatureCollection",
+                    "features": g1.features.concat(g2.features)
+                }
+            }
 
             // Read file name from URl arguement or set default
             var datafile = processArg();
@@ -103,6 +109,7 @@
             var basename = datafile.substr(datafile.lastIndexOf("/") + 1);
             var basename_no_ext = basename.substr(0, basename.lastIndexOf('.')) || basename;
             var outfile = basename_no_ext + "_trimmed.gpx";
+            var splitfile = basename_no_ext + "_new.geojson";
             console.log(datafile,outfile);
 
             //console.log("Initialising map");
@@ -145,7 +152,7 @@
                         }
                     });
 
-                    //console.log(data.features[0]);
+                    console.log(data.features[0]);
                     // Use Turf to convert all the LineString points into individual points
                     var temp_data = turf.explode(data.features[0]);
                     console.log(data.features[0].geometry.coordinates.length);
@@ -154,9 +161,14 @@
                     // Name each point by its position in array
                     for(var i = 0; i < point_data.features.length; i++){ 
                       point_data.features[i]["properties"]["name"] = i.toString();
-                      point_data.features[i]["properties"]["time"] = point_data.features[i].properties.coordTimes[i];
-                      point_data.features[i]["properties"]["Minute"] = parseInt(point_data.features[i].properties.coordTimes[i].split(':')[1]);
-                      delete point_data.features[i].properties.coordTimes;
+                      if ("coordTimes" in point_data.features[i].properties) {
+                        point_data.features[i]["properties"]["time"] = point_data.features[i].properties.coordTimes[i];
+                        point_data.features[i]["properties"]["Minute"] = parseInt(point_data.features[i].properties.coordTimes[i].split(':')[1]);
+                        delete point_data.features[i].properties.coordTimes;
+                      } else {
+                        point_data.features[i]["properties"]["time"] = "2031-06-30T23:59:59Z"
+                        point_data.features[i]["properties"]["Minute"] = "59"
+                      }
                     }
 
                     // add points to the map
@@ -299,6 +311,25 @@
                         }
                         var blob = new Blob([(new XMLSerializer).serializeToString(xdata)], {type: 'application/xml;charset=utf-8'});
                         saveAs(blob, outfile);
+                        // --- If being used to track split ---
+                        index_removed.unshift(0)                        // Add first point to start of list
+                        index_removed.push(point_data.features.length)  // Add last point to end of list
+                        console.log(index_removed);
+                        split_tracks = { "type": "FeatureCollection", "features": [] };
+                        for(var i = 0; i <= index_removed.length-2; i++){ 
+                            point_data_slice = point_data.features.slice(index_removed[i],index_removed[i+1]+1);
+                            new_point_data = { "type": "FeatureCollection", "features": [] };
+                            new_length = new_point_data.features.push(...point_data_slice);
+                            flat_point_data = turf.combine(new_point_data);
+                            flat_point_data.features[0].geometry.type = "LineString"  // Reset from MultiPoint to LineString
+                            delete flat_point_data.features[0].properties.collectedProperties
+                            flat_point_data.features[0].properties.color = "#8AD42F"
+                            split_tracks = concatGeoJSON(split_tracks, flat_point_data)
+                            //console.log(JSON.stringify(flat_point_data,null,4));
+                        }
+                        nice_json = JSON.stringify(split_tracks,null,4);
+                        var jblob = new Blob([nice_json], {type: 'application/json;charset=utf-8'});
+                        saveAs(jblob, splitfile);
                     };
                     var layers = document.getElementById('menu');
                     layers.appendChild(link);
