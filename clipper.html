@@ -110,7 +110,8 @@
             var basename_no_ext = basename.substr(0, basename.lastIndexOf('.')) || basename;
             var outfile = basename_no_ext + "_trimmed.gpx";
             var splitfile = basename_no_ext + "_new.geojson";
-            console.log(datafile,outfile);
+            var clipsplit = "SPLIT";  // Clip points or Split tracks
+            console.log(datafile,outfile,splitfile);
 
             //console.log("Initialising map");
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
@@ -303,33 +304,37 @@
                     link.onclick = function(e) {
                         e.preventDefault();
                         e.stopPropagation();
-                        //console.log(index_removed);
-                        for(var i = index_removed.length-1; i >= 0; i--){ 
-                            x = xdata.getElementsByTagName("trkpt")[index_removed[i]];
-                            x.parentNode.removeChild(x);
-                            //console.log("Removing " + index_removed[i]);
-                        }
-                        var blob = new Blob([(new XMLSerializer).serializeToString(xdata)], {type: 'application/xml;charset=utf-8'});
-                        saveAs(blob, outfile);
-                        // --- If being used to track split ---
-                        index_removed.unshift(0)                        // Add first point to start of list
-                        index_removed.push(point_data.features.length)  // Add last point to end of list
                         console.log(index_removed);
-                        split_tracks = { "type": "FeatureCollection", "features": [] };
-                        for(var i = 0; i <= index_removed.length-2; i++){ 
-                            point_data_slice = point_data.features.slice(index_removed[i],index_removed[i+1]+1);
-                            new_point_data = { "type": "FeatureCollection", "features": [] };
-                            new_length = new_point_data.features.push(...point_data_slice);
-                            flat_point_data = turf.combine(new_point_data);
-                            flat_point_data.features[0].geometry.type = "LineString"  // Reset from MultiPoint to LineString
-                            delete flat_point_data.features[0].properties.collectedProperties
-                            flat_point_data.features[0].properties.color = "#8AD42F"
-                            split_tracks = concatGeoJSON(split_tracks, flat_point_data)
-                            //console.log(JSON.stringify(flat_point_data,null,4));
+                        if (clipsplit === "CLIP") {
+                            // --- If being used to clip points ---
+                            for(var i = index_removed.length-1; i >= 0; i--){ 
+                                x = xdata.getElementsByTagName("trkpt")[index_removed[i]];
+                                x.parentNode.removeChild(x);
+                                //console.log("Removing " + index_removed[i]);
+                            }
+                            var blob = new Blob([(new XMLSerializer).serializeToString(xdata)], {type: 'application/xml;charset=utf-8'});
+                            saveAs(blob, outfile);
+                        } else {
+                            // --- If being used to track split ---
+                            index_removed.unshift(0)                        // Add first point to start of list
+                            index_removed.push(point_data.features.length)  // Add last point to end of list
+                            split_tracks = { "type": "FeatureCollection", "features": [] };
+                            for(var i = 0; i <= index_removed.length-2; i++){ 
+                                point_data_slice = point_data.features.slice(index_removed[i],index_removed[i+1]+1);
+                                new_point_data = { "type": "FeatureCollection", "features": [] };
+                                new_length = new_point_data.features.push(...point_data_slice);
+                                flat_point_data = turf.combine(new_point_data);
+                                flat_point_data.features[0].geometry.type = "LineString"  // Reset from MultiPoint to LineString
+                                delete flat_point_data.features[0].properties.collectedProperties
+                                const randomColor = Math.floor(Math.random()*16777215).toString(16);
+                                flat_point_data.features[0].properties.color = "#" + randomColor;
+                                split_tracks = concatGeoJSON(split_tracks, flat_point_data)
+                                //console.log(JSON.stringify(flat_point_data,null,4));
+                            }
+                            nice_json = JSON.stringify(split_tracks,null,4);
+                            var jblob = new Blob([nice_json], {type: 'application/json;charset=utf-8'});
+                            saveAs(jblob, splitfile);
                         }
-                        nice_json = JSON.stringify(split_tracks,null,4);
-                        var jblob = new Blob([nice_json], {type: 'application/json;charset=utf-8'});
-                        saveAs(jblob, splitfile);
                     };
                     var layers = document.getElementById('menu');
                     layers.appendChild(link);
