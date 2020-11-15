@@ -67,7 +67,9 @@ jobs:
         run: python -c "import sys; print(sys.version)"
         #--- Next Step
       - name: Install MapBox tileset commands
-        run: pip install mapbox-tilesets
+        run: |
+          brew install gdal
+          pip install mapbox-tilesets
         #--- Next Step
       - name: Build MapBox tileset
         env:
