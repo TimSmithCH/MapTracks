@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' 
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' 
     <!-- External libraries -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/5.14.0/css/font-awesome.min.css">
     <!-- Site styles and icons -->
@@ -33,6 +33,7 @@
       <script>
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var zoomlvl = 11;
+            var dimension = 2;
             var map = new mapboxgl.Map({
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
@@ -60,7 +61,27 @@
                 trackUserLocation: true
             }));
 
-            map.on('load', function () {
+            // Add overlay data layers on demand (after load or style change)
+            function addDataLayers() {
+              if (dimension == 3) {
+                map.addSource('mapbox-dem', {
+                    'type': 'raster-dem',
+                    'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+                    'tileSize': 512,
+                    'maxzoom': 14
+                });
+                map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.2 });
+                map.addLayer({
+                    'id': 'sky',
+                    'type': 'sky',
+                    'paint': {
+                        'sky-type': 'atmosphere',
+                        'sky-atmosphere-sun': [0.0, 90.0],
+                        'sky-atmosphere-sun-intensity': 15
+                    }
+                });
+              }
+
               map.setLayoutProperty('contour-label', 'text-size', [
                 "interpolate", ["linear"], ["zoom"],
                 1, 0,
@@ -212,6 +233,15 @@
                   "line-width": 3
                 }
               });
+            }
+
+            map.on('styledata', function () {
+              // Triggered when `setStyle` is called.
+              addDataLayers();
+            });
+
+            map.on('load', function () {
+              addDataLayers();
             });
 
             //----------------------------------------------
@@ -376,6 +406,32 @@
             map.on('zoom', function() {
               zoomout.innerHTML = parseFloat(map.getZoom()).toFixed(2);
             });
+
+            //----------------------------------------------
+            // Create 2D/3D toggle button
+            var dimtog = document.createElement('button');
+            dimtog.textContent = '3D';
+            dimtog.style.backgroundColor ='orange';
+            dimtog.style.color ='white';
+            dimtog.style.outline ='none';
+            dimtog.onclick = function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              if (dimension === 2) {
+                dimtog.textContent = '2D';
+                map.setStyle('mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y');
+                map.setPitch(65)
+                map.setBearing(-45)
+                dimension = 3
+              } else {
+                dimtog.textContent = '3D';
+                map.setStyle('mapbox://styles/mapbox/outdoors-v11');
+                map.setPitch(0)
+                map.setBearing(0)
+                dimension = 2
+              }
+            };
+            menus.appendChild(dimtog);
 
             //----------------------------------------------
             // Create the close/open toggle button for menus
