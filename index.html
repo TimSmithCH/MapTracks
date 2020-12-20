@@ -236,7 +236,7 @@
             }
 
             map.on('styledata', function () {
-              // Triggered when `setStyle` is called.
+              // Triggered when `setStyle` is called, to enable 2D/3D switching
               addDataLayers();
             });
 
@@ -414,6 +414,7 @@
             dimtog.style.backgroundColor ='orange';
             dimtog.style.color ='white';
             dimtog.style.outline ='none';
+            dimtog.style.display = "block";
             dimtog.onclick = function(e) {
               e.preventDefault();
               e.stopPropagation();
