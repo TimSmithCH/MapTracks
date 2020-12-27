@@ -33,7 +33,7 @@ do
       if [[ -z $(git status --untracked-files=no --porcelain $fileOUT) ]]; then
         # Git sees no change, so need to remove the file to avoid continuous regeneration, then it will be regenrated successfully next round
         printf "\n  Git sees no change in $fileOUT so remove it, and force regenration next round \n  "
-        # rm $fileOUT
+        rm $fileOUT
       fi
     else
       printf "."
