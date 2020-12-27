@@ -17,6 +17,3 @@ git status -s 1>&2
 MESS="${commit_mess} (GeoJSONs)"
 git commit -m "$MESS" 1>&2
 git push 1>&2
-
-#########################
-#if [[ -z $(git status --untracked-files=no --porcelain tracks/1_display) ]]; then

@@ -30,6 +30,11 @@ do
       MODIFIED="true"
       # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 -lco COORDINATE_PRECISION=7 $fileOUT $fileIN tracks
+      if [[ -z $(git status --untracked-files=no --porcelain $fileOUT) ]]; then
+        # Git sees no change, so need to remove the file to avoid continuous regeneration, then it will be regenrated successfully next round
+        printf "\n  Git sees no change in $fileOUT so remove it, and force regenration next round \n  "
+        # rm $fileOUT
+      fi
     else
       printf "."
     fi
