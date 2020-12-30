@@ -15,26 +15,36 @@ do
   FILES=tracks/3_gpx/$type/*.gpx
   for f in $FILES
   do
+    GENERATE=false
     file=${f##*/}
     base=${file%.gpx}
     fileIN=tracks/3_gpx/$type/$base.gpx
     fileOUT=tracks/2_geojson/$type/$base.geojson
-    if [[ "$FORCE" == "true" ]] ; then
-      timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
+    # If the geojson file does not exist yet, generate it
+    if [[ ! -f $fileOUT ]] ; then
+      GENERATE=true
     else
-      timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
+      # If the geojson file exists, but the GPX file has been updated, generate it
+      if [[ "$FORCE" == "true" ]] ; then
+        timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
+      else
+        timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
+      fi
+      timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
+      if [[ $timeIN -gt $timeOUT ]]; then
+        GENERATE=true
+      fi
     fi
-    timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
-    if [[ $timeIN -gt $timeOUT ]]; then
+    if [[ "$GENERATE" == "true" ]] ; then
       printf "\n  Generating GEOJSON: $fileOUT \n  "
       MODIFIED="true"
       # 0.000025 tolerance = resolution of 2m
       ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 -lco COORDINATE_PRECISION=7 $fileOUT $fileIN tracks
-      if [[ -z $(git status --untracked-files=no --porcelain $fileOUT) ]]; then
-        # Git sees no change, so need to remove the file to avoid continuous regeneration, then it will be regenrated successfully next round
-        printf "\n  Git sees no change in $fileOUT so remove it, and force regenration next round \n  "
-        rm $fileOUT
-      fi
+      #if [[ -z $(git status --untracked-files=no --porcelain $fileOUT) ]]; then
+      #  # Git sees no change, so need to remove the file to avoid continuous regeneration, then it will be regenrated successfully next round
+      #  printf "\n  Git sees no change in $fileOUT so remove it, and force regenration next round \n  "
+      #  rm $fileOUT
+      #fi
     else
       printf "."
     fi
