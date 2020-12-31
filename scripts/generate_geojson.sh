@@ -26,11 +26,11 @@ do
     else
       # If the geojson file exists, but the GPX file has been updated, generate it
       if [[ "$FORCE" == "true" ]] ; then
-        timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
+        timeIN="$(git log --pretty=format:%cd -n 1 --date=unix)"
       else
-        timeIN="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileIN)"
+        timeIN="$(git log --pretty=format:%cd -n 1 --date=unix -- $fileIN)"
       fi
-      timeOUT="$(git log --pretty=format:%cd -n 1 --date=format:%s -- $fileOUT)"
+      timeOUT="$(git log --pretty=format:%cd -n 1 --date=unix -- $fileOUT)"
       if [[ $timeIN -gt $timeOUT ]]; then
         GENERATE=true
       fi
