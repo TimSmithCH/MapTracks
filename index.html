@@ -7,10 +7,11 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet'>
     <!-- External libraries -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/5.14.0/css/font-awesome.min.css">
+    <!-- link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/5.14.0/css/font-awesome.min.css" -->
+    <!-- script src="https://kit.fontawesome.com/ab28b1948e.js" crossorigin="anonymous"></script -->
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -34,6 +35,7 @@
             mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
             var zoomlvl = 11;
             var dimension = 2;
+            var basechange = 0;
             var map = new mapboxgl.Map({
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
@@ -53,16 +55,22 @@
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
 
-            // Add GeoLocation control to the map
-            map.addControl(new mapboxgl.GeolocateControl({
-                positionOptions: {
-                    enableHighAccuracy: true
-                },
-                trackUserLocation: true
-            }));
+            // Add GeoLocation control to the map (disabled if not served over https)
+            if (window.isSecureContext) {
+                map.addControl(new mapboxgl.GeolocateControl({
+                    positionOptions: {
+                        enableHighAccuracy: true
+                    },
+                    trackUserLocation: true
+                }));
+            } else {
+                console.log("Cant use geolocation when served over http!");
+            }
 
             // Add overlay data layers on demand (after load or style change)
             function addDataLayers() {
+              basechange = 0
+              // For 3D add terrain and sky
               if (dimension == 3) {
                 map.addSource('mapbox-dem', {
                     'type': 'raster-dem',
@@ -80,14 +88,16 @@
                         'sky-atmosphere-sun-intensity': 15
                     }
                 });
+              // For 2D make contour labels easier to read
+              } else {
+                map.setLayoutProperty('contour-label', 'text-size', [
+                  "interpolate", ["linear"], ["zoom"],
+                  1, 0,
+                  12, 12,
+                  20, 24,
+                ]);
               }
 
-              map.setLayoutProperty('contour-label', 'text-size', [
-                "interpolate", ["linear"], ["zoom"],
-                1, 0,
-                12, 12,
-                20, 24,
-              ]);
               //----------------------------------------------
               // Add Swiss cantons
               map.addSource("cantons", {
@@ -236,11 +246,15 @@
             }
 
             map.on('styledata', function () {
+              //console.log("ON StyleData",basechange);
               // Triggered when `setStyle` is called, to enable 2D/3D switching
-              addDataLayers();
+              if (basechange == 1) {
+                addDataLayers();
+              }
             });
 
             map.on('load', function () {
+              //console.log("ON Load");
               addDataLayers();
             });
 
@@ -432,6 +446,7 @@
                 map.setBearing(0)
                 dimension = 2
               }
+              basechange = 1
             };
             menus.appendChild(dimtog);
 
