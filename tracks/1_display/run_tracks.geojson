@@ -4,7 +4,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Acropolis_Tour"
+        "name": "Acropolis_Tour",
+        "cmt": "2015-01-27"
       },
       "geometry": {
         "type": "LineString",
@@ -1111,7 +1112,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "America_Wood"
+        "name": "America_Wood",
+        "cmt": "2014-06-27"
       },
       "geometry": {
         "type": "LineString",
@@ -2094,7 +2096,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "America_Wood_1"
+        "name": "America_Wood_1",
+        "cmt": "2014-10-03"
       },
       "geometry": {
         "type": "LineString",
@@ -2917,7 +2920,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "America_Wood_2"
+        "name": "America_Wood_2",
+        "cmt": "2014-06-29"
       },
       "geometry": {
         "type": "LineString",
@@ -3388,7 +3392,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "America_Wood_3"
+        "name": "America_Wood_3",
+        "cmt": "2015-09-26"
       },
       "geometry": {
         "type": "LineString",
@@ -3879,7 +3884,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "America_Wood_4"
+        "name": "America_Wood_4",
+        "cmt": "2014-10-02"
       },
       "geometry": {
         "type": "LineString",
@@ -4275,6 +4281,7 @@
       "type": "Feature",
       "properties": {
         "name": "America_Wood_5",
+        "cmt": "2015-08-14",
         "type": "9"
       },
       "geometry": {
@@ -5307,6 +5314,7 @@
       "type": "Feature",
       "properties": {
         "name": "Anavyssos",
+        "cmt": "2018-09-03",
         "type": "9"
       },
       "geometry": {
@@ -5763,6 +5771,7 @@
       "type": "Feature",
       "properties": {
         "name": "Anavyssos_Headlands",
+        "cmt": "2018-09-04",
         "type": "9"
       },
       "geometry": {
@@ -6842,7 +6851,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Annecy_lake_front"
+        "name": "Annecy_lake_front",
+        "cmt": "2014-11-14"
       },
       "geometry": {
         "type": "LineString",
@@ -8141,7 +8151,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Annecy_lake_front_1"
+        "name": "Annecy_lake_front_1",
+        "cmt": "2014-11-13"
       },
       "geometry": {
         "type": "LineString",
@@ -9133,6 +9144,7 @@
       "type": "Feature",
       "properties": {
         "name": "Anvers",
+        "cmt": "2018-12-14",
         "type": "9"
       },
       "geometry": {
@@ -10089,6 +10101,7 @@
       "type": "Feature",
       "properties": {
         "name": "Around_the_Convention_Center",
+        "cmt": "2019-11-06",
         "type": "9"
       },
       "geometry": {
@@ -10936,7 +10949,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Ashington_loops"
+        "name": "Ashington_loops",
+        "cmt": "2015-09-27"
       },
       "geometry": {
         "type": "LineString",
@@ -11608,6 +11622,7 @@
       "type": "Feature",
       "properties": {
         "name": "Athens",
+        "cmt": "2017-09-07",
         "type": "9"
       },
       "geometry": {
@@ -12848,6 +12863,7 @@
       "type": "Feature",
       "properties": {
         "name": "Athens_1",
+        "cmt": "2018-01-18",
         "type": "9"
       },
       "geometry": {
@@ -13732,6 +13748,7 @@
       "type": "Feature",
       "properties": {
         "name": "Athens_2",
+        "cmt": "2018-01-19",
         "type": "9"
       },
       "geometry": {
@@ -14764,6 +14781,7 @@
       "type": "Feature",
       "properties": {
         "name": "Baltimore",
+        "cmt": "2014-06-24",
         "type": "9"
       },
       "geometry": {
@@ -16247,7 +16265,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Barcelona_Arc_de_Triomf"
+        "name": "Barcelona_Arc_de_Triomf",
+        "cmt": "2017-04-06"
       },
       "geometry": {
         "type": "LineString",
@@ -17151,6 +17170,7 @@
       "type": "Feature",
       "properties": {
         "name": "Becassiere_parcours",
+        "cmt": "2017-09-03",
         "type": "9"
       },
       "geometry": {
@@ -17871,6 +17891,7 @@
       "type": "Feature",
       "properties": {
         "name": "Budapest",
+        "cmt": "2019-01-18",
         "type": "9"
       },
       "geometry": {
@@ -19046,7 +19067,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cambridge_Grantchester"
+        "name": "Cambridge_Grantchester",
+        "cmt": "2015-02-19"
       },
       "geometry": {
         "type": "LineString",
@@ -20397,7 +20419,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cambridge_Grantchester_1"
+        "name": "Cambridge_Grantchester_1",
+        "cmt": "2015-11-05"
       },
       "geometry": {
         "type": "LineString",
@@ -21457,6 +21480,7 @@
       "type": "Feature",
       "properties": {
         "name": "Chamonix",
+        "cmt": "2015-11-12",
         "type": "1"
       },
       "geometry": {
@@ -22808,7 +22832,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Cherry_Creek_Trail"
+        "name": "Cherry_Creek_Trail",
+        "cmt": "2016-09-14"
       },
       "geometry": {
         "type": "LineString",
@@ -23074,7 +23099,7 @@
             39.745456
           ],
           [
-            -104.99999,
+            -104.999992,
             39.745528
           ],
           [
@@ -23594,7 +23619,7 @@
             39.746492
           ],
           [
-            -105.0,
+            -104.999998,
             39.746466
           ],
           [
@@ -23771,7 +23796,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Christ_Church_Meadow_loop"
+        "name": "Christ_Church_Meadow_loop",
+        "cmt": "2015-01-12"
       },
       "geometry": {
         "type": "LineString",
@@ -24246,7 +24272,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Christ_Church_Meadow_loops"
+        "name": "Christ_Church_Meadow_loops",
+        "cmt": "2015-01-13"
       },
       "geometry": {
         "type": "LineString",
@@ -25218,6 +25245,7 @@
       "type": "Feature",
       "properties": {
         "name": "Col_de_la_Croix",
+        "cmt": "2019-11-15",
         "type": "9"
       },
       "geometry": {
@@ -25886,6 +25914,7 @@
       "type": "Feature",
       "properties": {
         "name": "Col_du_Soud",
+        "cmt": "2019-11-14",
         "type": "9"
       },
       "geometry": {
@@ -27293,7 +27322,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Commugny_loop"
+        "name": "Commugny_loop",
+        "cmt": "2015-05-02"
       },
       "geometry": {
         "type": "LineString",
@@ -28180,7 +28210,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Céligny_loop"
+        "name": "Céligny_loop",
+        "cmt": "2014-12-28"
       },
       "geometry": {
         "type": "LineString",
@@ -28856,6 +28887,7 @@
       "type": "Feature",
       "properties": {
         "name": "Céligny_loop_1",
+        "cmt": "2016-11-27",
         "type": "9"
       },
       "geometry": {
@@ -29772,6 +29804,7 @@
       "type": "Feature",
       "properties": {
         "name": "Céligny_loop_2",
+        "cmt": "2018-10-07",
         "type": "9"
       },
       "geometry": {
@@ -30364,6 +30397,7 @@
       "type": "Feature",
       "properties": {
         "name": "Debrecen",
+        "cmt": "2019-01-16",
         "type": "9"
       },
       "geometry": {
@@ -31032,6 +31066,7 @@
       "type": "Feature",
       "properties": {
         "name": "Debrecen_University",
+        "cmt": "2019-01-17",
         "type": "9"
       },
       "geometry": {
@@ -31927,7 +31962,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Denver_river_front"
+        "name": "Denver_river_front",
+        "cmt": "2016-09-12"
       },
       "geometry": {
         "type": "LineString",
@@ -32706,7 +32742,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Denver_river_front_1"
+        "name": "Denver_river_front_1",
+        "cmt": "2016-09-17"
       },
       "geometry": {
         "type": "LineString",
@@ -33332,7 +33369,7 @@
             39.746493
           ],
           [
-            -104.99999,
+            -104.999991,
             39.746487
           ],
           [
@@ -33469,7 +33506,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Dublin_tour"
+        "name": "Dublin_tour",
+        "cmt": "2014-06-25"
       },
       "geometry": {
         "type": "LineString",
@@ -34068,7 +34106,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "EMBL"
+        "name": "EMBL",
+        "cmt": "2016-11-29"
       },
       "geometry": {
         "type": "LineString",
@@ -35024,6 +35063,7 @@
       "type": "Feature",
       "properties": {
         "name": "Escalade_25",
+        "cmt": "2018-12-01",
         "type": "9"
       },
       "geometry": {
@@ -36852,6 +36892,7 @@
       "type": "Feature",
       "properties": {
         "name": "Escalade_26",
+        "cmt": "2019-11-30",
         "type": "9"
       },
       "geometry": {
@@ -38783,7 +38824,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Evian"
+        "name": "Evian",
+        "cmt": "2017-11-10"
       },
       "geometry": {
         "type": "LineString",
@@ -39639,6 +39681,7 @@
       "type": "Feature",
       "properties": {
         "name": "Evian_1",
+        "cmt": "2017-11-09",
         "type": "9"
       },
       "geometry": {
@@ -40862,7 +40905,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Founex_loop"
+        "name": "Founex_loop",
+        "cmt": "2015-01-01"
       },
       "geometry": {
         "type": "LineString",
@@ -41270,6 +41314,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_1",
+        "cmt": "2015-01-04",
         "type": "9"
       },
       "geometry": {
@@ -41666,6 +41711,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_10",
+        "cmt": "2016-05-01",
         "type": "9"
       },
       "geometry": {
@@ -41962,6 +42008,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_2",
+        "cmt": "2015-03-15",
         "type": "9"
       },
       "geometry": {
@@ -42274,6 +42321,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_3",
+        "cmt": "2015-11-22",
         "type": "9"
       },
       "geometry": {
@@ -42542,6 +42590,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_4",
+        "cmt": "2019-09-05",
         "type": "9"
       },
       "geometry": {
@@ -42766,6 +42815,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_5",
+        "cmt": "2018-06-03",
         "type": "9"
       },
       "geometry": {
@@ -42970,6 +43020,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_6",
+        "cmt": "2018-01-28",
         "type": "9"
       },
       "geometry": {
@@ -43190,6 +43241,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_7",
+        "cmt": "2018-07-02",
         "type": "4"
       },
       "geometry": {
@@ -43498,6 +43550,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_8",
+        "cmt": "2018-07-02",
         "type": "4"
       },
       "geometry": {
@@ -43822,6 +43875,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_9",
+        "cmt": "2016-04-30",
         "type": "9"
       },
       "geometry": {
@@ -44062,6 +44116,7 @@
       "type": "Feature",
       "properties": {
         "name": "Founex_loop_short",
+        "cmt": "2018-07-02",
         "type": "4"
       },
       "geometry": {
@@ -44362,6 +44417,7 @@
       "type": "Feature",
       "properties": {
         "name": "Good_morning_Australia_",
+        "cmt": "2019-11-03",
         "type": "9"
       },
       "geometry": {
@@ -45298,6 +45354,7 @@
       "type": "Feature",
       "properties": {
         "name": "Helsinki",
+        "cmt": "2015-03-25",
         "type": "9"
       },
       "geometry": {
@@ -46377,7 +46434,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Helsinki_sea_front"
+        "name": "Helsinki_sea_front",
+        "cmt": "2015-03-26"
       },
       "geometry": {
         "type": "LineString",
@@ -47277,6 +47335,7 @@
       "type": "Feature",
       "properties": {
         "name": "Horsham",
+        "cmt": "2018-05-16",
         "type": "9"
       },
       "geometry": {
@@ -49169,6 +49228,7 @@
       "type": "Feature",
       "properties": {
         "name": "Horsham_1",
+        "cmt": "2018-05-13",
         "type": "9"
       },
       "geometry": {
@@ -49569,6 +49629,7 @@
       "type": "Feature",
       "properties": {
         "name": "Horsham_2",
+        "cmt": "2018-05-16",
         "type": "9"
       },
       "geometry": {
@@ -50209,6 +50270,7 @@
       "type": "Feature",
       "properties": {
         "name": "Horsham_3",
+        "cmt": "2018-05-15",
         "type": "9"
       },
       "geometry": {
@@ -51305,6 +51367,7 @@
       "type": "Feature",
       "properties": {
         "name": "Horsham_4",
+        "cmt": "2018-05-13",
         "type": "9"
       },
       "geometry": {
@@ -52229,6 +52292,7 @@
       "type": "Feature",
       "properties": {
         "name": "Horsham_5",
+        "cmt": "2019-01-13",
         "type": "10"
       },
       "geometry": {
@@ -53433,6 +53497,7 @@
       "type": "Feature",
       "properties": {
         "name": "Istanbul",
+        "cmt": "2018-09-12",
         "type": "9"
       },
       "geometry": {
@@ -54880,7 +54945,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "La_Châtaigneraie"
+        "name": "La_Châtaigneraie",
+        "cmt": "2014-10-05"
       },
       "geometry": {
         "type": "LineString",
@@ -55811,7 +55877,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "La_Châtaigneraie_1"
+        "name": "La_Châtaigneraie_1",
+        "cmt": "2015-05-16"
       },
       "geometry": {
         "type": "LineString",
@@ -56603,6 +56670,7 @@
       "type": "Feature",
       "properties": {
         "name": "La_Châtaigneraie_2",
+        "cmt": "2014-10-25",
         "type": "9"
       },
       "geometry": {
@@ -57347,6 +57415,7 @@
       "type": "Feature",
       "properties": {
         "name": "La_Châtaigneraie_3",
+        "cmt": "2014-11-09",
         "type": "9"
       },
       "geometry": {
@@ -58039,6 +58108,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lisbon",
+        "cmt": "2018-10-11",
         "type": "9"
       },
       "geometry": {
@@ -58967,6 +59037,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lisbon_2",
+        "cmt": "2018-10-10",
         "type": "9"
       },
       "geometry": {
@@ -59715,6 +59786,7 @@
       "type": "Feature",
       "properties": {
         "name": "London",
+        "cmt": "2015-05-06",
         "type": "9"
       },
       "geometry": {
@@ -61099,6 +61171,7 @@
       "type": "Feature",
       "properties": {
         "name": "London_1",
+        "cmt": "2015-04-20",
         "type": "9"
       },
       "geometry": {
@@ -61278,7 +61351,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Lykavitos_Hill"
+        "name": "Lykavitos_Hill",
+        "cmt": "2015-01-29"
       },
       "geometry": {
         "type": "LineString",
@@ -62542,6 +62616,7 @@
       "type": "Feature",
       "properties": {
         "name": "Milano_Sforza_Castle",
+        "cmt": "2018-11-19",
         "type": "9"
       },
       "geometry": {
@@ -63434,6 +63509,7 @@
       "type": "Feature",
       "properties": {
         "name": "Mount_Ainslie",
+        "cmt": "2019-11-08",
         "type": "9"
       },
       "geometry": {
@@ -64757,7 +64833,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Okinawa"
+        "name": "Okinawa",
+        "cmt": "2015-04-14"
       },
       "geometry": {
         "type": "LineString",
@@ -65568,7 +65645,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Oslo_sea_front"
+        "name": "Oslo_sea_front",
+        "cmt": "2017-02-15"
       },
       "geometry": {
         "type": "LineString",
@@ -66443,7 +66521,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Parc_de_la_Ciutadella"
+        "name": "Parc_de_la_Ciutadella",
+        "cmt": "2017-04-05"
       },
       "geometry": {
         "type": "LineString",
@@ -67279,6 +67358,7 @@
       "type": "Feature",
       "properties": {
         "name": "Paris",
+        "cmt": "2019-12-10",
         "type": "9"
       },
       "geometry": {
@@ -68107,6 +68187,7 @@
       "type": "Feature",
       "properties": {
         "name": "Park_21_22_23",
+        "cmt": "2019-11-04",
         "type": "9"
       },
       "geometry": {
@@ -68843,6 +68924,7 @@
       "type": "Feature",
       "properties": {
         "name": "Porto",
+        "cmt": "2019-09-17",
         "type": "9"
       },
       "geometry": {
@@ -69835,6 +69917,7 @@
       "type": "Feature",
       "properties": {
         "name": "Porto_1",
+        "cmt": "2019-09-16",
         "type": "9"
       },
       "geometry": {
@@ -70587,6 +70670,7 @@
       "type": "Feature",
       "properties": {
         "name": "Riga",
+        "cmt": "2019-11-21",
         "type": "9"
       },
       "geometry": {
@@ -71651,6 +71735,7 @@
       "type": "Feature",
       "properties": {
         "name": "Riga_1",
+        "cmt": "2019-11-22",
         "type": "9"
       },
       "geometry": {
@@ -72447,6 +72532,7 @@
       "type": "Feature",
       "properties": {
         "name": "San_Fransisco",
+        "cmt": "2019-05-13",
         "type": "9"
       },
       "geometry": {
@@ -73351,6 +73437,7 @@
       "type": "Feature",
       "properties": {
         "name": "San_Fransisco_1",
+        "cmt": "2019-05-14",
         "type": "9"
       },
       "geometry": {
@@ -74243,6 +74330,7 @@
       "type": "Feature",
       "properties": {
         "name": "San_Fransisco_2",
+        "cmt": "2019-05-17",
         "type": "9"
       },
       "geometry": {
@@ -75155,6 +75243,7 @@
       "type": "Feature",
       "properties": {
         "name": "Santiago_Park_Run",
+        "cmt": "2018-10-25",
         "type": "9"
       },
       "geometry": {
@@ -75734,7 +75823,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "St_Jamess_Park"
+        "name": "St_Jamess_Park",
+        "cmt": "2015-04-21"
       },
       "geometry": {
         "type": "LineString",
@@ -76301,7 +76391,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Stanford_Uni_sites"
+        "name": "Stanford_Uni_sites",
+        "cmt": "2017-08-05"
       },
       "geometry": {
         "type": "LineString",
@@ -76700,7 +76791,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Stanford_Uni_sites_1"
+        "name": "Stanford_Uni_sites_1",
+        "cmt": "2017-08-06"
       },
       "geometry": {
         "type": "LineString",
@@ -77432,6 +77524,7 @@
       "type": "Feature",
       "properties": {
         "name": "Talloires",
+        "cmt": "2016-11-10",
         "type": "9"
       },
       "geometry": {
@@ -79604,6 +79697,7 @@
       "type": "Feature",
       "properties": {
         "name": "Talloires_1",
+        "cmt": "2016-11-11",
         "type": "9"
       },
       "geometry": {
@@ -80796,6 +80890,7 @@
       "type": "Feature",
       "properties": {
         "name": "Talloires_2",
+        "cmt": "2018-11-08",
         "type": "9"
       },
       "geometry": {
@@ -81656,6 +81751,7 @@
       "type": "Feature",
       "properties": {
         "name": "Talloires_3",
+        "cmt": "2018-11-09",
         "type": "9"
       },
       "geometry": {
@@ -82320,6 +82416,7 @@
       "type": "Feature",
       "properties": {
         "name": "Toes_in_the_Great_Australian_Bight",
+        "cmt": "2019-11-06",
         "type": "9"
       },
       "geometry": {
@@ -83412,6 +83509,7 @@
       "type": "Feature",
       "properties": {
         "name": "University_of_Sydney",
+        "cmt": "2019-11-11",
         "type": "9"
       },
       "geometry": {
@@ -84656,6 +84754,7 @@
       "type": "Feature",
       "properties": {
         "name": "Verbier",
+        "cmt": "2015-06-20",
         "type": "4"
       },
       "geometry": {
@@ -85704,6 +85803,7 @@
       "type": "Feature",
       "properties": {
         "name": "Verbier_1",
+        "cmt": "2015-06-20",
         "type": "9"
       },
       "geometry": {
@@ -86071,7 +86171,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Warsaw_tour"
+        "name": "Warsaw_tour",
+        "cmt": "2015-05-28"
       },
       "geometry": {
         "type": "LineString",
@@ -86870,7 +86971,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Washington_Monument_Tour"
+        "name": "Washington_Monument_Tour",
+        "cmt": "2015-10-07"
       },
       "geometry": {
         "type": "LineString",
@@ -88157,7 +88259,8 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Washington_Monument_Tour_1"
+        "name": "Washington_Monument_Tour_1",
+        "cmt": "2015-10-06"
       },
       "geometry": {
         "type": "LineString",
