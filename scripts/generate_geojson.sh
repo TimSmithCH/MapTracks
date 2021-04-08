@@ -39,13 +39,9 @@ do
     if [[ "$GENERATE" == "true" ]] ; then
       printf "\n  Generating GEOJSON: $fileOUT \n  "
       MODIFIED="true"
-      # 0.000025 tolerance = resolution of 2m
-      ogr2ogr -nlt LINESTRING -f GeoJSON -simplify 0.00002 -lco COORDINATE_PRECISION=7 $fileOUT $fileIN tracks
-      #if [[ -z $(git status --untracked-files=no --porcelain $fileOUT) ]]; then
-      #  # Git sees no change, so need to remove the file to avoid continuous regeneration, then it will be regenrated successfully next round
-      #  printf "\n  Git sees no change in $fileOUT so remove it, and force regenration next round \n  "
-      #  rm $fileOUT
-      #fi
+      # simplify 0.000025 tolerance = resolution of 2m
+      # GPX_ELE_AS_25D allows GPX elevation data to be read in and passed out to GeoJSON as 2.5D (ie 3D where elevation unused in rendering)
+      ogr2ogr --config GPX_ELE_AS_25D YES -nlt LINESTRING -simplify 0.00002 -lco COORDINATE_PRECISION=7 -f GeoJSON $fileOUT $fileIN tracks
     else
       printf "."
     fi
