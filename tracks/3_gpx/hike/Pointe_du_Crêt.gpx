@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_du_Crêt</name>
   <cmt>2020-08-01</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.021062" lon="7.32866">
@@ -58608,6 +58609,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.035666" lon="7.366764">
     <ele>3227.8</ele>
     <time>2020-08-01T10:14:32Z</time>

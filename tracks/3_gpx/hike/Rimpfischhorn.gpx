@@ -6,6 +6,7 @@
  <trk>
   <name>Rimpfischhorn</name>
   <cmt>2020-09-12</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.012667" lon="7.810897">
@@ -74968,6 +74969,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.022658" lon="7.882973">
     <ele>4048.4</ele>
     <time>2020-09-13T06:28:45Z</time>
