@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Blanc_de_Cheillon</name>
   <cmt>2018-05-06</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.010919" lon="7.417869">
     <ele>2902.3</ele>
@@ -7615,6 +7616,8 @@
     <ele>3822.0</ele>
     <time>2018-05-06T07:57:58Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.992978" lon="7.416989">
     <ele>3820.5</ele>
     <time>2018-05-06T07:59:26Z</time>

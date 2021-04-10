@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Menouve</name>
   <cmt>2019-03-30</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.900088" lon="7.196244">
@@ -35928,6 +35929,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.883784" lon="7.215813">
     <ele>3030.4</ele>
     <time>2019-03-30T10:53:16Z</time>

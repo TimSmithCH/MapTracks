@@ -6,6 +6,7 @@
  <trk>
   <name>Val_d_Arpette</name>
   <cmt>2019-04-24</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.031872" lon="7.106611">
@@ -26288,6 +26289,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.014094" lon="7.053912">
     <ele>2276.2</ele>
     <time>2019-04-24T10:36:16Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Chantonnet_2</name>
   <cmt>2021-01-23</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.931558" lon="7.098035">
@@ -38868,6 +38869,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.898005" lon="7.06989">
     <ele>2633.6</ele>
     <time>2021-01-23T12:04:21Z</time>

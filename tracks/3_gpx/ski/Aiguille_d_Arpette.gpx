@@ -6,6 +6,7 @@
  <trk>
   <name>Aiguille_d_Arpette</name>
   <cmt>2020-01-04</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.031556" lon="7.106475">
@@ -47678,6 +47679,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.009667" lon="7.062601">
     <ele>2699.0</ele>
     <time>2020-01-04T13:17:21Z</time>

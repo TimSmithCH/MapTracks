@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_Ronde</name>
   <cmt>2021-02-27</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.057687" lon="7.001292">
@@ -48808,6 +48809,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.039087" lon="7.023797">
     <ele>2708.8</ele>
     <time>2021-02-27T12:39:38Z</time>

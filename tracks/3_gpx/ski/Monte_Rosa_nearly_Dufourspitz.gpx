@@ -6,6 +6,7 @@
  <trk>
   <name>Monte_Rosa_nearly_Dufourspitz</name>
   <cmt>2019-04-21</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.956876" lon="7.814489">
@@ -61892,6 +61893,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.937787" lon="7.861029">
     <ele>4432.4</ele>
     <time>2019-04-21T09:11:38Z</time>

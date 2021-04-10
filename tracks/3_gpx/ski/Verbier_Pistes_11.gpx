@@ -6,6 +6,7 @@
  <trk>
   <name>Verbier_Pistes_11</name>
   <cmt>2018-04-02</cmt>
+  <desc>1.0</desc>
   <type>2</type>
   <trkseg>
    <trkpt lat="46.079592" lon="7.212304">
@@ -1018,7 +1019,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
    <trkpt lat="46.078726" lon="7.214789">
     <ele>2651.2</ele>
     <time>2018-04-02T06:41:07Z</time>
@@ -1029,7 +1029,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
    <trkpt lat="46.09361" lon="7.233407">
     <ele>3971.4</ele>
     <time>2018-04-02T07:00:01Z</time>
@@ -12980,6 +12979,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.100644" lon="7.283435">
     <ele>4860.0</ele>
     <time>2018-04-02T10:21:15Z</time>
@@ -26660,7 +26661,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
    <trkpt lat="46.09361" lon="7.233407">
     <ele>3555.4</ele>
     <time>2018-04-02T11:15:53Z</time>
@@ -26671,7 +26671,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
    <trkpt lat="46.078726" lon="7.214789">
     <ele>3012.0</ele>
     <time>2018-04-02T11:26:38Z</time>

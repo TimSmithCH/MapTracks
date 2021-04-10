@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_des_Berons</name>
   <cmt>2021-02-15</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.046317" lon="6.994177">
@@ -54428,6 +54429,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.004824" lon="6.984832">
     <ele>2936.4</ele>
     <time>2021-02-15T12:50:15Z</time>

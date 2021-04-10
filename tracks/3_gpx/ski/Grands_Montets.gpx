@@ -6,6 +6,7 @@
  <trk>
   <name>Grands_Montets</name>
   <cmt>2019-05-04</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.978865" lon="6.928369">
@@ -73188,6 +73189,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.947495" lon="6.9606">
     <ele>3252.0</ele>
     <time>2019-05-04T11:59:10Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Col_des_Ecandies_3</name>
   <cmt>2018-04-22</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.031909" lon="7.106537">
@@ -47328,6 +47329,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.005049" lon="7.034496">
     <ele>2957.2</ele>
     <time>2018-04-22T09:53:22Z</time>

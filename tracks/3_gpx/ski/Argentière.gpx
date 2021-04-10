@@ -6,6 +6,7 @@
  <trk>
   <name>Argentière</name>
   <cmt>2019-05-05</cmt>
+  <desc>1.0</desc>
   <type>2</type>
   <trkseg>
    <trkpt lat="45.968677" lon="6.94287">
@@ -8748,6 +8749,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.947908" lon="6.944902">
     <ele>2795.4</ele>
     <time>2019-05-05T08:47:17Z</time>

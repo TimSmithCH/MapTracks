@@ -6,6 +6,7 @@
  <trk>
   <name>Petite_Pointe_d_Orny</name>
   <cmt>2019-03-17</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.031999" lon="7.10654">
@@ -65878,6 +65879,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.005395" lon="7.037794">
     <ele>3170.6</ele>
     <time>2019-03-17T12:27:17Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Col_du_Barasson</name>
   <cmt>2020-12-27</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.899257" lon="7.195759">
@@ -32668,6 +32669,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.860164" lon="7.186477">
     <ele>2697.8</ele>
     <time>2020-12-27T11:00:31Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Rosablanche_Plafleuri</name>
   <cmt>2018-02-24</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.077294" lon="7.328434">
     <ele>3065.4</ele>
@@ -24297,6 +24298,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.060488" lon="7.354199">
     <ele>3351.2</ele>
     <time>2018-02-24T11:34:32Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Testa_Grisa</name>
   <cmt>2019-01-26</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.90022" lon="7.195956">
@@ -40468,6 +40469,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.892139" lon="7.228291">
     <ele>3070.8</ele>
     <time>2019-01-26T12:24:32Z</time>

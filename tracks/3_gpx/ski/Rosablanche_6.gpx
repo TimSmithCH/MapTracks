@@ -6,6 +6,7 @@
  <trk>
   <name>Rosablanche_6</name>
   <cmt>2019-02-09</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.083879" lon="7.301891">
@@ -34818,6 +34819,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.060492" lon="7.354187">
     <ele>3339.2</ele>
     <time>2019-02-09T12:17:32Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Verbier_Pistes_21</name>
   <cmt>2021-01-01</cmt>
+  <desc>1.0</desc>
   <type>2</type>
   <trkseg>
    <trkpt lat="46.099423" lon="7.268394">
@@ -51290,6 +51291,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.080046" lon="7.318517">
     <ele>3270.8</ele>
     <time>2021-01-01T14:27:56Z</time>

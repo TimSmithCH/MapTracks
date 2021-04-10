@@ -6,6 +6,7 @@
  <trk>
   <name>Bishorn</name>
   <cmt>2021-02-19</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.130033" lon="7.68002">
@@ -42078,6 +42079,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.118001" lon="7.715211">
     <ele>4114.4</ele>
     <time>2021-02-19T10:57:21Z</time>

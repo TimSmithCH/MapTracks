@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Telliers</name>
   <cmt>2017-02-19</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="45.89824" lon="7.194698">
     <ele>1943.7</ele>
@@ -6563,6 +6564,8 @@
     <ele>2932.4</ele>
     <time>2017-02-19T11:32:32Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.898368" lon="7.145467">
     <ele>2931.4</ele>
     <time>2017-02-19T11:32:41Z</time>

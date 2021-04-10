@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_de_Gogegotte</name>
   <cmt>2019-03-31</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.926853" lon="7.203601">
@@ -38758,6 +38759,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.901592" lon="7.16473">
     <ele>2780.4</ele>
     <time>2019-03-31T11:49:05Z</time>

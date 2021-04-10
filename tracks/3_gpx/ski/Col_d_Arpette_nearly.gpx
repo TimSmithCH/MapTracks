@@ -6,6 +6,7 @@
  <trk>
   <name>Col_d_Arpette_nearly</name>
   <cmt>2019-04-14</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.031193" lon="7.106571">
@@ -46808,6 +46809,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.007278" lon="7.058501">
     <ele>2737.2</ele>
     <time>2019-04-14T12:19:03Z</time>

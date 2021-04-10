@@ -6,6 +6,7 @@
  <trk>
   <name>Tête_de_la_Payanne</name>
   <cmt>2020-12-31</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.050713" lon="7.183507">
@@ -36314,6 +36315,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.031943" lon="7.199339">
     <ele>2409.2</ele>
     <time>2020-12-31T11:39:12Z</time>

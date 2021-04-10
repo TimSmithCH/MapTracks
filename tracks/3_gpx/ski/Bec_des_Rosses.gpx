@@ -6,6 +6,7 @@
  <trk>
   <name>Bec_des_Rosses</name>
   <cmt>2018-04-07</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.091211" lon="7.253401">
@@ -1184,6 +1185,8 @@
     <ele>3293.1</ele>
     <time>2018-04-07T07:38:22Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.079863" lon="7.318149">
     <ele>3292.8</ele>
     <time>2018-04-07T07:38:26Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Grand_Combin</name>
   <cmt>2019-05-31</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.998631" lon="7.299874">
@@ -76178,6 +76179,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.937592" lon="7.299175">
     <ele>4270.8</ele>
     <time>2019-05-31T08:24:09Z</time>

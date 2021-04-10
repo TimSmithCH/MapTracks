@@ -6,6 +6,7 @@
  <trk>
   <name>Gemsfairenstock</name>
   <cmt>2021-03-28</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.885214" lon="8.931787">
@@ -23938,6 +23939,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.860509" lon="8.917833">
     <ele>2963.4</ele>
     <time>2021-03-28T11:10:48Z</time>

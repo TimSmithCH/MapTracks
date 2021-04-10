@@ -6,6 +6,7 @@
  <trk>
   <name>Verbier_Pistes_10</name>
   <cmt>2018-02-25</cmt>
+  <desc>1.0</desc>
   <type>2</type>
   <trkseg>
    <trkpt lat="46.087665" lon="7.264911">
@@ -32508,6 +32509,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.097682" lon="7.278903">
     <ele>3450.0</ele>
     <time>2018-02-25T14:50:40Z</time>
@@ -43688,7 +43691,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
    <trkpt lat="46.078387" lon="7.214097">
     <ele>1308.0</ele>
     <time>2018-02-25T16:12:12Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Fionnay_Panossière_1</name>
   <cmt>2019-05-30</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.032695" lon="7.307625">
@@ -43788,6 +43789,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.998704" lon="7.299918">
     <ele>2607.0</ele>
     <time>2019-05-30T10:21:46Z</time>

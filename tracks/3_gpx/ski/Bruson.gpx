@@ -6,6 +6,7 @@
  <trk>
   <name>Bruson</name>
   <cmt>2020-12-24</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.060105" lon="7.196102">
@@ -24158,6 +24159,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.043351" lon="7.188283">
     <ele>2244.8</ele>
     <time>2020-12-24T13:06:25Z</time>

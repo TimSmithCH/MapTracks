@@ -6,6 +6,7 @@
  <trk>
   <name>Petit_Combin</name>
   <cmt>2020-05-29</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.998703" lon="7.299962">
@@ -56718,6 +56719,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.983835" lon="7.267607">
     <ele>3668.8</ele>
     <time>2020-05-29T07:12:01Z</time>

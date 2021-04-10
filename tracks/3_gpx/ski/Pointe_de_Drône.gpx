@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_de_Drône</name>
   <cmt>2017-02-20</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="45.89824" lon="7.194698">
     <ele>1943.7</ele>
@@ -5587,6 +5588,8 @@
     <ele>2800.9</ele>
     <time>2017-02-20T10:40:29Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.879998" lon="7.152985">
     <ele>2800.1</ele>
     <time>2017-02-20T10:43:56Z</time>

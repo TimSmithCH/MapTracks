@@ -6,6 +6,7 @@
  <trk>
   <name>Jumbo_to_Col_de_La_Chaux</name>
   <cmt>2018-11-03</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.084734" lon="7.2756">
@@ -15209,6 +15210,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.074771" lon="7.307529">
     <ele>2926.8</ele>
     <time>2018-11-03T11:19:07Z</time>

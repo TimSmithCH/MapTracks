@@ -6,6 +6,7 @@
  <trk>
   <name>Aiguille_du_Tour</name>
   <cmt>2021-04-04</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.046453" lon="6.994328">
@@ -86528,6 +86529,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.99441" lon="7.010335">
     <ele>3530.0</ele>
     <time>2021-04-04T13:07:19Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Chli_Chärpf</name>
   <cmt>2021-03-26</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.897071" lon="9.130193">
@@ -39528,6 +39529,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.919501" lon="9.093524">
     <ele>2702.6</ele>
     <time>2021-03-26T12:11:14Z</time>

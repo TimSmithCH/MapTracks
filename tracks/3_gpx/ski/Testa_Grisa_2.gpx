@@ -6,6 +6,7 @@
  <trk>
   <name>Testa_Grisa_2</name>
   <cmt>2020-05-22</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.900002" lon="7.195938">
@@ -44148,6 +44149,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.892017" lon="7.228332">
     <ele>3009.4</ele>
     <time>2020-05-22T08:42:54Z</time>

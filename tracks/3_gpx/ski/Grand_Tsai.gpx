@@ -6,6 +6,7 @@
  <trk>
   <name>Grand_Tsai</name>
   <cmt>2020-12-22</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.060057" lon="7.196349">
@@ -15908,6 +15909,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.041899" lon="7.188478">
     <ele>2205.4</ele>
     <time>2020-12-22T15:17:06Z</time>

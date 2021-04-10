@@ -6,6 +6,7 @@
  <trk>
   <name>Col_d_Arpette</name>
   <cmt>2019-03-03</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.031079" lon="7.106472">
@@ -52758,6 +52759,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.004952" lon="7.057755">
     <ele>2972.6</ele>
     <time>2019-03-03T14:00:18Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Petit_Velan</name>
   <cmt>2019-02-23</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.900174" lon="7.196149">
@@ -44518,6 +44519,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.907558" lon="7.235943">
     <ele>3158.4</ele>
     <time>2019-02-23T11:19:13Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Tournelon_Blanc</name>
   <cmt>2018-04-15</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="45.99869" lon="7.299853">
     <ele>2603.6</ele>
@@ -46487,6 +46488,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.969721" lon="7.32216">
     <ele>3678.2</ele>
     <time>2018-04-15T07:46:15Z</time>

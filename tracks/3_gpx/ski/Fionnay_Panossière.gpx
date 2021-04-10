@@ -6,6 +6,7 @@
  <trk>
   <name>Fionnay_Panossière</name>
   <cmt>2018-04-14</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.032658" lon="7.307529">
     <ele>1462.8</ele>
@@ -39007,6 +39008,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.998669" lon="7.299932">
     <ele>2607.0</ele>
     <time>2018-04-14T14:16:52Z</time>

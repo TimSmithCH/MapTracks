@@ -6,6 +6,7 @@
  <trk>
   <name>Six_Blanc</name>
   <cmt>2020-12-20</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.050436" lon="7.183394">
@@ -10108,6 +10109,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.037451" lon="7.185174">
     <ele>2445.4</ele>
     <time>2020-12-20T14:36:55Z</time>

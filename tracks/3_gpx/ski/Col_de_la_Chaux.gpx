@@ -6,6 +6,7 @@
  <trk>
   <name>Col_de_la_Chaux</name>
   <cmt>2014-12-21</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.076038" lon="7.303286">
@@ -1012,6 +1013,8 @@
     <ele>2948.8</ele>
     <time>2014-12-21T10:15:10Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.074486" lon="7.307808">
     <ele>2946.6</ele>
     <time>2014-12-21T10:15:24Z</time>

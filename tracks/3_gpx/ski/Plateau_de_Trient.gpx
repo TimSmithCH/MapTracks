@@ -6,6 +6,7 @@
  <trk>
   <name>Plateau_de_Trient</name>
   <cmt>2020-03-15</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.046959" lon="6.994006">
@@ -71048,6 +71049,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.002263" lon="7.034657">
     <ele>3003.6</ele>
     <time>2020-03-15T13:31:26Z</time>

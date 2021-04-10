@@ -6,6 +6,7 @@
  <trk>
   <name>Monte_Rosa_Hütte</name>
   <cmt>2019-04-20</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.98417" lon="7.765637">
@@ -38518,6 +38519,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.956944" lon="7.814493">
     <ele>2842.8</ele>
     <time>2019-04-20T12:13:39Z</time>

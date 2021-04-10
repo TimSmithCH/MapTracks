@@ -6,6 +6,7 @@
  <trk>
   <name>La_Chaux_to_Igloo</name>
   <cmt>2018-12-02</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.089707" lon="7.267865">
@@ -22038,6 +22039,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.083992" lon="7.302071">
     <ele>2875.6</ele>
     <time>2018-12-02T10:43:20Z</time>

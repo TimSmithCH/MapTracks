@@ -6,6 +6,7 @@
  <trk>
   <name>Glacier_d_Arpette_1</name>
   <cmt>2020-01-11</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.032269" lon="7.106058">
@@ -64668,6 +64669,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.001839" lon="7.045849">
     <ele>3159.8</ele>
     <time>2020-01-11T14:08:11Z</time>

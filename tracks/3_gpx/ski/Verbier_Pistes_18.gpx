@@ -6,6 +6,7 @@
  <trk>
   <name>Verbier_Pistes_18</name>
   <cmt>2020-03-08</cmt>
+  <desc>1.0</desc>
   <type>2</type>
   <trkseg>
    <trkpt lat="46.099237" lon="7.26881">
@@ -13098,6 +13099,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.09648" lon="7.278798">
     <ele>3024.2</ele>
     <time>2020-03-08T09:51:46Z</time>

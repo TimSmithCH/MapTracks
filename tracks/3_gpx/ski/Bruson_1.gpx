@@ -6,6 +6,7 @@
  <trk>
   <name>Bruson_1</name>
   <cmt>2020-12-29</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.060083" lon="7.196326">
@@ -1208,6 +1209,8 @@
     <ele>2144.0</ele>
     <time>2020-12-29T15:59:01Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.050443" lon="7.182941">
     <ele>2143.7</ele>
     <time>2020-12-29T15:59:09Z</time>

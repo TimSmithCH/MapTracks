@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Velan</name>
   <cmt>2017-04-22</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="45.939313" lon="7.222167">
     <ele>1826.2</ele>
@@ -10731,6 +10732,8 @@
     <ele>3728.9</ele>
     <time>2017-04-22T11:51:45Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.891704" lon="7.251713">
     <ele>3728.9</ele>
     <time>2017-04-22T11:51:49Z</time>

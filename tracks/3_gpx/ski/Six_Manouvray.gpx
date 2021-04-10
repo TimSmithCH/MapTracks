@@ -6,6 +6,7 @@
  <trk>
   <name>Six_Manouvray</name>
   <cmt>2018-12-15</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="45.923699" lon="7.099633">
@@ -48588,6 +48589,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.88486" lon="7.10836">
     <ele>2657.2</ele>
     <time>2018-12-15T12:57:30Z</time>

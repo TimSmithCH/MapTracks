@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Rogneux_Couloir</name>
   <cmt>2020-01-25</cmt>
+  <desc>1.0</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.050188" lon="7.183517">
@@ -39778,6 +39779,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.010668" lon="7.221597">
     <ele>2832.0</ele>
     <time>2020-01-25T12:13:41Z</time>
