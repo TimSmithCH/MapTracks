@@ -41,7 +41,9 @@ do
       MODIFIED="true"
       # simplify 0.000025 tolerance = resolution of 2m
       # GPX_ELE_AS_25D allows GPX elevation data to be read in and passed out to GeoJSON as 2.5D (ie 3D where elevation unused in rendering)
-      ogr2ogr --config GPX_ELE_AS_25D YES -nlt LINESTRING -simplify 0.00002 -lco COORDINATE_PRECISION=7 -f GeoJSON $fileOUT $fileIN tracks
+      # explodecollections creates a feature per track segment
+      ogr2ogr --config GPX_ELE_AS_25D YES -nlt LINESTRING -simplify 0.00002 -lco COORDINATE_PRECISION=7 -explodecollections -f GeoJSON $fileOUT $fileIN tracks
+      python scripts/normalise_geojson.py -file $fileOUT
     else
       printf "."
     fi

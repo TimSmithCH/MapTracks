@@ -215,10 +215,15 @@
                   },
                   "paint": {
                     "line-color": layer_props[layer]["colour"],
-                    "line-width": 3
+                    "line-width": 3,
+                    "line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
                   }
                 });
               }
+              // Option 1: change dash style, but currently not supported by MapBox as a data-driven style
+              //      "line-dasharray": [2, 1],
+              // Option 2: change colour using data-driven style, but probably makes too colorful-messy!
+              //      "line-color": ["case",["has","description"],["get","description"],layer_props[layer]["colour"],
 
               //----------------------------------------------
               // Create a layer of WIP tracks
