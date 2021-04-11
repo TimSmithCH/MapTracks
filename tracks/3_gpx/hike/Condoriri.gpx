@@ -6,6 +6,7 @@
  <trk>
   <name>Condoriri</name>
   <cmt>2018-07-08</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="-16.212257" lon="-68.256649">
@@ -13643,6 +13644,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-16.195041" lon="-68.233809">
     <ele>4827.2</ele>
     <time>2018-07-08T18:44:24Z</time>

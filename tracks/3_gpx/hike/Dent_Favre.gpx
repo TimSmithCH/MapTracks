@@ -6,6 +6,7 @@
  <trk>
   <name>Dent_Favre</name>
   <cmt>2020-09-05</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.203676" lon="7.141455">
@@ -30308,6 +30309,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.210343" lon="7.103833">
     <ele>2883.8</ele>
     <time>2020-09-05T11:40:00Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Bivouac_Dolent</name>
   <cmt>2019-08-13</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.931691" lon="7.09821">
@@ -26758,6 +26759,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.928035" lon="7.069227">
     <ele>2722.8</ele>
     <time>2019-08-13T12:24:47Z</time>

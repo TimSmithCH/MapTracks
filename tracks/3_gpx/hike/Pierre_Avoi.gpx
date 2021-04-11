@@ -6,6 +6,7 @@
  <trk>
   <name>Pierre_Avoi</name>
   <cmt>2018-06-16</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079906" lon="7.212189">
@@ -42908,6 +42909,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.118163" lon="7.199997">
     <ele>2394.2</ele>
     <time>2018-06-16T11:56:15Z</time>

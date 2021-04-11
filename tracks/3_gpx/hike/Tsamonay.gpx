@@ -6,6 +6,7 @@
  <trk>
   <name>Tsamonay</name>
   <cmt>2020-09-20</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.023396" lon="7.146214">
@@ -35548,6 +35549,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.995273" lon="7.148039">
     <ele>2072.4</ele>
     <time>2020-09-20T10:42:42Z</time>

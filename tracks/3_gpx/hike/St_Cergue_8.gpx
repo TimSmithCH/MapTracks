@@ -6,6 +6,7 @@
  <trk>
   <name>St_Cergue_8</name>
   <cmt>2015-01-17</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.425366" lon="6.18581">
@@ -4616,6 +4617,8 @@
     <ele>1102.8</ele>
     <time>2015-01-17T17:42:22Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.44373" lon="6.160832">
     <ele>1102.5</ele>
     <time>2015-01-17T17:42:25Z</time>

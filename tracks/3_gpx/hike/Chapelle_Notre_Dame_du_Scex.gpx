@@ -6,6 +6,7 @@
  <trk>
   <name>Chapelle_Notre_Dame_du_Scex</name>
   <cmt>2020-09-27</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.217868" lon="7.002874">
@@ -4418,6 +4419,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.21638" lon="6.997592">
     <ele>531.2</ele>
     <time>2020-09-27T12:19:05Z</time>

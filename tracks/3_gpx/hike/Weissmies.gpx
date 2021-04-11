@@ -6,6 +6,7 @@
  <trk>
   <name>Weissmies</name>
   <cmt>2020-06-26</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.143817" lon="7.978047">
@@ -44908,6 +44909,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.12769" lon="8.011836">
     <ele>3994.0</ele>
     <time>2020-06-26T05:44:38Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Cabane_de_l_A_Neuve</name>
   <cmt>2020-08-16</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.931859" lon="7.098607">
@@ -29528,6 +29529,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.949276" lon="7.066804">
     <ele>2742.6</ele>
     <time>2020-08-16T11:04:16Z</time>

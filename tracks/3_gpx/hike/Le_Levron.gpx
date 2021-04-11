@@ -6,6 +6,7 @@
  <trk>
   <name>Le_Levron</name>
   <cmt>2019-04-23</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.081195" lon="7.213195">
@@ -23188,6 +23189,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.09731" lon="7.172889">
     <ele>1310.4</ele>
     <time>2019-04-23T14:47:05Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Rogneux_1</name>
   <cmt>2019-09-07</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.044737" lon="7.237725">
@@ -36088,6 +36089,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.009537" lon="7.230832">
     <ele>3043.2</ele>
     <time>2019-09-07T14:50:04Z</time>

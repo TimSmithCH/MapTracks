@@ -6,6 +6,7 @@
  <trk>
   <name>Horsham_2</name>
   <cmt>2019-01-12</cmt>
+  <desc>1.0</desc>
   <type>10</type>
   <trkseg>
    <trkpt lat="51.064922" lon="-0.34184">
@@ -72,6 +73,8 @@
     <ele>39.4</ele>
     <time>2019-01-12T08:48:41Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.065652" lon="-0.342003">
     <ele>39.4</ele>
     <time>2019-01-12T08:48:45Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Avril</name>
   <cmt>2019-10-26</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.00187" lon="7.34023">
@@ -58768,6 +58769,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.915219" lon="7.344196">
     <ele>3319.0</ele>
     <time>2019-10-26T12:03:56Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_d_Orny</name>
   <cmt>2019-08-31</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.031372" lon="7.106753">
@@ -53448,6 +53449,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.002136" lon="7.04272">
     <ele>3136.6</ele>
     <time>2019-08-31T13:47:04Z</time>

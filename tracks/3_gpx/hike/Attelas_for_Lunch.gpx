@@ -6,6 +6,7 @@
  <trk>
   <name>Attelas_for_Lunch</name>
   <cmt>2018-07-26</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.091556" lon="7.254546">
@@ -12797,6 +12798,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.099486" lon="7.268773">
     <ele>3689.8</ele>
     <time>2018-07-26T11:57:38Z</time>

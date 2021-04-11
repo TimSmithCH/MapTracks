@@ -6,6 +6,7 @@
  <trk>
   <name>St_Cergue_both_ways</name>
   <cmt>2017-05-06</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.428771" lon="6.186355">
     <ele>613.2</ele>
@@ -13817,6 +13818,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.44863" lon="6.159827">
     <ele>1058.8</ele>
     <time>2017-05-06T08:25:23Z</time>

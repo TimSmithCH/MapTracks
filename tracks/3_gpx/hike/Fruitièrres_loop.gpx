@@ -6,6 +6,7 @@
  <trk>
   <name>Fruitièrres_loop</name>
   <cmt>2020-04-05</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.417747" lon="6.177162">
@@ -57688,6 +57689,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.435532" lon="6.133977">
     <ele>1345.6</ele>
     <time>2020-04-05T13:11:32Z</time>

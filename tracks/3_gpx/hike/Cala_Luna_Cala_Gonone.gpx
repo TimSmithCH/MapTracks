@@ -6,6 +6,7 @@
  <trk>
   <name>Cala_Luna_Cala_Gonone</name>
   <cmt>2019-10-22</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="40.224321" lon="9.626631">
@@ -15448,6 +15449,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="40.246934" lon="9.618232">
     <ele>130.2</ele>
     <time>2019-10-22T09:56:30Z</time>

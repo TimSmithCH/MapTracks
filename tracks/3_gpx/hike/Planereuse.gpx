@@ -6,6 +6,7 @@
  <trk>
   <name>Planereuse</name>
   <cmt>2020-06-21</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.984737" lon="7.10641">
@@ -46444,6 +46445,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.970403" lon="7.067249">
     <ele>2865.2</ele>
     <time>2020-06-21T12:33:39Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Fenêtre_des_Chamois_Pointe_d_Orny</name>
   <cmt>2020-09-06</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.031879" lon="7.106576">
@@ -71728,6 +71729,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.002141" lon="7.042784">
     <ele>3236.8</ele>
     <time>2020-09-06T09:09:15Z</time>

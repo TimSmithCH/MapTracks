@@ -6,6 +6,7 @@
  <trk>
   <name>Chemin_des_Chèvres</name>
   <cmt>2019-05-25</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.080213" lon="7.211326">
@@ -27038,6 +27039,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.096057" lon="7.199064">
     <ele>1627.0</ele>
     <time>2019-05-25T11:26:40Z</time>

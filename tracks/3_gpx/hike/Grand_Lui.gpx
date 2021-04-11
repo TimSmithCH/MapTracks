@@ -6,6 +6,7 @@
  <trk>
   <name>Grand_Lui</name>
   <cmt>2020-09-19</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079746" lon="7.212186">
@@ -27978,6 +27979,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.091569" lon="7.193206">
     <ele>1104.4</ele>
     <time>2020-09-19T13:20:07Z</time>

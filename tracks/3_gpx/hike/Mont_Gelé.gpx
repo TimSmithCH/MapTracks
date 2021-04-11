@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Gelé</name>
   <cmt>2019-10-13</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.090884" lon="7.252905">
@@ -26088,6 +26089,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.096899" lon="7.279135">
     <ele>2998.0</ele>
     <time>2019-10-13T11:13:28Z</time>

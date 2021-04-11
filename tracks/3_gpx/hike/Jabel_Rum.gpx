@@ -6,6 +6,7 @@
  <trk>
   <name>Jabel_Rum</name>
   <cmt>2019-12-22</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="29.57803" lon="35.4197">
@@ -13518,6 +13519,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="29.574725" lon="35.409786">
     <ele>1244.0</ele>
     <time>2019-12-22T10:02:11Z</time>

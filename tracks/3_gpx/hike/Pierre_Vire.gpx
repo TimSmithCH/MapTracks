@@ -6,6 +6,7 @@
  <trk>
   <name>Pierre_Vire</name>
   <cmt>2019-08-25</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.002317" lon="7.341132">
@@ -20148,6 +20149,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.992653" lon="7.338681">
     <ele>2561.8</ele>
     <time>2019-08-25T11:03:37Z</time>

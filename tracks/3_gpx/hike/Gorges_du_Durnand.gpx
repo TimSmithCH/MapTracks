@@ -6,6 +6,7 @@
  <trk>
   <name>Gorges_du_Durnand</name>
   <cmt>2016-06-11</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.070569" lon="7.07149">
     <ele>713.4</ele>
@@ -679,6 +680,8 @@
     <ele>900.5</ele>
     <time>2016-06-11T10:35:25Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.067701" lon="7.071742">
     <ele>831.5</ele>
     <time>2016-06-11T10:35:28Z</time>

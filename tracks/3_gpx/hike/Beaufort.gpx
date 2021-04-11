@@ -6,6 +6,7 @@
  <trk>
   <name>Beaufort</name>
   <cmt>2019-07-13</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.954684" lon="7.215541">
@@ -38278,6 +38279,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.945856" lon="7.248407">
     <ele>3017.8</ele>
     <time>2019-07-13T10:25:10Z</time>

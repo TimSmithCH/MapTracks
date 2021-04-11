@@ -6,6 +6,7 @@
  <trk>
   <name>Mount_Kosciuszko</name>
   <cmt>2019-11-09</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="-36.431865" lon="148.328301">
@@ -24408,6 +24409,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-36.457323" lon="148.268253">
     <ele>2129.6</ele>
     <time>2019-11-09T21:59:28Z</time>

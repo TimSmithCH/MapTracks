@@ -6,6 +6,7 @@
  <trk>
   <name>Pierre_Avoi_1</name>
   <cmt>2020-06-06</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079928" lon="7.212249">
@@ -51608,6 +51609,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.118006" lon="7.199943">
     <ele>2425.4</ele>
     <time>2020-06-06T12:02:55Z</time>

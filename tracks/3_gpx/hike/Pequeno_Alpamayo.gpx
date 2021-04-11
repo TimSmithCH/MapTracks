@@ -6,6 +6,7 @@
  <trk>
   <name>Pequeno_Alpamayo</name>
   <cmt>2018-07-09</cmt>
+  <desc>1.0</desc>
   <type>28</type>
   <trkseg>
    <trkpt lat="-16.192633" lon="-68.238169">
@@ -30068,6 +30069,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-16.171563" lon="-68.213434">
     <ele>5379.2</ele>
     <time>2018-07-09T12:45:06Z</time>

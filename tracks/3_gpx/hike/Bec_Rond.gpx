@@ -6,6 +6,7 @@
  <trk>
   <name>Bec_Rond</name>
   <cmt>2018-10-21</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.992902" lon="7.161783">
@@ -21149,6 +21150,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.958361" lon="7.146173">
     <ele>2538.2</ele>
     <time>2018-10-21T12:11:19Z</time>

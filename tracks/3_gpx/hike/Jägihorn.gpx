@@ -6,6 +6,7 @@
  <trk>
   <name>Jägihorn</name>
   <cmt>2020-06-25</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.138525" lon="7.963987">
@@ -25208,6 +25209,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.15147" lon="7.970243">
     <ele>3164.2</ele>
     <time>2020-06-25T11:02:46Z</time>

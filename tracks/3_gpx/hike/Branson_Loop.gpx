@@ -6,6 +6,7 @@
  <trk>
   <name>Branson_Loop</name>
   <cmt>2017-07-21</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.130254" lon="7.091338">
     <ele>514.9</ele>
@@ -4031,6 +4032,8 @@
     <ele>1347.3</ele>
     <time>2017-07-21T11:00:38Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.135396" lon="7.076041">
     <ele>1345.6</ele>
     <time>2017-07-21T11:00:40Z</time>

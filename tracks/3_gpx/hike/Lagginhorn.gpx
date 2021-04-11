@@ -6,6 +6,7 @@
  <trk>
   <name>Lagginhorn</name>
   <cmt>2019-09-28</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.143789" lon="7.977851">
@@ -45888,6 +45889,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.157085" lon="8.003088">
     <ele>3980.0</ele>
     <time>2019-09-28T07:11:13Z</time>

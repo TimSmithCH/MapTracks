@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_de_Gros_Six</name>
   <cmt>2020-06-20</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.929613" lon="7.107758">
@@ -38678,6 +38679,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.913954" lon="7.13746">
     <ele>2859.0</ele>
     <time>2020-06-20T12:33:29Z</time>

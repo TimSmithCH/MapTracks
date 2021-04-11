@@ -6,6 +6,7 @@
  <trk>
   <name>St_Christophe_Le_Chateau_Verbier</name>
   <cmt>2017-05-13</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.079876" lon="7.212564">
     <ele>844.2</ele>
@@ -17577,6 +17578,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.101769" lon="7.198321">
     <ele>1764.0</ele>
     <time>2017-05-13T09:31:50Z</time>

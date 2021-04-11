@@ -6,6 +6,7 @@
  <trk>
   <name>Goli_d_Aget</name>
   <cmt>2018-07-27</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.030527" lon="7.264566">
@@ -18764,6 +18765,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.009868" lon="7.248217">
     <ele>2725.4</ele>
     <time>2018-07-27T10:43:23Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Trollsteinen</name>
   <cmt>2018-02-14</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="78.200586" lon="15.584829">
     <ele>334.6</ele>
@@ -31377,6 +31378,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="78.167655" lon="15.58301">
     <ele>1113.6</ele>
     <time>2018-02-14T13:11:40Z</time>

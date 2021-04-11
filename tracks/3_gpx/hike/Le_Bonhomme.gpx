@@ -6,6 +6,7 @@
  <trk>
   <name>Le_Bonhomme</name>
   <cmt>2020-08-15</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.025847" lon="7.122286">
@@ -31988,6 +31989,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.046093" lon="7.115519">
     <ele>2465.6</ele>
     <time>2020-08-15T12:46:32Z</time>

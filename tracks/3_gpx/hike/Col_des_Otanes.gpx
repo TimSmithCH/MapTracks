@@ -6,6 +6,7 @@
  <trk>
   <name>Col_des_Otanes</name>
   <cmt>2019-08-14</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.02129" lon="7.328679">
@@ -33438,6 +33439,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.99723" lon="7.309633">
     <ele>2892.6</ele>
     <time>2019-08-14T12:00:01Z</time>

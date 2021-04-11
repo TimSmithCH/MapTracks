@@ -6,6 +6,7 @@
  <trk>
   <name>Fontanet</name>
   <cmt>2018-10-28</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079704" lon="7.212069">
@@ -35477,6 +35478,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.089427" lon="7.263982">
     <ele>2377.4</ele>
     <time>2018-10-28T15:08:05Z</time>

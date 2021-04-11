@@ -6,6 +6,7 @@
  <trk>
   <name>Bex</name>
   <cmt>2019-07-26</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.250235" lon="7.015617">
@@ -9788,6 +9789,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.265731" lon="7.034717">
     <ele>526.2</ele>
     <time>2019-07-26T13:30:29Z</time>

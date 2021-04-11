@@ -6,6 +6,7 @@
  <trk>
   <name>Col_de_Revedin</name>
   <cmt>2020-11-29</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.955728" lon="7.107008">
@@ -20588,6 +20589,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.95099" lon="7.128197">
     <ele>2199.2</ele>
     <time>2020-11-29T10:16:59Z</time>

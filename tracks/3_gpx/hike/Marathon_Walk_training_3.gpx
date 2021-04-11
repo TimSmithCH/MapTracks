@@ -6,6 +6,7 @@
  <trk>
   <name>Marathon_Walk_training_3</name>
   <cmt>2020-03-18</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.331821" lon="6.194262">
@@ -10668,6 +10669,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.334202" lon="6.149379">
     <ele>473.4</ele>
     <time>2020-03-18T18:16:16Z</time>

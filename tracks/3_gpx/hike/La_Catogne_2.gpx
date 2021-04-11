@@ -6,6 +6,7 @@
  <trk>
   <name>La_Catogne_2</name>
   <cmt>2020-06-12</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.031933" lon="7.106599">
@@ -35408,6 +35409,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.054195" lon="7.110656">
     <ele>2596.6</ele>
     <time>2020-06-12T15:40:48Z</time>

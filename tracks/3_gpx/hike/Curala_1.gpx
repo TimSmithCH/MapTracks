@@ -6,6 +6,7 @@
  <trk>
   <name>Curala_1</name>
   <cmt>2019-06-09</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079696" lon="7.212098">
@@ -32948,6 +32949,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.097842" lon="7.19584">
     <ele>1734.8</ele>
     <time>2019-06-09T11:50:46Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Grand_Tave</name>
   <cmt>2019-09-21</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.021243" lon="7.328763">
@@ -40538,6 +40539,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.993295" lon="7.314478">
     <ele>3112.2</ele>
     <time>2019-09-21T09:52:45Z</time>

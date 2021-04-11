@@ -6,6 +6,7 @@
  <trk>
   <name>Sintra</name>
   <cmt>2018-10-13</cmt>
+  <desc>1.0</desc>
   <type>10</type>
   <trkseg>
    <trkpt lat="38.793023" lon="-9.39134">
@@ -2088,6 +2089,8 @@
     <ele>500.4</ele>
     <time>2018-10-13T14:57:27Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="38.787536" lon="-9.390589">
     <ele>499.9</ele>
     <time>2018-10-13T14:57:33Z</time>

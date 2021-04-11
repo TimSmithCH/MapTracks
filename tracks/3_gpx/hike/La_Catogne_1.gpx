@@ -6,6 +6,7 @@
  <trk>
   <name>La_Catogne_1</name>
   <cmt>2018-09-06</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.030141" lon="7.116962">
@@ -25928,6 +25929,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.054202" lon="7.110589">
     <ele>2549.6</ele>
     <time>2018-09-06T11:27:10Z</time>

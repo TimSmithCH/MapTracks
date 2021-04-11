@@ -6,6 +6,7 @@
  <trk>
   <name>Grand_Lui_Wall</name>
   <cmt>2019-04-27</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079665" lon="7.212196">
@@ -6468,6 +6469,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.089846" lon="7.198682">
     <ele>963.0</ele>
     <time>2019-04-27T15:27:58Z</time>

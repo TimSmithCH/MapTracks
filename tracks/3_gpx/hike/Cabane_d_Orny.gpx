@@ -6,6 +6,7 @@
  <trk>
   <name>Cabane_d_Orny</name>
   <cmt>2018-06-17</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.025981" lon="7.12247">
@@ -42038,6 +42039,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.001882" lon="7.062888">
     <ele>2750.0</ele>
     <time>2018-06-17T12:24:54Z</time>

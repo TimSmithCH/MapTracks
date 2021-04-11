@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_du_Tsaté</name>
   <cmt>2019-10-12</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.093571" lon="7.523809">
@@ -25658,6 +25659,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.109359" lon="7.549061">
     <ele>2976.4</ele>
     <time>2019-10-12T11:01:08Z</time>

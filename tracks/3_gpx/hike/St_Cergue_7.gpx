@@ -6,6 +6,7 @@
  <trk>
   <name>St_Cergue_7</name>
   <cmt>2020-04-26</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.417681" lon="6.177146">
@@ -15728,6 +15729,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.435737" lon="6.141442">
     <ele>1213.2</ele>
     <time>2020-04-26T08:44:23Z</time>

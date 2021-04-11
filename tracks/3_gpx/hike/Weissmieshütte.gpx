@@ -6,6 +6,7 @@
  <trk>
   <name>Weissmieshütte</name>
   <cmt>2019-09-27</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.13849" lon="7.963928">
@@ -10388,6 +10389,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.143675" lon="7.978094">
     <ele>2716.6</ele>
     <time>2019-09-27T12:47:49Z</time>

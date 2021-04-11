@@ -6,6 +6,7 @@
  <trk>
   <name>Budapest</name>
   <cmt>2019-01-19</cmt>
+  <desc>1.0</desc>
   <type>10</type>
   <trkseg>
    <trkpt lat="47.495649" lon="19.049303">
@@ -4204,6 +4205,8 @@
     <ele>218.2</ele>
     <time>2019-01-19T12:24:54Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.487453" lon="19.045465">
     <ele>218.0</ele>
     <time>2019-01-19T12:25:00Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Cabane_de_Saleina</name>
   <cmt>2018-06-23</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.984828" lon="7.106408">
@@ -37158,6 +37159,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.976342" lon="7.070027">
     <ele>2657.4</ele>
     <time>2018-06-23T11:04:02Z</time>

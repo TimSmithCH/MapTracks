@@ -6,6 +6,7 @@
  <trk>
   <name>Le_Châble_Mayens</name>
   <cmt>2020-10-31</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079835" lon="7.213037">
@@ -24428,6 +24429,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.067502" lon="7.196754">
     <ele>1554.6</ele>
     <time>2020-10-31T14:40:34Z</time>

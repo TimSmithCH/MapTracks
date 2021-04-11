@@ -6,6 +6,7 @@
  <trk>
   <name>Ruinettes</name>
   <cmt>2020-09-26</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.092765" lon="7.235469">
@@ -19918,6 +19919,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.088639" lon="7.249958">
     <ele>2162.8</ele>
     <time>2020-09-26T10:49:52Z</time>

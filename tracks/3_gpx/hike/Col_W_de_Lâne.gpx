@@ -6,6 +6,7 @@
  <trk>
   <name>Col_W_de_Lâne</name>
   <cmt>2018-09-29</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.957778" lon="7.218174">
@@ -29159,6 +29160,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.989419" lon="7.249287">
     <ele>3026.6</ele>
     <time>2018-09-29T06:40:49Z</time>

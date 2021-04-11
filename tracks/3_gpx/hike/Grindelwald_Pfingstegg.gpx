@@ -6,6 +6,7 @@
  <trk>
   <name>Grindelwald_Pfingstegg</name>
   <cmt>2020-10-03</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.627354" lon="8.045521">
@@ -16548,6 +16549,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.617202" lon="8.056697">
     <ele>1404.2</ele>
     <time>2020-10-03T12:10:01Z</time>

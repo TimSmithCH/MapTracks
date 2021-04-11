@@ -6,6 +6,7 @@
  <trk>
   <name>Sajama</name>
   <cmt>2018-07-16</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="-18.099242" lon="-68.899468">
@@ -38501,6 +38502,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-18.108101" lon="-68.882872">
     <ele>6465.6</ele>
     <time>2018-07-16T12:38:50Z</time>

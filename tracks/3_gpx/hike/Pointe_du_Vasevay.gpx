@@ -6,6 +6,7 @@
  <trk>
   <name>Pointe_du_Vasevay</name>
   <cmt>2017-06-18</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.021137" lon="7.329248">
     <ele>1573.2</ele>
@@ -15787,6 +15788,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.031098" lon="7.365751">
     <ele>3253.0</ele>
     <time>2017-06-18T12:05:53Z</time>

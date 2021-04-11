@@ -6,6 +6,7 @@
  <trk>
   <name>Blatten_via_dam</name>
   <cmt>2017-08-25</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.424942" lon="7.973822">
     <ele>2587.1</ele>
@@ -2547,6 +2548,8 @@
     <ele>2680.1</ele>
     <time>2017-08-25T07:01:30Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.417823" lon="7.996338">
     <ele>2678.1</ele>
     <time>2017-08-25T07:01:35Z</time>

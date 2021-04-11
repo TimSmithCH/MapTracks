@@ -6,6 +6,7 @@
  <trk>
   <name>Tête_Blanche_de_By</name>
   <cmt>2020-06-28</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.873713" lon="7.304044">
@@ -56508,6 +56509,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.916717" lon="7.315259">
     <ele>3410.0</ele>
     <time>2020-06-28T09:29:48Z</time>

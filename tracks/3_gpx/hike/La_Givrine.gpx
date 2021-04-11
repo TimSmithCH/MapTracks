@@ -6,6 +6,7 @@
  <trk>
   <name>La_Givrine</name>
   <cmt>2018-06-10</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.428577" lon="6.204372">
@@ -43628,6 +43629,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.432651" lon="6.103836">
     <ele>1514.4</ele>
     <time>2018-06-10T13:10:01Z</time>

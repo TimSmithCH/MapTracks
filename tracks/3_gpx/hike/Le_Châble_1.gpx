@@ -6,6 +6,7 @@
  <trk>
   <name>Le_Châble_1</name>
   <cmt>2020-11-28</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079646" lon="7.212164">
@@ -23688,6 +23689,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.067424" lon="7.196685">
     <ele>1543.2</ele>
     <time>2020-11-28T14:00:43Z</time>

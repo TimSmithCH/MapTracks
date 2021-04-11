@@ -6,6 +6,7 @@
  <trk>
   <name>Murat</name>
   <cmt>2020-03-24</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.331851" lon="6.194336">
@@ -4428,6 +4429,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.347998" lon="6.186207">
     <ele>443.6</ele>
     <time>2020-03-24T16:57:13Z</time>

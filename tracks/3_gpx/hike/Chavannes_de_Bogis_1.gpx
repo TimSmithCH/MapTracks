@@ -6,6 +6,7 @@
  <trk>
   <name>Chavannes_de_Bogis_1</name>
   <cmt>2020-05-09</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.331846" lon="6.194464">
@@ -51558,6 +51559,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.348289" lon="6.169704">
     <ele>505.0</ele>
     <time>2020-05-09T12:58:40Z</time>

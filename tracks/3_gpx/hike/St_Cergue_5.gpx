@@ -6,6 +6,7 @@
  <trk>
   <name>St_Cergue_5</name>
   <cmt>2019-09-15</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.417775" lon="6.17693">
@@ -17208,6 +17209,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.435676" lon="6.141259">
     <ele>1205.0</ele>
     <time>2019-09-15T09:54:41Z</time>

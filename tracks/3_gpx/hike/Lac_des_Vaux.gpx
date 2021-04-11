@@ -6,6 +6,7 @@
  <trk>
   <name>Lac_des_Vaux</name>
   <cmt>2019-07-25</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.091072" lon="7.253627">
@@ -9498,6 +9499,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.103938" lon="7.265866">
     <ele>2527.4</ele>
     <time>2019-07-25T13:08:07Z</time>

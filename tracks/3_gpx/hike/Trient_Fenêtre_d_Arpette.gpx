@@ -6,6 +6,7 @@
  <trk>
   <name>Trient_Fenêtre_d_Arpette</name>
   <cmt>2018-08-05</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.046306" lon="6.994231">
@@ -29888,6 +29889,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.018785" lon="7.039669">
     <ele>2615.6</ele>
     <time>2018-08-05T13:04:40Z</time>

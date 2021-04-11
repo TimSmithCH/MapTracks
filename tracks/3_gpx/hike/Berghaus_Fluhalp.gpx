@@ -6,6 +6,7 @@
  <trk>
   <name>Berghaus_Fluhalp</name>
   <cmt>2020-09-12</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.01702" lon="7.786691">
@@ -14858,6 +14859,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.014903" lon="7.829888">
     <ele>2812.8</ele>
     <time>2020-09-12T13:40:50Z</time>

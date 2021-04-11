@@ -6,6 +6,7 @@
  <trk>
   <name>Creux_à_la_Griffe</name>
   <cmt>2019-08-11</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.409626" lon="6.179229">
@@ -21898,6 +21899,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.43556" lon="6.14558">
     <ele>1230.0</ele>
     <time>2019-08-11T10:48:04Z</time>

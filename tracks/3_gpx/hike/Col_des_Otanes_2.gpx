@@ -6,6 +6,7 @@
  <trk>
   <name>Col_des_Otanes_2</name>
   <cmt>2020-11-21</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.021245" lon="7.328947">
@@ -40458,6 +40459,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.997442" lon="7.309895">
     <ele>2864.4</ele>
     <time>2020-11-21T12:12:17Z</time>

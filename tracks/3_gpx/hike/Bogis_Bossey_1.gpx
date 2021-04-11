@@ -6,6 +6,7 @@
  <trk>
   <name>Bogis_Bossey_1</name>
   <cmt>2020-04-01</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.331827" lon="6.194419">
@@ -8728,6 +8729,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.348273" lon="6.169688">
     <ele>478.6</ele>
     <time>2020-04-01T17:04:59Z</time>

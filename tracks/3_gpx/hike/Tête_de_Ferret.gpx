@@ -6,6 +6,7 @@
  <trk>
   <name>Tête_de_Ferret</name>
   <cmt>2020-07-05</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.908227" lon="7.11216">
@@ -25778,6 +25779,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.895179" lon="7.07654">
     <ele>2668.8</ele>
     <time>2020-07-05T11:29:34Z</time>

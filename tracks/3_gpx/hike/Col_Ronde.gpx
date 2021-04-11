@@ -6,6 +6,7 @@
  <trk>
   <name>Col_Ronde</name>
   <cmt>2019-07-06</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.049757" lon="7.085902">
@@ -40958,6 +40959,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.048726" lon="7.040399">
     <ele>2225.6</ele>
     <time>2019-07-06T12:02:10Z</time>

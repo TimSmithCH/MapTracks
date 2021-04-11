@@ -6,6 +6,7 @@
  <trk>
   <name>Curala_3</name>
   <cmt>2020-11-22</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079709" lon="7.212231">
@@ -29608,6 +29609,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.097967" lon="7.195751">
     <ele>1747.8</ele>
     <time>2020-11-22T10:54:11Z</time>

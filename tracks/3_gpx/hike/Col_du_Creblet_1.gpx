@@ -6,6 +6,7 @@
  <trk>
   <name>Col_du_Creblet_1</name>
   <cmt>2018-06-24</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.090957" lon="7.253413">
@@ -15308,6 +15309,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.100451" lon="7.26776">
     <ele>2687.2</ele>
     <time>2018-06-24T12:30:39Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Curala_2</name>
   <cmt>2020-05-31</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.079635" lon="7.213122">
@@ -27298,6 +27299,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.097887" lon="7.195823">
     <ele>1772.2</ele>
     <time>2020-05-31T11:34:58Z</time>

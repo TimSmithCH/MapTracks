@@ -6,6 +6,7 @@
  <trk>
   <name>St_Cergue_from_Gingins</name>
   <cmt>2020-04-13</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.417743" lon="6.177145">
@@ -15598,6 +15599,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.43591" lon="6.141283">
     <ele>1222.2</ele>
     <time>2020-04-13T11:07:27Z</time>

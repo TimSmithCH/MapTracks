@@ -6,6 +6,7 @@
  <trk>
   <name>Celigny</name>
   <cmt>2020-03-23</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.331961" lon="6.194387">
@@ -4618,6 +4619,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.348052" lon="6.186101">
     <ele>440.6</ele>
     <time>2020-03-23T17:43:41Z</time>

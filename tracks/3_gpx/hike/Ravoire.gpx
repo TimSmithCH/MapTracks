@@ -6,6 +6,7 @@
  <trk>
   <name>Ravoire</name>
   <cmt>2020-12-23</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.105709" lon="7.073973">
@@ -17648,6 +17649,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.106044" lon="7.05329">
     <ele>1128.2</ele>
     <time>2020-12-23T14:28:55Z</time>

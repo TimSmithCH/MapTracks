@@ -6,6 +6,7 @@
  <trk>
   <name>Col_de_Termin</name>
   <cmt>2018-08-12</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.05039" lon="7.26446">
@@ -31004,6 +31005,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.055008" lon="7.298662">
     <ele>2572.2</ele>
     <time>2018-08-12T11:23:22Z</time>

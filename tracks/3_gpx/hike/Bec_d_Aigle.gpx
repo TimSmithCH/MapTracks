@@ -6,6 +6,7 @@
  <trk>
   <name>Bec_d_Aigle</name>
   <cmt>2018-07-29</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.033321" lon="7.306844">
@@ -25514,6 +25515,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.04686" lon="7.317433">
     <ele>2591.6</ele>
     <time>2018-07-29T10:24:09Z</time>

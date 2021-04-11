@@ -6,6 +6,7 @@
  <trk>
   <name>Tête_du_Portail</name>
   <cmt>2020-07-26</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.150246" lon="7.064946">
@@ -26488,6 +26489,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.158738" lon="7.088289">
     <ele>2291.0</ele>
     <time>2020-07-26T11:47:53Z</time>
