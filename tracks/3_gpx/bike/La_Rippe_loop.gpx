@@ -6,9 +6,11 @@
  <trk>
   <name>La_Rippe_loop</name>
   <cmt>2014-05-17</cmt>
+  <desc>1.0</desc>
   <type>CYCLING_SPORT</type>
   <trkseg>
    <trkpt lat="46.3313738" lon="6.1946223">
+    <ele>400.0</ele>
     <time>2014-05-17T08:19:44Z</time>
    </trkpt>
    <trkpt lat="46.3313738" lon="6.1946223">
@@ -3363,6 +3365,8 @@
     <ele>558.0</ele>
     <time>2014-05-17T09:13:23Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.3948479" lon="6.1510708">
     <ele>557.5</ele>
     <time>2014-05-17T09:13:28Z</time>
@@ -6560,6 +6564,7 @@
     <time>2014-05-17T10:21:48Z</time>
    </trkpt>
    <trkpt lat="46.331594" lon="6.1943148">
+    <ele>401.7</ele>
     <time>2014-05-17T10:22:34Z</time>
    </trkpt>
   </trkseg>

@@ -6,6 +6,7 @@
  <trk>
   <name>Col_de_Baudichonne_15</name>
   <cmt>2020-11-08</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331931" lon="6.194267">
@@ -27772,6 +27773,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.411356" lon="6.087035">
     <ele>1406.4</ele>
     <time>2020-11-08T11:55:26Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Verbier_Downhill</name>
   <cmt>2018-08-11</cmt>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.093147" lon="7.257162">
@@ -14003,6 +14004,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.09361" lon="7.233407">
     <ele>1436.8</ele>
     <time>2018-08-11T15:22:17Z</time>
@@ -14480,6 +14483,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.092386" lon="7.233594">
     <ele>1484.6</ele>
     <time>2018-08-11T15:48:23Z</time>

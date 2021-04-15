@@ -6,6 +6,7 @@
  <trk>
   <name>Mont_Brun</name>
   <cmt>2016-08-19</cmt>
+  <desc>0.5</desc>
   <trkseg>
    <trkpt lat="46.079893" lon="7.21227">
     <ele>841.1</ele>
@@ -3759,6 +3760,8 @@
     <ele>731.5</ele>
     <time>2016-08-19T14:54:07Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.075603" lon="7.161974">
     <ele>731.7</ele>
     <time>2016-08-19T14:54:08Z</time>
@@ -13235,6 +13238,8 @@
     <ele>1597.9</ele>
     <time>2016-08-19T16:41:48Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.067407" lon="7.196497">
     <ele>1597.6</ele>
     <time>2016-08-19T16:41:51Z</time>

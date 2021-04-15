@@ -6,6 +6,7 @@
  <trk>
   <name>Walenstadt_Weesen_Churfirsten_479</name>
   <cmt>2020-07-17</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="47.127229" lon="9.303238">
@@ -37748,6 +37749,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.139133" lon="9.221244">
     <ele>1561.0</ele>
     <time>2020-07-17T11:14:37Z</time>

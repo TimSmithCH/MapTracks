@@ -6,6 +6,7 @@
  <trk>
   <name>Chéserex</name>
   <cmt>2020-06-14</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331839" lon="6.194307">
@@ -7246,6 +7247,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.398704" lon="6.16714">
     <ele>536.4</ele>
     <time>2020-06-14T13:07:22Z</time>
@@ -13703,6 +13706,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.343336" lon="6.20413">
     <ele>380.6</ele>
     <time>2020-06-14T13:31:42Z</time>

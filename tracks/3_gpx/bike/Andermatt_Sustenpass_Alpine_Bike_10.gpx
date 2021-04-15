@@ -6,6 +6,7 @@
  <trk>
   <name>Andermatt_Sustenpass_Alpine_Bike_10</name>
   <cmt>2019-08-05</cmt>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.634661" lon="8.596489">
@@ -16079,6 +16080,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.696384" lon="8.595421">
     <ele>965.4</ele>
     <time>2019-08-05T12:41:37Z</time>
@@ -55844,6 +55847,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.728837" lon="8.448996">
     <ele>2243.4</ele>
     <time>2019-08-05T15:49:07Z</time>

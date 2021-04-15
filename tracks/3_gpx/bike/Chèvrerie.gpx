@@ -6,6 +6,7 @@
  <trk>
   <name>Chèvrerie</name>
   <cmt>2019-09-29</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331815" lon="6.194052">
@@ -20098,6 +20099,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.451311" lon="6.173258">
     <ele>1037.2</ele>
     <time>2019-09-29T16:35:02Z</time>

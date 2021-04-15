@@ -6,6 +6,7 @@
  <trk>
   <name>La_Givrine</name>
   <cmt>2020-11-14</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331805" lon="6.194247">
@@ -42838,6 +42839,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.432946" lon="6.134625">
     <ele>1436.6</ele>
     <time>2020-11-14T12:38:36Z</time>
@@ -47758,6 +47761,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.441653" lon="6.132093">
     <ele>1191.0</ele>
     <time>2020-11-14T12:59:42Z</time>
@@ -55078,6 +55083,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.45813" lon="6.120959">
     <ele>1312.6</ele>
     <time>2020-11-14T13:31:26Z</time>

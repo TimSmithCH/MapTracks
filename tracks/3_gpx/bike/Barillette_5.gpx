@@ -6,6 +6,7 @@
  <trk>
   <name>Barillette_5</name>
   <cmt>2020-05-21</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331863" lon="6.194458">
@@ -29638,6 +29639,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.430665" lon="6.128853">
     <ele>1449.6</ele>
     <time>2020-05-21T08:55:16Z</time>

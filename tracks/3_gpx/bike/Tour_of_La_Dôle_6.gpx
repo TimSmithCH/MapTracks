@@ -6,6 +6,7 @@
  <trk>
   <name>Tour_of_La_Dôle_6</name>
   <cmt>2020-05-17</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331887" lon="6.19445">
@@ -33618,6 +33619,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.430956" lon="6.091921">
     <ele>1433.6</ele>
     <time>2020-05-17T12:40:56Z</time>

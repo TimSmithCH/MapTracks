@@ -6,6 +6,7 @@
  <trk>
   <name>Roman_Road</name>
   <cmt>2015-06-27</cmt>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.435719" lon="6.167803">
@@ -7848,6 +7849,8 @@
     <ele>392.0</ele>
     <time>2015-06-27T11:33:37Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.341197" lon="6.197165">
     <ele>392.0</ele>
     <time>2015-06-27T11:33:38Z</time>

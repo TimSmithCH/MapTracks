@@ -6,6 +6,7 @@
  <trk>
   <name>Barillette_for_Alison_s_sanity_</name>
   <cmt>2020-04-04</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331759" lon="6.194302">
@@ -33239,6 +33240,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.429792" lon="6.125717">
     <ele>1530.2</ele>
     <time>2020-04-04T10:50:08Z</time>

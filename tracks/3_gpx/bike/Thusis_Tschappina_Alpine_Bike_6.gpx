@@ -6,6 +6,7 @@
  <trk>
   <name>Thusis_Tschappina_Alpine_Bike_6</name>
   <cmt>2019-07-18</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.697977" lon="9.44033">
@@ -17598,6 +17599,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.687763" lon="9.388353">
     <ele>1365.0</ele>
     <time>2019-07-18T15:14:58Z</time>

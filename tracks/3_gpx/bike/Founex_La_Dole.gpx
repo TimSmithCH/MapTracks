@@ -6,9 +6,11 @@
  <trk>
   <name>Founex_La_Dole</name>
   <cmt>2014-05-29</cmt>
+  <desc>1.0</desc>
   <type>CYCLING_SPORT</type>
   <trkseg>
    <trkpt lat="46.3314245" lon="6.1945364">
+    <ele>399.9</ele>
     <time>2014-05-29T11:40:25Z</time>
    </trkpt>
    <trkpt lat="46.3314245" lon="6.1945364">
@@ -8336,14 +8338,17 @@
     <time>2014-05-29T14:27:25Z</time>
    </trkpt>
    <trkpt lat="46.432602" lon="6.1329769">
+    <ele>1451.0</ele>
     <time>2014-05-29T14:28:11Z</time>
    </trkpt>
    <trkpt lat="46.432602" lon="6.1329769">
+    <ele>1451.0</ele>
     <time>2014-05-29T14:28:12Z</time>
    </trkpt>
   </trkseg>
   <trkseg>
    <trkpt lat="46.4328066" lon="6.1325998">
+    <ele>1443.8</ele>
     <time>2014-05-29T14:57:31Z</time>
    </trkpt>
    <trkpt lat="46.4328066" lon="6.1325998">
@@ -13535,6 +13540,7 @@
     <time>2014-05-29T16:06:39Z</time>
    </trkpt>
    <trkpt lat="46.3317995" lon="6.1942775">
+    <ele>415.0</ele>
     <time>2014-05-29T16:06:39Z</time>
    </trkpt>
   </trkseg>

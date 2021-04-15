@@ -6,6 +6,7 @@
  <trk>
   <name>Bonmont_1</name>
   <cmt>2020-12-15</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331778" lon="6.194351">
@@ -10414,6 +10415,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.40455" lon="6.135247">
     <ele>765.6</ele>
     <time>2020-12-15T17:06:33Z</time>
@@ -20259,6 +20262,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.342788" lon="6.203548">
     <ele>376.6</ele>
     <time>2020-12-15T17:39:19Z</time>

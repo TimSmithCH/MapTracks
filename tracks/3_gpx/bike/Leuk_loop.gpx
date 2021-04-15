@@ -6,9 +6,11 @@
  <trk>
   <name>Leuk_loop</name>
   <cmt>2014-06-01</cmt>
+  <desc>1.0</desc>
   <type>CYCLING_SPORT</type>
   <trkseg>
    <trkpt lat="46.3185294" lon="7.6048268">
+    <ele>752.0</ele>
     <time>2014-06-01T08:04:27Z</time>
    </trkpt>
    <trkpt lat="46.3185294" lon="7.6048268">
@@ -5680,6 +5682,7 @@
     <time>2014-06-01T10:17:45Z</time>
    </trkpt>
    <trkpt lat="46.339387" lon="7.5571747">
+    <ele>1718.0</ele>
     <time>2014-06-01T10:17:45Z</time>
    </trkpt>
   </trkseg>

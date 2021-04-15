@@ -6,6 +6,7 @@
  <trk>
   <name>Col_de_Baudichonne_8</name>
   <cmt>2018-05-11</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331705" lon="6.194638">
@@ -17518,6 +17519,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.405665" lon="6.125191">
     <ele>1019.8</ele>
     <time>2018-05-11T11:44:35Z</time>

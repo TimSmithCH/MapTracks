@@ -6,6 +6,7 @@
  <trk>
   <name>Eysins</name>
   <cmt>2020-05-19</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331639" lon="6.194212">
@@ -12218,6 +12219,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.38739" lon="6.166324">
     <ele>513.2</ele>
     <time>2020-05-19T05:40:49Z</time>
@@ -16948,6 +16951,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.345604" lon="6.199114">
     <ele>391.2</ele>
     <time>2020-05-19T06:00:24Z</time>

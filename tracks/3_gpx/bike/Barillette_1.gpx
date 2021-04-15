@@ -6,6 +6,7 @@
  <trk>
   <name>Barillette_1</name>
   <cmt>2018-06-09</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.33139" lon="6.194594">
@@ -35218,6 +35219,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.429459" lon="6.123854">
     <ele>1467.6</ele>
     <time>2018-06-09T17:57:03Z</time>

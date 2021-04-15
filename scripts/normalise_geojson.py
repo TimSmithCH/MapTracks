@@ -20,10 +20,16 @@ for mpath in filename:
     except:
         print("Error trying to parse {}".format(mpath))
 
-    # If there are 2 features (hence a track split into up and down) then change style of second one
-    if len(gj['features']) == 2:
-        gj['features'][1]['properties']['desc'] = "0.5"
-        print("Set opacity to 50% in second feature in filename {0:48s}".format(fname))
+    # If the track is split into segments, then make segment styles alternate
+    if len(gj['features']) > 1:
+        opacity_toggle = gj['features'][0]['properties']['desc']
+        for f in gj['features'][1:]:
+            if opacity_toggle == "1.0":
+                opacity_toggle = "0.5"
+            else:
+                opacity_toggle = "1.0"
+            f['properties']['desc'] = opacity_toggle
+        print("Set alternating opacity (100%/50%) in filename {0:48s}".format(fname))
         modified = True
 
     # Write out any changes

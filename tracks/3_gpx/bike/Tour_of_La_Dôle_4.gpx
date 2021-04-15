@@ -6,6 +6,7 @@
  <trk>
   <name>Tour_of_La_Dôle_4</name>
   <cmt>2018-08-26</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331812" lon="6.194746">
@@ -27656,6 +27657,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.431121" lon="6.091887">
     <ele>1444.6</ele>
     <time>2018-08-26T11:32:58Z</time>

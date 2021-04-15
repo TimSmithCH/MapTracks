@@ -6,6 +6,7 @@
  <trk>
   <name>Jura_Tour</name>
   <cmt>2020-04-10</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331652" lon="6.194805">
@@ -24373,6 +24374,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.43391" lon="6.147557">
     <ele>1089.2</ele>
     <time>2020-04-10T10:15:38Z</time>
