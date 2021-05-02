@@ -27,6 +27,7 @@
   border-color: #4CAF50;
   color: green;
   font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
   min-width: 72px;
   text-align: center;
 }
@@ -51,6 +52,10 @@ th {
   text-align: center;
   background-color: #2196F3;
   color: white;
+}
+th.clickable:hover {
+  background-color: white;
+  color: #2196F3;
 }
 td, th {
   border: 1px solid #ddd;
@@ -96,10 +101,10 @@ tr.climbed {
     </style>
   </head>
 
-  <body onload="filterSelection('all')">
+  <body onload="filterTable('all')">
     <script>
       var filter_prom, filter_flag;
-function filterSelection(c) {
+function filterTable(c) {
   // Loop through active buttons and set flags
   var btn_all = document.getElementById("all");
   if (btn_all == null) return;
@@ -170,19 +175,55 @@ function filterSelection(c) {
   out1.innerHTML = row_count;
   out2.innerHTML = row_climbed;
 }
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("tabAlps");
+  switching = true;
+  dir = "desc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
     </script>
 
     <div class="myBtnContainer">
-      <button class="btn active" onclick="filterSelection('all')" id="all"> Show all</button>
-      <button class="btn" onclick="filterSelection('prom')" id="prom"> Prominent</button>
-      <button class="btn" onclick="filterSelection('flag')" id="flag"> Swiss</button>
+      <button class="btn active" onclick="filterTable('all')" id="all"> Show all</button>
+      <button class="btn" onclick="filterTable('prom')" id="prom"> Prominent</button>
+      <button class="btn" onclick="filterTable('flag')" id="flag"> Swiss</button>
     </div>
 
     <table id="tabAlps">
       <tr class="header">
         <th style="width:30%;">Summit</th>
-        <th style="width:10%;">Height</th>
-        <th style="width:10%;">Promience</th>
+        <th style="width:10%;" class="clickable" onclick="sortTable(1)">Height</th>
+        <th style="width:10%;" class="clickable" onclick="sortTable(2)">Promience</th>
         <th style="width:10%;">Country</th>
       </tr>
       <tr class="climbed">
