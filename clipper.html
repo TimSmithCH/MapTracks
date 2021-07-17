@@ -104,7 +104,7 @@
             // Read file name from URl arguement or set default
             var datafile = processArg();
             if (!datafile) {
-                datafile = "tracks/gpx/ski/Col_de_la_Chaux.gpx";
+                datafile = "tracks/3_gpx/ski/Col_de_la_Chaux.gpx";
             }
             var basename = datafile.substr(datafile.lastIndexOf("/") + 1);
             var basename_no_ext = basename.substr(0, basename.lastIndexOf('.')) || basename;
@@ -154,6 +154,20 @@
                     });
 
                     console.log(data.features[0]);
+                    if (data.features[0].properties.coordTimes[0].length != 20){
+                      // Multi-segment tracks translate into nested arrays, need to concatenate them
+                      var temp_coordTimes = data.features[0].properties.coordTimes[0].concat();
+                      for(var j = 1; j < data.features[0].properties.coordTimes.length; j++){ 
+                        temp_coordTimes.push.apply(temp_coordTimes,data.features[0].properties.coordTimes[j]);
+                      }
+                      data.features[0].properties.coordTimes = temp_coordTimes;
+                      var temp_coordinates = data.features[0].geometry.coordinates[0].concat();
+                      for(var k = 1; k < data.features[0].geometry.coordinates.length; k++){ 
+                        temp_coordinates.push.apply(temp_coordinates,data.features[0].geometry.coordinates[k]);
+                      }
+                      data.features[0].geometry.coordinates = temp_coordinates;
+                      data.features[0].geometry.type = "LineString";
+                    }
                     // Use Turf to convert all the LineString points into individual points
                     var temp_data = turf.explode(data.features[0]);
                     console.log(data.features[0].geometry.coordinates.length);
