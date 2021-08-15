@@ -215,9 +215,9 @@
                   },
                   // color circles by height
                   "circle-color": [ "step", ["get", "height"],
-                      "#df80ff",
-                      3000, "#cc00cc",
-                      4000, "#600080"
+                      "#bb00ff",
+                      4200, "#cc00ff",
+                      4400, "#dd00ff"
                   ]
                 },
                 "filter": ["==", ["geometry-type"], "Point"]
@@ -351,6 +351,7 @@
             toggleLayer("Run", "tracks_run", "active");
             toggleLayer("Cmute", "tracks_commute", "active");
             toggleLayer("Canton", "cantons", "");
+            // Temporaryily remove markers (little used) and use placeholder to add EU mountains
             //toggleLayer("Marker", "markers", "");
             toggleLayer("4000s", "mountainsE", "");
             toggleLayer("Peaks", "mountainsH", "");
