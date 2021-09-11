@@ -242,7 +242,11 @@
                   },
                   "paint": {
                     "line-color": layer_props[layer]["colour"],
-                    "line-width": 3,
+                    "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
+                       0, ["^", 2, 3],
+                       8, ["^", 2, 1],
+                       24, ["^", 2, 8]
+                     ],
                     //"line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
                     "line-dasharray": ["match", ["get", "desc"], ["0.5" ], ["literal", [2, 2]], ["literal", [1]]]
                   }
