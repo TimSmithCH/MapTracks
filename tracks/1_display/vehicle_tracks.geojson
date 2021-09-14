@@ -121806,6 +121806,16 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Lukla"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": []
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "PLANE_La_Paz_Sucre",
         "type": "19"
       },
