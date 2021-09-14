@@ -25,6 +25,11 @@
       "source": "mapbox://tileset-source/timsmithch/commute_tracks",
       "minzoom": 0,
       "maxzoom": 13
+    },
+    "vehicle_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/vehicle_tracks",
+      "minzoom": 0,
+      "maxzoom": 13
     }
   }
 }

@@ -4,9 +4,10 @@ set -e   # Exit with nonzero exit code if anything fails
 
 # WIP directory disappears when empty in GitHub, so continually check it is there
 mkdir -pv tracks/2_geojson/wip
+mkdir -pv tracks/2_geojson/vehicle
 #mkdir -pv tracks/2_geojson/commute
 
-TYPES="bike hike run ski wip commute"
+TYPES="bike hike run ski wip commute vehicle"
 FORCE="false"
 
 for type in $TYPES
