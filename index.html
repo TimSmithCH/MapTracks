@@ -231,7 +231,7 @@
                 url: 'mapbox://timsmithch.all_tracks'
               });
               for (let layer of Object.keys(layer_props)) {
-                if (layer_props[layer]["source"] === 'tileset') {
+                if (layer_props[layer]["source"] === "tileset") {
                   map.addLayer({
                     'id': layer,
                     'type': 'line',
@@ -263,7 +263,7 @@
               //----------------------------------------------
               // ALTERNATIVELY Create a layer of routes of each type from geojson files
               for (let layer of Object.keys(layer_props)) {
-                if (layer_props[layer]["source"] === 'geojson') {
+                if (layer_props[layer]["source"] === "geojson") {
                 map.addSource(layer, {
                   type: 'geojson',
                   "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
