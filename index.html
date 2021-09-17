@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.0/mapbox-gl.css' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet'>
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -38,13 +38,13 @@
             });
 
             // Prepare layer properties object
-            var layer_props = { tracks_hike: { source_layer: "hike_tracks", colour: "#FF2020" },
-                                tracks_bike: { source_layer: "bike_tracks", colour: "#12B812" },
-                                tracks_ski: { source_layer: "ski_tracks",  colour: "#0048FF" },
-                                tracks_run: { source_layer: "run_tracks",  colour: "#B10DC9" },
-                                tracks_commute: { source_layer: "commute_tracks",  colour: "#006400" },
-                                tracks_vehicle: { source_layer: "vehicle_tracks",  colour: "#F39C12" } };
-
+            var layer_props = { tracks_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020" },
+                                tracks_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812" },
+                                tracks_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0048FF" },
+                                tracks_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9" },
+                                tracks_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400" },
+                                tracks_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#F39C12" },
+                                tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#F3DB12" } };
             
             // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
@@ -231,27 +231,29 @@
                 url: 'mapbox://timsmithch.all_tracks'
               });
               for (let layer of Object.keys(layer_props)) {
-                map.addLayer({
-                  'id': layer,
-                  'type': 'line',
-                  'source': 'tracks-all',
-                  "source-layer": layer_props[layer]["source_layer"],
-                  "layout": {
-                    "visibility": "visible",
-                    "line-join": "round",
-                    "line-cap": "round"
-                  },
-                  "paint": {
-                    "line-color": layer_props[layer]["colour"],
-                    "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
-                       0, ["^", 2, 3],
-                       8, ["^", 2, 1],
-                       24, ["^", 2, 8]
-                     ],
-                    //"line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
-                    "line-dasharray": ["match", ["get", "desc"], ["0.5" ], ["literal", [2, 2]], ["literal", [1]]]
-                  }
-                });
+                if (layer_props[layer]["source"] === 'tileset') {
+                  map.addLayer({
+                    'id': layer,
+                    'type': 'line',
+                    'source': 'tracks-all',
+                    "source-layer": layer_props[layer]["source_layer"],
+                    "layout": {
+                      "visibility": "visible",
+                      "line-join": "round",
+                      "line-cap": "round"
+                    },
+                    "paint": {
+                      "line-color": layer_props[layer]["colour"],
+                      "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
+                         0, ["^", 2, 3],
+                         8, ["^", 2, 1],
+                         24, ["^", 2, 8]
+                       ],
+                      //"line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
+                      "line-dasharray": ["match", ["get", "desc"], ["0.5" ], ["literal", [2, 2]], ["literal", [1]]]
+                    }
+                  });
+                }
               }
               // Option 1: change dash style, but currently not supported by MapBox as a data-driven style
               //      "line-dasharray": [2, 1],
@@ -259,25 +261,28 @@
               //      "line-color": ["case",["has","description"],["get","description"],layer_props[layer]["colour"],
 
               //----------------------------------------------
-              // Create a layer of WIP tracks
-              map.addSource('wip-tracks', {
-                type: 'geojson',
-                "data": "tracks/1_display/wip_tracks.geojson"
-              });
-              map.addLayer({
-                'id': 'wip',
-                'type': 'line',
-                'source': 'wip-tracks',
-                "layout": {
-                  "visibility": "visible",
-                  "line-join": "round",
-                  "line-cap": "round"
-                },
-                  "paint": {
-                  "line-color": "orange",
-                  "line-width": 3
-                }
-              });
+              // ALTERNATIVELY Create a layer of routes of each type from geojson files
+              for (let layer of Object.keys(layer_props)) {
+                if (layer_props[layer]["source"] === 'geojson') {
+                map.addSource(layer, {
+                  type: 'geojson',
+                  "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
+                });
+                map.addLayer({
+                  'id': layer,
+                  'type': 'line',
+                  'source': layer,
+                  "layout": {
+                    "visibility": "visible",
+                    "line-join": "round",
+                    "line-cap": "round"
+                  },
+                    "paint": {
+                    "line-color": layer_props[layer]["colour"],
+                    "line-width": 2
+                  }
+                });
+              }
             }
 
             map.on('styledata', function () {
