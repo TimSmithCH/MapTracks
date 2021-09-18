@@ -45,6 +45,7 @@
                                 tracks_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400" },
                                 tracks_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#F39C12" },
                                 tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#F3DB12" } };
+
             
             // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
@@ -225,7 +226,7 @@
               });
 
               //----------------------------------------------
-              // Create a layer of routes of each type from layers in MapBox tileset
+              // EITHER Create a layer of routes of each type from layers in MapBox tileset
               map.addSource('tracks-all', {
                 type: 'vector',
                 url: 'mapbox://timsmithch.all_tracks'
@@ -261,27 +262,28 @@
               //      "line-color": ["case",["has","description"],["get","description"],layer_props[layer]["colour"],
 
               //----------------------------------------------
-              // ALTERNATIVELY Create a layer of routes of each type from geojson files
+              // OR Create a layer of routes of each type from geojson files
               for (let layer of Object.keys(layer_props)) {
                 if (layer_props[layer]["source"] === "geojson") {
-                map.addSource(layer, {
-                  type: 'geojson',
-                  "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
-                });
-                map.addLayer({
-                  'id': layer,
-                  'type': 'line',
-                  'source': layer,
-                  "layout": {
-                    "visibility": "visible",
-                    "line-join": "round",
-                    "line-cap": "round"
-                  },
-                    "paint": {
-                    "line-color": layer_props[layer]["colour"],
-                    "line-width": 2
-                  }
-                });
+                  map.addSource(layer, {
+                    type: 'geojson',
+                    "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
+                  });
+                  map.addLayer({
+                    'id': layer,
+                    'type': 'line',
+                    'source': layer,
+                    "layout": {
+                      "visibility": "visible",
+                      "line-join": "round",
+                      "line-cap": "round"
+                    },
+                      "paint": {
+                      "line-color": layer_props[layer]["colour"],
+                      "line-width": 2
+                    }
+                  });
+                }
               }
             }
 
