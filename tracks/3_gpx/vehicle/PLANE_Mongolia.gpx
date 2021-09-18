@@ -1,23 +1,23 @@
-<?xml version="1.0"?>
-<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creator="GaiaGPS" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
-  <metadata>
-    <time>2017-07-02T09:33:53Z</time>
-  </metadata>
-  <trk>
-    <name>Mongolia</name>
-    <cmt>2017-07-02</cmt>
-    <desc>1.0</desc>
-    <type>4</type>
-    <trkseg>
-      <trkpt lat="47.8408175" lon="106.7700749">
-        <ele>0.0</ele>
-      </trkpt>
-      <trkpt lat="47.7113209" lon="96.5267372">
-        <ele>0.0</ele>
-      </trkpt>
-      <trkpt lat="48.9706758" lon="89.9678382">
-        <ele>0.0</ele>
-      </trkpt>
-    </trkseg>
-  </trk>
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+ <metadata>
+  <time>2017-07-02T09:33:53Z</time>
+ </metadata>
+ <trk>
+  <name>PLANE_Mongolia</name>
+  <cmt>2017-07-02</cmt>
+  <desc>1.0</desc>
+  <type>4</type>
+  <trkseg>
+   <trkpt lat="47.8408175" lon="106.7700749">
+    <ele>0.0</ele>
+   </trkpt>
+   <trkpt lat="47.7113209" lon="96.5267372">
+    <ele>0.0</ele>
+   </trkpt>
+   <trkpt lat="48.9706758" lon="89.9678382">
+    <ele>0.0</ele>
+   </trkpt>
+  </trkseg>
+ </trk>
 </gpx>
