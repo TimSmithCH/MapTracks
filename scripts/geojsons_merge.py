@@ -12,20 +12,26 @@ defaults = dict(outfile=sys.stdout)
 
 parser.set_defaults(**defaults)
 
-
-parser.add_argument('-i', '--files', help='Files to be merged')
+# Can be passed a directory or a list of files
+parser.add_argument('-d', '--directory', help='Directory containing files to be merged')
+parser.add_argument('-f', '--files', nargs='*', help='Files to be merged')
+# Only one output file!
 parser.add_argument('-o', '--outfile', dest='outfile', help='Outfile')
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    infiles = sorted(os.listdir(args.files))
+    if isinstance(args.files, list):
+        # Already supplied a list of files
+        infiles = args.files
+    else:
+        # Expand directory into a list of files
+        infiles = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(args.directory)) for f in fn]
     outfile = args.outfile
 
     outjson = dict(type='FeatureCollection', features=[])
 
     for infile in infiles:
-        jfile = os.path.join(args.files, infile)
-        with open(jfile) as f:
+        with open(infile) as f:
             try:
                 injson = load(f)
             except:
@@ -42,4 +48,5 @@ if __name__ == '__main__':
             outjson['features'] += injson
 
     with open(outfile, 'w') as wj:
-        dump(outjson, wj, indent=2, ensure_ascii=False)
+        dump(outjson, wj, ensure_ascii=False)
+        #dump(outjson, wj, indent=1, ensure_ascii=False)

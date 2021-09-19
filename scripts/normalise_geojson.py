@@ -37,5 +37,6 @@ for mpath in filename:
         #outfile = mpath + ".new"
         outfile = mpath
         with open(outfile, "w") as f:
-            json.dump(gj,f,indent=0)
+            json.dump(gj,f)
+            #json.dump(gj,f,indent=0)
             f.write('\n')
