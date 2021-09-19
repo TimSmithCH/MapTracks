@@ -143,27 +143,6 @@
               });
 
               //----------------------------------------------
-              // Add Markers for important waypoints on trips
-              map.addSource("markers", {
-                "type": "geojson",
-                "data": "features/track_markers.json"
-              });
-              map.addLayer({
-                "id": "markers",
-                "type": "symbol",
-                "source": "markers",
-                "layout": {
-                  "visibility": "none",
-                  "icon-image": "{icon}-15",   // Data-driven styling //
-                  "text-field": "{name}",   // Data-driven styling //
-                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                  "text-offset": [0, 0.6],
-                  "text-anchor": "top"
-                },
-                "filter": ["==", ["geometry-type"], "Point"]
-              });
-
-              //----------------------------------------------
               // Add Swiss mountains:
               //  0-3000m with prominence >300m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland
               //  3000-4000m with prominence >150m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland_above_3000_m
@@ -288,6 +267,7 @@
                     'type': 'symbol',
                     'source': layer,
                     "layout": {
+                      "visibility": "visible",
                       "icon-image": "{desc}-15",   // Data-driven styling //
                       "text-field": "{name}",   // Data-driven styling //
                       "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
@@ -377,8 +357,6 @@
             toggleLayer("Cmute", "tracks_commute", "active");
             toggleLayer("Mech", "tracks_vehicle", "active");
             toggleLayer("Canton", "cantons", "");
-            // Temporaryily remove markers (little used) and use placeholder to add EU mountains
-            //toggleLayer("Marker", "markers", "");
             toggleLayer("4000s", "mountainsE", "");
             toggleLayer("Peaks", "mountainsH", "");
             function toggleLayer(name, id, state) {
