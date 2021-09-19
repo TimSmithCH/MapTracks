@@ -45,7 +45,8 @@ do
       # explodecollections creates a feature per track segment
       ogr2ogr --config GPX_ELE_AS_25D YES -nlt LINESTRING -simplify 0.00002 -lco COORDINATE_PRECISION=7 -explodecollections -f GeoJSON $fileOUT $fileIN tracks
       waypts=$(grep -c "<wpt" $fileIN)
-      if [ "$waypts" -gt 0 ] ; then
+      if [[ $waypts -gt 0 ]]
+      then
         ogr2ogr --config GPX_ELE_AS_25D YES -lco COORDINATE_PRECISION=7 -f GeoJSON -append -update $fileOUT $fileIN waypoints
       fi
       python scripts/normalise_geojson.py -file $fileOUT
