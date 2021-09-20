@@ -24,11 +24,13 @@ for mpath in filename:
     if len(gj['features']) > 1:
         opacity_toggle = gj['features'][0]['properties']['desc']
         for f in gj['features'][1:]:
-            if opacity_toggle == "1.0":
-                opacity_toggle = "0.5"
-            else:
-                opacity_toggle = "1.0"
-            f['properties']['desc'] = opacity_toggle
+            # Dont touch the waypoints, only the tracks!
+            if f['geometry']['type'] == "LineString":
+                if opacity_toggle == "1.0":
+                    opacity_toggle = "0.5"
+                else:
+                    opacity_toggle = "1.0"
+                f['properties']['desc'] = opacity_toggle
         print("Set alternating opacity (100%/50%) in filename {0:48s}".format(fname))
         modified = True
 
