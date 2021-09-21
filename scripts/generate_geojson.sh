@@ -44,7 +44,9 @@ do
       # GPX_ELE_AS_25D allows GPX elevation data to be read in and passed out to GeoJSON as 2.5D (ie 3D where elevation unused in rendering)
       # explodecollections creates a feature per track segment
       ogr2ogr --config GPX_ELE_AS_25D YES -nlt LINESTRING -simplify 0.00002 -nln LayerName -lco COORDINATE_PRECISION=7 -explodecollections -f GeoJSON $fileOUT $fileIN tracks
-      waypts=$(grep -c "<wpt" $fileIN)
+      # Avoid grep stopping script on null match with "pipe true" ||: trick
+      # grep has exit code 1 for null match and this is usually an error status, but the pipe ensures the last command is asuccessful true
+      waypts=$(grep -c "<wpt" $fileIN||:)
       if [[ $waypts -gt 0 ]]
       then
         ogr2ogr --config GPX_ELE_AS_25D YES -nln LayerName -lco COORDINATE_PRECISION=7 -f GeoJSON -append -update $fileOUT $fileIN waypoints
