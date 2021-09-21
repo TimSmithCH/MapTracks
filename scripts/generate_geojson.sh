@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e   # Exit with nonzero exit code if anything fails
-#set -x   # Debug mode to echo commands
+set -x   # Debug mode to echo commands
 
 # WIP directory disappears when empty in GitHub, so continually check it is there
 mkdir -pv tracks/2_geojson/wip
