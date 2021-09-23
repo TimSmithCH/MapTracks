@@ -266,10 +266,11 @@
                     'id': layer + "-points",
                     'type': 'symbol',
                     'source': layer,
-                    "minzoom": 10,
+                    "minzoom": 8,
                     "layout": {
                       "visibility": "visible",
                       "icon-image": "{desc}-15",   // Data-driven styling //
+                      "iicon-allow-overlap": true,
                       "text-field": "{name}",   // Data-driven styling //
                       "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
                       "text-offset": [0, 0.6],
