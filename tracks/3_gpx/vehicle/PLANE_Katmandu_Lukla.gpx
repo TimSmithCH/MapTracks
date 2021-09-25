@@ -2,7 +2,7 @@
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
  <trk>
   <name>PLANE_Katmandu_Lukla</name>
-  <cmt>1991-11-11</cmt>
+  <cmt>1991-10-28</cmt>
   <desc>1.0</desc>
   <trkseg>
    <trkpt lat="27.696000771336074" lon="85.35908245004634">
@@ -318,9 +318,59 @@
   <name>Lukla Airfield</name>
   <desc>airfield</desc>
  </wpt>
+ <wpt lat="27.7401113" lon="86.7125495">
+  <ele>0</ele>
+  <name>Phakding</name>
+  <desc>lodging</desc>
+ </wpt>
+ <wpt lat="27.8053861" lon="86.7123220">
+  <ele>0</ele>
+  <name>Namche Bazaar</name>
+  <desc>lodging</desc>
+ </wpt>
  <wpt lat="27.8372561" lon="86.7665313">
   <ele>0</ele>
   <name>Tengboche Monastery</name>
-  <desc>attraction</desc>
+  <desc>campsite</desc>
+ </wpt>
+ <wpt lat="27.8580118" lon="86.7800278">
+  <ele>0</ele>
+  <name>Pangboche</name>
+  <desc>lodging</desc>
+ </wpt>
+ <wpt lat="27.8953483" lon="86.8205828">
+  <ele>0</ele>
+  <name>Pheriche</name>
+  <desc>lodging</desc>
+ </wpt>
+ <wpt lat="27.9488773" lon="86.8104542">
+  <ele>0</ele>
+  <name>Lobuche</name>
+  <desc>lodging</desc>
+ </wpt>
+ <wpt lat="27.99648154" lon="86.83004967">
+  <ele>0</ele>
+  <name>Kala Patthar</name>
+  <desc>mountain</desc>
+ </wpt>
+ <wpt lat="27.89253996" lon="86.83115108">
+  <ele>0</ele>
+  <name>Dingboche</name>
+  <desc>campsite</desc>
+ </wpt>
+ <wpt lat="27.90453671" lon="86.87110690">
+  <ele>0</ele>
+  <name>Chunkhung</name>
+  <desc>campsite</desc>
+ </wpt>
+ <wpt lat="27.902553" lon="86.939969">
+  <ele>0</ele>
+  <name>Imja Tse base camp</name>
+  <desc>campsite</desc>
+ </wpt>
+ <wpt lat="27.92443335" lon="86.93665197">
+  <ele>0</ele>
+  <name>Imja Tse</name>
+  <desc>mountain</desc>
  </wpt>
 </gpx>
