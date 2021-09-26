@@ -275,8 +275,10 @@
                       "text-allow-overlap": true,   // Allow collisions //
                       "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
                       "text-offset": [0, 0.6],
-                      "text-anchor": "top"
-                    },
+                      "text-anchor": "top",
+                      "text-size": [ 'interpolate', ['exponential', 2], ['zoom'],
+                         6,8,10,15,
+                    }
                     "filter": ["==", ["geometry-type"], "Point"]
                   });
                 }
@@ -371,9 +373,11 @@
               link.onclick = function(e) {
                 e.preventDefault();
                 e.stopPropagation();
+                id-mark = id + "-points"
                 var visibility = map.getLayoutProperty(id, 'visibility');
                 if (visibility === 'visible') {
                   map.setLayoutProperty(id, 'visibility', 'none');
+                  map.setLayoutProperty(id-mark, 'visibility', 'none');
                   this.className = '';
                   if (name === 'Peaks') {
                     var s1 = document.getElementById('sliders');
@@ -386,6 +390,7 @@
                 } else {
                   this.className = 'active';
                   map.setLayoutProperty(id, 'visibility', 'visible');
+                  map.setLayoutProperty(id-mark, 'visibility', 'visible');
                   if (name === 'Peaks') {
                     var s1 = document.getElementById('sliders');
                     s1.style.display = "block";
