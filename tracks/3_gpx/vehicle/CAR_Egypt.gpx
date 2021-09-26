@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>CAR_Egypt</name>
+    <cmt>1992-10-10</cmt>
+    <desc>1.0</desc>
+  </trk>
+  <wpt lat="25.74018" lon="32.60197">
+    <name>Valley of the Kings</name>
+    <desc>castle</desc>
+  </wpt>
+  <wpt lat="25.71872" lon="32.65747">
+    <name>Karnak Temple</name>
+    <desc>castle</desc>
+  </wpt>
+  <wpt lat="29.97848" lon="31.13246">
+    <name>Giza Pyramids</name>
+    <desc>castle</desc>
+  </wpt>
+</gpx>

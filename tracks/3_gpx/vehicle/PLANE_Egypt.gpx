@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>PLANE_Egypt</name>
+    <cmt>1992-10-10</cmt>
+    <desc>1.0</desc>
+    <trkseg>
+      <trkpt lat="25.67455" lon="32.70035">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="30.11508" lon="31.39821">
+        <ele>0.0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+  <wpt lat="30.11508" lon="31.39821">
+    <name>Cairo International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="25.67455" lon="32.70035">
+    <name>Luxor International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+</gpx>
