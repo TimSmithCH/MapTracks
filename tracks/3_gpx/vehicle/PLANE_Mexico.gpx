@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>PLANE_Mexico</name>
+    <cmt>1993-11-27</cmt>
+    <desc>1.0</desc>
+    <trkseg>
+      <trkpt lat="19.436136891" lon="-99.072058506">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="16.999392095" lon="-96.722140579">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="19.436136891" lon="-99.072058506">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="17.996009765" lon="-92.817260466">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="20.934052819" lon="-89.660335514">
+        <ele>0.0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+  <wpt lat="19.436136891" lon="-99.072058506">
+    <name>Mexico International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="16.999392095" lon="-96.722140579">
+    <name>Oaxaca Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="17.996009765" lon="-92.817260466">
+    <name>Villahermosa Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="20.934052819" lon="-89.660335514">
+    <name>Merida Airport</name>
+    <desc>airport</desc>
+  </wpt>
+</gpx>
