@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+ <metadata>
+  <time>1990-12-29T09:33:53Z</time>
+ </metadata>
+ <trk>
+  <name>PLANE_Chile</name>
+  <cmt>1990-12-29</cmt>
+  <desc>1.0</desc>
+  <type>4</type>
+  <trkseg>
+   <trkpt lat=lat="-33.39036340720132" lon="-70.80273593805379">
+    <ele>474.512</ele>
+   </trkpt>
+   <trkpt lat="-41.45464025304621" lon="-72.9177874759028">
+    <ele>116.034</ele>
+   </trkpt>
+   <trkpt lat="-53.0064177456913" lon="-70.85584267457146">
+    <ele>39.896</ele>
+   </trkpt>
+  </trkseg>
+ </trk>
+</gpx>
