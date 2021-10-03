@@ -28,11 +28,11 @@
       <script>
             // Parse arguements pased on URL
             const urlSearchParams = new URLSearchParams(window.location.search);
-            var z = urlSearchParams.get('zoom');
-            if (!z) {
+            var zoomlvl = urlSearchParams.get('zoom');
+            if (!zoomlvl) {
               var zoomlvl = 11;
             } else {
-              console.log("Set Zoom: ",z);
+              console.log("Set Zoom: ",zoomlvl);
             }
             var la = urlSearchParams.get('lat');
             if (!la) {
