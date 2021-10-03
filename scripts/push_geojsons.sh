@@ -4,8 +4,8 @@
 
 # Update MapBox tileset?
 if ! git diff --quiet --exit-code tracks/1_display; then
-#  echo "generate"
-  echo "=== NOT Signalling to generate TileSet ===" 1>&2
+  echo "generate"
+  echo "=== Signalling to generate TileSet ===" 1>&2
 else
   echo "stop"
 fi
