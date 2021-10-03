@@ -26,16 +26,26 @@
       </div>
 
       <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
-            var zoomlvl = 11;
-            var dimension = 2;
-            var basechange = 0;
-            var map = new mapboxgl.Map({
-              container: 'map', // container id
-              style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
-              center: [7.2989238, 46.032874], // starting position
-              zoom: zoomlvl // starting zoom
-            });
+            // Parse arguements pased on URL
+            const urlSearchParams = new URLSearchParams(window.location.search);
+            var z = urlSearchParams.get('zoom');
+            if (!z) {
+              var zoomlvl = 11;
+            } else {
+              console.log("Set Zoom: ",z);
+            }
+            var la = urlSearchParams.get('lat');
+            if (!la) {
+              la = 46.032874;
+            } else {
+              console.log("Set centre Latitude: ",la);
+            }
+            var lo = urlSearchParams.get('lon');
+            if (!lo) {
+              lo = 7.2989238;
+            } else {
+              console.log("Set centre Longitude: ",lo);
+            }
 
             // Prepare layer properties object
             var layer_props = { tracks_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020" },
@@ -43,10 +53,20 @@
                                 tracks_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0048FF" },
                                 tracks_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9" },
                                 tracks_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400" },
-                                tracks_vehicle: { source_layer: "vehicle_tracks", source: "tileset", colour: "#F39C12" },
+                                tracks_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#F39C12" },
                                 tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#F3DB12" } };
 
             
+            // Prepare the Mapbox object
+            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
+              //center: [7.2989238, 46.032874], // starting position
+              center: [lo, la], // starting position
+              zoom: zoomlvl // starting zoom
+            });
+
             // Add zoom, rotation and full_screen controls to the map
             map.addControl(new mapboxgl.NavigationControl());
             map.addControl(new mapboxgl.FullscreenControl());
@@ -64,6 +84,8 @@
             }
 
             // Add overlay data layers on demand (after load or style change)
+            var dimension = 2;
+            var basechange = 0;
             function addDataLayers() {
               basechange = 0
               // For 3D add terrain and sky

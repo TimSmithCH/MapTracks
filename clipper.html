@@ -75,11 +75,19 @@
                 return low;
             }
             function processArg() {
+                const urlSearchParams = new URLSearchParams(window.location.search);
+                var z = urlSearchParams.get('file');
+                if (!z) {
+                    console.log("Default Zoom");
+                } else {
+                    console.log("Set Zoom", z);
+                }
                 var parameters = location.search.substring(1).split("&");
                 var temp = parameters[0].split("=");
                 var filename = "";
                 if (temp[0] == "file") {
                     filename = unescape(temp[1]);
+                    console.log(filename);
                 }
                 return filename;
             }
