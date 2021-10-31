@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" creator="GaiaGPS" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>Pakistan Flights 1</name>
+    <cmt>1991-09-01</cmt>
+    <desc>1.0</desc>
+    <type>4</type>
+    <trkseg>
+      <trkpt lat="33.554378658431034" lon="72.83360802923971">
+        <ele>542.2257349112438</ele>
+        <time>2021-10-31T17:01:15Z</time>
+      </trkpt>
+      <trkpt lat="33.98925542653383" lon="71.51879664157676">
+        <ele>361.3195355217895</ele>
+        <time>2021-10-31T17:01:15Z</time>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="33.98925542653383" lon="71.51879664157676">
+        <ele>361.3195355217895</ele>
+        <time>2021-10-31T17:01:15Z</time>
+      </trkpt>
+      <trkpt lat="35.88132509638527" lon="71.7986541367757">
+        <ele>1486.5038662934085</ele>
+        <time>2021-10-31T17:01:15Z</time>
+      </trkpt>
+    </trkseg>
+    <trkseg>
+      <trkpt lat="35.91861722392302" lon="74.3335295303811">
+        <ele>1454.8875348761749</ele>
+        <time>2021-10-31T17:02:43Z</time>
+      </trkpt>
+      <trkpt lat="33.55523345555248" lon="72.83394261929598">
+        <ele>544.8065705344648</ele>
+        <time>2021-10-31T17:02:43Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+  <wpt lat="33.554378658431034" lon="72.83360802923971">
+    <ele>0</ele>
+    <name>Islamabad International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="33.98925542653383" lon="71.51879664157676">
+    <ele>0</ele>
+    <name>Peshawar International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="35.88132509638527" lon="71.7986541367757">
+    <ele>0</ele>
+    <name>Chitral Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="35.91861722392302" lon="74.3335295303811">
+    <ele>0</ele>
+    <name>Gilgit Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="36.27928" lon="72.51531">
+    <ele>0</ele>
+    <name>Mastuj</name>
+    <desc>lodging</desc>
+  </wpt>
+  <wpt lat="36.57807" lon="72.82504">
+    <ele>0</ele>
+    <name>Power</name>
+    <desc>cafe</desc>
+  </wpt>
+  <wpt lat="36.58553" lon="72.86129">
+    <ele>0</ele>
+    <name>Sholkuch</name>
+    <desc>campsite</desc>
+  </wpt>
+
+  <wpt lat="36.50356" lon="73.90473">
+    <ele>0</ele>
+    <name>Immit</name>
+    <desc>campsite</desc>
+  </wpt>
+</gpx>
