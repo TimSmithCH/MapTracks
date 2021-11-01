@@ -69,6 +69,7 @@ jobs:
       - name: Install MapBox tileset commands
         run: |
           brew install gdal
+          pip install rasterio
           pip install mapbox-tilesets
         #--- Next Step
       - name: Build MapBox tileset
