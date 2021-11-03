@@ -56,7 +56,7 @@ jobs:
       - name: Set up Python 3.x
         uses: actions/setup-python@v2
         with:
-          python-version: '3.x'
+          python-version: '3.9'
         #--- Next Step
       - name: Check out repository
         uses: actions/checkout@v2
@@ -68,8 +68,8 @@ jobs:
         #--- Next Step
       - name: Install MapBox tileset commands
         run: |
-          brew install gdal
           pip install rasterio
+          brew install gdal
           pip install mapbox-tilesets
         #--- Next Step
       - name: Build MapBox tileset
