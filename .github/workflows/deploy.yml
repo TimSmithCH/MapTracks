@@ -53,6 +53,9 @@ jobs:
     runs-on: macos-latest
     steps:
         #--- Next Step
+        #--- Temporarily specify a version to avoid icking up Python 3.10, since rasterio and pyrsistent
+        #--- Check https://www.wheelodex.org/projects/rasterio/ to see if there is a 3.10 version
+        #--- CHeck https://www.wheelodex.org/projects/pyrsistent/ to see if there is a 3.10 version
       - name: Set up Python 3.x
         uses: actions/setup-python@v2
         with:
@@ -68,7 +71,6 @@ jobs:
         #--- Next Step
       - name: Install MapBox tileset commands
         run: |
-          pip install rasterio
           brew install gdal
           pip install mapbox-tilesets
         #--- Next Step
