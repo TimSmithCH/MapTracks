@@ -53,7 +53,7 @@ jobs:
     runs-on: macos-latest
     steps:
         #--- Next Step
-        #--- Temporarily specify a version to avoid icking up Python 3.10, since rasterio and pyrsistent
+        #--- Temporarily specify a version to avoid picking up Python 3.10, since rasterio and pyrsistent arent ready yet
         #--- Check https://www.wheelodex.org/projects/rasterio/ to see if there is a 3.10 version
         #--- CHeck https://www.wheelodex.org/projects/pyrsistent/ to see if there is a 3.10 version
       - name: Set up Python 3.x
