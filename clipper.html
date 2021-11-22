@@ -118,7 +118,8 @@
             var basename_no_ext = basename.substr(0, basename.lastIndexOf('.')) || basename;
             var outfile = basename_no_ext + "_trimmed.gpx";
             var splitfile = basename_no_ext + "_new.geojson";
-            var clipsplit = "SPLIT";  // Clip points or Split tracks
+            // var clipsplit = "SPLIT";  // Clip points or Split tracks
+            var clipsplit = "CLIP";  // Clip points or Split tracks
             console.log(datafile,outfile,splitfile);
 
             //console.log("Initialising map");
