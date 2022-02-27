@@ -195,10 +195,27 @@
                       data.features[0].geometry.coordinates = temp_coordinates;
                       data.features[0].geometry.type = "LineString";
                     }
+                    // Drop everything but coordinates and times in order to save memory
+                    delete(data.features[0].properties.heartRates);
+
                     // Use Turf to convert all the LineString points into individual points
-                    var temp_data = turf.explode(data.features[0]);
+//                    if (data.features[0].geometry.coordinates.length < 3000) {
+                        var temp_data = turf.explode(data.features[0]);
+//                    } else {
+//                        console.log("DANGER: too many points to plot, truncating to avoid crashing");
+//                        console.log(data.features[0].geometry.coordinates.length);
+//                        var temp_data = turf.explode(data.features[0]);
+//                        console.log(temp_data);
+//                        temp_data.features.length = 13000;
+                        //console.log("DANGER: too many points to plot, simplifying to avoid crashing");
+                        //console.log(data.features[0].geometry.coordinates.length);
+                        //var options = {tolerance: 0.0001, highQuality: false};
+                        //var simplified = turf.simplify(data, options);
+                        //console.log(simplified.features[0].geometry.coordinates.length);
+                        //var temp_data = turf.explode(simplified.features[0]);
+//                    }
                     console.log(data.features[0].geometry.coordinates.length);
-                    // But the exploded object has lots of pointers/prototypes, so cant set any values in it. Clone to make a editable copy
+                    // But the exploded object has lots of pointers/prototypes, so cant set any values in it. Clone to make an editable copy
                     var point_data = deepCopy(temp_data);
                     // Name each point by its position in array
                     for(var i = 0; i < point_data.features.length; i++){ 
