@@ -1,0 +1,167 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.86694444444444", 
+          "45.9369444444444", 
+          "4634"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 4634, 
+        "prominence": 2165, 
+        "name": "Monte Rosa (Dufourspitze)", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.12611111111111", 
+          "46.5372222222222", 
+          "4274"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 4274, 
+        "prominence": 2280, 
+        "name": "Finsteraarhorn", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.90805555555556", 
+          "46.3822222222222", 
+          "4049"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 4049, 
+        "prominence": 2234, 
+        "name": "Piz Bernina", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.42111111111111", 
+          "46.6433333333333", 
+          "3630"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3630, 
+        "prominence": 1466, 
+        "name": "Dammastock", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.91472222222222", 
+          "46.8111111111111", 
+          "3614"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3614, 
+        "prominence": 1570, 
+        "name": "T\u00f6di (Piz Russein)", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.04027777777778", 
+          "46.4936111111111", 
+          "3402"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3402, 
+        "prominence": 1337, 
+        "name": "Rheinwaldhorn", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.34305555555556", 
+          "46.8983333333333", 
+          "3247"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3247, 
+        "prominence": 843, 
+        "name": "Ringelspitz/Piz Barghis", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.43777777777778", 
+          "46.7719444444444", 
+          "3238"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3238, 
+        "prominence": 978, 
+        "name": "Titlis", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.18888888888889", 
+          "46.3038888888889", 
+          "3210"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3210, 
+        "prominence": 968, 
+        "name": "Diablerets", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    }
+  ]
+}
