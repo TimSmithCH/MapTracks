@@ -162,6 +162,278 @@
         "icon": "mountain",
         "climbed": "no"
       }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.42583333333333", 
+          "46.7775", 
+          "2901"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2901, 
+        "prominence": 0, 
+        "name": "Rotst\u00f6ckli", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.94583333333333", 
+          "46.9672222222222", 
+          "2802"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2802, 
+        "prominence": 367, 
+        "name": "B\u00f6s Fulen", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.34333333333333", 
+          "47.2494444444444", 
+          "2502"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2502, 
+        "prominence": 2015, 
+        "name": "S\u00e4ntis", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.14833333333333", 
+          "46.5286111111111", 
+          "2389"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2389, 
+        "prominence": 1110, 
+        "name": "Vanil Noir", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.04694444444444", 
+          "46.7869444444444", 
+          "2350"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2350, 
+        "prominence": 1342, 
+        "name": "Brienzer Rothorn", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.57777777777778", 
+          "47.0841666666667", 
+          "1580"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1580, 
+        "prominence": 780, 
+        "name": "Rossberg (Wildspitz)", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.03527777777778", 
+          "47.1219444444444", 
+          "1552"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1552, 
+        "prominence": 0, 
+        "name": "Chasseral Ouest", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.45055555555556", 
+          "47.2419444444444", 
+          "1445"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1445, 
+        "prominence": 618, 
+        "name": "Hasenmatt", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.42916666666667", 
+          "47.3083333333333", 
+          "1302"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1302, 
+        "prominence": 533, 
+        "name": "Mont Raimeux", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.97958055555556", 
+          "47.3256583333333", 
+          "1292"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1292, 
+        "prominence": 0, 
+        "name": "Schnebelhorn", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.71055555555556", 
+          "47.3725", 
+          "1169"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1169, 
+        "prominence": 0, 
+        "name": "Hinteri Egg", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.96666666666667", 
+          "47.3833333333333", 
+          "991"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 991, 
+        "prominence": 0, 
+        "name": "Hohgrat (Groot)", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.56666666666667", 
+          "47.7666666666667", 
+          "991"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 991, 
+        "prominence": 0, 
+        "name": "Hagen (Randen)", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.96456111111111", 
+          "47.4227833333333", 
+          "908"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 908, 
+        "prominence": 0, 
+        "name": "Geissfluegrat", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.68", 
+          "47.5730555555556", 
+          "522"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 522, 
+        "prominence": 0, 
+        "name": "St. Chrischona", 
+        "icon": "mountain"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "6.30888888888889", 
+          "46.2480555555556", 
+          "516"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 516, 
+        "prominence": 0, 
+        "name": "Les Arales", 
+        "icon": "mountain"
+      }
     }
   ]
 }
