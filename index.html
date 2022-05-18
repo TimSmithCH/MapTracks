@@ -401,6 +401,21 @@
               popup.remove();
             });
 
+            // Create popup on hover for Canton mountains
+            map.on('mouseenter', "cantons-points", function(e) {
+              // Change the cursor style as a UI indicator
+              map.getCanvas().style.cursor = 'pointer';
+              // Populate the popup and set its coordinates based on the feature found
+              var height = e.features[0].properties.height
+              popup.setLngLat(e.lngLat)
+                .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
+                  .addTo(map);
+            });
+            map.on('mouseleave', "cantons-points", function() {
+              map.getCanvas().style.cursor = '';
+              popup.remove();
+            });
+
             //----------------------------------------------
             // Create the menu buttons and add click actions
             toggleLayer("Hike", "tracks_hike", "active");
