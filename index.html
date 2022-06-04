@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet'>
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -30,19 +30,19 @@
             const urlSearchParams = new URLSearchParams(window.location.search);
             var zoomlvl = urlSearchParams.get('zoom');
             if (!zoomlvl) {
-              var zoomlvl = 11;
+              var zoomlvl = 7.6;
             } else {
               console.log("Set Zoom: ",zoomlvl);
             }
             var la = urlSearchParams.get('lat');
             if (!la) {
-              la = 46.032874;
+              la = 46.66;
             } else {
               console.log("Set centre Latitude: ",la);
             }
             var lo = urlSearchParams.get('lon');
             if (!lo) {
-              lo = 7.2989238;
+              lo = 8.23;
             } else {
               console.log("Set centre Longitude: ",lo);
             }
@@ -62,9 +62,10 @@
             var map = new mapboxgl.Map({
               container: 'map', // container id
               style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
-              //center: [7.2989238, 46.032874], // starting position
+              //center: [7.2989238, 46.032874], // starting position Fionnay
               center: [lo, la], // starting position
-              zoom: zoomlvl // starting zoom
+              zoom: zoomlvl, // starting zoom
+              projection: 'naturalEarth' // starting projection
             });
 
             // Add zoom, rotation and full_screen controls to the map
