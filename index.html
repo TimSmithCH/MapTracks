@@ -20,6 +20,7 @@
     <!-- Navigation control based on: https://www.mapbox.com/mapbox-gl-js/example/navigation/ -->
     <!-- Popups based on: https://www.mapbox.com/mapbox-gl-js/example/popup-on-hover/ -->
     <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
+    <!-- Can pass command line arguements like index.html?zoom=12.15&lat=46.05&lon=7.24&layer=Bike / -->
     <main class="main">
       <div id='map' class="main-content">
         <nav id="menu"></nav>
@@ -48,13 +49,22 @@
             }
 
             // Prepare layer properties object
-            var layer_props = { tracks_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020" },
-                                tracks_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812" },
-                                tracks_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0048FF" },
-                                tracks_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9" },
-                                tracks_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400" },
-                                tracks_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#F39C12" },
-                                tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#F3DB12" } };
+            var layer_props = { tracks_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020", init_state: "active", text: "Hike" },
+                                tracks_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812", init_state: "active", text: "Bike" },
+                                tracks_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0048FF", init_state: "active", text: "Ski" },
+                                tracks_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9", init_state: "active", text: "Run" },
+                                tracks_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400", init_state: "active", text: "Cmute" },
+                                tracks_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#F39C12", init_state: "active", text: "Mech" },
+                                tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#F3DB12", init_state: "active", text: "WIP" } };
+            var show_only = urlSearchParams.get('layer');
+            if (show_only) {
+              for (let layer of Object.keys(layer_props)) {
+                if (layer_props[layer]["text"] !== show_only) {
+                  layer_props[layer]["init_state"] = "";
+                }
+              }
+              console.log("Show single layer: ",show_only);
+            }
 
             
             // Prepare the Mapbox object
@@ -262,13 +272,18 @@
               });
               for (let layer of Object.keys(layer_props)) {
                 if (layer_props[layer]["source"] === "tileset") {
+                  if (layer_props[layer]["init_state"] === "active") {
+                    var visi = "visible";
+                  } else {
+                    var visi = "none";
+                  }
                   map.addLayer({
                     'id': layer,
                     'type': 'line',
                     'source': 'tracks-all',
                     "source-layer": layer_props[layer]["source_layer"],
                     "layout": {
-                      "visibility": "visible",
+                      "visibility": visi,
                       "line-join": "round",
                       "line-cap": "round"
                     },
@@ -298,12 +313,17 @@
                     type: 'geojson',
                     "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
                   });
+                  if (layer_props[layer]["init_state"] === "active") {
+                    var visi = "visible";
+                  } else {
+                    var visi = "none";
+                  }
                   map.addLayer({
                     'id': layer,
                     'type': 'line',
                     'source': layer,
                     "layout": {
-                      "visibility": "visible",
+                      "visibility": visi,
                       "line-join": "round",
                       "line-cap": "round"
                     },
@@ -419,12 +439,12 @@
 
             //----------------------------------------------
             // Create the menu buttons and add click actions
-            toggleLayer("Hike", "tracks_hike", "active");
-            toggleLayer("Bike", "tracks_bike", "active");
-            toggleLayer("Ski", "tracks_ski", "active");
-            toggleLayer("Run", "tracks_run", "active");
-            toggleLayer("Cmute", "tracks_commute", "active");
-            toggleLayer("Mech", "tracks_vehicle", "active");
+            toggleLayer("Hike", "tracks_hike", layer_props["tracks_hike"]["init_state"]);
+            toggleLayer("Bike", "tracks_bike", layer_props["tracks_bike"]["init_state"]);
+            toggleLayer("Ski", "tracks_ski", layer_props["tracks_ski"]["init_state"]);
+            toggleLayer("Run", "tracks_run", layer_props["tracks_run"]["init_state"]);
+            toggleLayer("Cmute", "tracks_commute", layer_props["tracks_commute"]["init_state"]);
+            toggleLayer("Mech", "tracks_vehicle", layer_props["tracks_vehicle"]["init_state"]);
             toggleLayer("Canton", "cantons", "");
             toggleLayer("4000s", "mountainsE", "");
             toggleLayer("Peaks", "mountainsH", "");
