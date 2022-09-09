@@ -55,7 +55,7 @@
                                 tracks_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9", init_state: "active", text: "Run" },
                                 tracks_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400", init_state: "active", text: "Cmute" },
                                 tracks_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#F39C12", init_state: "active", text: "Mech" },
-                                tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#F3DB12", init_state: "active", text: "WIP" } };
+                                tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" } };
             var show_only = urlSearchParams.get('layer');
             if (show_only) {
               for (let layer of Object.keys(layer_props)) {
