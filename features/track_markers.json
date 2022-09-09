@@ -225,6 +225,51 @@
                 "name": "Lenk",
                 "icon": "castle"
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    8.915659,
+                    47.106539, 
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Innerthal",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.172336,
+                    46.919086,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Elm",
+                "icon": "castle"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    9.208240,
+                    46.774836,
+                    0
+                ]
+            },
+            "properties": {
+                "name": "Ilanz",
+                "icon": "castle"
+            }
         }
     ]
 }
