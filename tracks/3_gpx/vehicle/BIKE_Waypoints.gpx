@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
   <trk>
-    <name>BIKE_Alpine_Bike</name>
+    <name>BIKE_Waypoints</name>
     <cmt>2015-07-28</cmt>
     <desc>1.0</desc>
   </trk>
@@ -119,6 +119,18 @@
   </wpt>
   <wpt lat="46.671021236" lon="7.285409802">
     <name>Schwarzsee</name>
+    <desc>lodging</desc>
+  </wpt>
+  <wpt lat="47.106543" lon="8.915656">
+    <name>Innerthal</name>
+    <desc>lodging</desc>
+  </wpt>
+  <wpt lat="46.919047" lon="9.172311">
+    <name>Elm</name>
+    <desc>lodging</desc>
+  </wpt>
+  <wpt lat="46.774850" lon="9.208239">
+    <name>Ilanz</name>
     <desc>lodging</desc>
   </wpt>
 </gpx>

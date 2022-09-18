@@ -49,6 +49,7 @@ do
       waypts=$(grep -c "<wpt" $fileIN||:)
       if [[ $waypts -gt 0 ]]
       then
+        printf "\n  Appending waypoints to GEOJSON: $fileOUT \n  "
         ogr2ogr --config GPX_ELE_AS_25D YES -nln LayerName -lco COORDINATE_PRECISION=7 -f GeoJSON -append -update $fileOUT $fileIN waypoints
       fi
       python scripts/normalise_geojson.py -file $fileOUT
