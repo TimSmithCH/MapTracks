@@ -16,7 +16,11 @@
         "prominence": 4697, 
         "name": "Mont Blanc", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "frit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -34,7 +38,11 @@
         "prominence": 18, 
         "name": "Mont Blanc de Courmayeur", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -52,7 +60,11 @@
         "prominence": 2165, 
         "name": "Monte Rosa (Dufourspitze)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -70,6 +82,7 @@
         "prominence": 94, 
         "name": "Monte Rosa (Nordend)", 
         "icon": "mountain",
+        "country": "chit",
         "climbed": "no",
         "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/nordend-1301/randonnee-a-ski/de-la-monte-rosa-huette-via-le-silbersattel-3645/",
         "means": "ski",
@@ -91,7 +104,11 @@
         "prominence": 110, 
         "name": "Zumsteinspitze", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -109,7 +126,11 @@
         "prominence": 102, 
         "name": "Signalkuppe", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -127,6 +148,7 @@
         "prominence": 1046, 
         "name": "Dom", 
         "icon": "mountain",
+        "country": "ch",
         "climbed": "no",
         "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/7758/ski_tour/2728",
         "means": "ski",
@@ -146,9 +168,13 @@
       "properties": {
         "height": 4527, 
         "prominence": 376, 
-        "name": "Lyskamm", 
+        "name": "Lyskamm (Eastern Summit)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "chit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -166,6 +192,7 @@
         "prominence": 1235, 
         "name": "Weisshorn", 
         "icon": "mountain",
+        "country": "ch",
         "climbed": "no",
         "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/weisshorn-vs-2191/alpinisme/arete-e-depuis-la-weisshornhuette-1090/",
         "means": "hike",
@@ -187,7 +214,11 @@
         "prominence": 210, 
         "name": "T\u00e4schhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -203,9 +234,13 @@
       "properties": {
         "height": 4479, 
         "prominence": 62, 
-        "name": "Lyskam (Western Summit)", 
+        "name": "Lyskamm (Western Summit)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "chit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -223,7 +258,11 @@
         "prominence": 1042, 
         "name": "Matterhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -241,7 +280,11 @@
         "prominence": 54, 
         "name": "Picco Luigi Amedeo", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "it",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -259,7 +302,11 @@
         "prominence": 162, 
         "name": "Mont Maudit", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -277,7 +324,11 @@
         "prominence": 136, 
         "name": "Parrotspitze", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -295,6 +346,7 @@
         "prominence": 915, 
         "name": "Dent Blanche", 
         "icon": "mountain",
+        "country": "ch",
         "climbed": "no",
         "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/dent-blanche-487/alpinisme/de-la-cabane-de-la-dent-blanche-ou-de-la-cabane-de-schoenbiel-arete-s-ou-de-wandfluh-1043/",
         "means": "hike",
@@ -316,7 +368,11 @@
         "prominence": 58, 
         "name": "Ludwigsh\u00f6he", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -334,7 +390,11 @@
         "prominence": 206, 
         "name": "Nadelhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -352,7 +412,11 @@
         "prominence": 42, 
         "name": "Schwarzhorn (Corno Nero)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "it",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -370,7 +434,11 @@
         "prominence": 1517, 
         "name": "Grand Combin (de Grafeneire)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -388,7 +456,11 @@
         "prominence": 58, 
         "name": "D\u00f4me du Go\u00fbter", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -406,6 +478,7 @@
         "prominence": 86, 
         "name": "Lenzspitze", 
         "icon": "mountain",
+        "country": "ch",
         "climbed": "no",
         "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/lenzspitze-suedlenz-1047/alpinisme/arete-ene-et-traversee-vers-le-nadelhorn-1216/",
         "means": "hike",
@@ -427,7 +500,11 @@
         "prominence": 2280, 
         "name": "Finsteraarhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -445,7 +522,11 @@
         "prominence": 213, 
         "name": "Mont Blanc du Tacul", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "fr",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -463,7 +544,11 @@
         "prominence": 35, 
         "name": "Grand Pilier d’Angle", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -481,7 +566,11 @@
         "prominence": 30, 
         "name": "Stecknadelhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -495,11 +584,15 @@
       }, 
       "type": "Feature", 
       "properties": {
-        "height": 4228, 
+        "height": 4223, 
         "prominence": 165, 
         "name": "Castor", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -517,7 +610,11 @@
         "prominence": 490, 
         "name": "Zinalrothorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -535,7 +632,11 @@
         "prominence": 75, 
         "name": "Hohberghorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -553,7 +654,11 @@
         "prominence": 128, 
         "name": "Vincent Pyramid", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "it",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -571,7 +676,11 @@
         "prominence": 843, 
         "name": "Grandes Jorasses (Pointe Walker)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -589,7 +698,11 @@
         "prominence": 359, 
         "name": "Alphubel", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -607,7 +720,11 @@
         "prominence": 642, 
         "name": "Rimpfischhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -625,7 +742,11 @@
         "prominence": 1029, 
         "name": "Aletschhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -643,7 +764,11 @@
         "prominence": 401, 
         "name": "Strahlhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -661,7 +786,11 @@
         "prominence": 51, 
         "name": "Grandes Jorasses (Pointe Whymper)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -679,7 +808,11 @@
         "prominence": 57, 
         "name": "Combin de Valsoray", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -697,7 +830,11 @@
         "prominence": 701, 
         "name": "Dent d'H\u00e9rens", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "chit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -715,7 +852,11 @@
         "prominence": 439, 
         "name": "Breithorn (Western Summit)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -733,7 +874,11 @@
         "prominence": 433, 
         "name": "Breithorn (Central Summit)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -751,7 +896,11 @@
         "prominence": 687, 
         "name": "Jungfrau", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -769,7 +918,11 @@
         "prominence": 95, 
         "name": "Bishorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -787,7 +940,11 @@
         "prominence": 117, 
         "name": "Breithorn (Eastern Summit/ western Twin Peak)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -805,7 +962,11 @@
         "prominence": 52, 
         "name": "Combin de la Tsessette", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -823,7 +984,11 @@
         "prominence": 688, 
         "name": "Aiguille Verte", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -841,7 +1006,11 @@
         "prominence": 36, 
         "name": "Aiguilles du Diable (L’Isol\u00e9e)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -859,7 +1028,11 @@
         "prominence": 178, 
         "name": "Aiguille Blanche de Peuterey", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -877,7 +1050,11 @@
         "prominence": 10, 
         "name": "Grandes Jorasses (Pointe Croz)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -895,7 +1072,11 @@
         "prominence": 36, 
         "name": "Aiguilles du Diable (Pointe Carmen)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -913,7 +1094,11 @@
         "prominence": 584, 
         "name": "M\u00f6nch", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -931,7 +1116,11 @@
         "prominence": 36, 
         "name": "Breithorn (Gendarm/ eastern Twin Peak)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -949,7 +1138,11 @@
         "prominence": 2043, 
         "name": "Barre des \u00c9crins", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -967,7 +1160,11 @@
         "prominence": 52, 
         "name": "Grande Rocheuse", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -985,7 +1182,11 @@
         "prominence": 40, 
         "name": "Aiguilles du Diable (Pointe M\u00e9diane)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1003,7 +1204,11 @@
         "prominence": 247, 
         "name": "Pollux", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1021,7 +1226,11 @@
         "prominence": 792, 
         "name": "Schreckhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1039,7 +1248,11 @@
         "prominence": 30, 
         "name": "Breithorn (Roccia Nera)", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "chit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1057,7 +1270,11 @@
         "prominence": 57, 
         "name": "Aiguilles du Diable (Pointe Chaubert)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1075,7 +1292,11 @@
         "prominence": 39, 
         "name": "Mont Brouillard", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1093,7 +1314,11 @@
         "prominence": 50, 
         "name": "Grandes Jorasses (Pointe Marguerite)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1111,7 +1336,11 @@
         "prominence": 19, 
         "name": "Aiguilles du Diable (Corne du Diable)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1129,7 +1358,11 @@
         "prominence": 536, 
         "name": "Ober Gabelhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1147,7 +1380,11 @@
         "prominence": 1879, 
         "name": "Gran Paradiso", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "it",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1165,7 +1402,11 @@
         "prominence": 164, 
         "name": "Aiguille de Bionnassay", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1183,7 +1424,11 @@
         "prominence": 2234, 
         "name": "Piz Bernina", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1201,7 +1446,11 @@
         "prominence": 398, 
         "name": "Gross Fiescherhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1219,7 +1468,11 @@
         "prominence": 5, 
         "name": "Vincent Pyramid (Punta Giordani/Giordanispetz)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "it",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1237,7 +1490,11 @@
         "prominence": 10, 
         "name": "Grandes Jorasses (Pointe Elena)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1255,7 +1512,11 @@
         "prominence": 305, 
         "name": "Gr\u00fcnhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1273,7 +1534,11 @@
         "prominence": 128, 
         "name": "Lauteraarhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1291,7 +1556,11 @@
         "prominence": 123, 
         "name": "D\u00fcrrenhorn", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "ch",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1309,7 +1578,11 @@
         "prominence": 37, 
         "name": "Aiguille du Jardin", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1327,7 +1600,11 @@
         "prominence": 255, 
         "name": "Allalinhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1345,7 +1622,11 @@
         "prominence": 102, 
         "name": "Hinter Fiescherhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1363,7 +1644,11 @@
         "prominence": 1186, 
         "name": "Weissmies", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1381,7 +1666,11 @@
         "prominence": 190, 
         "name": "D\u00f4me de Rochefort", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1399,7 +1688,11 @@
         "prominence": 41, 
         "name": "Barre des \u00c9crins (D\u00f4me de Neige)", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1417,7 +1710,11 @@
         "prominence": 139, 
         "name": "Dent du G\u00e9ant", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "frit",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1435,7 +1732,11 @@
         "prominence": 56, 
         "name": "Punta Baretti", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "it",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1453,7 +1754,11 @@
         "prominence": 511, 
         "name": "Lagginhorn", 
         "icon": "mountain",
-        "climbed": "yes"
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1471,7 +1776,11 @@
         "prominence": 106, 
         "name": "Aiguille de Rochefort", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "frit",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     },
     {
@@ -1489,7 +1798,11 @@
         "prominence": 204, 
         "name": "Les Droites", 
         "icon": "mountain",
-        "climbed": "no"
+        "country": "fr",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
       }
     }
   ]
