@@ -25,7 +25,7 @@
     cursor: pointer;
     background-color: white;
     border-color: #4CAF50;
-    color: green;
+    color: #4CAF50;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 72px;
@@ -36,6 +36,15 @@
     background-color: #4CAF50;
     color: white;
   }
+  /* Different color for the todo button and its active state */
+  .btn.todo {
+    border-color: #ff6600;
+    color: #ff6600;
+  }
+  .btn.todo.active {
+    background-color: #ff6600;
+    color: white;
+  }
   .btn.climbed {
     background-color: #dcefdc;
   }
@@ -43,7 +52,7 @@
   table {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 60%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -141,7 +150,9 @@
       if (feature.properties.route != "") {
         var a = document.createElement('a');
         a.setAttribute('href',feature.properties.route);
-        a.innerHTML = "aCAS";
+        // Force link to open in new tab
+        a.setAttribute('target',"_blank");
+        a.innerHTML = "CAS";
         cell.appendChild(a);
       }
     }
@@ -279,10 +290,11 @@
     <button class="btn active" onclick="filterTable('all')" id="all"> Show all</button>
     <button class="btn" onclick="filterTable('prom')" id="prom"> Prominent</button>
     <button class="btn" onclick="filterTable('flag')" id="flag"> Swiss</button>
-    <button class="btn" onclick="filterTable('todo')" id="todo"> ToDo</button>
+    <button class="btn todo" onclick="filterTable('todo')" id="todo"> ToDo</button>
   </div>
 
   <table id="tabAlps">
+    <!-- Declaring columns enables them to be hidden in a single call -->
     <colgroup>
       <col class="col1"/>
       <col class="col2"/>

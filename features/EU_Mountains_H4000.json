@@ -3,18 +3,18 @@
   "features": [
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.867222", 
-          "45.833333", 
-          "4809" 
+          "6.867222",
+          "45.833333",
+          "4809"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4809, 
-        "prominence": 4697, 
-        "name": "Mont Blanc", 
+        "height": 4809,
+        "prominence": 4697,
+        "name": "Mont Blanc",
         "icon": "mountain",
         "country": "frit",
         "climbed": "yes",
@@ -25,18 +25,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.869444", 
-          "45.828889", 
-          "4748" 
+          "6.869444",
+          "45.828889",
+          "4748"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4748, 
-        "prominence": 18, 
-        "name": "Mont Blanc de Courmayeur", 
+        "height": 4748,
+        "prominence": 18,
+        "name": "Mont Blanc de Courmayeur",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -47,18 +47,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.86694444444444", 
-          "45.9369444444444", 
+          "7.86694444444444",
+          "45.9369444444444",
           "4634"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4634, 
-        "prominence": 2165, 
-        "name": "Monte Rosa (Dufourspitze)", 
+        "height": 4634,
+        "prominence": 2165,
+        "name": "Monte Rosa (Dufourspitze)",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -69,18 +69,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.87", 
+          "7.87",
           "45.942222",
           "4609"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4609, 
-        "prominence": 94, 
-        "name": "Monte Rosa (Nordend)", 
+        "height": 4609,
+        "prominence": 94,
+        "name": "Monte Rosa (Nordend)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "no",
@@ -91,18 +91,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.871389", 
+          "7.871389",
           "45.931944",
           "4563"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4563, 
-        "prominence": 110, 
-        "name": "Zumsteinspitze", 
+        "height": 4563,
+        "prominence": 110,
+        "name": "Zumsteinspitze",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -113,18 +113,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.876944", 
+          "7.876944",
           "45.927222",
           "4554"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4554, 
-        "prominence": 102, 
-        "name": "Signalkuppe", 
+        "height": 4554,
+        "prominence": 102,
+        "name": "Signalkuppe",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -135,18 +135,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.85888888888889", 
-          "46.0938888888889", 
+          "7.85888888888889",
+          "46.0938888888889",
           "4545"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4545, 
-        "prominence": 1046, 
-        "name": "Dom", 
+        "height": 4545,
+        "prominence": 1046,
+        "name": "Dom",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
@@ -157,40 +157,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.83555555555556", 
-          "45.9222222222222", 
+          "7.83555555555556",
+          "45.9222222222222",
           "4527"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4527, 
-        "prominence": 376, 
-        "name": "Lyskamm (Eastern Summit)", 
+        "height": 4527,
+        "prominence": 376,
+        "name": "Lyskamm (Eastern Summit)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/liskamm-sommet-est-1054/alpinisme/du-rif-gnifetti-arete-e-2068/",
+        "means": "hike",
+        "grade": "AD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.71583333333333", 
-          "46.1013888888889", 
+          "7.71583333333333",
+          "46.1013888888889",
           "4506"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4506, 
-        "prominence": 1235, 
-        "name": "Weisshorn", 
+        "height": 4506,
+        "prominence": 1235,
+        "name": "Weisshorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
@@ -201,62 +201,62 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.85722222222222", 
-          "46.0836111111111", 
+          "7.85722222222222",
+          "46.0836111111111",
           "4491"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4491, 
-        "prominence": 210, 
-        "name": "T\u00e4schhorn", 
+        "height": 4491,
+        "prominence": 210,
+        "name": "T\u00e4schhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/taeschhorn-1937/alpinisme/depuis-le-mischabeljoch-arete-sse-mischabelgrat-1199/",
+        "means": "hike",
+        "grade": "AD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.821944", 
-          "45.9275", 
+          "7.821944",
+          "45.9275",
           "4479"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4479, 
-        "prominence": 62, 
-        "name": "Lyskamm (Western Summit)", 
+        "height": 4479,
+        "prominence": 62,
+        "name": "Lyskamm (Western Summit)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/liskamm-sommet-ouest-1055/alpinisme/du-rifugio-quintino-sella-par-larete-sw-588/",
+        "means": "hike",
+        "grade": "PD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.65861111111111", 
-          "45.9763888888889", 
+          "7.65861111111111",
+          "45.9763888888889",
           "4478"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4478, 
-        "prominence": 1042, 
-        "name": "Matterhorn", 
+        "height": 4478,
+        "prominence": 1042,
+        "name": "Matterhorn",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -267,18 +267,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.865278", 
-          "45.821944" , 
-          "4469" 
+          "6.865278",
+          "45.821944" ,
+          "4469"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4469, 
-        "prominence": 54, 
-        "name": "Picco Luigi Amedeo", 
+        "height": 4469,
+        "prominence": 54,
+        "name": "Picco Luigi Amedeo",
         "icon": "mountain",
         "country": "it",
         "climbed": "no",
@@ -289,18 +289,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.875833", 
-          "45.847778", 
-          "4465" 
+          "6.875833",
+          "45.847778",
+          "4465"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4465, 
-        "prominence": 162, 
-        "name": "Mont Maudit", 
+        "height": 4465,
+        "prominence": 162,
+        "name": "Mont Maudit",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -311,18 +311,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.871389", 
-          "45.919722", 
+          "7.871389",
+          "45.919722",
           "4432"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4432, 
-        "prominence": 136, 
-        "name": "Parrotspitze", 
+        "height": 4432,
+        "prominence": 136,
+        "name": "Parrotspitze",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -333,18 +333,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.61194444444444", 
-          "46.0341666666667", 
+          "7.61194444444444",
+          "46.0341666666667",
           "4357"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4357, 
-        "prominence": 915, 
-        "name": "Dent Blanche", 
+        "height": 4357,
+        "prominence": 915,
+        "name": "Dent Blanche",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
@@ -355,18 +355,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.862222", 
-          "45.917222", 
+          "7.862222",
+          "45.917222",
           "4341"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4341, 
-        "prominence": 58, 
-        "name": "Ludwigsh\u00f6he", 
+        "height": 4341,
+        "prominence": 58,
+        "name": "Ludwigsh\u00f6he",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -377,18 +377,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.86416666666667", 
-          "46.1088888888889", 
+          "7.86416666666667",
+          "46.1088888888889",
           "4327"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4327, 
-        "prominence": 206, 
-        "name": "Nadelhorn", 
+        "height": 4327,
+        "prominence": 206,
+        "name": "Nadelhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -399,18 +399,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.862", 
-          "45.9149", 
-          "4322" 
+          "7.862",
+          "45.9149",
+          "4322"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4322, 
-        "prominence": 42, 
-        "name": "Schwarzhorn (Corno Nero)", 
+        "height": 4322,
+        "prominence": 42,
+        "name": "Schwarzhorn (Corno Nero)",
         "icon": "mountain",
         "country": "it",
         "climbed": "yes",
@@ -421,18 +421,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.29916666666667", 
-          "45.9375", 
+          "7.29916666666667",
+          "45.9375",
           "4314"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4314, 
-        "prominence": 1517, 
-        "name": "Grand Combin (de Grafeneire)", 
+        "height": 4314,
+        "prominence": 1517,
+        "name": "Grand Combin (de Grafeneire)",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -443,18 +443,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.843333", 
-          "45.842778", 
-          "4304" 
+          "6.843333",
+          "45.842778",
+          "4304"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4304, 
-        "prominence": 58, 
-        "name": "D\u00f4me du Go\u00fbter", 
+        "height": 4304,
+        "prominence": 58,
+        "name": "D\u00f4me du Go\u00fbter",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -465,18 +465,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.868444", 
-          "46.104639", 
+          "7.868444",
+          "46.104639",
           "4294"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4294, 
-        "prominence": 86, 
-        "name": "Lenzspitze", 
+        "height": 4294,
+        "prominence": 86,
+        "name": "Lenzspitze",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
@@ -487,18 +487,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.12611111111111", 
-          "46.5372222222222", 
+          "8.12611111111111",
+          "46.5372222222222",
           "4274"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4274, 
-        "prominence": 2280, 
-        "name": "Finsteraarhorn", 
+        "height": 4274,
+        "prominence": 2280,
+        "name": "Finsteraarhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -509,18 +509,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.887778", 
-          "45.856389", 
-          "4248" 
+          "6.887778",
+          "45.856389",
+          "4248"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4248, 
-        "prominence": 213, 
-        "name": "Mont Blanc du Tacul", 
+        "height": 4248,
+        "prominence": 213,
+        "name": "Mont Blanc du Tacul",
         "icon": "mountain",
         "country": "fr",
         "climbed": "yes",
@@ -531,18 +531,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.88", 
-          "45.827778", 
-          "4243" 
+          "6.88",
+          "45.827778",
+          "4243"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4243, 
-        "prominence": 35, 
-        "name": "Grand Pilier d’Angle", 
+        "height": 4243,
+        "prominence": 35,
+        "name": "Grand Pilier d’Angle",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -553,40 +553,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.859667", 
-          "46.111528", 
+          "7.859667",
+          "46.111528",
           "4241"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4241, 
-        "prominence": 30, 
-        "name": "Stecknadelhorn", 
+        "height": 4241,
+        "prominence": 30,
+        "name": "Stecknadelhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/nadelhorn-7759/alpinisme/de-la-bordierhuette-traversee-du-nadelgrat-jusqua-la-mischabelhuette-4174/",
+        "means": "hike",
+        "grade": "AD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.79277777777778", 
-          "45.9222222222222", 
+          "7.79277777777778",
+          "45.9222222222222",
           "4228"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4223, 
-        "prominence": 165, 
-        "name": "Castor", 
+        "height": 4223,
+        "prominence": 165,
+        "name": "Castor",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -597,18 +597,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.69027777777778", 
-          "46.065", 
+          "7.69027777777778",
+          "46.065",
           "4221"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4221, 
-        "prominence": 490, 
-        "name": "Zinalrothorn", 
+        "height": 4221,
+        "prominence": 490,
+        "name": "Zinalrothorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -619,40 +619,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.853861", 
-          "46.112694", 
+          "7.853861",
+          "46.112694",
           "4219"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4219, 
-        "prominence": 75, 
-        "name": "Hohberghorn", 
+        "height": 4219,
+        "prominence": 75,
+        "name": "Hohberghorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
         "route": "",
-        "means": "",
+        "means": "Steck",
         "grade": ""
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "7.861731999999997",
           "45.90765200000001",
-          "4215" 
+          "4215"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4215, 
-        "prominence": 128, 
-        "name": "Vincent Pyramid", 
+        "height": 4215,
+        "prominence": 128,
+        "name": "Vincent Pyramid",
         "icon": "mountain",
         "country": "it",
         "climbed": "yes",
@@ -663,18 +663,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.988944858312607",
           "45.868139427990144",
-          "4208" 
+          "4208"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4208, 
-        "prominence": 843, 
-        "name": "Grandes Jorasses (Pointe Walker)", 
+        "height": 4208,
+        "prominence": 843,
+        "name": "Grandes Jorasses (Pointe Walker)",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -685,18 +685,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.86388888888889", 
-          "46.0630555555556", 
+          "7.86388888888889",
+          "46.0630555555556",
           "4206"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4206, 
-        "prominence": 359, 
-        "name": "Alphubel", 
+        "height": 4206,
+        "prominence": 359,
+        "name": "Alphubel",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -707,18 +707,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.88416666666667", 
-          "46.0233333333333", 
+          "7.88416666666667",
+          "46.0233333333333",
           "4199"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4199, 
-        "prominence": 642, 
-        "name": "Rimpfischhorn", 
+        "height": 4199,
+        "prominence": 642,
+        "name": "Rimpfischhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -729,40 +729,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.99388888888889", 
-          "46.465", 
+          "7.99388888888889",
+          "46.465",
           "4193"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4193, 
-        "prominence": 1029, 
-        "name": "Aletschhorn", 
+        "height": 4193,
+        "prominence": 1029,
+        "name": "Aletschhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/aletschhorn-24/randonnee-a-ski/von-der-oberaletschhuette-ueber-die-sw-seite-und-die-sw-rippe-7271/",
+        "means": "ski",
+        "grade": "AD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.90166666666667", 
-          "46.0133333333333", 
+          "7.90166666666667",
+          "46.0133333333333",
           "4190"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4190, 
-        "prominence": 401, 
-        "name": "Strahlhorn", 
+        "height": 4190,
+        "prominence": 401,
+        "name": "Strahlhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -773,18 +773,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.985082477331161",
           "45.86883699252178",
-          "4184" 
+          "4184"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4184, 
-        "prominence": 51, 
-        "name": "Grandes Jorasses (Pointe Whymper)", 
+        "height": 4184,
+        "prominence": 51,
+        "name": "Grandes Jorasses (Pointe Whymper)",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -795,18 +795,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.290556", 
-          "45.938056", 
+          "7.290556",
+          "45.938056",
           "4183"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4183, 
-        "prominence": 57, 
-        "name": "Combin de Valsoray", 
+        "height": 4183,
+        "prominence": 57,
+        "name": "Combin de Valsoray",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -817,40 +817,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.60527777777778", 
-          "45.97", 
+          "7.60527777777778",
+          "45.97",
           "4174"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4174, 
-        "prominence": 701, 
-        "name": "Dent d'H\u00e9rens", 
+        "height": 4174,
+        "prominence": 701,
+        "name": "Dent d'H\u00e9rens",
         "icon": "mountain",
         "country": "chit",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/dent-dherens-911/alpinisme/arete-w-depuis-le-rifugio-aosta-1036/",
+        "means": "hike/ski",
+        "grade": "AD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.747222", 
-          "45.941111", 
+          "7.747222",
+          "45.941111",
           "4164"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4164, 
-        "prominence": 439, 
-        "name": "Breithorn (Western Summit)", 
+        "height": 4164,
+        "prominence": 439,
+        "name": "Breithorn (Western Summit)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -861,18 +861,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.756389", 
-          "45.938889", 
+          "7.756389",
+          "45.938889",
           "4159"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4159, 
-        "prominence": 433, 
-        "name": "Breithorn (Central Summit)", 
+        "height": 4159,
+        "prominence": 83,
+        "name": "Breithorn (Central Summit)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -883,18 +883,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.9625", 
-          "46.5366666666667", 
+          "7.9625",
+          "46.5366666666667",
           "4158"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4158, 
-        "prominence": 687, 
-        "name": "Jungfrau", 
+        "height": 4158,
+        "prominence": 687,
+        "name": "Jungfrau",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -905,18 +905,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.714722", 
-          "46.117778", 
+          "7.714722",
+          "46.117778",
           "4153"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4153, 
-        "prominence": 95, 
-        "name": "Bishorn", 
+        "height": 4153,
+        "prominence": 95,
+        "name": "Bishorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -927,18 +927,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.767222", 
-          "45.937222", 
+          "7.767222",
+          "45.937222",
           "4139"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4139, 
-        "prominence": 117, 
-        "name": "Breithorn (Eastern Summit/ western Twin Peak)", 
+        "height": 4139,
+        "prominence": 117,
+        "name": "Breithorn (Eastern Summit/ western Twin Peak)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -949,40 +949,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.310833", 
-          "45.942778", 
+          "7.310833",
+          "45.942778",
           "4134"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4134, 
-        "prominence": 52, 
-        "name": "Combin de la Tsessette", 
+        "height": 4134,
+        "prominence": 52,
+        "name": "Combin de la Tsessette",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/combin-de-grafeneire-820/randonnee-a-ski/de-la-cabane-fxb-par-le-couloir-du-gardien-4403/",
+        "means": "ski",
+        "grade": "D"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.97", 
-          "45.934722", 
-          "4122" 
+          "6.97",
+          "45.934722",
+          "4122"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4122, 
-        "prominence": 688, 
-        "name": "Aiguille Verte", 
+        "height": 4122,
+        "prominence": 688,
+        "name": "Aiguille Verte",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -993,18 +993,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.890960000000001",
           "45.854592999999994",
-          "4114" 
+          "4114"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4114, 
-        "prominence": 36, 
-        "name": "Aiguilles du Diable (L’Isol\u00e9e)", 
+        "height": 4114,
+        "prominence": 36,
+        "name": "Aiguilles du Diable (L’Isol\u00e9e)",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1015,18 +1015,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.882778", 
-          "45.824444", 
-          "4112" 
+          "6.882778",
+          "45.824444",
+          "4112"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4112, 
-        "prominence": 178, 
-        "name": "Aiguille Blanche de Peuterey", 
+        "height": 4112,
+        "prominence": 178,
+        "name": "Aiguille Blanche de Peuterey",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1037,18 +1037,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.982405632734298",
           "45.86917970174201",
-          "4110" 
+          "4110"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4110, 
-        "prominence": 10, 
-        "name": "Grandes Jorasses (Pointe Croz)", 
+        "height": 4110,
+        "prominence": 10,
+        "name": "Grandes Jorasses (Pointe Croz)",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -1059,18 +1059,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.891790000000007",
           "45.854559999995956",
-          "4109" 
+          "4109"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4109, 
-        "prominence": 36, 
-        "name": "Aiguilles du Diable (Pointe Carmen)", 
+        "height": 4109,
+        "prominence": 36,
+        "name": "Aiguilles du Diable (Pointe Carmen)",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1081,18 +1081,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.99722222222222", 
-          "46.5583333333333", 
+          "7.99722222222222",
+          "46.5583333333333",
           "4107"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4107, 
-        "prominence": 584, 
-        "name": "M\u00f6nch", 
+        "height": 4107,
+        "prominence": 584,
+        "name": "M\u00f6nch",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -1103,18 +1103,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.770556", 
-          "45.935833", 
+          "7.770556",
+          "45.935833",
           "4106"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4106, 
-        "prominence": 36, 
-        "name": "Breithorn (Gendarm/ eastern Twin Peak)", 
+        "height": 4106,
+        "prominence": 36,
+        "name": "Breithorn (Gendarm/ eastern Twin Peak)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -1125,18 +1125,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.359519999999995",
           "44.92214999999592",
-          "4102" 
+          "4102"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4102, 
-        "prominence": 2043, 
-        "name": "Barre des \u00c9crins", 
+        "height": 4102,
+        "prominence": 2043,
+        "name": "Barre des \u00c9crins",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1147,18 +1147,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.9728280000000105",
           "45.934518",
-          "4102" 
+          "4102"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4102, 
-        "prominence": 52, 
-        "name": "Grande Rocheuse", 
+        "height": 4102,
+        "prominence": 52,
+        "name": "Grande Rocheuse",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1169,18 +1169,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.892150000000005",
           "45.85454999999595",
-          "4097" 
+          "4097"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4097, 
-        "prominence": 40, 
-        "name": "Aiguilles du Diable (Pointe M\u00e9diane)", 
+        "height": 4097,
+        "prominence": 40,
+        "name": "Aiguilles du Diable (Pointe M\u00e9diane)",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1191,18 +1191,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.78527777777778", 
-          "45.9277777777778", 
+          "7.78527777777778",
+          "45.9277777777778",
           "4092"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4092, 
-        "prominence": 247, 
-        "name": "Pollux", 
+        "height": 4092,
+        "prominence": 247,
+        "name": "Pollux",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -1213,40 +1213,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.11805555555556", 
-          "46.59", 
+          "8.11805555555556",
+          "46.59",
           "4078"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4078, 
-        "prominence": 792, 
-        "name": "Schreckhorn", 
+        "height": 4078,
+        "prominence": 788,
+        "name": "Schreckhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/schreckhorn-1732/alpinisme/ueber-den-suedwestgrat-757/",
+        "means": "hike",
+        "grade": "AD+"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.775278", 
-          "45.9325", 
+          "7.775278",
+          "45.9325",
           "4075"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4075, 
-        "prominence": 30, 
-        "name": "Breithorn (Roccia Nera)", 
+        "height": 4075,
+        "prominence": 30,
+        "name": "Breithorn (Roccia Nera)",
         "icon": "mountain",
         "country": "chit",
         "climbed": "yes",
@@ -1257,18 +1257,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.892719999999996",
           "45.85441999999594",
-          "4074" 
+          "4074"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4074, 
-        "prominence": 57, 
-        "name": "Aiguilles du Diable (Pointe Chaubert)", 
+        "height": 4074,
+        "prominence": 57,
+        "name": "Aiguilles du Diable (Pointe Chaubert)",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1279,18 +1279,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.865", 
-          "45.8175", 
-          "4069" 
+          "6.865",
+          "45.8175",
+          "4069"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4069, 
-        "prominence": 39, 
-        "name": "Mont Brouillard", 
+        "height": 4069,
+        "prominence": 39,
+        "name": "Mont Brouillard",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1301,18 +1301,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.977859288454056",
           "45.86858112649463",
-          "4065" 
+          "4065"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4065, 
-        "prominence": 50, 
-        "name": "Grandes Jorasses (Pointe Marguerite)", 
+        "height": 4065,
+        "prominence": 50,
+        "name": "Grandes Jorasses (Pointe Marguerite)",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -1323,18 +1323,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.893169999999993",
           "45.85435999999592",
-          "4064" 
+          "4064"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4064, 
-        "prominence": 19, 
-        "name": "Aiguilles du Diable (Corne du Diable)", 
+        "height": 4064,
+        "prominence": 19,
+        "name": "Aiguilles du Diable (Corne du Diable)",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1345,40 +1345,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.66805555555556", 
-          "46.0386111111111", 
+          "7.66805555555556",
+          "46.0386111111111",
           "4063"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4063, 
-        "prominence": 536, 
-        "name": "Ober Gabelhorn", 
+        "height": 4063,
+        "prominence": 536,
+        "name": "Ober Gabelhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/ober-gabelhorn-719/alpinisme/de-la-rothornhuette-par-la-wellenkuppe-arete-ene-1066/",
+        "means": "hike",
+        "grade": "AD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.269722", 
-          "45.514444", 
-          "4061" 
+          "7.269722",
+          "45.514444",
+          "4061"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4061, 
-        "prominence": 1879, 
-        "name": "Gran Paradiso", 
+        "height": 4061,
+        "prominence": 1879,
+        "name": "Gran Paradiso",
         "icon": "mountain",
         "country": "it",
         "climbed": "yes",
@@ -1389,18 +1389,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.818056", 
-          "45.835833", 
-          "4052" 
+          "6.818056",
+          "45.835833",
+          "4052"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4052, 
-        "prominence": 164, 
-        "name": "Aiguille de Bionnassay", 
+        "height": 4052,
+        "prominence": 164,
+        "name": "Aiguille de Bionnassay",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -1411,40 +1411,40 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "9.90805555555556", 
-          "46.3822222222222", 
+          "9.90805555555556",
+          "46.3822222222222",
           "4049"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4049, 
-        "prominence": 2234, 
-        "name": "Piz Bernina", 
+        "height": 4049,
+        "prominence": 2234,
+        "name": "Piz Bernina",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/piz-bernina-160/alpinisme/ueber-denn-suedostgrat-und-suedgrat-la-spedla-spallagrat-2708/",
+        "means": "hike",
+        "grade": "AD"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.06138888888889", 
-          "46.5513888888889", 
+          "8.06138888888889",
+          "46.5513888888889",
           "4049"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4049, 
-        "prominence": 398, 
-        "name": "Gross Fiescherhorn", 
+        "height": 4049,
+        "prominence": 398,
+        "name": "Gross Fiescherhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -1455,18 +1455,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "7.868094999999992",
           "45.90569399999595",
-          "4046" 
+          "4046"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4046, 
-        "prominence": 5, 
-        "name": "Vincent Pyramid (Punta Giordani/Giordanispetz)", 
+        "height": 4046,
+        "prominence": 5,
+        "name": "Vincent Pyramid (Punta Giordani/Giordanispetz)",
         "icon": "mountain",
         "country": "it",
         "climbed": "no",
@@ -1477,18 +1477,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.979350596666337",
           "45.86873894181116",
-          "4045" 
+          "4045"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4045, 
-        "prominence": 10, 
-        "name": "Grandes Jorasses (Pointe Elena)", 
+        "height": 4045,
+        "prominence": 10,
+        "name": "Grandes Jorasses (Pointe Elena)",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -1499,84 +1499,84 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.07777777777778", 
-          "46.5319444444444", 
+          "8.07777777777778",
+          "46.5319444444444",
           "4044"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4044, 
-        "prominence": 305, 
-        "name": "Gr\u00fcnhorn", 
+        "height": 4044,
+        "prominence": 305,
+        "name": "Gr\u00fcnhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/gross-grosses-gruenhorn-857/randonnee-a-ski/de-la-konkordiahuette-sac-4018/",
+        "means": "ski",
+        "grade": "AD+"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.128417", 
-          "46.583389", 
+          "8.128417",
+          "46.583389",
           "4042"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4042, 
-        "prominence": 128, 
-        "name": "Lauteraarhorn", 
+        "height": 4042,
+        "prominence": 128,
+        "name": "Lauteraarhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
-        "route": "",
-        "means": "",
-        "grade": ""
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/lauteraarhorn-1024/alpinisme/par-le-couloir-de-la-face-s-et-larete-s-770/",
+        "means": "hike",
+        "grade": "AD-"
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.848056", 
-          "46.119722", 
+          "7.848056",
+          "46.119722",
           "4035"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4035, 
-        "prominence": 123, 
-        "name": "D\u00fcrrenhorn", 
+        "height": 4035,
+        "prominence": 123,
+        "name": "D\u00fcrrenhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "no",
         "route": "",
-        "means": "",
+        "means": "Steck",
         "grade": ""
       }
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.975870000000004",
           "45.93395799999999",
-          "4035" 
+          "4035"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4035, 
-        "prominence": 37, 
-        "name": "Aiguille du Jardin", 
+        "height": 4035,
+        "prominence": 37,
+        "name": "Aiguille du Jardin",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1587,18 +1587,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "7.89472222222222", 
-          "46.0461111111111", 
+          "7.89472222222222",
+          "46.0461111111111",
           "4027"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4027, 
-        "prominence": 255, 
-        "name": "Allalinhorn", 
+        "height": 4027,
+        "prominence": 255,
+        "name": "Allalinhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -1609,18 +1609,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.067778", 
-          "46.546389", 
+          "8.067778",
+          "46.546389",
           "4025"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4025, 
-        "prominence": 102, 
-        "name": "Hinter Fiescherhorn", 
+        "height": 4025,
+        "prominence": 102,
+        "name": "Hinter Fiescherhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -1631,18 +1631,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.01222222222222", 
-          "46.1277777777778", 
+          "8.01222222222222",
+          "46.1277777777778",
           "4017"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4017, 
-        "prominence": 1186, 
-        "name": "Weissmies", 
+        "height": 4017,
+        "prominence": 1186,
+        "name": "Weissmies",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -1653,18 +1653,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.9675", 
-          "45.864167", 
-          "4015" 
+          "6.9675",
+          "45.864167",
+          "4015"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4015, 
-        "prominence": 190, 
-        "name": "D\u00f4me de Rochefort", 
+        "height": 4015,
+        "prominence": 190,
+        "name": "D\u00f4me de Rochefort",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -1675,18 +1675,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.353559999999992",
           "44.924299999995924",
-          "4015" 
+          "4015"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4015, 
-        "prominence": 41, 
-        "name": "Barre des \u00c9crins (D\u00f4me de Neige)", 
+        "height": 4015,
+        "prominence": 41,
+        "name": "Barre des \u00c9crins (D\u00f4me de Neige)",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
@@ -1697,18 +1697,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.951667", 
-          "45.861944", 
-          "4013" 
+          "6.951667",
+          "45.861944",
+          "4013"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4013, 
-        "prominence": 139, 
-        "name": "Dent du G\u00e9ant", 
+        "height": 4013,
+        "prominence": 139,
+        "name": "Dent du G\u00e9ant",
         "icon": "mountain",
         "country": "frit",
         "climbed": "yes",
@@ -1719,18 +1719,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.863333", 
-          "45.814444", 
-          "4013" 
+          "6.863333",
+          "45.814444",
+          "4013"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4013, 
-        "prominence": 56, 
-        "name": "Punta Baretti", 
+        "height": 4013,
+        "prominence": 56,
+        "name": "Punta Baretti",
         "icon": "mountain",
         "country": "it",
         "climbed": "no",
@@ -1741,18 +1741,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "8.00305555555556", 
-          "46.1572222222222", 
+          "8.00305555555556",
+          "46.1572222222222",
           "4010"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4010, 
-        "prominence": 511, 
-        "name": "Lagginhorn", 
+        "height": 4010,
+        "prominence": 511,
+        "name": "Lagginhorn",
         "icon": "mountain",
         "country": "ch",
         "climbed": "yes",
@@ -1763,18 +1763,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
-          "6.96", 
-          "45.861944", 
-          "4001" 
+          "6.96",
+          "45.861944",
+          "4001"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4001, 
-        "prominence": 106, 
-        "name": "Aiguille de Rochefort", 
+        "height": 4001,
+        "prominence": 106,
+        "name": "Aiguille de Rochefort",
         "icon": "mountain",
         "country": "frit",
         "climbed": "no",
@@ -1785,18 +1785,18 @@
     },
     {
       "geometry": {
-        "type": "Point", 
+        "type": "Point",
         "coordinates": [
           "6.989301592111586",
           "45.93068929366149",
-          "4000" 
+          "4000"
         ]
-      }, 
-      "type": "Feature", 
+      },
+      "type": "Feature",
       "properties": {
-        "height": 4000, 
-        "prominence": 204, 
-        "name": "Les Droites", 
+        "height": 4000,
+        "prominence": 204,
+        "name": "Les Droites",
         "icon": "mountain",
         "country": "fr",
         "climbed": "no",
