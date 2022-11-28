@@ -1,8 +1,11 @@
 name: MapTracks Build
 on:
+  # Runs on pushes targeting the default branch
   push:
     branches:
       - master
+  # Allows to be run manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   GeoJsonBuild:
@@ -12,7 +15,7 @@ jobs:
       signal: ${{ steps.chain.outputs.status }}
     steps:
       - name: Set up Python 3.x
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
         #--- Next Step
@@ -20,7 +23,7 @@ jobs:
         run: brew install gdal
         #--- Next Step
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
         #--- Next Step
@@ -34,17 +37,6 @@ jobs:
         run: |
           tile_run=$(scripts/push_geojsons.sh)
           echo "::set-output name=status::$tile_run"
-        #--- Next Step
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
-          publish_branch: gh-pages
-          exclude_assets: '.github,scripts,tracks/3_gpx'
-          allow_empty_commit: true
-          commit_message: ${{ github.event.head_commit.message }}
-          enable_jekyll: true
 
   RenewTileset:
     name: Recreate the MapBox tileset
@@ -57,12 +49,12 @@ jobs:
         #--- Check https://www.wheelodex.org/projects/rasterio/ to see if there is a 3.10 version
         #--- CHeck https://www.wheelodex.org/projects/pyrsistent/ to see if there is a 3.10 version
       - name: Set up Python 3.x
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
+          python-version: '3.x'
         #--- Next Step
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
         #--- Next Step
