@@ -1,47 +1,19 @@
-name: MapTracks Build
+name: MapTracks BuildNDeploy
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches:
-      - master
+  # Runs after a successful MapTracks build workflow
+  workflow_run:
+    workflows: [BuildNDeploy]
+    types: [completed]
+
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  GeoJsonBuild:
-    name: Generate Aggregate Deploy
-    runs-on: macos-latest
-    outputs:
-      signal: ${{ steps.chain.outputs.status }}
-    steps:
-      - name: Set up Python 3.x
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-        #--- Next Step
-      - name: Install GDAL for gpx transformations
-        run: brew install gdal
-        #--- Next Step
-      - name: Check out repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-        #--- Next Step
-      - name: Generate new GeoJson files from GPX files
-        run: ./scripts/generate_geojson.sh
-        #--- Next Step
-      - name: Commit and push to Master
-        id: chain
-        env:
-          commit_mess: ${{ github.event.head_commit.message }}
-        run: |
-          tile_run=$(scripts/push_geojsons.sh)
-          echo "::set-output name=status::$tile_run"
-
+  # Deployment job
   RenewTileset:
     name: Recreate the MapBox tileset
-    needs: GeoJsonBuild
-    if: contains(needs.GeoJsonBuild.outputs.signal, 'generate')
+    needs: DeployPages
+    if: contains(needs.GeoJsonBuild.outputs.status, 'generate')
     runs-on: macos-latest
     steps:
         #--- Next Step

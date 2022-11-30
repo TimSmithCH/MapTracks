@@ -1,0 +1,63 @@
+name: MapTracks BuildNDeploy
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+
+  # Allows to be run manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  GeoJsonBuild:
+    name: Generate Aggregate Deploy
+    runs-on: macos-latest
+    outputs:
+      signal: ${{ steps.chain.outputs.status }}
+    steps:
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+        #--- Next Step
+      - name: Install GDAL for gpx transformations
+        run: brew install gdal
+        #--- Next Step
+      - name: Check out repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+        #--- Next Step
+      - name: Generate new GeoJson files from GPX files
+        run: ./scripts/generate_geojson.sh
+        #--- Next Step
+      - name: Commit and push to Master
+        id: chain
+        env:
+          commit_mess: ${{ github.event.head_commit.message }}
+        run: |
+          tile_run=$(scripts/push_geojsons.sh)
+          echo "status=$tile_run" >> $GITHUB_OUTPUT
+
+  # Deployment job
+  DeployPages:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: macos-latest
+    needs: GeoJsonBuild
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
+
