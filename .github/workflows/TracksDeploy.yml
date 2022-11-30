@@ -1,4 +1,4 @@
-name: MapTracks BuildNDeploy
+name: MapTracksDeploy
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -9,7 +9,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 

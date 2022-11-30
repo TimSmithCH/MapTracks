@@ -1,8 +1,8 @@
-name: MapTracks BuildNDeploy
+name: MapBoxTilesDeploy
 on:
   # Runs after a successful MapTracks build workflow
   workflow_run:
-    workflows: [BuildNDeploy]
+    workflows: [MapTracksDeploy]
     types: [completed]
 
   # Allows to be run manually from the Actions tab
