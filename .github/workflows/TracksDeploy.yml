@@ -19,6 +19,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Build GeoJSON files from any newly committed GPX files
   GeoJsonBuild:
     name: Generate Aggregate Deploy
     runs-on: macos-latest
@@ -41,23 +42,38 @@ jobs:
       - name: Generate new GeoJson files from GPX files
         run: ./scripts/generate_geojson.sh
         #--- Next Step
-      - name: Commit and push to Master
-        id: chain
-        env:
-          commit_mess: ${{ github.event.head_commit.message }}
-        run: |
-          tile_run=$(scripts/push_geojsons.sh)
-          echo "status=$tile_run" >> $GITHUB_OUTPUT
+      - name: Signal new GeoJson files built
+        run: git diff --quiet --exit-code tracks/1_display
 
-  # Deployment job
+  # Commit any newly built GeoJSON files
+  CommitGeoJSON:
+    needs: GeoJsonBuild
+    runs-on: macos-latest
+    if: always() && (needs.GeoJsonBuild.result == 'failure')
+    steps:
+      - name: Commit and push to Master
+        run: |
+          # Push the modified GeoJSON files
+          git add tracks/1_display 1>&2
+          git add tracks/2_geojson 1>&2
+          git status -s 1>&2
+          git commit -m ${{ github.event.head_commit.message }} 1>&2
+          git push 1>&2
+
+  # Deploy to GitHub Pages MapTracks website
   DeployPages:
+    needs: CommitGeoJSON
+    runs-on: macos-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: macos-latest
-    needs: GeoJsonBuild
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+
+  # Recreate the MapBox tileset
+  TilesDeploy:
+    needs: CommitGeoJSON
+    uses: TimSmithCH/MapTracks/.github/workflows/TilesDeploy.yml
 

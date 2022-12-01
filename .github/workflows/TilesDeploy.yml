@@ -1,9 +1,7 @@
 name: MapBoxTilesDeploy
 on:
-  # Runs after a successful MapTracks build workflow
-  workflow_run:
-    workflows: [MapTracksDeploy]
-    types: [completed]
+  # Reusable workflow to be called from MapTracksDeploy
+  workflow_call:
 
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
@@ -12,8 +10,6 @@ jobs:
   # Deployment job
   RenewTileset:
     name: Recreate the MapBox tileset
-    needs: DeployPages
-    if: contains(needs.GeoJsonBuild.outputs.status, 'generate')
     runs-on: macos-latest
     steps:
         #--- Next Step
@@ -43,3 +39,4 @@ jobs:
           tileset_api: ${{ secrets.TILESET_CREATOR }}
         run: ./scripts/deploy_tileset.sh
           #-- run: ./scripts/deploy_tileset.sh -f true
+
