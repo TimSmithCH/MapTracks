@@ -49,6 +49,7 @@ jobs:
             echo "run_commit=true" >> $GITHUB_OUTPUT
           else
             echo "run_commit=false" >> $GITHUB_OUTPUT
+          fi
 
   # Commit any newly built GeoJSON files
   CommitGeoJSON:
