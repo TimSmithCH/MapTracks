@@ -75,5 +75,5 @@ jobs:
   # Recreate the MapBox tileset
   TilesDeploy:
     needs: CommitGeoJSON
-    uses: TimSmithCH/MapTracks/.github/workflows/TilesDeploy.yml
+    uses: ./.github/workflows/TilesDeploy.yml
 
