@@ -54,7 +54,7 @@ jobs:
   CommitGeoJSON:
     needs: GeoJsonBuild
     runs-on: macos-latest
-    if: ${{ steps.chain.outputs.run_commit == true }}
+    if: ${{ needs.GeoJsonBuild.steps.chain.outputs.run_commit == true }}
     steps:
       - name: Commit and push to Master
         run: |
