@@ -47,9 +47,12 @@ jobs:
         run: |
           if ! git diff --quiet --exit-code tracks/1_display; then
             echo "run_commit=true" >> $GITHUB_OUTPUT
+            echo ">> Success"
           else
             echo "run_commit=false" >> $GITHUB_OUTPUT
+            echo ">> Failure"
           fi
+          echo ">> Job done <<"
 
   # Commit any newly built GeoJSON files
   CommitGeoJSON:
