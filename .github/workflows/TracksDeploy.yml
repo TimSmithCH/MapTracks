@@ -24,7 +24,7 @@ jobs:
     name: Generate Aggregate Deploy
     runs-on: macos-latest
     outputs:
-      signal: ${{ steps.chain.outputs.status }}
+      signal: ${{ steps.chain.outputs.run_commit }}
     steps:
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
@@ -46,15 +46,15 @@ jobs:
         id: chain
         run: |
           if ! git diff --quiet --exit-code tracks/1_display; then
-            echo "::set-output status=run_commit::true"
+            echo "::set-output name=run_commit::true"
           else
-            echo "::set-output status=run_commit::false"
+            echo "::set-output name=run_commit::false"
 
   # Commit any newly built GeoJSON files
   CommitGeoJSON:
     needs: GeoJsonBuild
     runs-on: macos-latest
-    if: steps.chain.outputs.status == true
+    if: ${{ steps.chain.outputs.run_commit == true }}
     steps:
       - name: Commit and push to Master
         run: |
