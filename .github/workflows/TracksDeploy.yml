@@ -23,8 +23,8 @@ jobs:
   GeoJsonBuild:
     name: Generate Aggregate Deploy
     runs-on: macos-latest
-    outputs:
-      signal: ${{ steps.chain.outputs.run_commit }}
+    #outputs:
+    #signal: ${{ steps.chain.outputs.run_commit }}
     steps:
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
@@ -46,9 +46,9 @@ jobs:
         id: chain
         run: |
           if ! git diff --quiet --exit-code tracks/1_display; then
-            echo "::set-output name=run_commit::true"
+            echo "run_commit=true" >> $GITHUB_OUTPUT
           else
-            echo "::set-output name=run_commit::false"
+            echo "run_commit=false" >> $GITHUB_OUTPUT
 
   # Commit any newly built GeoJSON files
   CommitGeoJSON:
