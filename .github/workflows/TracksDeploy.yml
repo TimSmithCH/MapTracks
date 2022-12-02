@@ -52,7 +52,7 @@ jobs:
             git add tracks/1_display 1>&2
             git add tracks/2_geojson 1>&2
             git status -s 1>&2
-            git commit -m ${{ github.event.head_commit.message }} 1>&2
+            git commit -m "${{ github.event.head_commit.message }}" 1>&2
             git push 1>&2
           else
             echo ">>> No new files to commit"
