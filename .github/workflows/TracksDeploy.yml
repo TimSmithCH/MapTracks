@@ -47,33 +47,21 @@ jobs:
         id: chain
         run: |
           if ! git diff --quiet --exit-code tracks/1_display; then
-            echo "run_commit=true" >> $GITHUB_OUTPUT
-            echo ">> Success"
+            echo ">>> New GeoJSON files to commit"
+            # Push the modified GeoJSON files
+            git add tracks/1_display 1>&2
+            git add tracks/2_geojson 1>&2
+            git status -s 1>&2
+            git commit -m ${{ github.event.head_commit.message }} 1>&2
+            git push 1>&2
           else
-            echo "run_commit=false" >> $GITHUB_OUTPUT
-            echo ">> Failure"
+            echo ">>> No new files to commit"
           fi
-          echo ">> Job done <<"
-          exit 0
-
-  # Commit any newly built GeoJSON files
-  CommitGeoJSON:
-    needs: GeoJsonBuild
-    runs-on: macos-latest
-    #if: ${{ needs.GeoJsonBuild.outputs.run_commit == true }}
-    steps:
-      - name: Commit and push to Master
-        run: |
-          # Push the modified GeoJSON files
-          git add tracks/1_display 1>&2
-          git add tracks/2_geojson 1>&2
-          git status -s 1>&2
-          git commit -m ${{ github.event.head_commit.message }} 1>&2
-          git push 1>&2
+          #exit 0
 
   # Deploy to GitHub Pages MapTracks website
   DeployPages:
-    needs: CommitGeoJSON
+    needs: GeoJsonBuild
     runs-on: macos-latest
     environment:
       name: github-pages
@@ -85,6 +73,6 @@ jobs:
 
   # Recreate the MapBox tileset
   TilesDeploy:
-    needs: CommitGeoJSON
+    needs: GeoJsonBuild
     uses: ./.github/workflows/TilesDeploy.yml
 
