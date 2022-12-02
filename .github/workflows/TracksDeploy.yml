@@ -23,8 +23,9 @@ jobs:
   GeoJsonBuild:
     name: Generate Aggregate Deploy
     runs-on: macos-latest
-    #outputs:
-    #signal: ${{ steps.chain.outputs.run_commit }}
+    # Map step output to job output
+    outputs:
+      run_commit: ${{ steps.chain.outputs.run_commit }}
     steps:
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
@@ -59,7 +60,7 @@ jobs:
   CommitGeoJSON:
     needs: GeoJsonBuild
     runs-on: macos-latest
-    if: ${{ needs.GeoJsonBuild.steps.chain.outputs.run_commit == true }}
+    if: ${{ needs.GeoJsonBuild.outputs.run_commit == true }}
     steps:
       - name: Commit and push to Master
         run: |
