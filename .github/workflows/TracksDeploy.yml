@@ -53,6 +53,7 @@ jobs:
             echo ">> Failure"
           fi
           echo ">> Job done <<"
+          exit 0
 
   # Commit any newly built GeoJSON files
   CommitGeoJSON:
