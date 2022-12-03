@@ -58,6 +58,8 @@ do
     #tilesets add-source --token $TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson
     if [[ "$DRYRUN" == "false" ]] ; then
       tilesets upload-source --token $TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson --replace
+    else
+      echo "tilesets upload-source --token $TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson --replace"
     fi
   else
     printf "  .\n"

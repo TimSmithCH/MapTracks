@@ -62,17 +62,11 @@ jobs:
   # Deploy to GitHub Pages MapTracks website
   DeployPages:
     needs: GeoJsonBuild
-    runs-on: macos-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+    uses: ./.github/workflows/PagesDeploy.yml
 
   # Recreate the MapBox tileset
   TilesDeploy:
     needs: GeoJsonBuild
     uses: ./.github/workflows/TilesDeploy.yml
+    secrets: inherit
 
