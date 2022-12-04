@@ -57,7 +57,7 @@ jobs:
           else
             echo ">>> No new files to commit"
           fi
-          #exit 0
+          exit 0
 
   # Deploy to GitHub Pages MapTracks website
   DeployPages:
