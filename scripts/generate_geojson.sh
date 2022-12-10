@@ -57,8 +57,9 @@ do
       printf "."
     fi
   done
-  if [[ "$MODIFIED" == "true" ]] ; then
-    fileSUMM=tracks/1_display/${type}_tracks.geojson
+  # Generate the summary file when necessary
+  fileSUMM=tracks/1_display/${type}_tracks.geojson
+  if [[ "$MODIFIED" == "true" || ! -f $fileSUMM ]] ; then
     printf "\n+++ Generating aggregate: $fileSUMM +++\n"
     python scripts/geojsons_merge.py -d tracks/2_geojson/$type -o $fileSUMM
   fi
