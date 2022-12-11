@@ -1,4 +1,20 @@
 #!/bin/bash
+# -*- coding: utf-8 -*-
+#-------------------------------------------------------------------------------
+#
+# DESCRIPTION
+#    Check all GPX files have up-to-date generated GeoJSON versions and that no
+#    GeoJSON files exist for deleted GPX files
+#
+# EXAMPLES
+#    ./geojson_sanity_check.sh
+#
+# IMPLEMENTATION
+#    Author       Tim Smith
+#    Copyright    Copyright (c) Tim Smith
+#    Licence      GNU General Public License
+#
+#-------------------------------------------------------------------------------
 set -e   # Exit with nonzero exit code if anything fails
 #set -x   # Debug mode to echo commands
 
