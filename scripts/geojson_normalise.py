@@ -22,15 +22,18 @@ for mpath in filename:
 
     # If the track is split into segments, then make segment styles alternate
     if len(gj['features']) > 1:
-        opacity_toggle = gj['features'][0]['properties']['desc']
+        opacity_toggle = "0.0"   # Initialise
         for f in gj['features'][1:]:
             # Dont touch the waypoints, only the tracks!
             if f['geometry']['type'] == "LineString":
-                if opacity_toggle == "1.0":
-                    opacity_toggle = "0.5"
+                if opacity_toggle == "0.0":   # First one found
+                    opacity_toggle = f['properties']['desc']
                 else:
-                    opacity_toggle = "1.0"
-                f['properties']['desc'] = opacity_toggle
+                    if opacity_toggle == "1.0":
+                        opacity_toggle = "0.5"
+                    else:
+                        opacity_toggle = "1.0"
+                    f['properties']['desc'] = opacity_toggle
         print("Set alternating opacity (100%/50%) in filename {0:48s}".format(fname))
         modified = True
 
