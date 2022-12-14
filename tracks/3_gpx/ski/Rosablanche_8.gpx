@@ -6,7 +6,7 @@
  <trk>
   <name>Rosablanche_8</name>
   <cmt>2021-04-06</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.084599" lon="7.301249">
@@ -3429,6 +3429,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078512" lon="7.301535">
     <ele>2728.3</ele>
     <time>2021-04-06T09:07:27Z</time>
@@ -11619,6 +11621,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.074018" lon="7.307966">
     <ele>2942.4</ele>
     <time>2021-04-06T09:48:23Z</time>
@@ -13809,6 +13813,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.07179" lon="7.322577">
     <ele>2760.5</ele>
     <time>2021-04-06T09:55:52Z</time>

@@ -6,7 +6,7 @@
  <trk>
   <name>Strahlhorn</name>
   <cmt>2022-05-22</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.06002" lon="7.934898">
@@ -4909,6 +4909,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.054879" lon="7.930082">
     <ele>2920.4</ele>
     <time>2022-05-22T02:41:32Z</time>
@@ -48339,8 +48341,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.014744" lon="7.896374">
     <ele>4029.2</ele>
     <time>2022-05-22T06:31:12Z</time>
@@ -53241,6 +53241,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.013355" lon="7.901746">
     <ele>4159.2</ele>
     <time>2022-05-22T06:59:47Z</time>
@@ -63311,8 +63313,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.042855" lon="7.908733">
     <ele>3208.4</ele>
     <time>2022-05-22T07:35:54Z</time>
@@ -68213,6 +68213,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.055045" lon="7.930139">
     <ele>2919.4</ele>
     <time>2022-05-22T07:54:02Z</time>
@@ -71173,8 +71175,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.057541" lon="7.931268">
     <ele>2939.4</ele>
     <time>2022-05-22T08:11:30Z</time>
@@ -76075,6 +76075,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.060074" lon="7.935017">
     <ele>3049.4</ele>
     <time>2022-05-22T08:38:33Z</time>
@@ -104815,6 +104817,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.10522" lon="7.924629">
     <ele>1873.2</ele>
     <time>2022-05-22T11:31:57Z</time>

@@ -6,7 +6,7 @@
  <trk>
   <name>Verbier_Pistes_5</name>
   <cmt>2018-11-03</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.101826" lon="7.276985">
@@ -982,8 +982,6 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.102896" lon="7.27882">
     <ele>2733.4</ele>
     <time>2018-11-03T13:43:35Z</time>
@@ -2237,6 +2235,8 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.105606" lon="7.282629">
     <ele>2549.2</ele>
     <time>2018-11-03T13:54:08Z</time>
@@ -6325,6 +6325,8 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.102862" lon="7.278782">
     <ele>2732.2</ele>
     <time>2018-11-03T14:35:09Z</time>
@@ -7382,6 +7384,8 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.099234" lon="7.26906">
     <ele>2717.8</ele>
     <time>2018-11-03T14:43:30Z</time>
@@ -7578,6 +7582,8 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.099322" lon="7.268558">
     <ele>2717.4</ele>
     <time>2018-11-03T14:44:55Z</time>
@@ -8663,6 +8669,8 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.104446" lon="7.269473">
     <ele>2541.0</ele>
     <time>2018-11-03T14:56:52Z</time>
@@ -8747,6 +8755,8 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.099202" lon="7.269109">
     <ele>2717.0</ele>
     <time>2018-11-03T15:00:19Z</time>
@@ -11218,6 +11228,8 @@
      <gpxtpx:TrackPointExtension></gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078989" lon="7.214541">
     <ele>845.0</ele>
     <time>2018-11-03T15:31:08Z</time>

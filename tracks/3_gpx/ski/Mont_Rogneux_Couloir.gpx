@@ -6,7 +6,7 @@
  <trk>
   <name>Mont_Rogneux_Couloir</name>
   <cmt>2020-01-25</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.050188" lon="7.183517">
@@ -679,6 +679,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.045958" lon="7.181749">
     <ele>2043.6</ele>
     <time>2020-01-25T08:44:26Z</time>
@@ -54871,6 +54873,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.061319" lon="7.199868">
     <ele>1557.4</ele>
     <time>2020-01-25T13:04:02Z</time>
@@ -56231,6 +56235,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.061167" lon="7.194614">
     <ele>1706.0</ele>
     <time>2020-01-25T13:07:40Z</time>

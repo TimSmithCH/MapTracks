@@ -6,7 +6,7 @@
  <trk>
   <name>Aiguille_d_Arpette_2</name>
   <cmt>2021-04-02</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.021401" lon="7.103205">
@@ -4549,6 +4549,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.022255" lon="7.074484">
     <ele>1882.8</ele>
     <time>2021-04-02T07:43:38Z</time>
@@ -58781,6 +58783,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.032117" lon="7.106522">
     <ele>1500.6</ele>
     <time>2021-04-02T12:06:04Z</time>

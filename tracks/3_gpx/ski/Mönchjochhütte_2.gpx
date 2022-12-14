@@ -6,7 +6,7 @@
  <trk>
   <name>Mönchjochhütte_2</name>
   <cmt>2022-05-12</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.521869" lon="8.114433">
@@ -2789,6 +2789,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.52163" lon="8.111477">
     <ele>2959.6</ele>
     <time>2022-05-12T04:47:05Z</time>
@@ -76753,6 +76755,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.554605" lon="8.005545">
     <ele>3635.2</ele>
     <time>2022-05-12T11:29:57Z</time>

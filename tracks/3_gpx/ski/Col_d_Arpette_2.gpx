@@ -6,7 +6,7 @@
  <trk>
   <name>Col_d_Arpette_2</name>
   <cmt>2022-02-27</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.021476" lon="7.103234">
@@ -2799,6 +2799,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.024268" lon="7.074142">
     <ele>1832.1</ele>
     <time>2022-02-27T08:45:19Z</time>
@@ -42879,8 +42881,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.004863" lon="7.057446">
     <ele>2936.9</ele>
     <time>2022-02-27T12:33:16Z</time>
@@ -45671,6 +45671,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.00488" lon="7.057243">
     <ele>2940.1</ele>
     <time>2022-02-27T12:53:31Z</time>
@@ -61191,6 +61193,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.032191" lon="7.106188">
     <ele>1499.9</ele>
     <time>2022-02-27T14:02:00Z</time>

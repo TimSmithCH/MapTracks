@@ -6,7 +6,7 @@
  <trk>
   <name>Col_du_Gentiane_1</name>
   <cmt>2018-11-25</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.092326" lon="7.269067">
@@ -3299,6 +3299,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.084796" lon="7.275478">
     <ele>2352.4</ele>
     <time>2018-11-25T10:06:24Z</time>
@@ -30381,6 +30383,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.084901" lon="7.275393">
     <ele>2361.0</ele>
     <time>2018-11-25T12:13:25Z</time>
@@ -34691,6 +34695,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.089171" lon="7.267899">
     <ele>2469.2</ele>
     <time>2018-11-25T12:35:30Z</time>
@@ -36921,6 +36927,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.09115" lon="7.253491">
     <ele>2204.6</ele>
     <time>2018-11-25T12:44:36Z</time>

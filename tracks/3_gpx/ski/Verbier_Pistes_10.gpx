@@ -6,7 +6,7 @@
  <trk>
   <name>Verbier_Pistes_10</name>
   <cmt>2018-02-25</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>2</type>
   <trkseg>
    <trkpt lat="46.087665" lon="7.264911">
@@ -1689,6 +1689,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.091211" lon="7.253401">
     <ele>2220.6</ele>
     <time>2018-02-25T09:32:10Z</time>
@@ -1849,6 +1851,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.099597" lon="7.268747">
     <ele>2754.6</ele>
     <time>2018-02-25T09:42:53Z</time>
@@ -4689,6 +4693,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.079904" lon="7.269995">
     <ele>2289.4</ele>
     <time>2018-02-25T09:49:42Z</time>
@@ -4869,6 +4875,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.079942" lon="7.318359">
     <ele>3353.8</ele>
     <time>2018-02-25T11:03:43Z</time>
@@ -7569,6 +7577,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.088352" lon="7.302079">
     <ele>2898.8</ele>
     <time>2018-02-25T11:13:00Z</time>
@@ -7619,6 +7629,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078653" lon="7.316658">
     <ele>3369.0</ele>
     <time>2018-02-25T11:34:12Z</time>
@@ -11459,6 +11471,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.084791" lon="7.300744">
     <ele>2941.6</ele>
     <time>2018-02-25T11:45:10Z</time>
@@ -11499,6 +11513,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078703" lon="7.316243">
     <ele>3384.0</ele>
     <time>2018-02-25T11:55:24Z</time>
@@ -14249,6 +14265,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.084921" lon="7.302124">
     <ele>2979.6</ele>
     <time>2018-02-25T12:04:09Z</time>
@@ -14279,6 +14297,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078631" lon="7.316238">
     <ele>3389.8</ele>
     <time>2018-02-25T12:16:13Z</time>
@@ -21389,6 +21409,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.080662" lon="7.267845">
     <ele>2455.0</ele>
     <time>2018-02-25T12:55:34Z</time>
@@ -21419,6 +21441,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.089183" lon="7.262662">
     <ele>2588.2</ele>
     <time>2018-02-25T12:59:16Z</time>
@@ -22449,6 +22473,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.091211" lon="7.253401">
     <ele>2476.6</ele>
     <time>2018-02-25T13:02:07Z</time>
@@ -22519,6 +22545,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.097463" lon="7.2791">
     <ele>3188.6</ele>
     <time>2018-02-25T13:22:09Z</time>
@@ -25479,6 +25507,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.104313" lon="7.269405">
     <ele>2934.6</ele>
     <time>2018-02-25T13:32:17Z</time>
@@ -25549,6 +25579,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.097451" lon="7.279107">
     <ele>3302.0</ele>
     <time>2018-02-25T13:49:59Z</time>
@@ -29039,6 +29071,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.104313" lon="7.269405">
     <ele>2934.6</ele>
     <time>2018-02-25T13:59:17Z</time>
@@ -29109,6 +29143,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.097658" lon="7.279357">
     <ele>3380.2</ele>
     <time>2018-02-25T14:20:46Z</time>
@@ -32449,6 +32485,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.099264" lon="7.268978">
     <ele>2934.6</ele>
     <time>2018-02-25T14:31:27Z</time>
@@ -43721,6 +43759,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078298" lon="7.213951">
     <ele>1307.8</ele>
     <time>2018-02-25T16:12:20Z</time>

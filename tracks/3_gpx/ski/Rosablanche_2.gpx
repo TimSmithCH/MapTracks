@@ -6,7 +6,7 @@
  <trk>
   <name>Rosablanche_2</name>
   <cmt>2020-01-01</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.099533" lon="7.268358">
@@ -3199,6 +3199,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.079963" lon="7.270066">
     <ele>2278.0</ele>
     <time>2020-01-01T08:16:39Z</time>
@@ -3279,6 +3281,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.084643" lon="7.301133">
     <ele>2902.8</ele>
     <time>2020-01-01T08:34:58Z</time>
@@ -4989,6 +4993,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078873" lon="7.301233">
     <ele>2735.0</ele>
     <time>2020-01-01T08:41:11Z</time>
@@ -14279,6 +14285,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.074397" lon="7.307576">
     <ele>2951.8</ele>
     <time>2020-01-01T09:32:05Z</time>
@@ -18169,6 +18177,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.071834" lon="7.323775">
     <ele>2762.8</ele>
     <time>2020-01-01T09:49:40Z</time>
@@ -70641,6 +70651,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.134994" lon="7.315939">
     <ele>1765.2</ele>
     <time>2020-01-01T14:07:40Z</time>

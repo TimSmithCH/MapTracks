@@ -6,7 +6,7 @@
  <trk>
   <name>Rosablanche_5</name>
   <cmt>2018-12-28</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.084689" lon="7.301708">
@@ -2469,6 +2469,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.077517" lon="7.302354">
     <ele>2755.0</ele>
     <time>2018-12-28T08:58:08Z</time>
@@ -11089,6 +11091,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.0745" lon="7.307784">
     <ele>2952.8</ele>
     <time>2018-12-28T09:39:51Z</time>
@@ -14389,6 +14393,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.071545" lon="7.324052">
     <ele>2773.0</ele>
     <time>2018-12-28T09:51:00Z</time>
@@ -61641,6 +61647,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.134976" lon="7.31586">
     <ele>1766.4</ele>
     <time>2018-12-28T13:27:40Z</time>

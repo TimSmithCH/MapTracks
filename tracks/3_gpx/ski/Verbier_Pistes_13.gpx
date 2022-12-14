@@ -6,7 +6,7 @@
  <trk>
   <name>Verbier_Pistes_13</name>
   <cmt>2018-03-04</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>2</type>
   <trkseg>
    <trkpt lat="46.079644" lon="7.212328">
@@ -839,6 +839,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.07868" lon="7.214128">
     <ele>1387.8</ele>
     <time>2018-03-04T07:35:21Z</time>
@@ -1089,6 +1091,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.09669" lon="7.27935">
     <ele>3569.2</ele>
     <time>2018-03-04T08:37:41Z</time>
@@ -3719,6 +3723,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.09648" lon="7.278798">
     <ele>3207.2</ele>
     <time>2018-03-04T08:48:40Z</time>
@@ -6691,6 +6697,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.104313" lon="7.269405">
     <ele>3311.4</ele>
     <time>2018-03-04T09:32:50Z</time>
@@ -6721,6 +6729,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.098707" lon="7.27045">
     <ele>3422.8</ele>
     <time>2018-03-04T09:36:54Z</time>
@@ -12581,6 +12591,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.078354" lon="7.213762">
     <ele>1667.0</ele>
     <time>2018-03-04T10:04:15Z</time>

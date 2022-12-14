@@ -6,7 +6,7 @@
  <trk>
   <name>Col_du_Gentiane</name>
   <cmt>2019-11-17</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>3</type>
   <trkseg>
    <trkpt lat="46.099274" lon="7.268525">
@@ -1073,6 +1073,8 @@
     <ele>2309.6</ele>
     <time>2019-11-17T10:48:54Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.083459" lon="7.270834">
     <ele>2310.2</ele>
     <time>2019-11-17T10:55:33Z</time>
@@ -5667,6 +5669,8 @@
     <ele>1525.1</ele>
     <time>2019-11-17T13:55:27Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.092437" lon="7.233515">
     <ele>1527.1</ele>
     <time>2019-11-17T13:56:30Z</time>
