@@ -6,7 +6,7 @@
  <trk>
   <name>Roccia_Nera</name>
   <cmt>2021-08-10</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.937321" lon="7.729291">
@@ -6199,6 +6199,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.934165" lon="7.752772">
     <ele>3743.6</ele>
     <time>2021-08-10T07:40:59Z</time>

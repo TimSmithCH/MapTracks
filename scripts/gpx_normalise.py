@@ -52,7 +52,6 @@ def get_new_stat_points(self):
     for n, elevation in enumerate(elevations[2:],start=2):
         next_step = elevation - elevations[sp[spi]]
         last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
-        #print("last {} next {} eles {} {} {}".format(last_step,next_step,elevation,elevations[sp[spi]],elevations[sp[spi-1]]))
         # If in same direction as last inter-stationary-point trend
         if (last_step * next_step) > 0:
             # Update last stationary-point with current
@@ -76,7 +75,7 @@ def get_new_stat_points(self):
         if (sp[i] - sp[i-1]) < 2:
             # There are spare points in the previous track segment
             if (sp[i-1] - sp[i-2]) > 2:
-                # steel one
+                # steal one
                 sp[i-1] -= 1
     return sp
 
@@ -183,11 +182,11 @@ for mpath in mpaths:
         nseg = 0
         description = ""
         old_stat_points = get_old_stat_points(gpx.tracks[0])
-        if VERBOSE : print("Old length {}, static point {}".format(len(old_stat_points),old_stat_points))
+        if VERBOSE : print("Old length {}, static points {}".format(len(old_stat_points),old_stat_points))
         stat_points = get_new_stat_points(gpx.tracks[0])
-        if VERBOSE : print("New length {}, static point {}".format(len(stat_points),stat_points))
+        if VERBOSE : print("New length {}, static points {}".format(len(stat_points),stat_points))
         if not np.array_equal(old_stat_points,stat_points):
-            # Reassemble all the segments back into one
+            # If we need to re-do splitting, start by reassembling the segments back into one
             lseg = len(gpx.tracks[0].segments)
             if lseg > 1:
                 for i in reversed(range(lseg-1)):
@@ -208,12 +207,13 @@ for mpath in mpaths:
                         if description == "":
                             description = "0.5"   # A DOWN segment
                     if not newlined: print("\n")
-                    if VERBOSE : print("  Splitting track segment {} at elevation {} (point {}) in file {}".format(nseg,seg.points[nxt].elevation,nxt,bname))
+                    if VERBOSE : print("  [{}] Splitting segment {} at point {} (track at {}) with elevation diff {:.1f}".format(bname,nseg,new_seg_len-1,nxt,ele_diff))
                     gpx.split(0,nseg,new_seg_len-1)   # third argument is pointer to array starting at zero, so length-1
                     nseg += 1   # Splitting added a segment
                     modified = True
                 newlined = True
             nseg += 1   # Array starts from 0 so count needs 1 more
+        # And write them  back out to the same file
         if modified:
             gpx.tracks[0].description = description
             print("Split track into {} segments in file {}".format(nseg,bname))

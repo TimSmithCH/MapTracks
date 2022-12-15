@@ -6,7 +6,7 @@
  <trk>
   <name>Stony_Brook_Smithtown_Bay</name>
   <cmt>2014-03-31</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>CYCLING_SPORT</type>
   <trkseg>
    <trkpt lat="40.913347536697984" lon="-73.11817872337997">
@@ -3249,6 +3249,8 @@
     <ele>-36.6</ele>
     <time>2014-03-31T23:25:33Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="40.951360473409295" lon="-73.1270238943398">
     <ele>-36.4</ele>
     <time>2014-03-31T23:25:39Z</time>

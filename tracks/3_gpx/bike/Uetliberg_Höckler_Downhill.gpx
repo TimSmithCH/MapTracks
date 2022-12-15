@@ -6,7 +6,7 @@
  <trk>
   <name>Uetliberg_Höckler_Downhill</name>
   <cmt>2021-05-16</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="47.369889" lon="8.562245">
@@ -2000,6 +2000,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.366075" lon="8.545281">
     <ele>404.2</ele>
     <time>2021-05-16T09:33:03Z</time>

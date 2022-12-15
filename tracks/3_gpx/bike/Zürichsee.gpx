@@ -6,7 +6,7 @@
  <trk>
   <name>Zürichsee</name>
   <cmt>2022-05-26</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="47.370018" lon="8.562096">
@@ -3815,6 +3815,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.357173" lon="8.534662">
     <ele>437.4</ele>
     <time>2022-05-26T10:13:07Z</time>

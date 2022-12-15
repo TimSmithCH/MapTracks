@@ -6,7 +6,7 @@
  <trk>
   <name>Pierre_Avoi</name>
   <cmt>2016-08-17</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <trkseg>
    <trkpt lat="46.079962" lon="7.212149">
     <ele>841.0</ele>
@@ -3332,6 +3332,8 @@
     <ele>782.0</ele>
     <time>2016-08-17T09:38:54Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.081067" lon="7.174023">
     <ele>782.0</ele>
     <time>2016-08-17T09:38:56Z</time>
@@ -30326,6 +30328,8 @@
     <ele>823.0</ele>
     <time>2016-08-17T16:05:19Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.081292" lon="7.213263">
     <ele>823.2</ele>
     <time>2016-08-17T16:05:22Z</time>

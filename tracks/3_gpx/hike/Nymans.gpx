@@ -6,7 +6,7 @@
  <trk>
   <name>Nymans</name>
   <cmt>2019-01-12</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>10</type>
   <trkseg>
    <trkpt lat="51.052422" lon="-0.199449">
@@ -17,6 +17,8 @@
     <ele>150.3</ele>
     <time>2019-01-12T10:30:30Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.052415" lon="-0.199476">
     <ele>150.3</ele>
     <time>2019-01-12T10:30:31Z</time>

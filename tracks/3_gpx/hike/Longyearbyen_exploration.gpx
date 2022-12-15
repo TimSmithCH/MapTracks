@@ -6,7 +6,7 @@
  <trk>
   <name>Longyearbyen_exploration</name>
   <cmt>2018-02-13</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <trkseg>
    <trkpt lat="78.211624" lon="15.623382">
     <ele>254.2</ele>
@@ -13288,6 +13288,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="78.22359" lon="15.668">
     <ele>181.6</ele>
     <time>2018-02-13T09:58:08Z</time>
@@ -43177,6 +43179,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="78.211052" lon="15.627716">
     <ele>301.2</ele>
     <time>2018-02-13T13:48:37Z</time>

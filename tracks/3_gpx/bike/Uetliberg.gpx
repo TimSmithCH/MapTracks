@@ -6,7 +6,7 @@
  <trk>
   <name>Uetliberg</name>
   <cmt>2021-05-13</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="47.369949" lon="8.562045">
@@ -1859,6 +1859,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.374354" lon="8.543011">
     <ele>403.6</ele>
     <time>2021-05-13T15:41:12Z</time>

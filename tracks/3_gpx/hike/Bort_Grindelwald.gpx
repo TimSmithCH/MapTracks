@@ -6,7 +6,7 @@
  <trk>
   <name>Bort_Grindelwald</name>
   <cmt>2020-10-04</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.6269" lon="8.044131">
@@ -1059,6 +1059,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.624371" lon="8.041901">
     <ele>1057.4</ele>
     <time>2020-10-04T08:37:32Z</time>
@@ -37941,6 +37943,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.627221" lon="8.045661">
     <ele>1101.8</ele>
     <time>2020-10-04T11:20:12Z</time>

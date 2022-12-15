@@ -6,6 +6,7 @@
  <trk>
   <name>2993842897.Morning_Ride</name>
   <cmt>2020-01-08</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331822" lon="6.194358">
@@ -11188,6 +11189,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.233284" lon="6.044028">
     <ele>457.0</ele>
     <time>2020-01-08T07:10:25Z</time>

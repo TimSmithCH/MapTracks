@@ -29,6 +29,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.445401" lon="-0.152554">
     <ele>28.4</ele>
     <time>2022-06-18T05:30:08Z</time>
@@ -11269,7 +11271,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-
    <trkpt lat="51.442817" lon="-0.153047">
     <ele>29.8</ele>
     <time>2022-06-18T06:46:41Z</time>

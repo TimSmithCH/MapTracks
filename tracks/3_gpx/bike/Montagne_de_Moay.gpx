@@ -6,7 +6,7 @@
  <trk>
   <name>Montagne_de_Moay</name>
   <cmt>2021-06-19</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.0797" lon="7.212528">
@@ -6629,6 +6629,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.075149" lon="7.159523">
     <ele>732.8</ele>
     <time>2021-06-19T09:38:44Z</time>
@@ -73175,6 +73177,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.07971" lon="7.212474">
     <ele>849.0</ele>
     <time>2021-06-19T14:47:16Z</time>

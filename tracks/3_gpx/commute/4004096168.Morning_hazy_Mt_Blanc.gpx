@@ -6,6 +6,7 @@
  <trk>
   <name>4004096168.Morning_hazy_Mt_Blanc</name>
   <cmt>2020-09-03</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331748" lon="6.194366">
@@ -8808,6 +8809,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.267194" lon="6.08991">
     <ele>475.8</ele>
     <time>2020-09-03T05:32:38Z</time>

@@ -6,7 +6,7 @@
  <trk>
   <name>Weg_der_Schweiz</name>
   <cmt>2014-07-22</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <trkseg>
    <trkpt lat="46.975783" lon="8.585913">
     <ele>800.5</ele>
@@ -3032,6 +3032,8 @@
     <ele>496.6</ele>
     <time>2014-07-22T10:55:00Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.970053" lon="8.592404">
     <ele>497.3</ele>
     <time>2014-07-22T10:55:02Z</time>

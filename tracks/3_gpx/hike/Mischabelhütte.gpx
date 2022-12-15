@@ -6,7 +6,7 @@
  <trk>
   <name>Mischabelhütte</name>
   <cmt>2022-07-07</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.115003" lon="7.916252">
@@ -2149,6 +2149,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.113245" lon="7.909161">
     <ele>2293.8</ele>
     <time>2022-07-07T10:59:21Z</time>
@@ -30659,6 +30661,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.109378" lon="7.889002">
     <ele>3316.0</ele>
     <time>2022-07-07T13:28:32Z</time>

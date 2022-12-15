@@ -6,6 +6,7 @@
  <trk>
   <name>Mount_Ainslie</name>
   <cmt>2019-11-08</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="-35.275094" lon="149.130179">
@@ -7356,6 +7357,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-35.269695" lon="149.158795">
     <ele>867.8</ele>
     <time>2019-11-08T20:45:23Z</time>
@@ -14264,6 +14267,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-35.27592" lon="149.131442">
     <ele>588.2</ele>
     <time>2019-11-08T21:10:43Z</time>

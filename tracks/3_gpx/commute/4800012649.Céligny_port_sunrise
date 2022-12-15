@@ -4,8 +4,9 @@
   <time>2021-02-17T06:23:38Z</time>
  </metadata>
  <trk>
-  <name>4800012649_Céligny_port_sunrise</name>
+  <name>4800012649</name>
   <cmt>2021-02-17</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.33183" lon="6.19425">
@@ -2978,6 +2979,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.365551" lon="6.178365">
     <ele>475.2</ele>
     <time>2021-02-17T06:39:54Z</time>
@@ -7798,6 +7801,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.348394" lon="6.208024">
     <ele>371.4</ele>
     <time>2021-02-17T07:02:29Z</time>

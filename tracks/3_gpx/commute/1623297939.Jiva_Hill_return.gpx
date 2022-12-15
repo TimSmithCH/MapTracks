@@ -6,6 +6,7 @@
  <trk>
   <name>1623297939.Jiva_Hill_return</name>
   <cmt>2018-06-07</cmt>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.27163" lon="6.021866">
@@ -5008,6 +5009,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.23359" lon="6.05155">
     <ele>427.2</ele>
     <time>2018-06-07T16:15:49Z</time>

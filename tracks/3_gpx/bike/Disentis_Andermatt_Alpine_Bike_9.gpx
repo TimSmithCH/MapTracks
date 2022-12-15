@@ -6,7 +6,7 @@
  <trk>
   <name>Disentis_Andermatt_Alpine_Bike_9</name>
   <cmt>2019-07-21</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.705607" lon="8.854292">
@@ -1384,6 +1384,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.69543" lon="8.854208">
     <ele>1067.4</ele>
     <time>2019-07-21T07:46:06Z</time>
@@ -106055,6 +106057,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.635367" lon="8.59583">
     <ele>1423.2</ele>
     <time>2019-07-21T15:47:31Z</time>

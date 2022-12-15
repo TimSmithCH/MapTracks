@@ -8125,6 +8125,8 @@
     <ele>1512.0</ele>
     <time>2014-05-29T14:22:16Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.4293383" lon="6.1245974">
     <ele>1512.0</ele>
     <time>2014-05-29T14:22:18Z</time>
@@ -8345,8 +8347,6 @@
     <ele>1451.0</ele>
     <time>2014-05-29T14:28:12Z</time>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.4328066" lon="6.1325998">
     <ele>1443.8</ele>
     <time>2014-05-29T14:57:31Z</time>
@@ -13379,6 +13379,8 @@
     <ele>397.0</ele>
     <time>2014-05-29T16:03:50Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.3350428" lon="6.1954059">
     <ele>397.0</ele>
     <time>2014-05-29T16:03:53Z</time>

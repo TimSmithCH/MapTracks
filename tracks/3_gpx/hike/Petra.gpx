@@ -6,7 +6,7 @@
  <trk>
   <name>Petra</name>
   <cmt>2019-12-23</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="30.321946" lon="35.46608">
@@ -25119,6 +25119,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="30.330766" lon="35.440095">
     <ele>886.6</ele>
     <time>2019-12-23T12:03:41Z</time>
@@ -46811,6 +46813,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="30.331386" lon="35.439697">
     <ele>886.6</ele>
     <time>2019-12-23T13:38:06Z</time>
@@ -63751,6 +63755,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="30.326324" lon="35.46863">
     <ele>1068.8</ele>
     <time>2019-12-23T14:58:10Z</time>

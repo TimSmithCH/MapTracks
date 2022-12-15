@@ -6,7 +6,7 @@
  <trk>
   <name>Tour_de_Mayen</name>
   <cmt>2022-10-30</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.365339" lon="7.008327">
@@ -5129,6 +5129,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.366822" lon="7.01559">
     <ele>1920.0</ele>
     <time>2022-10-30T12:19:46Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>4731319812.Dawn_Ride</name>
   <cmt>2021-02-04</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331813" lon="6.194405">
@@ -8709,6 +8710,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.327969" lon="6.142451">
     <ele>479.0</ele>
     <time>2021-02-04T06:51:55Z</time>

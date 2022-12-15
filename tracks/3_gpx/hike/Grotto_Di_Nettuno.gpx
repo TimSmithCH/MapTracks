@@ -6,7 +6,7 @@
  <trk>
   <name>Grotto_Di_Nettuno</name>
   <cmt>2019-10-20</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="40.563507" lon="8.1634">
@@ -2899,6 +2899,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="40.565001" lon="8.160328">
     <ele>-3.8</ele>
     <time>2019-10-20T11:12:52Z</time>
@@ -7249,6 +7251,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="40.563385" lon="8.163387">
     <ele>106.6</ele>
     <time>2019-10-20T11:41:47Z</time>

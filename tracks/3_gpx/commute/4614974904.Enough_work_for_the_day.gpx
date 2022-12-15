@@ -6,6 +6,7 @@
  <trk>
   <name>4614974904.Enough_work_for_the_day</name>
   <cmt>2021-01-13</cmt>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.331743" lon="6.194371">
@@ -11624,6 +11625,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.321864" lon="6.136984">
     <ele>476.8</ele>
     <time>2021-01-13T16:52:53Z</time>

@@ -6,7 +6,7 @@
  <trk>
   <name>Cabane_de_Trient</name>
   <cmt>2020-07-04</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.000267" lon="7.118874">
@@ -4799,6 +4799,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.984817" lon="7.114733">
     <ele>1239.0</ele>
     <time>2020-07-04T08:04:19Z</time>
@@ -107161,6 +107163,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.011109" lon="7.119682">
     <ele>1199.8</ele>
     <time>2020-07-04T16:41:32Z</time>
@@ -113691,6 +113695,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.000289" lon="7.118831">
     <ele>1410.0</ele>
     <time>2020-07-04T17:08:34Z</time>

@@ -6,7 +6,7 @@
  <trk>
   <name>Gaiberg_4</name>
   <cmt>2022-04-30</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>10</type>
   <trkseg>
    <trkpt lat="49.366965" lon="8.756624">
@@ -2229,6 +2229,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="49.36788" lon="8.766053">
     <ele>183.2</ele>
     <time>2022-04-30T06:40:24Z</time>
@@ -7609,6 +7611,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="49.377279" lon="8.753891">
     <ele>322.8</ele>
     <time>2022-04-30T07:01:35Z</time>
@@ -13189,6 +13193,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="49.367588" lon="8.765668">
     <ele>182.8</ele>
     <time>2022-04-30T07:22:21Z</time>

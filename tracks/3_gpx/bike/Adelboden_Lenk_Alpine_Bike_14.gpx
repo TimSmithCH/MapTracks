@@ -6,7 +6,7 @@
  <trk>
   <name>Adelboden_Lenk_Alpine_Bike_14</name>
   <cmt>2019-08-09</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.492497" lon="7.558813">
@@ -1725,6 +1725,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.486521" lon="7.55345">
     <ele>1327.0</ele>
     <time>2019-08-09T08:40:10Z</time>
@@ -41558,6 +41560,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.458314" lon="7.442879">
     <ele>1107.8</ele>
     <time>2019-08-09T11:32:47Z</time>

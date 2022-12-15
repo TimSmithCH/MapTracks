@@ -6,7 +6,7 @@
  <trk>
   <name>Sucre</name>
   <cmt>2018-07-21</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="-19.051167" lon="-65.260423">
@@ -10332,6 +10332,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-19.041769" lon="-65.264723">
     <ele>2934.8</ele>
     <time>2018-07-21T16:05:02Z</time>

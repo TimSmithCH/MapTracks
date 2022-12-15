@@ -6,7 +6,7 @@
  <trk>
   <name>Zürich_1</name>
   <cmt>2022-05-27</cmt>
-  <desc>1.0</desc>
+  <desc>0.5</desc>
   <type>10</type>
   <trkseg>
    <trkpt lat="47.369731" lon="8.561855">
@@ -10199,6 +10199,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.366471" lon="8.544636">
     <ele>445.6</ele>
     <time>2022-05-27T10:34:25Z</time>
