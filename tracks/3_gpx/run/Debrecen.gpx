@@ -6,6 +6,7 @@
  <trk>
   <name>Debrecen</name>
   <cmt>2019-01-16</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="47.548957" lon="21.629669">
@@ -2483,6 +2484,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.555295" lon="21.632926">
     <ele>132.0</ele>
     <time>2019-01-16T06:38:32Z</time>

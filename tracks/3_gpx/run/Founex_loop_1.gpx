@@ -6,6 +6,7 @@
  <trk>
   <name>Founex_loop_1</name>
   <cmt>2015-01-04</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="46.331914" lon="6.19428">
@@ -16,6 +17,8 @@
     <ele>397.0</ele>
     <time>2015-01-04T11:35:54Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.331902" lon="6.194167">
     <ele>397.2</ele>
     <time>2015-01-04T11:35:56Z</time>

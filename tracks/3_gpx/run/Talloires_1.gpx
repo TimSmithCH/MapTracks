@@ -6,6 +6,7 @@
  <trk>
   <name>Talloires_1</name>
   <cmt>2016-11-11</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="45.841007" lon="6.21305">
@@ -1324,6 +1325,8 @@
     <ele>621.3</ele>
     <time>2016-11-11T06:09:55Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.843703" lon="6.2036">
     <ele>621.2</ele>
     <time>2016-11-11T06:10:01Z</time>
@@ -6308,6 +6311,8 @@
     <ele>448.2</ele>
     <time>2016-11-11T06:52:54Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.84062" lon="6.211042">
     <ele>448.2</ele>
     <time>2016-11-11T06:52:55Z</time>

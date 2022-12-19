@@ -6,6 +6,7 @@
  <trk>
   <name>Annecy_lake_front_1</name>
   <cmt>2014-11-13</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="45.903911" lon="6.144423">
     <ele>454.9</ele>
@@ -187,6 +188,8 @@
     <ele>455.9</ele>
     <time>2014-11-13T06:23:46Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.903736" lon="6.145236">
     <ele>455.9</ele>
     <time>2014-11-13T06:23:48Z</time>

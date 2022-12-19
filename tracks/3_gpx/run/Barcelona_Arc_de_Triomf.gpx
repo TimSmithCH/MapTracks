@@ -6,6 +6,7 @@
  <trk>
   <name>Barcelona_Arc_de_Triomf</name>
   <cmt>2017-04-06</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="41.392656" lon="2.16751">
     <ele>38.6</ele>
@@ -4819,6 +4820,8 @@
     <ele>41.0</ele>
     <time>2017-04-06T06:34:06Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="41.391845" lon="2.168543">
     <ele>40.7</ele>
     <time>2017-04-06T06:34:07Z</time>

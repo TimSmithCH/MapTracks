@@ -6,6 +6,7 @@
  <trk>
   <name>Dublin_tour</name>
   <cmt>2014-06-25</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="53.360829" lon="-6.253221">
     <ele>8.2</ele>
@@ -15,6 +16,8 @@
     <ele>8.2</ele>
     <time>2014-06-25T07:20:33Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="53.360782" lon="-6.253297">
     <ele>8.3</ele>
     <time>2014-06-25T07:20:39Z</time>

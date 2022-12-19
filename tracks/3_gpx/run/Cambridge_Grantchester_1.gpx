@@ -6,6 +6,7 @@
  <trk>
   <name>Cambridge_Grantchester_1</name>
   <cmt>2015-11-05</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="52.199034" lon="0.121483">
     <ele>16.8</ele>
@@ -159,6 +160,8 @@
     <ele>19.2</ele>
     <time>2015-11-05T08:36:07Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="52.200214" lon="0.120404">
     <ele>19.2</ele>
     <time>2015-11-05T08:36:08Z</time>

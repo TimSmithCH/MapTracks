@@ -6,6 +6,7 @@
  <trk>
   <name>Debrecen_University</name>
   <cmt>2019-01-17</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="47.548974" lon="21.629686">
@@ -8236,6 +8237,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="47.549756" lon="21.62742">
     <ele>111.2</ele>
     <time>2019-01-17T07:14:41Z</time>

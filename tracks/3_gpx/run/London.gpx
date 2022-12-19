@@ -6,6 +6,7 @@
  <trk>
   <name>London</name>
   <cmt>2015-05-06</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="51.498485" lon="-0.134339">
@@ -1336,6 +1337,8 @@
     <ele>3.0</ele>
     <time>2015-05-06T06:02:28Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.49462" lon="-0.122816">
     <ele>3.0</ele>
     <time>2015-05-06T06:02:30Z</time>

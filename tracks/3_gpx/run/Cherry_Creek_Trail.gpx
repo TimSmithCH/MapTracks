@@ -6,6 +6,7 @@
  <trk>
   <name>Cherry_Creek_Trail</name>
   <cmt>2016-09-14</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="39.747527" lon="-104.99264">
     <ele>1591.1</ele>
@@ -2299,6 +2300,8 @@
     <ele>1575.8</ele>
     <time>2016-09-14T13:26:12Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="39.75427" lon="-105.008526">
     <ele>1575.9</ele>
     <time>2016-09-14T13:26:14Z</time>

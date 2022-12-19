@@ -6,6 +6,7 @@
  <trk>
   <name>Commugny_loop</name>
   <cmt>2015-05-02</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.331672" lon="6.194308">
     <ele>396.3</ele>
@@ -4467,6 +4468,8 @@
     <ele>425.0</ele>
     <time>2015-05-02T14:52:38Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.327926" lon="6.180584">
     <ele>425.0</ele>
     <time>2015-05-02T14:52:39Z</time>

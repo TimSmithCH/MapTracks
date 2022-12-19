@@ -6,6 +6,7 @@
  <trk>
   <name>Athens_1</name>
   <cmt>2018-01-18</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="37.976192" lon="23.734906">
@@ -1724,6 +1725,8 @@
     <ele>252.8</ele>
     <time>2018-01-18T05:48:52Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="37.982108" lon="23.743981">
     <ele>252.5</ele>
     <time>2018-01-18T05:48:55Z</time>
@@ -3720,6 +3723,8 @@
     <ele>99.0</ele>
     <time>2018-01-18T06:05:25Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="37.976607" lon="23.734471">
     <ele>99.0</ele>
     <time>2018-01-18T06:05:27Z</time>

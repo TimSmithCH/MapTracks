@@ -6,6 +6,7 @@
  <trk>
   <name>Okinawa</name>
   <cmt>2015-04-14</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="26.453532" lon="127.806423">
     <ele>10.5</ele>
@@ -2539,6 +2540,8 @@
     <ele>68.4</ele>
     <time>2015-04-14T22:32:50Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="26.454619" lon="127.821291">
     <ele>68.1</ele>
     <time>2015-04-14T22:32:51Z</time>

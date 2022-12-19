@@ -6,6 +6,7 @@
  <trk>
   <name>Evian</name>
   <cmt>2017-11-10</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="46.396229" lon="6.59361">
     <ele>487.7</ele>
@@ -2087,6 +2088,8 @@
     <ele>632.2</ele>
     <time>2017-11-10T06:31:57Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.388254" lon="6.599574">
     <ele>632.1</ele>
     <time>2017-11-10T06:31:59Z</time>
@@ -3579,6 +3582,8 @@
     <ele>481.6</ele>
     <time>2017-11-10T06:40:15Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.396253" lon="6.593063">
     <ele>481.6</ele>
     <time>2017-11-10T06:40:16Z</time>

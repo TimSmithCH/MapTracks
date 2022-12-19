@@ -6,6 +6,7 @@
  <trk>
   <name>EMBL</name>
   <cmt>2016-11-29</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="52.082257" lon="0.18405">
     <ele>37.6</ele>
@@ -1439,6 +1440,8 @@
     <ele>33.0</ele>
     <time>2016-11-29T07:37:08Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="52.078739" lon="0.1806">
     <ele>33.0</ele>
     <time>2016-11-29T07:37:09Z</time>

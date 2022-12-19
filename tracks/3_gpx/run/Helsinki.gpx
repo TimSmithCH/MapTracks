@@ -6,6 +6,7 @@
  <trk>
   <name>Helsinki</name>
   <cmt>2015-03-25</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="60.161418" lon="24.923338">
@@ -5328,6 +5329,8 @@
     <ele>31.8</ele>
     <time>2015-03-25T05:34:34Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="60.164538" lon="24.938786">
     <ele>31.4</ele>
     <time>2015-03-25T05:34:36Z</time>

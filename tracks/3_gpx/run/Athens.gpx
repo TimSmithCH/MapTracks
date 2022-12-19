@@ -6,6 +6,7 @@
  <trk>
   <name>Athens</name>
   <cmt>2017-09-07</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="37.976519" lon="23.750059">
@@ -1664,6 +1665,8 @@
     <ele>248.0</ele>
     <time>2017-09-07T05:21:48Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="37.981924" lon="23.743404">
     <ele>248.0</ele>
     <time>2017-09-07T05:21:51Z</time>
@@ -4304,6 +4307,8 @@
     <ele>105.0</ele>
     <time>2017-09-07T05:42:45Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="37.97727" lon="23.750387">
     <ele>105.4</ele>
     <time>2017-09-07T05:42:46Z</time>

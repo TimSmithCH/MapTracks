@@ -6,6 +6,7 @@
  <trk>
   <name>Founex_loop_7</name>
   <cmt>2018-07-02</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.331811" lon="6.194332">
@@ -28,6 +29,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.33188" lon="6.194123">
     <ele>393.6</ele>
     <time>2018-07-02T10:07:58Z</time>

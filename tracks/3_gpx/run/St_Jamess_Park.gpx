@@ -6,6 +6,7 @@
  <trk>
   <name>St_Jamess_Park</name>
   <cmt>2015-04-21</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="51.507489" lon="-0.129066">
     <ele>22.2</ele>
@@ -27,6 +28,8 @@
     <ele>24.6</ele>
     <time>2015-04-21T05:53:33Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.507018" lon="-0.129475">
     <ele>23.8</ele>
     <time>2015-04-21T05:53:34Z</time>

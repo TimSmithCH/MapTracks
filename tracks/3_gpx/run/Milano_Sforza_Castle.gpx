@@ -6,6 +6,7 @@
  <trk>
   <name>Milano_Sforza_Castle</name>
   <cmt>2018-11-19</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="45.461183" lon="9.155077">
@@ -613,6 +614,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.463417" lon="9.158267">
     <ele>178.4</ele>
     <time>2018-11-19T07:23:40Z</time>

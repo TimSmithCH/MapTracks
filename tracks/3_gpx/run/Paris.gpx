@@ -6,6 +6,7 @@
  <trk>
   <name>Paris</name>
   <cmt>2019-12-10</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="48.845601" lon="2.371121">
@@ -30,6 +31,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="48.845658" lon="2.371065">
     <ele>63.2</ele>
     <time>2019-12-10T06:58:43Z</time>

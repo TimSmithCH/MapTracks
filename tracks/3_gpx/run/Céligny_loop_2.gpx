@@ -6,6 +6,7 @@
  <trk>
   <name>Céligny_loop_2</name>
   <cmt>2018-10-07</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="46.331793" lon="6.194325">
@@ -4218,6 +4219,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.341532" lon="6.202112">
     <ele>378.4</ele>
     <time>2018-10-07T08:48:32Z</time>

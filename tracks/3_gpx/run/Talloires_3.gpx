@@ -6,6 +6,7 @@
  <trk>
   <name>Talloires_3</name>
   <cmt>2018-11-09</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="45.841168" lon="6.211231">
@@ -3358,6 +3359,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.847904" lon="6.191457">
     <ele>589.8</ele>
     <time>2018-11-09T06:15:44Z</time>
@@ -6618,6 +6621,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="45.839881" lon="6.210837">
     <ele>459.8</ele>
     <time>2018-11-09T06:34:35Z</time>

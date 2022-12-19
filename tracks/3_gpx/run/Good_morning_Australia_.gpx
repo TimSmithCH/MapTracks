@@ -6,6 +6,7 @@
  <trk>
   <name>Good_morning_Australia_</name>
   <cmt>2019-11-03</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="-34.929096" lon="138.599241">
@@ -30,6 +31,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-34.929158" lon="138.599251">
     <ele>54.0</ele>
     <time>2019-11-03T20:29:36Z</time>

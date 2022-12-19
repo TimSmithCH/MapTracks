@@ -6,6 +6,7 @@
  <trk>
   <name>Verbier</name>
   <cmt>2015-06-20</cmt>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.092884" lon="7.23318">
@@ -2116,6 +2117,8 @@
     <ele>1752.1</ele>
     <time>2015-06-20T12:13:12Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.086214" lon="7.239671">
     <ele>1751.5</ele>
     <time>2015-06-20T12:13:14Z</time>

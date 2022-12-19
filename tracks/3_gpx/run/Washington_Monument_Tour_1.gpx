@@ -6,6 +6,7 @@
  <trk>
   <name>Washington_Monument_Tour_1</name>
   <cmt>2015-10-06</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="38.903317" lon="-77.049902">
     <ele>19.6</ele>
@@ -5619,6 +5620,8 @@
     <ele>22.7</ele>
     <time>2015-10-06T15:15:05Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="38.901346" lon="-77.046508">
     <ele>22.7</ele>
     <time>2015-10-06T15:15:08Z</time>

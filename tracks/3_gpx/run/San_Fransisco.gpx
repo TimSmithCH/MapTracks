@@ -6,6 +6,7 @@
  <trk>
   <name>San_Fransisco</name>
   <cmt>2019-05-13</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="37.785087" lon="-122.405018">
@@ -836,6 +837,8 @@
     <ele>88.0</ele>
     <time>2019-05-13T13:41:46Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="37.803081" lon="-122.406072">
     <ele>88.0</ele>
     <time>2019-05-13T13:42:07Z</time>

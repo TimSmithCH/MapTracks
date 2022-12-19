@@ -6,6 +6,7 @@
  <trk>
   <name>Anvers</name>
   <cmt>2018-12-14</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="51.218592" lon="4.420887">
@@ -6146,6 +6147,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.222341" lon="4.39951">
     <ele>939.6</ele>
     <time>2018-12-14T06:58:05Z</time>

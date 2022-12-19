@@ -6,6 +6,7 @@
  <trk>
   <name>Horsham_3</name>
   <cmt>2018-05-15</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="51.064959" lon="-0.341536">
@@ -30,6 +31,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.064993" lon="-0.341577">
     <ele>1.2</ele>
     <time>2018-05-15T06:31:01Z</time>

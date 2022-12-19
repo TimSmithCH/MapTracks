@@ -6,6 +6,7 @@
  <trk>
   <name>Baltimore</name>
   <cmt>2014-06-24</cmt>
+  <desc>0.5</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="51.484879" lon="-9.362127">
@@ -976,6 +977,8 @@
     <ele>7.0</ele>
     <time>2014-06-24T06:43:27Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="51.484804" lon="-9.372736">
     <ele>7.1</ele>
     <time>2014-06-24T06:43:28Z</time>

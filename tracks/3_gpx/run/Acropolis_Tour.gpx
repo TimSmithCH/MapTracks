@@ -6,6 +6,7 @@
  <trk>
   <name>Acropolis_Tour</name>
   <cmt>2015-01-27</cmt>
+  <desc>1.0</desc>
   <trkseg>
    <trkpt lat="37.973644" lon="23.731841">
     <ele>94.1</ele>
@@ -5319,6 +5320,8 @@
     <ele>83.0</ele>
     <time>2015-01-27T07:20:43Z</time>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="37.969524" lon="23.729411">
     <ele>83.0</ele>
     <time>2015-01-27T07:20:45Z</time>

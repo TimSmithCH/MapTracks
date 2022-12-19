@@ -6,6 +6,7 @@
  <trk>
   <name>Toes_in_the_Great_Australian_Bight</name>
   <cmt>2019-11-06</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="-34.980424" lon="138.511054">
@@ -12130,6 +12131,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="-34.9295" lon="138.599627">
     <ele>114.8</ele>
     <time>2019-11-06T05:34:45Z</time>

@@ -110891,36 +110891,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-   <trkpt lat="46.462731" lon="6.843499">
-    <ele>421.8</ele>
-    <time>2020-08-14T15:53:15Z</time>
-    <extensions>
-     <gpxtpx:TrackPointExtension>
-      <gpxtpx:atemp>29</gpxtpx:atemp>
-      <gpxtpx:hr>114</gpxtpx:hr>
-     </gpxtpx:TrackPointExtension>
-    </extensions>
-   </trkpt>
-   <trkpt lat="46.462781" lon="6.843511">
-    <ele>421.8</ele>
-    <time>2020-08-14T15:53:20Z</time>
-    <extensions>
-     <gpxtpx:TrackPointExtension>
-      <gpxtpx:atemp>29</gpxtpx:atemp>
-      <gpxtpx:hr>112</gpxtpx:hr>
-     </gpxtpx:TrackPointExtension>
-    </extensions>
-   </trkpt>
-   <trkpt lat="46.462786" lon="6.843521">
-    <ele>421.6</ele>
-    <time>2020-08-14T15:53:21Z</time>
-    <extensions>
-     <gpxtpx:TrackPointExtension>
-      <gpxtpx:atemp>29</gpxtpx:atemp>
-      <gpxtpx:hr>112</gpxtpx:hr>
-     </gpxtpx:TrackPointExtension>
-    </extensions>
-   </trkpt>
   </trkseg>
  </trk>
 </gpx>

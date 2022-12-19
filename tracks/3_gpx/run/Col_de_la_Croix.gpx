@@ -6,6 +6,7 @@
  <trk>
   <name>Col_de_la_Croix</name>
   <cmt>2019-11-15</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="46.298688" lon="7.057427">
@@ -3286,6 +3287,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.297244" lon="7.07366">
     <ele>1385.8</ele>
     <time>2019-11-15T05:50:38Z</time>
@@ -5915,6 +5918,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.298635" lon="7.057284">
     <ele>1260.4</ele>
     <time>2019-11-15T06:01:38Z</time>

@@ -6,6 +6,7 @@
  <trk>
   <name>Col_du_Soud</name>
   <cmt>2019-11-14</cmt>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="46.298796" lon="7.057222">
@@ -8687,6 +8688,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.299556" lon="7.068722">
     <ele>1577.4</ele>
     <time>2019-11-14T06:43:06Z</time>
@@ -13461,6 +13464,8 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
+  </trkseg>
+  <trkseg>
    <trkpt lat="46.298795" lon="7.057308">
     <ele>1262.8</ele>
     <time>2019-11-14T06:57:56Z</time>
