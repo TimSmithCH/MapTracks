@@ -57,7 +57,7 @@ def get_new_stat_points(self):
             # Update last stationary-point with current
             sp[spi] = n
         # Or if the last step wasnt a proper full one (likely on first step)
-        elif (abs(last_step) < (prominence_threshold/2)) and (abs(next_step) > (prominence_threshold/2)):
+        elif (abs(last_step) < (prominence_threshold/2)) and (abs(next_step) > (prominence_threshold/10)):
             # Update last stationary-point with current
             sp[spi] = n
         # If in oppostite direction to last inter-stationary-point trend
@@ -68,7 +68,11 @@ def get_new_stat_points(self):
                 spi += 1
     lastp = len(elevations) - 1
     if sp[spi] < lastp:   # Add last point if not already there
-        sp.append(lastp)
+        last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
+        if abs(last_step) > prominence_threshold:
+            sp.append(lastp)
+        else:
+            sp[spi] = lastp
     # Loop over resultant stationary point array and avoid short segments
     for i in range(1,len(sp)):
         # Its too short, only 1 track point long
@@ -194,24 +198,29 @@ for mpath in mpaths:
             # Then split them in the new configuration
             seg = gpx.tracks[0].segments[0]
             if stat_points != None:
-                for nsp,sp in enumerate(stat_points[:-2]):
-                    cur,nxt = sp, stat_points[nsp+1]
-                    new_seg_len = nxt - cur
-                    if cur == 0:
-                        new_seg_len += 1
-                    ele_diff = seg.points[nxt].elevation - seg.points[cur].elevation
-                    if ele_diff > 0 or abs(ele_diff) < 20:
-                        if description == "":
-                            description = "1.0"   # An UP segment
-                    else:
-                        if description == "":
-                            description = "0.5"   # A DOWN segment
-                    if not newlined: print("\n")
-                    if VERBOSE : print("  [{}] Splitting segment {} at point {} (track at {}) with elevation diff {:.1f}".format(bname,nseg,new_seg_len-1,nxt,ele_diff))
-                    gpx.split(0,nseg,new_seg_len-1)   # third argument is pointer to array starting at zero, so length-1
-                    nseg += 1   # Splitting added a segment
+                if len(stat_points) > 2:
+                    for nsp,sp in enumerate(stat_points[:-2]):
+                        cur,nxt = sp, stat_points[nsp+1]
+                        new_seg_len = nxt - cur
+                        if cur == 0:
+                            new_seg_len += 1
+                        ele_diff = seg.points[nxt].elevation - seg.points[cur].elevation
+                        if ele_diff > 0 or abs(ele_diff) < 20:
+                            if description == "":
+                                description = "1.0"   # An UP segment
+                        else:
+                            if description == "":
+                                description = "0.5"   # A DOWN segment
+                        if not newlined: print("\n")
+                        if VERBOSE : print("  [{}] Splitting segment {} at point {} (track at {}) with elevation diff {:.1f}".format(bname,nseg,new_seg_len-1,nxt,ele_diff))
+                        gpx.split(0,nseg,new_seg_len-1)   # third argument is pointer to array starting at zero, so length-1
+                        nseg += 1   # Splitting added a segment
+                        modified = True
+                    newlined = True
+                else:
+                    # If going back to an unsplit file, just simply write out
+                    description = "1.0"
                     modified = True
-                newlined = True
             nseg += 1   # Array starts from 0 so count needs 1 more
         # And write them  back out to the same file
         if modified:

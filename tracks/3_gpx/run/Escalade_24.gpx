@@ -6,7 +6,7 @@
  <trk>
   <name>Escalade_24</name>
   <cmt>2018-12-01</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="46.200852" lon="6.144851">
@@ -2407,8 +2407,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.201025" lon="6.142954">
     <ele>367.0</ele>
     <time>2018-12-01T13:24:46Z</time>

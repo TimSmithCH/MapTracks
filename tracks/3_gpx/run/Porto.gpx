@@ -6,7 +6,7 @@
  <trk>
   <name>Porto</name>
   <cmt>2019-09-17</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>9</type>
   <trkseg>
    <trkpt lat="41.160848" lon="-8.641674">
@@ -4904,8 +4904,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="41.147876" lon="-8.665183">
     <ele>849.6</ele>
     <time>2019-09-17T06:04:39Z</time>
