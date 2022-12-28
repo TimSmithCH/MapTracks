@@ -6,7 +6,7 @@
  <trk>
   <name>Les_Tines</name>
   <cmt>2022-10-02</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="45.951182" lon="6.897056">
@@ -7259,8 +7259,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="45.947931" lon="6.890139">
     <ele>995.0</ele>
     <time>2022-10-02T06:28:31Z</time>

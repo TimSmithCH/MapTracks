@@ -6,7 +6,7 @@
  <trk>
   <name>Northcote_Market</name>
   <cmt>2022-06-18</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>10</type>
   <trkseg>
    <trkpt lat="51.447827" lon="-0.1537">
@@ -8449,8 +8449,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="51.457583" lon="-0.165679">
     <ele>12.8</ele>
     <time>2022-06-18T12:59:52Z</time>

@@ -6,7 +6,7 @@
  <trk>
   <name>Fluhalp</name>
   <cmt>2020-09-13</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.012671" lon="7.810834">
@@ -3789,8 +3789,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.013835" lon="7.794916">
     <ele>2536.2</ele>
     <time>2020-09-13T12:47:46Z</time>

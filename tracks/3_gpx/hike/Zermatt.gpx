@@ -6,7 +6,7 @@
  <trk>
   <name>Zermatt</name>
   <cmt>2021-04-23</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.009726" lon="7.733399">
@@ -6769,8 +6769,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.021886" lon="7.747048">
     <ele>1586.2</ele>
     <time>2021-04-23T18:38:41Z</time>

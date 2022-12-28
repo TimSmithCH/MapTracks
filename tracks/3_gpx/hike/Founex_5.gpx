@@ -6,7 +6,7 @@
  <trk>
   <name>Founex_5</name>
   <cmt>2021-01-17</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>4</type>
   <trkseg>
    <trkpt lat="46.331809" lon="6.194253">
@@ -3619,8 +3619,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.334516" lon="6.20273">
     <ele>369.6</ele>
     <time>2021-01-17T08:09:33Z</time>
