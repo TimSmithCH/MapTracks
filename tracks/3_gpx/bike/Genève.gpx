@@ -6,7 +6,7 @@
  <trk>
   <name>Genève</name>
   <cmt>2019-04-11</cmt>
-  <desc>0.5</desc>
+  <desc>1.0</desc>
   <type>1</type>
   <trkseg>
    <trkpt lat="46.23345" lon="6.045042">
@@ -6709,8 +6709,6 @@
      </gpxtpx:TrackPointExtension>
     </extensions>
    </trkpt>
-  </trkseg>
-  <trkseg>
    <trkpt lat="46.200204" lon="6.139923">
     <ele>367.6</ele>
     <time>2019-04-11T15:20:20Z</time>
