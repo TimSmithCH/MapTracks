@@ -4,6 +4,14 @@
     <name>CAR_Egypt</name>
     <cmt>1992-10-10</cmt>
     <desc>1.0</desc>
+    <trkseg>
+      <trkpt lat="0.000001" lon="0.000001">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="0.000002" lon="0.000002">
+        <ele>0.0</ele>
+      </trkpt>
+    </trkseg>
   </trk>
   <wpt lat="25.70540353" lon="32.64352511">
     <name>Etap Hotel</name>
