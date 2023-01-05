@@ -1,8 +1,21 @@
 <?xml version="1.0"?>
 <gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>BIKE_Waypoints</name>
+    <cmt>2015-07-28</cmt>
+    <desc>1.0</desc>
+    <trkseg>
+      <trkpt lat="0.000001" lon="0.000001">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="0.000002" lon="0.000002">
+        <ele>0.0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
   <wpt lat="46.793473" lon="10.287839">
     <name>Scuol</name>
-    <cmt>2015-07-28</cmt>
+    <desc>lodging</desc>
     <sym>lodging</sym>
   </wpt>
   <wpt lat="46.603501" lon="10.426731">

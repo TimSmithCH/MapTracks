@@ -4,6 +4,14 @@
     <name>CAR_Mexico</name>
     <cmt>1993-11-27</cmt>
     <desc>1.0</desc>
+    <trkseg>
+      <trkpt lat="0.000001" lon="0.000001">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="0.000002" lon="0.000002">
+        <ele>0.0</ele>
+      </trkpt>
+    </trkseg>
   </trk>
   <wpt lat="19.431506220" lon="-99.147486950">
     <name>West Galeria Plaza Hotel</name>
