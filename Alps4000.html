@@ -127,6 +127,18 @@
   }
   // Calling await on function which contains await on fetch causes it to be sychronous!
   async function loadTable() {
+    var rating = {
+      "F": 0,
+      "PD-": 1,
+      "PD": 2,
+      "PD+": 3,
+      "AD-": 4,
+      "AD": 5,
+      "AD+": 6,
+      "D-": 7,
+      "D": 8,
+      "D+": 9
+    };
     let data = await getTable();
     var table = document.getElementById("tabAlps");
     for (const feature of data.features) {
@@ -155,6 +167,12 @@
         a.innerHTML = "CAS";
         cell.appendChild(a);
       }
+      var cell = trow.insertCell(-1);
+      if (feature.properties.grade != "") {
+        cell.innerHTML = rating[feature.properties.grade];
+      } else {
+        cell.innerHTML = "-1";
+      }
     }
     filterTable("all");
   }
@@ -165,6 +183,7 @@
     if (btn_all == null) return;
     var btn_prom = document.getElementById("prom");
     var btn_flag = document.getElementById("flag");
+    var btn_grad = document.getElementById("grad");
     var btn_todo = document.getElementById("todo");
     if (c == "all") {
       filter_prom = false;
@@ -196,6 +215,19 @@
         btn_flag.classList.add("active");
         btn_all.classList.remove("active");
       }
+    } else if (c == "grad") {
+      const colsTodo = document.getElementsByClassName('todocol');
+      if (btn_grad.classList.contains("active")) {
+        btn_grad.classList.remove("active");
+        for (let i = 0; i < colsTodo.length; i++) {
+          colsTodo[i].style.visibility = "collapse";
+        }
+      } else {
+        btn_grad.classList.add("active");
+        for (let i = 0; i < colsTodo.length; i++) {
+          colsTodo[i].style.visibility = "";
+        }
+      }
     } else if (c == "todo") {
       const colsTodo = document.getElementsByClassName('todocol');
       if (btn_todo.classList.contains("active")) {
@@ -209,6 +241,7 @@
           colsTodo[i].style.visibility = "";
         }
       }
+      btn_grad.classList.remove("active");
     }
     // Loop through table rows, and hide those not matching search query
     var td_prom, td_flag, row_count, row_climbed;
@@ -260,6 +293,7 @@
         shouldSwitch = false;
         x = rows[i].getElementsByTagName("TD")[n];
         y = rows[i + 1].getElementsByTagName("TD")[n];
+        console.log(n)
         if (dir == "asc") {
           if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
             shouldSwitch = true;
@@ -290,28 +324,31 @@
     <button class="btn active" onclick="filterTable('all')" id="all"> Show all</button>
     <button class="btn" onclick="filterTable('prom')" id="prom"> Prominent</button>
     <button class="btn" onclick="filterTable('flag')" id="flag"> Swiss</button>
+    <button class="btn todo" onclick="filterTable('grad')" id="grad"> Grade</button>
     <button class="btn todo" onclick="filterTable('todo')" id="todo"> ToDo</button>
   </div>
 
   <table id="tabAlps">
-    <!-- Declaring columns enables them to be hidden in a single call -->
+    <!-- Declaring columns names (that are never used) enables them to be hidden in a single call -->
     <colgroup>
+      <col class="col0"/>
       <col class="col1"/>
       <col class="col2"/>
       <col class="col3"/>
-      <col class="col4"/>
+      <col style="visibility: collapse;" class="col4 todocol"/>
       <col style="visibility: collapse;" class="col5 todocol"/>
       <col style="visibility: collapse;" class="col6 todocol"/>
-      <col style="visibility: collapse;" class="col7 todocol"/>
+      <col style="visibility: collapse;" class="col7"/>
     </colgroup>
     <tr class="header">
       <th style="width:30%;">Summit</th>
       <th style="width:10%;" class="clickable" onclick="sortTable(1)">Height</th>
       <th style="width:10%;" class="clickable" onclick="sortTable(2)">Promience</th>
       <th style="width:10%;">Country</th>
-      <th style="width:10%;">Grade</th>
+      <th style="width:10%;" class="clickable" onclick="sortTable(7)">Grade</th>
       <th style="width:10%;">Means</th>
       <th style="width:10%;">Route</th>
+      <th style="width:10%;">Rating</th>
     </tr>
   </table>
   <div class="myBtnContainer">
