@@ -75,6 +75,9 @@
   tr.climbed {
     background-color: #dcefdc;
   }
+  tr.climbed.nearly {
+    background-color: #87CEFA;
+  }
   col.todocol {
     background-color: #ffffcc;
   }
@@ -146,6 +149,41 @@
       if (feature.properties.climbed == "yes") {
         trow.classList.add("climbed");
       }
+      if (feature.properties.climbed == "nearly") {
+        trow.classList.add("climbed");
+        trow.classList.add("nearly");
+      }
+      var cell = trow.insertCell(-1);
+      cell.innerHTML = feature.properties.name;
+      var cell = trow.insertCell(-1);
+      cell.innerHTML = feature.properties.height;
+      var cell = trow.insertCell(-1);
+      cell.innerHTML = feature.properties.prominence;
+      var cell = trow.insertCell(-1);
+      cell.classList.add(feature.properties.country);
+      var cell = trow.insertCell(-1);
+      cell.innerHTML = feature.properties.grade;
+      var cell = trow.insertCell(-1);
+      cell.innerHTML = feature.properties.means;
+      var cell = trow.insertCell(-1);
+      if (feature.properties.route != "") {
+        var a = document.createElement('a');
+        a.setAttribute('href',feature.properties.route);
+        // Force link to open in new tab
+        a.setAttribute('target',"_blank");
+        a.innerHTML = "CAS";
+        cell.appendChild(a);
+      }
+      var cell = trow.insertCell(-1);
+      if (feature.properties.grade != "") {
+        cell.innerHTML = rating[feature.properties.grade];
+      } else {
+        cell.innerHTML = "-1";
+      }
+    }
+    filterTable("all");
+  }
+  function filterTable(c) {
       var cell = trow.insertCell(-1);
       cell.innerHTML = feature.properties.name;
       var cell = trow.insertCell(-1);
