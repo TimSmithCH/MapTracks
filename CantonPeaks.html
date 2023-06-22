@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>4000er Alps</title>
-  <meta name="description" content="Alpine 4000ers">
+  <meta name="description" content="Swiss Cantonal Peaks">
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Site styles and icons -->
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -122,7 +122,7 @@
   var filter_prom, filter_flag;
   async function getTable() {
     try {
-      let response = await fetch('features/EU_Mountains_H4000.json');
+      let response = await fetch('features/CH_Canton_Mountains.json');
       return await response.json();
     } catch (error) {
       console.log(error);
@@ -160,7 +160,7 @@
       var cell = trow.insertCell(-1);
       cell.innerHTML = feature.properties.prominence;
       var cell = trow.insertCell(-1);
-      cell.classList.add(feature.properties.country);
+      cell.innerHTML = feature.properties.canton;
       var cell = trow.insertCell(-1);
       cell.innerHTML = feature.properties.grade;
       var cell = trow.insertCell(-1);
@@ -351,7 +351,7 @@
       <th style="width:30%;">Summit</th>
       <th style="width:10%;" class="clickable" onclick="sortTable(1)">Height</th>
       <th style="width:10%;" class="clickable" onclick="sortTable(2)">Promience</th>
-      <th style="width:10%;">Country</th>
+      <th style="width:10%;">Canton</th>
       <th style="width:10%;" class="clickable" onclick="sortTable(7)">Grade</th>
       <th style="width:10%;">Means</th>
       <th style="width:10%;">Route</th>
