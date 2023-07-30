@@ -4,25 +4,26 @@ import json
 import time
 import os
 
+activitiesFile = "features/LastStravaIDRead.json"
 
 def init():
     global tokens
-    global credentials
-    global localActivities
-    global config
-    config = json.load(open("config.json"))
-    tokens = json.load(open(config["tokenFile"]))
-    credentials = json.load(open(config["credentialsFile"]))
-    localActivities =  []
-    if os.path.isfile(config["activitiesFile"]):
-        localActivities = json.load(open(config["activitiesFile"]))
+    global stravaData
+    # Construct an expired token, so the access and refresh tokens wont be used so arent valid
+    tokens = {
+        "token_type": "Bearer",
+        "access_token": "4444444444444444444444444444444444444444",
+        "expires_at": 1690747915,
+        "expires_in": 0,
+        "refresh_token": "6666666666666666666666666666666666666666"
+    stravaData = json.load(open(config["activitiesFile"]))
 
 def refreshTokens():
     body = {
-        "client_id": credentials.get("client_id"),
-        "client_secret": credentials.get("client_secret"),
+        "client_id": os.environ.get('CONF_CLIENT_ID'),
+        "client_secret": os.environ.get('CONF_CLIENT_SECRET'),
         "grant_type": "refresh_token",
-        "refresh_token": tokens.get("refresh_token")
+        "refresh_token": os.environ.get('CONF_REFRESH_TOKEN')
     }
     headers = {
         'Content-Type': 'application/json',
@@ -42,7 +43,6 @@ def getAccessToken():
             print("ERROR: Could not refresh tokens")
             return None
         print("New Token: " + tokenResponse["access_token"])
-        json.dump(tokenResponse, open(config["tokenFile"], mode="w"))
         tokens = tokenResponse
         return tokens["access_token"]
     else:
@@ -61,9 +61,7 @@ def fetchActivities(page, per_page=100):
 
 def updateLocalActivities():
     init()
-    lastLocalID = 0
-    if len(localActivities) > 0:
-        lastLocalID = localActivities[0]["id"]
+    lastLocalID = stravaData.get("last_read")
     activitiesToAdd = []
     page = 1
     finished = False
@@ -82,25 +80,13 @@ def updateLocalActivities():
             break
     print("ADDING:")
     for i in activitiesToAdd:
-        print(" -"+str(i["id"]))
-        localActivities.insert(0, i)
-
-    json.dump(localActivities, open(config["activitiesFile"], "w"))
-    print("DONE")
-    return localActivities
-
-def removeLocalActivities(num):
-    init()
-    for i in range(num):
-        rem = localActivities.pop(0)
-        print(rem["id"])
-    json.dump(localActivities, open(config["activitiesFile"], "w"))
+        print(" -"+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
+    return activitiesToAdd
 
 
 if __name__ == "__main__":
 
-    activities = fetch.updateLocalActivities()
-    #activities = json.load(open(config["activitiesFile"]))
+    activities = updateLocalActivities()
     currentSport = list(filter(lambda obj: obj['type'] == "Ride", activities))
     dates = list(map(lambda obj: obj['start_date'], currentSport))
     dates_conv = dt.date2num(dates)

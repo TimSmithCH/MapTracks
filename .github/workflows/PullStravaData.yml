@@ -14,5 +14,8 @@ jobs:
         uses: actions/checkout@v3
       - name: Fetch Data through Strava API
         run: ./scripts/PullStravaData.py
-        with:
-          CONFIGURATION: '{ "method": "POST", "body": {"client_id": "${{ secrets.STRAVA_client_id }}", "client_secret": "${{ secrets.STRAVA_client_secret }}"} }'
+        env:
+          CONF_METHOD: POST
+          CONF_CLIENT_ID: ${{ secrets.STRAVA_client_id }}
+          CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
+          CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
