@@ -9,14 +9,15 @@ activitiesFile = "features/LastStravaIDRead.json"
 def init():
     global tokens
     global stravaData
-    # Construct an expired token, so the access and refresh tokens wont be used so arent valid
+    # Construct an expired token, to force immediate refresh (hence tokens dont need to be valid)
     tokens = {
         "token_type": "Bearer",
         "access_token": "4444444444444444444444444444444444444444",
         "expires_at": 1690747915,
         "expires_in": 0,
         "refresh_token": "6666666666666666666666666666666666666666"
-    stravaData = json.load(open(config["activitiesFile"]))
+    }
+    stravaData = json.load(open(activitiesFile))
 
 def refreshTokens():
     body = {
@@ -51,6 +52,9 @@ def getAccessToken():
 
 def fetchActivities(page, per_page=100):
     accessToken = getAccessToken()
+    if(not accessToken):
+        print("ERROR: No access token - cant request activities")
+        return {}
     headers = {
         'accept': 'application/json',
         'authorization': "Bearer " + accessToken
@@ -59,9 +63,10 @@ def fetchActivities(page, per_page=100):
     fetched = json.loads(resp.text)
     return fetched
 
-def updateLocalActivities():
+def updateActivitiesList():
     init()
-    lastLocalID = stravaData.get("last_read")
+    lastSeenID = int(stravaData.get("last_read"))
+    print("Last Strava ID uploaded (to find) "+str(lastSeenID))
     activitiesToAdd = []
     page = 1
     finished = False
@@ -70,7 +75,7 @@ def updateLocalActivities():
         if len(batch) <= 0:
             break
         for b in batch:
-            if b["id"] == lastLocalID:
+            if b["id"] == lastSeenID:
                 finished = True
                 break
             else:
@@ -78,15 +83,18 @@ def updateLocalActivities():
         page = page + 1
         if page > 2:
             break
-    print("ADDING:")
+    print("Activities since last upload:")
     for i in activitiesToAdd:
-        print(" -"+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
+        print(" - "+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
     return activitiesToAdd
 
 
 if __name__ == "__main__":
 
-    activities = updateLocalActivities()
-    currentSport = list(filter(lambda obj: obj['type'] == "Ride", activities))
+    activities = updateActivitiesList()
+    currentSport = list(filter(lambda obj: not obj['commute'], activities))
+    print("Non-commutes retained:")
+    for i in currentSport:
+        print("ID: {}   Type {} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["name"]))
     dates = list(map(lambda obj: obj['start_date'], currentSport))
-    dates_conv = dt.date2num(dates)
+    #dates_conv = dt.date2num(dates)
