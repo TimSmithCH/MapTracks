@@ -144,13 +144,16 @@ if __name__ == "__main__":
     for i in filteredActivities:
         print("ID: {}   Type {} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["name"],i["start_date"],i["name"]))
         stream = fetchActivityStream(i["id"])
-        if not stream['latlng']['resolution'] == "high":
-            print("WARN: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
-        s = str(i["id"])+"."+str(i["name"])
-        s = re.sub(r"-", ' ', s)
-        activity_name = re.sub(r"\s+", '_', s)
-        gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
-        #print('Created GPX:', gpx.to_xml())
-        outfile = activity_name+".gpx"
-        with open(outfile, "w") as f:
-            f.write(gpx.to_xml())
+        if "latlng" in stream:
+            if not stream['latlng']['resolution'] == "high":
+                print("WARN: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
+            s = str(i["id"])+"."+str(i["name"])
+            s = re.sub(r"-", ' ', s)
+            activity_name = re.sub(r"\s+", '_', s)
+            gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
+            #print('Created GPX:', gpx.to_xml())
+            outfile = activity_name+".gpx"
+            with open(outfile, "w") as f:
+                f.write(gpx.to_xml())
+        else:
+            print("WARN: stream was empty for {}".format(i["name"]))
