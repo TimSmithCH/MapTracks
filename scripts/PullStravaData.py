@@ -138,8 +138,8 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
 if __name__ == "__main__":
 
     activities = updateActivitiesList()
-    #filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
-    filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
+    filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
+    #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
     print("Non-commutes retained:")
     for i in filteredActivities:
         print("ID: {}   Type {} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["name"],i["start_date"],i["name"]))

@@ -25,6 +25,7 @@ jobs:
           CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
           CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         #--- Next Step
+      - name: Commit freshly created files
         run: |
           if ! git diff --quiet --exit-code tracks/1_display; then
             echo ">>> New GPX files to commit"
