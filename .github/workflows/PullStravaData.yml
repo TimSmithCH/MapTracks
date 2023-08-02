@@ -25,9 +25,12 @@ jobs:
           CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
           CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         #--- Next Step
+      - name: Install GPX manipulation commands
+        run: sudo apt-get install -y python3-gpxpy
+        #--- Next Step
       - name: Commit freshly created files
         run: |
-          if ! git diff --quiet --exit-code tracks/1_display; then
+          if ! git diff --quiet --exit-code tracks/3_gpx; then
             echo ">>> New GPX files to commit"
             # Push the modified GeoJSON files
             git add tracks/3_gpx 1>&2
