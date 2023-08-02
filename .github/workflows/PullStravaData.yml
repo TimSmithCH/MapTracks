@@ -1,10 +1,15 @@
 name: PullStravaData
 on:
   # Nightly cron job
-  #schedule:
-  #  - cron: 25 17 * * 0-6
+  schedule:
+    - cron: 42 19 * * *
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  id-token: write
 
 jobs:
   refresh-feed:
@@ -12,9 +17,26 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+        #--- Next Step
       - name: Fetch Data through Strava API
         run: ./scripts/PullStravaData.py
         env:
           CONF_CLIENT_ID: ${{ secrets.STRAVA_client_id }}
           CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
           CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        #--- Next Step
+        run: |
+          if ! git diff --quiet --exit-code tracks/1_display; then
+            echo ">>> New GPX files to commit"
+            # Push the modified GeoJSON files
+            git add tracks/3_gpx 1>&2
+            git status -s 1>&2
+            #git commit -m "${{ github.event.head_commit.message }}" 1>&2
+            git commit -m "Download BOT: adding latest tracks" 1>&2
+            git push 1>&2
+          else
+            echo ">>> No new GPX files to commit"
+          fi
+          exit 0
+
+
