@@ -87,6 +87,7 @@ def fetchActivityStream(actid):
     return fetched
 
 def updateActivitiesList():
+    global stravaData
     init()
     lastSeenID = int(stravaData.get("last_read"))
     print("Last Strava ID uploaded (to find) "+str(lastSeenID))
@@ -98,15 +99,17 @@ def updateActivitiesList():
         if len(batch) <= 0:
             break
         for b in batch:
-            if b["id"] == lastSeenID:
+            if b["id"] > lastSeenID:
+                stravaData["last_read"] = b["id"]
+                activitiesToAdd.insert(0,b)
+            elif b["id"] == lastSeenID:
                 finished = True
                 break
-            else:
-                activitiesToAdd.insert(0,b)
         page = page + 1
         if page > 2:
             break
     print("Activities since last upload:")
+    json.dump(stravaData, open(historyFile, "w"))
     for i in activitiesToAdd:
         print(" - "+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
     return activitiesToAdd
@@ -137,6 +140,7 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
 
 if __name__ == "__main__":
 
+    track_dir = dict(Ride="bike", Hike="hike", Ski="ski", Run="run", Swim="wip")
     activities = updateActivitiesList()
     filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
     #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
@@ -146,14 +150,19 @@ if __name__ == "__main__":
         stream = fetchActivityStream(i["id"])
         if "latlng" in stream:
             if not stream['latlng']['resolution'] == "high":
-                print("WARN: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
+                print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
             s = str(i["id"])+"."+str(i["name"])
             s = re.sub(r"-", ' ', s)
             activity_name = re.sub(r"\s+", '_', s)
             gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
             #print('Created GPX:', gpx.to_xml())
-            outfile = activity_name+".gpx"
+            if i["type"] in track_dir:
+                t = track_dir[i["type"]]
+            else:
+                t = "wip"
+            #outfile = activity_name+".gpx"
+            outfile = "tracks/3_gpx/"+t+"/"+activity_name+".gpx"
             with open(outfile, "w") as f:
                 f.write(gpx.to_xml())
         else:
-            print("WARN: stream was empty for {}".format(i["name"]))
+            print("NOTE: stream was empty for {}".format(i["name"]))

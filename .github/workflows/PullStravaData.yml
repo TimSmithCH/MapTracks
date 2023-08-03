@@ -22,7 +22,7 @@ jobs:
         run: sudo apt-get install -y python3-gpxpy
         #--- Next Step
       - name: Fetch Data through Strava API
-        run: ./scripts/PullStravaData.py
+        run: ./scripts/pull_strava_data.py
         env:
           CONF_CLIENT_ID: ${{ secrets.STRAVA_client_id }}
           CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
@@ -30,10 +30,12 @@ jobs:
         #--- Next Step
       - name: Commit freshly created files
         run: |
+          git status -s 1>&2
           if ! git diff --quiet --exit-code tracks/3_gpx; then
             echo ">>> New GPX files to commit"
             # Push the modified GeoJSON files
             git add tracks/3_gpx 1>&2
+            git add features 1>&2
             git status -s 1>&2
             #git commit -m "${{ github.event.head_commit.message }}" 1>&2
             git commit -m "Download BOT: adding latest tracks" 1>&2
