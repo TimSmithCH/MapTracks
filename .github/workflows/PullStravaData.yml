@@ -30,11 +30,13 @@ jobs:
         #--- Next Step
       - name: Commit freshly created files
         run: |
-          if ! git diff --quiet --exit-code tracks/3_gpx; then
+          git status -s 1>&2
+          # Push any modified GPX files
+          git add tracks/3_gpx 1>&2
+          git add features 1>&2
+          if ! git diff --staged --quiet --exit-code tracks/3_gpx; then
             echo ">>> New GPX files to commit"
-            # Push the modified GeoJSON files
-            git add tracks/3_gpx 1>&2
-            git add features 1>&2
+            # Commit any modified GPX files
             git status -s 1>&2
             #git commit -m "${{ github.event.head_commit.message }}" 1>&2
             git commit -m "Download BOT: adding latest tracks" 1>&2
@@ -43,5 +45,4 @@ jobs:
             echo ">>> No new GPX files to commit"
           fi
           exit 0
-
 
