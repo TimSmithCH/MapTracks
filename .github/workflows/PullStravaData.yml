@@ -30,6 +30,8 @@ jobs:
         #--- Next Step
       - name: Commit freshly created files
         run: |
+          git config --global user.email "tim.smith@cern.ch"
+          git config --global user.name "Tim Smith"
           git status -s 1>&2
           # Push any modified GPX files
           git add tracks/3_gpx 1>&2
