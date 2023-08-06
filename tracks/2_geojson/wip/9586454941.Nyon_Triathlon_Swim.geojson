@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "LayerName",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "9586454941.Nyon_Triathlon_Swim", "cmt": "2023-08-05", "desc": "1.0", "type": "Swim" }, "geometry": { "type": "LineString", "coordinates": [ [ 6.229211, 46.368341 ], [ 6.229318, 46.368271 ], [ 6.22987, 46.369139 ], [ 6.22954, 46.369047 ], [ 6.228813, 46.369404 ], [ 6.228665, 46.369715 ], [ 6.227141, 46.370737 ] ] } }
+]
+}
