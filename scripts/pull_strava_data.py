@@ -94,13 +94,15 @@ def updateActivitiesList():
     activitiesToAdd = []
     page = 1
     finished = False
+    highestSeenID = lastSeenID
     while not finished:
         batch = fetchActivities(page)
         if len(batch) <= 0:
             break
         for b in batch:
             if b["id"] > lastSeenID:
-                stravaData["last_read"] = b["id"]
+                if b["id"] > highestSeenID:
+                    highestSeenID = b["id"]
                 activitiesToAdd.insert(0,b)
             elif b["id"] == lastSeenID:
                 finished = True
@@ -109,6 +111,7 @@ def updateActivitiesList():
         if page > 2:
             break
     print("Activities since last upload:")
+    stravaData["last_read"] = highestSeenID
     json.dump(stravaData, open(historyFile, "w"))
     for i in activitiesToAdd:
         print(" - "+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
