@@ -78,7 +78,7 @@ def getAccessToken(quietly):
             print("ERROR: Could not refresh tokens")
             return None
         print("New Token: " + tokenResponse["access_token"])
-        json.dump(tokenResponse, open(ordres.get("tokenFile"), mode="w"))
+        json.dump(tokenResponse, open(orders.get("tokenFile"), mode="w"))
         tokens = tokenResponse
         return tokens["access_token"]
     else:
@@ -86,7 +86,7 @@ def getAccessToken(quietly):
             print("Using Token: " + tokens["access_token"])
         return tokens["access_token"]
 
-def fetchActivities(page, per_page=100):
+def fetchActivities(page, per_page=10):
     accessToken = getAccessToken(False)
     if(not accessToken):
         print("ERROR: No access token - cant request activities")
@@ -113,7 +113,7 @@ def fetchActivityStream(actid):
     fetched = json.loads(resp.text)
     return fetched
 
-def updateActivitiesList():
+def loadActivitiesList():
     global stravaData
     init()
     lastSeenID = int(stravaData.get("last_read"))
@@ -138,10 +138,10 @@ def updateActivitiesList():
         if page > 2:
             break
     print("Activities since last upload:")
-    stravaData["last_read"] = highestSeenID
-    json.dump(stravaData, open(orders.get('idFile'), "w"))
     for i in activitiesToAdd:
         print(" - "+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
+    stravaData["last_read"] = highestSeenID
+    json.dump(stravaData, open(orders.get('idFile'), "w"))
     return activitiesToAdd
 
 def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream):
@@ -214,13 +214,52 @@ def get_new_stat_points(elevations):
                 sp[i-1] -= 1
     return sp
 
+##########
+# Split track into (significant) up and down segments
+##########
+def segment_track(elevations,gpx):
+    get_new_stat_points(elevations)
+    # Then split them in the new configuration
+    seg = gpx.tracks[0].segments[0]
+    if stat_points != None:
+        if len(stat_points) > 2:
+            for nsp,sp in enumerate(stat_points[:-2]):
+                cur,nxt = sp, stat_points[nsp+1]
+                new_seg_len = nxt - cur
+                if cur == 0:
+                    new_seg_len += 1
+                ele_diff = seg.points[nxt].elevation - seg.points[cur].elevation
+                if ele_diff > 0 or abs(ele_diff) < 20:
+                    if description == "":
+                        description = "1.0"   # An UP segment
+                    else:
+                        if description == "":
+                            description = "0.5"   # A DOWN segment
+                    if not newlined: print("\n")
+                    if VERBOSE : print("  [{}] Splitting segment {} at point {} (track at {}) with elevation diff {:.1f}".format(bname,nseg,new_seg_len-1,nxt,ele_diff))
+                    gpx.split(0,nseg,new_seg_len-1)   # third argument is pointer to array starting at zero, so length-1
+                    nseg += 1   # Splitting added a segment
+                    modified = True
+                newlined = True
+            else:
+                # If going back to an unsplit file, just simply write out
+                description = "1.0"
+                modified = True
+        nseg += 1   # Array starts from 0 so count needs 1 more
+    # And write them  back out to the same file
+    if modified:
+        gpx.tracks[0].description = description
+        print("Split track into {} segments in file {}".format(nseg,bname))
+    return gpx
+
 
 
 if __name__ == "__main__":
 
     args = parseCommandLine()
     track_dir = dict(Ride="bike", Hike="hike", Ski="ski", Run="run", Swim="wip")
-    activities = updateActivitiesList()
+    mountain_sport = dict(Ice="ice")
+    activities = loadActivitiesList()
     filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
     #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
     print("Non-commutes retained:")
@@ -230,15 +269,21 @@ if __name__ == "__main__":
         if "latlng" in stream:
             if not stream['latlng']['resolution'] == "high":
                 print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
+            # Construct a sanitized activity/file name from the strava id and the strava activity name with dashes and spaces converted to underscores
             s = str(i["id"])+"."+str(i["name"])
             s = re.sub(r"-", ' ', s)
             activity_name = re.sub(r"\s+", '_', s)
+            # Create a GPX file from the activity streams
             gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
-            #print('Created GPX:', gpx.to_xml())
+            # Split the track into up/down segments if mountain sport
+            if i["type"] in mountain_sport:
+                segment_track(stream['altitude']['data'], gpx)
+            # Prepare output file location
             if i["type"] in track_dir:
                 t = track_dir[i["type"]]
             else:
                 t = "wip"
+            # Default of localdir unless ordered otherwise on the command line
             if str(orders.get("trackDir")) == "./":
                 outfile = activity_name+".gpx"
             else:
