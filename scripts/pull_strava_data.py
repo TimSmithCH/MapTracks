@@ -6,15 +6,41 @@ import datetime
 import os
 import re
 import gpxpy
+from argparse import ArgumentParser
 
-historyFile = "features/LastStravaIDRead.json"
-tokenFile = "token.json"
+
+def parseCommandLine():
+    global orders
+    # Parse command line arguments if not run in a Github ACTION
+    if os.getenv("GITHUB_ACTIONS") == "true":
+        orders = {
+                "tokenFile": "token.json",
+                "trackDir": "tracks/3_gpx/",
+                "idFile": "features/LastStravaIDRead.json"
+        }
+    else:
+        # Instantiate the parser
+        parser = ArgumentParser(description="Download latest activities via Strava API.")
+        # Set up the argument defaults
+        defaults = dict(outdir="./",iddir="./",tokendir="./")
+        parser.set_defaults(**defaults)
+        # Parse the command line
+        parser.add_argument('-t', '--tokendir', dest='tokendir', help='Directory to generated access token file')
+        parser.add_argument('-o', '--outdir', dest='outdir', help='Directory to store downloaded Strava activity files')
+        parser.add_argument('-i', '--iddir', dest='iddir', help='Directory to store Strava ID file')
+        args = parser.parse_args()
+        orders = {
+                "tokenFile": args.tokendir+"token.json",
+                "trackDir": args.outdir,
+                "idFile": args.iddir+"LastStravaIDRead.json"
+        }
 
 def init():
+    global orders
     global tokens
     global stravaData
-    if os.path.isfile(tokenFile):
-        tokens = json.load(open(tokenFile))
+    if os.path.isfile(orders.get("tokenFile")):
+        tokens = json.load(open(orders.get("tokenFile")))
     else:
         # Construct an expired token, to force immediate refresh (hence tokens dont need to be valid)
         tokens = {
@@ -24,7 +50,7 @@ def init():
             "expires_in": 0,
             "refresh_token": "123456789"
         }
-    stravaData = json.load(open(historyFile))
+    stravaData = json.load(open(orders.get('idFile')))
 
 def refreshTokens():
     body = {
@@ -42,6 +68,7 @@ def refreshTokens():
     return new_tokens
 
 def getAccessToken(quietly):
+    global orders
     global tokens
     if tokens.get("expires_at") < (time.time()):
         # REFRESH TOKENS
@@ -51,7 +78,7 @@ def getAccessToken(quietly):
             print("ERROR: Could not refresh tokens")
             return None
         print("New Token: " + tokenResponse["access_token"])
-        json.dump(tokenResponse, open(tokenFile, mode="w"))
+        json.dump(tokenResponse, open(ordres.get("tokenFile"), mode="w"))
         tokens = tokenResponse
         return tokens["access_token"]
     else:
@@ -112,7 +139,7 @@ def updateActivitiesList():
             break
     print("Activities since last upload:")
     stravaData["last_read"] = highestSeenID
-    json.dump(stravaData, open(historyFile, "w"))
+    json.dump(stravaData, open(orders.get('idFile'), "w"))
     for i in activitiesToAdd:
         print(" - "+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
     return activitiesToAdd
@@ -139,10 +166,59 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(p[0], p[1], elevation=stream['altitude']['data'][i], time=trkpt_dt))
     return gpx
 
+##########
+# From an array of elevations, determine the static points (where the
+#  climb/descent changes direction after already changing by more than
+#  the prominence threshold)
+##########
+def get_new_stat_points(elevations):
+    sp = []
+    prominence_threshold = 100.0
+    if not elevations:
+        return None
+    sp.append(0)
+    sp.append(1)
+    spi = 1
+    # Loop over elevations array and find stationary points above threshold
+    for n, elevation in enumerate(elevations[2:],start=2):
+        next_step = elevation - elevations[sp[spi]]
+        last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
+        # If in same direction as last inter-stationary-point trend
+        if (last_step * next_step) > 0:
+            # Update last stationary-point with current
+            sp[spi] = n
+        # Or if the last step wasnt a proper full one (likely on first step)
+        elif (abs(last_step) < (prominence_threshold/2)) and (abs(next_step) > (prominence_threshold/10)):
+            # Update last stationary-point with current
+            sp[spi] = n
+        # If in oppostite direction to last inter-stationary-point trend
+        else:
+            if abs(next_step) > prominence_threshold:
+                # Found new stationary-point
+                sp.append(n)
+                spi += 1
+    lastp = len(elevations) - 1
+    if sp[spi] < lastp:   # Add last point if not already there
+        last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
+        if abs(last_step) > prominence_threshold:
+            sp.append(lastp)
+        else:
+            sp[spi] = lastp
+    # Loop over resultant stationary point array and avoid short segments
+    for i in range(1,len(sp)):
+        # Its too short, only 1 track point long
+        if (sp[i] - sp[i-1]) < 2:
+            # There are spare points in the previous track segment
+            if (sp[i-1] - sp[i-2]) > 2:
+                # steal one
+                sp[i-1] -= 1
+    return sp
+
 
 
 if __name__ == "__main__":
 
+    args = parseCommandLine()
     track_dir = dict(Ride="bike", Hike="hike", Ski="ski", Run="run", Swim="wip")
     activities = updateActivitiesList()
     filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
@@ -163,8 +239,10 @@ if __name__ == "__main__":
                 t = track_dir[i["type"]]
             else:
                 t = "wip"
-            #outfile = activity_name+".gpx"
-            outfile = "tracks/3_gpx/"+t+"/"+activity_name+".gpx"
+            if str(orders.get("trackDir")) == "./":
+                outfile = activity_name+".gpx"
+            else:
+                outfile = str(orders.get("trackDir"))+t+"/"+activity_name+".gpx"
             with open(outfile, "w") as f:
                 f.write(gpx.to_xml())
         else:
