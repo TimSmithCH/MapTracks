@@ -25,15 +25,18 @@ def parseCommandLine():
         defaults = dict(outdir="./",iddir="./",tokendir="./")
         parser.set_defaults(**defaults)
         # Parse the command line
-        parser.add_argument('-t', '--tokendir', dest='tokendir', help='Directory to generated access token file')
+        parser.add_argument('-t', '--tokendir', dest='tokendir', help='Directory to store generated access token file')
         parser.add_argument('-o', '--outdir', dest='outdir', help='Directory to store downloaded Strava activity files')
         parser.add_argument('-i', '--iddir', dest='iddir', help='Directory to store Strava ID file')
+        parser.add_argument('-b', '--before', dest='before', help='Upper date bound to search back from')
         args = parser.parse_args()
         orders = {
                 "tokenFile": args.tokendir+"token.json",
                 "trackDir": args.outdir,
                 "idFile": args.iddir+"LastStravaIDRead.json"
         }
+        if args.before:
+            orders["before"] = args.before
 
 def init():
     global orders
@@ -87,6 +90,7 @@ def getAccessToken(quietly):
         return tokens["access_token"]
 
 def fetchActivities(page, per_page=10):
+    global orders
     accessToken = getAccessToken(False)
     if(not accessToken):
         print("ERROR: No access token - cant request activities")
@@ -95,7 +99,12 @@ def fetchActivities(page, per_page=10):
         'accept': 'application/json',
         'authorization': "Bearer " + accessToken
     }
-    resp = requests.get("https://www.strava.com/api/v3/athlete/activities?page="+str(page)+"&per_page="+str(per_page), headers=headers)
+    # Always returns activities in reverse time order from today, unless give explicit date to read back from
+    if "before" in orders:
+        before_string = "&before="+orders["before"]
+    else:
+        before_string = ""
+    resp = requests.get("https://www.strava.com/api/v3/athlete/activities?page="+str(page)+"&per_page="+str(per_page)+before_string, headers=headers)
     fetched = json.loads(resp.text)
     return fetched
 
@@ -114,9 +123,13 @@ def fetchActivityStream(actid):
     return fetched
 
 def loadActivitiesList():
+    global orders
     global stravaData
     init()
-    lastSeenID = int(stravaData.get("last_read"))
+    if "before" in orders:
+        lastSeenID = 1
+    else:
+        lastSeenID = int(stravaData.get("last_read"))
     print("Last Strava ID uploaded (to find) "+str(lastSeenID))
     activitiesToAdd = []
     page = 1
@@ -166,99 +179,12 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(p[0], p[1], elevation=stream['altitude']['data'][i], time=trkpt_dt))
     return gpx
 
-##########
-# From an array of elevations, determine the static points (where the
-#  climb/descent changes direction after already changing by more than
-#  the prominence threshold)
-##########
-def get_new_stat_points(elevations):
-    sp = []
-    prominence_threshold = 100.0
-    if not elevations:
-        return None
-    sp.append(0)
-    sp.append(1)
-    spi = 1
-    # Loop over elevations array and find stationary points above threshold
-    for n, elevation in enumerate(elevations[2:],start=2):
-        next_step = elevation - elevations[sp[spi]]
-        last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
-        # If in same direction as last inter-stationary-point trend
-        if (last_step * next_step) > 0:
-            # Update last stationary-point with current
-            sp[spi] = n
-        # Or if the last step wasnt a proper full one (likely on first step)
-        elif (abs(last_step) < (prominence_threshold/2)) and (abs(next_step) > (prominence_threshold/10)):
-            # Update last stationary-point with current
-            sp[spi] = n
-        # If in oppostite direction to last inter-stationary-point trend
-        else:
-            if abs(next_step) > prominence_threshold:
-                # Found new stationary-point
-                sp.append(n)
-                spi += 1
-    lastp = len(elevations) - 1
-    if sp[spi] < lastp:   # Add last point if not already there
-        last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
-        if abs(last_step) > prominence_threshold:
-            sp.append(lastp)
-        else:
-            sp[spi] = lastp
-    # Loop over resultant stationary point array and avoid short segments
-    for i in range(1,len(sp)):
-        # Its too short, only 1 track point long
-        if (sp[i] - sp[i-1]) < 2:
-            # There are spare points in the previous track segment
-            if (sp[i-1] - sp[i-2]) > 2:
-                # steal one
-                sp[i-1] -= 1
-    return sp
-
-##########
-# Split track into (significant) up and down segments
-##########
-def segment_track(elevations,gpx):
-    get_new_stat_points(elevations)
-    # Then split them in the new configuration
-    seg = gpx.tracks[0].segments[0]
-    if stat_points != None:
-        if len(stat_points) > 2:
-            for nsp,sp in enumerate(stat_points[:-2]):
-                cur,nxt = sp, stat_points[nsp+1]
-                new_seg_len = nxt - cur
-                if cur == 0:
-                    new_seg_len += 1
-                ele_diff = seg.points[nxt].elevation - seg.points[cur].elevation
-                if ele_diff > 0 or abs(ele_diff) < 20:
-                    if description == "":
-                        description = "1.0"   # An UP segment
-                    else:
-                        if description == "":
-                            description = "0.5"   # A DOWN segment
-                    if not newlined: print("\n")
-                    if VERBOSE : print("  [{}] Splitting segment {} at point {} (track at {}) with elevation diff {:.1f}".format(bname,nseg,new_seg_len-1,nxt,ele_diff))
-                    gpx.split(0,nseg,new_seg_len-1)   # third argument is pointer to array starting at zero, so length-1
-                    nseg += 1   # Splitting added a segment
-                    modified = True
-                newlined = True
-            else:
-                # If going back to an unsplit file, just simply write out
-                description = "1.0"
-                modified = True
-        nseg += 1   # Array starts from 0 so count needs 1 more
-    # And write them  back out to the same file
-    if modified:
-        gpx.tracks[0].description = description
-        print("Split track into {} segments in file {}".format(nseg,bname))
-    return gpx
-
 
 
 if __name__ == "__main__":
 
     args = parseCommandLine()
     track_dir = dict(Ride="bike", Hike="hike", Ski="ski", Run="run", Swim="wip")
-    mountain_sport = dict(Ice="ice")
     activities = loadActivitiesList()
     filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
     #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
@@ -275,9 +201,6 @@ if __name__ == "__main__":
             activity_name = re.sub(r"\s+", '_', s)
             # Create a GPX file from the activity streams
             gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
-            # Split the track into up/down segments if mountain sport
-            if i["type"] in mountain_sport:
-                segment_track(stream['altitude']['data'], gpx)
             # Prepare output file location
             if i["type"] in track_dir:
                 t = track_dir[i["type"]]
