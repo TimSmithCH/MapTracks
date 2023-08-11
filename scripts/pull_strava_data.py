@@ -80,16 +80,16 @@ def getAccessToken(quietly):
         if("access_token" not in tokenResponse):
             print("ERROR: Could not refresh tokens")
             return None
-        print("New Token: " + tokenResponse["access_token"])
+        print("New Token: {}".format(tokenResponse["access_token"]))
         json.dump(tokenResponse, open(orders.get("tokenFile"), mode="w"))
         tokens = tokenResponse
         return tokens["access_token"]
     else:
         if not quietly:
-            print("Using Token: " + tokens["access_token"])
+            print("Using Token: {}".format(tokens["access_token"]))
         return tokens["access_token"]
 
-def fetchActivities(page, per_page=10):
+def fetchActivities(page, per_page=40):
     global orders
     accessToken = getAccessToken(False)
     if(not accessToken):
@@ -101,7 +101,8 @@ def fetchActivities(page, per_page=10):
     }
     # Always returns activities in reverse time order from today, unless give explicit date to read back from
     if "before" in orders:
-        before_string = "&before="+orders["before"]
+        epoch = datetime.datetime.strptime(orders["before"],'%Y%m%d').strftime('%s')
+        before_string = "&before="+epoch
     else:
         before_string = ""
     resp = requests.get("https://www.strava.com/api/v3/athlete/activities?page="+str(page)+"&per_page="+str(per_page)+before_string, headers=headers)
@@ -126,11 +127,8 @@ def loadActivitiesList():
     global orders
     global stravaData
     init()
-    if "before" in orders:
-        lastSeenID = 1
-    else:
-        lastSeenID = int(stravaData.get("last_read"))
-    print("Last Strava ID uploaded (to find) "+str(lastSeenID))
+    lastSeenID = int(stravaData.get("last_read"))
+    print("Last Strava ID uploaded (to find) {}".format(str(lastSeenID)))
     activitiesToAdd = []
     page = 1
     finished = False
@@ -147,12 +145,18 @@ def loadActivitiesList():
             elif b["id"] == lastSeenID:
                 finished = True
                 break
+            elif b["id"] < lastSeenID:   # Sanity check: cant get here unless "below" makes loop start too low (or overflow pages)
+                if "before" in orders:
+                    print("WARNING: before ({}) activity ({}) must be later than lastSeenID ({})".format(orders["before"],b["id"],lastSeenID))
+                break
+        # Spamming check: dont read more than 3 pages (unless explicitly allow)
         page = page + 1
-        if page > 2:
+        if page > 3:
+            print("WARNING: Maximum number of pages reached")
             break
     print("Activities since last upload:")
     for i in activitiesToAdd:
-        print(" - "+str(i["id"])+" : "+str(i["type"])+" : "+str(i["name"]))
+        print(" - {} : {} : {}".format(str(i["id"]),str(i["type"]),str(i["name"])))
     stravaData["last_read"] = highestSeenID
     json.dump(stravaData, open(orders.get('idFile'), "w"))
     return activitiesToAdd
@@ -190,7 +194,7 @@ if __name__ == "__main__":
     #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
     print("Non-commutes retained:")
     for i in filteredActivities:
-        print("ID: {}   Type {} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["name"],i["start_date"],i["name"]))
+        print(" - ID: {}   Type {} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["name"],i["start_date"],i["name"]))
         stream = fetchActivityStream(i["id"])
         if "latlng" in stream:
             if not stream['latlng']['resolution'] == "high":
