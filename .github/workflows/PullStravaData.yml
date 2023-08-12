@@ -34,6 +34,9 @@ jobs:
           CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
           CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         #--- Next Step
+      - name: Segment climb/descend tracks
+        run: git show --pretty="format:" --name-only tracks | xargs -I {} ./segment_climb_descent.py {}
+        #--- Next Step
       - name: Commit freshly created files
         run: |
           git config --global user.email "tim.smith@cern.ch"

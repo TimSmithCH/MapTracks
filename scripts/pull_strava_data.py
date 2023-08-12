@@ -16,19 +16,21 @@ def parseCommandLine():
         orders = {
                 "tokenFile": "token.json",
                 "trackDir": "tracks/3_gpx/",
-                "idFile": "features/LastStravaIDRead.json"
+                "idFile": "features/LastStravaIDRead.json",
+                "perpage": 40
         }
     else:
         # Instantiate the parser
         parser = ArgumentParser(description="Download latest activities via Strava API.")
         # Set up the argument defaults
-        defaults = dict(outdir="./",iddir="./",tokendir="./")
+        defaults = dict(outdir="./",iddir="./",tokendir="./",perpage=10)
         parser.set_defaults(**defaults)
         # Parse the command line
         parser.add_argument('-t', '--tokendir', dest='tokendir', help='Directory to store generated access token file')
         parser.add_argument('-o', '--outdir', dest='outdir', help='Directory to store downloaded Strava activity files')
         parser.add_argument('-i', '--iddir', dest='iddir', help='Directory to store Strava ID file')
         parser.add_argument('-b', '--before', dest='before', help='Upper date bound to search back from')
+        parser.add_argument('-p', '--perpage', dest='perpage', help='Number of activities per page for Strava API download')
         args = parser.parse_args()
         orders = {
                 "tokenFile": args.tokendir+"token.json",
@@ -37,6 +39,8 @@ def parseCommandLine():
         }
         if args.before:
             orders["before"] = args.before
+        if args.perpage:
+            orders["perpage"] = args.perpage
 
 def init():
     global orders
@@ -75,21 +79,21 @@ def getAccessToken(quietly):
     global tokens
     if tokens.get("expires_at") < (time.time()):
         # REFRESH TOKENS
-        print("Token Expired. Requesting new Token.")
+        print(" Token Expired. Requesting new Token.")
         tokenResponse = refreshTokens()
         if("access_token" not in tokenResponse):
             print("ERROR: Could not refresh tokens")
             return None
-        print("New Token: {}".format(tokenResponse["access_token"]))
+        print(" New Token: {}".format(tokenResponse["access_token"]))
         json.dump(tokenResponse, open(orders.get("tokenFile"), mode="w"))
         tokens = tokenResponse
         return tokens["access_token"]
     else:
         if not quietly:
-            print("Using Token: {}".format(tokens["access_token"]))
+            print(" Using Token: {}".format(tokens["access_token"]))
         return tokens["access_token"]
 
-def fetchActivities(page, per_page=40):
+def fetchActivities(page):
     global orders
     accessToken = getAccessToken(False)
     if(not accessToken):
@@ -99,6 +103,7 @@ def fetchActivities(page, per_page=40):
         'accept': 'application/json',
         'authorization': "Bearer " + accessToken
     }
+    per_page = orders.get("perpage")
     # Always returns activities in reverse time order from today, unless give explicit date to read back from
     if "before" in orders:
         epoch = datetime.datetime.strptime(orders["before"],'%Y%m%d').strftime('%s')
@@ -128,7 +133,7 @@ def loadActivitiesList():
     global stravaData
     init()
     lastSeenID = int(stravaData.get("last_read"))
-    print("Last Strava ID uploaded (to find) {}".format(str(lastSeenID)))
+    print(" Last Strava ID uploaded (to find) {}".format(str(lastSeenID)))
     activitiesToAdd = []
     page = 1
     finished = False
@@ -154,7 +159,7 @@ def loadActivitiesList():
         if page > 3:
             print("WARNING: Maximum number of pages reached")
             break
-    print("Activities since last upload:")
+    print(" Activities since last upload:")
     for i in activitiesToAdd:
         print(" - {} : {} : {}".format(str(i["id"]),str(i["type"]),str(i["name"])))
     stravaData["last_read"] = highestSeenID
@@ -192,7 +197,7 @@ if __name__ == "__main__":
     activities = loadActivitiesList()
     filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
     #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
-    print("Non-commutes retained:")
+    print(" Non-commutes retained:")
     for i in filteredActivities:
         print(" - ID: {}   Type {} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["name"],i["start_date"],i["name"]))
         stream = fetchActivityStream(i["id"])
@@ -218,4 +223,4 @@ if __name__ == "__main__":
             with open(outfile, "w") as f:
                 f.write(gpx.to_xml())
         else:
-            print("NOTE: stream was empty for {}".format(i["name"]))
+            print("INFO: stream was empty for {}".format(i["name"]))
