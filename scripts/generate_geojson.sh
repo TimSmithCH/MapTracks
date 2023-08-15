@@ -7,7 +7,7 @@ mkdir -pv tracks/2_geojson/wip
 mkdir -pv tracks/2_geojson/vehicle
 #mkdir -pv tracks/2_geojson/commute
 
-TYPES="bike hike run ski wip commute vehicle"
+TYPES="bike hike run ski skiclimb swim wip commute vehicle"
 FORCE="FALSE"
 
 for type in $TYPES

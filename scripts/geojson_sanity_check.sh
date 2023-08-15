@@ -18,7 +18,7 @@
 set -e   # Exit with nonzero exit code if anything fails
 #set -x   # Debug mode to echo commands
 
-TYPES="bike hike run ski wip commute vehicle"
+TYPES="bike hike run ski skiclimb swim wip commute vehicle"
 
 printf "\n=== Forward Check ===\n  "
 for type in $TYPES

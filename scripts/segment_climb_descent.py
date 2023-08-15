@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# #!/Users/Tim/Code/ACTION/BigSurPy3/bin/python
 import os
 import fnmatch
 import gpxpy
@@ -117,7 +118,7 @@ for fpath in fpaths:
 
     # Loop over point extensions and delete cadence for non-bike exercises
     gtype = gpx.tracks[0].type
-    if not (gtype == 'Ride' or gtype == 'Hike' or gtype == 'BackcountrySki'):
+    if not (gtype == 'Ride' or gtype == 'MountainBikeRide' or gtype == 'Hike' or gtype == 'BackcountrySki'):
         print("WARNING: Track type {} not for splitting".format(gtype))
         exit(0)
 

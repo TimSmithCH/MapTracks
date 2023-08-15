@@ -6,6 +6,7 @@ import datetime
 import os
 import re
 import gpxpy
+import string
 from argparse import ArgumentParser
 
 
@@ -149,6 +150,7 @@ def loadActivitiesList():
                 activitiesToAdd.insert(0,b)
             elif b["id"] == lastSeenID:
                 finished = True
+                print(" Found lastSeenID ({}) so stopping search".format(lastSeenID))
                 break
             elif b["id"] < lastSeenID:   # Sanity check: cant get here unless "below" makes loop start too low (or overflow pages)
                 if "before" in orders:
@@ -157,7 +159,7 @@ def loadActivitiesList():
         # Spamming check: dont read more than 3 pages (unless explicitly allow)
         page = page + 1
         if page > 3:
-            print("WARNING: Maximum number of pages reached")
+            print("WARNING: Maximum number (3) of pages reached")
             break
     print(" Activities since last upload:")
     for i in activitiesToAdd:
@@ -193,7 +195,13 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
 if __name__ == "__main__":
 
     args = parseCommandLine()
-    track_dir = dict(Ride="bike", Hike="hike", Ski="ski", Run="run", Swim="wip")
+    track_dir = dict(Ride="bike", # Ride/Ride and Ride/MountainBikeRide in bike
+                     Hike="hike", # Hike/Hike in hike
+                     Walk="hike", # Walk/Walk in hike
+                     AlpineSki="ski", # AlpineSki/AlpineSki in ski
+                     BackcountrySki="skiclimb", # BackcountrySki/BackcountrySki in skiclimb
+                     Run="run", # Run/Run in run
+                     Swim="swim") # Swim/Swim in swim
     activities = loadActivitiesList()
     filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
     #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
@@ -204,10 +212,17 @@ if __name__ == "__main__":
         if "latlng" in stream:
             if not stream['latlng']['resolution'] == "high":
                 print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
-            # Construct a sanitized activity/file name from the strava id and the strava activity name with dashes and spaces converted to underscores
+            # Construct a sanitized activity/file name from the strava id and activity name
+            #  with dashes and spaces converted to underscores
+            #  and punctuation marks removed
             s = str(i["id"])+"."+str(i["name"])
             s = re.sub(r"-", ' ', s)
-            activity_name = re.sub(r"\s+", '_', s)
+            s = re.sub(r"\s+", '_', s)
+            remove = string.punctuation
+            remove = remove.replace("_", "") # don't remove underscores
+            remove = remove.replace(".", "") # don't remove dots
+            activity_name = s.translate(str.maketrans('', '', remove))
+            activity_name = re.sub(r"_$", '', activity_name) # dont leave an underscore as last letter
             # Create a GPX file from the activity streams
             gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
             # Prepare output file location
