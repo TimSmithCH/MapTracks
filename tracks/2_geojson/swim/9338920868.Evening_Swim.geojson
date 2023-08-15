@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "LayerName",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "9338920868.Evening_Swim", "cmt": "2023-06-26", "desc": "1.0", "type": "Swim" }, "geometry": { "type": "LineString", "coordinates": [ [ 6.204537, 46.334113 ], [ 6.204569, 46.334112 ], [ 6.204542, 46.334067 ], [ 6.204436, 46.334221 ], [ 6.204462, 46.334204 ] ] } }
+]
+}
