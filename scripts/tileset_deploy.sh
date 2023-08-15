@@ -19,7 +19,7 @@ if [ -z "$TOKEN" ]; then
   TOKEN=$tileset_api
 fi
 if [ -z "$SPORTS" ]; then
-  SPORTS=( bike hike run ski commute )
+  SPORTS=( bike hike run ski skiclimb commute )
   #SPORTS=( bike hike run ski commute vehicle )
 fi
 if [ -z "$FORCE" ]; then
