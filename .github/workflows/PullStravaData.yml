@@ -6,15 +6,6 @@ on:
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-#permissions:
-#  contents: write
-#  id-token: write
-
-# Uses Personal Access Token (instead of GITHUB_TOKEN) to enable chaining workflows
-#env:
-#  ACCESS_TOKEN: ${{ secrets.ACTION_TOKEN }}
-
 jobs:
   refresh-feed:
     runs-on: ubuntu-latest
@@ -38,8 +29,10 @@ jobs:
         #--- Next Step
       - name: Segment climb/descend tracks
         run: |
-          git show --pretty="format:" --name-only
-          git show --pretty="format:" --name-only | grep "tracks/3_gpx" | xargs -I {} scripts/segment_climb_descent.py {}
+          echo ">>> To Segment List"
+          git diff --name-only tracks/3_gpx
+          echo ">>> Segmentation"
+          git diff --name-only tracks/3_gpx | xargs -I {} scripts/segment_climb_descent.py {}
         #--- Next Step
       - name: Commit freshly created files
         run: |
