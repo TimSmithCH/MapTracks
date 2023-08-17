@@ -37,7 +37,9 @@ jobs:
           CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         #--- Next Step
       - name: Segment climb/descend tracks
-        run: git show --pretty="format:" --name-only | grep "tracks/3_gpx" | xargs -I {} scripts/segment_climb_descent.py {}
+        run: |
+          git show --pretty="format:" --name-only
+          git show --pretty="format:" --name-only | grep "tracks/3_gpx" | xargs -I {} scripts/segment_climb_descent.py {}
         #--- Next Step
       - name: Commit freshly created files
         run: |

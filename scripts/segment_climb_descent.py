@@ -88,6 +88,7 @@ def get_new_stat_points(self):
 parser = argparse.ArgumentParser(description='Split the GPX track into climb and descent segments.')
 parser.add_argument("files", help="individual gpx filenames [filenames]", nargs="+")
 args = parser.parse_args()
+print(" Asked to parse ({})".format(args.files))
 
 VERBOSE = True
 RAPID = 0
