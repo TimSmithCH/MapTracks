@@ -31,8 +31,10 @@ jobs:
         run: |
           echo ">>> To Segment List"
           git diff --name-only tracks/3_gpx
+          echo ">>> To Segment List"
+          git status --porcelain tracks/3_gpx | awk '{print $2}'
           echo ">>> Segmentation"
-          git diff --name-only tracks/3_gpx | xargs -I {} scripts/segment_climb_descent.py {}
+          git status --porcelain tracks/3_gpx | awk '{print $2}' | xargs -I {} scripts/segment_climb_descent.py {}
         #--- Next Step
       - name: Commit freshly created files
         run: |

@@ -36,7 +36,7 @@ jobs:
           fetch-depth: 0
         #--- Next Step
       - name: Generate new GeoJson files from GPX files
-        run: ./scripts/generate_geojson.sh
+        run: scripts/generate_geojson.sh
         #--- Next Step
       - name: Signal new GeoJson files built
         id: chain
