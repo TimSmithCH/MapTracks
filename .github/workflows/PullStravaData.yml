@@ -29,10 +29,11 @@ jobs:
         #--- Next Step
       - name: Segment climb/descend tracks
         run: |
+          # If the working directory contains any track files to commit
           echo ">>> To Segment List"
           git -c core.quotePath=false status --porcelain tracks/3_gpx | awk '{print $2}'
           echo ">>> Segmentation"
-          git -c core.quotePath=false status --porcelain tracks/3_gpx | awk '{print $2}' | xargs -n 20 scripts/segment_climb_descent.py
+          git -c core.quotePath=false status --porcelain tracks/3_gpx | awk '{print $2}' | xargs -r -n 20 scripts/segment_climb_descent.py
         #--- Next Step
       - name: Commit freshly created files
         run: |

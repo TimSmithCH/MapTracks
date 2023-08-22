@@ -37,10 +37,11 @@ jobs:
         #--- Next Step
       - name: Generate new GeoJson files from GPX files
         run: |
-          if ! git diff --quiet --exit-code tracks/2_geojson tracks/3_gpx; then
+          # If the last commit contained any track files
+          if ! git diff --quiet --exit-code "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx; then
             echo ">>> Need to generate new GeoJSON files"
-            git diff --name-status tracks/2_geojson tracks/3_gpx | awk -F "/" '{print $3}' | uniq
-            git diff --name-status tracks/2_geojson tracks/3_gpx | awk -F "/" '{print $3}' | uniq | xargs -r -I {} scripts/generate_geojson.sh -s {}
+            git diff --name-status "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx | awk -F "/" '{print $3}' | uniq
+            git diff --name-status "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx | awk -F "/" '{print $3}' | uniq | xargs -r -I {} scripts/generate_geojson.sh -s {}
           fi
         #--- Next Step
       - name: Signal new GeoJson files built
