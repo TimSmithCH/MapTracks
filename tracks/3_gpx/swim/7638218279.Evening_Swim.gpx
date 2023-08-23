@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <metadata>
+    <name>7638218279.Evening_Swim</name>
+    <time>2022-08-14T17:01:28Z</time>
+    <keywords>7638218279</keywords>
+  </metadata>
+  <trk>
+    <name>7638218279.Evening_Swim</name>
+    <cmt>2022-08-14</cmt>
+    <desc>1.0</desc>
+    <type>Swim</type>
+    <trkseg>
+      <trkpt lat="46.333445" lon="6.204581">
+        <ele>371.0</ele>
+        <time>2022-08-14T17:01:28Z</time>
+      </trkpt>
+      <trkpt lat="46.333445" lon="6.204581">
+        <ele>371.0</ele>
+        <time>2022-08-14T17:01:38Z</time>
+      </trkpt>
+      <trkpt lat="46.333479" lon="6.204651">
+        <ele>371.0</ele>
+        <time>2022-08-14T17:01:57Z</time>
+      </trkpt>
+      <trkpt lat="46.333124" lon="6.20479">
+        <ele>371.0</ele>
+        <time>2022-08-14T17:05:21Z</time>
+      </trkpt>
+      <trkpt lat="46.333407" lon="6.204463">
+        <ele>371.0</ele>
+        <time>2022-08-14T17:08:28Z</time>
+      </trkpt>
+      <trkpt lat="46.333405" lon="6.204468">
+        <ele>371.0</ele>
+        <time>2022-08-14T17:11:26Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
