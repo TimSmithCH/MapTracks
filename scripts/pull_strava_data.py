@@ -18,13 +18,15 @@ def parseCommandLine():
                 "tokenFile": "token.json",
                 "trackDir": "tracks/3_gpx/",
                 "idFile": "features/LastStravaIDRead.json",
-                "perpage": 40
+                "perpage": 40,
+                "commute": False,
+                "light": False
         }
     else:
         # Instantiate the parser
         parser = ArgumentParser(description="Download latest activities via Strava API.")
         # Set up the argument defaults
-        defaults = dict(outdir="./",iddir="./",tokendir="./",perpage=10)
+        defaults = dict(outdir="./",iddir="./",tokendir="./",perpage=10,commute=False,light=False)
         parser.set_defaults(**defaults)
         # Parse the command line
         parser.add_argument('-t', '--tokendir', dest='tokendir', help='Directory to store generated access token file')
@@ -32,6 +34,8 @@ def parseCommandLine():
         parser.add_argument('-i', '--iddir', dest='iddir', help='Directory to store Strava ID file')
         parser.add_argument('-b', '--before', dest='before', help='Upper date bound to search back from')
         parser.add_argument('-p', '--perpage', dest='perpage', help='Number of activities per page for Strava API download')
+        parser.add_argument('-c', '--commute', dest='commute', help='Find commutes instead of the default of ignoring them')
+        parser.add_argument('-l', '--light', dest='light', help='Light mode: Dont download data if file already exists')
         args = parser.parse_args()
         orders = {
                 "tokenFile": args.tokendir+"token.json",
@@ -42,6 +46,8 @@ def parseCommandLine():
             orders["before"] = args.before
         if args.perpage:
             orders["perpage"] = args.perpage
+        orders["commute"] = args.commute
+        orders["light"] = args.light
 
 def init():
     global orders
@@ -190,6 +196,32 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(p[0], p[1], elevation=stream['altitude']['data'][i], time=trkpt_dt))
     return gpx
 
+def construct_filenames(i):
+    global orders
+    # Construct a sanitized activity/file name from the strava id and activity name
+    #  with dashes and spaces converted to underscores
+    #  and punctuation marks removed
+    s = str(i["id"])+"."+str(i["name"])
+    s = re.sub(r"-", ' ', s)
+    s = re.sub(r"\s+", '_', s)
+    remove = string.punctuation
+    remove = remove.replace("_", "") # don't remove underscores
+    remove = remove.replace(".", "") # don't remove dots
+    activity_name = s.translate(str.maketrans('', '', remove))
+    activity_name = re.sub(r"_$", '', activity_name) # dont leave an underscore as last letter
+    # Prepare output file location
+    if i['commute']:
+        t = "commute"
+    elif i["type"] in track_dir:
+        t = track_dir[i["type"]]
+    else:
+        t = "wip"
+    # Default of localdir unless ordered otherwise on the command line
+    if str(orders.get("trackDir")) == "./":
+        outfile = activity_name+".gpx"
+    else:
+        outfile = str(orders.get("trackDir"))+t+"/"+activity_name+".gpx"
+    return activity_name,outfile
 
 
 if __name__ == "__main__":
@@ -203,38 +235,30 @@ if __name__ == "__main__":
                      Run="run", # Run/Run in run
                      Swim="swim") # Swim/Swim in swim
     activities = loadActivitiesList()
-    filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
-    #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
-    print(" Non-commutes retained:")
+    # Selectively download activities: by default only non-commutes
+    if not orders["commute"]:
+        filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
+        print(" Non-commutes retained:")
+    else:
+        filteredActivities = list(filter(lambda obj: obj['commute'], activities))
+        #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
+        print(" Commutes retained:")
+    # Download activities
     for i in filteredActivities:
-        print(" - ID: {}   Type {} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["name"],i["start_date"],i["name"]))
+        activity_name,outfile = construct_filenames(i)
+        if orders["light"]:
+            # Only if file doesnt exist at all then download
+            if os.path.exists(outfile):
+                print("INFO: Skipping existing {}".format(i["name"]))
+                continue
+        print(" - ID: {}   Type {}/{} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["commute"],i["name"],i["start_date"],i["name"]))
         stream = fetchActivityStream(i["id"])
         if "latlng" in stream:
             if not stream['latlng']['resolution'] == "high":
                 print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
-            # Construct a sanitized activity/file name from the strava id and activity name
-            #  with dashes and spaces converted to underscores
-            #  and punctuation marks removed
-            s = str(i["id"])+"."+str(i["name"])
-            s = re.sub(r"-", ' ', s)
-            s = re.sub(r"\s+", '_', s)
-            remove = string.punctuation
-            remove = remove.replace("_", "") # don't remove underscores
-            remove = remove.replace(".", "") # don't remove dots
-            activity_name = s.translate(str.maketrans('', '', remove))
-            activity_name = re.sub(r"_$", '', activity_name) # dont leave an underscore as last letter
-            # Create a GPX file from the activity streams
+            # Create a GPX file in memory from the activity streams
             gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
-            # Prepare output file location
-            if i["type"] in track_dir:
-                t = track_dir[i["type"]]
-            else:
-                t = "wip"
-            # Default of localdir unless ordered otherwise on the command line
-            if str(orders.get("trackDir")) == "./":
-                outfile = activity_name+".gpx"
-            else:
-                outfile = str(orders.get("trackDir"))+t+"/"+activity_name+".gpx"
+            # Write out the GPX file to disk
             with open(outfile, "w") as f:
                 f.write(gpx.to_xml())
         else:
