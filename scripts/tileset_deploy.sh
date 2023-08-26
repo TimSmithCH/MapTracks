@@ -37,6 +37,10 @@ if [[ "$FORCE" == "false" ]] ; then
   git pull --rebase=false
 fi
 
+if [[ "$DRYRUN" == "true" ]] ; then
+  echo ">>> DRYRUN <<< (intended actions will be indicated)"
+fi
+
 # Update tileset sources when the summary GEOJsons have changed
 printf "\n+++ Upload New Sources +++\n"
 MODIFIED="false"
@@ -59,7 +63,7 @@ do
     if [[ "$DRYRUN" == "false" ]] ; then
       tilesets upload-source --token $TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson --replace
     else
-      echo "tilesets upload-source --token $TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson --replace"
+      echo "INTENT: tilesets upload-source --token TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson --replace"
     fi
   else
     printf "  .\n"
@@ -88,4 +92,6 @@ if [[ "$MODIFIED" == "true" ]] ; then
   fi
   printf "\n+++ Finished +++\n"
   tilesets status --token $TOKEN --indent 2 timsmithch.all_tracks
+else
+  echo "INTENT: tilesets publish --token TOKEN timsmithch.all_tracks"
 fi

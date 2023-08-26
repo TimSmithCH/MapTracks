@@ -1,4 +1,22 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
+#-------------------------------------------------------------------------------
+#
+# DESCRIPTION
+#    Download Strava data to create GPX files per activity. Use the Strava API
+#    to construct an activity list since last download, then for each activity
+#    download Strava's actvity streams and reconstruct a GPX file from the data
+#
+# EXAMPLES
+#    python pull_strava_data.py -o "tracks/3_gpx/" -p 20
+#    python pull_strava_data.py -c True -o "tracks/3_gpx/" -p 100 -b 20220201
+#
+# IMPLEMENTATION
+#    Author       Tim Smith
+#    Copyright    Copyright (c) Tim Smith
+#    Licence      GNU General Public License
+#
+#-------------------------------------------------------------------------------
 import requests
 import json
 import time
