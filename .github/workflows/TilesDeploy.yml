@@ -37,6 +37,6 @@ jobs:
       - name: Build MapBox tileset
         env:
           tileset_api: ${{ secrets.TILESET_CREATOR }}
-        run: scripts/tileset_deploy.sh -d true
+        run: scripts/tileset_deploy.sh -d false
           #-- run: scripts/tileset_deploy.sh -f true
 
