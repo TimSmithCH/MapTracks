@@ -48,7 +48,7 @@ jobs:
             # Commit any modified GPX files
             git status -s 1>&2
             #git commit -m "${{ github.event.head_commit.message }}" 1>&2
-            git commit -m "Strava download BOT: adding latest tracks" 1>&2
+            git commit -m "Strava download BOT: adding latest GPX tracks" 1>&2
             git push 1>&2
           else
             echo ">>> No new GPX files to commit"

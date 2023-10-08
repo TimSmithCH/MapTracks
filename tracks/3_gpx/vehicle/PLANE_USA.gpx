@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+  <trk>
+    <name>PLANE_USA</name>
+    <cmt>2013-07-23</cmt>
+    <desc>1.0</desc>
+    <trkseg>
+      <trkpt lat="49.194722" lon="-123.183889">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="50.143611" lon="-122.949167">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="49.194722" lon="-123.183889">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="37.618889" lon="-122.375">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="41.978611" lon="-87.904722">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="42.363056" lon="-71.006389">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="40.639722" lon="-73.778889">
+        <ele>0.0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+  <wpt lat="49.194722" lon="-123.183889">
+    <name>Vancouver International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="50.143611" lon="-122.949167">
+    <name>Whistler Green Lake Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="37.618889" lon="-122.375">
+    <name>San Francisco International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="41.978611" lon="-87.904722">
+    <name>Chicago O'Hare International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="42.363056" lon="-71.006389">
+    <name>Boston Logan International Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="40.639722" lon="-73.778889">
+    <name>New York JFK Airport</name>
+    <desc>airport</desc>
+  </wpt>
+</gpx>
