@@ -13,10 +13,12 @@ permissions:
   pages: write
   id-token: write
 
+run-name: Generate GeoJSONs for ${{ github.event.head_commit.message }}
+
 jobs:
   # Build GeoJSON files from any newly committed GPX files
   GeoJsonBuild:
-    name: Generate Aggregate Deploy
+    name: Generate_Aggregate
     runs-on: macos-latest
     # Map step output to job output
     outputs:

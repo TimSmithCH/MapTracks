@@ -6,6 +6,8 @@ on:
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
 
+run-name: Pull GPXs from Strava, run ${{ github.run.number }}
+
 jobs:
   refresh-feed:
     runs-on: ubuntu-latest

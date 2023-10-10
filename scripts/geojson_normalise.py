@@ -15,6 +15,13 @@ for mpath in filename:
     # Name from filename
     bname = os.path.basename(mpath)
     fname = os.path.splitext(bname)[0]
+    gtype = os.path.split(os.path.dirname(mpath))[1]
+    # Skip mechanical tracks
+    if (gtype == 'vehicle' or gtype == 'wip'):
+        print("Dont alternate opacity in mechanical {} files".format(gtype))
+        break
+
+    # Read in the file
     try:
         gj = json.load(open(mpath,'r'))
     except:
