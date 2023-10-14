@@ -1,0 +1,499 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.86694444444444", 
+          "45.9369444444444", 
+          "4634"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 4634, 
+        "prominence": 2165, 
+        "name": "Monte Rosa (Dufourspitze)", 
+        "canton": "Valais", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.12611111111111", 
+          "46.5372222222222", 
+          "4274"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 4274, 
+        "prominence": 2280, 
+        "name": "Finsteraarhorn", 
+        "canton": "Bern", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.90805555555556", 
+          "46.3822222222222", 
+          "4049"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 4049, 
+        "prominence": 2234, 
+        "name": "Piz Bernina", 
+        "canton": "Graubünden", 
+        "icon": "mountain",
+        "climbed": "nearly"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.42111111111111", 
+          "46.6433333333333", 
+          "3630"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3630, 
+        "prominence": 1466, 
+        "name": "Dammastock", 
+        "canton": "Uri", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.91472222222222", 
+          "46.8111111111111", 
+          "3614"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3614, 
+        "prominence": 1570, 
+        "name": "T\u00f6di (Piz Russein)", 
+        "canton": "Glarus", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.04027777777778", 
+          "46.4936111111111", 
+          "3402"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3402, 
+        "prominence": 1337, 
+        "name": "Rheinwaldhorn", 
+        "canton": "Ticino", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.34305555555556", 
+          "46.8983333333333", 
+          "3247"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3247, 
+        "prominence": 843, 
+        "name": "Ringelspitz/Piz Barghis", 
+        "canton": "St_Gallen", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.43777777777778", 
+          "46.7719444444444", 
+          "3238"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3238, 
+        "prominence": 978, 
+        "name": "Titlis", 
+        "canton": "Obwalden", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.18888888888889", 
+          "46.3038888888889", 
+          "3210"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3210, 
+        "prominence": 968, 
+        "name": "Diablerets", 
+        "canton": "Vaud", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.42583333333333", 
+          "46.7775", 
+          "2901"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2901, 
+        "prominence": 0, 
+        "name": "Rotst\u00f6ckli", 
+        "canton": "Nidwalden", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.94583333333333", 
+          "46.9672222222222", 
+          "2802"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2802, 
+        "prominence": 367, 
+        "name": "B\u00f6s Fulen", 
+        "canton": "Schwyz", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.34333333333333", 
+          "47.2494444444444", 
+          "2502"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2502, 
+        "prominence": 2015, 
+        "name": "S\u00e4ntis", 
+        "canton": "Appenzell_Ausserrhoden", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.34333333333333", 
+          "47.2494444444444", 
+          "2502"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2502, 
+        "prominence": 2015, 
+        "name": "S\u00e4ntis", 
+        "canton": "Appenzell_Innerrhoden", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.14833333333333", 
+          "46.5286111111111", 
+          "2389"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2389, 
+        "prominence": 1110, 
+        "name": "Vanil Noir", 
+        "canton": "Fribourg", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.04694444444444", 
+          "46.7869444444444", 
+          "2350"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2350, 
+        "prominence": 1342, 
+        "name": "Brienzer Rothorn", 
+        "canton": "Lucerne", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.57777777777778", 
+          "47.0841666666667", 
+          "1580"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1580, 
+        "prominence": 780, 
+        "name": "Rossberg (Wildspitz)", 
+        "canton": "Zug", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.03527777777778", 
+          "47.1219444444444", 
+          "1552"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1552, 
+        "prominence": 0, 
+        "name": "Chasseral Ouest", 
+        "canton": "Neuchâtel", 
+        "icon": "mountain",
+        "climbed": "yes"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.45055555555556", 
+          "47.2419444444444", 
+          "1445"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1445, 
+        "prominence": 618, 
+        "name": "Hasenmatt", 
+        "canton": "Solothurn", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.42916666666667", 
+          "47.3083333333333", 
+          "1302"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1302, 
+        "prominence": 533, 
+        "name": "Mont Raimeux", 
+        "canton": "Jura", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.97958055555556", 
+          "47.3256583333333", 
+          "1292"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1292, 
+        "prominence": 0, 
+        "name": "Schnebelhorn", 
+        "canton": "Zürich", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.71055555555556", 
+          "47.3725", 
+          "1169"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 1169, 
+        "prominence": 0, 
+        "name": "Hinteri Egg", 
+        "canton": "Basel-Landschaft", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.96666666666667", 
+          "47.3833333333333", 
+          "991"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 991, 
+        "prominence": 0, 
+        "name": "Hohgrat (Groot)", 
+        "canton": "Thurgau", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "8.56666666666667", 
+          "47.7666666666667", 
+          "991"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 991, 
+        "prominence": 0, 
+        "name": "Hagen (Randen)", 
+        "canton": "Schaffhausen", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.96456111111111", 
+          "47.4227833333333", 
+          "908"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 908, 
+        "prominence": 0, 
+        "name": "Geissfluegrat", 
+        "canton": "Aargau", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.68", 
+          "47.5730555555556", 
+          "522"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 522, 
+        "prominence": 0, 
+        "name": "St. Chrischona", 
+        "canton": "Basel-Stadt", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "6.30888888888889", 
+          "46.2480555555556", 
+          "516"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 516, 
+        "prominence": 0, 
+        "name": "Les Arales", 
+        "canton": "Geneva", 
+        "icon": "mountain",
+        "climbed": "no"
+      }
+    }
+  ]
+}

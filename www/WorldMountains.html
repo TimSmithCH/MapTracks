@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>World Mountains Climbed</title>
+    <meta name="description" content="TrackMap">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- Site styles and icons -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+    <style>
+/* Style the buttons */
+.myBtnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.btn {
+  margin: 6px;
+  border: 2px solid green;
+  border-radius: 5px;
+  padding: 12px 16px;
+  cursor: pointer;
+  background-color: white;
+  border-color: #4CAF50;
+  color: green;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-width: 72px;
+  text-align: center;
+}
+/* Add a dark background color to the active button */
+.btn.active {
+  background-color: #4CAF50;
+  color: white;
+}
+.btn.climbed {
+  background-color: #dcefdc;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #2196F3;
+  color: white;
+}
+th.clickable:hover {
+  background-color: white;
+  color: #2196F3;
+}
+td, th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+tr.climbed {
+  background-color: #dcefdc;
+}
+      /* france */
+.fr {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23ed2939" d="m0,0h900v600h-900z"/> <path fill="%23fff" d="m0,0h600v600h-600z"/> <path fill="%23002395" d="m0,0h300v600h-300z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+.frit {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3500" height="1000" viewBox="0 0 7 2"> <path fill="%23ed2939" d="m0,0h1v2h-1z"/> <path fill="%23fff" d="m1,0h1v2h-1z"/> <path fill="%23002395" d="m2,0h1v2h-1z"/> <path fill="%23009246" d="m4,0h1v2h-1z"/> <path fill="%23fff" d="m5,0h1v2h-1z"/> <path fill="%23ce2b37" d="m6,0h1v2h-1z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* italy */
+.it {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 3 2"> <path fill="%23009246" d="m0,0h1v2h-1z"/> <path fill="%23fff" d="m1,0h1v2h-1z"/> <path fill="%23ce2b37" d="m2,0h1v2h-1z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* switzerland */
+.ch {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320"> <path fill="%23d52b1e" d="m0,0h320v320h-320z"/> <g fill="%23fff"> <path d="m60,130h200v60h-200z"/> <path d="m130,60h60v200h-60z"/> </g> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+.chit {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320"> <path fill="%23d52b1e" d="m0,0h320v320h-320z"/> <g fill="%23fff"> <path d="m60,130h200v60h-200z"/> <path d="m130,60h60v200h-60z"/> </g> <path fill="%23009246" d="m480,0h160v320h-160z"/> <path fill="%23fff" d="m640,0h160v320h-160z"/> <path fill="%23ce2b37" d="m800,0h160v320h-160z"/></svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* bolivia */
+.bo {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23DA291C" d="m0,0h900v200h-900z"/> <path fill="%23F4E400" d="m0,200h900v200h-900z"/> <path fill="%23007A33" d="m0,400h900v200h-900z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* Mongolia */
+.mn {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23da2032" d="m0,0h900v600h-900z"/> <path fill="%230066b3" d="m300,0h300v600h-300z"/> <path fill="%23ffd900" d="m70,300h160v230h-160z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* Argentina */
+.ar {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%2374ACDF" d="m0,0h900v200h-900z"/> <path fill="%23FFFFFF" d="m0,200h900v200h-900z"/> <path fill="%2374ACDF" d="m0,400h900v200h-900z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* Australia */
+.au {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%2300008B" d="m0,0h900v600h-900z"/> <path fill="%23FF0000" d="m0,0h450v300h-450z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* Nepal */
+.np {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path stroke="%23003893" stroke-width="18" fill="%23DC143C" d="M9 591h454l-299-299h291L9 18z"/> <path fill="%23FFFFFF" d="M40 440a85,85 0 1,0 170,0a85,85 0 1,0 -170,0"/> <path fill="%23FFFFFF" d="M40 185a85,85 0 1,0 170,0a95,95 0 0,1 -170,0z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* Tanzania */
+.tz {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%231eb53a" d="m0,0h900l-900,600z"/> <path fill="%2300a3dd" d="m900,0v600h-900z"/> <path fill="%23fcd116" d="m688,0h212v142l-688,458h-212v-142z"/> <path fill="%23000" d="m756,0h144v96l-756,504h-144v-96z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+      /* United States */
+.us {
+ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23B22234" d="m0,0h900v600h-900z"/> <path fill="%233C3B6E" d="m0,0h360v300h-360z"/> </svg>');
+ background-size: 60% 60%;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+    </style>
+  </head>
+
+  <body onload="filterTable('all')">
+    <script>
+      var filter_prom, filter_flag;
+function filterTable(c) {
+  // Loop through active buttons and set flags
+  var btn_all = document.getElementById("all");
+  if (btn_all == null) return;
+  var btn_prom = document.getElementById("prom");
+  var btn_flag = document.getElementById("flag");
+  if (c == "all") {
+    filter_prom = false;
+    filter_flag = false;
+    btn_all.classList.add("active");
+    btn_prom.classList.remove("active");
+    btn_flag.classList.remove("active");
+  } else if (c == "prom") {
+    if (btn_prom.classList.contains("active")) {
+      btn_prom.classList.remove("active");
+      filter_prom = false;
+      if (btn_flag.classList.contains("active") == false) {
+        btn_all.classList.add("active");
+      }
+    } else {
+      filter_prom = true;
+      btn_prom.classList.add("active");
+      btn_all.classList.remove("active");
+    }
+  } else if (c == "flag") {
+    if (btn_flag.classList.contains("active")) {
+      btn_flag.classList.remove("active");
+      filter_flag = false;
+      if (btn_prom.classList.contains("active") == false) {
+        btn_all.classList.add("active");
+      }
+    } else {
+      filter_flag = true;
+      btn_flag.classList.add("active");
+      btn_all.classList.remove("active");
+    }
+  }
+
+  // Loop through all table rows, and hide those who don't match the search query
+  var td_prom, td_flag, row_count, row_climbed;
+  row_count = 0;
+  row_climbed = 0;
+  var table = document.getElementById("tabAlps");
+  var tr = table.getElementsByTagName("tr");
+  for (i = 1; i < tr.length; i++) {
+    td_prom = tr[i].getElementsByTagName("td")[2];
+    td_flag = tr[i].getElementsByTagName("td")[3];
+    tr[i].style.display = "";
+    if (filter_prom && td_prom) {
+      promValue = td_prom.textContent || td_prom.innerText;
+      if (parseInt(promValue) < 100) {
+        tr[i].style.display = "none";
+      }
+    }
+    if (filter_flag && td_flag) {
+      flagValue = td_flag.classList.contains("ch") || td_flag.classList.contains("chit");
+      if (flagValue == false) {
+        tr[i].style.display = "none";
+      }
+    }
+    if (tr[i].style.display == "") {
+      row_count = row_count + 1;
+      if (tr[i].classList.contains("climbed")) row_climbed = row_climbed + 1;
+    }
+  }
+  //console.log(row_count,row_climbed);
+  var out1 = document.getElementById("out1");
+  var out2 = document.getElementById("out2");
+  out1.innerHTML = row_count;
+  out2.innerHTML = row_climbed;
+}
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("tabAlps");
+  switching = true;
+  dir = "desc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (parseInt(x.innerHTML) < parseInt(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+    </script>
+
+    <div class="myBtnContainer">
+      <button class="btn active" onclick="filterTable('all')" id="all"> Show all</button>
+      <button class="btn" onclick="filterTable('prom')" id="prom"> Prominent</button>
+      <button class="btn" onclick="filterTable('flag')" id="flag"> Swiss</button>
+    </div>
+
+    <table id="tabAlps">
+      <tr class="header">
+        <th style="width:30%;">Summit</th>
+        <th style="width:10%;" class="clickable" onclick="sortTable(1)">Height</th>
+        <th style="width:10%;" class="clickable" onclick="sortTable(2)">Promience</th>
+        <th style="width:10%;">Country</th>
+      </tr>
+      <tr>
+        <td>Aconcagua</td>
+        <td>6961</td>
+        <td>6961</td>
+        <td class="ar"></td>
+      </tr>
+      <tr class="climbed">
+        <td>Sajama</td>
+        <td>6542</td>
+        <td>2428</td>
+        <td class="bo"></td>
+      </tr>
+      <tr class="climbed">
+        <td>Imja Tse</td>
+        <td>6160</td>
+        <td>475</td>
+        <td class="np"></td>
+      </tr>
+      <tr>
+        <td>Kilimanjaro</td>
+        <td>5895</td>
+        <td>5886</td>
+        <td class="tz"></td>
+      </tr>
+      <tr class="climbed">
+        <td>Kala Patthar</td>
+        <td>5644</td>
+        <td>10</td>
+        <td class="np"></td>
+      </tr>
+      <tr class="climbed">
+        <td>Pequeño Alpamayo</td>
+        <td>5370</td>
+        <td>165</td>
+        <td class="bo"></td>
+      </tr>
+      <tr class="climbed">
+        <td>Khüiten</td>
+        <td>4356</td>
+        <td>2324</td>
+        <td class="mn"></td>
+      </tr>
+      <tr class="climbed">
+        <td>Malchin</td>
+        <td>4050</td>
+        <td>330</td>
+        <td class="mn"></td>
+      </tr>
+      <tr class="climbed">
+        <td>Half Dome</td>
+        <td>2696</td>
+        <td>410</td>
+        <td class="us"></td>
+      </tr>
+      <tr>
+        <td>Kosciuszko</td>
+        <td>2228</td>
+        <td>2228</td>
+        <td class="au"></td>
+      </tr>
+    </table>
+
+    <div class="myBtnContainer">
+      <output class="btn" id="out1">0</output>
+      <output class="btn climbed" id="out2">0</output>
+    </div>
+  </body>
+</html>
