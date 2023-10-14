@@ -1,67 +1,39 @@
-*, *:before, *:after
-{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
 html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-size: 16px;
-    /* font-family: "Helvetica Neue", "Helvetica"; */
-    font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 16px;
+  /* font-family: "Helvetica Neue", "Helvetica"; */
+  font-family: "Roboto Slab", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-/* Trick: flex in both dimensions in order to fill all screens */
+/* Simple flex column wrapper to contain main and footer */
 .wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* align items in Main Axis */
-    align-items: stretch; /* align items in Cross Axis */
-    align-content: stretch; /* Extra space in Cross Axis */
-    text-align: center;
-}
-.simple_text {
-    max-width: 56em;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1em; }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
 }
 
 /* Defaults all set for mobile screen format */
-.header {
-    padding: 6px;
-    font-size: 16px;
-    font-weight: bold;
-}
 .footer {
-    padding: 6px;
-    font-size: 12px;
-    font-weight: bold;
-    background: #6fa9d0;
-    color: #fff;
+  padding: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  background: #6fa9d0;
+  color: #fff;
 }
 .main {
-    display: flex;
-    flex-direction: row;
-    padding: 6px;
-    flex: 1 1 auto;
-    justify-content: flex-start; /* align items in Main Axis */
-    align-items: stretch; /* align items in Cross Axis */
-    align-content: stretch; /* Extra space in Cross Axis */
+  padding: 6px;
+  flex: 1;
 }
-.main-content {
-    display: flex;
-    flex-direction: row;
-    flex: 1 1 auto;
+#map {
+  height: 100%;
+  width: 100%;
 }
 
 /* Alternatives: Large format if large screen detected */
@@ -76,107 +48,107 @@ body {
     font-size: 24px;
   }
   .main {
-      padding: 12px;
+    padding: 3px;
   }
 }
 
-/* The map menu items */
-#menu {
-    background: #fff;
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 10px;
-    border-radius: 3px;
-    width: 48px;
-    border: 1px solid rgba(0,0,0,0.4);
-    font-family: 'Open Sans', sans-serif;
-}
-#menu a {
-    font-size: 12px;
-    color: #404040;
-    display: block;
-    margin: 0;
-    padding: 3px;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    text-align: center;
-}
-#menu a:last-child {
-    border: none;
-}
-#menu a:hover {
-    background-color: #f8f8f8;
-    color: #404040;
-}
-#menu a.active {
-    background-color: #3887be;
-    color: #ffffff;
-}
-#menu a.active:hover {
-    background: #3074a4;
-}
-#menu button {
-    font-size: 12px;
-    display: block;
-    margin: 0;
-    padding: 1px;
-    width: 100%;
-}
-#menu input {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    -webkit-appearance: slider-vertical; /* WebKit */
-    width: 50%;
-    height: 150px;
-    padding: 0px;
-    margin: 0px;
-    outline: none;
-    background: #ffffff;
-    box-shadow:0 1px 2px rgba(0, 0, 0, 0.20);
-    border-radius: 3px;
-}
-#menu input::-webkit-slider-container{
-    background: #3887be;
-}
-#menu input::-webkit-slider-runnable-track{
-    height: 15px; /* Slider handle height */
-    background: #87CEFA;
-}
-#menu input.right::-webkit-slider-runnable-track{
-    height: 15px; /* Slider handle height */
-    background: #CCFF99;
-}
-#menu input::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
-    appearance: none;
-    outline: none;
-    width: 25px; /* Slider handle width */
-    height: 25px; /* Slider handle height */
-    color: #404040;
-    cursor: pointer; /* Cursor on hover */
-}
-#menu output {
-    font-size: 12px;
-    display: block;
-    margin: 0;
-    padding: 3px;
-    color: #404040;
-    background: #87CEFA;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    text-align: center;
-}
-#menu output.right {
-    font-size: 12px;
-    display: block;
-    margin: 0;
-    padding: 3px;
-    color: #404040;
-    background: #CCFF99;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    text-align: center;
-}
 .mapboxgl-popup {
-    max-width: 300px;
+  max-width: 300px;
+}
+
+.collapsible {
+  background-color: transparent;
+  color: #0000FF;
+  cursor: pointer;
+  padding: 2px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 36px;
+}
+
+.map-overlay {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 360px;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  text-align: left;
+}
+
+.map-overlay-inner {
+  /* display: none; */
+  text-align: center;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+.map-overlay .map-overlay-inner {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.map-overlay-inner fieldset {
+  padding: 0 0 10px;
+  margin: 0 0 10px;
+  background-color: #E6E6FF;
+  border-radius: 6px;
+}
+
+.selector {
+  display: flex;
+  flex-direction: row;
+}
+
+.selector_col {
+  flex-basis: 50%;
+  flex-direction: column;
+}
+
+.selector_row {
+}
+
+.map-overlay-inner p {
+  margin: 0;
+}
+
+.map-overlay-inner label {
+  font-weight: bold;
+}
+
+.map-overlay-inner button {
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.map-overlay-inner button:focus {
+  outline: none;
+}
+
+.map-overlay-inner button:hover {
+  background-color: blue;
+  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+.offset > label,
+.offset > input {
+  display: inline;
+}
+
+#animateLabel {
+  display: inline-block;
+  min-width: 20px;
 }

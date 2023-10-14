@@ -9,7 +9,7 @@ on:
 jobs:
   # Deployment job
   RenewTileset:
-    name: Recreate the MapBox tileset
+    name: Update_MapBox_tiles
     runs-on: macos-latest
     steps:
         #--- Next Step

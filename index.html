@@ -22,631 +22,614 @@
     <!-- Zoom to feature based on: https://www.mapbox.com/mapbox-gl-js/example/zoomto-linestring/ -->
     <!-- Can pass command line arguements like index.html?zoom=12.15&lat=46.05&lon=7.24&layer=Bike / -->
     <main class="main">
-      <div id='map' class="main-content">
-        <nav id="menu"></nav>
+      <div id='map'></div>
+
+      <div class="map-overlay top">
+        <button type="button" class="collapsible">&#9881;</button>
+        <div class="map-overlay-inner">
+          <fieldset>
+            <legend>Tracks</legend>
+            <div class=selector>
+              <div class="selector_col">
+                <div>
+                  <input type="checkbox" id="Hike" name="layer_hike" checked="">
+                  <label for="Hike">Hike</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Bike" name="layer_bike" checked="">
+                  <label for="Bike">Bike</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Ski" name="layer_ski" checked="">
+                  <label for="Ski">Ski</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Run" name="layer_run" checked="">
+                  <label for="Run">Run</label>
+                </div>
+              </div>
+              <div class="selector_col">
+                <div>
+                  <input type="checkbox" id="Commute" name="layer_commute">
+                  <label for="Commute">Commute</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Vehicle" name="layer_vehicle">
+                  <label for="Vehicle">Vehicle</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="WIP" name="layer_wip" checked="">
+                  <label for="WIP">WIP</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Swiss Mountains</legend>
+            <div>
+              <input type="checkbox" id="CHPeaks" name="layer_mountainsH">
+              <label for="CHPeaks">CH Peaks</label>
+            </div>
+            <div>
+              <label for="sliderH">Min. Height</label>
+              <input type="range" id="sliderH" name="sliderH" min="0" max="4000" step="250" value="250">
+              <input type="number" id="sliderHout" name="sliderHout" min="0" max="4000" step="250" value="250" readonly>
+            </div>
+            <div>
+              <label for="sliderP">Min. Prominence</label>
+              <input type="range" id="sliderP" name="sliderP" min="0" max="500" step="50" value="100">
+              <input type="number" id="sliderPout" name="sliderPout" min="0" max="500" step="50" value="100" readonly>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Other Features</legend>
+            <div>
+              <input type="checkbox" id="EUPeaks" name="layer_mountainsE">
+              <label for="EUPeaks">European 4000m peaks</label>
+            </div>
+            <div>
+              <input type="checkbox" id="CHCantons" name="layer_cantons">
+              <label for="CHCantons">Swiss Cantons (and their peaks)</label>
+            </div>
+            <div>
+              <input type="checkbox" id="threeD" name="threeD">
+              <label for="threeD">3D view</label>
+            </div>
+            <div>
+              <label for="zoomL">Zoom level</label>
+              <input type="number" id="zoomL" name="zoomL" min="0" max="999" value="0" readonly>
+            </div>
+          </fieldset>
+        </div>
       </div>
 
       <script>
-            // Parse arguements pased on URL
-            const urlSearchParams = new URLSearchParams(window.location.search);
-            var zoomlvl = urlSearchParams.get('zoom');
-            if (!zoomlvl) {
-              var zoomlvl = 7.6;
-            } else {
-              console.log("Set Zoom: ",zoomlvl);
-            }
-            var la = urlSearchParams.get('lat');
-            if (!la) {
-              la = 46.66;
-            } else {
-              console.log("Set centre Latitude: ",la);
-            }
-            var lo = urlSearchParams.get('lon');
-            if (!lo) {
-              lo = 8.23;
-            } else {
-              console.log("Set centre Longitude: ",lo);
-            }
+        // Parse arguements pased on URL
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        var zoomlvl = urlSearchParams.get('zoom');
+        if (!zoomlvl) {
+          var zoomlvl = 7.6;
+        } else {
+          console.log("Set Zoom: ",zoomlvl);
+        }
+        var la = urlSearchParams.get('lat');
+        if (!la) {
+          la = 46.66;
+        } else {
+          console.log("Set centre Latitude: ",la);
+        }
+        var lo = urlSearchParams.get('lon');
+        if (!lo) {
+          lo = 8.23;
+        } else {
+          console.log("Set centre Longitude: ",lo);
+        }
 
-            // Prepare layer properties object
-            var layer_props = { tracks_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020", init_state: "active", text: "Hike" },
-                                tracks_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812", init_state: "active", text: "Bike" },
-                                tracks_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0048FF", init_state: "active", text: "Ski" },
-                                tracks_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9", init_state: "active", text: "Run" },
-                                tracks_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400", init_state: "active", text: "Cmute" },
-                                tracks_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FFCC00", init_state: "active", text: "Mech" },
-                                tracks_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" } };
-            var show_only = urlSearchParams.get('layer');
-            if (show_only) {
-              for (let layer of Object.keys(layer_props)) {
-                if (layer_props[layer]["text"] !== show_only) {
-                  layer_props[layer]["init_state"] = "";
-                }
-              }
-              console.log("Show single layer: ",show_only);
+        // Prepare layer properties object
+        var layer_props = {
+          layer_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020", init_state: "active", text: "Hike" },
+          layer_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812", init_state: "active", text: "Bike" },
+          layer_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0048FF", init_state: "active", text: "Ski" },
+          layer_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9", init_state: "active", text: "Run" },
+          layer_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400", init_state: "hidden", text: "Cmute" },
+          layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FFCC00", init_state: "hidden", text: "Mech" },
+          layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
+        };
+        var show_only = urlSearchParams.get('layer');
+        if (show_only) {
+          for (let layer of Object.keys(layer_props)) {
+            if (layer_props[layer]["text"] !== show_only) {
+              layer_props[layer]["init_state"] = "";
             }
+          }
+          console.log("Show single layer: ",show_only);
+        }
 
-            
-            // Prepare the Mapbox object
-            mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
-            var map = new mapboxgl.Map({
-              container: 'map', // container id
-              style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
-              //center: [7.2989238, 46.032874], // starting position Fionnay
-              center: [lo, la], // starting position
-              zoom: zoomlvl, // starting zoom
-              projection: 'mercator' // starting projection
-              //projection: 'naturalEarth' // starting projection
+
+        // Prepare the Mapbox object
+        mapboxgl.accessToken = 'pk.eyJ1IjoidGltc21pdGhjaCIsImEiOiJjaW5vamRodXowMGNtdzJrbGloNjRuMHk1In0.IBVnTC9U9dAvRc1DVjIgkA';
+        var map = new mapboxgl.Map({
+          //attributionControl: true,
+          container: 'map', // container id
+          style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
+          center: [lo, la], // starting position
+          zoom: zoomlvl, // starting zoom
+          projection: 'mercator' // starting projection
+          //projection: 'naturalEarth' // starting projection
+        });
+
+        // Add zoom, rotation and full_screen controls to the map
+        map.addControl(new mapboxgl.NavigationControl());
+        map.addControl(new mapboxgl.FullscreenControl());
+
+        // Add GeoLocation control to the map (disabled if not served over https)
+        map.addControl(
+          new mapboxgl.GeolocateControl({
+            positionOptions: {
+              enableHighAccuracy: true
+            },
+            trackUserLocation: true,
+            showUserHeading: true
+          })
+        );
+
+        // Add overlay data layers on demand (after load or style change)
+        var dimension = 2;
+        var basechange = 0;
+        function addDataLayers() {
+          basechange = 0
+          // For 3D add terrain and sky
+          if (dimension == 3) {
+            map.addSource('mapbox-dem', {
+              'type': 'raster-dem',
+              'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+              'tileSize': 512,
+              'maxzoom': 14
             });
+            map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.2 });
+            map.addLayer({
+              'id': 'sky',
+              'type': 'sky',
+              'paint': {
+                'sky-type': 'atmosphere',
+                'sky-atmosphere-sun': [0.0, 90.0],
+                'sky-atmosphere-sun-intensity': 15
+              }
+            });
+            // For 2D make contour labels easier to read
+          } else {
+            map.setLayoutProperty('contour-label', 'text-size', [
+              "interpolate", ["linear"], ["zoom"],
+              1, 0,
+              12, 12,
+              20, 24,
+            ]);
+          }
 
-            // Add zoom, rotation and full_screen controls to the map
-            map.addControl(new mapboxgl.NavigationControl());
-            map.addControl(new mapboxgl.FullscreenControl());
-
-            // Add GeoLocation control to the map (disabled if not served over https)
-            if (window.isSecureContext) {
-                map.addControl(new mapboxgl.GeolocateControl({
-                    positionOptions: {
-                        enableHighAccuracy: true
-                    },
-                    trackUserLocation: true
-                }));
-            } else {
-                console.log("Cant use geolocation when served over http!");
+          //----------------------------------------------
+          // Add Swiss cantons
+          map.addSource("cantons", {
+            type: 'vector',
+            url: 'mapbox://timsmithch.swiss_cantons'
+          });
+          map.addLayer({
+            "id": "layer_cantons",
+            "type": "fill",
+            "source": "cantons",
+            'source-layer': 'swiss_cantons',
+            "layout": {
+              "visibility": "none"
+            },
+            "paint": {
+              'fill-opacity': 0.25,
+              'fill-color': [ 'match', ['get', 'KANTONSNUM'],
+                1, '#00ff00',
+                2, '#00ff00',
+                3, '#ffa500',
+                4, '#ff0000',
+                5, '#800080',
+                6, '#0000ff',
+                7, '#ffff00',
+                8, '#00ff00',
+                9, '#ffff00',
+                10, '#ffa500',
+                11, '#800080',
+                12, '#ffa500',
+                13, '#ffff00',
+                14, '#800080',
+                15, '#ffff00',
+                16, '#800080',
+                17, '#ffa500',
+                18, '#ffff00',
+                19, '#ff0000',
+                20, '#0000ff',
+                21, '#800080',
+                22, '#ffff00',
+                23, '#0000ff',
+                24, '#ff0000',
+                25, '#800080',
+                26, '#0000ff',
+                /* other */ '#ccc'
+              ]
             }
+          });
+          map.addSource("cantons-points", {
+            "type": "geojson",
+            "data": "features/CH_Canton_Mountains.json"
+          });
+          map.addLayer({
+            "id": "layer_cantons-points",
+            "type": "circle",
+            "source": "cantons-points",
+            "layout": {
+              "visibility": "none",
+            },
+            "paint": {
+              // make circles larger as the user zooms from z12 to z22
+              "circle-radius": {
+                "base": 3.00,
+                "stops": [[12, 8], [22, 720]]
+              },
+              // color circles by whether climbed
+              "circle-color": [ "match", ["get", "climbed"],
+                "yes", '#ffcc00',
+                "no", '#ff00ff',
+                "nearly", '#ff9900',
+                /* other */ '#ccc'
+              ]
+            },
+            "filter": ["==", ["geometry-type"], "Point"]
+          });
 
-            // Add overlay data layers on demand (after load or style change)
-            var dimension = 2;
-            var basechange = 0;
-            function addDataLayers() {
-              basechange = 0
-              // For 3D add terrain and sky
-              if (dimension == 3) {
-                map.addSource('mapbox-dem', {
-                    'type': 'raster-dem',
-                    'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
-                    'tileSize': 512,
-                    'maxzoom': 14
-                });
-                map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.2 });
-                map.addLayer({
-                    'id': 'sky',
-                    'type': 'sky',
-                    'paint': {
-                        'sky-type': 'atmosphere',
-                        'sky-atmosphere-sun': [0.0, 90.0],
-                        'sky-atmosphere-sun-intensity': 15
-                    }
-                });
-              // For 2D make contour labels easier to read
+
+          //----------------------------------------------
+          // Add Swiss mountains:
+          //  0-3000m with prominence >300m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland
+          //  3000-4000m with prominence >150m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland_above_3000_m
+          //  4000-5000m with prominence >30m https://en.wikipedia.org/wiki/List_of_Alpine_four-thousanders
+          map.addSource("mountainsH", {
+            "type": "geojson",
+            "data": "features/CH_Mountains_H3000_P300.json"
+          });
+          map.addLayer({
+            "id": "layer_mountainsH",
+            "type": "circle",
+            "source": "mountainsH",
+            "layout": {
+              "visibility": "none",
+            },
+            "paint": {
+              // make circles larger as the user zooms from z12 to z22
+              "circle-radius": {
+                "base": 3.00,
+                "stops": [[12, 8], [22, 720]]
+              },
+              // color circles by height
+              "circle-color": [ "step", ["get", "height"],
+                "#df80ff",
+                3000, "#cc00cc",
+                4000, "#600080"
+              ]
+            },
+            "filter": ["==", ["geometry-type"], "Point"]
+          });
+
+          //----------------------------------------------
+          // Add Alpine 4000er mountains:
+          //  4000-5000m https://en.wikipedia.org/wiki/List_of_Alpine_four-thousanders
+          map.addSource("mountainsE", {
+            "type": "geojson",
+            "data": "features/EU_Mountains_H4000.json"
+          });
+          map.addLayer({
+            "id": "layer_mountainsE",
+            "type": "circle",
+            "source": "mountainsE",
+            "layout": {
+              "visibility": "none",
+            },
+            "paint": {
+              // make circles larger as the user zooms from z12 to z22
+              "circle-radius": {
+                "base": 3.00,
+                "stops": [[12, 8], [22, 720]]
+              },
+              // color circles by whether climbed
+              "circle-color": [ "match", ["get", "climbed"],
+                "yes", '#ffcc00',
+                "no", '#ff00ff',
+                "nearly", '#ff9900',
+                /* other */ '#ccc'
+              ]
+            },
+            "filter": ["==", ["geometry-type"], "Point"]
+          });
+
+          //----------------------------------------------
+          // EITHER Create a layer of routes of each type from layers in MapBox tilesets
+          map.addSource('tracks-all', {
+            type: 'vector',
+            url: 'mapbox://timsmithch.all_tracks'
+          });
+          for (let layer of Object.keys(layer_props)) {
+            if (layer_props[layer]["source"] === "tileset") {
+              if (layer_props[layer]["init_state"] === "active") {
+                var visi = "visible";
               } else {
-                map.setLayoutProperty('contour-label', 'text-size', [
-                  "interpolate", ["linear"], ["zoom"],
-                  1, 0,
-                  12, 12,
-                  20, 24,
-                ]);
+                var visi = "none";
               }
-
-              //----------------------------------------------
-              // Add Swiss cantons
-              map.addSource("cantons", {
-                type: 'vector',
-                url: 'mapbox://timsmithch.swiss_cantons'
-              });
               map.addLayer({
-                "id": "cantons",
-                "type": "fill",
-                "source": "cantons",
-                'source-layer': 'swiss_cantons',
+                'id': layer,
+                'type': 'line',
+                'source': 'tracks-all',
+                "source-layer": layer_props[layer]["source_layer"],
                 "layout": {
-                  "visibility": "none"
+                  "visibility": visi,
+                  "line-join": "round",
+                  "line-cap": "round"
                 },
                 "paint": {
-                  'fill-opacity': 0.25,
-                  'fill-color': [ 'match', ['get', 'KANTONSNUM'],
-                    1, '#00ff00',
-                    2, '#00ff00',
-                    3, '#ffa500',
-                    4, '#ff0000',
-                    5, '#800080',
-                    6, '#0000ff',
-                    7, '#ffff00',
-                    8, '#00ff00',
-                    9, '#ffff00',
-                    10, '#ffa500',
-                    11, '#800080',
-                    12, '#ffa500',
-                    13, '#ffff00',
-                    14, '#800080',
-                    15, '#ffff00',
-                    16, '#800080',
-                    17, '#ffa500',
-                    18, '#ffff00',
-                    19, '#ff0000',
-                    20, '#0000ff',
-                    21, '#800080',
-                    22, '#ffff00',
-                    23, '#0000ff',
-                    24, '#ff0000',
-                    25, '#800080',
-                    26, '#0000ff',
-                    /* other */ '#ccc'
-                  ]
+                  "line-color": layer_props[layer]["colour"],
+                  "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
+                    0, ["^", 2, 3],
+                    8, ["^", 2, 1.5],
+                    24, ["^", 2, 8]
+                  ],
+                  //"line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
+                  "line-dasharray": ["match", ["get", "desc"], ["0.5" ], ["literal", [2, 2]], ["literal", [1]]]
                 }
-              });
-              map.addSource("cantons-points", {
-                "type": "geojson",
-                "data": "features/CH_Canton_Mountains.json"
-              });
-              map.addLayer({
-                "id": "cantons-points",
-                "type": "circle",
-                "source": "cantons-points",
-                "layout": {
-                  "visibility": "none",
-                },
-                "paint": {
-                  // make circles larger as the user zooms from z12 to z22
-                  "circle-radius": {
-                    "base": 3.00,
-                    "stops": [[12, 8], [22, 720]]
-                  },
-                  // color circles by whether climbed
-                  "circle-color": [ "match", ["get", "climbed"],
-                    "yes", '#ffcc00',
-                    "no", '#ff00ff',
-                    /* other */ '#ccc'
-                  ]
-                },
-                "filter": ["==", ["geometry-type"], "Point"]
-              });
-
-
-              //----------------------------------------------
-              // Add Swiss mountains:
-              //  0-3000m with prominence >300m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland
-              //  3000-4000m with prominence >150m https://en.wikipedia.org/wiki/List_of_mountains_of_Switzerland_above_3000_m
-              //  4000-5000m with prominence >30m https://en.wikipedia.org/wiki/List_of_Alpine_four-thousanders
-              map.addSource("mountainsH", {
-                "type": "geojson",
-                "data": "features/CH_Mountains_H3000_P300.json"
-              });
-              map.addLayer({
-                "id": "mountainsH",
-                "type": "circle",
-                "source": "mountainsH",
-                "layout": {
-                  "visibility": "none",
-                },
-                "paint": {
-                  // make circles larger as the user zooms from z12 to z22
-                  "circle-radius": {
-                    "base": 3.00,
-                    "stops": [[12, 8], [22, 720]]
-                  },
-                  // color circles by height
-                  "circle-color": [ "step", ["get", "height"],
-                      "#df80ff",
-                      3000, "#cc00cc",
-                      4000, "#600080"
-                  ]
-                },
-                "filter": ["==", ["geometry-type"], "Point"]
-              });
-
-              //----------------------------------------------
-              // Add Alpine 4000er mountains:
-              //  4000-5000m https://en.wikipedia.org/wiki/List_of_Alpine_four-thousanders
-              map.addSource("mountainsE", {
-                "type": "geojson",
-                "data": "features/EU_Mountains_H4000.json"
-              });
-              map.addLayer({
-                "id": "mountainsE",
-                "type": "circle",
-                "source": "mountainsE",
-                "layout": {
-                  "visibility": "none",
-                },
-                "paint": {
-                  // make circles larger as the user zooms from z12 to z22
-                  "circle-radius": {
-                    "base": 3.00,
-                    "stops": [[12, 8], [22, 720]]
-                  },
-                  // color circles by whether climbed
-                  "circle-color": [ "match", ["get", "climbed"],
-                    "yes", '#ffcc00',
-                    "no", '#ff00ff',
-                    /* other */ '#ccc'
-                  ]
-                },
-                "filter": ["==", ["geometry-type"], "Point"]
-              });
-
-              //----------------------------------------------
-              // EITHER Create a layer of routes of each type from layers in MapBox tilesets
-              map.addSource('tracks-all', {
-                type: 'vector',
-                url: 'mapbox://timsmithch.all_tracks'
-              });
-              for (let layer of Object.keys(layer_props)) {
-                if (layer_props[layer]["source"] === "tileset") {
-                  if (layer_props[layer]["init_state"] === "active") {
-                    var visi = "visible";
-                  } else {
-                    var visi = "none";
-                  }
-                  map.addLayer({
-                    'id': layer,
-                    'type': 'line',
-                    'source': 'tracks-all',
-                    "source-layer": layer_props[layer]["source_layer"],
-                    "layout": {
-                      "visibility": visi,
-                      "line-join": "round",
-                      "line-cap": "round"
-                    },
-                    "paint": {
-                      "line-color": layer_props[layer]["colour"],
-                      "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
-                         0, ["^", 2, 3],
-                         8, ["^", 2, 1.5],
-                         24, ["^", 2, 8]
-                       ],
-                      //"line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
-                      "line-dasharray": ["match", ["get", "desc"], ["0.5" ], ["literal", [2, 2]], ["literal", [1]]]
-                    }
-                  });
-                }
-              }
-              // Option 1: change dash style, but currently not supported by MapBox as a data-driven style
-              //      "line-dasharray": [2, 1],
-              // Option 2: change colour using data-driven style, but probably makes too colorful-messy!
-              //      "line-color": ["case",["has","description"],["get","description"],layer_props[layer]["colour"],
-
-              //----------------------------------------------
-              // OR Create a layer of routes of each type from geojson files
-              for (let layer of Object.keys(layer_props)) {
-                if (layer_props[layer]["source"] === "geojson") {
-                  map.addSource(layer, {
-                    type: 'geojson',
-                    "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
-                  });
-                  if (layer_props[layer]["init_state"] === "active") {
-                    var visi = "visible";
-                  } else {
-                    var visi = "none";
-                  }
-                  map.addLayer({
-                    'id': layer,
-                    'type': 'line',
-                    'source': layer,
-                    "layout": {
-                      "visibility": visi,
-                      "line-join": "round",
-                      "line-cap": "round"
-                    },
-                      "paint": {
-                      "line-color": layer_props[layer]["colour"],
-                      //"line-width": 2
-                      "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
-                         0, ["^", 2, 3],
-                         8, ["^", 2, 1.5],
-                         24, ["^", 2, 8]
-                       ]
-                    }
-                  });
-                  map.addLayer({
-                    'id': layer + "-points",
-                    'type': 'symbol',
-                    'source': layer,
-                    "minzoom": 6,
-                    "layout": {
-                      "visibility": "visible",
-                      "icon-image": "{desc}-15",   // Data-driven styling //
-                      "icon-allow-overlap": true,   // Allow collisions //
-                      "text-field": "{name}",   // Data-driven styling //
-                      "text-allow-overlap": true,   // Allow collisions //
-                      "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
-                      "text-offset": [0, 0.6],
-                      "text-anchor": "top",
-                      "text-size": [ 'interpolate', ['exponential', 2], ['zoom'], 6,6,10,15 ]
-                    },
-                    "filter": ["==", ["geometry-type"], "Point"]
-                  });
-                }
-              }
-            }
-
-            map.on('styledata', function () {
-              //console.log("ON StyleData",basechange);
-              // Triggered when `setStyle` is called, to enable 2D/3D switching
-              if (basechange == 1) {
-                addDataLayers();
-              }
-            });
-
-            map.on('load', function () {
-              //console.log("ON Load");
-              addDataLayers();
-            });
-
-            //----------------------------------------------
-            // Create a popup, but don't add it to the map yet
-            var popup = new mapboxgl.Popup({
-              closeButton: false,
-              closeOnClick: false
-            });
-
-            // Loop creating popup on hover for each layer
-            for (let layer of Object.keys(layer_props)) {
-              map.on('mouseenter', layer, function(e) {
-                // Change the cursor style as a UI indicator.
-                map.getCanvas().style.cursor = 'pointer';
-                // Populate the popup and set its coordinates based on the feature found.
-                var date = e.features[0].properties.cmt
-                popup.setLngLat(e.lngLat)
-                    //.setHTML('<strong>' + e.features[0].properties.name +'</strong>')
-                    .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
-                    .addTo(map);
-              });
-              map.on('mouseleave', layer, function() {
-                map.getCanvas().style.cursor = '';
-                popup.remove();
               });
             }
+          }
+          // Option 1: change dash style, but currently not supported by MapBox as a data-driven style
+          //      "line-dasharray": [2, 1],
+          // Option 2: change colour using data-driven style, but probably makes too colorful-messy!
+          //      "line-color": ["case",["has","description"],["get","description"],layer_props[layer]["colour"],
 
-            // Create popup on hover for CH mountains
-            map.on('mouseenter', "mountainsH", function(e) {
-              // Change the cursor style as a UI indicator
-              map.getCanvas().style.cursor = 'pointer';
-              // Populate the popup and set its coordinates based on the feature found
-              var height = e.features[0].properties.height
-              popup.setLngLat(e.lngLat)
-                .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
-                  .addTo(map);
-            });
-            map.on('mouseleave', "mountainsH", function() {
-              map.getCanvas().style.cursor = '';
-              popup.remove();
-            });
+          //----------------------------------------------
+          // OR Create a layer of routes of each type from geojson files
+          for (let layer of Object.keys(layer_props)) {
+            if (layer_props[layer]["source"] === "geojson") {
+              map.addSource(layer, {
+                type: 'geojson',
+                "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
+              });
+              if (layer_props[layer]["init_state"] === "active") {
+                var visi = "visible";
+              } else {
+                var visi = "none";
+              }
+              map.addLayer({
+                'id': layer,
+                'type': 'line',
+                'source': layer,
+                "layout": {
+                  "visibility": visi,
+                  "line-join": "round",
+                  "line-cap": "round"
+                },
+                "paint": {
+                  "line-color": layer_props[layer]["colour"],
+                  //"line-width": 2
+                  "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
+                    0, ["^", 2, 3],
+                    8, ["^", 2, 1.5],
+                    24, ["^", 2, 8]
+                  ]
+                }
+              });
+              map.addLayer({
+                'id': layer + "-points",
+                'type': 'symbol',
+                'source': layer,
+                "minzoom": 6,
+                "layout": {
+                  "visibility": "visible",
+                  "icon-image": "{desc}-15",   // Data-driven styling //
+                  "icon-allow-overlap": true,   // Allow collisions //
+                  "text-field": "{name}",   // Data-driven styling //
+                  "text-allow-overlap": true,   // Allow collisions //
+                  "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                  "text-offset": [0, 0.6],
+                  "text-anchor": "top",
+                  "text-size": [ 'interpolate', ['exponential', 2], ['zoom'], 6,6,10,15 ]
+                },
+                "filter": ["==", ["geometry-type"], "Point"]
+              });
+            }
+          }
+        }
 
-            // Create popup on hover for EU mountains
-            map.on('mouseenter', "mountainsE", function(e) {
-              // Change the cursor style as a UI indicator
-              map.getCanvas().style.cursor = 'pointer';
-              // Populate the popup and set its coordinates based on the feature found
-              var height = e.features[0].properties.height
-              popup.setLngLat(e.lngLat)
-                .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
-                  .addTo(map);
-            });
-            map.on('mouseleave', "mountainsE", function() {
-              map.getCanvas().style.cursor = '';
-              popup.remove();
-            });
+        map.on('styledata', function () {
+          //console.log("ON StyleData",basechange);
+          // Triggered when `setStyle` is called, to enable 2D/3D switching
+          if (basechange == 1) {
+            addDataLayers();
+          }
+        });
 
-            // Create popup on hover for Canton mountains
-            map.on('mouseenter', "cantons-points", function(e) {
-              // Change the cursor style as a UI indicator
-              map.getCanvas().style.cursor = 'pointer';
-              // Populate the popup and set its coordinates based on the feature found
-              var height = e.features[0].properties.height
-              popup.setLngLat(e.lngLat)
-                .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
-                  .addTo(map);
-            });
-            map.on('mouseleave', "cantons-points", function() {
-              map.getCanvas().style.cursor = '';
-              popup.remove();
-            });
+        map.on('load', function () {
+          //console.log("ON Load");
+          addDataLayers();
+          // Save a list of all local layers created (as an automatically global variable, ugg)
+          const layers = map.getStyle().layers.filter(l => l.id.includes('layer_'));
+          lays = layers.map(l => l.id);
+        });
 
-            //----------------------------------------------
-            // Create the menu buttons and add click actions
-            toggleLayer("Hike", "tracks_hike", layer_props["tracks_hike"]["init_state"]);
-            toggleLayer("Bike", "tracks_bike", layer_props["tracks_bike"]["init_state"]);
-            toggleLayer("Ski", "tracks_ski", layer_props["tracks_ski"]["init_state"]);
-            toggleLayer("Run", "tracks_run", layer_props["tracks_run"]["init_state"]);
-            toggleLayer("Cmute", "tracks_commute", layer_props["tracks_commute"]["init_state"]);
-            toggleLayer("Mech", "tracks_vehicle", layer_props["tracks_vehicle"]["init_state"]);
-            toggleLayer("Canton", "cantons", "");
-            toggleLayer("4000s", "mountainsE", "");
-            toggleLayer("Peaks", "mountainsH", "");
-            function toggleLayer(name, id, state) {
-              var link = document.createElement('a');
-              link.href = '#';
-              link.className = state;
-              link.textContent = name;
-              link.id = name;
-              link.onclick = function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                var idmark = id + "-points"
-                var visibility = map.getLayoutProperty(id, 'visibility');
-                if (visibility === 'visible') {
-                  map.setLayoutProperty(id, 'visibility', 'none');
-                  map.setLayoutProperty(idmark, 'visibility', 'none');
-                  this.className = '';
-                  if (name === 'Peaks') {
-                    var s1 = document.getElementById('sliders');
-                    s1.style.display = "none";
-                    var o1 = document.getElementById('outH');
-                    o1.style.display = "none";
-                    var o2 = document.getElementById('outP');
-                    o2.style.display = "none";
-                  }
-                } else {
-                  this.className = 'active';
-                  map.setLayoutProperty(id, 'visibility', 'visible');
+        //----------------------------------------------
+        // Create a popup, but don't add it to the map yet
+        var popup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false
+        });
+
+        // Loop creating popup on hover for each layer
+        for (let layer of Object.keys(layer_props)) {
+          map.on('mouseenter', layer, function(e) {
+            // Change the cursor style as a UI indicator.
+            map.getCanvas().style.cursor = 'pointer';
+            // Populate the popup and set its coordinates based on the feature found.
+            var date = e.features[0].properties.cmt
+            popup.setLngLat(e.lngLat)
+            //.setHTML('<strong>' + e.features[0].properties.name +'</strong>')
+              .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+              .addTo(map);
+          });
+          map.on('mouseleave', layer, function() {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+          });
+        }
+
+        // Create popup on hover for CH mountains
+        map.on('mouseenter', "layer_mountainsH", function(e) {
+          // Change the cursor style as a UI indicator
+          map.getCanvas().style.cursor = 'pointer';
+          // Populate the popup and set its coordinates based on the feature found
+          var height = e.features[0].properties.height
+          popup.setLngLat(e.lngLat)
+            .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
+            .addTo(map);
+        });
+        map.on('mouseleave', "layer_mountainsH", function() {
+          map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
+
+        // Create popup on hover for EU mountains
+        map.on('mouseenter', "layer_mountainsE", function(e) {
+          // Change the cursor style as a UI indicator
+          map.getCanvas().style.cursor = 'pointer';
+          // Populate the popup and set its coordinates based on the feature found
+          var height = e.features[0].properties.height
+          popup.setLngLat(e.lngLat)
+            .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
+            .addTo(map);
+        });
+        map.on('mouseleave', "layer_mountainsE", function() {
+          map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
+
+        // Create popup on hover for Canton mountains
+        map.on('mouseenter', "layer_cantons-points", function(e) {
+          // Change the cursor style as a UI indicator
+          map.getCanvas().style.cursor = 'pointer';
+          // Populate the popup and set its coordinates based on the feature found
+          var height = e.features[0].properties.height
+          popup.setLngLat(e.lngLat)
+            .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
+            .addTo(map);
+        });
+        map.on('mouseleave', "layer_cantons-points", function() {
+          map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
+
+        //----------------------------------------------
+        // Add click actions for all layer checkboxes
+        const checks = document.querySelectorAll('input[type="checkbox"]');
+        for (i = 0; i < checks.length; ++i) {
+          var checkb = checks[i];
+          if (checkb.name.startsWith('layer_')) {
+            //\\******* Callback Funciton start *******
+            checkb.addEventListener('change', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              var id = e.srcElement.name;
+              var idmark = id + "-points";
+              if (this.checked) {
+                this.className = 'active';
+                map.setLayoutProperty(id, 'visibility', 'visible');
+                if (lays.includes(idmark)) {
                   map.setLayoutProperty(idmark, 'visibility', 'visible');
-                  if (name === 'Peaks') {
-                    var s1 = document.getElementById('sliders');
-                    s1.style.display = "block";
-                    var o1 = document.getElementById('outH');
-                    o1.style.display = "block";
-                    var o2 = document.getElementById('outP');
-                    o2.style.display = "block";
-                  }
                 }
-              };
-              var layers = document.getElementById('menu');
-              layers.appendChild(link);
-            }
-
-            //----------------------------------------------
-            // Create the slider and add change actions
-            var div = document.createElement("div");
-            div.id = "sliders";
-            div.style.display = "none";
-            var sliderH = document.createElement('input');
-            sliderH.setAttribute('type', 'range');
-            sliderH.setAttribute('min', '0');
-            sliderH.setAttribute('max', '4000');
-            sliderH.setAttribute('step', '250');
-            sliderH.setAttribute('value', '0');
-            sliderH.setAttribute('orient', 'vertical');
-            var sliderP = document.createElement('input');
-            sliderP.setAttribute('class', 'right');
-            sliderP.setAttribute('type', 'range');
-            sliderP.setAttribute('min', '0');
-            sliderP.setAttribute('max', '500');
-            sliderP.setAttribute('step', '50');
-            sliderP.setAttribute('value', '0');
-            sliderP.setAttribute('orient', 'vertical');
-            div.appendChild(sliderH);
-            div.appendChild(sliderP);
-            var menus = document.getElementById('menu');
-            menus.appendChild(div);
-            // Listen for change of slider event and update the map
-            sliderH.addEventListener('input', function(e) {
-              var height_value = parseInt(e.target.value);
-              var prominence_value = Number(sliderP.value);
-              var mountFilter = ["all",
-                ['>=', ['number', ['get', 'height']], height_value],
-                ['>=', ['number', ['get', 'prominence']], prominence_value]];
-              map.setFilter('mountainsH', mountFilter);
-            });
-            sliderP.addEventListener('input', function(e) {
-              var prominence_value = parseInt(e.target.value);
-              var height_value = Number(sliderH.value);
-              var mountFilter = ["all",
-                ['>=', ['number', ['get', 'height']], height_value],
-                ['>=', ['number', ['get', 'prominence']], prominence_value]];
-              map.setFilter('mountainsH', mountFilter);
-            });
-
-            //----------------------------------------------
-            // Create the slider output display
-            var slideoutH = document.createElement('output');
-            slideoutH.id = "outH";
-            slideoutH.style.display = "none";
-            slideoutH.setAttribute('for', 'value');
-            slideoutH.innerHTML = 0;
-            var slideoutP = document.createElement('output');
-            slideoutP.id = "outP";
-            slideoutP.style.display = "none";
-            slideoutP.setAttribute('for', 'value');
-            slideoutP.setAttribute('class', 'right');
-            slideoutP.innerHTML = 0;
-            var menus = document.getElementById('menu');
-            menus.appendChild(slideoutH);
-            sliderH.oninput = function() {
-              slideoutH.innerHTML = this.value;
-            }
-            menus.appendChild(slideoutP);
-            sliderP.oninput = function() {
-              slideoutP.innerHTML = this.value;
-            }
-
-            //----------------------------------------------
-            // Create a zoom level indcator
-            var zoomout = document.createElement('output');
-            zoomout.id = "zoomO";
-            zoomout.style.display = "block";
-            zoomout.setAttribute('for', 'value');
-            zoomout.innerHTML = zoomlvl;
-            menus.appendChild(zoomout);
-            map.on('zoom', function() {
-              zoomout.innerHTML = parseFloat(map.getZoom()).toFixed(2);
-            });
-
-            //----------------------------------------------
-            // Create 2D/3D toggle button
-            var dimtog = document.createElement('button');
-            dimtog.textContent = '3D';
-            dimtog.style.backgroundColor ='orange';
-            dimtog.style.color ='white';
-            dimtog.style.outline ='none';
-            dimtog.style.display = "block";
-            dimtog.onclick = function(e) {
-              e.preventDefault();
-              e.stopPropagation();
-              if (dimension === 2) {
-                dimtog.textContent = '2D';
-                map.setStyle('mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y');
-                map.setPitch(65)
-                map.setBearing(-45)
-                dimension = 3
               } else {
-                dimtog.textContent = '3D';
-                map.setStyle('mapbox://styles/mapbox/outdoors-v11');
-                map.setPitch(0)
-                map.setBearing(0)
-                dimension = 2
-              }
-              basechange = 1
-            };
-            menus.appendChild(dimtog);
-
-            //----------------------------------------------
-            // Create the close/open toggle button for menus
-            var closer = document.createElement('button');
-            closer.textContent = 'Close';
-            closer.style.backgroundColor ='red';
-            closer.style.color ='white';
-            closer.style.outline ='none';
-            closer.onclick = function(e) {
-              e.preventDefault();
-              e.stopPropagation();
-              var m = document.querySelectorAll('a,#zoomO');
-              for (var i = 0; i < m.length; i++) {
-                var mChild = m[i];
-                if (mChild.style.display === "none") {
-                  mChild.style.display = "block";
-                  closer.style.backgroundColor ='red';
-                  closer.textContent = 'Close';
-                  if (mChild.id === 'Peaks' && mChild.className === 'active') {
-                    var s1 = document.getElementById('sliders');
-                    s1.style.display = "block";
-                    var o1 = document.getElementById('outH');
-                    o1.style.display = "block";
-                    var o2 = document.getElementById('outP');
-                    o2.style.display = "block";
-                  }
-                } else {
-                  mChild.style.display = "none";
-                  closer.style.backgroundColor ='green';
-                  closer.textContent = 'Menu';
-                  if (mChild.id === 'Peaks' && mChild.className === 'active') {
-                    var s1 = document.getElementById('sliders');
-                    s1.style.display = "none";
-                    var o1 = document.getElementById('outH');
-                    o1.style.display = "none";
-                    var o2 = document.getElementById('outP');
-                    o2.style.display = "none";
-                  }
+                this.className = '';
+                map.setLayoutProperty(id, 'visibility', 'none');
+                if (lays.includes(idmark)) {
+                  map.setLayoutProperty(idmark, 'visibility', 'none');
                 }
               }
-            };
-            menus.appendChild(closer);
+            });
+            //\\******* Callback Funciton end *******
+          }
+        }
+
+        //----------------------------------------------
+        // Add click action for change of slider values
+        sliderH.addEventListener('input', function(e) {
+          var height_value = parseInt(e.target.value);
+          var prominence_value = Number(sliderP.value);
+          var mountFilter = ["all",
+            ['>=', ['number', ['get', 'height']], height_value],
+            ['>=', ['number', ['get', 'prominence']], prominence_value]];
+          map.setFilter('layer_mountainsH', mountFilter);
+          sliderHout.value=height_value;
+        });
+        sliderP.addEventListener('input', function(e) {
+          var prominence_value = parseInt(e.target.value);
+          var height_value = Number(sliderH.value);
+          var mountFilter = ["all",
+            ['>=', ['number', ['get', 'height']], height_value],
+            ['>=', ['number', ['get', 'prominence']], prominence_value]];
+          map.setFilter('layer_mountainsH', mountFilter);
+          sliderPout.value=prominence_value;
+        });
+
+        //----------------------------------------------
+        // Add click action for 3D selection
+        threeD.onclick = function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (dimension === 2) {
+            map.setStyle('mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y');
+            map.setPitch(65)
+            map.setBearing(-45)
+            dimension = 3
+          } else {
+            map.setStyle('mapbox://styles/mapbox/outdoors-v11');
+            map.setPitch(0)
+            map.setBearing(0)
+            dimension = 2
+          }
+          basechange = 1
+        };
+
+        //----------------------------------------------
+        // Create a zoom level indcator
+        zoomL.value = zoomlvl;
+        map.on('zoom', function() {
+          zoomL.value = parseFloat(map.getZoom()).toFixed(2);
+        });
+
+
+        //----------------------------------------------
+        // Add click action for settings button
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            //if (content.style.display === "block") {
+            //  content.style.display = "none";
+            //} else {
+            //  content.style.display = "block";
+            //}
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
 
       </script>
     </main>
 
     <footer class="footer">
-        TrackMap: &copy; Tim Smith CC-BY-4.0
+      TrackMap: &copy; Tim Smith CC-BY-4.0
     </footer>
   </body>
 </html>
