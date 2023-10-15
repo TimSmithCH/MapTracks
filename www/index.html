@@ -584,7 +584,7 @@
 
         //----------------------------------------------
         // Add click action for 3D selection
-        threeD.onclick = function(e) {
+        threeD.addEventListener('change', function(e) {
           e.preventDefault();
           e.stopPropagation();
           if (dimension === 2) {

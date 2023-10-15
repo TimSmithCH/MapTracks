@@ -35,7 +35,7 @@ def parseCommandLine():
         orders = {
                 "tokenFile": "token.json",
                 "trackDir": "tracks/3_gpx/",
-                "idFile": "features/LastStravaIDRead.json",
+                "idFile": "www/features/LastStravaIDRead.json",
                 "perpage": 40,
                 "commute": False,
                 "light": False

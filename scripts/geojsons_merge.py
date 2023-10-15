@@ -27,6 +27,7 @@ if __name__ == '__main__':
         # Expand directory into a list of files
         infiles = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(args.directory)) for f in fn]
     outfile = args.outfile
+    print("GeoJSON_Merge: concatenating {} files into {}".format(len(infiles),outfile))
 
     outjson = dict(type='FeatureCollection', features=[])
 
