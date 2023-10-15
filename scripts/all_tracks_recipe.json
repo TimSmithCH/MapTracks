@@ -21,6 +21,11 @@
       "minzoom": 0,
       "maxzoom": 13
     },
+    "skiclimb_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/skiclimb_tracks",
+      "minzoom": 0,
+      "maxzoom": 13
+    },
     "commute_tracks": {
       "source": "mapbox://tileset-source/timsmithch/commute_tracks",
       "minzoom": 0,

@@ -40,8 +40,8 @@
                   <label for="Bike">Bike</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="Ski" name="layer_ski" checked="">
-                  <label for="Ski">Ski</label>
+                  <input type="checkbox" id="Skiclimb" name="layer_skiclimb" checked="">
+                  <label for="Skiclimb">Skiclimb</label>
                 </div>
                 <div>
                   <input type="checkbox" id="Run" name="layer_run" checked="">
@@ -49,6 +49,10 @@
                 </div>
               </div>
               <div class="selector_col">
+                <div>
+                  <input type="checkbox" id="Ski" name="layer_ski" checked="">
+                  <label for="Ski">Ski</label>
+                </div>
                 <div>
                   <input type="checkbox" id="Commute" name="layer_commute">
                   <label for="Commute">Commute</label>
@@ -129,8 +133,9 @@
         var layer_props = {
           layer_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020", init_state: "active", text: "Hike" },
           layer_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812", init_state: "active", text: "Bike" },
-          layer_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0048FF", init_state: "active", text: "Ski" },
+          layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "tileset", colour: "#0048FF", init_state: "active", text: "Skiclimb" },
           layer_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9", init_state: "active", text: "Run" },
+          layer_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0099FF", init_state: "active", text: "Ski" },
           layer_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400", init_state: "hidden", text: "Cmute" },
           layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FFCC00", init_state: "hidden", text: "Mech" },
           layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
