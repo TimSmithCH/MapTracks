@@ -44,7 +44,7 @@ jobs:
           git status -s 1>&2
           # Push any modified GPX files
           git add tracks/3_gpx 1>&2
-          git add features 1>&2
+          git add www/features 1>&2
           if ! git diff --staged --quiet --exit-code tracks/3_gpx; then
             echo ">>> New GPX files to commit"
             # Commit any modified GPX files
