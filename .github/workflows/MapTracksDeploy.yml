@@ -20,9 +20,6 @@ jobs:
   GeoJsonBuild:
     name: Generate_Aggregate
     runs-on: macos-latest
-    # Map step output to job output
-    outputs:
-      run_commit: ${{ steps.chain.outputs.run_commit }}
     steps:
       - name: Set up Python 3.x
         uses: actions/setup-python@v4
@@ -37,7 +34,7 @@ jobs:
         with:
           fetch-depth: 0
         #--- Next Step
-          # If the last commit contained any track files
+        # If the last commit contained any track files
       - name: Check for new GPX files
         id: nonewtracks
         continue-on-error: true
@@ -73,10 +70,10 @@ jobs:
           fi
         #--- Next Step
         # Trigger the deployment to GitHub Pages MapTracks website
-        - if: ${{ steps.nonewgeojsons.outcome == 'failure' }}
-          run: gh workflow run ./.github/workflows/PagesDeploy.yml
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - if: ${{ steps.nonewgeojsons.outcome == 'failure' }}
+        run: gh workflow run ./.github/workflows/PagesDeploy.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # Recreate the MapBox tileset
   TilesDeploy:
