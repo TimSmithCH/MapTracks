@@ -42,7 +42,7 @@ jobs:
         #--- Next Step
       - name: Generate GeoJson files from GPX files
         run: |
-          if [[ ${{ steps.nonewtracks.outcome == 'success' }} ]]; then
+          if [[ ${{ steps.nonewtracks.outcome }} == 'success' ]]; then
             echo ">>> No GeoJSON files need generating"
           else
             echo ">>> Need to generate new GeoJSON files"
@@ -57,7 +57,7 @@ jobs:
         #--- Next Step
       - name: Commit new GeoJson files
         run: |
-          if [[ ${{ steps.nonewgeojsons.outcome == 'success' }} ]]; then
+          if [[ ${{ steps.nonewgeojsons.outcome }} == 'success' ]]; then
             echo ">>> No new GeoJSON files to commit"
           else
             echo ">>> New GeoJSON files to commit"
