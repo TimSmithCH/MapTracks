@@ -59,19 +59,14 @@ jobs:
             git status -s 1>&2
             git commit -m "Generated GeoJSONs for ${{ github.event.head_commit.message }}" 1>&2
             git push 1>&2
+            # Trigger the deployment to GitHub Pages MapTracks website
+            gh workflow run ./.github/workflows/PagesDeploy.yml
           else
             echo ">>> No new GeoJSON files to commit"
           fi
-          exit 0
 
   # Recreate the MapBox tileset
   TilesDeploy:
     needs: GeoJsonBuild
     uses: ./.github/workflows/TilesDeploy.yml
     secrets: inherit
-
-  # Deploy to GitHub Pages MapTracks website
-  DeployPages:
-    needs: TilesDeploy
-    uses: ./.github/workflows/PagesDeploy.yml
-
