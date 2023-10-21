@@ -74,14 +74,14 @@ for fpath in fpaths:
         if VERBOSE : print("INFO: File initially contains {} points".format(gpx.get_track_points_no()))
         #print(gpx.get_elevation_extremes())
         # Simplify tracks by removing unnecessary points
-        if args.simplify:
+        if args.simplify == True:
             print("INFO: > Simplify tracks")
             gpx.simplify(max_distance=10)
         for track in gpx.tracks:
             #track.remove_elevation()
             # Drop the point timing information
             if track.has_times():
-                if args.time:
+                if args.time == True:
                     print("INFO: > Drop timing info from tracks")
                     track.remove_time()
             if VERBOSE : print("INFO: Track contains {} segments".format(len(track.segments)))

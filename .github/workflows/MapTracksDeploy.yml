@@ -68,7 +68,7 @@ jobs:
         if: ${{ steps.committed.outputs.do_pages == 1 }}
         run: gh workflow run PagesDeploy.yml
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
 
   # Recreate the MapBox tileset
   TilesDeploy:
