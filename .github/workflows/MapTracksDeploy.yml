@@ -30,36 +30,25 @@ jobs:
         run: brew install gdal
         #--- Next Step
       - name: Check out repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
         #--- Next Step
-        # If the last commit contained any track files
-      - name: Check for new GPX files
-        id: nonewtracks
-        continue-on-error: true
-        run: git diff --quiet --exit-code "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx
-        #--- Next Step
-      - name: Generate GeoJson files from GPX files
+      - name: Generate GeoJson files from any new GPX files
         run: |
-          if [[ ${{ steps.nonewtracks.outcome }} == 'success' ]]; then
-            echo ">>> No GeoJSON files need generating"
-          else
+          # If the last commit contained any track files
+          if ! git diff --quiet --exit-code "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx; then
             echo ">>> Need to generate new GeoJSON files"
             git diff --name-status "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx | awk -F "/" '{print $3}' | sort | uniq
             git diff --name-status "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx | awk -F "/" '{print $3}' | sort | uniq | xargs -r -I {} scripts/generate_geojson.sh -s {}
+          else
+            echo ">>> No GeoJSON files need generating"
           fi
         #--- Next Step
-      - name: Check for new GeoJson files
-        id: nonewgeojsons
-        continue-on-error: true
-        run: git diff --quiet --exit-code tracks/1_display
-        #--- Next Step
       - name: Commit new GeoJson files
+        id: committed
         run: |
-          if [[ ${{ steps.nonewgeojsons.outcome }} == 'success' ]]; then
-            echo ">>> No new GeoJSON files to commit"
-          else
+          if ! git diff --quiet --exit-code tracks/1_display; then
             echo ">>> New GeoJSON files to commit"
             # Push the modified GeoJSON files
             git add tracks/1_display 1>&2
@@ -67,11 +56,17 @@ jobs:
             git status -s 1>&2
             git commit -m "Generated GeoJSONs for ${{ github.event.head_commit.message }}" 1>&2
             git push 1>&2
+            # Trigger the deployment to GitHub Pages MapTracks website
+            echo "do_pages=1" >> $GITHUB_OUTPUT
+          else
+            echo ">>> No new GeoJSON files to commit"
+            echo "do_pages=0" >> $GITHUB_OUTPUT
           fi
         #--- Next Step
         # Trigger the deployment to GitHub Pages MapTracks website
-      - if: ${{ steps.nonewgeojsons.outcome == 'failure' }}
-        run: gh workflow run ./.github/workflows/PagesDeploy.yml
+      - name: Signal PagesDeploy worfklow if necessary
+      - if: ${{ steps.committed.outputs.do_pages == 1 }}
+        run: gh workflow run PagesDeploy.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
