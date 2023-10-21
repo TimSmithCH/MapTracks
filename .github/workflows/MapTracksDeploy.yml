@@ -65,7 +65,7 @@ jobs:
         #--- Next Step
         # Trigger the deployment to GitHub Pages MapTracks website
       - name: Signal PagesDeploy worfklow if necessary
-      - if: ${{ steps.committed.outputs.do_pages == 1 }}
+        if: ${{ steps.committed.outputs.do_pages == 1 }}
         run: gh workflow run PagesDeploy.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
