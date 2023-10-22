@@ -1,18 +1,5 @@
-<?xml version="1.0"?>
-<gpx version="1.1" creator="GDAL 2.4.4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
-  <trk>
-    <name>CAR_Egypt</name>
-    <cmt>1992-10-10</cmt>
-    <desc>1.0</desc>
-    <trkseg>
-      <trkpt lat="0.000001" lon="0.000001">
-        <ele>0.0</ele>
-      </trkpt>
-      <trkpt lat="0.000002" lon="0.000002">
-        <ele>0.0</ele>
-      </trkpt>
-    </trkseg>
-  </trk>
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GDAL 2.4.4">
   <wpt lat="25.70540353" lon="32.64352511">
     <name>Etap Hotel</name>
     <desc>lodging</desc>
@@ -45,7 +32,7 @@
     <name>Tombs of the Nobles</name>
     <desc>castle</desc>
   </wpt>
-  <wpt lat="25.72092612" lon="32.61116370">
+  <wpt lat="25.72092612" lon="32.6111637">
     <name>Colossi of Memnon</name>
     <desc>castle</desc>
   </wpt>
@@ -73,4 +60,18 @@
     <name>Dendera</name>
     <desc>castle</desc>
   </wpt>
+  <trk>
+    <name>CAR_Egypt</name>
+    <cmt>1992-10-10</cmt>
+    <desc>1.0</desc>
+    <type>Velomobile</type>
+    <trkseg>
+      <trkpt lat="0.000001" lon="0.000001">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="0.000002" lon="0.000002">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
 </gpx>
