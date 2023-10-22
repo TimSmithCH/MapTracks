@@ -3,8 +3,13 @@ name: PagesDeploy
 on:
   # Allows to be run manually from the Actions tab (or a CLI/API dispatch)
   workflow_dispatch:
+    inputs:
+      caller:
+        description: 'Name of commit which triggered original workflow'
+        required: true
+        default: 'COMMIT'
 
-run-name: Pages Deploy for øø ${{ github.event.head_commit.message }}
+run-name: Pages Deploy for øø ${{ github.event.inputs.caller }}
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
