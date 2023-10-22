@@ -9,6 +9,8 @@
 { "type": "Feature", "properties": { "name": "Horombo Hut", "desc": "lodging" }, "geometry": { "type": "Point", "coordinates": [ 37.4283739, -3.1391812, 0.0 ] } },
 { "type": "Feature", "properties": { "name": "Kibo Hut", "desc": "lodging" }, "geometry": { "type": "Point", "coordinates": [ 37.3864639, -3.0814284, 0.0 ] } },
 { "type": "Feature", "properties": { "name": "Sopa Lodge", "desc": "lodging" }, "geometry": { "type": "Point", "coordinates": [ 35.3896639, -1.5925662, 0.0 ] } },
-{ "type": "Feature", "properties": { "name": "Tree Tops Lodge", "desc": "lodging" }, "geometry": { "type": "Point", "coordinates": [ 36.9004974, -0.3597874, 0.0 ] } }
+{ "type": "Feature", "properties": { "name": "Thompson Falls", "desc": "waterfall" }, "geometry": { "type": "Point", "coordinates": [ 36.3684504, 0.0442497, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Tree Tops Lodge", "desc": "lodging" }, "geometry": { "type": "Point", "coordinates": [ 36.9004974, -0.3597874, 0.0 ] } },
+{ "type": "Feature", "properties": { "name": "Hemingways Hotel", "desc": "lodging" }, "geometry": { "type": "Point", "coordinates": [ 40.0053755, -3.3618593, 0.0 ] } }
 ]
 }
