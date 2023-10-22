@@ -55,7 +55,7 @@ jobs:
             git add tracks/2_geojson 1>&2
             git add www/tracks 1>&2
             git status -s 1>&2
-            git commit -m "GeoJSONs for :: ${{ github.event.head_commit.message }}" 1>&2
+            git commit -m "GeoJSONs for øø ${{ github.event.head_commit.message }}" 1>&2
             git push 1>&2
             # Trigger the deployment to GitHub Pages MapTracks website
             echo "do_pages=1" >> $GITHUB_OUTPUT

@@ -4,7 +4,7 @@ on:
   # Allows to be run manually from the Actions tab (or a CLI/API dispatch)
   workflow_dispatch:
 
-    run-name: Pages Deploy for :: ${{ github.event.head_commit.message }}
+    run-name: Pages Deploy for øø ${{ github.event.head_commit.message }}
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
