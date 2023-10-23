@@ -484,6 +484,14 @@
             map.getCanvas().style.cursor = '';
             popup.remove();
           });
+          map.on('click', layer, function(e) {
+            // Geographic coordinates of the LineString
+            const src_coords = e.features[0].properties.source;
+            if (src_coords !== undefined) {
+              const coords = src_coords.split("/");
+              map.fitBounds([ [coords[0],coords[1]], [coords[2],coords[3]] ], { padding: 20 });
+            }
+          });
         }
 
         // Create popup on hover for CH mountains

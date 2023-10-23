@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+  <metadata>
+    <name>CAR_Patagonia</name>
+    <bounds minlat="-53.155614" maxlat="-49.332742" minlon="-73.03" maxlon="-70.778264">
+    </bounds>
+  </metadata>
   <wpt lat="-50.4701244" lon="-73.0297767">
     <ele>0.0</ele>
     <name>Mirador Perito Moreno</name>
@@ -7,8 +12,9 @@
   </wpt>
   <trk>
     <name>CAR_Patagonia</name>
-    <cmt>1991-01-10</cmt>
+    <cmt>1992-01-10</cmt>
     <desc>1.0</desc>
+    <src>-53.155614/-73.03/-49.332742/-70.778264</src>
     <type>Velomobile</type>
     <trkseg>
       <trkpt lat="-53.155614" lon="-70.901226">
