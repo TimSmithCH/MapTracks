@@ -28,7 +28,7 @@ import base64, json
 # Instantiate the parser
 parser = argparse.ArgumentParser(description='Trim the GPX track in points and precision.')
 # Set up the argument defaults
-defaults = dict(simplify=True,time=True,elevation=True,output=True)
+defaults = dict(simplify=True,time=True,elevation=True,output=False)
 parser.set_defaults(**defaults)
 # Parse the command line
 parser.add_argument("files", help="individual gpx filenames [filenames]", nargs="+")

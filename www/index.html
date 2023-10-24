@@ -473,10 +473,9 @@
           map.on('mouseenter', layer, function(e) {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
-            // Populate the popup and set its coordinates based on the feature found.
+            // Populate the popup and set its coordinates based on the feature found
             var date = e.features[0].properties.cmt
             popup.setLngLat(e.lngLat)
-            //.setHTML('<strong>' + e.features[0].properties.name +'</strong>')
               .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
               .addTo(map);
           });
@@ -486,10 +485,12 @@
           });
           map.on('click', layer, function(e) {
             // Geographic coordinates of the LineString
-            const src_coords = e.features[0].properties.source;
+            //console.log(e.features[0]);
+            const src_coords = e.features[0].properties.src;
             if (src_coords !== undefined) {
               const coords = src_coords.split("/");
-              map.fitBounds([ [coords[0],coords[1]], [coords[2],coords[3]] ], { padding: 20 });
+              console.log("Re-centre at ",coords);
+              map.fitBounds([ [coords[1],coords[0]], [coords[3],coords[2]] ], { padding: 20 });
             }
           });
         }
