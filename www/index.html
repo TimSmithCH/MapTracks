@@ -381,16 +381,14 @@
                     24, ["^", 2, 8]
                   ],
                   //"line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
-                  "line-dasharray": ["match", ["get", "desc"], ["0.5" ], ["literal", [2, 2]], ["literal", [1]]]
+                  "line-dasharray": ["match", ["get", "desc"],
+                    ["0.5" ], ["literal", [2, 2]],
+                    ["literal", [1]]
+                  ]
                 }
               });
             }
           }
-          // Option 1: change dash style, but currently not supported by MapBox as a data-driven style
-          //      "line-dasharray": [2, 1],
-          // Option 2: change colour using data-driven style, but probably makes too colorful-messy!
-          //      "line-color": ["case",["has","description"],["get","description"],layer_props[layer]["colour"],
-
           //----------------------------------------------
           // OR Create a layer of routes of each type from geojson files
           for (let layer of Object.keys(layer_props)) {
@@ -484,13 +482,15 @@
             popup.remove();
           });
           map.on('click', layer, function(e) {
+            console.log(e.features);
             // Geographic coordinates of the LineString
-            //console.log(e.features[0]);
-            const src_coords = e.features[0].properties.src;
-            if (src_coords !== undefined) {
-              const coords = src_coords.split("/");
-              console.log("Re-centre at ",coords);
-              map.fitBounds([ [coords[1],coords[0]], [coords[3],coords[2]] ], { padding: 20 });
+            //const src_coords = e.features[0].properties.src;
+            const tbbox = e.features[0].bbox;
+            if (tbbox !== undefined) {
+              //const coords = src_coords.split("/");
+              console.log("Re-centre at ",tbbox);
+              // LonLat SW bound, LonLat NW bound
+              map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
             }
           });
         }
@@ -552,15 +552,19 @@
               e.stopPropagation();
               var id = e.srcElement.name;
               var idmark = id + "-points";
+              // If selected, make layer visible
               if (this.checked) {
                 this.className = 'active';
                 map.setLayoutProperty(id, 'visibility', 'visible');
+                // If layer has sister marker layer, make that visible too
                 if (lays.includes(idmark)) {
                   map.setLayoutProperty(idmark, 'visibility', 'visible');
                 }
+              // If de-selected, make layer invisible
               } else {
                 this.className = '';
                 map.setLayoutProperty(id, 'visibility', 'none');
+                // If layer has sister marker layer, make that invisible too
                 if (lays.includes(idmark)) {
                   map.setLayoutProperty(idmark, 'visibility', 'none');
                 }
@@ -626,11 +630,6 @@
           coll[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
-            //if (content.style.display === "block") {
-            //  content.style.display = "none";
-            //} else {
-            //  content.style.display = "block";
-            //}
             if (content.style.maxHeight){
               content.style.maxHeight = null;
             } else {

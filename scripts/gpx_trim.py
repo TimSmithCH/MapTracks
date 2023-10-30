@@ -22,13 +22,12 @@ import re
 import numpy as np
 import argparse
 import datetime
-import base64, json
 
 
 # Instantiate the parser
 parser = argparse.ArgumentParser(description='Trim the GPX track in points and precision.')
 # Set up the argument defaults
-defaults = dict(simplify=True,time=True,elevation=True,output=False)
+defaults = dict(simplify=True,time=True,elevation=True,output=False,verbose=False)
 parser.set_defaults(**defaults)
 # Parse the command line
 parser.add_argument("files", help="individual gpx filenames [filenames]", nargs="+")
@@ -36,11 +35,14 @@ parser.add_argument('-s', '--simplify', dest='simplify', help='Apply simplificat
 parser.add_argument('-t', '--time', dest='time', help='Drop timing info from tracks')
 parser.add_argument('-e', '--elevation', dest='elevation', help='Round elevation info in tracks')
 parser.add_argument('-o', '--output', dest='output', help='Alterntive file for output in avoiding overwrite')
+parser.add_argument('-v', '--verbose', dest='verbose', help='Turn on verbose output')
 args = parser.parse_args()
 print(">>> Cmd line: process files ({})".format(args.files))
-print(">>> Cmd line: rename output ({}), apply simplify ({}), drop timing ({}), round elevations ({})".format(args.output,args.simplify,args.time,args.elevation))
+print(">>> Cmd line: apply simplify ({}), drop timing ({}), round elevations ({})".format(args.simplify,args.time,args.elevation))
+print(">>> Cmd line: rename output ({}), verbose ({})".format(args.output,args.verbose))
 
-VERBOSE = True
+if args.verbose:
+    VERBOSE = True
 
 # Expand any directories passed on the command line into a list of files
 fpaths = []
@@ -61,7 +63,23 @@ for fpath in fpaths:
     bname = os.path.basename(fpath)
     fname = os.path.splitext(bname)[0]
     if VERBOSE : print("INFO: Processing {0:48s}".format(fname))
-    if VERBOSE : print("INFO:  (START) GPX file contains {} tracks, {} waypoints, {} routes".format(len(gpx.tracks),len(gpx.waypoints),len(gpx.routes)))
+    if VERBOSE : print("INFO:  (START) GPX file contains {} tracks, {} waypoints, {} routes, {} points".format(len(gpx.tracks),len(gpx.waypoints),len(gpx.routes),gpx.get_track_points_no()))
+
+    # Check the file metadata block
+    if gpx.name is None:
+        gpx.name = fname
+        print("INFO:  > Adding file name field {}".format(fname))
+        modified = True
+    fbounds = gpx.get_bounds()
+    old_fbounds = gpx.bounds
+    print(fbounds)
+    print(old_fbounds)
+    fbounds_str = str(fbounds.min_latitude)+"/"+str(fbounds.min_longitude)+"/"+str(fbounds.max_latitude)+"/"+str(fbounds.max_longitude)
+    #if gpx.bounds is None or track.description != bounds_str :
+    if gpx.bounds is None or gpx.bounds != fbounds :
+        print("INFO:  > Adding file bounds {}".format(fbounds_str))
+        gpx.bounds = fbounds
+        modified = True
 
     if len(gpx.routes) > 0:
         # Convert routes into tracks
@@ -74,7 +92,6 @@ for fpath in fpaths:
         modified = True
 
     if len(gpx.tracks) > 0:
-        if VERBOSE : print("INFO:  File initially contains {} points".format(gpx.get_track_points_no()))
         #print(gpx.get_elevation_extremes())
         # Simplify tracks by removing unnecessary points
         if args.simplify == True:
@@ -83,6 +100,9 @@ for fpath in fpaths:
             modified = True
         for track in gpx.tracks:
             #track.remove_elevation()
+            tbounds = track.get_bounds()
+            tbounds_str = str(tbounds.min_latitude)+"/"+str(tbounds.min_longitude)+"/"+str(tbounds.max_latitude)+"/"+str(tbounds.max_longitude)
+            print(tbounds)
             # Drop the point timing information
             if track.has_times():
                 if args.time == True:
@@ -97,44 +117,46 @@ for fpath in fpaths:
                         # Drop precision on elevation
                         point.elevation = int(point.elevation)
                 modified = True
-        if VERBOSE : print("INFO:  File finally contains {} points".format(gpx.get_track_points_no()))
+            # Check the track metadata block
+            tname = track.name
+            if tname != fname:
+                print("INFO:  >> Updating (file {}) NAME from ({}) to ({})".format(bname,tname,fname))
+                track.name = fname
+                modified = True
+            if track.comment is None:
+                print("INFO:  >> Adding track comment field")
+                track.comment = "1970-01-01"
+                modified = True
+            if track.type is None:
+                print("INFO:  >> Adding track type field")
+                track.type = "Velomobile"
+                modified = True
+            if track.source is None:
+                print("INFO:  >> Adding bounds in track source field")
+                track.source = tbounds_str
+                modified = True
+           # Up/down styling: convert old DESC flag into proper line extension
+            if track.description is None or track.description == "1.0":
+                updown = True
+            elif track.description == "0.5":
+                updown = False
+            else:
+                if track.description != fbounds_str:
+                    print("INFO:  >> Adding bounds in track description field")
+                    track.description = fbounds_str
+                    modified = True
+                break
+            for segment in track.segments:
+                if updown == True:
+                    segment.extensions.append(line_up)
+                    updown = False
+                else:
+                    segment.extensions.append(line_down)
+                    updown = True
+                modified = True
+            track.description = fbounds_str
 
-    # Check the file metadata block
-    if gpx.name is None:
-        gpx.name = fname
-        print("INFO:  > Adding file name field {}".format(fname))
-        modified = True
-    if gpx.bounds is None:
-        bounds = gpx.get_bounds()
-        gpx.bounds = bounds
-        bounds_str = str(bounds.min_latitude)+"/"+str(bounds.min_longitude)+"/"+str(bounds.max_latitude)+"/"+str(bounds.max_longitude)
-        print("INFO:  > Adding file bounds {}".format(bounds_str))
-        modified = True
-
-    # Check the track metadata block
-    tname = gpx.tracks[0].name
-    # Check for name differences and reset tag if necessary
-    if tname != fname:
-        print("INFO:  >> Updating (file {}) NAME from ({}) to ({})".format(bname,tname,fname))
-        gpx.tracks[0].name = fname
-        modified = True
-    if gpx.tracks[0].comment is None:
-        print("INFO:  >> Adding track comment field")
-        gpx.tracks[0].comment = "1970-01-01"
-        modified = True
-    if gpx.tracks[0].description is None:
-        print("INFO:  >> Adding track description field")
-        gpx.tracks[0].description = "1.0"
-        modified = True
-    if gpx.tracks[0].type is None:
-        print("INFO:  >> Adding track type field")
-        gpx.tracks[0].type = "Velomobile"
-        modified = True
-    if gpx.tracks[0].source is None:
-        print("INFO:  >> Adding track source field")
-        gpx.tracks[0].source = bounds_str
-        modified = True
-    if VERBOSE : print("INFO:  (END) GPX file contains {} tracks, {} waypoints, {} routes".format(len(gpx.tracks),len(gpx.waypoints),len(gpx.routes)))
+    if VERBOSE : print("INFO:  (END) GPX file contains {} tracks, {} waypoints, {} routes, {} points".format(len(gpx.tracks),len(gpx.waypoints),len(gpx.routes),gpx.get_track_points_no()))
 
     # Write out any changes
     if modified:

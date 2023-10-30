@@ -4,7 +4,7 @@
 #-------------------------------------------------------------------------------
 #
 # DESCRIPTION
-#    Identify the statioanry points on the track and where the height difference
+#    Identify the stationary points on the track and where the height difference
 #    between these points is >100m then split the track at the stationary point
 #
 # EXAMPLES
