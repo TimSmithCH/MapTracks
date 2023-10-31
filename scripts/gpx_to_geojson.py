@@ -27,7 +27,6 @@
 import os
 import pathlib
 import argparse
-import numpy as np
 import gpxpy
 import geojson
 
@@ -136,7 +135,8 @@ def split_up_down(tracks):
         if VERBOSE : print("  > Track currently has {} static points {}".format(len(old_stat_points),old_stat_points))
         stat_points = get_new_stat_points(track)
         if VERBOSE : print("  > Track should have   {} static points {}".format(len(stat_points),stat_points))
-        if not np.array_equal(old_stat_points,stat_points):
+        #if not np.array_equal(old_stat_points,stat_points):
+        if old_stat_points != stat_points:
             # If we need to re-do splitting, start by reassembling the segments back into one
             lseg = len(gpx.tracks[0].segments)
             if lseg > 1:
