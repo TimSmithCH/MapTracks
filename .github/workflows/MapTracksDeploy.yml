@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: '3.x'
         #--- Next Step
+      - name: Install GPXpy and GeoJSON for gpx transformations
+        run: pip install gpxpy geojson
+        #--- Next Step
       - name: Check out repository
         uses: actions/checkout@v4
         with:
@@ -47,6 +50,7 @@ jobs:
       - name: Aggregate new GeoJson files
         run: |
           # If any geojson files were generated
+          echo ">>> Aggregate new GeoJSON files"
           awk -F "/" '{print $3}' Modified_Files | sort | uniq | xargs -r -I {} python scripts/geojsons_merge.py -d tracks/2_geojson/{} -o tracks/1_display/{}_tracks.geojson
           rsync -avu "tracks/1_display/" "www/tracks/1_display/" 
         #--- Next Step
