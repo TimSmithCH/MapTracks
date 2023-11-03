@@ -31,7 +31,7 @@ import gpxpy
 import geojson
 
 #-------------------------------------------------------------------------------
-# Initiate command line options and their defaults
+# Initialise command line options and their defaults
 def parseCommandLine():
     global VERBOSE
     # Instantiate the parser
@@ -243,11 +243,8 @@ if __name__ == '__main__':
                 geo_features.append(geojson.Feature(properties={"name": track.name,
                                                                 "cmt": track.comment,
                                                                 "desc": desc,
-                                                                "src": tbounds_str,
-                                                                "bbox": tbounds.min_longitude,
-                                                                        tbounds.min_latitude,
-                                                                        tbounds.max_longitude,
-                                                                        tbounds.max_latitude
+                                                                "src": fbounds_str,
+                                                                "bbox": tbounds_str
                                                                 },
                                                     bbox = [tbounds.min_longitude,
                                                             tbounds.min_latitude,

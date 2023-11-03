@@ -27,7 +27,8 @@ import gpxpy
 import string
 from argparse import ArgumentParser
 
-
+#-------------------------------------------------------------------------------
+# Initialise command line options and their defaults
 def parseCommandLine():
     global orders
     # Parse command line arguments if not run in a Github ACTION
@@ -47,13 +48,13 @@ def parseCommandLine():
         defaults = dict(outdir="./",iddir="./",tokendir="./",perpage=10,commute=False,light=False)
         parser.set_defaults(**defaults)
         # Parse the command line
-        parser.add_argument('-t', '--tokendir', dest='tokendir', help='Directory to store generated access token file')
-        parser.add_argument('-o', '--outdir', dest='outdir', help='Directory to store downloaded Strava activity files')
-        parser.add_argument('-i', '--iddir', dest='iddir', help='Directory to store Strava ID file')
-        parser.add_argument('-b', '--before', dest='before', help='Upper date bound to search back from')
-        parser.add_argument('-p', '--perpage', dest='perpage', help='Number of activities per page for Strava API download')
-        parser.add_argument('-c', '--commute', dest='commute', help='Find commutes instead of the default of ignoring them')
-        parser.add_argument('-l', '--light', dest='light', help='Light mode: Dont download data if file already exists')
+        parser.add_argument('-t', '--tokendir', help='Directory to store generated access token file')
+        parser.add_argument('-o', '--outdir',   help='Directory to store downloaded Strava activity files')
+        parser.add_argument('-i', '--iddir',    help='Directory to store Strava ID file')
+        parser.add_argument('-b', '--before',   help='Upper date bound to search back from')
+        parser.add_argument('-p', '--perpage',  help='Number of activities per page for Strava API download')
+        parser.add_argument('-c', '--commute',  help='Find commutes instead of the default of ignoring them')
+        parser.add_argument('-l', '--light',    help='Light mode: Dont download data if file already exists')
         args = parser.parse_args()
         orders = {
                 "tokenFile": args.tokendir+"token.json",
@@ -67,6 +68,7 @@ def parseCommandLine():
         orders["commute"] = args.commute
         orders["light"] = args.light
 
+#-------------------------------------------------------------------------------
 def init():
     global orders
     global tokens
@@ -99,6 +101,7 @@ def refreshTokens():
     new_tokens = json.loads(resp.text)
     return new_tokens
 
+#-------------------------------------------------------------------------------
 def getAccessToken(quietly):
     global orders
     global tokens
@@ -118,6 +121,7 @@ def getAccessToken(quietly):
             print(" Using Token: {}".format(tokens["access_token"]))
         return tokens["access_token"]
 
+#-------------------------------------------------------------------------------
 def fetchActivities(page):
     global orders
     accessToken = getAccessToken(False)
@@ -139,6 +143,7 @@ def fetchActivities(page):
     fetched = json.loads(resp.text)
     return fetched
 
+#-------------------------------------------------------------------------------
 def fetchActivityStream(actid):
     accessToken = getAccessToken(True)
     if(not accessToken):
@@ -153,6 +158,7 @@ def fetchActivityStream(actid):
     fetched = json.loads(resp.text)
     return fetched
 
+#-------------------------------------------------------------------------------
 def loadActivitiesList():
     global orders
     global stravaData
@@ -192,6 +198,7 @@ def loadActivitiesList():
     json.dump(stravaData, open(orders.get('idFile'), "w"))
     return activitiesToAdd
 
+#-------------------------------------------------------------------------------
 def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream):
     gpx = gpxpy.gpx.GPX()
     dt = datetime.datetime.fromisoformat(activity_start.replace('Z', '+00:00'))
@@ -214,6 +221,7 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
         gpx_segment.points.append(gpxpy.gpx.GPXTrackPoint(p[0], p[1], elevation=stream['altitude']['data'][i], time=trkpt_dt))
     return gpx
 
+#-------------------------------------------------------------------------------
 def construct_filenames(i):
     global orders
     # Construct a sanitized activity/file name from the strava id and activity name
@@ -241,7 +249,7 @@ def construct_filenames(i):
         outfile = str(orders.get("trackDir"))+t+"/"+activity_name+".gpx"
     return activity_name,outfile
 
-
+#-------------------------------------------------------------------------------
 if __name__ == "__main__":
 
     args = parseCommandLine()
@@ -276,8 +284,17 @@ if __name__ == "__main__":
                 print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
             # Create a GPX file in memory from the activity streams
             gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
+            # If file exists, write out only if different
+            if os.path.exists(outfile):
+                ogpx = gpxpy.parse(open(outfile,'r'))
+                if gpx == ogpx:
+                    print("INFO: Wont write out identical content {}".format(i["name"]))
+                    continue
+
             # Write out the GPX file to disk
             with open(outfile, "w") as f:
                 f.write(gpx.to_xml())
         else:
             print("INFO: stream was empty for {}".format(i["name"]))
+
+########################################################
