@@ -244,10 +244,10 @@ if __name__ == '__main__':
                                                                 "cmt": track.comment,
                                                                 "desc": desc,
                                                                 "src": tbounds_str,
-                                                                "bbox": [tbounds.min_longitude,
-                                                                         tbounds.min_latitude,
-                                                                         tbounds.max_longitude,
-                                                                         tbounds.max_latitude]
+                                                                "bbox": tbounds.min_longitude,
+                                                                        tbounds.min_latitude,
+                                                                        tbounds.max_longitude,
+                                                                        tbounds.max_latitude
                                                                 },
                                                     bbox = [tbounds.min_longitude,
                                                             tbounds.min_latitude,

@@ -132,7 +132,7 @@
         // Prepare layer properties object
         var layer_props = {
           layer_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020", init_state: "active", text: "Hike" },
-          layer_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812", init_state: "active", text: "Bike" },
+          layer_bike:    { source_layer: "bike_tracks",    source: "geojson", colour: "#12B812", init_state: "active", text: "Bike" },
           layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "geojson", colour: "#0048FF", init_state: "active", text: "Skiclimb" },
           layer_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9", init_state: "active", text: "Run" },
           layer_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0099FF", init_state: "active", text: "Ski" },
@@ -488,16 +488,13 @@
             popup.remove();
           });
           map.on('click', layer, function(e) {
-            console.log(e.features);
             // Geographic coordinates of the LineString
-            //const src_coords = e.features[0].properties.src;
-            console.log(`There are ${e.features.length} features at point ${e.point}`);
-            console.log(e.features[0]);
-            console.log(e.target);
-            const tbbox = e.features[0].properties.bbox;
+            const sbbox = e.features[0].properties.bbox;
+            console.log(sbbox,sbbox[0],sbbox[1])
+            #tbbox = sbbox.map(Number);
             console.log("BBox ",tbbox);
             if (tbbox !== undefined) {
-              //const coords = src_coords.split("/");
+              const tbbox = sbbox.split(",");
               console.log("Re-centre at ",tbbox);
               // LonLat SW bound, LonLat NW bound
               map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
