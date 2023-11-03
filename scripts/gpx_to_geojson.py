@@ -92,6 +92,11 @@ def get_new_stat_points(self):
     for n,elevation in enumerate(elevations[2:],start=2):
         next_step = elevation - elevations[sp[spi]]
         last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
+        # If individual elevation step is unfeasable, skip it
+        ele_step = elevations[n]-elevations[n-1]
+        if ele_step > prominence_threshold:
+            print("WARNING: Unfeasable single elevation step of {} at {}".format(ele_step,n))
+            break
         # If in same direction as last inter-stationary-point trend
         if (last_step * next_step) > 0:
             # Update last stationary-point with current
@@ -106,8 +111,9 @@ def get_new_stat_points(self):
                 # Found new stationary-point
                 sp.append(n)
                 spi += 1
+    # After loop tidy up: add last point if not already there
     lastp = len(elevations) - 1
-    if sp[spi] < lastp:   # Add last point if not already there
+    if sp[spi] < lastp:
         last_step = elevations[sp[spi]] - elevations[sp[spi-1]]
         if abs(last_step) > prominence_threshold:
             sp.append(lastp)
@@ -127,7 +133,7 @@ def get_new_stat_points(self):
 # Split the track segments into uphill and downhill section after a static
 # point analysis
 def split_up_down(tracks):
-    for track in tracks:
+    for itrk,track in enumerate(tracks):
         modified = False
         nseg = 0
         description = ""
@@ -138,12 +144,12 @@ def split_up_down(tracks):
         #if not np.array_equal(old_stat_points,stat_points):
         if old_stat_points != stat_points:
             # If we need to re-do splitting, start by reassembling the segments back into one
-            lseg = len(gpx.tracks[0].segments)
+            lseg = len(track.segments)
             if lseg > 1:
                 for i in reversed(range(lseg-1)):
-                    gpx.tracks[0].join(i)
+                    track.join(i)
             # Then split them in the new configuration
-            seg = gpx.tracks[0].segments[0]
+            seg = track.segments[0]
             if stat_points != None:
                 if len(stat_points) > 2:
                     for nsp,sp in enumerate(stat_points[:-2]):
@@ -158,8 +164,8 @@ def split_up_down(tracks):
                         else:
                             if description == "":
                                 description = "0.5"   # A DOWN segment
-                        #if VERBOSE : print("  [{}] Splitting segment {} at point {} (track at {}) with elevation diff {:.1f}".format(bname,nseg,new_seg_len-1,nxt,ele_diff))
-                        gpx.split(0,nseg,new_seg_len-1)   # third argument is pointer to array starting at zero, so length-1
+                        if VERBOSE : print("  Split segment {} at point {} (track at {}) with elevation diff {:.1f}".format(nseg,new_seg_len-1,nxt,ele_diff))
+                        track.split(nseg,new_seg_len-1)   # Second argument is pointer to array starting at zero, so length-1
                         nseg += 1   # Splitting added a segment
                         modified = True
                 else:
@@ -171,8 +177,8 @@ def split_up_down(tracks):
             if VERBOSE : print("  > Track doesnt need splitting!")
         # And write them  back out to the same file
         if modified:
-            gpx.tracks[0].description = description
-            if VERBOSE : print("  > Split track into {} segments in file {}".format(nseg,bname))
+            track.description = description
+            if VERBOSE : print("  > Split track {} into {} segments".format(itrk,nseg))
     return None
 
 #-------------------------------------------------------------------------------
@@ -195,8 +201,7 @@ if __name__ == '__main__':
             gpx = gpxpy.parse(open(fpath,'r'))
         except:
             print("ERROR: Error trying to parse {}".format(fpath))
-        bname = os.path.basename(fpath)
-        fname = os.path.splitext(bname)[0]
+        print("Processing {}".format(pathlib.Path(fpath).name))
 
         nsegs = sum(len(t.segments) for t in gpx.tracks)
         print("INFO: GPX file contains {} tracks, {} segments, {} points, {} routes, {} waypoints"\
@@ -206,6 +211,10 @@ if __name__ == '__main__':
         if args.updown == True:
             if VERBOSE : print(" ACTION: Split tracks into Up/Down segments")
             split_up_down(gpx.tracks)
+
+        nsegs = sum(len(t.segments) for t in gpx.tracks)
+        print("INFO: GPX file contains {} tracks, {} segments, {} points, {} routes, {} waypoints"\
+                .format(len(gpx.tracks),nsegs,gpx.get_track_points_no(),len(gpx.routes),len(gpx.waypoints)))
 
         # Simplify tracks to a remove unnecessary points whilst preserving geometry
         if args.simplify == True:
@@ -234,7 +243,12 @@ if __name__ == '__main__':
                 geo_features.append(geojson.Feature(properties={"name": track.name,
                                                                 "cmt": track.comment,
                                                                 "desc": desc,
-                                                                "src": tbounds_str},
+                                                                "src": tbounds_str,
+                                                                "bbox": [tbounds.min_longitude,
+                                                                         tbounds.min_latitude,
+                                                                         tbounds.max_longitude,
+                                                                         tbounds.max_latitude]
+                                                                },
                                                     bbox = [tbounds.min_longitude,
                                                             tbounds.min_latitude,
                                                             tbounds.max_longitude,
@@ -272,6 +286,7 @@ if __name__ == '__main__':
         # Sanity check that it is valid GeoJSON
         if not geoj.is_valid :
             print("ERROR: Aborting as GeoJSON is invalid")
+            print(geoj.errors())
             exit(1)
 
         # Make the json dict to write out to file
@@ -282,7 +297,7 @@ if __name__ == '__main__':
 
         # Write out new GeoJSON file
         if str(args.outdir) == "./":
-            outfile = args.outdir + pathlib.Path(fpath).name + ".geojson"
+            outfile = args.outdir + pathlib.Path(fpath).stem + ".geojson"
         else:
             outfile = pathlib.Path(fpath.replace("3_gpx","2_geojson")).with_suffix(".geojson")
         if VERBOSE : print("INFO: Writing out new content to {}".format(outfile))

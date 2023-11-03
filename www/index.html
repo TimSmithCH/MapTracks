@@ -133,7 +133,7 @@
         var layer_props = {
           layer_hike:    { source_layer: "hike_tracks",    source: "tileset", colour: "#FF2020", init_state: "active", text: "Hike" },
           layer_bike:    { source_layer: "bike_tracks",    source: "tileset", colour: "#12B812", init_state: "active", text: "Bike" },
-          layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "tileset", colour: "#0048FF", init_state: "active", text: "Skiclimb" },
+          layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "geojson", colour: "#0048FF", init_state: "active", text: "Skiclimb" },
           layer_run:     { source_layer: "run_tracks",     source: "tileset", colour: "#B10DC9", init_state: "active", text: "Run" },
           layer_ski:     { source_layer: "ski_tracks",     source: "tileset", colour: "#0099FF", init_state: "active", text: "Ski" },
           layer_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400", init_state: "hidden", text: "Cmute" },
@@ -358,6 +358,7 @@
           });
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "tileset") {
+              console.log("Mapbox Tile source for ", layer_props[layer]["source_layer"])
               if (layer_props[layer]["init_state"] === "active") {
                 var visi = "visible";
               } else {
@@ -381,8 +382,12 @@
                     24, ["^", 2, 8]
                   ],
                   //"line-opacity": ["case",["has","desc"],["to-number",["get","desc"]],1.0]
+                  //"line-dasharray": ["match", ["get", "desc"],
+                  //  ["0.5" ], ["literal", [2, 2]],
+                  //  ["literal", [1]]
+                  //]
                   "line-dasharray": ["match", ["get", "desc"],
-                    ["0.5" ], ["literal", [2, 2]],
+                    ["DownHill" ], ["literal", [2, 2]],
                     ["literal", [1]]
                   ]
                 }
@@ -393,6 +398,7 @@
           // OR Create a layer of routes of each type from geojson files
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "geojson") {
+              console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
               map.addSource(layer, {
                 type: 'geojson',
                 "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
@@ -485,7 +491,11 @@
             console.log(e.features);
             // Geographic coordinates of the LineString
             //const src_coords = e.features[0].properties.src;
-            const tbbox = e.features[0].bbox;
+            console.log(`There are ${e.features.length} features at point ${e.point}`);
+            console.log(e.features[0]);
+            console.log(e.target);
+            const tbbox = e.features[0].properties.bbox;
+            console.log("BBox ",tbbox);
             if (tbbox !== undefined) {
               //const coords = src_coords.split("/");
               console.log("Re-centre at ",tbbox);
