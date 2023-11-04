@@ -70,16 +70,6 @@ for fpath in fpaths:
         gpx.name = fname
         print("INFO:  > Adding file name field {}".format(fname))
         modified = True
-    fbounds = gpx.get_bounds()
-    old_fbounds = gpx.bounds
-    print(fbounds)
-    print(old_fbounds)
-    fbounds_str = str(fbounds.min_latitude)+"/"+str(fbounds.min_longitude)+"/"+str(fbounds.max_latitude)+"/"+str(fbounds.max_longitude)
-    #if gpx.bounds is None or track.description != bounds_str :
-    if gpx.bounds is None or gpx.bounds != fbounds :
-        print("INFO:  > Adding file bounds {}".format(fbounds_str))
-        gpx.bounds = fbounds
-        modified = True
 
     if len(gpx.routes) > 0:
         # Convert routes into tracks
@@ -100,9 +90,6 @@ for fpath in fpaths:
             modified = True
         for track in gpx.tracks:
             #track.remove_elevation()
-            tbounds = track.get_bounds()
-            tbounds_str = str(tbounds.min_latitude)+"/"+str(tbounds.min_longitude)+"/"+str(tbounds.max_latitude)+"/"+str(tbounds.max_longitude)
-            print(tbounds)
             # Drop the point timing information
             if track.has_times():
                 if args.time == True:
@@ -131,30 +118,6 @@ for fpath in fpaths:
                 print("INFO:  >> Adding track type field")
                 track.type = "Velomobile"
                 modified = True
-            if track.source is None:
-                print("INFO:  >> Adding bounds in track source field")
-                track.source = tbounds_str
-                modified = True
-           # Up/down styling: convert old DESC flag into proper line extension
-            if track.description is None or track.description == "1.0":
-                updown = True
-            elif track.description == "0.5":
-                updown = False
-            else:
-                if track.description != fbounds_str:
-                    print("INFO:  >> Adding bounds in track description field")
-                    track.description = fbounds_str
-                    modified = True
-                break
-            for segment in track.segments:
-                if updown == True:
-                    segment.extensions.append(line_up)
-                    updown = False
-                else:
-                    segment.extensions.append(line_down)
-                    updown = True
-                modified = True
-            track.description = fbounds_str
 
     if VERBOSE : print("INFO:  (END) GPX file contains {} tracks, {} waypoints, {} routes, {} points".format(len(gpx.tracks),len(gpx.waypoints),len(gpx.routes),gpx.get_track_points_no()))
 
