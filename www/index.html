@@ -358,7 +358,7 @@
           });
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "tileset") {
-              console.log("Mapbox Tile source for ", layer_props[layer]["source_layer"])
+              //console.log("Mapbox Tile source for ", layer_props[layer]["source_layer"])
               if (layer_props[layer]["init_state"] === "active") {
                 var visi = "visible";
               } else {
@@ -398,7 +398,7 @@
           // OR Create a layer of routes of each type from geojson files
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "geojson") {
-              console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
+              //console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
               map.addSource(layer, {
                 type: 'geojson',
                 "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
@@ -488,20 +488,15 @@
             popup.remove();
           });
           map.on('click', layer, function(e) {
-            dbl = false;
-              console.log(e);
               // Left-click: track bounds are in bbox attribute
               const sbbox = e.features[0].properties.bbox;
-              //const sbbox = e.features[0].properties.src
               if (sbbox !== undefined) {
-                const tbbox = sbbox.split("/");
                 console.log("Re-centre at ",tbbox);
                 // Bounds convention: LonLat SW corner, LonLat NW corner
                 map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
               }
           });
           map.on('contextmenu', layer, function(e) {
-            console.log(e);
             // Right-click: track-group bounds are in source attribute
             const sbbox = e.features[0].properties.src
             if (sbbox !== undefined) {
