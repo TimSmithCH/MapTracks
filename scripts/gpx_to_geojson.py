@@ -226,6 +226,7 @@ if __name__ == '__main__':
         if VERBOSE : print(" ACTION: Converting tracks to Feature LinesStrings")
         if VERBOSE : print("  > Using a precision of {} decimal places for coordinate trimming".format(args.precision))
         fbounds = gpx.get_bounds()
+        fbounds_str = str(fbounds.min_latitude)+"/"+str(fbounds.min_longitude)+"/"+str(fbounds.max_latitude)+"/"+str(fbounds.max_longitude)
         geo_features = []
         for track in gpx.tracks:
             desc = "---"

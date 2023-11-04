@@ -472,7 +472,7 @@
           closeOnClick: false
         });
 
-        // Loop creating popup on hover for each layer
+        //-- Loop creating popup on hover for each layer
         for (let layer of Object.keys(layer_props)) {
           map.on('mouseenter', layer, function(e) {
             // Change the cursor style as a UI indicator.
@@ -488,21 +488,27 @@
             popup.remove();
           });
           map.on('click', layer, function(e) {
-            // Geographic coordinates of the LineString
-            const sbbox = e.features[0].properties.bbox;
+            // LatLon bounds of the track or track-group
+            if (e.which == 3) {
+              // Right-click: track-group bounds are in source attribute
+              const sbbox = e.features[0].properties.src;
+            } else {
+              // Left-click: track bounds are in bbox attribute
+              const sbbox = e.features[0].properties.bbox;
+            }
             console.log(sbbox,sbbox[0],sbbox[1])
             #tbbox = sbbox.map(Number);
             console.log("BBox ",tbbox);
             if (tbbox !== undefined) {
-              const tbbox = sbbox.split(",");
+              const tbbox = sbbox.split("/");
               console.log("Re-centre at ",tbbox);
-              // LonLat SW bound, LonLat NW bound
+              // Bounds convention: LonLat SW corner, LonLat NW corner
               map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
             }
           });
         }
 
-        // Create popup on hover for CH mountains
+        //-- Create popup on hover for CH mountains
         map.on('mouseenter', "layer_mountainsH", function(e) {
           // Change the cursor style as a UI indicator
           map.getCanvas().style.cursor = 'pointer';

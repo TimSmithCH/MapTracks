@@ -210,7 +210,7 @@ def createGPXFile(activity_name,activity_id,activity_start,activity_sport,stream
     gpx_track.name = activity_name
     gpx_track.comment = str(dt.date())
     gpx_track.type = activity_sport
-    gpx_track.description = '1.0'
+    ##gpx_track.description = '1.0'
     gpx.tracks.append(gpx_track)
     # Create segment in GPX track:
     gpx_segment = gpxpy.gpx.GPXTrackSegment()
@@ -229,6 +229,7 @@ def construct_filenames(i):
     #  and punctuation marks removed
     s = str(i["id"])+"."+str(i["name"])
     s = re.sub(r"-", ' ', s)
+    s = re.sub(r"/", ' ', s)
     s = re.sub(r"\s+", '_', s)
     remove = string.punctuation
     remove = remove.replace("_", "") # don't remove underscores
@@ -285,11 +286,11 @@ if __name__ == "__main__":
             # Create a GPX file in memory from the activity streams
             gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
             # If file exists, write out only if different
-            if os.path.exists(outfile):
-                ogpx = gpxpy.parse(open(outfile,'r'))
-                if gpx == ogpx:
-                    print("INFO: Wont write out identical content {}".format(i["name"]))
-                    continue
+            ##if os.path.exists(outfile):
+            ##    ogpx = gpxpy.parse(open(outfile,'r'))
+            ##    if gpx == ogpx:
+            ##        print("INFO: Wont write out identical content {}".format(i["name"]))
+            ##        continue
 
             # Write out the GPX file to disk
             with open(outfile, "w") as f:
