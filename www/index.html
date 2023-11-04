@@ -489,18 +489,13 @@
           });
           map.on('click', layer, function(e) {
             // LatLon bounds of the track or track-group
-            if (e.which == 3) {
-              // Right-click: track-group bounds are in source attribute
-              const sbbox = e.features[0].properties.src;
-            } else {
-              // Left-click: track bounds are in bbox attribute
-              const sbbox = e.features[0].properties.bbox;
-            }
-            console.log(sbbox,sbbox[0],sbbox[1])
-            #tbbox = sbbox.map(Number);
+            console.log(e.features[0].properties);
+            // Right-click: track-group bounds are in source attribute
+            // Left-click: track bounds are in bbox attribute
+            const sbbox = (e.which == 3) ? e.features[0].properties.src : e.features[0].properties.bbox;
+            const tbbox = sbbox.split("/");
             console.log("BBox ",tbbox);
             if (tbbox !== undefined) {
-              const tbbox = sbbox.split("/");
               console.log("Re-centre at ",tbbox);
               // Bounds convention: LonLat SW corner, LonLat NW corner
               map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });

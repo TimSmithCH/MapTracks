@@ -226,12 +226,12 @@ if __name__ == '__main__':
         if VERBOSE : print(" ACTION: Converting tracks to Feature LinesStrings")
         if VERBOSE : print("  > Using a precision of {} decimal places for coordinate trimming".format(args.precision))
         fbounds = gpx.get_bounds()
-        fbounds_str = str(fbounds.min_latitude)+"/"+str(fbounds.min_longitude)+"/"+str(fbounds.max_latitude)+"/"+str(fbounds.max_longitude)
+        fbounds_str = str(fbounds.min_longitude)+"/"+str(fbounds.min_latitude)+"/"+str(fbounds.max_longitude)+"/"+str(fbounds.max_latitude)
         geo_features = []
         for track in gpx.tracks:
             desc = "---"
             tbounds = track.get_bounds()
-            tbounds_str = str(tbounds.min_latitude)+"/"+str(tbounds.min_longitude)+"/"+str(tbounds.max_latitude)+"/"+str(tbounds.max_longitude)
+            tbounds_str = str(tbounds.min_longitude)+"/"+str(tbounds.min_latitude)+"/"+str(tbounds.max_longitude)+"/"+str(tbounds.max_latitude)
             # Make each segment into a LineString
             for segment in track.segments:
                 if desc == "---" :
