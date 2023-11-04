@@ -1,8 +1,1 @@
-{
-"type": "FeatureCollection",
-"name": "LayerName",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "name": "9586455042.Nyon_Triathlon_Transition_2", "cmt": "2023-08-05", "desc": "1.0", "type": "Workout" }, "geometry": { "type": "LineString", "coordinates": [ [ 6.226335, 46.37109 ], [ 6.226398, 46.371108 ], [ 6.226855, 46.370867 ], [ 6.226631, 46.370808 ], [ 6.226475, 46.370648 ], [ 6.226396, 46.370623 ], [ 6.225685, 46.370782 ], [ 6.2255, 46.370678 ] ] } }
-]
-}
+{"type": "FeatureCollection", "name": "TrackSet", "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}}, "bbox": [6.2255, 46.370623, 6.226855, 46.371108], "features": [{"type": "Feature", "bbox": [6.2255, 46.370623, 6.226855, 46.371108], "geometry": {"type": "LineString", "coordinates": [[6.226335, 46.37109], [6.226398, 46.371108], [6.22675, 46.370942], [6.226855, 46.370867], [6.226622, 46.370803], [6.226475, 46.370648], [6.226396, 46.370623], [6.225685, 46.370782], [6.2255, 46.370678]]}, "properties": {"name": "9586455042.Nyon_Triathlon_Transition_2", "cmt": "2023-08-05", "desc": "---", "src": "6.2255/46.370623/6.226855/46.371108", "bbox": "6.2255/46.370623/6.226855/46.371108"}}]}
