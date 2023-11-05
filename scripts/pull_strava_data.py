@@ -140,8 +140,14 @@ def fetchActivities(page):
     else:
         before_string = ""
     resp = requests.get("https://www.strava.com/api/v3/athlete/activities?page="+str(page)+"&per_page="+str(per_page)+before_string, headers=headers)
-    fetched = json.loads(resp.text)
-    return fetched
+    if resp.status_code == 200 :
+        fetched = json.loads(resp.text)
+        errno = 0
+    else :
+        fetched = {}
+        errno = resp.status_code
+        print(" WARNING: http response {} with string ({})".format(resp.status_code,resp.reason))
+    return fetched, errno
 
 #-------------------------------------------------------------------------------
 def fetchActivityStream(actid):
@@ -155,8 +161,14 @@ def fetchActivityStream(actid):
     }
     keys = "time,latlng,altitude"
     resp = requests.get("https://www.strava.com/api/v3/activities/"+str(actid)+"/streams?keys="+keys+"&key_by_type=True", headers=headers)
-    fetched = json.loads(resp.text)
-    return fetched
+    if resp.status_code == 200 :
+        fetched = json.loads(resp.text)
+        errno = 0
+    else :
+        fetched = {}
+        errno = resp.status_code
+        print(" WARNING: http response {} with string ({})".format(resp.status_code,resp.reason))
+    return fetched, errno
 
 #-------------------------------------------------------------------------------
 def loadActivitiesList():
@@ -170,8 +182,10 @@ def loadActivitiesList():
     finished = False
     highestSeenID = lastSeenID
     while not finished:
-        batch = fetchActivities(page)
-        if len(batch) <= 0:
+        batch, errno = fetchActivities(page)
+        if errno != 0 :
+            break
+        if len(batch) <= 0 :
             break
         for b in batch:
             if b["id"] > lastSeenID:
@@ -279,23 +293,27 @@ if __name__ == "__main__":
                 print("INFO: Skipping existing {}".format(i["name"]))
                 continue
         print(" - ID: {}   Type {}/{} ({})   Name: {}".format(i["id"],i["type"],i["sport_type"],i["commute"],i["name"],i["start_date"],i["name"]))
-        stream = fetchActivityStream(i["id"])
-        if "latlng" in stream:
-            if not stream['latlng']['resolution'] == "high":
-                print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
-            # Create a GPX file in memory from the activity streams
-            gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
-            # If file exists, write out only if different
-            ##if os.path.exists(outfile):
-            ##    ogpx = gpxpy.parse(open(outfile,'r'))
-            ##    if gpx == ogpx:
-            ##        print("INFO: Wont write out identical content {}".format(i["name"]))
-            ##        continue
+        stream, errno = fetchActivityStream(i["id"])
+        if errno == 0 :
+            if "latlng" in stream :
+                if not stream['latlng']['resolution'] == "high":
+                    print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
+                # Create a GPX file in memory from the activity streams
+                gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
+                # If file exists, write out only if different
+                ##if os.path.exists(outfile):
+                ##    ogpx = gpxpy.parse(open(outfile,'r'))
+                ##    if gpx == ogpx:
+                ##        print("INFO: Wont write out identical content {}".format(i["name"]))
+                ##        continue
 
-            # Write out the GPX file to disk
-            with open(outfile, "w") as f:
-                f.write(gpx.to_xml())
-        else:
-            print("INFO: stream was empty for {}".format(i["name"]))
+                # Write out the GPX file to disk
+                with open(outfile, "w") as f:
+                    f.write(gpx.to_xml())
+            else :
+                print("INFO: stream was empty for {}".format(i["name"]))
+        else :
+            print("ERROR: {} downloading activity {} aborting".format(errno,i["id"]))
+            exit(1)
 
 ########################################################
