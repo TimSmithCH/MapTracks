@@ -33,11 +33,13 @@ do
     fileOUT=tracks/2_geojson/$type/$base.geojson
     if [[ ! -f $fileOUT ]] ; then
       printf " $fileOUT not found\n"
+      python scripts/gpx_to_geojson.py -s -u $fileIN
     else
       timeIN="$(git log --pretty=format:%cd -n 1 --date=unix -- $fileIN)"
       timeOUT="$(git log --pretty=format:%cd -n 1 --date=unix -- $fileOUT)"
       if [[ $timeIN -gt $timeOUT ]]; then
         printf " $fileOUT too old\n"
+        python scripts/gpx_to_geojson.py -s -u $fileIN
       fi
     fi
   done

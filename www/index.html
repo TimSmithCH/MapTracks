@@ -488,13 +488,14 @@
             popup.remove();
           });
           map.on('click', layer, function(e) {
-              // Left-click: track bounds are in bbox attribute
-              const sbbox = e.features[0].properties.bbox;
-              if (sbbox !== undefined) {
-                console.log("Re-centre at ",tbbox);
-                // Bounds convention: LonLat SW corner, LonLat NW corner
-                map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
-              }
+            // Left-click: track bounds are in bbox attribute
+            const sbbox = e.features[0].properties.bbox;
+            if (sbbox !== undefined) {
+              const tbbox = sbbox.split("/");
+              console.log("Re-centre at ",tbbox);
+              // Bounds convention: LonLat SW corner, LonLat NW corner
+              map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
+            }
           });
           map.on('contextmenu', layer, function(e) {
             // Right-click: track-group bounds are in source attribute

@@ -53,7 +53,7 @@ def parseCommandLine():
         parser.add_argument('-i', '--iddir',    help='Directory to store Strava ID file')
         parser.add_argument('-b', '--before',   help='Upper date bound to search back from')
         parser.add_argument('-p', '--perpage',  help='Number of activities per page for Strava API download')
-        parser.add_argument('-c', '--commute',  help='Find commutes instead of the default of ignoring them')
+        parser.add_argument('-c', '--commute',  action='store_true', help='Find commutes instead of the default of ignoring them')
         parser.add_argument('-l', '--light',    action='store_true', help='Light mode: Dont download data if file already exists')
         args = parser.parse_args()
         orders = {

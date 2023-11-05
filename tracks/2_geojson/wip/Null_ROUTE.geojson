@@ -1,8 +1,1 @@
-{
-"type": "FeatureCollection",
-"name": "LayerName",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "name": "Null_ROUTE" }, "geometry": { "type": "LineString", "coordinates": [ [ 8.0967386, 46.625136 ], [ 8.0970509, 46.6253476 ] ] } }
-]
-}
+{"type": "FeatureCollection", "name": "TrackSet", "crs": {"type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}}, "bbox": [8.09673862673647, 46.62513599869702, 8.09705088750067, 46.62534755347934], "features": [{"type": "Feature", "bbox": [8.09673862673647, 46.62513599869702, 8.09705088750067, 46.62534755347934], "geometry": {"type": "LineString", "coordinates": [[8.096739, 46.625136], [8.097051, 46.625348]]}, "properties": {"name": "Null_ROUTE", "cmt": null, "desc": "---", "src": "8.09673862673647/46.62513599869702/8.09705088750067/46.62534755347934", "bbox": "8.09673862673647/46.62513599869702/8.09705088750067/46.62534755347934"}}]}
