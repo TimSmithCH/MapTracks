@@ -176,7 +176,7 @@ def loadActivitiesList():
     global stravaData
     init()
     lastSeenID = int(stravaData.get("last_read"))
-    print(" Last Strava ID uploaded (to find) {}".format(str(lastSeenID)))
+    print(" Last Strava ID uploaded (to stop at when found again) {}".format(str(lastSeenID)))
     activitiesToAdd = []
     page = 1
     finished = False
