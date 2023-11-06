@@ -29,14 +29,6 @@ jobs:
           CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
           CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         #--- Next Step
-      - name: Segment climb/descend tracks
-        run: |
-          # If the working directory contains any track files to commit
-          echo ">>> To Segment List"
-          git -c core.quotePath=false status --porcelain tracks/3_gpx | awk '{print $2}'
-          echo ">>> Segmentation"
-          git -c core.quotePath=false status --porcelain tracks/3_gpx | awk '{print $2}' | xargs -r -n 20 scripts/segment_climb_descent.py
-        #--- Next Step
       - name: Commit freshly created files
         run: |
           git config --global user.email "tim.smith@cern.ch"
