@@ -44,6 +44,7 @@ def parseCommandLine():
     parser.set_defaults(**defaults)
     # Parse the command line
     parser.add_argument("files", help="individual gpx filename [filenames]", nargs="+")
+    parser.add_argument('-e', '--ensemble',  action='store_true', help='Treat the set of files as an ensemble and make global bounding box')
     parser.add_argument('-o', '--outdir',    dest='outdir',       help='Directory to store converted geojson files')
     parser.add_argument('-p', '--precision', type=int,            help='Round lat/lon to this number of decimal places')
     parser.add_argument('-s', '--simplify',  action='store_true', help='Apply simplification (or not)')
@@ -164,7 +165,7 @@ def split_up_down(tracks):
                         else:
                             if description == "":
                                 description = "0.5"   # A DOWN segment
-                        if VERBOSE : print("  Split segment {} at point {} (track at {}) with elevation diff {:.1f}".format(nseg,new_seg_len-1,nxt,ele_diff))
+                        if VERBOSE : print("  Split segment {} at point {} [{}] (track at {}) with elevation diff {:.1f}".format(nseg,new_seg_len-1,description,nxt,ele_diff))
                         track.split(nseg,new_seg_len-1)   # Second argument is pointer to array starting at zero, so length-1
                         nseg += 1   # Splitting added a segment
                         modified = True
@@ -182,6 +183,28 @@ def split_up_down(tracks):
     return None
 
 #-------------------------------------------------------------------------------
+# Prepare the encompassing bounding box for all files in one ensemble of files
+def prepare_global_bbox(fpaths):
+    llx = 180.0
+    lly = 90.0
+    urx = -180.0
+    ury = -90.0
+    for fpath in fpaths:
+        try:
+            gpx = gpxpy.parse(open(fpath,'r'))
+        except:
+            print("ERROR: Error trying to parse {}".format(fpath))
+        fb = gpx.get_bounds()
+        # Lower left corner
+        llx = min(llx,fb.min_longitude)
+        lly = min(lly,fb.min_latitude)
+        # Upper right corner
+        urx = max(urx,fb.max_longitude)
+        ury = max(ury,fb.max_latitude)
+        gbounds = gpxpy.gpx.GPXBounds(lly,ury,llx,urx)
+    return gbounds
+
+#-------------------------------------------------------------------------------
 if __name__ == '__main__':
     # See what the orders are from the command line
     args = parseCommandLine()
@@ -196,6 +219,12 @@ if __name__ == '__main__':
             # Retain only GPX files from the mpaths list
             fpaths = [ file for file in mpaths if file.endswith('.gpx') ]
 
+    # Prepare the encompassing bounding box for all files in one ensemble of files
+    if args.ensemble == True :
+        if VERBOSE : print(" ACTION: Prepare global Bounding Box")
+        global_bbox = prepare_global_bbox(fpaths)
+        if VERBOSE : print("  > Global BBox {}".format(global_bbox))
+
     for fpath in fpaths:
         try:
             gpx = gpxpy.parse(open(fpath,'r'))
@@ -204,7 +233,7 @@ if __name__ == '__main__':
         print("Processing {}".format(pathlib.Path(fpath).name))
 
         nsegs = sum(len(t.segments) for t in gpx.tracks)
-        print("INFO: GPX file contains {} tracks, {} segments, {} points, {} routes, {} waypoints"\
+        print("INFO: GPX file original: {} tracks, {} segments, {} points, {} routes, {} waypoints"\
                 .format(len(gpx.tracks),nsegs,gpx.get_track_points_no(),len(gpx.routes),len(gpx.waypoints)))
 
         # Split tracks into uphill and downhill segments
@@ -213,27 +242,36 @@ if __name__ == '__main__':
             split_up_down(gpx.tracks)
 
         nsegs = sum(len(t.segments) for t in gpx.tracks)
-        print("INFO: GPX file contains {} tracks, {} segments, {} points, {} routes, {} waypoints"\
+        print("INFO: GPX file modified: {} tracks, {} segments, {} points, {} routes, {} waypoints"\
                 .format(len(gpx.tracks),nsegs,gpx.get_track_points_no(),len(gpx.routes),len(gpx.waypoints)))
 
         # Simplify tracks to a remove unnecessary points whilst preserving geometry
-        if args.simplify == True:
+        if args.simplify == True :
             if VERBOSE : print(" ACTION: Simplify tracks")
             if VERBOSE : print("  > Using a tolerance of {} metres for simplifying".format(args.tolerance))
             gpx.simplify(max_distance=args.tolerance)
 
+        # Prepare the encompassing bounding box, either of all tracks in one file or all files in one ensemble of files
+        if args.ensemble == False :
+            fbounds = gpx.get_bounds()
+            if fbounds == None :
+                # Some files contain only waypoints, no tracks so dont have a bbox
+                fbounds = gpxpy.gpx.GPXBounds(1.0, 2.0, 3.0, 4.0)
+        else :
+            fbounds = global_bbox
+        fbounds_str = str(fbounds.min_longitude)+"/"+str(fbounds.min_latitude)+"/"+str(fbounds.max_longitude)+"/"+str(fbounds.max_latitude)
+        if VERBOSE : print("  > Bbox {}".format(fbounds_str))
+
         # Convert each track into a Feature
         if VERBOSE : print(" ACTION: Converting tracks to Feature LinesStrings")
         if VERBOSE : print("  > Using a precision of {} decimal places for coordinate trimming".format(args.precision))
-        fbounds = gpx.get_bounds()
-        fbounds_str = str(fbounds.min_longitude)+"/"+str(fbounds.min_latitude)+"/"+str(fbounds.max_longitude)+"/"+str(fbounds.max_latitude)
         geo_features = []
-        for track in gpx.tracks:
+        for track in gpx.tracks :
             desc = "---"
             tbounds = track.get_bounds()
             tbounds_str = str(tbounds.min_longitude)+"/"+str(tbounds.min_latitude)+"/"+str(tbounds.max_longitude)+"/"+str(tbounds.max_latitude)
             # Make each segment into a LineString
-            for segment in track.segments:
+            for segment in track.segments :
                 if desc == "---" :
                     if track.description != None :
                         desc = "DownHill" if track.description == "0.5" else "UpHill"
@@ -268,7 +306,7 @@ if __name__ == '__main__':
 
         # Ensure there are no routes
         if len(gpx.routes) > 0:
-            print(" WARNING: file contains routes which have been dropped")
+            print(" WARNING: file contains routes which have not been dropped")
 
         # Construct the FeatureCollection from the set of Features
         geoj = geojson.FeatureCollection(geo_features,
@@ -289,7 +327,7 @@ if __name__ == '__main__':
 
         # Make the json dict to write out to file
         npts = sum(len(f.geometry.coordinates) for f in geoj.features)
-        print("INFO: GeoJSON file contains {} tracks, {} points, {} routes, {} waypoints"\
+        print("INFO: GeoJSON generated: {} tracks, {} points, {} routes, {} waypoints"\
                 .format(len(geoj.features),npts,len(gpx.routes),len(gpx.waypoints)))
         dumpj = geojson.dumps(geoj, sort_keys=False)
 

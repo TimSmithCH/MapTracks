@@ -268,13 +268,14 @@ def construct_filenames(i):
 if __name__ == "__main__":
 
     args = parseCommandLine()
-    track_dir = dict(Ride="bike", # Ride/Ride and Ride/MountainBikeRide in bike
-                     Hike="hike", # Hike/Hike in hike
-                     Walk="hike", # Walk/Walk in hike
+    track_dir = dict(Ride="bike",     # Ride/Ride and Ride/MountainBikeRide in bike
+                     Hike="hike",     # Hike/Hike in hike
+                     Walk="hike",     # Walk/Walk in hike
                      AlpineSki="ski", # AlpineSki/AlpineSki in ski
                      BackcountrySki="skiclimb", # BackcountrySki/BackcountrySki in skiclimb
-                     Run="run", # Run/Run in run
-                     Swim="swim") # Swim/Swim in swim
+                     Run="run",       # Run/Run in run
+                     Swim="swim",     # Swim/Swim in swim
+                     Velomobile="vehicle") # Strava has no vehicles so labelled velomobile
     activities = loadActivitiesList()
     # Selectively download activities: by default only non-commutes
     if not orders["commute"]:

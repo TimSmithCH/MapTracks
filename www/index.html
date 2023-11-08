@@ -424,6 +424,10 @@
                     0, ["^", 2, 3],
                     8, ["^", 2, 1.5],
                     24, ["^", 2, 8]
+                  ],
+                  "line-dasharray": ["match", ["get", "desc"],
+                    ["DownHill" ], ["literal", [2, 2]],
+                    ["literal", [1]]
                   ]
                 }
               });
@@ -473,6 +477,16 @@
         });
 
         //-- Loop creating popup on hover for each layer
+        function click_handler(e) {
+          // Left-click: track bounds are in bbox attribute
+          const sbbox = e.features[0].properties.bbox;
+          if (sbbox !== undefined) {
+            const tbbox = sbbox.split("/");
+            console.log("Re-centre at ",tbbox);
+            // Bounds convention: LonLat SW corner, LonLat NW corner
+            map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
+          }
+        }
         for (let layer of Object.keys(layer_props)) {
           map.on('mouseenter', layer, function(e) {
             // Change the cursor style as a UI indicator.
@@ -487,16 +501,9 @@
             map.getCanvas().style.cursor = '';
             popup.remove();
           });
-          map.on('click', layer, function(e) {
-            // Left-click: track bounds are in bbox attribute
-            const sbbox = e.features[0].properties.bbox;
-            if (sbbox !== undefined) {
-              const tbbox = sbbox.split("/");
-              console.log("Re-centre at ",tbbox);
-              // Bounds convention: LonLat SW corner, LonLat NW corner
-              map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
-            }
-          });
+          map.on('click', layer, click_handler);
+          map.on('touchend', layer, click_handler);
+          //map.on('contextmenu', layer, click_handler.bind({bbData: 'source'}));
           map.on('contextmenu', layer, function(e) {
             // Right-click: track-group bounds are in source attribute
             const sbbox = e.features[0].properties.src
