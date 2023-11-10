@@ -223,7 +223,6 @@ if __name__ == '__main__':
             gpx.simplify(max_distance=args.tolerance)
 
         # Prepare the encompassing bounding box, either of all tracks in one file or all files in one ensemble of files
-        print(gpx.description)
         if gpx.description == "Ensemble" :
             # Alredy generated ensemble so just use it for reprocessing individual files later
             fbounds = gpx.bounds
