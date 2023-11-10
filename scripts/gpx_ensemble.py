@@ -87,7 +87,7 @@ if __name__ == '__main__':
             print("ERROR: Error trying to parse {}".format(fpath))
         if VERBOSE : print("INFO: Processing {}".format(pathlib.Path(fpath).name))
 
-        gpx.description == "Ensemble"
+        gpx.description = "Ensemble"
         gpx.bounds = gbb
         gbounds_str = str(gbb.min_longitude)+"/"+str(gbb.min_latitude)+"/"+str(gbb.max_longitude)+"/"+str(gbb.max_latitude)
         if VERBOSE : print("  > Bbox {}".format(gbounds_str))
