@@ -44,7 +44,6 @@ def parseCommandLine():
     parser.set_defaults(**defaults)
     # Parse the command line
     parser.add_argument("files", help="individual gpx filename [filenames]", nargs="+")
-    parser.add_argument('-e', '--ensemble',  action='store_true', help='Treat the set of files as an ensemble and make global bounding box')
     parser.add_argument('-o', '--outdir',    dest='outdir',       help='Directory to store converted geojson files')
     parser.add_argument('-p', '--precision', type=int,            help='Round lat/lon to this number of decimal places')
     parser.add_argument('-s', '--simplify',  action='store_true', help='Apply simplification (or not)')
@@ -183,28 +182,6 @@ def split_up_down(tracks):
     return None
 
 #-------------------------------------------------------------------------------
-# Prepare the encompassing bounding box for all files in one ensemble of files
-def prepare_global_bbox(fpaths):
-    llx = 180.0
-    lly = 90.0
-    urx = -180.0
-    ury = -90.0
-    for fpath in fpaths:
-        try:
-            gpx = gpxpy.parse(open(fpath,'r'))
-        except:
-            print("ERROR: Error trying to parse {}".format(fpath))
-        fb = gpx.get_bounds()
-        # Lower left corner
-        llx = min(llx,fb.min_longitude)
-        lly = min(lly,fb.min_latitude)
-        # Upper right corner
-        urx = max(urx,fb.max_longitude)
-        ury = max(ury,fb.max_latitude)
-        gbounds = gpxpy.gpx.GPXBounds(lly,ury,llx,urx)
-    return gbounds
-
-#-------------------------------------------------------------------------------
 if __name__ == '__main__':
     # See what the orders are from the command line
     args = parseCommandLine()
@@ -218,12 +195,6 @@ if __name__ == '__main__':
             mpaths = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(fpath)) for f in fn]
             # Retain only GPX files from the mpaths list
             fpaths = [ file for file in mpaths if file.endswith('.gpx') ]
-
-    # Prepare the encompassing bounding box for all files in one ensemble of files
-    if args.ensemble == True :
-        if VERBOSE : print(" ACTION: Prepare global Bounding Box")
-        global_bbox = prepare_global_bbox(fpaths)
-        if VERBOSE : print("  > Global BBox {}".format(global_bbox))
 
     for fpath in fpaths:
         try:
@@ -252,13 +223,15 @@ if __name__ == '__main__':
             gpx.simplify(max_distance=args.tolerance)
 
         # Prepare the encompassing bounding box, either of all tracks in one file or all files in one ensemble of files
-        if args.ensemble == False :
-            fbounds = gpx.get_bounds()
-            if fbounds == None :
-                # Some files contain only waypoints, no tracks so dont have a bbox
-                fbounds = gpxpy.gpx.GPXBounds(1.0, 2.0, 3.0, 4.0)
+        if gpx.description == "Ensemble" :
+            # Alredy generated ensemble so just use it for reprocessing individual files later
+            fbounds = gpx.bounds
         else :
-            fbounds = global_bbox
+            # Not an ensemble, just generate new bbox for all tracks in single file
+            fbounds = gpx.get_bounds()
+        if fbounds == None :
+            # Some files contain only waypoints, no tracks so dont have a bbox
+            fbounds = gpxpy.gpx.GPXBounds(1.0, 2.0, 3.0, 4.0)
         fbounds_str = str(fbounds.min_longitude)+"/"+str(fbounds.min_latitude)+"/"+str(fbounds.max_longitude)+"/"+str(fbounds.max_latitude)
         if VERBOSE : print("  > Bbox {}".format(fbounds_str))
 
