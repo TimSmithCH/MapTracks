@@ -37,13 +37,14 @@ def parseCommandLine():
     # Instantiate the parser
     parser = argparse.ArgumentParser(description="Convert GPX track into standardised GeoJSON tracks")
     # Set up the argument defaults
-    defaults = dict(precision=6,tolerance=1.6,simplify=False,updown=False,verbose=False)
+    defaults = dict(precision=6,tolerance=1.6,dryrun=False,simplify=False,updown=False,verbose=False)
     # Precision=6 : Trim cooridnate precision to 6 decimal places which is 0.1 metre
     # Tolerance=1.6 : Simplify tracks to a tolerance of roughly 1 metre (mapping degree fraction to metre varies with latitude)
     #  old ogr2ogr max_distance of 0.00002 maps to (tolerance=1.6945)
     parser.set_defaults(**defaults)
     # Parse the command line
     parser.add_argument("files", help="individual gpx filename [filenames]", nargs="+")
+    parser.add_argument('-d', '--dryrun',    action='store_true', help='Dont actually create new files')
     parser.add_argument('-o', '--outdir',    dest='outdir',       help='Directory to store converted geojson files')
     parser.add_argument('-p', '--precision', type=int,            help='Round lat/lon to this number of decimal places')
     parser.add_argument('-s', '--simplify',  action='store_true', help='Apply simplification (or not)')
@@ -311,8 +312,9 @@ if __name__ == '__main__':
         else:
             outfile = pathlib.Path(fpath.replace("3_gpx","2_geojson")).with_suffix(".geojson")
         if VERBOSE : print("INFO: Writing out new content to {}".format(outfile))
-        with open(outfile, "w") as f:
-            f.write(dumpj)
+        if args.dryrun == False :
+            with open(outfile, "w") as f:
+                f.write(dumpj)
 
 ########################################################
 # Feature could have styling information, but chose to leaving the styling choices to the map rendering
