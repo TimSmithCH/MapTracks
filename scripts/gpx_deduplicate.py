@@ -3,7 +3,7 @@
 #-------------------------------------------------------------------------------
 #
 # DESCRIPTION
-#    Find and delete anryd duplicate GPX files
+#    Find and delete any duplicate GPX files
 #
 # EXAMPLES
 #    python gpx_deduplicate.py tracks/3_gpx/ski tracks/3_gpx/skiclimb
@@ -64,13 +64,16 @@ for fpath in fpaths:
         print(" Processing {} {} {}".format(dname,bname,fname))
     else:
         print(".", end="", flush=True)
-    gtime = gpx.time
-    if gtime is None:
-        # Skip routes (which have no timing info)
-        continue
-    totpts = 0
+    # Skip routes (which have no timing info)
     if len(gpx.tracks) == 0 :
         continue
+    gtime = gpx.time
+    if gtime is None:
+        gtime = gpx.tracks[0].segments[0].points[0].time
+        if gtime is None:
+            continue
+        print("\n WARNING: No file TIME, relying on Segment time {} for {}".format(gtime,fname))
+    totpts = 0
     for seg in gpx.tracks[0].segments:
         totpts = totpts + len(seg.points)
     gtype = gpx.tracks[0].type

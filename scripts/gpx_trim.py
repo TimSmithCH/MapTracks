@@ -28,12 +28,14 @@ import datetime
 # Instantiate the parser
 parser = argparse.ArgumentParser(description='Trim the GPX track in points and precision.')
 # Set up the argument defaults
-defaults = dict(time=False,elevation=False,verbose=False)
+defaults = dict(dryrun=False,time=False,elevation=False,verbose=False)
 parser.set_defaults(**defaults)
 # Parse the command line
 parser.add_argument("files", help="individual gpx filenames [filenames]", nargs="+")
+parser.add_argument('-d', '--dryrun',    action='store_true', help='Dont actually update files')
 parser.add_argument('-e', '--elevation', action='store_true', help='Round elevation info in tracks')
 parser.add_argument('-o', '--outdir',    dest='outdir',       help='Alterntive file for output in avoiding overwrite')
+parser.add_argument('-p', '--precision', type=int,            help='Round lat/lon to this number of decimal places')
 parser.add_argument('-s', '--simplify',  dest='simplify',     help='Apply simplification (or not)')
 parser.add_argument('-t', '--time',      action='store_true', help='Drop timing info from tracks')
 parser.add_argument('-v', '--verbose',   action='store_true', help='Turn on verbose output')
@@ -42,8 +44,9 @@ print(">>> Cmd line: process files ({})".format(args.files))
 print(">>> Cmd line: apply simplify ({}), drop timing ({}), round elevations ({})".format(args.simplify,args.time,args.elevation))
 print(">>> Cmd line: rename output ({}), verbose ({})".format(args.outdir,args.verbose))
 
-if args.verbose:
-    VERBOSE = True
+VERBOSE = True if args.verbose == True else False
+
+dirlist = ['bike','hike','run','swim','ski','skiclimb']
 
 # Expand any directories passed on the command line into a list of files
 fpaths = []
@@ -74,6 +77,7 @@ for fpath in fpaths:
 
     if len(gpx.routes) > 0:
         # Convert routes into tracks
+        print("INFO:  > Converting routes into tracks")
         for r,route in enumerate(gpx.routes):
             gpx.tracks.append(gpxpy.gpx.GPXTrack())
             gpx.tracks[r].segments.append(gpxpy.gpx.GPXTrackSegment())
@@ -91,19 +95,21 @@ for fpath in fpaths:
             modified = True
         for track in gpx.tracks:
             #track.remove_elevation()
+            if VERBOSE : print("INFO:  Track contains {} segments".format(len(track.segments)))
             # Drop the point timing information
             if track.has_times():
                 if args.time == True:
                     print("INFO:  > Drop timing info from tracks")
                     track.remove_time()
                     modified = True
-            if VERBOSE : print("INFO:  Track contains {} segments".format(len(track.segments)))
+            #if VERBOSE : print("  > Using a precision of {} decimal places for coordinate trimming".format(args.precision))
             if args.elevation == True:
                 print("INFO:  > Round elevation info in tracks")
                 for segment in track.segments:
                     for point in segment.points:
                         # Drop precision on elevation
-                        point.elevation = int(point.elevation)
+                        if point.elevation != None :
+                            point.elevation = int(point.elevation)
                 modified = True
             # Check the track metadata block
             tname = track.name
@@ -113,11 +119,18 @@ for fpath in fpaths:
                 modified = True
             if track.comment is None:
                 print("INFO:  >> Adding track comment field")
-                track.comment = "1970-01-01"
+                if gpx.time != None :
+                    track.comment = str(gpx.time.date())
+                else :
+                    track.comment = "1970-01-01"
                 modified = True
             if track.type is None:
                 print("INFO:  >> Adding track type field")
-                track.type = "Velomobile"
+                trktype = pathlib.Path(fpath).parts[-2]
+                if trktype in dirlist :
+                    track.type = trktype
+                else :
+                    track.type = "Velomobile"
                 modified = True
 
     if VERBOSE : print("INFO:  (END) GPX file contains {} tracks, {} waypoints, {} routes, {} points".format(len(gpx.tracks),len(gpx.waypoints),len(gpx.routes),gpx.get_track_points_no()))
@@ -131,5 +144,6 @@ for fpath in fpaths:
         # Default indentation for PP is 2 spaces, no extra action required
         newtree = gpx.to_xml(prettyprint=True)
         print("INFO: Writing out new content to {}".format(outfile))
-        with open(outfile, "w") as f:
-            f.write(newtree)
+        if args.dryrun == False :
+            with open(outfile, "w") as f:
+                f.write(newtree)

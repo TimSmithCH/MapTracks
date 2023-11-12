@@ -38,11 +38,13 @@ jobs:
         run: |
           # If the last commit contained any track files
           if ! git diff --quiet --exit-code "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx; then
+            git config --global core.quotePath false 
             git diff --name-status "HEAD~1" "HEAD" tracks/2_geojson tracks/3_gpx | awk -F " " '{print $2}' >Modified_Files
             echo ">>> Generate GeoJSON files for new/modified GPX files"
             grep -e '3_gpx' Modified_Files | xargs -r -I {} python scripts/gpx_to_geojson.py -s -u {}
             echo ">>> Generate new GeoJSON files for deleted/modified GeoJSON files"
             grep -e '2_geojson' Modified_Files | awk '{sub(/2_geojson/,"3_gpx")sub(/.geojson/,".gpx")}1' | xargs -r -I {} python scripts/gpx_to_geojson.py -s -u {}
+            git config --global --unset core.quotePath
           else
             echo ">>> No GeoJSON files need generating"
           fi
