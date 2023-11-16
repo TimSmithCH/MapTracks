@@ -108,4 +108,3 @@ for name, group in dup_df:
                 os.remove(bad_geojson)
     else:
         print("WARNING: Cant delete {} ({}) as its modified from {} ({})".format(bad_gpx,group.iloc[1]['TrkPoints'],good_gpx,group.iloc[0]['TrkPoints']))
-
