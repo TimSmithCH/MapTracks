@@ -38,6 +38,7 @@ def parseCommandLine():
                 "trackDir": "tracks/3_gpx/",
                 "idFile": "www/features/LastStravaIDRead.json",
                 "perpage": 40,
+                "numpages": 3,
                 "commute": False,
                 "light": False
         }
@@ -45,15 +46,17 @@ def parseCommandLine():
         # Instantiate the parser
         parser = ArgumentParser(description="Download latest activities via Strava API.")
         # Set up the argument defaults
-        defaults = dict(outdir="./",iddir="./",tokendir="./",perpage=10,commute=False,light=False)
+        defaults = dict(outdir="./",iddir="./",tokendir="./",perpage=10,numpages=3,commute=True,light=False)
         parser.set_defaults(**defaults)
         # Parse the command line
         parser.add_argument('-t', '--tokendir', help='Directory to store generated access token file')
         parser.add_argument('-o', '--outdir',   help='Directory to store downloaded Strava activity files')
         parser.add_argument('-i', '--iddir',    help='Directory to store Strava ID file')
         parser.add_argument('-b', '--before',   help='Upper date bound to search back from')
+        parser.add_argument('-s', '--specdate', help='Specific date to search for')
         parser.add_argument('-p', '--perpage',  help='Number of activities per page for Strava API download')
-        parser.add_argument('-c', '--commute',  action='store_true', help='Find commutes instead of the default of ignoring them')
+        parser.add_argument('-n', '--numpages', help='Number of pages of activities for Strava API download')
+        parser.add_argument('-c', '--commute',  action='store_false', help='Ignore commutes')
         parser.add_argument('-l', '--light',    action='store_true', help='Light mode: Dont download data if file already exists')
         args = parser.parse_args()
         orders = {
@@ -63,8 +66,12 @@ def parseCommandLine():
         }
         if args.before:
             orders["before"] = args.before
+        if int(args.numpages) * int(args.perpage) > 200 :
+            print("WARNING: Spamming Strava API")
         if args.perpage:
             orders["perpage"] = args.perpage
+        if args.perpage:
+            orders["numpages"] = args.numpages
         orders["commute"] = args.commute
         orders["light"] = args.light
 
@@ -187,26 +194,26 @@ def loadActivitiesList():
             break
         if len(batch) <= 0 :
             break
-        for b in batch:
-            if b["id"] > lastSeenID:
-                if b["id"] > highestSeenID:
+        for b in batch :
+            if b["id"] > lastSeenID :
+                if b["id"] > highestSeenID :
                     highestSeenID = b["id"]
                 activitiesToAdd.insert(0,b)
-            elif b["id"] == lastSeenID:
+            elif b["id"] == lastSeenID :
                 finished = True
                 print(" Found lastSeenID ({}) so stopping search".format(lastSeenID))
                 break
-            elif b["id"] < lastSeenID:   # Sanity check: cant get here unless "below" makes loop start too low (or overflow pages)
-                if "before" in orders:
+            elif b["id"] < lastSeenID :   # Sanity check: cant get here unless "below" makes loop start too low (or overflow pages)
+                if "before" in orders :
                     print("WARNING: before ({}) activity ({}) must be later than lastSeenID ({})".format(orders["before"],b["id"],lastSeenID))
                 break
         # Spamming check: dont read more than 3 pages (unless explicitly allow)
         page = page + 1
-        if page > 3:
-            print("WARNING: Maximum number (3) of pages reached")
+        if page > int(orders["numpages"]) :
+            print("WARNING: Maximum number ({}) of pages reached".format(orders["numpages"]))
             break
     print(" Activities since last upload:")
-    for i in activitiesToAdd:
+    for i in activitiesToAdd :
         print(" - {} : {} : {}".format(str(i["id"]),str(i["type"]),str(i["name"])))
     stravaData["last_read"] = highestSeenID
     json.dump(stravaData, open(orders.get('idFile'), "w"))
@@ -277,14 +284,15 @@ if __name__ == "__main__":
                      Swim="swim",     # Swim/Swim in swim
                      Velomobile="vehicle") # Strava has no vehicles so labelled velomobile
     activities = loadActivitiesList()
-    # Selectively download activities: by default only non-commutes
+    # Selectively download activities: by default include commutes
     if not orders["commute"]:
         filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
         print(" Non-commutes retained:")
     else:
-        filteredActivities = list(filter(lambda obj: obj['commute'], activities))
+        filteredActivities = activities
+        #filteredActivities = list(filter(lambda obj: obj['commute'], activities))
         #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
-        print(" Commutes retained:")
+        print(" All retained:")
     # Download activities
     for i in filteredActivities:
         activity_name,outfile = construct_filenames(i)
