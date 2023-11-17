@@ -37,7 +37,7 @@ def parseCommandLine():
                 "tokenFile": "token.json",
                 "trackDir": "tracks/3_gpx/",
                 "idFile": "www/features/LastStravaIDRead.json",
-                "perpage": 40,
+                "pagesize": 40,
                 "numpages": 3,
                 "commute": False,
                 "light": False
@@ -46,7 +46,7 @@ def parseCommandLine():
         # Instantiate the parser
         parser = ArgumentParser(description="Download latest activities via Strava API.")
         # Set up the argument defaults
-        defaults = dict(outdir="./",iddir="./",tokendir="./",perpage=10,numpages=3,commute=True,light=False)
+        defaults = dict(outdir="./",iddir="./",tokendir="./",pagesize=10,numpages=3,commute=True,light=False)
         parser.set_defaults(**defaults)
         # Parse the command line
         parser.add_argument('-t', '--tokendir', help='Directory to store generated access token file')
@@ -54,7 +54,7 @@ def parseCommandLine():
         parser.add_argument('-i', '--iddir',    help='Directory to store Strava ID file')
         parser.add_argument('-b', '--before',   help='Upper date bound to search back from')
         parser.add_argument('-s', '--specdate', help='Specific date to search for')
-        parser.add_argument('-p', '--perpage',  help='Number of activities per page for Strava API download')
+        parser.add_argument('-p', '--pagesize',  help='Number of activities per page for Strava API download')
         parser.add_argument('-n', '--numpages', help='Number of pages of activities for Strava API download')
         parser.add_argument('-c', '--commute',  action='store_false', help='Ignore commutes')
         parser.add_argument('-l', '--light',    action='store_true', help='Light mode: Dont download data if file already exists')
@@ -66,12 +66,19 @@ def parseCommandLine():
         }
         if args.before:
             orders["before"] = args.before
-        if int(args.numpages) * int(args.perpage) > 200 :
-            print("WARNING: Spamming Strava API")
-        if args.perpage:
-            orders["perpage"] = args.perpage
-        if args.perpage:
+        if args.pagesize:
+            orders["pagesize"] = args.pagesize
+        if args.numpages:
             orders["numpages"] = args.numpages
+        if int(args.numpages) * int(args.pagesize) > 200 :
+            print("WARNING: Dont spam Strava API: {} pages x {} pagesize too large setting to 3x20".format(args.numpages,args.pagesize))
+            orders["pagesize"] = 20
+            orders["numpages"] = 3
+        if args.specdate :
+            orders["pagesize"] = 7
+            orders["numpages"] = 1
+            orders["specdate"] = args.specdate
+            orders["before"] = str(int(args.specdate)+1)
         orders["commute"] = args.commute
         orders["light"] = args.light
 
@@ -139,7 +146,7 @@ def fetchActivities(page):
         'accept': 'application/json',
         'authorization': "Bearer " + accessToken
     }
-    per_page = orders.get("perpage")
+    per_page = orders.get("pagesize")
     # Always returns activities in reverse time order from today, unless give explicit date to read back from
     if "before" in orders:
         epoch = datetime.datetime.strptime(orders["before"],'%Y%m%d').strftime('%s')
@@ -182,12 +189,16 @@ def loadActivitiesList():
     global orders
     global stravaData
     init()
-    lastSeenID = int(stravaData.get("last_read"))
-    print(" Last Strava ID uploaded (to stop at when found again) {}".format(str(lastSeenID)))
+    if "specdate" in orders :
+        lastSeenID = 1
+        highestSeenID = 2
+    else :
+        lastSeenID = int(stravaData.get("last_read"))
+        print(" Last Strava ID uploaded (to stop at when found again) {}".format(str(lastSeenID)))
+        highestSeenID = lastSeenID
     activitiesToAdd = []
     page = 1
     finished = False
-    highestSeenID = lastSeenID
     while not finished:
         batch, errno = fetchActivities(page)
         if errno != 0 :
@@ -210,7 +221,7 @@ def loadActivitiesList():
         # Spamming check: dont read more than 3 pages (unless explicitly allow)
         page = page + 1
         if page > int(orders["numpages"]) :
-            print("WARNING: Maximum number ({}) of pages reached".format(orders["numpages"]))
+            print("INFO: Maximum number ({}) of pages reached".format(orders["numpages"]))
             break
     print(" Activities since last upload:")
     for i in activitiesToAdd :
@@ -285,12 +296,11 @@ if __name__ == "__main__":
                      Velomobile="vehicle") # Strava has no vehicles so labelled velomobile
     activities = loadActivitiesList()
     # Selectively download activities: by default include commutes
-    if not orders["commute"]:
+    if orders["commute"] == False :
         filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
         print(" Non-commutes retained:")
     else:
         filteredActivities = activities
-        #filteredActivities = list(filter(lambda obj: obj['commute'], activities))
         #filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
         print(" All retained:")
     # Download activities
@@ -318,6 +328,7 @@ if __name__ == "__main__":
 
                 # Write out the GPX file to disk
                 with open(outfile, "w") as f:
+                    print("INFO: writing file {}".format(outfile))
                     f.write(gpx.to_xml())
             else :
                 print("INFO: stream was empty for {}".format(i["name"]))
