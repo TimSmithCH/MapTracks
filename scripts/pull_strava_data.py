@@ -334,6 +334,6 @@ if __name__ == "__main__":
                 print("INFO: stream was empty for {}".format(i["name"]))
         else :
             print("ERROR: {} downloading activity {} aborting".format(errno,i["id"]))
-            exit(1)
+            #exit(1)
 
 #####################################################################################
