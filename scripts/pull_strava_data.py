@@ -72,8 +72,8 @@ def parseCommandLine():
             orders["numpages"] = args.numpages
         if int(args.numpages) * int(args.pagesize) > 200 :
             print("WARNING: Dont spam Strava API: {} pages x {} pagesize too large setting to 3x20".format(args.numpages,args.pagesize))
-            orders["pagesize"] = 20
-            orders["numpages"] = 3
+            #orders["pagesize"] = 20
+            #orders["numpages"] = 3
         if args.specdate :
             orders["pagesize"] = 7
             orders["numpages"] = 1
@@ -333,7 +333,10 @@ if __name__ == "__main__":
             else :
                 print("INFO: stream was empty for {}".format(i["name"]))
         else :
-            print("ERROR: {} downloading activity {} aborting".format(errno,i["id"]))
-            #exit(1)
+            if errno == 429 :
+                print("ERROR: {} downloading activity {} aborting".format(errno,i["id"]))
+                exit(1)
+            else :
+                print("WARNING: {} downloading activity {} skipping".format(errno,i["id"]))
 
 #####################################################################################
