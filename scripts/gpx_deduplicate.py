@@ -50,7 +50,7 @@ for fpath in args.files:
         #fpaths = [ file for file in mpaths if file.endswith('.gpx') ]
         fpaths = np.append(fpaths,[ file for file in mpaths if file.endswith('.gpx') ])
 
-df = pd.DataFrame(columns=['FileName', 'FilePath', 'Type', 'Time', 'Segments', 'TrkPoints'])
+df = pd.DataFrame(columns=['FileName', 'FilePath', 'Type', 'GPXTime', 'FileTime', 'Segments', 'TrkPoints'])
 for fpath in fpaths:
     modified = False
     try:
@@ -60,6 +60,7 @@ for fpath in fpaths:
     dname = os.path.dirname(fpath)
     bname = os.path.basename(fpath)
     fname = os.path.splitext(bname)[0]
+    ftime = os.path.getmtime(fpath)
     if verbose :
         print(" Processing {} {} {}".format(dname,bname,fname))
     else:
@@ -82,7 +83,8 @@ for fpath in fpaths:
     df.loc[len(df)] = {'FileName': fname,
                        'FilePath': dname,
                        'Type': gtype,
-                       'Time': gtime,
+                       'GPXTime': gtime,
+                       'FileTime': ftime,
                        'Segments': len(gpx.tracks[0].segments),
                        'TrkPoints': totpts}
 if not verbose :
@@ -92,15 +94,15 @@ if not verbose :
 #print(df)
 
 # Find duplicates
-dup_df = df[df.duplicated('Time', keep=False)].groupby('Time')
+dup_df = df[df.duplicated('GPXTime', keep=False)].groupby('GPXTime')
 for name, group in dup_df:
-    group = group.sort_values(['FileName']).reset_index()
-    good_gpx = os.path.join(group.iloc[0]['FilePath'], group.iloc[0]['FileName'] + ".gpx")
-    bad_gpx = os.path.join(group.iloc[1]['FilePath'], group.iloc[1]['FileName'] + ".gpx")
+    group = group.sort_values(['FileTime']).reset_index()
+    good_gpx = os.path.join(group.iloc[1]['FilePath'], group.iloc[1]['FileName'] + ".gpx")
+    bad_gpx = os.path.join(group.iloc[0]['FilePath'], group.iloc[0]['FileName'] + ".gpx")
     bad_geojson = pathlib.Path(bad_gpx.replace("3_gpx","2_geojson")).with_suffix(".geojson")
     if values_in_column_equal(group['TrkPoints']):
-        print("{} identical to {}".format(bad_gpx,good_gpx))
-        print(" Deleting {} and {}".format(bad_gpx,bad_geojson))
+        print(" /   Keep {}".format(good_gpx))
+        print(" \ Delete {} and {}".format(bad_gpx,bad_geojson))
         if args.dryrun == False :
             if os.path.isfile(bad_gpx):
                 os.remove(bad_gpx)
