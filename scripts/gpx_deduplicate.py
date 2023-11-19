@@ -39,6 +39,9 @@ parser.add_argument('-v', '--verbose', dest='verbose', help='Whether to print fi
 args = parser.parse_args()
 verbose = args.verbose
 
+if args.dryrun == True :
+    print("INFO: DryRun actions wont actually be performed <<<<<")
+
 # Expand any directories passed on the command line into a list of files
 fpaths = []
 for fpath in args.files:

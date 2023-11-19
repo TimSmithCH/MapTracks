@@ -119,7 +119,7 @@ def refreshTokens():
     return new_tokens
 
 #-------------------------------------------------------------------------------
-def getAccessToken(quietly):
+def getAccessToken(quietly,page):
     global orders
     global tokens
     if tokens.get("expires_at") < (time.time()):
@@ -135,13 +135,13 @@ def getAccessToken(quietly):
         return tokens["access_token"]
     else:
         if not quietly:
-            print(" Using Token: {}".format(tokens["access_token"]))
+            print(" Page {}: Using Token: {}".format(page,tokens["access_token"]))
         return tokens["access_token"]
 
 #-------------------------------------------------------------------------------
 def fetchActivities(page):
     global orders
-    accessToken = getAccessToken(False)
+    accessToken = getAccessToken(False,page)
     if(not accessToken):
         print("ERROR: No access token - cant request activities")
         return {}
@@ -168,7 +168,7 @@ def fetchActivities(page):
 
 #-------------------------------------------------------------------------------
 def fetchActivityStream(actid):
-    accessToken = getAccessToken(True)
+    accessToken = getAccessToken(True,0)
     if(not accessToken):
         print("ERROR: No access token - cant request activity stream")
         return {}
@@ -296,7 +296,8 @@ if __name__ == "__main__":
                      BackcountrySki="skiclimb", # BackcountrySki/BackcountrySki in skiclimb
                      Run="run",       # Run/Run in run
                      Swim="swim",     # Swim/Swim in swim
-                     Velomobile="vehicle") # Strava has no vehicles so labelled velomobile
+                     Velomobile="vehicle", # Strava has no vehicles so labelled velomobile
+                     Sail="vehicle")  # Boats of various types!
     activities = loadActivitiesList()
     if orders["zero"] == True :
         # Write out the GPX file to disk
