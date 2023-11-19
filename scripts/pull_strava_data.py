@@ -46,7 +46,7 @@ def parseCommandLine():
         # Instantiate the parser
         parser = ArgumentParser(description="Download latest activities via Strava API.")
         # Set up the argument defaults
-        defaults = dict(outdir="./",iddir="./",tokendir="./",pagesize=10,numpages=3,commute=True,light=False)
+        defaults = dict(outdir="./",iddir="./",tokendir="./",pagesize=10,numpages=3,commute=True,light=False,zero=False)
         parser.set_defaults(**defaults)
         # Parse the command line
         parser.add_argument('-t', '--tokendir', help='Directory to store generated access token file')
@@ -54,15 +54,17 @@ def parseCommandLine():
         parser.add_argument('-i', '--iddir',    help='Directory to store Strava ID file')
         parser.add_argument('-b', '--before',   help='Upper date bound to search back from')
         parser.add_argument('-s', '--specdate', help='Specific date to search for')
-        parser.add_argument('-p', '--pagesize',  help='Number of activities per page for Strava API download')
+        parser.add_argument('-p', '--pagesize', help='Number of activities per page for Strava API download')
         parser.add_argument('-n', '--numpages', help='Number of pages of activities for Strava API download')
         parser.add_argument('-c', '--commute',  action='store_false', help='Ignore commutes')
         parser.add_argument('-l', '--light',    action='store_true', help='Light mode: Dont download data if file already exists')
+        parser.add_argument('-z', '--zero',     action='store_true', help='Zero downloads: only store activity list')
         args = parser.parse_args()
         orders = {
                 "tokenFile": args.tokendir+"token.json",
                 "trackDir": args.outdir,
-                "idFile": args.iddir+"LastStravaIDRead.json"
+                "idFile": args.iddir+"LastStravaIDRead.json",
+                "listfile": "ActivitiesList.json"
         }
         if args.before:
             orders["before"] = args.before
@@ -81,6 +83,7 @@ def parseCommandLine():
             orders["before"] = str(int(args.specdate)+1)
         orders["commute"] = args.commute
         orders["light"] = args.light
+        orders["zero"] = args.zero
 
 #-------------------------------------------------------------------------------
 def init():
@@ -295,6 +298,13 @@ if __name__ == "__main__":
                      Swim="swim",     # Swim/Swim in swim
                      Velomobile="vehicle") # Strava has no vehicles so labelled velomobile
     activities = loadActivitiesList()
+    if orders["zero"] == True :
+        # Write out the GPX file to disk
+        lfile = str(orders.get("listfile"))
+        with open(lfile, "w") as f:
+            print("INFO: writing list file {}".format(lfile))
+            f.write(activities)
+        exit(0)
     # Selectively download activities: by default include commutes
     if orders["commute"] == False :
         filteredActivities = list(filter(lambda obj: not obj['commute'], activities))
@@ -319,12 +329,6 @@ if __name__ == "__main__":
                     print("WARNING: Stream truncated ({}) from {} to {}".format(stream['latlng']['resolution'],stream['latlng']['original_size'],len(stream['latlng']['data'])))
                 # Create a GPX file in memory from the activity streams
                 gpx = createGPXFile(activity_name,i["id"],i["start_date"],i["sport_type"],stream)
-                # If file exists, write out only if different
-                ##if os.path.exists(outfile):
-                ##    ogpx = gpxpy.parse(open(outfile,'r'))
-                ##    if gpx == ogpx:
-                ##        print("INFO: Wont write out identical content {}".format(i["name"]))
-                ##        continue
 
                 # Write out the GPX file to disk
                 with open(outfile, "w") as f:
