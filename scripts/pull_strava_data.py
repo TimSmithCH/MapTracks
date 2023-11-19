@@ -303,7 +303,7 @@ if __name__ == "__main__":
         lfile = str(orders.get("listfile"))
         with open(lfile, "w") as f:
             print("INFO: writing list file {}".format(lfile))
-            f.write(activities)
+            f.write(str(activities))
         exit(0)
     # Selectively download activities: by default include commutes
     if orders["commute"] == False :
