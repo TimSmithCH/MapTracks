@@ -295,6 +295,7 @@ if __name__ == "__main__":
                      AlpineSki="ski", # AlpineSki/AlpineSki in ski
                      BackcountrySki="skiclimb", # BackcountrySki/BackcountrySki in skiclimb
                      Run="run",       # Run/Run in run
+                     VirtualRun="run",# VirtualRun/VirtualRun in run
                      Swim="swim",     # Swim/Swim in swim
                      Velomobile="vehicle", # Strava has no vehicles so labelled velomobile
                      Sail="vehicle")  # Boats of various types!
