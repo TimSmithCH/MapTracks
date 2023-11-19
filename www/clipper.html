@@ -151,19 +151,21 @@
                     });
 
                     console.log(data.features[0]);
-                    if (data.features[0].properties.coordTimes[0].length != 20){
-                      // Multi-segment tracks translate into nested arrays, need to concatenate them
-                      var temp_coordTimes = data.features[0].properties.coordTimes[0].concat();
-                      for(var j = 1; j < data.features[0].properties.coordTimes.length; j++){ 
-                        temp_coordTimes.push.apply(temp_coordTimes,data.features[0].properties.coordTimes[j]);
+                    if ("coordTimes" in data.features[0].properties) {
+                      if (data.features[0].properties.coordTimes[0].length != 20){
+                        // Multi-segment tracks translate into nested arrays, need to concatenate them
+                        var temp_coordTimes = data.features[0].properties.coordTimes[0].concat();
+                        for(var j = 1; j < data.features[0].properties.coordTimes.length; j++){ 
+                          temp_coordTimes.push.apply(temp_coordTimes,data.features[0].properties.coordTimes[j]);
+                        }
+                        data.features[0].properties.coordTimes = temp_coordTimes;
+                        var temp_coordinates = data.features[0].geometry.coordinates[0].concat();
+                        for(var k = 1; k < data.features[0].geometry.coordinates.length; k++){ 
+                          temp_coordinates.push.apply(temp_coordinates,data.features[0].geometry.coordinates[k]);
+                        }
+                        data.features[0].geometry.coordinates = temp_coordinates;
+                        data.features[0].geometry.type = "LineString";
                       }
-                      data.features[0].properties.coordTimes = temp_coordTimes;
-                      var temp_coordinates = data.features[0].geometry.coordinates[0].concat();
-                      for(var k = 1; k < data.features[0].geometry.coordinates.length; k++){ 
-                        temp_coordinates.push.apply(temp_coordinates,data.features[0].geometry.coordinates[k]);
-                      }
-                      data.features[0].geometry.coordinates = temp_coordinates;
-                      data.features[0].geometry.type = "LineString";
                     }
                     // Drop everything but coordinates and times in order to save memory
                     delete(data.features[0].properties.heartRates);
