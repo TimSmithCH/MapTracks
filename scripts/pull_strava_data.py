@@ -40,7 +40,8 @@ def parseCommandLine():
                 "pagesize": 40,
                 "numpages": 3,
                 "commute": False,
-                "light": False
+                "light": False,
+                "zero": False
         }
     else:
         # Instantiate the parser
@@ -305,7 +306,8 @@ if __name__ == "__main__":
         lfile = str(orders.get("listfile"))
         with open(lfile, "w") as f:
             print("INFO: writing list file {}".format(lfile))
-            f.write(str(activities))
+            json.dump(activities, f)
+            #f.write(str(activities))
         exit(0)
     # Selectively download activities: by default include commutes
     if orders["commute"] == False :
