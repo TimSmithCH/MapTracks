@@ -31,7 +31,7 @@ from argparse import ArgumentParser
 # Initialise command line options and their defaults
 def parseCommandLine():
     global orders
-    # Parse command line arguments if not run in a Github ACTION
+    # If run in Github ACTION then set defaults without parsing!
     if os.getenv("GITHUB_ACTIONS") == "true":
         orders = {
                 "tokenFile": "token.json",
@@ -39,10 +39,11 @@ def parseCommandLine():
                 "idFile": "www/features/LastStravaIDRead.json",
                 "pagesize": 40,
                 "numpages": 3,
-                "commute": False,
+                "commute": True,
                 "light": False,
                 "zero": False
         }
+    # Parse command line arguments if not run in a Github ACTION
     else:
         # Instantiate the parser
         parser = ArgumentParser(description="Download latest activities via Strava API.")
