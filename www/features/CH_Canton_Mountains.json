@@ -184,7 +184,7 @@
       "type": "Feature", 
       "properties": {
         "height": 2901, 
-        "prominence": 0, 
+        "prominence": 46, 
         "name": "Rotst\u00f6ckli", 
         "canton": "Nidwalden", 
         "icon": "mountain",
@@ -317,7 +317,7 @@
       "type": "Feature", 
       "properties": {
         "height": 1552, 
-        "prominence": 0, 
+        "prominence": 12, 
         "name": "Chasseral Ouest", 
         "canton": "Neuchâtel", 
         "icon": "mountain",
@@ -374,7 +374,7 @@
       "type": "Feature", 
       "properties": {
         "height": 1292, 
-        "prominence": 0, 
+        "prominence": 112, 
         "name": "Schnebelhorn", 
         "canton": "Zürich", 
         "icon": "mountain",
@@ -393,7 +393,7 @@
       "type": "Feature", 
       "properties": {
         "height": 1169, 
-        "prominence": 0, 
+        "prominence": 165, 
         "name": "Hinteri Egg", 
         "canton": "Basel-Landschaft", 
         "icon": "mountain",
@@ -412,7 +412,7 @@
       "type": "Feature", 
       "properties": {
         "height": 991, 
-        "prominence": 0, 
+        "prominence": 106, 
         "name": "Hohgrat (Groot)", 
         "canton": "Thurgau", 
         "icon": "mountain",
@@ -431,7 +431,7 @@
       "type": "Feature", 
       "properties": {
         "height": 991, 
-        "prominence": 0, 
+        "prominence": 26, 
         "name": "Hagen (Randen)", 
         "canton": "Schaffhausen", 
         "icon": "mountain",
@@ -450,7 +450,7 @@
       "type": "Feature", 
       "properties": {
         "height": 908, 
-        "prominence": 0, 
+        "prominence": 5, 
         "name": "Geissfluegrat", 
         "canton": "Aargau", 
         "icon": "mountain",
@@ -492,7 +492,7 @@
         "name": "Les Arales", 
         "canton": "Geneva", 
         "icon": "mountain",
-        "climbed": "no"
+        "climbed": "yes"
       }
     }
   ]
