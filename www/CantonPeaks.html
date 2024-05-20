@@ -122,7 +122,7 @@
   var filter_prom, filter_flag;
   async function getTable() {
     try {
-      let response = await fetch('features/CH_Canton_Mountains.json');
+      let response = await fetch('features/CH_Canton_Mountains.json', {cache: "reload"});
       return await response.json();
     } catch (error) {
       console.log(error);
