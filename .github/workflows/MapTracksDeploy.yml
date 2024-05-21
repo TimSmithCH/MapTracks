@@ -83,7 +83,7 @@ jobs:
             echo "do_pages=1" >> $GITHUB_OUTPUT
           else
             echo ">>> No new GeoJSON files to commit"
-            if: $fresh_www == 'true'
+            if $fresh_www == 'true'
               echo ">>> But there were new WWW files committed"
               echo "do_pages=1" >> $GITHUB_OUTPUT
             else
