@@ -55,7 +55,10 @@
         "name": "Piz Bernina", 
         "canton": "Graubünden", 
         "icon": "mountain",
-        "climbed": "nearly"
+        "climbed": "no",
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/piz-bernina-160/alpinisme/ueber-denn-suedostgrat-und-suedgrat-la-spedla-spallagrat-2708/",
+        "means": "ski",
+        "grade": "AD+"
       }
     },
     {
@@ -74,7 +77,10 @@
         "name": "Dammastock", 
         "canton": "Uri", 
         "icon": "mountain",
-        "climbed": "no"
+        "climbed": "no",
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/dammastock-481/randonnee-a-ski/von-belvedere-furkapass-5115/",
+        "means": "ski",
+        "grade": "PD-"
       }
     },
     {
@@ -93,7 +99,10 @@
         "name": "T\u00f6di (Piz Russein)", 
         "canton": "Glarus", 
         "icon": "mountain",
-        "climbed": "no"
+        "climbed": "no",
+        "route": "https://www.sac-cas.ch/fr/cabanes-et-courses/portail-des-courses-du-cas/toedi-piz-russein-1605/alpinisme/von-den-fridolinshuetten-ueber-den-bifertenfirn-2309/",
+        "means": "hike",
+        "grade": "PD"
       }
     },
     {
