@@ -83,11 +83,12 @@ jobs:
             echo "do_pages=1" >> $GITHUB_OUTPUT
           else
             echo ">>> No new GeoJSON files to commit"
-            if $fresh_www == 'true'
+            if $fresh_www == 'true'; then
               echo ">>> But there were new WWW files committed"
               echo "do_pages=1" >> $GITHUB_OUTPUT
             else
               echo "do_pages=0" >> $GITHUB_OUTPUT
+            fi
           fi
         #--- Next Step
         # Trigger the deployment to GitHub Pages MapTracks website
