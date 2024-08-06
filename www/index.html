@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css' rel='stylesheet'>
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -136,7 +136,7 @@
           layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "geojson", colour: "#0048FF", init_state: "active", text: "Skiclimb" },
           layer_run:     { source_layer: "run_tracks",     source: "geojson", colour: "#B10DC9", init_state: "active", text: "Run" },
           layer_ski:     { source_layer: "ski_tracks",     source: "geojson", colour: "#0099FF", init_state: "active", text: "Ski" },
-          layer_commute: { source_layer: "commute_tracks", source: "tileset", colour: "#006400", init_state: "hidden", text: "Cmute" },
+          layer_commute: { source_layer: "commute_tracks", source: "geojson", colour: "#006400", init_state: "hidden", text: "Cmute" },
           layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FFCC00", init_state: "hidden", text: "Mech" },
           layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
         };
@@ -156,7 +156,7 @@
         var map = new mapboxgl.Map({
           //attributionControl: true,
           container: 'map', // container id
-          style: 'mapbox://styles/mapbox/outdoors-v11', //stylesheet location
+          style: 'mapbox://styles/mapbox/outdoors-v12', //stylesheet location
           center: [lo, la], // starting position
           zoom: zoomlvl, // starting zoom
           projection: 'mercator' // starting projection
@@ -213,15 +213,19 @@
 
           //----------------------------------------------
           // Add Swiss cantons
+          //map.addSource("cantons", {
+          //  type: 'vector',
+          //  url: 'mapbox://timsmithch.swiss_cantons'
+          //});
           map.addSource("cantons", {
-            type: 'vector',
-            url: 'mapbox://timsmithch.swiss_cantons'
+            "type": "geojson",
+            "data": "features/CH_Cantons.geojson"
           });
           map.addLayer({
             "id": "layer_cantons",
             "type": "fill",
             "source": "cantons",
-            'source-layer': 'swiss_cantons',
+            //'source-layer': 'swiss_cantons',
             "layout": {
               "visibility": "none"
             },
@@ -352,12 +356,16 @@
 
           //----------------------------------------------
           // EITHER Create a layer of routes of each type from layers in MapBox tilesets
-          map.addSource('tracks-all', {
-            type: 'vector',
-            url: 'mapbox://timsmithch.all_tracks'
-          });
+          var tilesetLoaded = false;
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "tileset") {
+              if (tilesetLoaded == false) {
+                map.addSource('tracks-all', {
+                  type: 'vector',
+                  url: 'mapbox://timsmithch.all_tracks'
+                });
+                tilesetLoaded = true;
+              }
               //console.log("Mapbox Tile source for ", layer_props[layer]["source_layer"])
               if (layer_props[layer]["init_state"] === "active") {
                 var visi = "visible";
@@ -627,7 +635,7 @@
             map.setBearing(-45)
             dimension = 3
           } else {
-            map.setStyle('mapbox://styles/mapbox/outdoors-v11');
+            map.setStyle('mapbox://styles/mapbox/outdoors-v12');
             map.setPitch(0)
             map.setBearing(0)
             dimension = 2
