@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -108,25 +108,27 @@
       </div>
 
       <script>
+        // Dont tell Luke I still debug like this!
+        var OLD_SCHOOL = false;
         // Parse arguements pased on URL
         const urlSearchParams = new URLSearchParams(window.location.search);
         var zoomlvl = urlSearchParams.get('zoom');
         if (!zoomlvl) {
           var zoomlvl = 7.6;
         } else {
-          console.log("Set Zoom: ",zoomlvl);
+          OLD_SCHOOL && console.log("Set Zoom: ",zoomlvl);
         }
         var la = urlSearchParams.get('lat');
         if (!la) {
           la = 46.66;
         } else {
-          console.log("Set centre Latitude: ",la);
+          OLD_SCHOOL && console.log("Set centre Latitude: ",la);
         }
         var lo = urlSearchParams.get('lon');
         if (!lo) {
           lo = 8.23;
         } else {
-          console.log("Set centre Longitude: ",lo);
+          OLD_SCHOOL && console.log("Set centre Longitude: ",lo);
         }
 
         // Prepare layer properties object
@@ -147,7 +149,7 @@
               layer_props[layer]["init_state"] = "";
             }
           }
-          console.log("Show single layer: ",show_only);
+          OLD_SCHOOL && console.log("Show single layer: ",show_only);
         }
 
 
@@ -158,10 +160,11 @@
           container: 'map', // container id
           style: 'mapbox://styles/mapbox/outdoors-v12', //stylesheet location
           center: [lo, la], // starting position
-          zoom: zoomlvl, // starting zoom
-          projection: 'mercator' // starting projection
+          zoom: zoomlvl // starting zoom
+          //projection: 'mercator' // starting projection
           //projection: 'naturalEarth' // starting projection
         });
+        OLD_SCHOOL && console.log("MapBox: new map");
 
         // Add zoom, rotation and full_screen controls to the map
         map.addControl(new mapboxgl.NavigationControl());
@@ -177,6 +180,7 @@
             showUserHeading: true
           })
         );
+        OLD_SCHOOL && console.log("MapBox: add controls");
 
         // Add overlay data layers on demand (after load or style change)
         var dimension = 2;
@@ -210,6 +214,7 @@
               20, 24,
             ]);
           }
+          OLD_SCHOOL && console.log("MapBox: add terrain/sky");
 
           //----------------------------------------------
           // Add Swiss cantons
@@ -289,6 +294,7 @@
             },
             "filter": ["==", ["geometry-type"], "Point"]
           });
+          OLD_SCHOOL && console.log("MapBox: add cantons");
 
 
           //----------------------------------------------
@@ -322,6 +328,7 @@
             },
             "filter": ["==", ["geometry-type"], "Point"]
           });
+          OLD_SCHOOL && console.log("MapBox: add swiss mountains");
 
           //----------------------------------------------
           // Add Alpine 4000er mountains:
@@ -353,6 +360,7 @@
             },
             "filter": ["==", ["geometry-type"], "Point"]
           });
+          OLD_SCHOOL && console.log("MapBox: add EU mountains");
 
           //----------------------------------------------
           // EITHER Create a layer of routes of each type from layers in MapBox tilesets
@@ -366,7 +374,7 @@
                 });
                 tilesetLoaded = true;
               }
-              //console.log("Mapbox Tile source for ", layer_props[layer]["source_layer"])
+              //OLD_SCHOOL && console.log("Mapbox Tile source for ", layer_props[layer]["source_layer"])
               if (layer_props[layer]["init_state"] === "active") {
                 var visi = "visible";
               } else {
@@ -400,13 +408,14 @@
                   ]
                 }
               });
+              OLD_SCHOOL && console.log("MapBox: add track layer");
             }
           }
           //----------------------------------------------
           // OR Create a layer of routes of each type from geojson files
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "geojson") {
-              //console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
+              //OLD_SCHOOL && console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
               map.addSource(layer, {
                 type: 'geojson',
                 "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
@@ -439,6 +448,7 @@
                   ]
                 }
               });
+              OLD_SCHOOL && console.log("MapBox: add track layer");
               map.addLayer({
                 'id': layer + "-points",
                 'type': 'symbol',
@@ -461,8 +471,28 @@
           }
         }
 
+        //----------------------------------------------
+        // Styles are meant to have default icons in their sprites, but on version changes
+        // they are often forgotten! So need a menthod to load fallback icons if they are missing
+        map.on('styleimagemissing', function (e) {
+          OLD_SCHOOL && console.log("ON StyleImageMissing", e.id);
+          // Triggered when `icon-image` isnt found in style layer
+          const icons = ["airport", "castle", "mountain", "lodging"];
+          missing_icon = e.id.split('-1')[0];
+          if (icons.indexOf(missing_icon > -1)) {
+            var image_url = "images/" + missing_icon + ".png";
+            map.loadImage(
+              image_url,
+              function (error, image) {
+                if (error) throw error;
+                if (!map.hasImage(e.id)) map.addImage(e.id, image);
+              }
+            );
+          }
+        });
+
         map.on('styledata', function () {
-          //console.log("ON StyleData",basechange);
+          OLD_SCHOOL && console.log("ON StyleData",basechange);
           // Triggered when `setStyle` is called, to enable 2D/3D switching
           if (basechange == 1) {
             addDataLayers();
@@ -470,7 +500,7 @@
         });
 
         map.on('load', function () {
-          //console.log("ON Load");
+          OLD_SCHOOL && console.log("ON Load");
           addDataLayers();
           // Save a list of all local layers created (as an automatically global variable, ugg)
           const layers = map.getStyle().layers.filter(l => l.id.includes('layer_'));
@@ -479,22 +509,25 @@
 
         //----------------------------------------------
         // Create a popup, but don't add it to the map yet
+        OLD_SCHOOL && console.log("Create Popup");
         var popup = new mapboxgl.Popup({
           closeButton: false,
           closeOnClick: false
         });
 
         //-- Loop creating popup on hover for each layer
+        OLD_SCHOOL && console.log("Create handler for click-centre");
         function click_handler(e) {
           // Left-click: track bounds are in bbox attribute
           const sbbox = e.features[0].properties.bbox;
           if (sbbox !== undefined) {
             const tbbox = sbbox.split("/");
-            console.log("Re-centre at ",tbbox);
+            OLD_SCHOOL && console.log("Re-centre at ",tbbox);
             // Bounds convention: LonLat SW corner, LonLat NW corner
             map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
           }
         }
+        OLD_SCHOOL && console.log("Create handlers for mouse-enter track layers");
         for (let layer of Object.keys(layer_props)) {
           map.on('mouseenter', layer, function(e) {
             // Change the cursor style as a UI indicator.
@@ -517,7 +550,7 @@
             const sbbox = e.features[0].properties.src
             if (sbbox !== undefined) {
               const tbbox = sbbox.split("/");
-              console.log("Re-centre at ",tbbox);
+              OLD_SCHOOL && console.log("Re-centre at ",tbbox);
               // Bounds convention: LonLat SW corner, LonLat NW corner
               map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
             }
@@ -525,6 +558,7 @@
         }
 
         //-- Create popup on hover for CH mountains
+        OLD_SCHOOL && console.log("Create handlers for mouse-enter mountains");
         map.on('mouseenter', "layer_mountainsH", function(e) {
           // Change the cursor style as a UI indicator
           map.getCanvas().style.cursor = 'pointer';
@@ -571,6 +605,7 @@
 
         //----------------------------------------------
         // Add click actions for all layer checkboxes
+        OLD_SCHOOL && console.log("Create handlers for checkbox selectors");
         const checks = document.querySelectorAll('input[type="checkbox"]');
         for (i = 0; i < checks.length; ++i) {
           var checkb = checks[i];
@@ -605,6 +640,7 @@
 
         //----------------------------------------------
         // Add click action for change of slider values
+        OLD_SCHOOL && console.log("Create handlers for sliders");
         sliderH.addEventListener('input', function(e) {
           var height_value = parseInt(e.target.value);
           var prominence_value = Number(sliderP.value);
@@ -626,6 +662,7 @@
 
         //----------------------------------------------
         // Add click action for 3D selection
+        OLD_SCHOOL && console.log("Create handler for 3D selector");
         threeD.addEventListener('change', function(e) {
           e.preventDefault();
           e.stopPropagation();
@@ -645,6 +682,7 @@
 
         //----------------------------------------------
         // Create a zoom level indcator
+        OLD_SCHOOL && console.log("Create handler for zoom level");
         zoomL.value = zoomlvl;
         map.on('zoom', function() {
           zoomL.value = parseFloat(map.getZoom()).toFixed(2);
