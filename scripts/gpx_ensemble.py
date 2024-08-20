@@ -7,7 +7,7 @@
 #    Add an enclosing bounding box to a set of track files
 #
 # EXAMPLES
-#    python gpx_ensemble.py -v tracks/3_gpx/vehicle/*Sardinia*.gpx
+#    python gpx_ensemble.py -v tracks/tim/3_gpx/vehicle/*Sardinia*.gpx
 #
 # IMPLEMENTATION
 #    Author       Tim Smith

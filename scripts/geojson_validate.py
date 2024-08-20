@@ -7,7 +7,7 @@
 #    track coordinate arrays. Issue summary information
 #
 # EXAMPLES
-#    python geojson_validate.py -f tracks/1_display/vehicle_tracks.geojson
+#    python geojson_validate.py -f tracks/tim/1_display/vehicle_tracks.geojson
 #
 # IMPLEMENTATION
 #    Author       Tim Smith

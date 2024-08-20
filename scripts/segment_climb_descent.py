@@ -8,9 +8,9 @@
 #    between these points is >100m then split the track at the stationary point
 #
 # EXAMPLES
-#    python segment_climb_descent.py tracks/3_gpx/bike/9634087156.Baudichonne.gpx
-#    ls tracks/3_gpx/skiclimb/8* | xargs -I {} ./segment_climb_descent.py {}
-#    git status --porcelain tracks/3_gpx | awk '{print $2}' | xargs -I {} ./segment_climb_descent.py {}
+#    python segment_climb_descent.py tracks/tim/3_gpx/bike/9634087156.Baudichonne.gpx
+#    ls tracks/tim/3_gpx/skiclimb/8* | xargs -I {} ./segment_climb_descent.py {}
+#    git status --porcelain tracks/tim/3_gpx | awk '{print $2}' | xargs -I {} ./segment_climb_descent.py {}
 #
 # IMPLEMENTATION
 #    Author       Tim Smith

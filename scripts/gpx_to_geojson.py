@@ -14,9 +14,9 @@
 #     - simplify the track using Douglas-Peucker algorithm to reduce # points
 #
 # EXAMPLES
-#    python gpx_to_geojson.py -s -u tracks/3_gpx/bike/9634087156.Baudichonne.gpx
-#    ls tracks/3_gpx/skiclimb/8* | xargs -I {} ./gpx_to_geojson.py {}
-#    git status --porcelain tracks/3_gpx | awk '{print $2}' | xargs -I {} ./gpx_to_geojson.py {}
+#    python gpx_to_geojson.py -s -u tracks/tim/3_gpx/bike/9634087156.Baudichonne.gpx
+#    ls tracks/tim/3_gpx/skiclimb/8* | xargs -I {} ./gpx_to_geojson.py {}
+#    git status --porcelain tracks/tim/3_gpx | awk '{print $2}' | xargs -I {} ./gpx_to_geojson.py {}
 #
 # IMPLEMENTATION
 #    Author       Tim Smith

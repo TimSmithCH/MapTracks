@@ -8,8 +8,8 @@
 #    download Strava's actvity streams and reconstruct a GPX file from the data
 #
 # EXAMPLES
-#    python pull_strava_data.py -o "tracks/3_gpx/" -p 20
-#    python pull_strava_data.py -c True -o "tracks/3_gpx/" -p 100 -b 20220201
+#    python pull_strava_data.py -o "tracks/tim/3_gpx/" -p 20
+#    python pull_strava_data.py -c False -o "tracks/tim/3_gpx/" -p 100 -b 20220201
 #
 # IMPLEMENTATION
 #    Author       Tim Smith
@@ -25,6 +25,7 @@ import os
 import re
 import gpxpy
 import string
+from pathlib import Path
 from argparse import ArgumentParser
 
 #-------------------------------------------------------------------------------
@@ -34,9 +35,10 @@ def parseCommandLine():
     # If run in Github ACTION then set defaults without parsing!
     if os.getenv("GITHUB_ACTIONS") == "true":
         orders = {
-                "tokenFile": "token.json",
-                "trackDir": "tracks/3_gpx/",
-                "idFile": "www/features/LastStravaIDRead.json",
+                "athlete": "tim",
+                "tokenFile": "tracks/tim/token.json",
+                "trackDir": "tracks/tim/3_gpx/",
+                "idFile": "tracks/tim/LastStravaIDRead.json",
                 "pagesize": 40,
                 "numpages": 3,
                 "commute": True,
@@ -48,12 +50,11 @@ def parseCommandLine():
         # Instantiate the parser
         parser = ArgumentParser(description="Download latest activities via Strava API.")
         # Set up the argument defaults
-        defaults = dict(outdir="./",iddir="./",tokendir="./",pagesize=10,numpages=3,commute=True,light=False,zero=False)
+        defaults = dict(athlete="tim",outdir="./",pagesize=10,numpages=3,commute=True,light=False,zero=False)
         parser.set_defaults(**defaults)
         # Parse the command line
-        parser.add_argument('-t', '--tokendir', help='Directory to store generated access token file')
+        parser.add_argument('-a', '--athlete',  help='Athlete name')
         parser.add_argument('-o', '--outdir',   help='Directory to store downloaded Strava activity files')
-        parser.add_argument('-i', '--iddir',    help='Directory to store Strava ID file')
         parser.add_argument('-b', '--before',   help='Upper date bound to search back from')
         parser.add_argument('-s', '--specdate', help='Specific date to search for')
         parser.add_argument('-p', '--pagesize', help='Number of activities per page for Strava API download')
@@ -63,10 +64,11 @@ def parseCommandLine():
         parser.add_argument('-z', '--zero',     action='store_true', help='Zero downloads: only store activity list')
         args = parser.parse_args()
         orders = {
-                "tokenFile": args.tokendir+"token.json",
-                "trackDir": args.outdir,
-                "idFile": args.iddir+"LastStravaIDRead.json",
-                "listfile": "ActivitiesList.json"
+                "athlete": args.athlete,
+                "tokenFile": args.outdir+args.athlete+"/"+"token.json",
+                "trackDir": args.outdir+args.athlete+"/",
+                "idFile": args.outdir+args.athlete+"/"+"LastStravaIDRead.json",
+                "listfile": args.outdir+args.athlete+"/"+"ActivitiesList.json"
         }
         if args.before:
             orders["before"] = args.before
@@ -74,6 +76,8 @@ def parseCommandLine():
             orders["pagesize"] = args.pagesize
         if args.numpages:
             orders["numpages"] = args.numpages
+        # Strava overall rate limits: 200 requests every 15 minutes, 2,000 daily
+        # Strava read rate limits: 100 requests every 15 minutes, 1,000 daily
         if int(args.numpages) * int(args.pagesize) > 200 :
             print("WARNING: Dont spam Strava API: {} pages x {} pagesize too large setting to 3x20".format(args.numpages,args.pagesize))
             #orders["pagesize"] = 20
@@ -92,6 +96,12 @@ def init():
     global orders
     global tokens
     global stravaData
+    # New pythonic way to check and create directory tree
+    Path(orders.get("trackDir")).mkdir(parents=True, exist_ok=True)
+    for key,value in track_dir.items():
+        tdir = orders.get("trackDir")+value
+        Path(tdir).mkdir(parents=False, exist_ok=True)
+    # Old way to check file exists
     if os.path.isfile(orders.get("tokenFile")):
         tokens = json.load(open(orders.get("tokenFile")))
     else:
@@ -103,7 +113,12 @@ def init():
             "expires_in": 0,
             "refresh_token": "123456789"
         }
-    stravaData = json.load(open(orders.get('idFile')))
+    if os.path.isfile(orders.get("idFile")):
+        stravaData = json.load(open(orders.get('idFile')))
+    else:
+        stravaData = {
+            "last_read": 10101
+        }
 
 def refreshTokens():
     body = {
@@ -280,11 +295,7 @@ def construct_filenames(i):
         t = track_dir[i["type"]]
     else:
         t = "wip"
-    # Default of localdir unless ordered otherwise on the command line
-    if str(orders.get("trackDir")) == "./":
-        outfile = activity_name+".gpx"
-    else:
-        outfile = str(orders.get("trackDir"))+t+"/"+activity_name+".gpx"
+    outfile = str(orders.get("trackDir"))+t+"/"+activity_name+".gpx"
     return activity_name,outfile
 
 #-------------------------------------------------------------------------------
@@ -297,6 +308,7 @@ if __name__ == "__main__":
                      AlpineSki="ski", # AlpineSki/AlpineSki in ski
                      BackcountrySki="skiclimb", # BackcountrySki/BackcountrySki in skiclimb
                      Run="run",       # Run/Run in run
+                     Commute="commute", # Ride/Commute in commute
                      VirtualRun="run",# VirtualRun/VirtualRun in run
                      Swim="swim",     # Swim/Swim in swim
                      Velomobile="vehicle", # Strava has no vehicles so labelled velomobile

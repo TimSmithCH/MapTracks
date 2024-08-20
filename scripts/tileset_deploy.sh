@@ -46,7 +46,7 @@ printf "\n+++ Upload New Sources +++\n"
 MODIFIED="false"
 for sport in "${SPORTS[@]}"
 do
-  fileSUMM=tracks/1_display/${sport}_tracks.geojson
+  fileSUMM=tracks/tim/1_display/${sport}_tracks.geojson
   timeNOW="$(git log --pretty=format:%cd -n 1 --date=format:%s)"
   echo "Processing $fileSUMM"
   if [[ "$FORCE" == "true" ]] ; then
@@ -59,11 +59,11 @@ do
     printf "  Generating $sport tileset\n"
     MODIFIED="true"
     #tilesets delete-source --token $TOKEN --force timsmithch ${sport}_tracks
-    #tilesets add-source --token $TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson
+    #tilesets add-source --token $TOKEN timsmithch ${sport}_tracks tracks/tim/1_display/${sport}_tracks.geojson
     if [[ "$DRYRUN" == "false" ]] ; then
-      tilesets upload-source --token $TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson --replace
+      tilesets upload-source --token $TOKEN timsmithch ${sport}_tracks tracks/tim/1_display/${sport}_tracks.geojson --replace
     else
-      echo "INTENT: tilesets upload-source --token TOKEN timsmithch ${sport}_tracks tracks/1_display/${sport}_tracks.geojson --replace"
+      echo "INTENT: tilesets upload-source --token TOKEN timsmithch ${sport}_tracks tracks/tim/1_display/${sport}_tracks.geojson --replace"
     fi
   else
     printf "  .\n"

@@ -28,9 +28,10 @@ def parseCommandLine():
     # Instantiate the parser
     parser = argparse.ArgumentParser(description="Convert GPX track into standardised GeoJSON tracks")
     # Set up the argument defaults
-    defaults = dict(trkdirs="all",dryrun=False,forward=False,reverse=False,verbose=False)
+    defaults = dict(trkdirs="all",athlete="tim",dryrun=False,forward=False,reverse=False,verbose=False)
     parser.set_defaults(**defaults)
     # Parse the command line
+    parser.add_argument('-a', '--athlete',  help='Athlete name')
     parser.add_argument('-d', '--dryrun',  action='store_true', help='Dont create or delete files')
     parser.add_argument('-f', '--forward', action='store_true', help='Check all GPXs have a corresponding GEOJSON')
     parser.add_argument('-r', '--reverse', action='store_true', help='Check all GEOJSONs have a corresponding GPX')
@@ -54,7 +55,7 @@ if __name__ == '__main__':
         print("Forward: Check all GPXs have a corresponding GEOJSON")
         for trkdir in trkdirs:
             print("INFO: Processing {} files".format(trkdir))
-            fpath = "tracks/3_gpx/" + trkdir
+            fpath = "tracks/"+args.athlete+"/3_gpx/" + trkdir
             files = pathlib.Path(fpath).glob("*.gpx")
             for gpxfile in files:
                 generate_geojson = False
@@ -87,7 +88,7 @@ if __name__ == '__main__':
         print("Reverse: Check all GEOJSONs have a corresponding GPX")
         for trkdir in trkdirs:
             print("INFO: Processing {} files".format(trkdir))
-            fpath = "tracks/2_geojson/" + trkdir
+            fpath = "tracks/"+args.athlete+"/2_geojson/" + trkdir
             files = pathlib.Path(fpath).glob("*.geojson")
             for geofile in files:
                 if VERBOSE : print(" INFO: processing {}".format(geofile))
