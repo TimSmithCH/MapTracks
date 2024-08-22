@@ -25,9 +25,9 @@ jobs:
       - name: Fetch Data through Strava API
         run: ./scripts/pull_strava_data.py
         env:
-          CONF_CLIENT_ID: ${{ secrets.STRAVA_client_id }}
-          CONF_CLIENT_SECRET: ${{ secrets.STRAVA_client_secret }}
-          CONF_REFRESH_TOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+          STRAVA_TIM_ID: ${{ secrets.STRAVA_client_id }}
+          STRAVA_TIM_SECRET: ${{ secrets.STRAVA_client_secret }}
+          STRAVA_TIM_REFTOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
         #--- Next Step
       - name: Commit freshly created files
         run: |

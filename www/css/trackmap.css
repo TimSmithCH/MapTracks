@@ -21,11 +21,15 @@ body {
 
 /* Defaults all set for mobile screen format */
 .footer {
+  display: flex;
   padding: 6px;
   font-size: 12px;
   font-weight: bold;
   background: #6fa9d0;
   color: #fff;
+}
+.footer .footitem {
+  flex: 0 0 33%;
 }
 .main {
   padding: 6px;

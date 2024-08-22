@@ -8,7 +8,7 @@
 #    download Strava's actvity streams and reconstruct a GPX file from the data
 #
 # EXAMPLES
-#    python pull_strava_data.py -o "tracks/tim/3_gpx/" -p 20
+#    python pull_strava_data.py -o "tracks/" -a tim -p 20 -n 1
 #    python pull_strava_data.py -c False -o "tracks/tim/3_gpx/" -p 100 -b 20220201
 #
 # IMPLEMENTATION
@@ -63,12 +63,14 @@ def parseCommandLine():
         parser.add_argument('-l', '--light',    action='store_true', help='Light mode: Dont download data if file already exists')
         parser.add_argument('-z', '--zero',     action='store_true', help='Zero downloads: only store activity list')
         args = parser.parse_args()
+        if args.athlete:
+            athlete = args.athlete.lower()
         orders = {
-                "athlete": args.athlete,
-                "tokenFile": args.outdir+args.athlete+"/"+"token.json",
-                "trackDir": args.outdir+args.athlete+"/",
-                "idFile": args.outdir+args.athlete+"/"+"LastStravaIDRead.json",
-                "listfile": args.outdir+args.athlete+"/"+"ActivitiesList.json"
+                "athlete": athlete,
+                "tokenFile": args.outdir+athlete+"/"+"token.json",
+                "trackDir": args.outdir+athlete+"/3_gpx/",
+                "idFile": args.outdir+athlete+"/"+"LastStravaIDRead.json",
+                "listfile": args.outdir+athlete+"/"+"ActivitiesList.json"
         }
         if args.before:
             orders["before"] = args.before
@@ -120,12 +122,15 @@ def init():
             "last_read": 10101
         }
 
-def refreshTokens():
+def refreshTokens(person):
+    athlete = person.upper()
+    if 'STRAVA_'+athlete+'_ID' not in os.environ:
+        return {}
     body = {
-        "client_id": os.environ.get('CONF_CLIENT_ID'),
-        "client_secret": os.environ.get('CONF_CLIENT_SECRET'),
+        "client_id": os.environ.get('STRAVA_'+athlete+'_ID'),
+        "client_secret": os.environ.get('STRAVA_'+athlete+'_SECRET'),
         "grant_type": "refresh_token",
-        "refresh_token": os.environ.get('CONF_REFRESH_TOKEN')
+        "refresh_token": os.environ.get('STRAVA_'+athlete+'_REFTOKEN')
     }
     headers = {
         'Content-Type': 'application/json',
@@ -142,7 +147,7 @@ def getAccessToken(quietly,page):
     if tokens.get("expires_at") < (time.time()):
         # REFRESH TOKENS
         print(" Token Expired. Requesting new Token.")
-        tokenResponse = refreshTokens()
+        tokenResponse = refreshTokens(orders.get("athlete"))
         if("access_token" not in tokenResponse):
             print("ERROR: Could not refresh tokens")
             return None
@@ -161,7 +166,7 @@ def fetchActivities(page):
     accessToken = getAccessToken(False,page)
     if(not accessToken):
         print("ERROR: No access token - cant request activities")
-        return {}
+        return {}, 999
     headers = {
         'accept': 'application/json',
         'authorization': "Bearer " + accessToken
