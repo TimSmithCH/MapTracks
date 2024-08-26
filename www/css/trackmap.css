@@ -35,6 +35,11 @@ body {
   padding: 6px;
   flex: 1;
 }
+.main .band {
+  font-size: 2.0736em;
+  background-color: #BFD4EF;
+  color: #fff;
+}
 #map {
   height: 100%;
   width: 100%;
