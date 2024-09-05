@@ -27,9 +27,16 @@ body {
   font-weight: bold;
   background: #6fa9d0;
   color: #fff;
+  text-align: left;
 }
 .footer .footitem {
   flex: 0 0 33%;
+}
+.footer a:link {
+  color: white;
+}
+.footer a:visited {
+  color: white;
 }
 .main {
   padding: 6px;

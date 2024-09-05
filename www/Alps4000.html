@@ -7,114 +7,9 @@
   <meta name="description" content="Alpine 4000ers">
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Site styles and icons -->
+  <link rel="stylesheet" href="css/peaklist.css">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
-  <style>
-  /* Style the buttons */
-  .myBtnContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-  }
-  .btn {
-    margin: 6px;
-    border: 2px solid green;
-    border-radius: 5px;
-    padding: 12px 16px;
-    cursor: pointer;
-    background-color: white;
-    border-color: #4CAF50;
-    color: #4CAF50;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    min-width: 72px;
-    text-align: center;
-  }
-  /* Add a dark background color to the active button */
-  .btn.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  /* Different color for the todo button and its active state */
-  .btn.todo {
-    border-color: #ff6600;
-    color: #ff6600;
-  }
-  .btn.todo.active {
-    background-color: #ff6600;
-    color: white;
-  }
-  .btn.climbed {
-    background-color: #dcefdc;
-  }
-  /* Table styling */
-  table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: center;
-    background-color: #2196F3;
-    color: white;
-  }
-  th.clickable:hover {
-    background-color: white;
-    color: #2196F3;
-  }
-  td, th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-  }
-  tr.climbed {
-    background-color: #dcefdc;
-  }
-  tr.climbed.nearly {
-    background-color: #ffcc99;
-  }
-  col.todocol {
-    background-color: #ffffcc;
-  }
-  /* france */
-  .fr {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23ed2939" d="m0,0h900v600h-900z"/> <path fill="%23fff" d="m0,0h600v600h-600z"/> <path fill="%23002395" d="m0,0h300v600h-300z"/> </svg>');
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .frit {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="3500" height="1000" viewBox="0 0 7 2"> <path fill="%23ed2939" d="m0,0h1v2h-1z"/> <path fill="%23fff" d="m1,0h1v2h-1z"/> <path fill="%23002395" d="m2,0h1v2h-1z"/> <path fill="%23009246" d="m4,0h1v2h-1z"/> <path fill="%23fff" d="m5,0h1v2h-1z"/> <path fill="%23ce2b37" d="m6,0h1v2h-1z"/> </svg>');
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  /* italy */
-  .it {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1000" viewBox="0 0 3 2"> <path fill="%23009246" d="m0,0h1v2h-1z"/> <path fill="%23fff" d="m1,0h1v2h-1z"/> <path fill="%23ce2b37" d="m2,0h1v2h-1z"/> </svg>');
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  /* switzerland */
-  .ch {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320"> <path fill="%23d52b1e" d="m0,0h320v320h-320z"/> <g fill="%23fff"> <path d="m60,130h200v60h-200z"/> <path d="m130,60h60v200h-60z"/> </g> </svg>');
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .chit {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320"> <path fill="%23d52b1e" d="m0,0h320v320h-320z"/> <g fill="%23fff"> <path d="m60,130h200v60h-200z"/> <path d="m130,60h60v200h-60z"/> </g> <path fill="%23009246" d="m480,0h160v320h-160z"/> <path fill="%23fff" d="m640,0h160v320h-160z"/> <path fill="%23ce2b37" d="m800,0h160v320h-160z"/></svg>');
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  </style>
 </head>
 
 <body onload="loadTable()">
@@ -361,6 +256,11 @@
   <div class="myBtnContainer">
     <output class="btn" id="out1">0</output>
     <output class="btn climbed" id="out2">0</output>
+  </div>
+  <div class="myBtnContainer">
+    <button class="btn page active" onclick="document.location='Alps4000.html'" id="all">Alps Peaks</button>
+    <button class="btn page " onclick="document.location='CantonPeaks.html'" id="all">Canton Peaks</button>
+    <button class="btn page " onclick="document.location='WorldMountains.html'" id="all">World Peaks</button>
   </div>
 </body>
 </html>
