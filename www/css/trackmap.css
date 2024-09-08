@@ -38,6 +38,10 @@ body {
 .footer a:visited {
   color: white;
 }
+.peak {
+  font-size: 16px;
+  font-weight: lighter;
+}
 .main {
   padding: 6px;
   flex: 1;
