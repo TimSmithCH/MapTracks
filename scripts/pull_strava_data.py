@@ -9,7 +9,8 @@
 #
 # EXAMPLES
 #    python pull_strava_data.py -o "tracks/" -a tim -p 20 -n 1
-#    python pull_strava_data.py -c False -o "tracks/tim/3_gpx/" -p 100 -b 20220201
+#    python pull_strava_data.py -c False -o "tracks/" -p 100 -b 20220201
+#    python scripts/pull_strava_data.py -l -o "tracks/" -p 10 -b 20230402
 #
 # IMPLEMENTATION
 #    Author       Tim Smith
