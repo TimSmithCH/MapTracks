@@ -1,0 +1,159 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "6.867222",
+          "45.833333",
+          "4809"
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "height": 4809,
+        "prominence": 4697,
+        "name": "Mont Blanc",
+        "icon": "mountain",
+        "country": "fr",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "7.86694444444444", 
+          "45.9369444444444", 
+          "4634"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 4634, 
+        "prominence": 2165, 
+        "name": "Monte Rosa (Dufourspitze)", 
+        "icon": "mountain",
+        "country": "ch",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          "7.269722",
+          "45.514444",
+          "4061"
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "height": 4061,
+        "prominence": 1879,
+        "name": "Gran Paradiso",
+        "icon": "mountain",
+        "country": "it",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "12.695250", 
+          "47.0748667", 
+          "3798"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 3798, 
+        "prominence": 2423, 
+        "name": "Großglockner", 
+        "icon": "mountain",
+        "country": "at",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "10.98528", 
+          "47.42111", 
+          "2962"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2962, 
+        "prominence": 1746, 
+        "name": "Zugspitze", 
+        "icon": "mountain",
+        "country": "de",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "9.58194", 
+          "47.05278", 
+          "2599"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2599, 
+        "prominence": 353, 
+        "name": "Vordere Grauspitze", 
+        "icon": "mountain",
+        "country": "li",
+        "climbed": "no",
+        "route": "",
+        "means": "",
+        "grade": ""
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point", 
+        "coordinates": [
+          "13.83667", 
+          "46.37833", 
+          "2864"
+        ]
+      }, 
+      "type": "Feature", 
+      "properties": {
+        "height": 2864, 
+        "prominence": 2052, 
+        "name": "Triglav", 
+        "icon": "mountain",
+        "country": "si",
+        "climbed": "yes",
+        "route": "",
+        "means": "",
+        "grade": ""
+      }
+    }
+  ]
+}

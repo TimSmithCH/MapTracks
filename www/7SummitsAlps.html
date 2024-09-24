@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>4000er Alps</title>
-  <meta name="description" content="Alpine 4000ers">
+  <title>7 Summits Alps</title>
+  <meta name="description" content="7 Summits of the Alps">
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <!-- Site styles and icons -->
   <link rel="stylesheet" href="css/peaklist.css">
@@ -17,7 +17,7 @@
   var filter_prom, filter_flag;
   async function getTable() {
     try {
-      let response = await fetch('features/EU_Mountains_H4000.json');
+      let response = await fetch('features/7_Summits_Alps.json');
       return await response.json();
     } catch (error) {
       console.log(error);
@@ -258,9 +258,9 @@
     <output class="btn climbed" id="out2">0</output>
   </div>
   <div class="myBtnContainer">
-    <button class="btn page active" onclick="document.location='Alps4000.html'" id="all">Alps Peaks</button>
+    <button class="btn page " onclick="document.location='Alps4000.html'" id="all">Alps Peaks</button>
     <button class="btn page " onclick="document.location='CantonPeaks.html'" id="all">Canton Peaks</button>
-    <button class="btn page " onclick="document.location='7SummitsAlps.html'" id="all">7 Summits Alps</button>
+    <button class="btn page active" onclick="document.location='7SummitsAlps.html'" id="all">7 Summits Alps</button>
     <button class="btn page " onclick="document.location='WorldMountains.html'" id="all">World Peaks</button>
   </div>
 </body>
