@@ -160,3 +160,38 @@ col.todocol {
   background-repeat: no-repeat;
   background-position: center center;
 }
+/* Germany */
+.de {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23000000" d="m0,0h900v200h-900z"/> <path fill="%23DD0000" d="m0,200h900v200h-900z"/> <path fill="%23FFCC00" d="m0,400h900v200h-900z"/> </svg>');
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Austria */
+.at {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23EF3340" d="m0,0h900v200h-900z"/> <path fill="%23FFFFFF" d="m0,200h900v200h-900z"/> <path fill="%23EF3340" d="m0,400h900v200h-900z"/> </svg>');
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Liechtenstein */
+.li {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23003DA5" d="m0,0h900v300h-900z"/> <path fill="%23E4002B" d="m0,300h900v300h-900z"/> </svg>');
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Slovenia */
+.si {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"> <path fill="%23FFFFFF" d="m0,0h900v200h-900z"/> <path fill="%23003DA5" d="m0,200h900v200h-900z"/> <path fill="%23FF0000" d="m0,400h900v200h-900z"/> </svg>');
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* Not loaded */
+.zz {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320"> <path fill="%23d52b1e" d="m0,0h320v320h-320z"/> </svg>');
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
