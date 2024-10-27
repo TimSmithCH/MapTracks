@@ -65,7 +65,7 @@ jobs:
           # If any geojson files were generated
           echo ">>> Aggregate new GeoJSON files"
           awk -F "/" '{print $4}' Modified_Files | sort | uniq | xargs -r -I {} python scripts/geojsons_merge.py -d tracks/tim/2_geojson/{} -o tracks/tim/1_display/{}_tracks.geojson
-          rsync -avu "tracks/tim/1_display/" "www/tracks/1_display/" 
+          rsync -avu "tracks/tim/1_display/" "www/tracks/tim/1_display/" 
         #--- Next Step
       - name: Commit new GeoJson files
         id: committed

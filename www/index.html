@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css' rel='stylesheet'>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js'></script>
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -102,6 +102,10 @@
             <div>
               <label for="zoomL">Zoom level</label>
               <input type="number" id="zoomL" name="zoomL" min="0" max="999" value="0" readonly>
+              <label for="cenLat">Lat</label>
+              <input type="number" id="cenLat" name="cenLat" min="-90" max="90" value="0" readonly>
+              <label for="cenLon">Lon</label>
+              <input type="number" id="cenLon" name="cenLon" min="-180" max="180" value="0" readonly>
             </div>
           </fieldset>
         </div>
@@ -129,6 +133,12 @@
           lo = 8.23;
         } else {
           OLD_SCHOOL && console.log("Set centre Longitude: ",lo);
+        }
+        var layerMask = urlSearchParams.get('layer');
+        if (!layerMask) {
+          layerMask = "HBSRKcmW";
+        } else {
+          OLD_SCHOOL && console.log("Set layer mask: ",layerMask);
         }
 
         // Prepare layer properties object
@@ -418,7 +428,7 @@
               //OLD_SCHOOL && console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
               map.addSource(layer, {
                 type: 'geojson',
-                "data": "tracks/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
+                "data": "tracks/tim/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
               });
               if (layer_props[layer]["init_state"] === "active") {
                 var visi = "visible";
@@ -684,8 +694,13 @@
         // Create a zoom level indcator
         OLD_SCHOOL && console.log("Create handler for zoom level");
         zoomL.value = zoomlvl;
+        cenLat.value = la;
+        cenLon.value = lo;
         map.on('zoom', function() {
           zoomL.value = parseFloat(map.getZoom()).toFixed(2);
+          const {lng, lat} = map.getCenter();
+          cenLat.value = parseFloat(lat).toFixed(2);
+          cenLon.value = parseFloat(lng).toFixed(2);
         });
 
 
