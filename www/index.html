@@ -100,12 +100,12 @@
               <label for="threeD">3D view</label>
             </div>
             <div>
-              <label for="zoomL">Zoom level</label>
+              <label for="zoomL">Zoom</label>
               <input type="number" id="zoomL" name="zoomL" min="0" max="999" value="0" readonly>
               <label for="cenLat">Lat</label>
-              <input type="number" id="cenLat" name="cenLat" min="-90" max="90" value="0" readonly>
+              <input type="number" id="cenLat" name="cenLat" min="-90" max="999999" value="0" readonly>
               <label for="cenLon">Lon</label>
-              <input type="number" id="cenLon" name="cenLon" min="-180" max="180" value="0" readonly>
+              <input type="number" id="cenLon" name="cenLon" min="-180" max="999999" value="0" readonly>
             </div>
           </fieldset>
         </div>
@@ -134,12 +134,6 @@
         } else {
           OLD_SCHOOL && console.log("Set centre Longitude: ",lo);
         }
-        var layerMask = urlSearchParams.get('layer');
-        if (!layerMask) {
-          layerMask = "HBSRKcmW";
-        } else {
-          OLD_SCHOOL && console.log("Set layer mask: ",layerMask);
-        }
 
         // Prepare layer properties object
         var layer_props = {
@@ -148,18 +142,25 @@
           layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "geojson", colour: "#0048FF", init_state: "active", text: "Skiclimb" },
           layer_run:     { source_layer: "run_tracks",     source: "geojson", colour: "#B10DC9", init_state: "active", text: "Run" },
           layer_ski:     { source_layer: "ski_tracks",     source: "geojson", colour: "#0099FF", init_state: "active", text: "Ski" },
-          layer_commute: { source_layer: "commute_tracks", source: "geojson", colour: "#10A210", init_state: "hidden", text: "Cmute" },
-          layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FFCC00", init_state: "hidden", text: "Mech" },
+          layer_commute: { source_layer: "commute_tracks", source: "geojson", colour: "#10A210", init_state: "hidden", text: "Commute" },
+          layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FFCC00", init_state: "hidden", text: "Vehicle" },
           layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
         };
-        var show_only = urlSearchParams.get('layer');
-        if (show_only) {
+        var layerMask = urlSearchParams.get('layer');
+        // Defaults are equivalent to a layerMask of "HBSRKcmW"
+        if (layerMask) {
+          OLD_SCHOOL && console.log("Set layer mask: ",layerMask);
           for (let layer of Object.keys(layer_props)) {
-            if (layer_props[layer]["text"] !== show_only) {
+            if (layerMask.includes(layer_props[layer]["text"].substr(0,1))) {
+              layer_props[layer]["init_state"] = "active";
+              document.getElementById(layer_props[layer]["text"]).checked = true;
+              console.log("Set true: ",layer);
+            } else {
               layer_props[layer]["init_state"] = "";
+              document.getElementById(layer_props[layer]["text"]).checked = false;
+              console.log("Set FALSE: ",layer);
             }
           }
-          OLD_SCHOOL && console.log("Show single layer: ",show_only);
         }
 
 
@@ -697,10 +698,10 @@
         cenLat.value = la;
         cenLon.value = lo;
         map.on('zoom', function() {
-          zoomL.value = parseFloat(map.getZoom()).toFixed(2);
+          zoomL.value = parseFloat(map.getZoom()).toFixed(1);
           const {lng, lat} = map.getCenter();
-          cenLat.value = parseFloat(lat).toFixed(2);
-          cenLon.value = parseFloat(lng).toFixed(2);
+          cenLat.value = parseFloat(lat).toFixed(3);
+          cenLon.value = parseFloat(lng).toFixed(3);
         });
 
 
