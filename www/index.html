@@ -139,7 +139,7 @@
         var layer_props = {
           layer_hike:    { source_layer: "hike_tracks",    source: "geojson", colour: "#FF2020", init_state: "active", text: "Hike" },
           layer_bike:    { source_layer: "bike_tracks",    source: "geojson", colour: "#006400", init_state: "active", text: "Bike" },
-          layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "geojson", colour: "#0048FF", init_state: "active", text: "Skiclimb" },
+          layer_skiclimb:{ source_layer: "skiclimb_tracks",source: "geojson", colour: "#0048FF", init_state: "active", text: "Mountski" },
           layer_run:     { source_layer: "run_tracks",     source: "geojson", colour: "#B10DC9", init_state: "active", text: "Run" },
           layer_ski:     { source_layer: "ski_tracks",     source: "geojson", colour: "#0099FF", init_state: "active", text: "Ski" },
           layer_commute: { source_layer: "commute_tracks", source: "geojson", colour: "#10A210", init_state: "hidden", text: "Commute" },
@@ -147,18 +147,16 @@
           layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
         };
         var layerMask = urlSearchParams.get('layer');
-        // Defaults are equivalent to a layerMask of "HBSRKcmW"
+        // Defaults are equivalent to a layerMask of "HBSRMcvW"
         if (layerMask) {
           OLD_SCHOOL && console.log("Set layer mask: ",layerMask);
           for (let layer of Object.keys(layer_props)) {
             if (layerMask.includes(layer_props[layer]["text"].substr(0,1))) {
               layer_props[layer]["init_state"] = "active";
               document.getElementById(layer_props[layer]["text"]).checked = true;
-              console.log("Set true: ",layer);
             } else {
               layer_props[layer]["init_state"] = "";
               document.getElementById(layer_props[layer]["text"]).checked = false;
-              console.log("Set FALSE: ",layer);
             }
           }
         }
@@ -467,7 +465,8 @@
                 "minzoom": 6,
                 "layout": {
                   "visibility": "visible",
-                  "icon-image": "{desc}-15",   // Data-driven styling //
+                  //"icon-image": "{desc}-15",   // Data-driven styling before v12 styles //
+                  "icon-image": "{desc}",   // Data-driven styling //
                   "icon-allow-overlap": true,   // Allow collisions //
                   "text-field": "{name}",   // Data-driven styling //
                   "text-allow-overlap": true,   // Allow collisions //
@@ -484,11 +483,11 @@
 
         //----------------------------------------------
         // Styles are meant to have default icons in their sprites, but on version changes
-        // they are often forgotten! So need a menthod to load fallback icons if they are missing
+        // they are often forgotten! So need a method to load fallback icons if they are missing
         map.on('styleimagemissing', function (e) {
           OLD_SCHOOL && console.log("ON StyleImageMissing", e.id);
           // Triggered when `icon-image` isnt found in style layer
-          const icons = ["airport", "castle", "mountain", "lodging"];
+          const icons = ["airport", "attraction", "campsite", "castle", "lodging", "mountain"];
           missing_icon = e.id.split('-1')[0];
           if (icons.indexOf(missing_icon > -1)) {
             var image_url = "images/" + missing_icon + ".png";
@@ -725,7 +724,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footitem peak"> <a href="Alps4000.html">__Peaks__</a> </div>
+      <div class="footitem peak"> <a href="Alps4000.html">Peaks</a> <a href="Trips.html">Trips</a> </div>
       <div class="footitem">TrackMap: &copy; Tim Smith CC-BY-4.0</div>
       <div class="footitem"><img src="images/strava_white.png" alt="pwd STRAVA" align="right" height="32px"></div>
     </footer>
