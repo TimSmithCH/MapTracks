@@ -153,11 +153,9 @@
           console.log("Set layer mask: ",layerMask);
           for (let layer of Object.keys(layer_props)) {
             if (layerMask.includes(layer_props[layer]["text"].substr(0,1))) {
-              console.log("Check: ",layer_props[layer]["text"]);
               layer_props[layer]["init_state"] = "active";
               document.getElementById(layer_props[layer]["text"]).checked = true;
             } else {
-              console.log("Un-Check: ",layer_props[layer]["text"]);
               layer_props[layer]["init_state"] = "";
               document.getElementById(layer_props[layer]["text"]).checked = false;
             }
