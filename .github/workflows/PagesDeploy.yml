@@ -1,4 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
+# For action latest versions check: https://github.com/actions/starter-workflows/blob/main/pages/static.yml
 name: PagesDeploy
 on:
   # Allows to be run manually from the Actions tab (or a CLI/API dispatch)
@@ -35,12 +36,12 @@ jobs:
       - name: Catchup with changes commited earlier in workflow
         run: git pull --rebase=false
       - name: Setup Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload from web directory
           path: 'www'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
