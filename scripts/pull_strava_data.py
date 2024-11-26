@@ -32,6 +32,9 @@ from typing import Any
 import requests
 import gpxpy
 
+# Define global variables
+orders = {}
+
 
 # -------------------------------------------------------------------------------
 # Initialise command line options and their defaults
