@@ -1,4 +1,6 @@
-"""
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# """
  -------------------------------------------------------------------------------
 
  DESCRIPTION
@@ -33,7 +35,7 @@ import requests
 import gpxpy
 
 # Define global variables
-orders = {}
+# orders = {}
 
 
 # -------------------------------------------------------------------------------
@@ -42,7 +44,7 @@ def parse_command_line():
     global orders
     # If run in Github ACTION then set defaults without parsing!
     if os.getenv("GITHUB_ACTIONS") == "true":
-        orders: dict[str, Any] = {
+        orders: dict = {
             "athlete": "tim",
             "tokenFile": "tracks/tim/token.json",
             "trackDir": "tracks/tim/3_gpx/",
