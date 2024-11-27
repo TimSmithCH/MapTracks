@@ -44,7 +44,7 @@ def parse_command_line():
     global orders
     # If run in Github ACTION then set defaults without parsing!
     if os.getenv("GITHUB_ACTIONS") == "true":
-        orders: dict = {
+        orders = {
             "athlete": "tim",
             "tokenFile": "tracks/tim/token.json",
             "trackDir": "tracks/tim/3_gpx/",
