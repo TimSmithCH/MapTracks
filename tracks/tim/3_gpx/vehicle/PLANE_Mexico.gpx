@@ -21,6 +21,14 @@
         <ele>0.0</ele>
       </trkpt>
     </trkseg>
+    <trkseg>
+      <trkpt lat="21.042010" lon="-86.871657">
+        <ele>0.0</ele>
+      </trkpt>
+      <trkpt lat="19.436136891" lon="-99.072058506">
+        <ele>0.0</ele>
+      </trkpt>
+    </trkseg>
   </trk>
   <wpt lat="19.436136891" lon="-99.072058506">
     <ele>0.0</ele>
@@ -40,6 +48,11 @@
   <wpt lat="20.934052819" lon="-89.660335514">
     <ele>0.0</ele>
     <name>Merida Airport</name>
+    <desc>airport</desc>
+  </wpt>
+  <wpt lat="21.042010" lon="-86.871657">
+    <ele>0.0</ele>
+    <name>Cancun Airport</name>
     <desc>airport</desc>
   </wpt>
 </gpx>
