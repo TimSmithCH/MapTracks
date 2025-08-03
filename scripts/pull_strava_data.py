@@ -9,9 +9,9 @@
     download Strava's actvity streams and reconstruct a GPX file from the data
 
  EXAMPLES
-    python pull_strava_data.py -o "tracks/" -a tim -p 20 -n 1
-    python pull_strava_data.py -c False -o "tracks/" -p 100 -b 20220201
-    python scripts/pull_strava_data.py -l -o "tracks/" -p 10 -b 20230402
+    python pull_strava_data.py -o "tracks/" -a tim -p 20 -n 1            # Basic, last 20 activities in one page
+    python pull_strava_data.py -c False -o "tracks/" -p 100 -b 20220201  # Exclude commutes, work back from 1st Feb 2022
+    python scripts/pull_strava_data.py -l -o "tracks/" -p 10 -b 20230402 # Light mode, only new files
 
  IMPLEMENTATION
     Author       Tim Smith
@@ -192,7 +192,7 @@ def getAccessToken(quietly, page):
     global tokens
     if tokens.get("expires_at") < (time.time()):
         # REFRESH TOKENS
-        print(" Token Expired. Requesting new Token.")
+        print(" Token Expired. Requesting new Token for {}".format(orders.get("athlete")))
         tokenResponse = refreshTokens(orders.get("athlete"))
         if "access_token" not in tokenResponse:
             print("ERROR: Could not refresh tokens")
