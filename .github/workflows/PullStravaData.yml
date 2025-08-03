@@ -22,12 +22,21 @@ jobs:
           sudo apt-get install -y python3-gpxpy
           sudo apt-get install -y python3-numpy
         #--- Next Step
-      - name: Fetch Data through Strava API
+      - name: Fetch Data for Tim through Strava API
         run: ./scripts/pull_strava_data.py
         env:
+          STRAVA_ATHLETE: "tim"
           STRAVA_TIM_ID: ${{ secrets.STRAVA_client_id }}
           STRAVA_TIM_SECRET: ${{ secrets.STRAVA_client_secret }}
           STRAVA_TIM_REFTOKEN: ${{ secrets.STRAVA_REFRESH_TOKEN }}
+        #--- Next Step
+      - name: Fetch Data for Alison through Strava API
+        run: ./scripts/pull_strava_data.py
+        env:
+          STRAVA_ATHLETE: "alison"
+          STRAVA_ALISON_ID: ${{ secrets.STRAVA_ALISON_CLIENT_ID }}
+          STRAVA_ALISON_SECRET: ${{ secrets.STRAVA_ALISON_CLIENT_SECRET }}
+          STRAVA_ALISON_REFTOKEN: ${{ secrets.STRAVA_ALISON_REFRESH_TOKEN }}
         #--- Next Step
       - name: Commit freshly created files
         run: |
@@ -37,6 +46,8 @@ jobs:
           # Push any modified GPX files
           git add tracks/tim/3_gpx 1>&2
           git add tracks/tim/LastStravaIDRead.json 1>&2
+          git add tracks/alison/3_gpx 1>&2
+          git add tracks/alison/LastStravaIDRead.json 1>&2
           # Push any updated waypoint files
           git add www/features 1>&2
           if ! git diff --staged --quiet --exit-code tracks/tim/3_gpx; then

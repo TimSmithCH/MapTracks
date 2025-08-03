@@ -45,7 +45,7 @@ def parse_command_line():
     # If run in Github ACTION then set defaults without parsing!
     if os.getenv("GITHUB_ACTIONS") == "true":
         orders = {
-            "athlete": "tim",
+            "athlete": os.environ.get("STRAVA_ATHLETE"),
             "tokenFile": "tracks/tim/token.json",
             "trackDir": "tracks/tim/3_gpx/",
             "idFile": "tracks/tim/LastStravaIDRead.json",
