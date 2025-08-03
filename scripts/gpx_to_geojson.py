@@ -451,6 +451,9 @@ if __name__ == "__main__":
         if VERBOSE:
             print("INFO: Writing out new content to {}".format(outfile))
         if args.dryrun == False:
+            if not outfile.parent.exists():
+                outfile.parent.mkdir(parents=True, exist_ok=True)
+                print(f"Created directory: {outfile.parent}")
             with open(outfile, "w") as f:
                 f.write(dumpj)
 
