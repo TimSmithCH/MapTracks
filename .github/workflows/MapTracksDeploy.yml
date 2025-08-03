@@ -48,9 +48,9 @@ jobs:
       - name: Generate GeoJson files from any new GPX files
         run: |
           # If the last commit contained any track files
-          if ! git diff --quiet --exit-code "HEAD~1" "HEAD" tracks/tim/2_geojson tracks/tim/3_gpx; then
+          if ! git diff --quiet --exit-code "HEAD~1" "HEAD" tracks/tim/2_geojson tracks/tim/3_gpx tracks/alison/2_geojson tracks/alison/3_gpx; then
             git config --global core.quotePath false 
-            git diff --name-status "HEAD~1" "HEAD" tracks/tim/2_geojson tracks/tim/3_gpx | awk -F " " '{print $2}' >Modified_Files
+            git diff --name-status "HEAD~1" "HEAD" tracks/tim/2_geojson tracks/tim/3_gpx tracks/alison/2_geojson tracks/alison/3_gpx | awk -F " " '{print $2}' >Modified_Files
             echo ">>> Generate GeoJSON files for new/modified GPX files"
             grep -e '3_gpx' Modified_Files | xargs -r -I {} python scripts/gpx_to_geojson.py -s -u {}
             echo ">>> Generate new GeoJSON files for deleted/modified GeoJSON files"
@@ -64,18 +64,23 @@ jobs:
         run: |
           # If any geojson files were generated
           echo ">>> Aggregate new GeoJSON files"
-          awk -F "/" '{print $4}' Modified_Files | sort | uniq | xargs -r -I {} python scripts/geojsons_merge.py -d tracks/tim/2_geojson/{} -o tracks/tim/1_display/{}_tracks.geojson
+          grep -e '/tim/' Modified_Files | awk -F "/" '{print $4}' | sort | uniq | xargs -r -I {} python scripts/geojsons_merge.py -d tracks/tim/2_geojson/{} -o tracks/tim/1_display/{}_tracks.geojson
+          grep -e '/alison/' Modified_Files | awk -F "/" '{print $4}' | sort | uniq | xargs -r -I {} python scripts/geojsons_merge.py -d tracks/alison/2_geojson/{} -o tracks/alison/1_display/{}_tracks.geojson
           rsync -avu "tracks/tim/1_display/" "www/tracks/tim/1_display/" 
+          rsync -avu "tracks/alison/1_display/" "www/tracks/alison/1_display/" 
         #--- Next Step
       - name: Commit new GeoJson files
         id: committed
         run: |
-          if ! git diff --quiet --exit-code tracks/tim/1_display; then
+          if ! git diff --quiet --exit-code tracks/tim/1_display tracks/alison/1_display; then
             echo ">>> New GeoJSON files to commit"
             # Push the modified GeoJSON files
             git add tracks/tim/1_display 1>&2
             git add tracks/tim/2_geojson 1>&2
             git add tracks/tim/LastStravaIDRead.json 1>&2
+            git add tracks/alison/1_display 1>&2
+            git add tracks/alison/2_geojson 1>&2
+            git add tracks/alison/LastStravaIDRead.json 1>&2
             git add www/tracks 1>&2
             git status -s 1>&2
             git commit -m "GeoJSONs for øø ${{ github.event.head_commit.message }}" 1>&2

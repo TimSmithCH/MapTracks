@@ -39,6 +39,10 @@
                   <input type="checkbox" id="Bike" name="layer_bike" checked="">
                   <label for="Bike">Bike</label>
                 </div>
+                <div>
+                  <input type="checkbox" id="Ski" name="layer_ski" checked="">
+                  <label for="Ski">Ski</label>
+                </div>
               </div>
               <div class="selector_col">
                 <div>
@@ -46,8 +50,12 @@
                   <label for="MountSki">MountSki</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="Ski" name="layer_ski" checked="">
-                  <label for="Ski">Ski</label>
+                  <input type="checkbox" id="Run" name="layer_run" checked="">
+                  <label for="Run">Run</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="WIP" name="layer_wip" checked="">
+                  <label for="WIP">Other</label>
                 </div>
               </div>
             </div>
@@ -100,6 +108,8 @@
           layer_bike:    { source_layer: "bike_tracks",    source: "geojson", colour: "#006400", init_state: "active", text: "Bike" },
           layer_mountski:{ source_layer: "skiclimb_tracks",source: "geojson", colour: "#0048FF", init_state: "active", text: "MountSki" },
           layer_ski:     { source_layer: "ski_tracks",     source: "geojson", colour: "#0099FF", init_state: "active", text: "Ski" },
+          layer_run:     { source_layer: "run_tracks",     source: "geojson", colour: "#B10DC9", init_state: "active", text: "Run" },
+          layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FFCC00", init_state: "active", text: "WIP" }
         };
         var layerMask = urlSearchParams.get('layer');
         // Defaults are equivalent to a layerMask of "HBSRMcvW"
@@ -417,7 +427,7 @@
     </main>
 
     <footer class="footer">
-      <div class="footitem peak"> <a href="support.html">Support</a></div>
+      <div class="footitem peak"> Map for Alison <a href="support.html">Support</a></div>
       <div class="footitem">TrackMap: &copy; Tim Smith CC-BY-4.0</div>
       <div class="footitem"><img src="images/strava_white.png" alt="pwd STRAVA" align="right" height="32px"></div>
     </footer>
