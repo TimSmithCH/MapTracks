@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <metadata>
+    <name>444086814.Lunch_Run</name>
+    <time>2015-12-04T11:42:32Z</time>
+    <keywords>444086814</keywords>
+  </metadata>
+  <trk>
+    <name>444086814.Lunch_Run</name>
+    <cmt>2015-12-04</cmt>
+    <type>Run</type>
+    <trkseg>
+      <trkpt lat="46.488116" lon="6.398075">
+        <ele>451.1</ele>
+        <time>2015-12-04T11:42:32Z</time>
+      </trkpt>
+      <trkpt lat="46.488179" lon="6.398106">
+        <ele>451.3</ele>
+        <time>2015-12-04T11:43:38Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

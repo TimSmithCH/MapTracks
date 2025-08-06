@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <metadata>
+    <name>716398533.Afternoon_Run</name>
+    <time>2016-09-18T11:36:55Z</time>
+    <keywords>716398533</keywords>
+  </metadata>
+  <trk>
+    <name>716398533.Afternoon_Run</name>
+    <cmt>2016-09-18</cmt>
+    <type>Run</type>
+    <trkseg>
+      <trkpt lat="46.424502" lon="6.186045">
+        <ele>605.9</ele>
+        <time>2016-09-18T11:36:55Z</time>
+      </trkpt>
+      <trkpt lat="46.424481" lon="6.186384">
+        <ele>604.8</ele>
+        <time>2016-09-18T11:36:56Z</time>
+      </trkpt>
+      <trkpt lat="46.424579" lon="6.186366">
+        <ele>605.5</ele>
+        <time>2016-09-18T11:36:57Z</time>
+      </trkpt>
+      <trkpt lat="46.424553" lon="6.186458">
+        <ele>605.0</ele>
+        <time>2016-09-18T11:36:59Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
