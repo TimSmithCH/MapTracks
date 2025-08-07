@@ -8,6 +8,7 @@
 #
 # EXAMPLES
 #    python geojson_sync_check.py -f -r -t bike
+#    python geojson_sync_check.py -f -t bike -o
 #
 # IMPLEMENTATION
 #    Author       Tim Smith
@@ -38,6 +39,7 @@ def parse_command_line():
         forward=False,
         reverse=False,
         verbose=False,
+        old=False
     )
     parser.set_defaults(**defaults)
     # Parse the command line
@@ -49,13 +51,19 @@ def parse_command_line():
         "-f",
         "--forward",
         action="store_true",
-        help="Check all GPXs have a corresponding GEOJSON",
+        help="Check GPXs map to a GEOJSON, generate if not",
     )
     parser.add_argument(
         "-r",
         "--reverse",
         action="store_true",
-        help="Check all GEOJSONs have a corresponding GPX",
+        help="Check GEOJSONs map from a GPX, delete if not",
+    )
+    parser.add_argument(
+        "-o",
+        "--old",
+        action="store_true",
+        help="Check if mapped GEOJSON is too old, then regenerate",
     )
     parser.add_argument("-t", "--trkdirs", dest="trkdirs", help="Track types to check")
     parser.add_argument(
@@ -95,36 +103,38 @@ if __name__ == "__main__":
                     generate_geojson = True
                 # Re-generate GeoJSON it exists but is older than the GPX file
                 else:
-                    process = subprocess.run(
-                        [
-                            "git",
-                            "log",
-                            "--pretty=format:%cd",
-                            "-n 1",
-                            "--date=unix",
-                            "--",
-                            str(gpxfile),
-                        ],
-                        stdout=subprocess.PIPE,
-                        universal_newlines=True,
-                    )
-                    timeGPX = process.stdout
-                    process = subprocess.run(
-                        [
-                            "git",
-                            "log",
-                            "--pretty=format:%cd",
-                            "-n 1",
-                            "--date=unix",
-                            "--",
-                            str(geofile),
-                        ],
-                        stdout=subprocess.PIPE,
-                        universal_newlines=True,
-                    )
-                    timeGEO = process.stdout
-                    if timeGPX > timeGEO:
-                        generate_geojson = True
+                    if args.old == True:
+                        process = subprocess.run(
+                            [
+                                "git",
+                                "log",
+                                "--pretty=format:%cd",
+                                "-n 1",
+                                "--date=unix",
+                                "--",
+                                str(gpxfile),
+                            ],
+                            stdout=subprocess.PIPE,
+                            universal_newlines=True,
+                        )
+                        timeGPX = process.stdout
+                        process = subprocess.run(
+                            [
+                                "git",
+                                "log",
+                                "--pretty=format:%cd",
+                                "-n 1",
+                                "--date=unix",
+                                "--",
+                                str(geofile),
+                            ],
+                            stdout=subprocess.PIPE,
+                            universal_newlines=True,
+                        )
+                        timeGEO = process.stdout
+                        if timeGPX > timeGEO:
+                            print(" ACTION: Need to re-generate {}".format(geofile))
+                            generate_geojson = True
                 if generate_geojson == True:
                     if args.dryrun == False:
                         process = subprocess.run(

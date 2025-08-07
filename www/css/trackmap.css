@@ -172,3 +172,7 @@ body {
   display: inline-block;
   min-width: 20px;
 }
+
+#reversedRange {
+  direction: rtl
+}
