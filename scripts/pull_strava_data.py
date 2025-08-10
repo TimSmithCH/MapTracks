@@ -55,6 +55,7 @@ def parse_command_line():
             "commute": True,
             "light": False,
             "zero": False,
+            "verbose": True,
         }
     # Parse command line arguments if not run in a Github ACTION
     else:
@@ -71,6 +72,7 @@ def parse_command_line():
             commute=True,
             light=False,
             zero=False,
+            verbose=False,
         )
         parser.set_defaults(**defaults)
         # Parse the command line
@@ -107,6 +109,12 @@ def parse_command_line():
             action="store_true",
             help="Zero downloads: only store activity list",
         )
+        parser.add_argument(
+            "-v", 
+            "--verbose", 
+            action="store_true",
+            help="Print verbose output"
+        )
         args = parser.parse_args()
         athlete = args.athlete.lower()
         orders = {
@@ -115,6 +123,7 @@ def parse_command_line():
             "trackDir": args.outdir + athlete + "/3_gpx/",
             "idFile": args.outdir + athlete + "/" + "LastStravaIDRead.json",
             "listfile": args.outdir + athlete + "/" + "ActivitiesList.json",
+            "verbose": args.verbose,
         }
         if args.before:
             orders["before"] = args.before
@@ -326,9 +335,10 @@ def loadActivitiesList():
                 "INFO: Maximum number ({}) of pages reached".format(orders["numpages"])
             )
             break
-    print(" Activities since last upload:")
-    for i in activitiesToAdd:
-        print(" - {} : {} : {}".format(str(i["id"]), str(i["type"]), str(i["name"])))
+    print(" Activities since last upload [{}]:".format(len(activitiesToAdd)))
+    if orders["verbose"] == True:
+        for i in activitiesToAdd:
+            print(" - {} : {} : {}".format(str(i["id"]), str(i["type"]), str(i["name"])))
     stravaData["last_read"] = highestSeenID
     json.dump(stravaData, open(orders.get("idFile"), "w"))
     return activitiesToAdd
@@ -405,44 +415,52 @@ if __name__ == "__main__":
         VirtualRun="run",  # VirtualRun/VirtualRun in run
         Swim="swim",  # Swim/Swim in swim
         Velomobile="vehicle",  # Strava has no vehicles so labelled velomobile
-        Sail="vehicle",
-    )  # Boats of various types!
+        Sail="vehicle",  # Boats of various types!
+    )
+    # Download activity list
     activities = loadActivitiesList()
     if orders["zero"] == True:
-        # Write out the GPX file to disk
+        # Write out the list of activities to disk
         lfile = str(orders.get("listfile"))
         with open(lfile, "w") as f:
             print("INFO: writing list file {}".format(lfile))
             json.dump(activities, f)
             # f.write(str(activities))
         exit(0)
-    # Selectively download activities: by default include commutes
+    # Filter activity list: by default include commutes
     if orders["commute"] == False:
         filteredActivities = list(filter(lambda obj: not obj["commute"], activities))
-        print(" Non-commutes retained:")
+        print(" Non-commutes retained [{}]:".format(len(filteredActivities)))
     else:
         filteredActivities = activities
         # filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
-        print(" All retained:")
+        print(" All retained [{}]:".format(len(filteredActivities)))
     # Download activities
     for i in filteredActivities:
         activity_name, outfile = construct_filenames(i)
         if orders["light"]:
             # Only if file doesnt exist at all then download
             if os.path.exists(outfile):
-                print("INFO: Skipping existing {}".format(i["name"]))
+                if orders["verbose"] == True:
+                    print("INFO: Skipping existing {}".format(i["name"]))
                 continue
-        print(
-            " - ID: {}   Type {}/{} ({})   Name: {}".format(
-                i["id"],
-                i["type"],
-                i["sport_type"],
-                i["commute"],
-                i["name"],
-                i["start_date"],
-                i["name"],
+        if orders["verbose"] == True:
+            print(
+                " - ID: {}   Date: {}   Type {}/{} ({})   Name: {}".format(
+                    i["id"],
+                    i["start_date"],
+                    i["type"],
+                    i["sport_type"],
+                    i["commute"],
+                    i["name"],
+                )
             )
-        )
+        if not i["external_id"]:
+            print("WARN: no activity file to download {}".format(i["name"]))
+            continue
+        if i["map"]["summary_polyline"] == "":
+            print("WARN: no activity map in download {}".format(i["name"]))
+            continue
         stream, errno = fetchActivityStream(i["id"])
         if errno == 0:
             if "latlng" in stream:
