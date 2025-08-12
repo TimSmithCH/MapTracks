@@ -109,13 +109,13 @@
             </div>
             <div>
               <label for="sliderDL">Lower Date</label>
-              <input type="range" id="sliderDL" name="sliderDL" min="1560" max="3120" step="13" value="520" id="reversedRange">
-              <input type="number" id="sliderDLout" name="sliderDLout" min="1560" max="3120" step="13" value="520" readonly>
+              <input type="range" id="sliderDL" name="sliderDL" min="480" max="672" step="1" value="540">
+              <input type="number" id="sliderDLout" name="sliderDLout" min="480" max="672" step="1" value="540" readonly>
             </div>
             <div>
+              <input type="range" id="sliderDU" name="sliderDU" min="480" max="672" step="1" value="661">
+              <input type="number" id="sliderDUout" name="sliderDUout" min="480" max="672" step="1" value="661" readonly>
               <label for="sliderDU">Upper Date</label>
-              <input type="range" id="sliderDU" name="sliderDU" min="1560" max="3120" step="13" value="520">
-              <input type="number" id="sliderDUout" name="sliderDUout" min="1560" max="3120" step="13" value="520" readonly>
             </div>
           </fieldset>
         </div>
@@ -660,8 +660,8 @@
         }
 
         //----------------------------------------------
-        // Add click action for change of slider values
-        OLD_SCHOOL && console.log("Create handlers for sliders");
+        // Add click action for change of height slider values
+        OLD_SCHOOL && console.log("Create handlers for height sliders");
         sliderH.addEventListener('input', function(e) {
           var height_value = parseInt(e.target.value);
           var prominence_value = Number(sliderP.value);
@@ -679,6 +679,32 @@
             ['>=', ['number', ['get', 'prominence']], prominence_value]];
           map.setFilter('layer_mountainsH', mountFilter);
           sliderPout.value=prominence_value;
+        });
+
+        //----------------------------------------------
+        // Add click action for change of date slider values
+        OLD_SCHOOL && console.log("Create handlers for date sliders");
+        sliderDL.addEventListener('input', function(e) {
+          var datelow_value = parseInt(e.target.value);
+          var datehigh_value = Number(sliderDH.value);
+          var dateFilter = ["all",
+            ['>=', ['number', ['get', 'datestamp']], datelow_value],
+            ['>=', ['number', ['get', 'datestamp']], datehigh_value]];
+          for (let layer of Object.keys(layer_props)) {
+            map.setFilter(layer, dateFilter);
+          }
+          sliderDLout.value=datelow_value;
+        });
+        sliderDH.addEventListener('input', function(e) {
+          var datehigh_value = parseInt(e.target.value);
+          var datelow_value = Number(sliderDL.value);
+          var dateFilter = ["all",
+            ['>=', ['number', ['get', 'datestamp']], datelow_value],
+            ['>=', ['number', ['get', 'datestamp']], datehigh_value]];
+          for (let layer of Object.keys(layer_props)) {
+            map.setFilter(layer, dateFilter);
+          }
+          sliderDHout.value=datehigh_value;
         });
 
         //----------------------------------------------
