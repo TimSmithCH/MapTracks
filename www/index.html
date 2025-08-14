@@ -110,11 +110,11 @@
             <div>
               <label for="sliderDL">Lower Date</label>
               <input type="range" id="sliderDL" name="sliderDL" min="480" max="672" step="1" value="540">
-              <input type="number" id="sliderDLout" name="sliderDLout" min="480" max="672" step="1" value="540" readonly>
+              <input type="text" id="sliderDLout" name="sliderDLout" value="2014-01-01" readonly>
             </div>
             <div>
               <input type="range" id="sliderDH" name="sliderDH" min="480" max="672" step="1" value="661">
-              <input type="number" id="sliderDHout" name="sliderDHout" min="480" max="672" step="1" value="661" readonly>
+              <input type="text" id="sliderDHout" name="sliderDHout" value="2026-01-01" readonly>
               <label for="sliderDH">Upper Date</label>
             </div>
           </fieldset>
@@ -685,26 +685,28 @@
         // Add click action for change of date slider values
         OLD_SCHOOL && console.log("Create handlers for date sliders");
         sliderDL.addEventListener('input', function(e) {
-          var datelow_value = parseInt(e.target.value);
-          var datehigh_value = Number(sliderDH.value);
+          var low_timestamp = parseInt(e.target.value);
+          var high_timestamp = Number(sliderDH.value);
           var dateFilter = ["all",
-            ['>=', ['number', ['get', 'datestamp']], datelow_value],
-            ['>=', ['number', ['get', 'datestamp']], datehigh_value]];
+            ['>=', ['number', ['get', 'datestamp']], low_timestamp],
+            ['>=', ['number', ['get', 'datestamp']], high_timestamp]];
           for (let layer of Object.keys(layer_props)) {
             map.setFilter(layer, dateFilter);
           }
-          sliderDLout.value=datelow_value;
+          var low_date = new Date(low_timestamp * 1000).toISOString().split("T")[0];
+          sliderDLout.value=low_date;
         });
         sliderDH.addEventListener('input', function(e) {
-          var datehigh_value = parseInt(e.target.value);
-          var datelow_value = Number(sliderDL.value);
+          var high_timestamp = parseInt(e.target.value);
+          var low_timestamp = Number(sliderDL.value);
           var dateFilter = ["all",
-            ['>=', ['number', ['get', 'datestamp']], datelow_value],
-            ['>=', ['number', ['get', 'datestamp']], datehigh_value]];
+            ['>=', ['number', ['get', 'datestamp']], low_timestamp],
+            ['>=', ['number', ['get', 'datestamp']], high_timestamp]];
           for (let layer of Object.keys(layer_props)) {
             map.setFilter(layer, dateFilter);
           }
-          sliderDHout.value=datehigh_value;
+          var high_date = new Date(high_timestamp * 1000).toISOString().split("T")[0];
+          sliderDHout.value=high_date;
         });
 
         //----------------------------------------------

@@ -18,6 +18,7 @@
 from json import load, dump
 from argparse import ArgumentParser
 from re import compile
+import datetime
 import sys
 import os
 
@@ -29,8 +30,9 @@ defaults = dict(outfile=sys.stdout)
 parser.set_defaults(**defaults)
 
 # Can be passed a list of files
-parser.add_argument('-f', '--files', nargs='*', help='Files to be merged')
-parser.add_argument('-d', '--debug', action='store_true', help='Debug FLag')
+parser.add_argument('-d', '--directory', help='Directory containing files to be merged')
+parser.add_argument('-f', '--files', nargs='*', help='Files to be validated')
+parser.add_argument('-v', '--verbose', action='store_true', help='Verbose output')
 
 if __name__ == '__main__':
     args = parser.parse_args()
@@ -42,6 +44,7 @@ if __name__ == '__main__':
         infiles = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(args.directory)) for f in fn]
 
     for infile in infiles:
+        modified = False
         print("Opening {}".format(infile))
         with open(infile) as f:
             try:
@@ -55,16 +58,35 @@ if __name__ == '__main__':
         if type(injson.get('features', None)) != list:
             raise Exception('Sorry, "%s" does not look like GeoJSON' % infile)
 
-        print("Number of features: {}".format(len(injson['features'])))
+        print(" Number of features: {}".format(len(injson['features'])))
         for f in injson['features']:
             if f['geometry']['type'] == "LineString":
-                if args.debug:
-                    print("Number of coordinates: {} {}".format(f['properties']['name'],len(f['geometry']['coordinates'])))
+                if args.verbose:
+                    print(" Number of coordinates: {} in {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
                 elif len(f['geometry']['coordinates']) < 2:
-                    print("Number of coordinates: {} {}".format(f['properties']['name'],len(f['geometry']['coordinates'])))
+                    print(" Number of coordinates: {} in {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
             elif f['geometry']['type'] == "Point":
-                if args.debug:
-                    print("Number of points: {} {}".format(f['properties']['name'],len(f['geometry']['coordinates'])))
+                if args.verbose:
+                    print(" Number of points: {} in {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
             else:
                 raise Exception('Sorry, {} feature isnt a LineString or Waypoint'.format(f['properties']['name']))
+            if 'cmt' in f['properties']:
+                try:
+                    yy,mm,dd = f['properties']['cmt'].split('-')
+                except (ValueError, AttributeError):
+                    tstamp = 0
+                    if args.verbose:
+                        print(" Comment doesnt contain date")
+                else:
+                    tstamp = int(datetime.datetime.fromisoformat(f['properties']['cmt']).timestamp())
+                    if args.verbose:
+                        print(" Comment contains date: {} {} {}".format(yy,mm,dd))
+                        print("  equates to timestamp {}".format(tstamp))
+                    if not 'tstamp' in f['properties'] or f['properties']['tstamp'] != tstamp:
+                        f['properties']['tstamp'] = tstamp
+                        modified = True
+        if modified:
+            print(" Writing modified contents {}".format(infile))
+            with open(infile, "w") as g:
+                dump(injson, g, ensure_ascii=False)
 

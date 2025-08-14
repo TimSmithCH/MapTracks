@@ -29,6 +29,7 @@ import pathlib
 import argparse
 import gpxpy
 import geojson
+import datetime
 
 
 # -------------------------------------------------------------------------------
@@ -367,11 +368,18 @@ if __name__ == "__main__":
                     desc = "DownHill" if desc == "UpHill" else "UpHill"
                 coords = [(p.longitude, p.latitude) for p in segment.points]
                 geo_line = geojson.LineString(coords, precision=args.precision)
+                try:
+                    yy,mm,dd = track.comment.split('-')
+                except ValueError:
+                    tstamp = 0
+                else:
+                    tstamp = int(datetime.datetime.fromisoformat(track.comment).timestamp())
                 geo_features.append(
                     geojson.Feature(
                         properties={
                             "name": track.name,
                             "cmt": track.comment,
+                            "tstamp": tstamp,
                             "desc": desc,
                             "src": fbounds_str,
                             "bbox": tbounds_str,
