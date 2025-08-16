@@ -110,12 +110,12 @@
             <div>
               <label for="sliderDL">Lower Date</label>
               <input type="range" id="sliderDL" name="sliderDL" min="1388534400" max="1767225600" step="86400" value="1391212800">
-              <input type="text" id="sliderDLout" name="sliderDLout" value="2014-01-01" readonly>
+              <input type="text" id="sliderDLout" name="sliderDLout" value="2014-01-01" size="10" readonly>
             </div>
             <div>
-              <input type="range" id="sliderDH" name="sliderDH" min="1767225600" max="1388534400" step="86400" value="1764547200">
-              <input type="text" id="sliderDHout" name="sliderDHout" value="2026-01-01" readonly>
               <label for="sliderDH">Upper Date</label>
+              <input type="range" id="sliderDH" name="sliderDH" min="1388534400" max="1767225600" step="86400" value="1764547200">
+              <input type="text" id="sliderDHout" name="sliderDHout" value="2026-01-01" size="10" readonly>
             </div>
           </fieldset>
         </div>
@@ -688,8 +688,8 @@
           var low_timestamp = parseInt(e.target.value);
           var high_timestamp = Number(sliderDH.value);
           var dateFilter = ["all",
-            ['>=', ['number', ['get', 'tstamp']], low_timestamp],
-            ['>=', ['number', ['get', 'tstamp']], high_timestamp]];
+            ['>=', ['to-number', ['get', 'tstamp']], low_timestamp],
+            ['<=', ['to-number', ['get', 'tstamp']], high_timestamp]];
           for (let layer of Object.keys(layer_props)) {
             map.setFilter(layer, dateFilter);
           }
@@ -700,8 +700,8 @@
           var high_timestamp = parseInt(e.target.value);
           var low_timestamp = Number(sliderDL.value);
           var dateFilter = ["all",
-            ['>=', ['number', ['get', 'tstamp']], low_timestamp],
-            ['>=', ['number', ['get', 'tstamp']], high_timestamp]];
+            ['>=', ['to-number', ['get', 'tstamp']], low_timestamp],
+            ['<=', ['to-number', ['get', 'tstamp']], high_timestamp]];
           for (let layer of Object.keys(layer_props)) {
             map.setFilter(layer, dateFilter);
           }

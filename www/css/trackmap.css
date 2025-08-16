@@ -173,6 +173,11 @@ body {
   min-width: 20px;
 }
 
-#sliderDL {
-  direction: rtl
+/* For Chrome, Safari, Opera, and Edge  */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #ffffe6;
+}
+/* For Firefox */
+input[type="range"]::-moz-range-track {
+  background-color: #ffffe6;
 }
