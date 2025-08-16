@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
  <metadata>
+  <name>Saleinaz_ROUTE</name>
   <time>2005-04-03T00:00:01Z</time>
+  <keywords>NOT_TRACKED</keywords>
  </metadata>
  <trk>
   <name>Saleinaz_ROUTE</name>
+  <cmt>1970-07-19</cmt>
+  <type>BackcountrySki</type>
   <trkseg>
    <trkpt lat="45.98770789248684" lon="7.043989140399816">
     <ele>3271.658170288553</ele>

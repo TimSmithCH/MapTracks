@@ -1,7 +1,13 @@
 <?xml version="1.0"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
+  <metadata>
+    <name>Combiflue_ROUTE</name>
+    <keywords>NOT_TRACKED</keywords>
+  </metadata>
   <trk>
     <name>Combiflue_ROUTE</name>
+    <cmt>1970-07-19</cmt>
+    <type>BackcountrySki</type>
     <trkseg>
       <trkpt lat="46.6114321262451" lon="7.278128195127405">
         <ele>1016</ele>
