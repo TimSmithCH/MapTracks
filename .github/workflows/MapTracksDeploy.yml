@@ -66,6 +66,9 @@ jobs:
           echo ">>> Aggregate new GeoJSON files"
           grep -e '/tim/' Modified_Files | awk -F "/" '{print $4}' | sort | uniq | xargs -r -I {} python scripts/geojsons_merge.py -d tracks/tim/2_geojson/{} -o tracks/tim/1_display/{}_tracks.geojson
           grep -e '/alison/' Modified_Files | awk -F "/" '{print $4}' | sort | uniq | xargs -r -I {} python scripts/geojsons_merge.py -d tracks/alison/2_geojson/{} -o tracks/alison/1_display/{}_tracks.geojson
+          echo ">>> Ensure aggregate GeoJSON files have properties:date on each feature"
+          python scripts/geojson_validate.py -d tracks/tim/1_display/
+          python scripts/geojson_validate.py -d tracks/alison/1_display/
           rsync -avu "tracks/tim/1_display/" "www/tracks/tim/1_display/" 
           rsync -avu "tracks/alison/1_display/" "www/tracks/alison/1_display/" 
         #--- Next Step
