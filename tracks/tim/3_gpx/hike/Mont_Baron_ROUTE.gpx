@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+ <metadata>
+  <name>Mont_Baron_ROUTE</name>
+  <keywords>NOT_TRACKED</keywords>
+ </metadata>
  <trk>
   <name>Mont_Baron_ROUTE</name>
+  <cmt>1970-07-19</cmt>
+  <type>Hike</type>
   <trkseg>
    <trkpt lat="45.890941" lon="6.194936">
     <ele>1054.8579091200625</ele>

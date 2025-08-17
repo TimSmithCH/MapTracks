@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
+ <metadata>
+  <name>Breithorn_ROUTE</name>
+  <keywords>NOT_TRACKED</keywords>
+ </metadata>
   <metadata>
     <name>Breithorn_ROUTE</name>
   </metadata>
   <trk>
     <name>Breithorn_ROUTE</name>
     <cmt>2000-07-02</cmt>
-    <type>hike</type>
+    <type>Hike</type>
     <trkseg>
       <trkpt lat="45.9381081810923" lon="7.7293655244414365">
         <ele>3843</ele>

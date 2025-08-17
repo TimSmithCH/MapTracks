@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="MySchweizMobil - https://map.schweizmobil.ch/">
+ <metadata>
+  <name>Col_de_Mille_ROUTE</name>
+  <keywords>NOT_TRACKED</keywords>
+ </metadata>
  <trk>
   <name>Col_de_Mille_ROUTE</name>
+  <cmt>1970-07-19</cmt>
+  <type>Hike</type>
   <trkseg>
    <trkpt lat="46.00528331376142" lon="7.180396642299375">
     <ele>1466.6</ele>

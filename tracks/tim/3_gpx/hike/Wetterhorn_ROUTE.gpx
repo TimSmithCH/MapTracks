@@ -2,11 +2,12 @@
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
   <metadata>
     <name>Wetterhorn_ROUTE</name>
+    <keywords>NOT_TRACKED</keywords>
   </metadata>
   <trk>
     <name>Wetterhorn_ROUTE</name>
     <cmt>2000-07-03</cmt>
-    <type>hike</type>
+    <type>Hike</type>
     <trkseg>
       <trkpt lat="46.62513599869702" lon="8.09673862673647">
         <ele>2314</ele>

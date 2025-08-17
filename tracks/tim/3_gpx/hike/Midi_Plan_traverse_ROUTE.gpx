@@ -2,11 +2,12 @@
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="OpenLayers">
   <metadata>
     <name>Midi_Plan_traverse_ROUTE</name>
+    <keywords>NOT_TRACKED</keywords>
   </metadata>
   <trk>
     <name>Midi_Plan_traverse_ROUTE</name>
     <cmt>2000-07-01</cmt>
-    <type>hike</type>
+    <type>Hike</type>
     <trkseg>
       <trkpt lat="45.87916620937398" lon="6.887359488951269">
       </trkpt>

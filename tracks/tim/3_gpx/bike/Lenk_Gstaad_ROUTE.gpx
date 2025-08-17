@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+ <metadata>
+  <name>Lenk_Gstaad_ROUTE</name>
+  <keywords>NOT_TRACKED</keywords>
+ </metadata>
  <trk>
-  <name>ROUTE_Lenk_Gstaad</name>
+  <name>Lenk_Gstaad_ROUTE</name>
+  <cmt>1970-07-19</cmt>
+  <type>Ride</type>
   <trkseg>
    <trkpt lat="46.4730605198" lon="7.43475053178">
     <ele>1032.14</ele>

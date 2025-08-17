@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+ <metadata>
+  <name>Le_Chasseron_Le_Prévoux_ROUTE</name>
+  <keywords>NOT_TRACKED</keywords>
+ </metadata>
  <trk>
-  <name>ROUTE_Le_Chasseron_Le_Prévoux</name>
+  <name>Le_Chasseron_Le_Prévoux_ROUTE</name>
+  <cmt>1970-07-19</cmt>
+  <type>Ride</type>
   <trkseg>
    <trkpt lat="46.8500205251" lon="6.53866454075">
     <ele>1584.99</ele>

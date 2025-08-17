@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+ <metadata>
+  <name>Château_d_Oex_Lenk_ROUTE</name>
+  <keywords>NOT_TRACKED</keywords>
+ </metadata>
  <trk>
-  <name>ROUTE_Château_d_Oex_Lenk</name>
+  <name>Château_d_Oex_Lenk_ROUTE</name>
+  <cmt>1970-07-19</cmt>
+  <type>Ride</type>
   <trkseg>
    <trkpt lat="46.4737845213" lon="7.13024753362">
     <ele>958.71</ele>
