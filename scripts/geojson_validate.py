@@ -1,20 +1,25 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-#-------------------------------------------------------------------------------
-#
-# DESCRIPTION
-#    Validate GeoJSON files generated in MapTracks processing have sensible
-#    track coordinate arrays. Issue summary information
-#
-# EXAMPLES
-#    python geojson_validate.py -f tracks/tim/1_display/vehicle_tracks.geojson
-#
-# IMPLEMENTATION
-#    Author       Tim Smith
-#    Copyright    Copyright (c) Tim Smith
-#    Licence      GNU General Public License
-#
-#-------------------------------------------------------------------------------
+"""
+-------------------------------------------------------------------------------
+
+ DESCRIPTION
+    Validate GeoJSON files generated in MapTracks processing have sensible
+    track coordinate arrays. Issue summary information
+    Add DATE metadata if file doesnt contain it (since only added to individual
+    geojsons July 2025  and not backdated yet so only new ones have it)
+
+
+ EXAMPLES
+    python geojson_validate.py -f tracks/tim/1_display/vehicle_tracks.geojson
+
+ IMPLEMENTATION
+    Author       Tim Smith
+    Copyright    Copyright (c) Tim Smith
+    Licence      GNU General Public License
+
+-------------------------------------------------------------------------------
+"""
 from json import load, dump
 from argparse import ArgumentParser
 from re import compile

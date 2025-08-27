@@ -1,29 +1,33 @@
 #!/usr/bin/python
-# #!/Users/Tim/Code/ACTION/BigSurPy3/bin/python
 # -*- coding: utf-8 -*-
-# -------------------------------------------------------------------------------
-#
-# DESCRIPTION
-#    Covert GPX files into GeoJSON files. At the same time:
-#    Always enhace:
-#     - add global bounding box to file metadata
-#     - add track bounding box to each track metadata
-#     - promote segments into tracks
-#    Optionally apply various transformations to the tracks:
-#     - split tracks into up-hill and down-hill segments (before promotion!)
-#     - simplify the track using Douglas-Peucker algorithm to reduce # points
-#
-# EXAMPLES
-#    python gpx_to_geojson.py -s -u tracks/tim/3_gpx/bike/9634087156.Baudichonne.gpx
-#    ls tracks/tim/3_gpx/skiclimb/8* | xargs -I {} ./gpx_to_geojson.py {}
-#    git status --porcelain tracks/tim/3_gpx | awk '{print $2}' | xargs -I {} ./gpx_to_geojson.py {}
-#
-# IMPLEMENTATION
-#    Author       Tim Smith
-#    Copyright    Copyright (c) Tim Smith
-#    Licence      GNU General Public License
-#
-# -------------------------------------------------------------------------------
+"""
+-------------------------------------------------------------------------------
+
+ DESCRIPTION
+    Convert GPX files into GeoJSON files
+    Metadata actions: Pass through GPX metadata, and add:
+     - track bounding box to each track metadata
+     - global bounding box to file metadata
+     - tstamp (the timestamp expressed as minutes since 1970; for map date filter)
+     - desc (indicating if track is up or down hill; for map styling)
+     Track actions:
+     - split segments/tracks into up-hill and down-hill segments
+     - simplify the track using Douglas-Peucker algorithm to reduce # points
+     - promote segments into tracks
+
+ EXAMPLES
+    python gpx_to_geojson.py -s -u tracks/tim/3_gpx/bike/9634087156.Baudichonne.gpx
+    ls tracks/tim/3_gpx/skiclimb/8* | xargs -I {} ./gpx_to_geojson.py {}
+    git status --porcelain tracks/tim/3_gpx | awk '{print $2}' | xargs -I {} ./gpx_to_geojson.py {}
+
+ IMPLEMENTATION
+    Author       Tim Smith
+    Copyright    Copyright (c) Tim Smith
+    Licence      GNU General Public License
+
+-------------------------------------------------------------------------------
+"""
+
 import os
 import pathlib
 import argparse

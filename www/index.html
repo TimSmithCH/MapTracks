@@ -40,28 +40,30 @@
                   <label for="Bike">Bike</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="MountSki" name="layer_mountski" checked="">
-                  <label for="MountSki">MountSki</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="Run" name="layer_run" checked="">
-                  <label for="Run">Run</label>
-                </div>
-              </div>
-              <div class="selector_col">
-                <div>
                   <input type="checkbox" id="Ski" name="layer_ski" checked="">
                   <label for="Ski">Ski</label>
                 </div>
                 <div>
+                  <input type="checkbox" id="Swim" name="layer_swim">
+                  <label for="Swim">Swim</label>
+                </div>
+              </div>
+              <div class="selector_col">
+                <div>
+                  <input type="checkbox" id="Run" name="layer_run" checked="">
+                  <label for="Run">Run</label>
+                </div>
+                <div>
                   <input type="checkbox" id="Commute" name="layer_commute">
-                  <label for="Commute">Commute</label>
+                  <label for="Commute">Commute</label> (<i id="cb_layer_commute">9999</i>)
+                </div>
+                <div>
+                  <input type="checkbox" id="MountSki" name="layer_mountski" checked="">
+                  <label for="MountSki">MountSki</label>
                 </div>
                 <div>
                   <input type="checkbox" id="Vehicle" name="layer_vehicle">
                   <label for="Vehicle">Vehicle</label>
-                </div>
-                <div>
                   <input type="checkbox" id="WIP" name="layer_wip" checked="">
                   <label for="WIP">WIP</label>
                 </div>
@@ -153,6 +155,7 @@
           layer_run:     { source_layer: "run_tracks",     source: "geojson", colour: "#B10DC9", init_state: "active", text: "Run" },
           layer_ski:     { source_layer: "ski_tracks",     source: "geojson", colour: "#0099FF", init_state: "active", text: "Ski" },
           layer_commute: { source_layer: "commute_tracks", source: "geojson", colour: "#10A210", init_state: "hidden", text: "Commute" },
+          layer_swim:    { source_layer: "swim_tracks",    source: "geojson", colour: "#10A210", init_state: "active", text: "Swim" },
           layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FF8000", init_state: "hidden", text: "Vehicle" },
           layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FFCC00", init_state: "active", text: "WIP" }
         };
@@ -435,7 +438,7 @@
           // OR Create a layer of routes of each type from geojson files
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "geojson") {
-              //OLD_SCHOOL && console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
+              OLD_SCHOOL && console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
               map.addSource(layer, {
                 type: 'geojson',
                 "data": "tracks/tim/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
@@ -512,6 +515,7 @@
           }
         });
 
+        // StyleData event fires when setStyle is called
         map.on('styledata', function () {
           OLD_SCHOOL && console.log("ON StyleData",basechange);
           // Triggered when `setStyle` is called, to enable 2D/3D switching
@@ -520,12 +524,31 @@
           }
         });
 
+        // Load event fires when load process started, but asychronous so layer data loads later
         map.on('load', function () {
           OLD_SCHOOL && console.log("ON Load");
           addDataLayers();
           // Save a list of all local layers created (as an automatically global variable, ugg)
           const layers = map.getStyle().layers.filter(l => l.id.includes('layer_'));
           lays = layers.map(l => l.id);
+        });
+
+        // SourceData event fires when asychronous data loads, which is in multiple parts, find final one
+        map.on('sourcedata', (e)=> {
+          OLD_SCHOOL && console.log("ON SourceData");
+          if (e.source.type == "geojson" && e.isSourceLoaded && e.sourceCacheId) {
+            let num_features = map.querySourceFeatures(e.sourceId, { sourceLayer: e.sourceId }).length;
+            //let features = map.querySourceFeatures(e.sourceId, { sourceLayer: e.sourceId });
+            //const feature_names = features.map(features => features.properties.name);
+            //let num_features = new Set(feature_names).size;
+            let checkbox = "cb_" + e.sourceId
+            OLD_SCHOOL && console.log("Layer: " + e.sourceId + " Num features: " + num_features);
+            let cbe = document.getElementById(checkbox);
+            if (cbe) {
+              cbe.innerHTML = num_features;
+            }
+            //map.off('sourcedata'); // turn off sourcedata listener if its no longer needed
+          }
         });
 
         //----------------------------------------------

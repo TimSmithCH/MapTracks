@@ -7,6 +7,11 @@
     Download Strava data to create GPX files per activity. Use the Strava API
     to construct an activity list since last download, then for each activity
     download Strava's actvity streams and reconstruct a GPX file from the data
+ ACTIONS
+     - Add metadata block containing: time, name, keywords (strava activity id)
+     - Add track block containing: name, comment (date), type
+     - Add 1 track with 1 segment of points consisting of: lat, long, elevation, time
+     - Filename contains {Strava activity id}.{activity name}
 
  EXAMPLES
     python pull_strava_data.py -o "tracks/" -a tim -p 20 -n 1            # Basic, last 20 activities in one page
