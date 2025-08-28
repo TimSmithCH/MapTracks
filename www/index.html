@@ -44,7 +44,7 @@
                   <label for="Ski">Ski</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="Swim" name="layer_swim">
+                  <input type="checkbox" id="Swim" name="layer_swim" checked="">
                   <label for="Swim">Swim</label>
                 </div>
               </div>
@@ -155,9 +155,9 @@
           layer_run:     { source_layer: "run_tracks",     source: "geojson", colour: "#B10DC9", init_state: "active", text: "Run" },
           layer_ski:     { source_layer: "ski_tracks",     source: "geojson", colour: "#0099FF", init_state: "active", text: "Ski" },
           layer_commute: { source_layer: "commute_tracks", source: "geojson", colour: "#10A210", init_state: "hidden", text: "Commute" },
-          layer_swim:    { source_layer: "swim_tracks",    source: "geojson", colour: "#10A210", init_state: "active", text: "Swim" },
-          layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FF8000", init_state: "hidden", text: "Vehicle" },
-          layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FFCC00", init_state: "active", text: "WIP" }
+          layer_swim:    { source_layer: "swim_tracks",    source: "geojson", colour: "#FFCC00", init_state: "active", text: "Swim" },
+          layer_vehicle: { source_layer: "vehicle_tracks", source: "geojson", colour: "#FF00FF", init_state: "hidden", text: "Vehicle" },
+          layer_wip:     { source_layer: "wip_tracks",     source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
         };
         var layerMask = urlSearchParams.get('layer');
         // Defaults are equivalent to a layerMask of "HBSRMcvW"
@@ -533,10 +533,11 @@
           lays = layers.map(l => l.id);
         });
 
-        // SourceData event fires when asychronous data loads, which is in multiple parts, find final one
+        // SourceData event fires when asychronous data loads a chunk, so wait for last chunk
         map.on('sourcedata', (e)=> {
           OLD_SCHOOL && console.log("ON SourceData");
           if (e.source.type == "geojson" && e.isSourceLoaded && e.sourceCacheId) {
+            // Every segment is a track, so overcounts excursions
             let num_features = map.querySourceFeatures(e.sourceId, { sourceLayer: e.sourceId }).length;
             //let features = map.querySourceFeatures(e.sourceId, { sourceLayer: e.sourceId });
             //const feature_names = features.map(features => features.properties.name);
