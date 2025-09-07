@@ -117,6 +117,7 @@
 
                     // add track to the map
                     map.addSource('trace', { type: 'geojson', data: data });
+                    console.log("Map: Add track layer");
                     map.addLayer({
                         "id": "trace",
                         "type": "line",
@@ -131,6 +132,7 @@
                           "line-width": 4
                         }
                     });
+                    console.log("Map: Add way-point layer");
                     map.addLayer({
                       'id': "trace-points",
                       'type': 'symbol',
@@ -204,6 +206,7 @@
 
                     // add points to the map
                     map.addSource('points', { type: 'geojson', data: point_data });
+                    console.log("Map: Add track-point layer");
                     map.addLayer({
                         "id": "points",
                         "type": "symbol",
@@ -214,6 +217,7 @@
                     });
                     var bad_point_data = { "type": "FeatureCollection", "features": [] };
                     map.addSource('bad_points', { type: 'geojson', data: bad_point_data });
+                    console.log("Map: Add deleted track-point layer");
                     map.addLayer({
                         "id": "bad_points",
                         "type": "symbol",
@@ -229,7 +233,14 @@
                     });
 
                     // Zoom to fit track in screen
-                    var coordinates = data.features[0].geometry.coordinates;
+                    console.log("Zoom to track bounds");
+                    if (data.features[0].geometry.type == "LineString") {
+                      console.log("Simple LineString");
+                      var coordinates = data.features[0].geometry.coordinates;
+                    } else {
+                      console.log("Multi-LineString");
+                      var coordinates = data.features[0].geometry.coordinates[0];
+                    }
                     var bounds = coordinates.reduce(function(bounds, coord) {
                         return bounds.extend(coord);
                     }, new mapboxgl.LngLatBounds(coordinates[0], coordinates[0]));
@@ -238,6 +249,7 @@
                     });
 
                     // Create the handler to delete point when clicked
+                    console.log("ON: point click handler");
                     var index_removed = [];
                     map.on('click', 'points', function(e) {
                         // ID of clicked point
