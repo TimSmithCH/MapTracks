@@ -403,7 +403,7 @@ if __name__ == "__main__":
             print(" ACTION: Converting waypoints to Feature Points")
         for wp in gpx.waypoints:
             if wp.time == None:
-                wp_date = "0000-00-00"
+                wp_date = "1970-01-01"
             else:
                 wp_date = str(wp.time.date())
             if VERBOSE:
