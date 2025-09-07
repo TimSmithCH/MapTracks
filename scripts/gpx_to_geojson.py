@@ -402,10 +402,14 @@ if __name__ == "__main__":
         if VERBOSE:
             print(" ACTION: Converting waypoints to Feature Points")
         for wp in gpx.waypoints:
+            if wp.time == None:
+                wp_date = "0000-00-00"
+            else:
+                wp_date = str(wp.time.date())
             if VERBOSE:
                 print(
-                    "  > WayPoint: {} -> ({},{}) type [{}]".format(
-                        wp.name, wp.latitude, wp.longitude, wp.description
+                    "  > WayPoint: {} -> ({},{}) type [{}] date [{}]".format(
+                        wp.name, wp.latitude, wp.longitude, wp.description, wp_date
                     )
                 )
             geo_point = geojson.Point(
@@ -413,7 +417,7 @@ if __name__ == "__main__":
             )
             geo_features.append(
                 geojson.Feature(
-                    properties={"name": wp.name, "desc": wp.description},
+                    properties={"name": wp.name, "desc": wp.description, "cmt": wp_date},
                     geometry=geo_point,
                 )
             )

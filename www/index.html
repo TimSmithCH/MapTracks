@@ -524,13 +524,14 @@
           }
         });
 
-        // Load event fires when load process started, but asychronous so layer data loads later
+        // Load event fires when load process started, but its asychronous so layer data loads later
         map.on('load', function () {
           OLD_SCHOOL && console.log("ON Load");
           addDataLayers();
           // Save a list of all local layers created (as an automatically global variable, ugg)
           const layers = map.getStyle().layers.filter(l => l.id.includes('layer_'));
           lays = layers.map(l => l.id);
+          //console.log(lays);
         });
 
         // SourceData event fires when asychronous data loads a chunk, so wait for last chunk
@@ -539,9 +540,6 @@
           if (e.source.type == "geojson" && e.isSourceLoaded && e.sourceCacheId) {
             // Every segment is a track, so overcounts excursions
             let num_features = map.querySourceFeatures(e.sourceId, { sourceLayer: e.sourceId }).length;
-            //let features = map.querySourceFeatures(e.sourceId, { sourceLayer: e.sourceId });
-            //const feature_names = features.map(features => features.properties.name);
-            //let num_features = new Set(feature_names).size;
             let checkbox = "cb_" + e.sourceId
             OLD_SCHOOL && console.log("Layer: " + e.sourceId + " Num features: " + num_features);
             let cbe = document.getElementById(checkbox);
@@ -599,6 +597,23 @@
               // Bounds convention: LonLat SW corner, LonLat NW corner
               map.fitBounds([ [tbbox[0],tbbox[1]], [tbbox[2],tbbox[3]] ], { padding: 20 });
             }
+          });
+        }
+        OLD_SCHOOL && console.log("Create handlers for mouse-enter track-point layers");
+        for (let layer of Object.keys(layer_props)) {
+          let layerp = layer + "-points"
+          map.on('mouseenter', layerp, function(e) {
+            // Change the cursor style as a UI indicator.
+            map.getCanvas().style.cursor = 'pointer';
+            // Populate the popup and set its coordinates based on the feature found
+            var date = e.features[0].properties.cmt
+            popup.setLngLat(e.lngLat)
+              .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+              .addTo(map);
+          });
+          map.on('mouseleave', layerp, function() {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
           });
         }
 
