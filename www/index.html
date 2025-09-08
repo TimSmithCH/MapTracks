@@ -295,7 +295,7 @@
             "data": "features/CH_Canton_Mountains.json"
           });
           map.addLayer({
-            "id": "layer_cantons-points",
+            "id": "layer_cantons_pts",
             "type": "circle",
             "source": "cantons-points",
             "layout": {
@@ -330,7 +330,7 @@
             "data": "features/CH_Mountains_H3000_P300.json"
           });
           map.addLayer({
-            "id": "layer_mountainsH",
+            "id": "layer_mountainsH_pts",
             "type": "circle",
             "source": "mountainsH",
             "layout": {
@@ -361,7 +361,7 @@
             "data": "features/EU_Mountains_H4000.json"
           });
           map.addLayer({
-            "id": "layer_mountainsE",
+            "id": "layer_mountainsE_pts",
             "type": "circle",
             "source": "mountainsE",
             "layout": {
@@ -473,7 +473,7 @@
               });
               OLD_SCHOOL && console.log("MapBox: add track layer");
               map.addLayer({
-                'id': layer + "-points",
+                'id': layer + "_pts",
                 'type': 'symbol',
                 'source': layer,
                 "minzoom": 6,
@@ -558,7 +558,8 @@
           closeOnClick: false
         });
 
-        //-- Loop creating popup on hover for each layer
+        //----------------------------------------------
+        // Loop creating popup on hover for each layer
         OLD_SCHOOL && console.log("Create handler for click-centre");
         function click_handler(e) {
           // Left-click: track bounds are in bbox attribute
@@ -599,17 +600,29 @@
             }
           });
         }
+
+        //----------------------------------------------
+        // Create popup on hover for each waypoint layer
         OLD_SCHOOL && console.log("Create handlers for mouse-enter track-point layers");
-        for (let layer of Object.keys(layer_props)) {
-          let layerp = layer + "-points"
+        let wp_layers = Object.keys(layer_props).concat(["layer_mountainsH","layer_mountainsE","layer_cantons"]);
+        console.log(wp_layers);
+        for (let layer of wp_layers) {
+          let layerp = layer + "_pts";
           map.on('mouseenter', layerp, function(e) {
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
             // Populate the popup and set its coordinates based on the feature found
-            var date = e.features[0].properties.cmt
-            var height = e.features[0].properties.height
+            let html_string = '<strong>' + e.features[0].properties.name + '</strong>';
+            var datec = e.features[0].properties.cmt;
+            if (datec) {
+              html_string += '<br>' + datec;
+            }
+            var height = e.features[0].properties.height;
+            if (height) {
+              html_string += '<br>' + height + ' m';
+            }
             popup.setLngLat(e.lngLat)
-              .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date +'<br>' + height + 'm')
+              .setHTML(html_string)
               .addTo(map);
           });
           map.on('mouseleave', layerp, function() {
@@ -617,54 +630,6 @@
             popup.remove();
           });
         }
-
-        //-- Create popup on hover for CH mountains
-        OLD_SCHOOL && console.log("Create handlers for mouse-enter mountains");
-        map.on('mouseenter', "layer_mountainsH", function(e) {
-          // Change the cursor style as a UI indicator
-          map.getCanvas().style.cursor = 'pointer';
-          // Populate the popup and set its coordinates based on the feature found
-          var height = e.features[0].properties.height
-          popup.setLngLat(e.lngLat)
-            .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
-            .addTo(map);
-        });
-        map.on('mouseleave', "layer_mountainsH", function() {
-          map.getCanvas().style.cursor = '';
-          popup.remove();
-        });
-
-        //----------------------------------------------
-        // Create popup on hover for EU mountains
-        map.on('mouseenter', "layer_mountainsE", function(e) {
-          // Change the cursor style as a UI indicator
-          map.getCanvas().style.cursor = 'pointer';
-          // Populate the popup and set its coordinates based on the feature found
-          var height = e.features[0].properties.height
-          popup.setLngLat(e.lngLat)
-            .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
-            .addTo(map);
-        });
-        map.on('mouseleave', "layer_mountainsE", function() {
-          map.getCanvas().style.cursor = '';
-          popup.remove();
-        });
-
-        //----------------------------------------------
-        // Create popup on hover for Canton mountains
-        map.on('mouseenter', "layer_cantons-points", function(e) {
-          // Change the cursor style as a UI indicator
-          map.getCanvas().style.cursor = 'pointer';
-          // Populate the popup and set its coordinates based on the feature found
-          var height = e.features[0].properties.height
-          popup.setLngLat(e.lngLat)
-            .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + height)
-            .addTo(map);
-        });
-        map.on('mouseleave', "layer_cantons-points", function() {
-          map.getCanvas().style.cursor = '';
-          popup.remove();
-        });
 
         //----------------------------------------------
         // Add click actions for all layer checkboxes
@@ -678,7 +643,7 @@
               e.preventDefault();
               e.stopPropagation();
               var id = e.srcElement.name;
-              var idmark = id + "-points";
+              var idmark = id + "_pts";
               // If selected, make layer visible
               if (this.checked) {
                 this.className = 'active';

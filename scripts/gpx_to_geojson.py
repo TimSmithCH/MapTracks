@@ -417,7 +417,7 @@ if __name__ == "__main__":
             )
             geo_features.append(
                 geojson.Feature(
-                    properties={"name": wp.name, "desc": wp.description, "cmt": wp_date},
+                    properties={"name": wp.name, "desc": wp.description, "cmt": wp_date, "height": wp.elevation},
                     geometry=geo_point,
                 )
             )

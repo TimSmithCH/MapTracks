@@ -240,7 +240,7 @@
               });
               OLD_SCHOOL && console.log("MapBox: add track layer");
               map.addLayer({
-                'id': layer + "-points",
+                'id': layer + "_pts",
                 'type': 'symbol',
                 'source': layer,
                 "minzoom": 6,
@@ -306,7 +306,8 @@
           closeOnClick: false
         });
 
-        //-- Loop creating popup on hover for each layer
+        //----------------------------------------------
+        // Loop creating popup on hover for each layer
         OLD_SCHOOL && console.log("Create handler for click-centre");
         function click_handler(e) {
           // Left-click: track bounds are in bbox attribute
@@ -324,9 +325,9 @@
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
             // Populate the popup and set its coordinates based on the feature found
-            var date = e.features[0].properties.cmt
+            var datec = e.features[0].properties.cmt
             popup.setLngLat(e.lngLat)
-              .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+              .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + datec)
               .addTo(map);
           });
           map.on('mouseleave', layer, function() {
@@ -349,6 +350,38 @@
         }
 
         //----------------------------------------------
+        // Create popup on hover for each waypoint layer
+        OLD_SCHOOL && console.log("Create handlers for mouse-enter track-point layers");
+        let wp_layers = Object.keys(layer_props).concat(["layer_mountainsH","layer_mountainsE","layer_cantons"]);
+        console.log(wp_layers);
+        for (let layer of wp_layers) {
+          let layerp = layer + "_pts";
+          map.on('mouseenter', layerp, function(e) {
+            // Change the cursor style as a UI indicator.
+            map.getCanvas().style.cursor = 'pointer';
+            // Populate the popup and set its coordinates based on the feature found
+            let html_string = '<strong>' + e.features[0].properties.name + '</strong>';
+            var datec = e.features[0].properties.cmt;
+            if (datec) {
+              html_string += '<br>' + datec;
+            }
+            var height = e.features[0].properties.height;
+            //console.log(e.features[0].properties);
+            if (height) {
+              html_string += '<br>' + height + ' m';
+            }
+            popup.setLngLat(e.lngLat)
+              .setHTML(html_string)
+              .addTo(map);
+          });
+          map.on('mouseleave', layerp, function() {
+            map.getCanvas().style.cursor = '';
+            popup.remove();
+          });
+        }
+
+
+        //----------------------------------------------
         // Add click actions for all layer checkboxes
         OLD_SCHOOL && console.log("Create handlers for checkbox selectors");
         const checks = document.querySelectorAll('input[type="checkbox"]');
@@ -360,7 +393,7 @@
               e.preventDefault();
               e.stopPropagation();
               var id = e.srcElement.name;
-              var idmark = id + "-points";
+              var idmark = id + "_pts";
               // If selected, make layer visible
               if (this.checked) {
                 this.className = 'active';
