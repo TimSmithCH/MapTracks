@@ -607,8 +607,9 @@
             map.getCanvas().style.cursor = 'pointer';
             // Populate the popup and set its coordinates based on the feature found
             var date = e.features[0].properties.cmt
+            var height = e.features[0].properties.height
             popup.setLngLat(e.lngLat)
-              .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date)
+              .setHTML('<strong>' + e.features[0].properties.name +'</strong><br>' + date +'<br>' + height + 'm')
               .addTo(map);
           });
           map.on('mouseleave', layerp, function() {
@@ -633,6 +634,7 @@
           popup.remove();
         });
 
+        //----------------------------------------------
         // Create popup on hover for EU mountains
         map.on('mouseenter', "layer_mountainsE", function(e) {
           // Change the cursor style as a UI indicator
@@ -648,6 +650,7 @@
           popup.remove();
         });
 
+        //----------------------------------------------
         // Create popup on hover for Canton mountains
         map.on('mouseenter', "layer_cantons-points", function(e) {
           // Change the cursor style as a UI indicator
