@@ -402,10 +402,10 @@ if __name__ == "__main__":
         if VERBOSE:
             print(" ACTION: Converting waypoints to Feature Points")
         for wp in gpx.waypoints:
-            if wp.time == None:
-                wp_date = "1970-01-01"
-            else:
+            if wp.time != None:
                 wp_date = str(wp.time.date())
+            else:
+                wp_date = None
             if VERBOSE:
                 print(
                     "  > WayPoint: {} -> ({},{}) type [{}] date [{}]".format(

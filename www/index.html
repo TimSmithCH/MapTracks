@@ -605,7 +605,6 @@
         // Create popup on hover for each waypoint layer
         OLD_SCHOOL && console.log("Create handlers for mouse-enter track-point layers");
         let wp_layers = Object.keys(layer_props).concat(["layer_mountainsH","layer_mountainsE","layer_cantons"]);
-        console.log(wp_layers);
         for (let layer of wp_layers) {
           let layerp = layer + "_pts";
           map.on('mouseenter', layerp, function(e) {

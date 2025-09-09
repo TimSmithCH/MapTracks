@@ -205,7 +205,7 @@
           // Create a layer of routes of each type from geojson files
           for (let layer of Object.keys(layer_props)) {
             if (layer_props[layer]["source"] === "geojson") {
-              //OLD_SCHOOL && console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
+              OLD_SCHOOL && console.log("GeoJSON source for ", layer_props[layer]["source_layer"])
               map.addSource(layer, {
                 type: 'geojson',
                 "data": "tracks/alison/1_display/" + layer_props[layer]["source_layer"] + ".geojson"
@@ -238,7 +238,7 @@
                   ]
                 }
               });
-              OLD_SCHOOL && console.log("MapBox: add track layer");
+              OLD_SCHOOL && console.log("MapBox: add track-point layer: " + layer);
               map.addLayer({
                 'id': layer + "_pts",
                 'type': 'symbol',
@@ -353,7 +353,6 @@
         // Create popup on hover for each waypoint layer
         OLD_SCHOOL && console.log("Create handlers for mouse-enter track-point layers");
         let wp_layers = Object.keys(layer_props).concat(["layer_mountainsH","layer_mountainsE","layer_cantons"]);
-        console.log(wp_layers);
         for (let layer of wp_layers) {
           let layerp = layer + "_pts";
           map.on('mouseenter', layerp, function(e) {
