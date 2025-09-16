@@ -7,8 +7,8 @@
 #    and check all GEOJSONs have a corresponding GPX and delete them if not
 #
 # EXAMPLES
-#    python geojson_sync_check.py -f -r -t bike
-#    python geojson_sync_check.py -f -t bike -o
+#    python geojson_sync_check.py -f -r -t bike   # Generate GeoJSONs that dont exist and delete GeoJSONs without GPX
+#    python geojson_sync_check.py -f -t bike -o   # Generate GeoJSONs that dont exist or are older than the GPX
 #
 # IMPLEMENTATION
 #    Author       Tim Smith
@@ -85,7 +85,7 @@ if __name__ == "__main__":
         trkdirs = [args.trkdirs]
 
     if args.forward == True:
-        print("Forward: Check all GPXs have a corresponding GEOJSON")
+        print("Forward: Check all of {}'s GPXs have a corresponding GEOJSON".format(args.athlete))
         for trkdir in trkdirs:
             print("INFO: Processing {} files".format(trkdir))
             fpath = "tracks/" + args.athlete + "/3_gpx/" + trkdir
@@ -97,11 +97,11 @@ if __name__ == "__main__":
                 geofile = pathlib.Path(
                     str(gpxfile).replace("3_gpx", "2_geojson")
                 ).with_suffix(".geojson")
-                # Generate GeoJSON is it doesnt even exist
+                # Generate GeoJSON if it doesnt even exist
                 if not geofile.is_file():
                     print(" ACTION: Need to re-generate {}".format(geofile))
                     generate_geojson = True
-                # Re-generate GeoJSON it exists but is older than the GPX file
+                # Re-generate GeoJSON if exists but is older than the GPX file
                 else:
                     if args.old == True:
                         process = subprocess.run(
@@ -151,7 +151,7 @@ if __name__ == "__main__":
                         print(termcolor.colored(process.stdout, "green"))
 
     if args.reverse == True:
-        print("Reverse: Check all GEOJSONs have a corresponding GPX")
+        print("Reverse: Check all of {}'s GEOJSONs have a corresponding GPX".format(args.athlete))
         for trkdir in trkdirs:
             print("INFO: Processing {} files".format(trkdir))
             fpath = "tracks/" + args.athlete + "/2_geojson/" + trkdir
