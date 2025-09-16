@@ -26,7 +26,6 @@ from re import compile
 import datetime
 import sys
 import os
-import numpy as np
 
 
 parser = ArgumentParser(description="Quick GeoJSON structure validation.")
@@ -50,7 +49,7 @@ if __name__ == '__main__':
         elif os.path.isdir(fpath):
             mpaths = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(fpath)) for f in fn]
             # Retain only GEOJSON files from the mpaths list
-            infiles = np.append(infiles,[ file for file in mpaths if file.endswith('.geojson') ])
+            infiles.extend([ file for file in mpaths if file.endswith('.geojson') ])
 
     for infile in infiles:
         modified = False
