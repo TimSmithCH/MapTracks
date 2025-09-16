@@ -26,6 +26,7 @@ from re import compile
 import datetime
 import sys
 import os
+import numpy as np
 
 
 parser = ArgumentParser(description="Quick GeoJSON structure validation.")
@@ -35,22 +36,26 @@ defaults = dict(outfile=sys.stdout)
 parser.set_defaults(**defaults)
 
 # Can be passed a list of files
-parser.add_argument('-d', '--directory', help='Directory containing files to be merged')
-parser.add_argument('-f', '--files', nargs='*', help='Files to be validated')
+parser.add_argument('-d', '--dryrun',  action='store_true', help='Dont actually update files')
+parser.add_argument('-f', '--files',   nargs='*', help='Files to be validated')
+parser.add_argument('-s', '--stats',   action='store_true', help='Brief statistics output')
 parser.add_argument('-v', '--verbose', action='store_true', help='Verbose output')
 
 if __name__ == '__main__':
+    infiles = []
     args = parser.parse_args()
-    if isinstance(args.files, list):
-        # Already supplied a list of files
-        infiles = args.files
-    else:
-        # Expand directory into a list of files
-        infiles = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(args.directory)) for f in fn]
+    for fpath in args.files:
+        if os.path.isfile(fpath):
+            infiles.append(fpath)
+        elif os.path.isdir(fpath):
+            mpaths = [os.path.join(dp, f) for dp, dn, fn in os.walk(os.path.expanduser(fpath)) for f in fn]
+            # Retain only GEOJSON files from the mpaths list
+            infiles = np.append(infiles,[ file for file in mpaths if file.endswith('.geojson') ])
 
     for infile in infiles:
         modified = False
-        print("Opening {}".format(infile))
+        if args.verbose:
+            print("Opening {}".format(infile))
         with open(infile) as f:
             try:
                 injson = load(f)
@@ -63,16 +68,21 @@ if __name__ == '__main__':
         if type(injson.get('features', None)) != list:
             raise Exception('Sorry, "%s" does not look like GeoJSON' % infile)
 
-        print(" Number of features: {}".format(len(injson['features'])))
+        if args.verbose:
+            print(" Number of features: {}".format(len(injson['features'])))
         for f in injson['features']:
             if f['geometry']['type'] == "LineString":
                 if args.verbose:
                     print(" Number of coordinates: {} in {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
                 elif len(f['geometry']['coordinates']) < 2:
                     print(" Number of coordinates: {} in {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
+                elif args.stats:
+                    print(" {:5} coords {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
             elif f['geometry']['type'] == "Point":
                 if args.verbose:
                     print(" Number of points: {} in {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
+                if args.stats:
+                    print(" {:5} points {}".format(len(f['geometry']['coordinates']), f['properties']['name']))
             else:
                 raise Exception('Sorry, {} feature isnt a LineString or Waypoint'.format(f['properties']['name']))
             if 'cmt' in f['properties']:
@@ -91,7 +101,11 @@ if __name__ == '__main__':
                         f['properties']['tstamp'] = tstamp
                         modified = True
         if modified:
-            print(" Writing modified contents {}".format(infile))
-            with open(infile, "w") as g:
-                dump(injson, g, ensure_ascii=False)
+            if args.dryrun == False:
+                print(" Writing modified contents {}".format(infile))
+                with open(infile, "w") as g:
+                    dump(injson, g, ensure_ascii=False)
+            else:
+                if args.verbose:
+                    print(" NOT writing modified contents {}".format(infile))
 
