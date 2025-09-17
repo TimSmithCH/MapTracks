@@ -9,6 +9,10 @@ on:
         description: 'Name of commit which triggered original workflow'
         required: true
         default: 'COMMIT'
+  # Runs on pushes targeting the www directory
+  push:
+    paths:
+      - 'www/**'
 
 run-name: Pages Deploy for øø ${{ github.event.inputs.caller }}
 
@@ -32,7 +36,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          sparse-checkout: www
       - name: Catchup with changes commited earlier in workflow
         run: git pull --rebase=false
       - name: Setup Pages
