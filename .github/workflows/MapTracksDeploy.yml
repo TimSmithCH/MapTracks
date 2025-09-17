@@ -3,8 +3,10 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
-    paths-ignore:
-      - 'www/**'
+    paths:
+      - 'scripts/**'
+      - 'tracks/tim/3_gpx/**'
+      - 'tracks/alison/3_gpx/**'
 
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
@@ -27,27 +29,16 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-        #--- Next Step
+      #--- Next Step
       - name: Install GPXpy and GeoJSON for gpx transformations
         run: pip install gpxpy geojson
-        #--- Next Step
+      #--- Checkout using PAT rather than default token, so PagesDeploy/push workflow gets triggered
       - name: Check out repository
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-          token: ${{secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN}}
-        #--- First Step
-      - name: Cache the status of WWW file updates
-        run: |
-          # If the last commit contained any www file updates
-          if ! git diff --quiet --exit-code "HEAD~1" "HEAD" www; then
-            echo "fresh_www=true" >> $GITHUB_ENV
-            echo ">>> WWW files have been updated and need pushing to Pages"
-          else
-            echo "fresh_www=false" >> $GITHUB_ENV
-            echo ">>> No new WWW files"
-          fi
-        #--- Next Step
+          token: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
+      #--- First Step
       - name: Generate GeoJson files from any new GPX files
         run: |
           # If the last commit contained any track files
@@ -62,7 +53,7 @@ jobs:
           else
             echo ">>> No GeoJSON files need generating"
           fi
-        #--- Next Step
+      #--- Next Step
       - name: Aggregate new GeoJson files
         run: |
           # If any geojson files were generated
@@ -91,22 +82,7 @@ jobs:
             git status -s 1>&2
             git commit -m "GeoJSONs for øø ${{ github.event.head_commit.message }}" 1>&2
             git push 1>&2
-            # Trigger the deployment to GitHub Pages MapTracks website
-            echo "do_pages=1" >> $GITHUB_OUTPUT
           else
             echo ">>> No new GeoJSON files to commit"
-            if $fresh_www == 'true'; then
-              echo ">>> But there were new WWW files committed"
-              echo "do_pages=1" >> $GITHUB_OUTPUT
-            else
-              echo "do_pages=0" >> $GITHUB_OUTPUT
-            fi
           fi
-        #--- Next Step
-        # Trigger the deployment to GitHub Pages MapTracks website
-      #- name: Signal PagesDeploy worfklow if necessary
-        #if: ${{ steps.committed.outputs.do_pages == 1 }}
-        #run: gh workflow run PagesDeploy.yml -f caller="${{ github.event.head_commit.message }}"
-        #env:
-          #GITHUB_TOKEN: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
 

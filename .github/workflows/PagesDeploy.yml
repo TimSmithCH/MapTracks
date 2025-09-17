@@ -14,7 +14,7 @@ on:
     paths:
       - 'www/**'
 
-run-name: Pages Deploy for øø ${{ github.event.inputs.caller }}
+run-name: Pages Deploy for øø ${{ github.event.inputs.caller || github.event.head_commit.message }} by @${{ github.actor }}
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
