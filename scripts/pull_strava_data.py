@@ -61,6 +61,7 @@ def parse_command_line():
             "light": False,
             "zero": False,
             "verbose": True,
+            "work": False,
         }
     # Parse command line arguments if not run in a Github ACTION
     else:
@@ -78,6 +79,7 @@ def parse_command_line():
             light=False,
             zero=False,
             verbose=False,
+            work=False,
         )
         parser.set_defaults(**defaults)
         # Parse the command line
@@ -101,6 +103,9 @@ def parse_command_line():
         )
         parser.add_argument(
             "-c", "--commute", action="store_false", help="Ignore commutes"
+        )
+        parser.add_argument(
+            "-w", "--work", action="store_true", help="Only commutes"
         )
         parser.add_argument(
             "-l",
@@ -153,6 +158,7 @@ def parse_command_line():
         orders["commute"] = args.commute
         orders["light"] = args.light
         orders["zero"] = args.zero
+        orders["work"] = args.work
 
 
 # -------------------------------------------------------------------------------
@@ -345,7 +351,8 @@ def loadActivitiesList():
         for i in activitiesToAdd:
             print(" - {} : {} : {}".format(str(i["id"]), str(i["type"]), str(i["name"])))
     stravaData["last_read"] = highestSeenID
-    json.dump(stravaData, open(orders.get("idFile"), "w"))
+    if orders["specdate"] == False:
+        json.dump(stravaData, open(orders.get("idFile"), "w"))
     return activitiesToAdd
 
 
@@ -436,6 +443,9 @@ if __name__ == "__main__":
     if orders["commute"] == False:
         filteredActivities = list(filter(lambda obj: not obj["commute"], activities))
         print(" Non-commutes retained [{}]:".format(len(filteredActivities)))
+    elif orders["work"] == True:
+        filteredActivities = list(filter(lambda obj: obj["commute"], activities))
+        print(" Only commutes retained [{}]:".format(len(filteredActivities)))
     else:
         filteredActivities = activities
         # filteredActivities = list(filter(lambda obj: obj['type'] == "Hike", activities))
