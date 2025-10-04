@@ -351,7 +351,7 @@ def loadActivitiesList():
         for i in activitiesToAdd:
             print(" - {} : {} : {}".format(str(i["id"]), str(i["type"]), str(i["name"])))
     stravaData["last_read"] = highestSeenID
-    if orders["specdate"] == False:
+    if "specdate" not in orders:
         json.dump(stravaData, open(orders.get("idFile"), "w"))
     return activitiesToAdd
 
