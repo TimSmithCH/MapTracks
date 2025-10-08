@@ -42,6 +42,7 @@ parser.add_argument('-v', '--verbose',   action='store_true', help='Turn on verb
 args = parser.parse_args()
 print(">>> Cmd line: process files ({})".format(args.files))
 print(">>> Cmd line: apply simplify ({}), drop timing ({}), round elevations ({})".format(args.simplify,args.time,args.elevation))
+print(">>> Cmd line: round elevations ({}), round lat/lon ({})".format(args.elevation,args.precision))
 print(">>> Cmd line: rename output ({}), verbose ({})".format(args.outdir,args.verbose))
 
 VERBOSE = True if args.verbose == True else False
@@ -102,7 +103,13 @@ for fpath in fpaths:
                     print("INFO:  > Drop timing info from tracks")
                     track.remove_time()
                     modified = True
-            #if VERBOSE : print("  > Using a precision of {} decimal places for coordinate trimming".format(args.precision))
+            if args.precision:
+                print("INFO:  > Using a precision of {} decimal places for coordinate trimming".format(args.precision))
+                for segment in track.segments:
+                    for point in segment.points:
+                        # Drop precision on lat/lon
+                        point.latitude = round(point.latitude,args.precision)
+                        point.longitude = round(point.longitude,args.precision)
             if args.elevation == True:
                 print("INFO:  > Round elevation info in tracks")
                 for segment in track.segments:
@@ -121,12 +128,15 @@ for fpath in fpaths:
                 print("INFO:  >> Adding track comment field")
                 if gpx.time != None :
                     track.comment = str(gpx.time.date())
-                else :
+                else:
                     track.comment = "1970-01-01"
                 modified = True
             if track.type is None:
                 print("INFO:  >> Adding track type field")
-                trktype = pathlib.Path(fpath).parts[-2]
+                try:
+                    trktype = pathlib.Path(fpath).parts[-2]
+                except:
+                    trktype = "UNKNOWN"
                 if trktype in dirlist :
                     track.type = trktype
                 else :
@@ -137,8 +147,11 @@ for fpath in fpaths:
 
     # Write out any changes
     if modified:
-        if str(args.outdir) == "./":
-            outfile = args.outdir + pathlib.Path(fpath).name
+        if args.outdir:
+            if pathlib.Path(str(args.outdir)).is_dir():
+                outfile = args.outdir + "/" + pathlib.Path(fpath).name
+            else:
+                outfile = args.outdir
         else:
             outfile = fpath
         # Default indentation for PP is 2 spaces, no extra action required
