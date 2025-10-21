@@ -39,6 +39,7 @@ parser.add_argument('-p', '--precision', type=int,            help='Round lat/lo
 parser.add_argument('-s', '--simplify',  dest='simplify',     help='Apply simplification (or not)')
 parser.add_argument('-t', '--time',      action='store_true', help='Drop timing info from tracks')
 parser.add_argument('-v', '--verbose',   action='store_true', help='Turn on verbose output')
+parser.add_argument('-x', '--xtension',  action='store_true', help='Drop extension info from tracks')
 args = parser.parse_args()
 print(">>> Cmd line: process files ({})".format(args.files))
 print(">>> Cmd line: apply simplify ({}), drop timing ({}), round elevations ({})".format(args.simplify,args.time,args.elevation))
@@ -110,6 +111,7 @@ for fpath in fpaths:
                         # Drop precision on lat/lon
                         point.latitude = round(point.latitude,args.precision)
                         point.longitude = round(point.longitude,args.precision)
+                modified = True
             if args.elevation == True:
                 print("INFO:  > Round elevation info in tracks")
                 for segment in track.segments:
@@ -117,6 +119,14 @@ for fpath in fpaths:
                         # Drop precision on elevation
                         if point.elevation != None :
                             point.elevation = int(point.elevation)
+                modified = True
+            if args.xtension:
+                print("INFO:  > Drop extension info from tracks")
+                track.extensions = []
+                for segment in track.segments:
+                    segment.extensions = []
+                    for point in segment.points:
+                        point.extensions = []
                 modified = True
             # Check the track metadata block
             tname = track.name
@@ -126,10 +136,15 @@ for fpath in fpaths:
                 modified = True
             if track.comment is None:
                 print("INFO:  >> Adding track comment field")
-                if gpx.time != None :
+                if gpx.time != None:
                     track.comment = str(gpx.time.date())
                 else:
-                    track.comment = "1970-01-01"
+                    gtime = gpx.tracks[0].segments[0].points[0].time
+                    if not args.time and gtime != None:
+                        track.comment = str(gtime.date())
+                        gpx.time = gtime
+                    else:
+                        track.comment = "1970-01-01"
                 modified = True
             if track.type is None:
                 print("INFO:  >> Adding track type field")
