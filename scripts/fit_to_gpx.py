@@ -41,7 +41,7 @@ LAPS_COLUMN_NAMES = ['number', 'start_time', 'total_distance', 'total_elapsed_ti
                      'max_speed', 'max_heart_rate', 'avg_heart_rate']
 
 # The names of the columns we will use in our header DataFrame.
-HEADER_COLUMN_NAMES = ['serial_number', 'manufacturer', 'garmin_product', 'product_name', 'product']
+HEADER_COLUMN_NAMES = ['serial_number', 'manufacturer', 'garmin_product', 'product_name', 'product', 'time_created']
 SPORT_COLUMN_NAMES = ['name', 'sport']
 EVENT_COLUMN_NAMES = ['timestamp','event_type']
 
@@ -212,10 +212,13 @@ def tidy_header(header: Dict, activities: pd.DataFrame) -> Dict:
                 rows = row_series.to_frame().T
                 cts = rows['beginTimestamp'].iloc[0]
                 seconds_diff = abs(cts-ts)/1000
-                if int(seconds_diff) <= 72:
+                if int(seconds_diff) <= 180:
                     print("INFO: no exact match for {} but found start timestamp {} only {} seconds away".format(ts, cts, seconds_diff))
                 else:
                     print("WARN: no activity exact match found for timestamp {} (closest was {} secs away)".format(ts, seconds_diff))
+                    print("WARN:            event_start {} ({})".format(int(ts/1000), datetime.fromtimestamp(ts/1000)))
+                    print("WARN: nearest activity start {} ({})".format(int(cts/1000), datetime.fromtimestamp(cts/1000)))
+                    print("WARN:           file created {} ({})".format(int(datetime.timestamp(header.get("time_created"))),header.get("time_created")))
                     rows = pd.DataFrame()
             elif len(rows.index) > 1:
                 print("WARN: Bizzarely found too many matches ({}) for timestamp {}".format(len(rows.index),ts))
@@ -276,7 +279,7 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
     laps_data = []
     lap_no = 1
     definition_device = False
-    definition_sport = False
+    event_start_found = False
     header = {}
 
     try:
@@ -286,9 +289,6 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
             if isinstance(frame, fitdecode.FitDefinitionMessage):
                 if frame.name == 'device_info':
                     definition_device = True
-                elif frame.name == 'event':
-                    definition_event = True
-            #if isinstance(frame, fitdecode.records.FitDataMessage):
             if isinstance(frame, fitdecode.FitDataMessage):
                 if frame.name == 'record':
                     single_point_data = get_fit_point_data(frame)
@@ -300,21 +300,25 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
                     single_lap_data['number'] = lap_no
                     laps_data.append(single_lap_data)
                     lap_no += 1
-                # Files seem to contain multiple data records of same type, but only the first one after a defintion record is correct!
-                # TODO find out why there are multiple device_infos and which is right one
-                elif frame.name == 'device_info' and definition_device == True:
-                    header_data = get_fit_header_data(frame, "device")
-                    header.update(header_data)
-                    if "serial_number" in header:
-                        definition_device = False
+                # device_info records are written at various times, but only after event_start or event_end are they full and correct (containing a serial number)
+                # file_id records device as well and is more easily identified than the relevant device_info record (many and for multiple devices)
+                elif frame.name == 'file_id':
+                    header_data = get_fit_header_data(frame, "file_id")
+                    if "serial_number" in header_data:
+                        #print("FitDataMessage file_id ({}) found with timestamp {}".format(header_data.get("serial_number"),header_data.get("time_created")))
+                        if header_data.get("serial_number") != None:
+                            header.update(header_data)
                 elif frame.name == 'sport' or frame.name == 'session':
                     header_data = get_fit_header_data(frame, "sport")
                     header.update(header_data)
-                # TODO Assume first event is start, should actually check for this
-                elif frame.name == 'event' and definition_event == True:
+                # event records are written at various times, but only after event_start is the timing info relevant
+                elif frame.name == 'event' and event_start_found == False:
                     header_data = get_fit_header_data(frame, "event")
-                    header.update(header_data)
-                    definition_event = False
+                    if "event_type" in header_data:
+                        #print("FitDataMessage Event ({}) found with timestamp {}".format(header_data.get("event_type"),header_data.get("timestamp")))
+                        if header_data.get("event_type") == "start":
+                            header.update(header_data)
+                            event_start_found = True
     except:
         print("ERROR while parsing {} so dropping stream".format(fname))
         points_df = pd.DataFrame()
@@ -326,6 +330,9 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
         laps_df.set_index('number', inplace=True)
         points_df = pd.DataFrame(points_data, columns=POINTS_COLUMN_NAMES)
     
+    # Tidy up
+    fit_file.close()
+
     return laps_df, points_df, header
 
 
@@ -467,6 +474,8 @@ if __name__ == "__main__":
             activities = pd.DataFrame(d[0]['summarizedActivitiesExport'])
             if args.verbose:
                 print(activities)
+    else:
+        activities = pd.DataFrame()
 
     # Loop over all files in list
     for fpath in fpaths:
