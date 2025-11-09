@@ -7,7 +7,6 @@
     Convert FIT files into GPX files
 
  EXAMPLES
-    python fit_to_gpx.py
     python fit_to_gpx.py -a MetaData/Activities.json -p -t -o generatedGPX FitFiles
 
  IMPLEMENTATION
