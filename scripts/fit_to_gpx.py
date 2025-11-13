@@ -358,7 +358,7 @@ def dataframe_to_gpx(trim, header, df_points, col_lat='latitude', col_long='long
     #dt = pd.Timestamp(df_points.loc[1, col_time]) if col_time else None
     gpx.time = gpx_time
     gpx.name = gpx_name
-    gpx.keywords = json.dumps(gpx_keywords)
+    gpx.keywords = json.dumps(gpx_keywords,separators=(",",":"))
     # -- create first track in our GPX:
     gpx_track = gpxpy.gpx.GPXTrack()
     gpx.tracks.append(gpx_track)
@@ -391,16 +391,22 @@ def dataframe_to_gpx(trim, header, df_points, col_lat='latitude', col_long='long
             track_point = gpxpy.gpx.GPXTrackPoint(
                 latitude=df_points.loc[idx, col_lat],
                 longitude=df_points.loc[idx, col_long],
-                time=pd.Timestamp(df_points.loc[idx, col_time]) if col_time else None,
+               ## time=pd.Timestamp(df_points.loc[idx, col_time],microsecond=2) if col_time else None,
+                time=pd.to_datetime(df_points.loc[idx, col_time],unit='ms') if col_time else None,
                 elevation=df_points.loc[idx, col_alt] if col_alt else None,
             )
         if trim:
             # Keep 6 decimal places in position
-            track_point.latitude = round(track_point.latitude,6)
-            track_point.longitude = round(track_point.longitude,6)
+           ## track_point.latitude = round(track_point.latitude,6)
+           ## track_point.longitude = round(track_point.longitude,6)
+           ## if track_point.elevation != None:
+           ##     # Keep 1 decimal place in elevation
+           ##     track_point.elevation = int(10*track_point.elevation)/10
+            track_point.latitude = round(track_point.latitude,7)
+            track_point.longitude = round(track_point.longitude,7)
             if track_point.elevation != None:
                 # Keep 1 decimal place in elevation
-                track_point.elevation = int(10*track_point.elevation)/10
+                track_point.elevation = int(track_point.elevation)
 
         # add GPX extensions for heartrate and cadence
         if col_hr or col_cad:
@@ -437,7 +443,8 @@ def clean_filename(fname:str, outdir:str, header:Dict) -> str:
         outfile = outdir
     # Otherwise standardise the name to date/id/title
     else:
-        of = str(ts) + "." + str(pr) + "." + str(ti) + ".gpx"
+        #of = str(ts) + "." + str(pr) + "." + str(ti) + ".gpx"
+        of = str(ts) + "." + str(ti) + ".gpx"
         if outdir:
             outfile = outdir + "/" + of
         else:
@@ -488,6 +495,7 @@ if __name__ == "__main__":
         if args.verbose:
             print(fpath, " : ", header)
             print("Number of GPX points: {}".format(len(df_points.index)))
+        print(df_points)
 
         # Step 2: Fill gaps in data if FIT file recorded data only in enhanced altitude/speed columns:
 #        enhanced_fields = ['altitude', 'speed']

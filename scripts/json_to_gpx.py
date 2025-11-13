@@ -219,7 +219,7 @@ def dataframe_to_gpx(trim, header, df_points, col_lat='latitude', col_long='long
     #dt = pd.Timestamp(df_points.loc[1, col_time]) if col_time else None
     gpx.time = gpx_time
     gpx.name = gpx_name
-    gpx.keywords = json.dumps(gpx_keywords)
+    gpx.keywords = json.dumps(gpx_keywords,separators=(",",":"))
     # -- create first track in our GPX:
     gpx_track = gpxpy.gpx.GPXTrack()
     gpx.tracks.append(gpx_track)
@@ -279,7 +279,8 @@ def clean_filename(fname:str, outdir:str, header:Dict) -> str:
         outfile = outdir
     # Otherwise standardise the name to date/id/title
     else:
-        of = str(ts) + "." + str(pr) + "." + str(ti) + ".gpx"
+        #of = str(ts) + "." + str(pr) + "." + str(ti) + ".gpx"
+        of = str(ts) + "." + str(ti) + ".gpx"
         if outdir:
             outfile = outdir + "/" + of
         else:
@@ -289,7 +290,7 @@ def clean_filename(fname:str, outdir:str, header:Dict) -> str:
 
 
 # -------------------------------------------------------------------------------
-# Standardise ouput filename if required
+# Convert from ISO format date to TimeStamp
 def convert_to_timestamp(isodate):
     dt = datetime.fromisoformat(isodate.replace("Z", "+00:00"))
     ctimestamp = int(datetime.timestamp(dt))
