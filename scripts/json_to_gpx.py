@@ -107,14 +107,14 @@ def process_activities(activities: pd.DataFrame, activity_column: str, ts: datet
             row_series = activities.iloc[(activities[activity_column]-ts).abs().idxmin()]
             # iLoc returns a series not a dataframe (unlike Loc) so convert back to dataframe
             rows = row_series.to_frame().T
-            cts = rows[activity_column].iloc[0]
-            seconds_diff = abs(cts-ts)/1000
+            cts = int(rows[activity_column].iloc[0])
+            seconds_diff = abs(cts-ts)
             if int(seconds_diff) <= 180:
                 print("INFO: no exact match for {} but found start timestamp {} only {} seconds away".format(ts, cts, seconds_diff))
             else:
                 print("WARN: no activity exact match found for timestamp {} (closest was {} secs away)".format(ts, seconds_diff))
-                print("WARN:            event_start {} ({})".format(int(ts/1000), datetime.fromtimestamp(ts/1000)))
-                print("WARN: nearest activity start {} ({})".format(int(cts/1000), datetime.fromtimestamp(cts/1000)))
+                print("WARN:            event_start {} ({})".format(ts, datetime.fromtimestamp(ts)))
+                print("WARN: nearest activity start {} ({})".format(cts, datetime.fromtimestamp(cts)))
                 #print("WARN:           file created {} ({})".format(int(datetime.timestamp(header.get("time_created"))),header.get("time_created")))
                 rows = pd.DataFrame()
         elif len(rows.index) > 1:
@@ -188,8 +188,8 @@ def prepare_header(md: Dict, activities: pd.DataFrame) -> Dict:
     # Establish the manufacturer and product
     if "http_user_agent" in md:
         products = (md.get("http_user_agent")).split("|")
-        key_dict.update({"ma": products[0]})
-        key_dict.update({"pr": re.sub(r",",'_',products[2])})
+        key_dict.update({"dv": products[2].split(",",1)[0]})
+        key_dict.update({"ap": products[0]})
         if act_id:
             key_dict.update({"sid": str(act_id)})
         header.update({"keywords": key_dict})
@@ -320,7 +320,6 @@ if __name__ == "__main__":
     # Digest an associated activities file for extra metadata
     if args.activities != None:
         with open(args.activities) as f:
-            #d = json.load(f)
             activities = pd.DataFrame(json.load(f))
             activities['start_date'] = activities['start_date'].apply(convert_to_timestamp)
             if args.verbose:
