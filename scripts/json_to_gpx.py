@@ -7,7 +7,7 @@
     Convert Strava JSON files into GPX files
 
  EXAMPLES
-    python json_to_gpx.py -p -t -o generatedGPX FitFiles
+    python json_to_gpx.py -a MetaData/ActivitiesList.json -p -t -o generatedGPX RawFiles
 
  IMPLEMENTATION
     Author       Tim Smith

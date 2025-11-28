@@ -24,6 +24,7 @@ import argparse
 import gpxpy
 import json
 import re
+import string
 from datetime import datetime, timedelta
 from typing import Dict, Optional, Tuple, Union
 from math import isnan
@@ -37,12 +38,13 @@ import fitdecode
 POINTS_COLUMN_NAMES = ['latitude', 'longitude', 'lap', 'altitude', 'timestamp', 'heart_rate', 'cadence', 'speed']
 
 # The names of the columns we will use in our laps DataFrame.
-LAPS_COLUMN_NAMES = ['number', 'start_time', 'total_distance', 'total_elapsed_time',
-                     'max_speed', 'max_heart_rate', 'avg_heart_rate']
+LAPS_COLUMN_NAMES = ['number', 'start_time', 'total_distance', 'total_elapsed_time', 'max_speed', 'max_heart_rate', 'avg_heart_rate']
 
 # The names of the columns we will use in our header DataFrame.
-HEADER_COLUMN_NAMES = ['serial_number', 'manufacturer', 'garmin_product', 'product_name', 'product', 'time_created']
-SPORT_COLUMN_NAMES = ['name', 'sport']
+FILE_COLUMN_NAMES = ['serial_number', 'manufacturer', 'garmin_product', 'product_name', 'product', 'device_model', 'descriptor', 'time_created']
+DEVICE_COLUMN_NAMES = ['serial_number', 'manufacturer', 'garmin_product', 'product_name', 'product', 'device_model', 'descriptor', 'time_created']
+HEADER_COLUMN_NAMES = ['time_created']
+SPORT_COLUMN_NAMES = ['name', 'sport', 'total_elapsed_time']
 EVENT_COLUMN_NAMES = ['timestamp','event_type']
 
 # -------------------------------------------------------------------------------
@@ -153,6 +155,10 @@ def get_fit_header_data(frame: fitdecode.records.FitDataMessage,frame_type) -> D
         COLUMNS = SPORT_COLUMN_NAMES
     elif frame_type == "event":
         COLUMNS = EVENT_COLUMN_NAMES
+    elif frame_type == "file":
+        COLUMNS = FILE_COLUMN_NAMES
+    elif frame_type == "device":
+        COLUMNS = DEVICE_COLUMN_NAMES
     else:
         COLUMNS = HEADER_COLUMN_NAMES
 
@@ -167,7 +173,7 @@ def get_fit_header_data(frame: fitdecode.records.FitDataMessage,frame_type) -> D
 
 # -------------------------------------------------------------------------------
 # Process Strava metadata fields to produce sanitised/standardised expected fields
-def process_activities(activities: pd.DataFrame, source: str, ts: datetime.timestamp, verbose: str) -> [str,str,str]:
+def process_activities(activities: pd.DataFrame, source: str, ts: datetime.timestamp, elapsed: int, verbose: str) -> [str,str,str]:
     strava_web_types = {"AlpineSki":"ski",
                  "BackcountrySki":"skiclimb",
                  "Hike":"hike",
@@ -220,14 +226,17 @@ def process_activities(activities: pd.DataFrame, source: str, ts: datetime.times
             rows = row_series.to_frame().T
             cts = int(rows[col_activity].iloc[0])
             seconds_diff = abs(cts-ts)
-            if int(seconds_diff) <= 180:
-                print("INFO: no exact match for {} but found start timestamp {} only {} seconds away".format(ts, cts, seconds_diff))
+            if int(seconds_diff) <= 300:
+                print(" INFO: no exact match for {} but found start timestamp {} only {} seconds away".format(ts, cts, seconds_diff))
             else:
-                print("WARN: no activity exact match found for timestamp {} (closest was {} secs away)".format(ts, seconds_diff))
-                print("WARN:            event_start {} ({})".format(ts, datetime.fromtimestamp(ts)))
-                print("WARN: nearest activity start {} ({})".format(cts, datetime.fromtimestamp(cts)))
-                #print("WARN:           file created {} ({})".format(int(datetime.timestamp(header.get("time_created"))),header.get("time_created")))
-                rows = pd.DataFrame()
+                percentage = round(100*(cts-ts)/elapsed)
+                if percentage > 0 and percentage < 42:
+                    print(" INFO: no exact match for {} but found start timestamp {} at {} percent into workout (cropped?)".format(ts, cts, percentage))
+                else:
+                    print(" WARN: no exact match for {} (closest was {} secs, {} % through)".format(ts, seconds_diff, percentage))
+                    print(" WARN:        event_start {} ({})".format(ts, datetime.fromtimestamp(ts)))
+                    print(" WARN:      nearest start {} ({})".format(cts, datetime.fromtimestamp(cts)))
+                    rows = pd.DataFrame()
         elif len(rows.index) > 1:
             print("WARN: Bizzarely found too many matches ({}) for timestamp {}".format(len(rows.index),ts))
             if rows['duration'].iloc[0] == rows['duration'].iloc[1]:
@@ -243,8 +252,18 @@ def process_activities(activities: pd.DataFrame, source: str, ts: datetime.times
             act_id = rows[col_id].iloc[0]
             # Get title from activity metadata
             s = rows['name'].iloc[0]
-            s = re.sub(r"[^\w\s]", ' ', s)
-            title = re.sub(r"\s+", '_', s)
+            #s = re.sub(r"[^\w\s]", ' ', s)
+            #title = re.sub(r"\s+", '_', s)
+            s = re.sub(r"-", " ", s)
+            s = re.sub(r"/", " ", s)
+            s = re.sub(r"\s+", "_", s)
+            remove = string.punctuation
+            remove = remove.replace("_", "")  # don't remove underscores
+            remove = remove.replace(".", "")  # don't remove dots
+            title = s.translate(str.maketrans("", "", remove))
+            title = re.sub(
+                r"_$", "", title
+            )  # dont leave an underscore as last letter
             # Get activity type from activity metadata
             act_ty = rows[col_type].iloc[0]
             if act_ty not in act_types:
@@ -265,6 +284,10 @@ def process_activities(activities: pd.DataFrame, source: str, ts: datetime.times
 # -------------------------------------------------------------------------------
 # Process found header fields to produce sanitised/standardised expected fields
 def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: str) -> Dict:
+    """
+     List of Watch codes from https://everymac.com/systems/apple/apple-watch/index-apple-watch-specs.html
+     List of Phone codes from https://everymac.com/systems/apple/iphone/index-iphone-specs.html
+    """
     types = {"Bike":"bike",
              "Cardio":"wip",
              "Climb":"hike",
@@ -289,7 +312,11 @@ def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: st
              "running":"run",
              "alpine_skiing":"ski",
             }
-    product_lookup = {101:"iPhone", 162:"iWatch9", 163:"iWatchUltra2"}
+    product_lookup = {101:"iPhone", 162:"iWatch9", 163:"iWatchUltra2",1163:"iWatchWorkout"}
+    product_name_lookup = {"iPhone12,1":"iPhone11",
+                           "iPhone13,2":"iPhone12",
+                           "iPhone14,5":"iPhone13",
+                           "Watch7,1":"iWatch9_41mm"}
     manufacturer_lookup = {1:"Garmin", 265:"Strava"}
     key_dict = {}
     title = None
@@ -302,7 +329,8 @@ def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: st
             print(" WARN: timestamp in header has {} digits, expected 10 for seconds resolution".format(ts_length))
         header.update({"time": header.get("timestamp").strftime('%Y/%m/%d')})
         ts = int(datetime.timestamp(header.get("timestamp")))
-        act_id, title, ty = process_activities(activities, source, ts, verbose)
+        et = header.get("total_elapsed_time")
+        act_id, title, ty = process_activities(activities, source, ts, et, verbose)
     else:
         print("WARN: No timestamp in header, skipping")
         return header
@@ -324,13 +352,6 @@ def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: st
     else:
         header.update({"title": ty})
 
-    # Establish the activity ID
-    if act_id:
-        if source == "garmin":
-            key_dict.update({"gid": str(act_id)})
-        elif source == "strava":
-            key_dict.update({"sid": str(act_id)})
-
     # Establish the device and application which recorded the activity
     # Garmin devices
     if "garmin_product" in header:
@@ -340,18 +361,37 @@ def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: st
     elif "product_name" in header:
         app = header.get("product_name")
         dev = header.get("manufacturer")
-        if dev == "development":
+        if dev == "development" or app == "WorkOutDoors":
             dev = "iWatch"
-    # Strava app on iWatch
-    elif "product" in header:
-        prd = header.get("product")
-        dev = product_lookup.get(prd,prd)
-        app = header.get("manufacturer")
+    # Strava app on iPhone and iWatch
     else:
-        app = None
+        app = header.get("manufacturer")
+        mod = header.get("device_model",None)
+        prd = header.get("product",None)
+        #print(app,mod,prd)
+        if mod:
+            # Strava app on iWatch
+            if "Watch" in mod:
+                dev = product_lookup.get(prd,prd)
+            # Strava app on iPhone
+            else:
+                dev = mod
+        # Strava app on iWatch
+        elif prd:
+            dev = product_lookup.get(prd,prd)
+            print(prd,dev)
+        else:
+            dev = None
     if app:
+        key_dict.update({"dv": dev.split(",",1)[0]})
         key_dict.update({"ap": app})
-        key_dict.update({"dv": dev})
+
+    # Establish the activity ID
+    if act_id:
+        if source == "garmin":
+            key_dict.update({"gid": str(act_id)})
+        elif source == "strava":
+            key_dict.update({"sid": str(act_id)})
 
     # Add the keywords string
     header.update({"keywords": key_dict})
@@ -370,6 +410,7 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
     points_data = []
     laps_data = []
     lap_no = 1
+    file_found = False
     device_found = False
     event_start_found = False
     header = {}
@@ -390,11 +431,16 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
                     laps_data.append(single_lap_data)
                     lap_no += 1
                 # For Garmin devices and Strava apps FILE_ID records contain a product string, otherwise need DEVICE_INFO record
-                elif device_found == False and (frame.name == 'file_id' or frame.name == 'device_info'):
+                elif file_found == False and frame.name == 'file_id':
+                    header_data = get_fit_header_data(frame, "file")
+                    header.update(header_data)
+                    file_found = True
+                    print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
+                elif device_found == False and frame.name == 'device_info':
                     header_data = get_fit_header_data(frame, "device")
-                    if "garmin_product" in header_data or "product" in header_data or "product_name" in header_data:
-                        header.update(header_data)
-                        device_found = True
+                    header.update(header_data)
+                    device_found = True
+                    print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
                 elif frame.name == 'sport' or frame.name == 'session':
                     header_data = get_fit_header_data(frame, "sport")
                     header.update(header_data)
@@ -572,8 +618,8 @@ if __name__ == "__main__":
             activities = pd.DataFrame(d[0]['summarizedActivitiesExport'])
             # Convert 13 digit timestamps (milliseconds) to 10 digit (seconds)
             activities['beginTimestamp'] = activities['beginTimestamp'].floordiv(1000)
-            if args.verbose:
-                print(activities)
+            ##if args.verbose:
+            ##    print(activities)
     # Digest an associated Strava activities file for extra metadata
     elif args.activities != None:
         source = "strava"
@@ -582,13 +628,16 @@ if __name__ == "__main__":
             activities = pd.DataFrame(json.load(f))
             # Convert datetime string to timestamp 10 digit (seconds)
             activities['start_date'] = activities['start_date'].apply(convert_to_timestamp)
-            if args.verbose:
-                print(activities)
+            ##if args.verbose:
+            ##    print(activities)
     else:
         activities = pd.DataFrame()
 
     # Loop over all files in list
+    outcount = 0
+    outtotal = len(fpaths)
     for fpath in fpaths:
+        outcount += 1
         # Step 1: Convert FIT to pd.DataFrame
         df_laps, df_points, header = get_dataframes(fpath)
         if df_points.empty:
@@ -629,7 +678,8 @@ if __name__ == "__main__":
         # Step 3: Save GPX file to disk
         outfile = clean_filename(fpath, args.outdir, header)
         xml = gpx.to_xml(prettyprint=args.pretty)
-        print("INFO: Converted {} and writing gpx content to {}".format(fpath, outfile))
+        device = header.get("keywords").get("dv")
+        print("INFO: [{}/{}] Converted {} from {} and writing gpx content to {}".format(outcount,outtotal,fpath, device, outfile))
         if args.dryrun == False :
             with open(outfile, "w") as f:
                 f.write(xml)
