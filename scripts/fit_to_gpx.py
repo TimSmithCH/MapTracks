@@ -173,7 +173,7 @@ def get_fit_header_data(frame: fitdecode.records.FitDataMessage,frame_type) -> D
 
 # -------------------------------------------------------------------------------
 # Process Strava metadata fields to produce sanitised/standardised expected fields
-def process_activities(activities: pd.DataFrame, source: str, ts: datetime.timestamp, elapsed: int, verbose: str) -> [str,str,str]:
+def process_activities(activities: pd.DataFrame, source: str, ts: datetime.timestamp, elapsed: int, file_created_ts: datetime.timestamp, verbose: str) -> [str,str,str]:
     strava_web_types = {"AlpineSki":"ski",
                  "BackcountrySki":"skiclimb",
                  "Hike":"hike",
@@ -224,18 +224,22 @@ def process_activities(activities: pd.DataFrame, source: str, ts: datetime.times
             row_series = activities.iloc[(activities[col_activity]-ts).abs().idxmin()]
             # iLoc returns a series not a dataframe (unlike Loc) so convert back to dataframe
             rows = row_series.to_frame().T
-            cts = int(rows[col_activity].iloc[0])
-            seconds_diff = abs(cts-ts)
-            if int(seconds_diff) <= 300:
-                print(" INFO: no exact match for {} but found start timestamp {} only {} seconds away".format(ts, cts, seconds_diff))
+            nnts = int(rows[col_activity].iloc[0])
+            seconds_diff = int(nnts-ts)
+            if abs(seconds_diff) <= 300:
+                print(" INFO: no exact match for {} but found start timestamp {} only {} seconds away".format(ts, nnts, seconds_diff))
             else:
-                percentage = round(100*(cts-ts)/elapsed)
+                percentage = round(100*(seconds_diff)/elapsed)
+                # For a file cropped in Strava the start timestamp is within elapsed time (first half-ish)
                 if percentage > 0 and percentage < 42:
-                    print(" INFO: no exact match for {} but found start timestamp {} at {} percent into workout (cropped?)".format(ts, cts, percentage))
+                    print(" INFO: no exact match for {} but found start timestamp {} at {} percent into workout (cropped?)".format(ts, nnts, percentage))
+                # For a file cropped in Garmin the start timestamp is between file created and Strava start
+                elif nnts > file_created_ts:
+                    print(" INFO: no exact match for {} but found start timestamp {} after file created {} (delayed start?)".format(ts, nnts, file_created_ts))
                 else:
                     print(" WARN: no exact match for {} (closest was {} secs, {} % through)".format(ts, seconds_diff, percentage))
                     print(" WARN:        event_start {} ({})".format(ts, datetime.fromtimestamp(ts)))
-                    print(" WARN:      nearest start {} ({})".format(cts, datetime.fromtimestamp(cts)))
+                    print(" WARN:      nearest start {} ({})".format(nnts, datetime.fromtimestamp(nnts)))
                     rows = pd.DataFrame()
         elif len(rows.index) > 1:
             print("WARN: Bizzarely found too many matches ({}) for timestamp {}".format(len(rows.index),ts))
@@ -313,10 +317,10 @@ def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: st
              "alpine_skiing":"ski",
             }
     product_lookup = {101:"iPhone", 162:"iWatch9", 163:"iWatchUltra2",1163:"iWatchWorkout"}
-    product_name_lookup = {"iPhone12,1":"iPhone11",
-                           "iPhone13,2":"iPhone12",
-                           "iPhone14,5":"iPhone13",
-                           "Watch7,1":"iWatch9_41mm"}
+    device_lookup = {"iPhone12,1":"iPhone11",
+                     "iPhone13,2":"iPhone12",
+                     "iPhone14,5":"iPhone13",
+                     "Watch7,1":"iWatch9_41mm"}
     manufacturer_lookup = {1:"Garmin", 265:"Strava"}
     key_dict = {}
     title = None
@@ -330,7 +334,8 @@ def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: st
         header.update({"time": header.get("timestamp").strftime('%Y/%m/%d')})
         ts = int(datetime.timestamp(header.get("timestamp")))
         et = header.get("total_elapsed_time")
-        act_id, title, ty = process_activities(activities, source, ts, et, verbose)
+        tc = int(datetime.timestamp(header.get("time_created")))
+        act_id, title, ty = process_activities(activities, source, ts, et, tc, verbose)
     else:
         print("WARN: No timestamp in header, skipping")
         return header
@@ -355,33 +360,31 @@ def tidy_header(header: Dict, activities: pd.DataFrame, source: str, verbose: st
     # Establish the device and application which recorded the activity
     # Garmin devices
     if "garmin_product" in header:
-        dev = header.get("garmin_product")
         app = header.get("manufacturer")
-    # Coros devices and WordkOutDoors app on iWatch
-    elif "product_name" in header:
-        app = header.get("product_name")
-        dev = header.get("manufacturer")
-        if dev == "development" or app == "WorkOutDoors":
-            dev = "iWatch"
+        dev = header.get("garmin_product")
     # Strava app on iPhone and iWatch
+    elif "device_model" in header:
+        app = header.get("manufacturer")
+        mod = header.get("device_model")
+        dev = device_lookup.get(mod,mod)
+    # Coros devices and WordkOutDoors/NikeRunClub/AsicsRunkeeper apps on iWatch
+    elif "product_name" in header:
+        prd = header.get("product_name")
+        dev = device_lookup.get(prd,prd)
+        # Override with descriptor for NikeRunClub/AsicsRunkeeper apps
+        if "descriptor" in header:
+            app = header.get("descriptor")
+        # Swap fields for WorkOutDoors app
+        elif prd == "WorkOutDoors":
+            app = "WorkOutDoors"
+            dev = "iWatch"
+        else:
+            app = header.get("manufacturer")
+    # Catch-all
     else:
         app = header.get("manufacturer")
-        mod = header.get("device_model",None)
         prd = header.get("product",None)
-        #print(app,mod,prd)
-        if mod:
-            # Strava app on iWatch
-            if "Watch" in mod:
-                dev = product_lookup.get(prd,prd)
-            # Strava app on iPhone
-            else:
-                dev = mod
-        # Strava app on iWatch
-        elif prd:
-            dev = product_lookup.get(prd,prd)
-            print(prd,dev)
-        else:
-            dev = None
+        dev = product_lookup.get(prd,prd)
     if app:
         key_dict.update({"dv": dev.split(",",1)[0]})
         key_dict.update({"ap": app})
@@ -438,7 +441,10 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
                     print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
                 elif device_found == False and frame.name == 'device_info':
                     header_data = get_fit_header_data(frame, "device")
-                    header.update(header_data)
+                    # Only add new keys, dont overwrite already found ones
+                    for key in header_data:
+                        if key not in header:
+                            header[key] = header_data[key]
                     device_found = True
                     print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
                 elif frame.name == 'sport' or frame.name == 'session':
@@ -451,6 +457,7 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
                         if header_data.get("event_type") == "start":
                             header.update(header_data)
                             event_start_found = True
+                            print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
     except:
         print("ERROR while parsing {} so dropping stream".format(fname))
         print(points_df)

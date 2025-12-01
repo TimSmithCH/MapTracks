@@ -390,7 +390,10 @@ def construct_filenames(i):
     # Construct a sanitized activity/file name from the strava id and activity name
     #  with dashes and spaces converted to underscores
     #  and punctuation marks removed
-    s = str(i["id"]) + "." + str(i["name"])
+    ##s = str(i["id"]) + "." + str(i["name"])
+    dt = datetime.datetime.fromisoformat(i["start_date"].replace("Z", "+00:00"))
+    ct = int(datetime.datetime.timestamp(dt))
+    s = str(ct) + "." + str(i["name"])
     s = re.sub(r"-", " ", s)
     s = re.sub(r"/", " ", s)
     s = re.sub(r"\s+", "_", s)
