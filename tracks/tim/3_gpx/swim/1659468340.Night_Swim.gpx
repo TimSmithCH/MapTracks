@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <metadata>
+    <name>1659468340.Night_Swim.gpx</name>
+    <time>2022-08-02T19:25:40Z</time>
+    <keywords>{"sid":"7572534215"}</keywords>
+  </metadata>
+  <trk>
+    <name>7572534215.Night_Swim</name>
+    <cmt>2022-08-02</cmt>
+    <type>Swim</type>
+    <trkseg>
+      <trkpt lat="46.334533" lon="6.20348">
+        <ele>370.9</ele>
+        <time>2022-08-02T19:25:40Z</time>
+      </trkpt>
+      <trkpt lat="46.334533" lon="6.20348">
+        <ele>370.9</ele>
+        <time>2022-08-02T19:28:31Z</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
