@@ -119,12 +119,12 @@ if __name__ == "__main__":
         fname = os.path.splitext(bname)[0]
         sname = fname.split('.',1)[0]
         print("INFO: Processing {}".format(fpath))
-        if gpx.keywords == None:
+        if gpx.keywords is None:
             print(" WARN: No keywords, doesnt seem to be a pull_strava file, skipping")
             continue
         if sname != gpx.keywords:
             print(" WARN: Strava ID inconsistency; fname {} keyword {}".format(sname,gpx.keywords))
-
+            continue
         # Step 2: Establish new metadata
         ts = convert_to_timestamp(gpx.time)
         outfile = clean_filename(fpath, ts)
