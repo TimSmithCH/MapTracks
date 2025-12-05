@@ -1,8 +1,0 @@
-{
-"type": "FeatureCollection",
-"name": "LayerName",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "name": "9915741862.Morning_Swim", "cmt": "2023-09-25", "desc": "1.0", "type": "Swim" }, "geometry": { "type": "LineString", "coordinates": [ [ 12.369168, 47.854585 ], [ 12.369379, 47.85464 ], [ 12.369383, 47.854677 ], [ 12.369518, 47.854676 ], [ 12.369564, 47.854886 ], [ 12.369937, 47.854671 ], [ 12.369458, 47.854543 ], [ 12.369216, 47.854571 ] ] } }
-]
-}
