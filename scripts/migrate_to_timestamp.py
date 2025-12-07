@@ -122,15 +122,17 @@ if __name__ == "__main__":
         if gpx.keywords is None:
             print(" WARN: No keywords, doesnt seem to be a pull_strava file, skipping")
             continue
-        if sname != gpx.keywords:
-            print(" WARN: Strava ID inconsistency; fname {} keyword {}".format(sname,gpx.keywords))
-            continue
         # Step 2: Establish new metadata
         ts = convert_to_timestamp(gpx.time)
         outfile = clean_filename(fpath, ts)
-        # Skip if re-running on an already converted file
+        # Step 3: Validate metadata
+        if sname == gpx.keywords:
+            print(" INFO: Strava ID in filename - unconverted file; fname {} keyword {}".format(sname,gpx.keywords))
+        # Skip writing if re-running on an already converted file
+        if gpx.name == outfile:
+            print(" WARN: name in file {} doesnt match filename {}".format(gpx.name,outfile))
         if outfile == fpath:
-            print(" WARN: {} has already been converted, skipping".format(fpath))
+            print(" INFO: {} has already been converted, skipping".format(fpath))
             continue
         gpx.name = os.path.basename(outfile)
         gpx.keywords = json.dumps({"sid": str(sname)},separators=(",",":"))

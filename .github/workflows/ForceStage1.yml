@@ -1,0 +1,45 @@
+name: MapTracksDeploy
+on:
+  # Allows to be run manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+run-name: Generate GeoJSONs for ${{ github.event.head_commit.message }}
+
+jobs:
+  # Build GeoJSON files from any newly committed GPX files
+  GeoJsonBuild:
+    name: Generate_Stage_1
+    runs-on: macos-latest
+    steps:
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      #--- Checkout using PAT rather than default token, so PagesDeploy/push workflow gets triggered
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
+      #--- First Step
+      - name: Aggregate GeoJson files
+        run: |
+          echo ">>> Aggregate GeoJSON files"
+          find tracks/tim/2_geojson -mindepth 1 -maxdepth 1 -type d -exec python scripts/geojsons_merge.py -o tracks/tim/1_display {} \;
+          rsync -avu "tracks/tim/1_display/" "www/tracks/tim/1_display/" 
+        #--- Next Step
+      - name: Commit new GeoJson files
+        id: committed
+        run: |
+          echo ">>> Commit GeoJSON files"
+          git add tracks/tim/1_display 1>&2
+          git add www/tracks 1>&2
+          git status -s 1>&2
+          git commit -m "Force GeoJSONs for øø ${{ github.event.head_commit.message }}" 1>&2
+          git push 1>&2
