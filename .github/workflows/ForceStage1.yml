@@ -1,4 +1,4 @@
-name: MapTracksDeploy
+name: ForceStage1
 on:
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
