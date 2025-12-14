@@ -47,9 +47,12 @@ def parse_command_line():
     )
     parser.set_defaults(**defaults)
     # Parse the command line
-    parser.add_argument("files", help="individual fit filename [filenames]", nargs="+")
+    parser.add_argument("files", help="individual GPX filename [filenames]", nargs="+")
     parser.add_argument(
         "-d", "--dryrun", action="store_true", help="Dont actually create new files"
+    )
+    parser.add_argument(
+        "-f", "--force", action="store_true", help="Force creation of file even if processed already"
     )
     parser.add_argument(
         "-o", "--outdir", dest="outdir", help="Directory to store converted gpx files",
@@ -109,6 +112,7 @@ if __name__ == "__main__":
     outcount = 0
     outtotal = len(fpaths)
     for fpath in fpaths:
+        dont_delete = False
         outcount += 1
         try:
             gpx = gpxpy.parse(open(fpath,'r'))
@@ -128,14 +132,19 @@ if __name__ == "__main__":
         # Step 3: Validate metadata
         if sname == gpx.keywords:
             print(" INFO: Strava ID in filename - unconverted file; fname {} keyword {}".format(sname,gpx.keywords))
-        # Skip writing if re-running on an already converted file
-        if gpx.name == outfile:
-            print(" WARN: name in file {} doesnt match filename {}".format(gpx.name,outfile))
+            gpx.keywords = json.dumps({"sid": str(sname)},separators=(",",":"))
+            if gpx.name != os.path.basename(outfile):
+                print(" WARN: name in file {} doesnt match filename {}".format(gpx.name,outfile))
+        # Skip writing if re-running on an already converted file, unless forced to!
         if outfile == fpath:
-            print(" INFO: {} has already been converted, skipping".format(fpath))
-            continue
+            if args.force:
+                dont_delete = True
+            else:
+                print(" INFO: {} has already been converted, skipping".format(fpath))
+                continue
         gpx.name = os.path.basename(outfile)
-        gpx.keywords = json.dumps({"sid": str(sname)},separators=(",",":"))
+        for track in gpx.tracks:
+            track.name = gpx.name
 
         # Step 3: Save GPX file to disk
         xml = gpx.to_xml(prettyprint=True)
@@ -144,4 +153,5 @@ if __name__ == "__main__":
             with open(outfile, "w") as f:
                 f.write(xml)
             # And delete the old one
-            os.remove(fpath)
+            if not dont_delete:
+                os.remove(fpath)
