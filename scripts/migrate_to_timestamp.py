@@ -127,6 +127,9 @@ if __name__ == "__main__":
             print(" WARN: No keywords, doesnt seem to be a pull_strava file, skipping")
             continue
         # Step 2: Establish new metadata
+        if gpx.time is None:
+            print(" WARN: No time field, probably a ROUTE file, skipping")
+            continue
         ts = convert_to_timestamp(gpx.time)
         outfile = clean_filename(fpath, ts)
         # Step 3: Validate metadata
