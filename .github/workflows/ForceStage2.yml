@@ -3,6 +3,17 @@ on:
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
     inputs:
+      Type:
+        description: "Track type"
+        default: hike
+        required: true
+        type: choice
+        options:
+          - bike
+          - hike
+          - ski
+          - skiclimb
+          - commute
       Reason: 
         description: "Reason for triggering workflow"
         default: "need to know"
@@ -37,7 +48,8 @@ jobs:
       - name: Generate GeoJson files from all GPX files
         run: |
           echo ">>> Generate GeoJSON files for all GPX files"
-          find tracks/tim/3_gpx -mindepth 1 -maxdepth 1 -type d -exec python scripts/gpx_to_geojson.py -s -u {} \;
+          python scripts/gpx_to_geojson.py -s -u tracks/tim/3_gpx/${{ inputs.type }} \;
+          #find tracks/tim/3_gpx -mindepth 1 -maxdepth 1 -type d -exec python scripts/gpx_to_geojson.py -s -u {} \;
       #--- Second Step
       - name: Aggregate GeoJson files
         run: |
