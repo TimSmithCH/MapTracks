@@ -38,6 +38,9 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
+      #--- Prepare prequisite libraries
+      - name: Install GPXpy and GeoJSON for gpx transformations
+        run: pip install gpxpy geojson
       #--- Checkout using PAT rather than default token, so PagesDeploy/push workflow gets triggered
       - name: Check out repository
         uses: actions/checkout@v5

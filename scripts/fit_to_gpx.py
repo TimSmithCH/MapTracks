@@ -438,7 +438,7 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
                     header_data = get_fit_header_data(frame, "file")
                     header.update(header_data)
                     file_found = True
-                    print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
+                    #print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
                 elif device_found == False and frame.name == 'device_info':
                     header_data = get_fit_header_data(frame, "device")
                     # Only add new keys, dont overwrite already found ones
@@ -446,7 +446,7 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
                         if key not in header:
                             header[key] = header_data[key]
                     device_found = True
-                    print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
+                    #print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
                 elif frame.name == 'sport' or frame.name == 'session':
                     header_data = get_fit_header_data(frame, "sport")
                     header.update(header_data)
@@ -457,7 +457,7 @@ def get_dataframes(fname: str) -> Tuple[pd.DataFrame, pd.DataFrame, Dict]:
                         if header_data.get("event_type") == "start":
                             header.update(header_data)
                             event_start_found = True
-                            print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
+                            #print(" DEBUG: frame {}: found {}".format(frame.name, header_data))
     except:
         print("ERROR while parsing {} so dropping stream".format(fname))
         print(points_df)
@@ -570,18 +570,19 @@ def clean_filename(fname:str, outdir:str, header:Dict) -> str:
     orig_path = pathlib.Path(fname).parent
     ts = int(datetime.timestamp(header.get("timestamp")))
     kw = header.get("keywords")
-    pr = kw.get("pr")
+    #pr = kw.get("pr")
     ti = header.get("title")
+    ty = header.get("type")
 
     # If filename specified, simply use it
     if outdir and not pathlib.Path(str(outdir)).is_dir():
         outfile = outdir
-    # Otherwise standardise the name to date/id/title
+    # Otherwise standardise the name to sport/timestamp.title
     else:
         #of = str(ts) + "." + str(pr) + "." + str(ti) + ".gpx"
         of = str(ts) + "." + str(ti) + ".gpx"
         if outdir:
-            outfile = outdir + "/" + of
+            outfile = outdir + "/" + ty + "/" + of
         else:
             outfile = str(orig_path) + "/" + of
 
@@ -687,6 +688,11 @@ if __name__ == "__main__":
         xml = gpx.to_xml(prettyprint=args.pretty)
         device = header.get("keywords").get("dv")
         print("INFO: [{}/{}] Converted {} from {} and writing gpx content to {}".format(outcount,outtotal,fpath, device, outfile))
+        # Unless this is just dryrun
         if args.dryrun == False :
+            # Check output directory (and parents) exist before writing file
+            outfile_path = pathlib.Path(outfile).parent
+            pathlib.Path(outfile_path).mkdir(parents=True, exist_ok=True)
+            # Finally, write the contents to the file
             with open(outfile, "w") as f:
                 f.write(xml)

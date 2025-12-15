@@ -273,6 +273,7 @@ def clean_filename(fname:str, outdir:str, header:Dict) -> str:
     kw = header.get("keywords")
     pr = kw.get("pr")
     ti = header.get("title")
+    ty = header.get("type")
 
     # If filename specified, simply use it
     if outdir and not pathlib.Path(str(outdir)).is_dir():
@@ -282,7 +283,7 @@ def clean_filename(fname:str, outdir:str, header:Dict) -> str:
         #of = str(ts) + "." + str(pr) + "." + str(ti) + ".gpx"
         of = str(ts) + "." + str(ti) + ".gpx"
         if outdir:
-            outfile = outdir + "/" + of
+            outfile = outdir + "/" + ty + "/" + of
         else:
             outfile = str(orig_path) + "/" + of
 
@@ -368,6 +369,11 @@ if __name__ == "__main__":
         outfile = clean_filename(fpath, args.outdir, header)
         xml = gpx.to_xml(prettyprint=args.pretty)
         print("INFO: Converted {} and writing gpx content to {}".format(fpath, outfile))
+        # Unless this is just dryrun
         if args.dryrun == False :
+            # Check output directory (and parents) exist before writing file
+            outfile_path = pathlib.Path(outfile).parent
+            pathlib.Path(outfile_path).mkdir(parents=True, exist_ok=True)
+            # Finally, write the contents to the file
             with open(outfile, "w") as f:
                 f.write(xml)
