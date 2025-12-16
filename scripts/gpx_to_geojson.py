@@ -372,12 +372,15 @@ if __name__ == "__main__":
                     desc = "DownHill" if desc == "UpHill" else "UpHill"
                 coords = [(p.longitude, p.latitude) for p in segment.points]
                 geo_line = geojson.LineString(coords, precision=args.precision)
-                try:
-                    yy,mm,dd = track.comment.split('-')
-                except ValueError:
-                    tstamp = 0
+                if track.comment != None:
+                    try:
+                        yy,mm,dd = track.comment.split('-')
+                    except ValueError:
+                        tstamp = 0
+                    else:
+                        tstamp = int(datetime.datetime.fromisoformat(track.comment).timestamp())
                 else:
-                    tstamp = int(datetime.datetime.fromisoformat(track.comment).timestamp())
+                    tstamp = 0
                 geo_features.append(
                     geojson.Feature(
                         properties={

@@ -156,6 +156,14 @@ def prepare_header(md: Dict, activities: pd.DataFrame) -> Dict:
     app_types = {"ride":"bike",
                  "run":"run",
             }
+    device_lookup = {"iPhone3,1":"iPhone4",
+                     "iPhone4,1":"iPhone4s",
+                     "iPhone6,2":"iPhone5s",
+                     "iPhone7,2":"iPhone6",
+                     "iPhone12,1":"iPhone11",
+                     "iPhone13,2":"iPhone12",
+                     "iPhone14,5":"iPhone13",
+                     "Watch7,1":"iWatch9_41mm"}
     header = {}
     key_dict = {}
 
@@ -188,7 +196,9 @@ def prepare_header(md: Dict, activities: pd.DataFrame) -> Dict:
     # Establish the manufacturer and product
     if "http_user_agent" in md:
         products = (md.get("http_user_agent")).split("|")
-        key_dict.update({"dv": products[2].split(",",1)[0]})
+        #key_dict.update({"dv": products[2].split(",",1)[0]})
+        dev = device_lookup.get(products[2],products[2])
+        key_dict.update({"dv": dev})
         key_dict.update({"ap": products[0]})
         if act_id:
             key_dict.update({"sid": str(act_id)})
@@ -329,7 +339,10 @@ if __name__ == "__main__":
         activities = pd.DataFrame()
 
     # Loop over all files in list
+    outcount = 0
+    outtotal = len(fpaths)
     for fpath in fpaths:
+        outcount += 1
         # Step 1: Convert JSON to pd.DataFrame
         with open(fpath) as f:
             d = json.load(f)
@@ -368,7 +381,8 @@ if __name__ == "__main__":
         # Step 3: Save GPX file to disk
         outfile = clean_filename(fpath, args.outdir, header)
         xml = gpx.to_xml(prettyprint=args.pretty)
-        print("INFO: Converted {} and writing gpx content to {}".format(fpath, outfile))
+        device = header.get("keywords").get("dv")
+        print("INFO: [{}/{}] Converted {} from {} and writing gpx content to {}".format(outcount,outtotal,fpath, device, outfile))
         # Unless this is just dryrun
         if args.dryrun == False :
             # Check output directory (and parents) exist before writing file
