@@ -4,10 +4,10 @@
 -------------------------------------------------------------------------------
 
  DESCRIPTION
-    Convert Pull_Strava GPX file names to timestamp convention
+    Convert Pull_Strava JSON file names to timestamp convention
 
  EXAMPLES
-    python migrate_to_timestamp.py GPXfiles
+    python migrate_to_timestamp.py JSONfiles
 
  IMPLEMENTATION
     Author       Tim Smith
@@ -104,8 +104,8 @@ if __name__ == "__main__":
                 for dp, dn, fn in os.walk(os.path.expanduser(fpath))
                 for f in fn
             ]
-            # Retain only GPX files from the mpaths list
-            fpaths = [file for file in mpaths if file.endswith(".gpx")]
+            # Retain only JSON files from the mpaths list
+            fpaths = [file for file in mpaths if file.endswith(".json")]
             fpaths.sort()
 
     # Loop over all files in list
@@ -114,47 +114,27 @@ if __name__ == "__main__":
     for fpath in fpaths:
         dont_delete = False
         outcount += 1
-        try:
-            gpx = gpxpy.parse(open(fpath,'r'))
-        except:
-            print("ERROR: Error trying to parse {}".format(fpath))
+        print("INFO: Processing {}".format(fpath))
+        with open(fpath) as f:
+            d = json.load(f)
+            # Load the track data into a dataframe
+            #track_df = pd.DataFrame(d['data'][0]['values'])
+            #track_df.columns = d['data'][0]['fields']
+            # Load the metadata into a dict
+            md = d['metadata']
+            if args.verbose:
+                print(md)
+
         dname = os.path.dirname(fpath)
         bname = os.path.basename(fpath)
         fname = os.path.splitext(bname)[0]
         sname = fname.split('.',1)[0]
-        print("INFO: Processing {}".format(fpath))
-        if gpx.keywords is None:
-            print(" WARN: No keywords, doesnt seem to be a pull_strava file, skipping")
-            continue
         # Step 2: Establish new metadata
-        if gpx.time is None:
-            print(" WARN: No time field, probably a ROUTE file, skipping")
-            continue
-        ts = convert_to_timestamp(gpx.time)
+        dt = datetime.fromisoformat(md['start_date'])
+        ts = int(datetime.timestamp(dt))
         outfile = clean_filename(fpath, ts)
-        # Step 3: Validate metadata
-        if sname == gpx.keywords:
-            print(" INFO: Strava ID in filename - unconverted file; fname {} keyword {}".format(sname,gpx.keywords))
-            gpx.keywords = json.dumps({"sid": str(sname)},separators=(",",":"))
-            if gpx.name != os.path.basename(outfile):
-                print(" WARN: name in file {} doesnt match filename {}".format(gpx.name,outfile))
-        # Skip writing if re-running on an already converted file, unless forced to!
-        if outfile == fpath:
-            if args.force:
-                dont_delete = True
-            else:
-                print(" INFO: {} has already been converted, skipping".format(fpath))
-                continue
-        gpx.name = os.path.basename(outfile)
-        for track in gpx.tracks:
-            track.name = gpx.name
 
-        # Step 3: Save GPX file to disk
-        xml = gpx.to_xml(prettyprint=True)
-        print("INFO: [{}/{}] Converted {} to {}".format(outcount,outtotal,fpath, outfile))
+        # Step 3: Rename file
+        print("INFO: [{}/{}] Renaming {} to {}".format(outcount,outtotal,fpath, outfile))
         if args.dryrun == False :
-            with open(outfile, "w") as f:
-                f.write(xml)
-            # And delete the old one
-            if not dont_delete:
-                os.remove(fpath)
+            os.rename(fpath,outfile)
