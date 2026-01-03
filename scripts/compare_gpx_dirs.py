@@ -26,6 +26,7 @@ import re
 import string
 from datetime import datetime, timedelta
 import pandas as pd
+import numpy as np
 
 
 # -------------------------------------------------------------------------------
@@ -34,7 +35,7 @@ def parse_command_line():
     global VERBOSE
     # Instantiate the parser
     parser = argparse.ArgumentParser(
-        description="Convert Pull_Strava file names to timestamp convention"
+        description="Compare GPXs generated from RAW originals to those generated via Strava"
     )
     # Set up the argument defaults
     defaults = dict(
@@ -108,43 +109,69 @@ if __name__ == "__main__":
     spaths.sort()
 
     # Loop over all raw files in list
-    df_raw = pd.DataFrame(columns=['FileName', 'FilePath', 'Type', 'TimeStamp'])
+    df_raw = pd.DataFrame(columns=['FileName', 'FilePath', 'Type', 'TimeStamp', 'TrackName'])
     for rpath in rpaths:
         dname = pathlib.Path(rpath).parent
         fname = pathlib.Path(rpath).stem
-        tstamp = fname.split('.',1)[0]
+        try:
+            tstamp = int(fname.split('.',1)[0])
+            tname = fname.split('.',1)[1]
+        except ValueError:
+            tstamp = 0
+            tname = fname
         trktype = pathlib.Path(dname).parts[-1]
         df_raw.loc[len(df_raw)] = {'FileName': fname,
-                                   'FilePath': dname,
+                                   #'FilePath': dname,
                                    'Type': trktype,
-                                   'TimeStamp': tstamp}
+                                   'TimeStamp': tstamp,
+                                   'TrackName': tname}
 
     # Loop over all strava files in list
-    df_strava = pd.DataFrame(columns=['FileName', 'FilePath', 'Type', 'TimeStamp'])
+    df_strava = pd.DataFrame(columns=['FileName', 'FilePath', 'Type', 'TimeStamp', 'TrackName'])
     for spath in spaths:
         dname = pathlib.Path(spath).parent
         fname = pathlib.Path(spath).stem
-        tstamp = fname.split('.',1)[0]
+        try:
+            tstamp = int(fname.split('.',1)[0])
+            tname = fname.split('.',1)[1]
+        except ValueError:
+            tstamp = 0
+            tname = fname
         trktype = pathlib.Path(dname).parts[-1]
         df_strava.loc[len(df_strava)] = {'FileName': fname,
-                                   'FilePath': dname,
+                                   #'FilePath': dname,
                                    'Type': trktype,
-                                   'TimeStamp': tstamp}
+                                   'TimeStamp': tstamp,
+                                   'TrackName': tname}
 
+    # Summary table of totals of each type of sport
     dfrc = df_raw.groupby("Type").size().rename('RawSum')
     dfsc = df_strava.groupby("Type").size().rename('StravaSum')
     df = pd.concat([dfrc, dfsc], axis=1)
+    print("\nTotals by sport")
+    print("===============")
     print(df)
 
     # Loop over dataframes looking for matches
-    print("Raw files: {}".format(len(df_raw)))
-    df_raw = df_raw.assign(Matched=df_raw["TimeStamp"].isin(df_strava["TimeStamp"]))
-    dfrg = df_raw.groupby(['Type', 'Matched']).size().unstack(fill_value=0)
-    print(dfrg)
+    print("\nRaw files: {}".format(len(df_raw)))
+    print("====================")
+    #df_raw = df_raw.assign(Matched=df_raw["TimeStamp"].isin(df_strava["TimeStamp"]))
+    df_raw = df_raw.assign(Closest=df_raw["TimeStamp"].apply(lambda x : df_strava["TimeStamp"].iloc[np.abs(df_strava["TimeStamp"] - x).idxmin()]))
+    df_raw = df_raw.assign(CloseFN=df_raw["Closest"].apply(lambda x : df_strava["TrackName"].iloc[np.where(df_strava["TimeStamp"] == x)[0][0]]))
+    df_raw['TimeMatch'] = np.where((df_raw['Closest']-df_raw['TimeStamp']) < 300, True, df_raw['Closest']-df_raw['TimeStamp'])
+    df_raw['FileMatch'] = np.where(df_raw['TrackName'] == df_raw['CloseFN'], True, False)
+    print(df_raw)
+    dfrt = df_raw.groupby(['Type', 'TimeMatch']).size().unstack(fill_value=0)
+    print(dfrt)
+    dfrf = df_raw.groupby(['Type', 'FileMatch']).size().unstack(fill_value=0)
+    print(dfrf)
 
-    print("Strava files: {}".format(len(df_strava)))
-    df_strava = df_strava.assign(Matched=df_strava["TimeStamp"].isin(df_raw["TimeStamp"]))
-    dfsg = df_strava.groupby(['Type', 'Matched']).size().unstack(fill_value=0)
+    print("\nStrava files: {}".format(len(df_strava)))
+    print("====================")
+    df_strava = df_strava.assign(Closest=df_strava["TimeStamp"].apply(lambda x : df_raw["TimeStamp"].iloc[np.abs(df_raw["TimeStamp"] - x).idxmin()]))
+    df_strava['TimeMatch'] = np.where((df_strava['Closest']-df_strava['TimeStamp']) < 300, True, False)
+    print(df_strava)
+    dfsg = df_strava.groupby(['Type', 'TimeMatch']).size().unstack(fill_value=0)
     print(dfsg)
 
-    print(df_raw.loc[df_raw['Matched'] == False])
+    print(df_raw.loc[df_raw['TimeMatch'] != True])

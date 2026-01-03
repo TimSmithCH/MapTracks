@@ -374,13 +374,14 @@ def createGPXFile(activity_name, activity_id, activity_start, activity_sport, st
     gpx_segment = gpxpy.gpx.GPXTrackSegment()
     gpx_track.segments.append(gpx_segment)
     # Create points:
-    for i, p in enumerate(stream["latlng"]["data"]):
-        trkpt_dt = dt + datetime.timedelta(seconds=int(stream["time"]["data"][i]))
-        gpx_segment.points.append(
-            gpxpy.gpx.GPXTrackPoint(
-                p[0], p[1], elevation=stream["altitude"]["data"][i], time=trkpt_dt
+    if "latlng" in stream:
+        for i, p in enumerate(stream["latlng"]["data"]):
+            trkpt_dt = dt + datetime.timedelta(seconds=int(stream["time"]["data"][i]))
+            gpx_segment.points.append(
+                gpxpy.gpx.GPXTrackPoint(
+                    p[0], p[1], elevation=stream["altitude"]["data"][i], time=trkpt_dt
+                )
             )
-        )
     return gpx
 
 
@@ -474,11 +475,11 @@ if __name__ == "__main__":
                 )
             )
         if not i["external_id"]:
-            print("WARN: no activity file to download {}".format(i["name"]))
+            print("ERROR: no activity file to download {}, skipping".format(i["name"]))
             continue
         if i["map"]["summary_polyline"] == "":
             print("WARN: no activity map in download {}".format(i["name"]))
-            continue
+            #continue
         stream, errno = fetchActivityStream(i["id"])
         if errno == 0:
             if "latlng" in stream:
