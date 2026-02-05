@@ -40,8 +40,8 @@
                   <label for="Bike">Bike</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="Ski" name="layer_alpski" checked="">
-                  <label for="Alpski">Ski</label>
+                  <input type="checkbox" id="AlpSki" name="layer_alpski" checked="">
+                  <label for="AlpSki">AlpSki</label>
                 </div>
                 <div>
                   <input type="checkbox" id="Swim" name="layer_swim" checked="">
@@ -168,9 +168,11 @@
             if (layerMask.includes(layer_props[layer]["text"].substr(0,1))) {
               layer_props[layer]["init_state"] = "active";
               document.getElementById(layer_props[layer]["text"]).checked = true;
+              console.log(" Check layer mask on: ",layer);
             } else {
               layer_props[layer]["init_state"] = "";
               document.getElementById(layer_props[layer]["text"]).checked = false;
+              console.log(" Check layer mask off: ",layer);
             }
           }
         }

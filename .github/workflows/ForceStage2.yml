@@ -11,8 +11,8 @@ on:
         options:
           - bike
           - hike
-          - ski
-          - skiclimb
+          - alpski
+          - mountski
           - commute
       Reason: 
         description: "Reason for triggering workflow"
