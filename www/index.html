@@ -70,7 +70,7 @@
               </div>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset id="mountains">
             <legend>Swiss Mountains</legend>
             <div>
               <input type="checkbox" id="CHPeaks" name="layer_mountainsH">
@@ -87,7 +87,7 @@
               <input type="number" id="sliderPout" name="sliderPout" min="0" max="500" step="50" value="100" readonly>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset id="extras">
             <legend>Other Features</legend>
             <div>
               <input type="checkbox" id="EUPeaks" name="layer_mountainsE">
@@ -124,6 +124,10 @@
       </div>
 
       <script>
+        function toggleDisable(checkbox) {
+            var toggle = document.getElementById("extras");
+            checkbox.checked ? toggle.disabled = false : toggle.disabled = true;
+        }
         // Dont tell Luke I still debug like this!
         var OLD_SCHOOL = false;
         // Parse arguements pased on URL

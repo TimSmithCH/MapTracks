@@ -9,7 +9,7 @@
 #
 # EXAMPLES
 #    python segment_climb_descent.py tracks/tim/3_gpx/bike/9634087156.Baudichonne.gpx
-#    ls tracks/tim/3_gpx/skiclimb/8* | xargs -I {} ./segment_climb_descent.py {}
+#    ls tracks/tim/3_gpx/mountski/8* | xargs -I {} ./segment_climb_descent.py {}
 #    git status --porcelain tracks/tim/3_gpx | awk '{print $2}' | xargs -I {} ./segment_climb_descent.py {}
 #
 # IMPLEMENTATION

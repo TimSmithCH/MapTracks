@@ -6,7 +6,7 @@
 #    Find and delete any duplicate GPX files
 #
 # EXAMPLES
-#    python gpx_deduplicate.py tracks/tim/3_gpx/ski tracks/3_gpx/skiclimb
+#    python gpx_deduplicate.py tracks/tim/3_gpx/ski tracks/3_gpx/mountski
 #    python gpx_deduplicate.py tracks/tim/3_gpx/bike tracks/3_gpx/commute
 #
 # IMPLEMENTATION

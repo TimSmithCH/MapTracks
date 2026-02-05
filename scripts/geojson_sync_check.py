@@ -80,7 +80,7 @@ if __name__ == "__main__":
     args = parse_command_line()
 
     if args.trkdirs == "all":
-        trkdirs = ["run", "swim", "ski", "skiclimb", "bike", "hike", "vehicle", "wip"]
+        trkdirs = ["run", "swim", "alpski", "mountski", "bike", "hike", "vehicle", "wip"]
     else:
         trkdirs = [args.trkdirs]
 

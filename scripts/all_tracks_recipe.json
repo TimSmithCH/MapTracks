@@ -16,13 +16,13 @@
       "minzoom": 0,
       "maxzoom": 13
     },
-    "ski_tracks": {
-      "source": "mapbox://tileset-source/timsmithch/ski_tracks",
+    "alpski_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/alpski_tracks",
       "minzoom": 0,
       "maxzoom": 13
     },
-    "skiclimb_tracks": {
-      "source": "mapbox://tileset-source/timsmithch/skiclimb_tracks",
+    "mountski_tracks": {
+      "source": "mapbox://tileset-source/timsmithch/mountski_tracks",
       "minzoom": 0,
       "maxzoom": 13
     },

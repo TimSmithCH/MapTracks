@@ -424,8 +424,8 @@ if __name__ == "__main__":
         Ride="bike",  # Ride/Ride and Ride/MountainBikeRide in bike
         Hike="hike",  # Hike/Hike in hike
         Walk="hike",  # Walk/Walk in hike
-        AlpineSki="ski",  # AlpineSki/AlpineSki in ski
-        BackcountrySki="skiclimb",  # BackcountrySki/BackcountrySki in skiclimb
+        AlpineSki="alpski",  # AlpineSki/AlpineSki in alpski
+        BackcountrySki="mountski",  # BackcountrySki/BackcountrySki in mountski
         Run="run",  # Run/Run in run
         Commute="commute",  # Ride/Commute in commute
         VirtualRun="run",  # VirtualRun/VirtualRun in run

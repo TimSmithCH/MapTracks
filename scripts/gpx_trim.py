@@ -48,7 +48,7 @@ print(">>> Cmd line: rename output ({}), verbose ({})".format(args.outdir,args.v
 
 VERBOSE = True if args.verbose == True else False
 
-dirlist = ['bike','hike','run','swim','ski','skiclimb']
+dirlist = ['bike','hike','run','swim','alpski','mountski']
 
 # Expand any directories passed on the command line into a list of files
 fpaths = []

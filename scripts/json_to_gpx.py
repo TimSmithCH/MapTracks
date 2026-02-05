@@ -81,8 +81,8 @@ def parse_command_line():
 # -------------------------------------------------------------------------------
 # Process metadata fields to produce sanitised/standardised expected fields
 def process_activities(activities: pd.DataFrame, activity_column: str, ts: datetime.timestamp) -> [str,str,str]:
-    web_types = {"AlpineSki":"ski",
-                 "BackcountrySki":"skiclimb",
+    web_types = {"AlpineSki":"alpski",
+                 "BackcountrySki":"mountski",
                  "Hike":"hike",
                  "Ride":"bike",
                  "RockClimbing":"wip",

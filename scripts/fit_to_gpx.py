@@ -174,8 +174,8 @@ def get_fit_header_data(frame: fitdecode.records.FitDataMessage,frame_type) -> D
 # -------------------------------------------------------------------------------
 # Process Strava metadata fields to produce sanitised/standardised expected fields
 def process_activities(activities: pd.DataFrame, source: str, ts: datetime.timestamp, elapsed: int, file_created_ts: datetime.timestamp, verbose: str) -> [str,str,str]:
-    strava_web_types = {"AlpineSki":"ski",
-                 "BackcountrySki":"skiclimb",
+    strava_web_types = {"AlpineSki":"alpski",
+                 "BackcountrySki":"mountski",
                  "Hike":"hike",
                  "Ride":"bike",
                  "RockClimbing":"wip",
@@ -198,7 +198,7 @@ def process_activities(activities: pd.DataFrame, source: str, ts: datetime.times
                 "mountaineering":"hike",
                 "multi_sport":"wip",
                 "open_water_swimming":"swim",
-                "resort_skiing_snowboarding_ws":"ski",
+                "resort_skiing_snowboarding_ws":"alpski",
                 "running":"run",
                 "transition_v2":"wip",
             }
