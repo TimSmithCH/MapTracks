@@ -11,7 +11,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.14.0/mapbox-gl.js'></script>
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" id="dyna-touch-icon">
     <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico" id="dyna-favicon">
   </head>
 
@@ -184,6 +184,16 @@
             }
             document.head.appendChild(link);
             console.log(" Added a new favicon");
+            var alink = document.createElement('link');
+            var aoldLink = document.getElementById('dyna-touch-icon');
+            alink.id = 'dyna-touch-icon';
+            alink.rel = 'apple-touch-icon';
+            alink.href = "https://timsmithch.github.io/MapTracks/images/apple-touch-icon-blue.png";
+            if (aoldLink) {
+              document.head.removeChild(aoldLink);
+            }
+            document.head.appendChild(alink);
+            console.log(" Added a new touch icon");
           }
         }
 
