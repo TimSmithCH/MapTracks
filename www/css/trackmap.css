@@ -55,6 +55,9 @@ body {
   height: 100%;
   width: 100%;
 }
+#mountains, #others {
+  display: none;
+}
 
 /* Alternatives: Large format if large screen detected */
 /* (Should use switches in original clauses but doesn't seem to work) */

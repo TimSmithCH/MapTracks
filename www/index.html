@@ -87,7 +87,7 @@
               <input type="number" id="sliderPout" name="sliderPout" min="0" max="500" step="50" value="100" readonly>
             </div>
           </fieldset>
-          <fieldset id="extras">
+          <fieldset id="others">
             <legend>Other Features</legend>
             <div>
               <input type="checkbox" id="EUPeaks" name="layer_mountainsE">
@@ -124,10 +124,6 @@
       </div>
 
       <script>
-        function toggleDisable(checkbox) {
-            var toggle = document.getElementById("extras");
-            checkbox.checked ? toggle.disabled = false : toggle.disabled = true;
-        }
         // Dont tell Luke I still debug like this!
         var OLD_SCHOOL = false;
         // Parse arguements pased on URL
@@ -172,12 +168,22 @@
             if (layerMask.includes(layer_props[layer]["text"].substr(0,1))) {
               layer_props[layer]["init_state"] = "active";
               document.getElementById(layer_props[layer]["text"]).checked = true;
-              console.log(" Check layer mask on: ",layer);
             } else {
-              layer_props[layer]["init_state"] = "";
+              layer_props[layer]["init_state"] = "hidden";
               document.getElementById(layer_props[layer]["text"]).checked = false;
-              console.log(" Check layer mask off: ",layer);
             }
+          }
+          if (layerMask == "M") {
+            var link = document.createElement('link');
+            var oldLink = document.getElementById('apple-touch-icon');
+            link.id = 'apple-touch-icon';
+            link.rel = 'shortcut icon';
+            link.href = "https://timsmithch.github.io/MapTracks/images/apple-touch-icon-blue.png";
+            if (oldLink) {
+              document.head.removeChild(oldLink);
+            }
+            document.head.appendChild(link);
+            console.log(" Added a new favicon");
           }
         }
 
@@ -538,6 +544,16 @@
           const layers = map.getStyle().layers.filter(l => l.id.includes('layer_'));
           lays = layers.map(l => l.id);
           //console.log(lays);
+          var mo = urlSearchParams.get('mountains');
+          if (!mo) {
+            var toggle1 = document.getElementById("mountains");
+            console.log("Style1: ",toggle1);
+            var toggle2 = document.getElementById("others");
+            console.log("Style2: ",toggle2.style);
+            toggle1.style.display = "block";
+            toggle2.style.display = "block";
+            console.log("Loaded Flag mountains: ",mo);
+          }
         });
 
         // SourceData event fires when asychronous data loads a chunk, so wait for last chunk
