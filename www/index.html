@@ -174,26 +174,16 @@
             }
           }
           if (layerMask == "M") {
-            var iflink = document.createElement('link');
-            var foldLink = document.getElementById('dyna-favicon');
-            flink.id = 'dyna-favicon';
-            flink.rel = 'icon';
-            flink.href = "https://timsmithch.github.io/MapTracks/images/faviconblue.ico";
-            if (foldLink) {
-              document.head.removeChild(foldLink);
+            var link = document.createElement('link');
+            var oldLink = document.getElementById('dyna-favicon');
+            link.id = 'dyna-favicon';
+            link.rel = 'icon';
+            link.href = "https://timsmithch.github.io/MapTracks/images/faviconblue.ico";
+            if (oldLink) {
+              document.head.removeChild(oldLink);
             }
-            document.head.appendChild(flink);
+            document.head.appendChild(link);
             console.log(" Added a new favicon");
-            var alink = document.createElement('link');
-            var aoldLink = document.getElementById('apple-touch-icon');
-            alink.id = 'apple-touch-icon';
-            alink.rel = 'icon';
-            alink.href = "https://timsmithch.github.io/MapTracks/images/apple-touch-icon-blue.png";
-            if (aoldLink) {
-              document.head.removeChild(aoldLink);
-            }
-            document.head.appendChild(alink);
-            console.log(" Added a new apple touch icon");
           }
         }
 
