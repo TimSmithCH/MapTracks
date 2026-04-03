@@ -7,8 +7,8 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link href='https://api.mapbox.com/mapbox-gl-js/v3.14.0/mapbox-gl.css' rel='stylesheet'>
-    <script src='https://api.mapbox.com/mapbox-gl-js/v3.14.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css' rel='stylesheet'>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js'></script>
     <!-- Site styles and icons -->
     <link rel="stylesheet" href="css/trackmap.css">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" id="dyna-touch-icon">
@@ -111,13 +111,13 @@
             </div>
             <div>
               <label for="sliderDL">Lower Date</label>
-              <input type="range" id="sliderDL" name="sliderDL" min="1388534400" max="1767225600" step="86400" value="1391212800">
+              <input type="range" id="sliderDL" name="sliderDL" min="1388534400" max="1798761600" step="86400" value="1391212800">
               <input type="text" id="sliderDLout" name="sliderDLout" value="2014-01-01" size="10" readonly>
             </div>
             <div>
               <label for="sliderDH">Upper Date</label>
-              <input type="range" id="sliderDH" name="sliderDH" min="1388534400" max="1767225600" step="86400" value="1764547200">
-              <input type="text" id="sliderDHout" name="sliderDHout" value="2026-01-01" size="10" readonly>
+              <input type="range" id="sliderDH" name="sliderDH" min="1388534400" max="1798761600" step="86400" value="1796083200">
+              <input type="text" id="sliderDHout" name="sliderDHout" value="2027-01-01" size="10" readonly>
             </div>
           </fieldset>
         </div>
@@ -160,7 +160,7 @@
           layer_wip:      { source_layer: "wip_tracks",      source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
         };
         var layerMask = urlSearchParams.get('layer');
-        // Capitals toggle active, defaults are equivalent to a layerMask of "HBMRAcsvW"
+        // Capitals toggle layer active, defaults are equivalent to a layerMask of "HBMRAcsvW"
         if (layerMask) {
           OLD_SCHOOL && console.log("Set layer mask: ",layerMask);
           console.log("Set layer mask: ",layerMask);
@@ -173,6 +173,7 @@
               document.getElementById(layer_props[layer]["text"]).checked = false;
             }
           }
+          // For a Ski Mountaineering only map
           if (layerMask == "M") {
             var link = document.createElement('link');
             var oldLink = document.getElementById('dyna-favicon');
