@@ -3,6 +3,7 @@ on:
   # Nightly cron job
   schedule:
     - cron: 42 19 * * *
+      timezone: "Europe/Zurich"
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
 
