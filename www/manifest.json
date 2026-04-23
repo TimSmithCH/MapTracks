@@ -1,0 +1,17 @@
+{
+    "name": "MapTracks",
+    "short_name": "Maptracks",
+    "theme_color": "#ffcbe4",
+    "background_color": "#fa99ca",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "https://timsmithch.github.io/MapTracks/",
+    "description": "Layout tracks of outings on a map",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "https://timsmithch.github.io/MapTracks/images/apple-touch-icon.png",
+            "sizes": "180x180"
+        }
+    ]
+}

@@ -7,6 +7,9 @@
     <title>TrackMap</title>
     <meta name="description" content="TrackMap">
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <!-- To make into a PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- MapBox GL JS -->
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.css' rel='stylesheet'>
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.20.0/mapbox-gl.js'></script>
     <!-- Site styles and icons -->
@@ -803,5 +806,12 @@
       <div class="footitem">TrackMap: &copy; Tim Smith CC-BY-4.0</div>
       <div class="footitem"><img src="images/strava_white.png" alt="pwd STRAVA" align="right" height="32px"></div>
     </footer>
+    <script>
+      if (!navigator.serviceWorker.controller) {
+        navigator.serviceWorker.register("/sw.js").then(function(reg) {
+          console.log("Service worker has been registered for scope: " + reg.scope);
+        });
+      }
+    </script>
   </body>
 </html>
