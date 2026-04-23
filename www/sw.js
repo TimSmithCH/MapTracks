@@ -6,7 +6,7 @@ var preLoad = function(){
   console.log("Installing web app");
   return caches.open("offline").then(function(cache) {
     console.log("caching index and important routes");
-    return cache.addAll(["/images/", "/css/", "/", "/features/", "/tracks/", "/offline.html"]);
+    return cache.addAll(["images/", "css/", "/MapTracks", "features/", "tracks/", "offline.html"]);
   });
 };
 
