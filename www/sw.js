@@ -7,7 +7,7 @@ var preLoad = function(){
   return caches.open("offline").then(function(cache) {
     console.log("caching index and important routes");
 //    return cache.addAll(["images/", "css/", "/MapTracks", "features/", "tracks/", "offline.html"]);
-    return cache.addAll(["css/", "offline.html"]);
+    return cache.addAll(["offline.html"]);
   });
 };
 
