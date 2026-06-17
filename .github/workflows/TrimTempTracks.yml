@@ -1,0 +1,40 @@
+name: MapTracksDeploy
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["master"]
+    paths:
+      - 'scripts/**'
+      - 'tracks/tim/6_temp/**'
+
+  # Allows to be run manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+run-name: Trim GPXs for ${{ github.event.head_commit.message }}
+
+jobs:
+  # Build GeoJSON files from any newly committed GPX files
+  GeoJsonBuild:
+    name: Generate_Aggregate
+    runs-on: macos-latest
+    steps:
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      #--- Prepare prequisite libraries
+      - name: Install GPXpy and GeoJSON for gpx transformations
+        run: pip install gpxpy geojson
+      #--- Checkout using PAT rather than default token, so PagesDeploy/push workflow gets triggered
+      - name: Check out repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
+      #--- First Step
