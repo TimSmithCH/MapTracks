@@ -21,19 +21,19 @@ run-name: Trim GPXs for ${{ github.event.head_commit.message }}
 jobs:
   # Build GeoJSON files from any newly committed GPX files
   GeoJsonBuild:
-    name: Generate_Aggregate
+    name: Routes_to_Tracks
     runs-on: macos-latest
     steps:
       - name: Set up Python 3.x
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
       #--- Prepare prequisite libraries
-      - name: Install GPXpy and GeoJSON for gpx transformations
-        run: pip install gpxpy geojson
+      - name: Install GPXpy for gpx transformations
+        run: pip install gpxpy
       #--- Checkout using PAT rather than default token, so PagesDeploy/push workflow gets triggered
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           token: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
@@ -41,4 +41,4 @@ jobs:
       - name: Trim GPX files from temporary directory 
         run: |
           echo ">>> Trim all temporary GPX files"
-          find tracks/tim/6_temp -mindepth 1 -maxdepth 1 -type d -exec python scripts/gpx_trim.py -e -x -p 6 -t {} \;
+          find tracks/tim/6_temp -mindepth 1 -maxdepth 1 -type f -exec python scripts/gpx_trim.py -e -x -p 6 -t {} \;

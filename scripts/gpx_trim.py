@@ -23,6 +23,7 @@ import gpxpy
 import re
 import argparse
 import datetime
+import shutil
 
 
 # Instantiate the parser
@@ -62,10 +63,12 @@ for fpath in args.files:
 
 for fpath in fpaths:
     modified = False
-    try:
-        gpx = gpxpy.parse(open(fpath,'r'))
-    except:
-        print("ERROR: Error trying to parse {}".format(fpath))
+    # The 'with' statement handles closing the file automatically
+    with open(fpath, 'r') as gpx_file:
+        try:
+            gpx = gpxpy.parse(gpx_file)
+        except:
+            print("ERROR: Error trying to parse {}".format(fpath))
     bname = os.path.basename(fpath)
     fname = os.path.splitext(bname)[0]
     if VERBOSE : print("INFO: Processing {0:48s}".format(fname))
@@ -162,13 +165,18 @@ for fpath in fpaths:
 
     # Write out any changes
     if modified:
+        # A new directory or file was specified
         if args.outdir:
             if pathlib.Path(str(args.outdir)).is_dir():
                 outfile = args.outdir + "/" + pathlib.Path(fpath).name
             else:
                 outfile = args.outdir
+        # Update the existing file after saving a copy
         else:
             outfile = fpath
+            npath = fpath + "." + datetime.datetime.now().strftime("%M%S")
+            shutil.copyfile(fpath,npath)
+            print("INFO: Copied {} as {}".format(fpath,npath))
         # Default indentation for PP is 2 spaces, no extra action required
         newtree = gpx.to_xml(prettyprint=True)
         print("INFO: Writing out new content to {}".format(outfile))
