@@ -15,7 +15,7 @@ jobs:
     steps:
       #--- Checkout using PAT rather than default token, so MapTracks/push workflow gets triggered
       - name: Check out repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           token: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
       #--- Next Step
