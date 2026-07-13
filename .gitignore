@@ -167,4 +167,5 @@ cython_debug/
 # My Data Files
 tracks/*/4_original/
 tracks/*/5_gpx_modified/
-tracks/*/6_temp/
+tracks/*/6_temp_in/
+tracks/*/6_temp_out/
