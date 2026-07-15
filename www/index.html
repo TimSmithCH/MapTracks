@@ -707,7 +707,7 @@
           var mountFilter = ["all",
             ['>=', ['number', ['get', 'height']], height_value],
             ['>=', ['number', ['get', 'prominence']], prominence_value]];
-          map.setFilter('layer_mountainsH', mountFilter);
+          map.setFilter('layer_mountainsH_pts', mountFilter);
           sliderHout.value=height_value;
         });
         sliderP.addEventListener('input', function(e) {
@@ -716,7 +716,7 @@
           var mountFilter = ["all",
             ['>=', ['number', ['get', 'height']], height_value],
             ['>=', ['number', ['get', 'prominence']], prominence_value]];
-          map.setFilter('layer_mountainsH', mountFilter);
+          map.setFilter('layer_mountainsH_pts', mountFilter);
           sliderPout.value=prominence_value;
         });
 
