@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="gpx.py -- https://github.com/tkrajina/gpxpy">
+  <metadata>
+    <name>FILENAME</name>
+    <time>UTC time (in isodate format)</time>
+    <keywords>{sid:STRAVA_ID or gid:GARMIN_ID}</keywords>
+    <desc>UPHILL or DOWNHILL</desc>
+    <cmt>DATE (in YYYY-MM-DD format)</cmt>
+    <bounds minlat="LAT" maxlat="LAT" minlon="LON" maxlon="LON"></bounds>
+  </metadata>
+  <trk>
+    <name>FILENAME</name>
+    <desc>UPHILL or DOWNHILL</desc>
+    <cmt>DATE (in YYYY-MM-DD format)</cmt>
+    <type>ACTIVITY (from list ALPSKI, BIKE, COMMUTE, HIKE, MOUNTSKI, RUN, SWIM, VEHICLE)</type>
+    <trkseg>
+      <trkpt lat="LATITUDE" lon="LONGITUDE">
+        <ele>HEIGHT (in metres)</ele>
+        <time>UTC time (in isodate format)</time>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
