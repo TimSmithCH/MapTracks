@@ -354,6 +354,9 @@ if __name__ == "__main__":
         for track in gpx.tracks:
             desc = "---"
             tbounds = track.get_bounds()
+            if tbounds == None:
+                # Some tracks dont have a bbox
+                tbounds = gpxpy.gpx.GPXBounds(1.0, 2.0, 3.0, 4.0)
             tbounds_str = (
                 str(tbounds.min_longitude)
                 + "/"
