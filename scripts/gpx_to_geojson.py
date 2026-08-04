@@ -291,9 +291,12 @@ if __name__ == "__main__":
 
         # Split tracks into uphill and downhill segments
         if args.updown == True:
-            if VERBOSE:
-                print(" ACTION: Split tracks into Up/Down segments")
-            split_up_down(gpx.tracks)
+            if gpx.tracks[0].type == "Plane":
+                print(" NOACTION: Do not split plane tracks into Up/Down segments")
+            else:
+                if VERBOSE:
+                    print(" ACTION: Split tracks into Up/Down segments")
+                split_up_down(gpx.tracks)
 
         nsegs = sum(len(t.segments) for t in gpx.tracks)
         print(
