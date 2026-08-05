@@ -50,6 +50,10 @@
                   <input type="checkbox" id="Swim" name="layer_swim" checked="">
                   <label for="Swim">Swim</label>
                 </div>
+                <div>
+                  <input type="checkbox" id="Vehicle" name="layer_vehicle" checked="">
+                  <label for="Vehicle">Vehicle</label>
+                </div>
               </div>
               <div class="selector_col">
                 <div>
@@ -65,10 +69,12 @@
                   <label for="MountSki">MountSki</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="Vehicle" name="layer_vehicle">
-                  <label for="Vehicle">Vehicle</label>
                   <input type="checkbox" id="WIP" name="layer_wip" checked="">
                   <label for="WIP">WIP</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="Plane" name="layer_plane" checked="">
+                  <label for="Plane">Plane</label>
                 </div>
               </div>
             </div>
@@ -160,6 +166,7 @@
           layer_commute:  { source_layer: "commute_tracks",  source: "geojson", colour: "#10A210", init_state: "hidden", text: "Commute" },
           layer_swim:     { source_layer: "swim_tracks",     source: "geojson", colour: "#FFCC00", init_state: "active", text: "Swim" },
           layer_vehicle:  { source_layer: "vehicle_tracks",  source: "geojson", colour: "#FF00FF", init_state: "hidden", text: "Vehicle" },
+          layer_plane:    { source_layer: "plane_tracks",    source: "geojson", colour: "#FF99FF", init_state: "hidden", text: "Plane" },
           layer_wip:      { source_layer: "wip_tracks",      source: "geojson", colour: "#FF8000", init_state: "active", text: "WIP" }
         };
         var layerMask = urlSearchParams.get('layer');
@@ -489,7 +496,7 @@
                   "line-width": [ 'interpolate', ['exponential', 2], ['zoom'],
                     0, ["^", 2, 3],
                     8, ["^", 2, 1.5],
-                    24, ["^", 2, 8]
+                    16, ["^", 2, 8]
                   ],
                   "line-dasharray": ["match", ["get", "desc"],
                     ["DownHill" ], ["literal", [2, 2]],
