@@ -431,6 +431,7 @@ if __name__ == "__main__":
         VirtualRun="run",  # VirtualRun/VirtualRun in run
         Swim="swim",  # Swim/Swim in swim
         Velomobile="vehicle",  # Strava has no vehicles so labelled velomobile
+        Kitesurf="plane",  # Since I dont kitesurf, use it to signal a plane!
         Sail="vehicle",  # Boats of various types!
     )
     # Download activity list
