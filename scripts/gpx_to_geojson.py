@@ -291,7 +291,7 @@ if __name__ == "__main__":
 
         # Split tracks into uphill and downhill segments
         if args.updown == True:
-            if gpx.tracks[0].type == "Plane":
+            if len(gpx.tracks) > 0 and gpx.tracks[0].type == "Plane":
                 print(" NOACTION: Do not split plane tracks into Up/Down segments")
             else:
                 if VERBOSE:
