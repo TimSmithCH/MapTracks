@@ -4,7 +4,6 @@ on:
   push:
     branches: ["master"]
     paths:
-      - 'scripts/**'
       - 'tracks/tim/6_temp_in/**'
 
   # Allows to be run manually from the Actions tab
