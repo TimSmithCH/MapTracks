@@ -84,6 +84,7 @@ def process_activities(activities: pd.DataFrame, activity_column: str, ts: datet
     web_types = {"AlpineSki":"alpski",
                  "BackcountrySki":"mountski",
                  "Hike":"hike",
+                 "Kitesurf":"plane",
                  "Ride":"bike",
                  "RockClimbing":"wip",
                  "Rowing":"vehicle",

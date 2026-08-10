@@ -177,6 +177,7 @@ def process_activities(activities: pd.DataFrame, source: str, ts: datetime.times
     strava_web_types = {"AlpineSki":"alpski",
                  "BackcountrySki":"mountski",
                  "Hike":"hike",
+                 "Kitesurf":"plane",
                  "Ride":"bike",
                  "RockClimbing":"wip",
                  "Rowing":"vehicle",

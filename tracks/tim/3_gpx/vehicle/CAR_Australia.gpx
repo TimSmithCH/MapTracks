@@ -1,58 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
-  <wpt lat="-34.94862" lon="138.532854">
-    <ele>0.0</ele>
-    <name>Adelaide Airport</name>
-    <desc>airport</desc>
-  </wpt>
-  <wpt lat="-34.9290545" lon="138.5977428">
-    <ele>0.0</ele>
-    <name>Hilton Adelaide Hotel</name>
-    <desc>lodging</desc>
-  </wpt>
-  <wpt lat="-35.304195" lon="149.190283">
-    <ele>0.0</ele>
-    <name>Canberra Airport</name>
-    <desc>airport</desc>
-  </wpt>
-  <wpt lat="-35.2750288" lon="149.1302109">
-    <ele>0.0</ele>
-    <name>Avenue Hotel</name>
-    <desc>lodging</desc>
-  </wpt>
-  <wpt lat="-36.41593" lon="148.6153309">
-    <ele>0.0</ele>
-    <name>Kookaburra Ski Lodge</name>
-    <desc>lodging</desc>
-  </wpt>
-  <wpt lat="-33.941081" lon="151.174582">
-    <ele>0.0</ele>
-    <name>Sydney Airport</name>
-    <desc>airport</desc>
-  </wpt>
-  <wpt lat="-33.8725215" lon="151.2037661">
-    <ele>0.0</ele>
-    <name>Sheraton SydneyHotel</name>
-    <desc>lodging</desc>
-  </wpt>
   <trk>
     <name>PLANE_Australia</name>
     <cmt>2019-11-03</cmt>
     <desc>1.0</desc>
     <type>Velomobile</type>
     <trkseg>
-      <trkpt lat="-34.94862" lon="138.532854">
-        <ele>6</ele>
-      </trkpt>
-      <trkpt lat="-35.304195" lon="149.190283">
-        <ele>564</ele>
-      </trkpt>
-      <trkpt lat="-33.941081" lon="151.174582">
-        <ele>9</ele>
-      </trkpt>
-      <trkpt lat="-35.304195" lon="149.190283">
-        <ele>564</ele>
-      </trkpt>
       <trkpt lat="-35.306733" lon="149.186137">
         <ele>569</ele>
       </trkpt>

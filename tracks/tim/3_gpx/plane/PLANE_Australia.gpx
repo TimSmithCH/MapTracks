@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="GaiaGPS">
+  <trk>
+    <name>PLANE_Australia</name>
+    <cmt>2019-11-03</cmt>
+    <desc>1.0</desc>
+    <type>Velomobile</type>
+    <trkseg>
+      <trkpt lat="-34.94862" lon="138.532854">
+        <ele>6</ele>
+      </trkpt>
+      <trkpt lat="-35.304195" lon="149.190283">
+        <ele>564</ele>
+      </trkpt>
+      <trkpt lat="-33.941081" lon="151.174582">
+        <ele>9</ele>
+      </trkpt>
+      <trkpt lat="-35.304195" lon="149.190283">
+        <ele>564</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
