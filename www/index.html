@@ -451,10 +451,24 @@
             "source": "graticule",
             "layout": {
               "visibility": "none",
+              "line-join": "round",
+              "line-cap": "round"
             },
             "paint": {
-              "line-color": "red",
+              "line-color": "#cc3300",
               "line-width": 4
+            }
+          });
+          map.addLayer({
+            "id": "gratilabel",
+            "type": "symbol",
+            "source": "graticule",
+            "layout": {
+              "visibility": "none",
+              "symbol-placement": "line",
+              "text-font": ["Open Sans Regular"],
+              "text-field": '{value}',
+              "text-size": 16
             }
           });
           OLD_SCHOOL && console.log("MapBox: add graticules");
@@ -827,10 +841,12 @@
           if (this.checked) {
             this.className = 'active';
             map.setLayoutProperty('graticule', 'visibility', 'visible');
+            map.setLayoutProperty('gratilabel', 'visibility', 'visible');
           // If de-selected, make layer invisible
           } else {
             this.className = '';
             map.setLayoutProperty('graticule', 'visibility', 'none');
+            map.setLayoutProperty('gratilabel', 'visibility', 'none');
           }
         });
 
