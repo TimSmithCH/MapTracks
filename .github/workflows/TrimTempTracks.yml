@@ -40,7 +40,7 @@ jobs:
       - name: Trim GPX files from temporary directory 
         run: |
           echo ">>> Trim all temporary GPX files"
-          find tracks/tim/6_temp_in -type f -name "*.gpx" -exec python scripts/gpx_trim.py -e -x -p 6 -o tracks/tim/6_temp_out {} \;
+          find tracks/tim/6_temp_in -type f -name "*.gpx" -exec python scripts/gpx_trim.py -e -x -p 6 -t -o tracks/tim/6_temp_out {} \;
       #--- Last Step
       - name: Commit trimmed GPX files
         id: committed
