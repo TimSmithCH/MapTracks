@@ -290,13 +290,22 @@ if __name__ == "__main__":
         )
 
         # Split tracks into uphill and downhill segments
+        split_tracks = {
+            "Bike": True,
+            "Hike": True,
+            "BackcountrySki": True,
+            "Run": False,
+            "Plane": False
+        }
         if args.updown == True:
-            if len(gpx.tracks) > 0 and gpx.tracks[0].type == "Plane":
-                print(" NOACTION: Do not split plane tracks into Up/Down segments")
-            else:
+            track_type = gpx.tracks[0].type
+            if track_type in split_tracks and split_tracks(track_type) == True:
                 if VERBOSE:
                     print(" ACTION: Split tracks into Up/Down segments")
                 split_up_down(gpx.tracks)
+            else:
+                if len(gpx.tracks) > 0:
+                    print(" NOACTION: Do not split anything but hike/bike/mountski tracks into Up/Down segments")
 
         nsegs = sum(len(t.segments) for t in gpx.tracks)
         print(
