@@ -299,7 +299,7 @@ if __name__ == "__main__":
         }
         if args.updown == True:
             track_type = gpx.tracks[0].type
-            if track_type in split_tracks and split_tracks(track_type) == True:
+            if track_type in split_tracks and split_tracks[track_type] == True:
                 if VERBOSE:
                     print(" ACTION: Split tracks into Up/Down segments")
                 split_up_down(gpx.tracks)
