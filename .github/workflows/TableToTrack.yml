@@ -1,10 +1,10 @@
-name: TrimTempTracks
+name: TableToTracks
 on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
     paths:
-      - 'tracks/tim/6_to_trim/**'
+      - 'tracks/tim/7_csv/**'
 
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
@@ -15,12 +15,12 @@ permissions:
   pages: write
   id-token: write
 
-run-name: Trim GPXs for ${{ github.event.head_commit.message }}
+run-name: Convert CSVs for ${{ github.event.head_commit.message }}
 
 jobs:
-  # Build GeoJSON files from any newly committed GPX files
+  # Convert new CSV plane files committed into GPX files
   GeoJsonBuild:
-    name: Routes_to_Tracks
+    name: Tables_to_Tracks
     runs-on: macos-latest
     steps:
       - name: Set up Python 3.x
@@ -37,21 +37,21 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_ACTION_PERSONAL_ACCESS_TOKEN }}
       #--- First Step
-      - name: Trim GPX files from temporary directory 
+      - name: Convert CSV files from temporary directory 
         run: |
-          echo ">>> Trim all temporary GPX files"
-          find tracks/tim/6_to_trim -type f -name "*.gpx" -exec python scripts/gpx_trim.py -e -x -p 6 -t -o tracks/tim/3_gpx/wip {} \;
+          echo ">>> Convert all temporary CSV files"
+          find tracks/tim/7_csv -type f -name "*.csv" -exec python scripts/csv_to_gpx.py -o tracks/tim/3_gpx/plane {} \;
       #--- Last Step
-      - name: Commit trimmed GPX files
+      - name: Commit converted GPX files
         id: committed
         run: |
-          if ! git diff --quiet --exit-code tracks/tim/6_temp; then
-            echo ">>> Trimmed GPX files to commit"
-            # Push the trimmed GPX files
-            git add -f tracks/tim/3_gpx/wip 1>&2
+          if ! git diff --quiet --exit-code tracks/tim/3_gpx/plane; then
+            echo ">>> Converted GPX files to commit"
+            # Push the converted GPX files
+            git add -f tracks/tim/3_gpx/plane 1>&2
             git status -s 1>&2
             git commit -m "GPXs for øø ${{ github.event.head_commit.message }}" 1>&2
             git push 1>&2
           else
-            echo ">>> No trimmed GPX files to commit"
+            echo ">>> No converted GPX files to commit"
           fi
