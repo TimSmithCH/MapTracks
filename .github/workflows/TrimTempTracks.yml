@@ -4,7 +4,7 @@ on:
   push:
     branches: ["master"]
     paths:
-      - 'tracks/tim/6_temp_in/**'
+      - 'tracks/tim/6_to_trim/**'
 
   # Allows to be run manually from the Actions tab
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
       - name: Trim GPX files from temporary directory 
         run: |
           echo ">>> Trim all temporary GPX files"
-          find tracks/tim/6_temp_in -type f -name "*.gpx" -exec python scripts/gpx_trim.py -e -x -p 6 -t -o tracks/tim/6_temp_out {} \;
+          find tracks/tim/6_temp_in -type f -name "*.gpx" -exec python scripts/gpx_trim.py -e -x -p 6 -t -o tracks/tim/3_gpx/wip {} \;
       #--- Last Step
       - name: Commit trimmed GPX files
         id: committed
