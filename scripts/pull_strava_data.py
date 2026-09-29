@@ -14,9 +14,10 @@
      - Filename contains {Strava activity id}.{activity name}
 
  EXAMPLES
-    python pull_strava_data.py -o "tracks/" -a tim -p 20 -n 1            # Basic, last 20 activities in one page
-    python pull_strava_data.py -c False -o "tracks/" -p 100 -b 20220201  # Exclude commutes, work back from 1st Feb 2022
-    python scripts/pull_strava_data.py -l -o "tracks/" -p 10 -b 20230402 # Light mode, only new files
+    python scripts/pull_strava_data.py -o "tracks/" -l -a tim -s 20260914 # Download updated files from a specific date
+    python pull_strava_data.py -o "tracks/" -a tim -p 20 -n 1             # Basic, last 20 activities in one page
+    python pull_strava_data.py -c False -o "tracks/" -p 100 -b 20220201   # Exclude commutes, work back from 1st Feb 2022
+    python scripts/pull_strava_data.py -l -o "tracks/" -p 10 -b 20230402  # Light mode, only new files
 
  IMPLEMENTATION
     Author       Tim Smith
